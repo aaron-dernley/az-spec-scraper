@@ -1,0 +1,8 @@
+{
+  "lint": true,
+  "fmt": true,
+  "tasks": {
+    "run-all": "deno run --allow-read --allow-write --allow-run --allow-net extract_all_specs_multiop.ts",
+    "run-one": "deno run --allow-read --allow-write --allow-run --allow-net extract_one_spec_multiop.ts"
+  }
+}
