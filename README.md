@@ -30,3 +30,7 @@ This script automates the extraction of Azure resource and subresource definitio
   ```bash
   deno task run-one
   ```
+
+## Specs
+
+- **Stored in /new-specs folder**
