@@ -26,7 +26,7 @@ This script automates the extraction of Azure resource and subresource definitio
   ```bash
   deno task run-all
   ```
-- **Run for one Azure OpenAPI spec (update the url in script manually):**
+- **Run for one Azure OpenAPI spec (update the url in script manually for the spec you want):**
   ```bash
   deno task run-one
   ```
