@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::AwsConnector::DynamoDBTables",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/dynamoDBTables",
+      "operationId": "DynamoDbTables_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBTables",
+      "operationId": "DynamoDbTables_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBTables/{name}",
+      "operationId": "DynamoDbTables_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBTable"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBTables/{name}",
+      "operationId": "DynamoDbTables_CreateOrReplace",
+      "bodySchema": "DynamoDBTable",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.attributeDefinitions",
+        "properties.awsProperties.billingMode",
+        "properties.awsProperties.contributorInsightsSpecification",
+        "properties.awsProperties.contributorInsightsSpecification.enabled",
+        "properties.awsProperties.deletionProtectionEnabled",
+        "properties.awsProperties.globalSecondaryIndexes",
+        "properties.awsProperties.importSourceSpecification",
+        "properties.awsProperties.importSourceSpecification.inputCompressionType",
+        "properties.awsProperties.importSourceSpecification.inputFormat",
+        "properties.awsProperties.importSourceSpecification.inputFormatOptions",
+        "properties.awsProperties.importSourceSpecification.inputFormatOptions.csv",
+        "properties.awsProperties.importSourceSpecification.inputFormatOptions.csv.delimiter",
+        "properties.awsProperties.importSourceSpecification.inputFormatOptions.csv.headerList",
+        "properties.awsProperties.importSourceSpecification.s3BucketSource",
+        "properties.awsProperties.importSourceSpecification.s3BucketSource.s3Bucket",
+        "properties.awsProperties.importSourceSpecification.s3BucketSource.s3BucketOwner",
+        "properties.awsProperties.importSourceSpecification.s3BucketSource.s3KeyPrefix",
+        "properties.awsProperties.keySchema",
+        "properties.awsProperties.kinesisStreamSpecification",
+        "properties.awsProperties.kinesisStreamSpecification.approximateCreationDateTimePrecision",
+        "properties.awsProperties.kinesisStreamSpecification.streamArn",
+        "properties.awsProperties.localSecondaryIndexes",
+        "properties.awsProperties.pointInTimeRecoverySpecification",
+        "properties.awsProperties.pointInTimeRecoverySpecification.pointInTimeRecoveryEnabled",
+        "properties.awsProperties.provisionedThroughput",
+        "properties.awsProperties.provisionedThroughput.readCapacityUnits",
+        "properties.awsProperties.provisionedThroughput.writeCapacityUnits",
+        "properties.awsProperties.resourcePolicy",
+        "properties.awsProperties.resourcePolicy.policyDocument",
+        "properties.awsProperties.sseSpecification",
+        "properties.awsProperties.sseSpecification.kmsMasterKeyId",
+        "properties.awsProperties.sseSpecification.sseEnabled",
+        "properties.awsProperties.sseSpecification.sseType",
+        "properties.awsProperties.streamArn",
+        "properties.awsProperties.streamSpecification",
+        "properties.awsProperties.streamSpecification.resourcePolicy",
+        "properties.awsProperties.streamSpecification.resourcePolicy.policyDocument",
+        "properties.awsProperties.streamSpecification.streamViewType",
+        "properties.awsProperties.tableClass",
+        "properties.awsProperties.tableName",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.timeToLiveSpecification",
+        "properties.awsProperties.timeToLiveSpecification.attributeName",
+        "properties.awsProperties.timeToLiveSpecification.enabled",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBTable"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBTables/{name}",
+      "operationId": "DynamoDbTables_Update",
+      "bodySchema": "DynamoDBTableTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBTable"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBTables/{name}",
+      "operationId": "DynamoDbTables_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBTable"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

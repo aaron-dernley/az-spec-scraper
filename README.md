@@ -9,6 +9,7 @@ This script automates the extraction of Azure resource and subresource definitio
   (requiring a min of GET, PUT, and DELETE)
 - **Outputs** JSON files per resource (e.g., `Azure::Network::VirtualNetworks.json`)
 - Includes **all required/optional body properties, URI path parameters, and query parameters** for each operation
+- **Outputs** the versions of the extracted resources, on re-runs compares the versions to detect new
 - **Cleans up** all temporary/cloned files when done
 
 ---

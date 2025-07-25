@@ -1,0 +1,161 @@
+{
+  "resource": "Azure::Insights::Annotations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations",
+      "operationId": "Annotations_List",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "start",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The start time to query from for annotations, cannot be older than 90 days from current date."
+        },
+        {
+          "name": "end",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The end time to query for annotations."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations",
+      "operationId": "Annotations_Create",
+      "bodySchema": "Annotation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "AnnotationName",
+        "Category",
+        "EventTime",
+        "Id",
+        "Properties",
+        "RelatedAnnotation"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations/{annotationId}",
+      "operationId": "Annotations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "annotationId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The unique annotation ID. This is unique within a Application Insights component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations/{annotationId}",
+      "operationId": "Annotations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "annotationId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The unique annotation ID. This is unique within a Application Insights component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

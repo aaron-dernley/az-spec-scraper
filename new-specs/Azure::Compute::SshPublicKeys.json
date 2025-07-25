@@ -1,0 +1,226 @@
+{
+  "resource": "Azure::Compute::SshPublicKeys",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/sshPublicKeys",
+      "operationId": "SshPublicKeys_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys",
+      "operationId": "SshPublicKeys_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+      "operationId": "SshPublicKeys_Create",
+      "bodySchema": "SshPublicKeyResource",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.publicKey",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "sshPublicKeyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SSH public key."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+      "operationId": "SshPublicKeys_Update",
+      "bodySchema": "SshPublicKeyUpdateResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.publicKey",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "sshPublicKeyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SSH public key."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+      "operationId": "SshPublicKeys_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "sshPublicKeyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SSH public key."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/sshPublicKeys/{sshPublicKeyName}",
+      "operationId": "SshPublicKeys_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "sshPublicKeyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SSH public key."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

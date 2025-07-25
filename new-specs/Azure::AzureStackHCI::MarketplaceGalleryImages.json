@@ -1,0 +1,195 @@
+{
+  "resource": "Azure::AzureStackHCI::MarketplaceGalleryImages",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages/{marketplaceGalleryImageName}",
+      "operationId": "MarketplaceGalleryImages_Get",
+      "pathParameters": [
+        {
+          "name": "marketplaceGalleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the marketplace gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages/{marketplaceGalleryImageName}",
+      "operationId": "MarketplaceGalleryImages_CreateOrUpdate",
+      "bodySchema": "MarketplaceGalleryImages",
+      "requiredProperties": [
+        "properties.identifier.offer",
+        "properties.identifier.publisher",
+        "properties.identifier.sku",
+        "properties.osType",
+        "properties.version.properties.storageProfile"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.cloudInitDataSource",
+        "properties.containerId",
+        "properties.hyperVGeneration",
+        "properties.identifier",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.downloadStatus",
+        "properties.status.downloadStatus.downloadSizeInMB",
+        "properties.status.errorCode",
+        "properties.status.errorMessage",
+        "properties.status.progressPercentage",
+        "properties.status.provisioningStatus",
+        "properties.status.provisioningStatus.operationId",
+        "properties.status.provisioningStatus.status",
+        "properties.version",
+        "properties.version.name",
+        "properties.version.properties",
+        "properties.version.properties.storageProfile.osDiskImage",
+        "properties.version.properties.storageProfile.osDiskImage.sizeInMB"
+      ],
+      "pathParameters": [
+        {
+          "name": "marketplaceGalleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the marketplace gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages/{marketplaceGalleryImageName}",
+      "operationId": "MarketplaceGalleryImages_Delete",
+      "pathParameters": [
+        {
+          "name": "marketplaceGalleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the marketplace gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages/{marketplaceGalleryImageName}",
+      "operationId": "MarketplaceGalleryImages_Update",
+      "bodySchema": "MarketplaceGalleryImagesUpdateRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "marketplaceGalleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the marketplace gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages",
+      "operationId": "MarketplaceGalleryImages_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureStackHCI/marketplaceGalleryImages",
+      "operationId": "MarketplaceGalleryImages_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

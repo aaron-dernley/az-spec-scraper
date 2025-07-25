@@ -1,0 +1,282 @@
+{
+  "resource": "Azure::ApiManagement::Issues",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues",
+      "operationId": "ApiIssue_ListByService",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "|   Field     |     Usage     |     Supported operators     |     Supported functions     |</br>|-------------|-------------|-------------|-------------|</br>| name | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br>| userId | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br>| state | filter | eq |     | </br>"
+        },
+        {
+          "name": "expandCommentsAttachments",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Expand the comment attachments. "
+        }
+      ]
+    },
+    {
+      "method": "HEAD",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues/{issueId}",
+      "operationId": "ApiIssue_GetEntityTag",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "issueId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues/{issueId}",
+      "operationId": "ApiIssue_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "issueId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "expandCommentsAttachments",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Expand the comment attachments. "
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues/{issueId}",
+      "operationId": "ApiIssue_CreateOrUpdate",
+      "bodySchema": "IssueContract",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "issueId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues/{issueId}",
+      "operationId": "ApiIssue_Update",
+      "bodySchema": "IssueUpdateContract",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "issueId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/issues/{issueId}",
+      "operationId": "ApiIssue_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "apiId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "issueId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

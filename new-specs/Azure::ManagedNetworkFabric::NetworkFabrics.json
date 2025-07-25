@@ -1,0 +1,251 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkFabrics",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}",
+      "operationId": "NetworkFabrics_Create",
+      "bodySchema": "NetworkFabric",
+      "requiredProperties": [
+        "properties",
+        "properties.fabricASN",
+        "properties.ipv4Prefix",
+        "properties.managementNetworkConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.peeringOption",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.peeringOption",
+        "properties.networkFabricControllerId",
+        "properties.networkFabricSku",
+        "properties.serverCountPerRack",
+        "properties.terminalServerConfiguration"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.fabricVersion",
+        "properties.ipv6Prefix",
+        "properties.l2IsolationDomains",
+        "properties.l3IsolationDomains",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.administrativeState",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.networkToNetworkInterconnectId",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.bfdConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.mtu",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.peerASN",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.vlanId",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.exportRouteTargets",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.importRouteTargets",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.routeTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.administrativeState",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.networkToNetworkInterconnectId",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.bfdConfiguration",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.mtu",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.peerASN",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.vlanId",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.exportRouteTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.importRouteTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.routeTargets",
+        "properties.provisioningState",
+        "properties.rackCount",
+        "properties.racks",
+        "properties.routerIds",
+        "properties.terminalServerConfiguration.networkDeviceId",
+        "properties.terminalServerConfiguration.password",
+        "properties.terminalServerConfiguration.serialNumber",
+        "properties.terminalServerConfiguration.username"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}",
+      "operationId": "NetworkFabrics_Get",
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}",
+      "operationId": "NetworkFabrics_Update",
+      "bodySchema": "NetworkFabricPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.fabricASN",
+        "properties.ipv4Prefix",
+        "properties.ipv6Prefix",
+        "properties.managementNetworkConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.networkToNetworkInterconnectId",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.bfdConfiguration",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.mtu",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.peerASN",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionAProperties.vlanId",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.exportRouteTargets",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.importRouteTargets",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.optionBProperties.routeTargets",
+        "properties.managementNetworkConfiguration.infrastructureVpnConfiguration.peeringOption",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.networkToNetworkInterconnectId",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.bfdConfiguration",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.mtu",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.peerASN",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionAProperties.vlanId",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.exportRouteTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.importRouteTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.optionBProperties.routeTargets",
+        "properties.managementNetworkConfiguration.workloadVpnConfiguration.peeringOption",
+        "properties.rackCount",
+        "properties.serverCountPerRack",
+        "properties.terminalServerConfiguration",
+        "properties.terminalServerConfiguration.password",
+        "properties.terminalServerConfiguration.serialNumber",
+        "properties.terminalServerConfiguration.username"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}",
+      "operationId": "NetworkFabrics_Delete",
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics",
+      "operationId": "NetworkFabrics_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkFabrics",
+      "operationId": "NetworkFabrics_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

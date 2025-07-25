@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::AwsConnector::EksNodegroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/eksNodegroups",
+      "operationId": "EksNodegroups_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/eksNodegroups",
+      "operationId": "EksNodegroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/eksNodegroups/{name}",
+      "operationId": "EksNodegroups_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EksNodegroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/eksNodegroups/{name}",
+      "operationId": "EksNodegroups_CreateOrReplace",
+      "bodySchema": "EksNodegroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.amiType",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.capacityType",
+        "properties.awsProperties.clusterName",
+        "properties.awsProperties.diskSize",
+        "properties.awsProperties.forceUpdateEnabled",
+        "properties.awsProperties.id",
+        "properties.awsProperties.instanceTypes",
+        "properties.awsProperties.labels",
+        "properties.awsProperties.launchTemplate",
+        "properties.awsProperties.launchTemplate.id",
+        "properties.awsProperties.launchTemplate.name",
+        "properties.awsProperties.launchTemplate.version",
+        "properties.awsProperties.nodeRole",
+        "properties.awsProperties.nodegroupName",
+        "properties.awsProperties.releaseVersion",
+        "properties.awsProperties.remoteAccess",
+        "properties.awsProperties.remoteAccess.ec2SshKey",
+        "properties.awsProperties.remoteAccess.sourceSecurityGroups",
+        "properties.awsProperties.scalingConfig",
+        "properties.awsProperties.scalingConfig.desiredSize",
+        "properties.awsProperties.scalingConfig.maxSize",
+        "properties.awsProperties.scalingConfig.minSize",
+        "properties.awsProperties.subnets",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.taints",
+        "properties.awsProperties.updateConfig",
+        "properties.awsProperties.updateConfig.maxUnavailable",
+        "properties.awsProperties.updateConfig.maxUnavailablePercentage",
+        "properties.awsProperties.version",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EksNodegroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/eksNodegroups/{name}",
+      "operationId": "EksNodegroups_Update",
+      "bodySchema": "EksNodegroupTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EksNodegroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/eksNodegroups/{name}",
+      "operationId": "EksNodegroups_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EksNodegroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

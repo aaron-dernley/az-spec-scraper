@@ -1,0 +1,243 @@
+{
+  "resource": "Azure::Kusto::ManagedPrivateEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/managedPrivateEndpoints",
+      "operationId": "ManagedPrivateEndpoints_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_CreateOrUpdate",
+      "bodySchema": "ManagedPrivateEndpoint",
+      "requiredProperties": [
+        "properties.groupId",
+        "properties.privateLinkResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.privateLinkResourceRegion",
+        "properties.provisioningState",
+        "properties.requestMessage",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_Update",
+      "bodySchema": "ManagedPrivateEndpoint",
+      "requiredProperties": [
+        "properties.groupId",
+        "properties.privateLinkResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.privateLinkResourceRegion",
+        "properties.provisioningState",
+        "properties.requestMessage",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    }
+  ]
+}

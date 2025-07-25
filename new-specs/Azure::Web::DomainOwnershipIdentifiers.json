@@ -1,0 +1,471 @@
+{
+  "resource": "Azure::Web::DomainOwnershipIdentifiers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/domainOwnershipIdentifiers",
+      "operationId": "WebApps_ListDomainOwnershipIdentifiers",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_GetDomainOwnershipIdentifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_CreateOrUpdateDomainOwnershipIdentifier",
+      "bodySchema": "Identifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_DeleteDomainOwnershipIdentifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_UpdateDomainOwnershipIdentifier",
+      "bodySchema": "Identifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/domainOwnershipIdentifiers",
+      "operationId": "WebApps_ListDomainOwnershipIdentifiersSlot",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "slot",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment slot. If a slot is not specified, the API will delete the binding for the production slot."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_GetDomainOwnershipIdentifierSlot",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "slot",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment slot. If a slot is not specified, the API will delete the binding for the production slot."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_CreateOrUpdateDomainOwnershipIdentifierSlot",
+      "bodySchema": "Identifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "slot",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment slot. If a slot is not specified, the API will delete the binding for the production slot."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_DeleteDomainOwnershipIdentifierSlot",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "slot",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment slot. If a slot is not specified, the API will delete the binding for the production slot."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/domainOwnershipIdentifiers/{domainOwnershipIdentifierName}",
+      "operationId": "WebApps_UpdateDomainOwnershipIdentifierSlot",
+      "bodySchema": "Identifier",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "domainOwnershipIdentifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of domain ownership identifier."
+        },
+        {
+          "name": "slot",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment slot. If a slot is not specified, the API will delete the binding for the production slot."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

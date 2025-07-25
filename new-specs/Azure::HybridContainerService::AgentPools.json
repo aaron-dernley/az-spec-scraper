@@ -1,0 +1,112 @@
+{
+  "resource": "Azure::HybridContainerService::AgentPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/agentPools/{agentPoolName}",
+      "operationId": "agentPool_Get",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the agent pool in the provisioned cluster."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/agentPools/{agentPoolName}",
+      "operationId": "agentPool_CreateOrUpdate",
+      "bodySchema": "agentPool",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.count",
+        "properties.enableAutoScaling",
+        "properties.kubernetesVersion",
+        "properties.maxCount",
+        "properties.maxPods",
+        "properties.minCount",
+        "properties.nodeLabels",
+        "properties.nodeTaints",
+        "properties.osSKU",
+        "properties.osType",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.currentState",
+        "properties.status.errorMessage",
+        "properties.status.readyReplicas",
+        "properties.vmSize",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the agent pool in the provisioned cluster."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/agentPools/{agentPoolName}",
+      "operationId": "agentPool_Delete",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the agent pool in the provisioned cluster."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/agentPools",
+      "operationId": "agentPool_ListByProvisionedCluster",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "resource": "Azure::Network::IpGroups",
+  "version": "2020-07-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+      "operationId": "IpGroups_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "ipGroupsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipGroups."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+      "operationId": "IpGroups_CreateOrUpdate",
+      "bodySchema": "IpGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.firewallPolicies",
+        "properties.firewalls",
+        "properties.ipAddresses",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "ipGroupsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipGroups."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+      "operationId": "IpGroups_UpdateGroups",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "ipGroupsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipGroups."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups/{ipGroupsName}",
+      "operationId": "IpGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "ipGroupsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipGroups."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ipGroups",
+      "operationId": "IpGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/ipGroups",
+      "operationId": "IpGroups_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

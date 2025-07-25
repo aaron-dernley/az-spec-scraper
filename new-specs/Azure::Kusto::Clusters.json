@@ -1,0 +1,314 @@
+{
+  "resource": "Azure::Kusto::Clusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}",
+      "operationId": "Clusters_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}",
+      "operationId": "Clusters_CreateOrUpdate",
+      "bodySchema": "Cluster",
+      "requiredProperties": [
+        "identity.type",
+        "properties.optimizedAutoscale.isEnabled",
+        "properties.optimizedAutoscale.maximum",
+        "properties.optimizedAutoscale.minimum",
+        "properties.optimizedAutoscale.version",
+        "properties.virtualNetworkConfiguration.dataManagementPublicIpId",
+        "properties.virtualNetworkConfiguration.enginePublicIpId",
+        "properties.virtualNetworkConfiguration.subnetId",
+        "sku",
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "etag",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.acceptedAudiences",
+        "properties.allowedFqdnList",
+        "properties.allowedIpRangeList",
+        "properties.dataIngestionUri",
+        "properties.enableAutoStop",
+        "properties.enableDiskEncryption",
+        "properties.enableDoubleEncryption",
+        "properties.enablePurge",
+        "properties.enableStreamingIngest",
+        "properties.engineType",
+        "properties.keyVaultProperties",
+        "properties.keyVaultProperties.keyName",
+        "properties.keyVaultProperties.keyVaultUri",
+        "properties.keyVaultProperties.keyVersion",
+        "properties.keyVaultProperties.userIdentity",
+        "properties.languageExtensions",
+        "properties.languageExtensions.value",
+        "properties.optimizedAutoscale",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicIPType",
+        "properties.publicNetworkAccess",
+        "properties.restrictOutboundNetworkAccess",
+        "properties.state",
+        "properties.stateReason",
+        "properties.trustedExternalTenants",
+        "properties.uri",
+        "properties.virtualClusterGraduationProperties",
+        "properties.virtualNetworkConfiguration",
+        "sku.capacity",
+        "systemData",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}",
+      "operationId": "Clusters_Update",
+      "bodySchema": "ClusterUpdate",
+      "requiredProperties": [
+        "identity.type",
+        "properties.optimizedAutoscale.isEnabled",
+        "properties.optimizedAutoscale.maximum",
+        "properties.optimizedAutoscale.minimum",
+        "properties.optimizedAutoscale.version",
+        "properties.virtualNetworkConfiguration.dataManagementPublicIpId",
+        "properties.virtualNetworkConfiguration.enginePublicIpId",
+        "properties.virtualNetworkConfiguration.subnetId",
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "location",
+        "properties",
+        "properties.acceptedAudiences",
+        "properties.allowedFqdnList",
+        "properties.allowedIpRangeList",
+        "properties.dataIngestionUri",
+        "properties.enableAutoStop",
+        "properties.enableDiskEncryption",
+        "properties.enableDoubleEncryption",
+        "properties.enablePurge",
+        "properties.enableStreamingIngest",
+        "properties.engineType",
+        "properties.keyVaultProperties",
+        "properties.keyVaultProperties.keyName",
+        "properties.keyVaultProperties.keyVaultUri",
+        "properties.keyVaultProperties.keyVersion",
+        "properties.keyVaultProperties.userIdentity",
+        "properties.languageExtensions",
+        "properties.languageExtensions.value",
+        "properties.optimizedAutoscale",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicIPType",
+        "properties.publicNetworkAccess",
+        "properties.restrictOutboundNetworkAccess",
+        "properties.state",
+        "properties.stateReason",
+        "properties.trustedExternalTenants",
+        "properties.uri",
+        "properties.virtualClusterGraduationProperties",
+        "properties.virtualNetworkConfiguration",
+        "sku",
+        "sku.capacity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}",
+      "operationId": "Clusters_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters",
+      "operationId": "Clusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Kusto/clusters",
+      "operationId": "Clusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "resource": "Azure::StorageSync::SyncGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups",
+      "operationId": "SyncGroups_ListByStorageSyncService",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Create",
+      "bodySchema": "SyncGroupCreateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Get",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

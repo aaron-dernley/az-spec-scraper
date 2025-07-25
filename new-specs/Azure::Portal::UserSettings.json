@@ -1,0 +1,282 @@
+{
+  "resource": "Azure::Portal::UserSettings",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName}",
+      "operationId": "getUserSettingsWithLocation",
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName}",
+      "operationId": "patchUserSettingsWithLocation",
+      "bodySchema": "CloudShellPatchUserSettings",
+      "requiredProperties": [
+        "properties.preferredLocation",
+        "properties.preferredOsType",
+        "properties.preferredShellType",
+        "properties.storageProfile",
+        "properties.terminalSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.storageProfile.diskSizeInGB",
+        "properties.storageProfile.fileShareName",
+        "properties.storageProfile.storageAccountResourceId",
+        "properties.terminalSettings.fontSize",
+        "properties.terminalSettings.fontStyle"
+      ],
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName}",
+      "operationId": "deleteUserSettingsWithLocation",
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Portal/locations/{location}/userSettings/{userSettingsName}",
+      "operationId": "putUserSettingsWithLocation",
+      "bodySchema": "CloudShellUserSettings",
+      "requiredProperties": [
+        "properties",
+        "properties.preferredLocation",
+        "properties.preferredOsType",
+        "properties.preferredShellType",
+        "properties.storageProfile",
+        "properties.terminalSettings"
+      ],
+      "optionalProperties": [
+        "properties.storageProfile.diskSizeInGB",
+        "properties.storageProfile.fileShareName",
+        "properties.storageProfile.storageAccountResourceId",
+        "properties.terminalSettings.fontSize",
+        "properties.terminalSettings.fontStyle"
+      ],
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Portal/userSettings/{userSettingsName}",
+      "operationId": "GetUserSettings",
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Portal/userSettings/{userSettingsName}",
+      "operationId": "PatchUserSettings",
+      "bodySchema": "CloudShellPatchUserSettings",
+      "requiredProperties": [
+        "properties.preferredLocation",
+        "properties.preferredOsType",
+        "properties.preferredShellType",
+        "properties.storageProfile",
+        "properties.terminalSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.storageProfile.diskSizeInGB",
+        "properties.storageProfile.fileShareName",
+        "properties.storageProfile.storageAccountResourceId",
+        "properties.terminalSettings.fontSize",
+        "properties.terminalSettings.fontStyle"
+      ],
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Portal/userSettings/{userSettingsName}",
+      "operationId": "DeleteUserSettings",
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Portal/userSettings/{userSettingsName}",
+      "operationId": "PutUserSettings",
+      "bodySchema": "CloudShellUserSettings",
+      "requiredProperties": [
+        "properties",
+        "properties.preferredLocation",
+        "properties.preferredOsType",
+        "properties.preferredShellType",
+        "properties.storageProfile",
+        "properties.terminalSettings"
+      ],
+      "optionalProperties": [
+        "properties.storageProfile.diskSizeInGB",
+        "properties.storageProfile.fileShareName",
+        "properties.storageProfile.storageAccountResourceId",
+        "properties.terminalSettings.fontSize",
+        "properties.terminalSettings.fontStyle"
+      ],
+      "pathParameters": [
+        {
+          "name": "userSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the user settings"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    }
+  ]
+}

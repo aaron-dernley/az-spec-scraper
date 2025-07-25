@@ -1,0 +1,181 @@
+{
+  "resource": "Azure::AzureStackHCI::LogicalNetworks",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/logicalNetworks/{logicalNetworkName}",
+      "operationId": "LogicalNetworks_Get",
+      "pathParameters": [
+        {
+          "name": "logicalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the logical network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/logicalNetworks/{logicalNetworkName}",
+      "operationId": "LogicalNetworks_CreateOrUpdate",
+      "bodySchema": "LogicalNetworks",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.dhcpOptions",
+        "properties.dhcpOptions.dnsServers",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.errorCode",
+        "properties.status.errorMessage",
+        "properties.status.provisioningStatus",
+        "properties.status.provisioningStatus.operationId",
+        "properties.status.provisioningStatus.status",
+        "properties.subnets",
+        "properties.vmSwitchName"
+      ],
+      "pathParameters": [
+        {
+          "name": "logicalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the logical network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/logicalNetworks/{logicalNetworkName}",
+      "operationId": "LogicalNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "logicalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the logical network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/logicalNetworks/{logicalNetworkName}",
+      "operationId": "LogicalNetworks_Update",
+      "bodySchema": "LogicalNetworksUpdateRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "logicalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the logical network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/logicalNetworks",
+      "operationId": "LogicalNetworks_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureStackHCI/logicalNetworks",
+      "operationId": "LogicalNetworks_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "resource": "Azure::Marketplace::Offers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers",
+      "operationId": "PrivateStoreCollectionOffer_List",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers/{offerId}",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "offerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers/{offerId}",
+      "operationId": "PrivateStoreCollectionOffer_Get",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        },
+        {
+          "name": "offerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The offer ID to update or delete"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers/{offerId}",
+      "operationId": "PrivateStoreCollectionOffer_CreateOrUpdate",
+      "bodySchema": "Offer",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdAt",
+        "properties.eTag",
+        "properties.iconFileUris",
+        "properties.modifiedAt",
+        "properties.offerDisplayName",
+        "properties.plans",
+        "properties.privateStoreId",
+        "properties.publisherDisplayName",
+        "properties.specificPlanIdsLimitation",
+        "properties.uniqueOfferId",
+        "properties.updateSuppressedDueIdempotence",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        },
+        {
+          "name": "offerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The offer ID to update or delete"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers/{offerId}",
+      "operationId": "PrivateStoreCollectionOffer_Delete",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        },
+        {
+          "name": "offerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The offer ID to update or delete"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}/offers/{offerId}",
+      "operationId": "PrivateStoreCollectionOffer_Post",
+      "bodySchema": "PrivateStoreOperation",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        },
+        {
+          "name": "offerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The offer ID to update or delete"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    }
+  ]
+}

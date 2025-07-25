@@ -1,0 +1,247 @@
+{
+  "resource": "Azure::ContainerService::OpenShiftManagedClusters",
+  "version": "2019-04-30",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ContainerService/openShiftManagedClusters",
+      "operationId": "OpenShiftManagedClusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters",
+      "operationId": "OpenShiftManagedClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}",
+      "operationId": "OpenShiftManagedClusters_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift managed cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}",
+      "operationId": "OpenShiftManagedClusters_CreateOrUpdate",
+      "bodySchema": "OpenShiftManagedCluster",
+      "requiredProperties": [
+        "location",
+        "properties.masterPoolProfile.count",
+        "properties.masterPoolProfile.vmSize",
+        "properties.openShiftVersion"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "plan",
+        "plan.name",
+        "plan.product",
+        "plan.promotionCode",
+        "plan.publisher",
+        "properties",
+        "properties.agentPoolProfiles",
+        "properties.authProfile",
+        "properties.authProfile.identityProviders",
+        "properties.clusterVersion",
+        "properties.fqdn",
+        "properties.masterPoolProfile",
+        "properties.masterPoolProfile.name",
+        "properties.masterPoolProfile.osType",
+        "properties.masterPoolProfile.subnetCidr",
+        "properties.networkProfile",
+        "properties.networkProfile.peerVnetId",
+        "properties.networkProfile.vnetCidr",
+        "properties.networkProfile.vnetId",
+        "properties.provisioningState",
+        "properties.publicHostname",
+        "properties.routerProfiles",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift managed cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}",
+      "operationId": "OpenShiftManagedClusters_UpdateTags",
+      "bodySchema": "TagsObject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift managed cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/openShiftManagedClusters/{resourceName}",
+      "operationId": "OpenShiftManagedClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift managed cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

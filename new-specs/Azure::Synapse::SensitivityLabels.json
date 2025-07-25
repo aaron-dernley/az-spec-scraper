@@ -1,0 +1,213 @@
+{
+  "resource": "Azure::Synapse::SensitivityLabels",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SqlPoolSensitivityLabels_CreateOrUpdate",
+      "bodySchema": "SensitivityLabel",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "managedBy",
+        "properties",
+        "properties.columnName",
+        "properties.informationType",
+        "properties.informationTypeId",
+        "properties.isDisabled",
+        "properties.labelId",
+        "properties.labelName",
+        "properties.rank",
+        "properties.schemaName",
+        "properties.tableName"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SqlPoolSensitivityLabels_Delete",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SqlPoolSensitivityLabels_Get",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

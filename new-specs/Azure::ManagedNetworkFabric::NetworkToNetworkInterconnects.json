@@ -1,0 +1,226 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkToNetworkInterconnects",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}/networkToNetworkInterconnects/{networkToNetworkInterconnectName}",
+      "operationId": "NetworkToNetworkInterconnects_Create",
+      "bodySchema": "NetworkToNetworkInterconnect",
+      "requiredProperties": [
+        "properties",
+        "properties.useOptionB"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.egressAclId",
+        "properties.exportRoutePolicy",
+        "properties.importRoutePolicy",
+        "properties.ingressAclId",
+        "properties.isManagementType",
+        "properties.layer2Configuration",
+        "properties.layer2Configuration.interfaces",
+        "properties.layer2Configuration.mtu",
+        "properties.nniType",
+        "properties.npbStaticRouteConfiguration",
+        "properties.npbStaticRouteConfiguration.bfdConfiguration",
+        "properties.npbStaticRouteConfiguration.ipv4Routes",
+        "properties.npbStaticRouteConfiguration.ipv6Routes",
+        "properties.optionBLayer3Configuration",
+        "properties.optionBLayer3Configuration.fabricASN",
+        "properties.optionBLayer3Configuration.peerASN",
+        "properties.optionBLayer3Configuration.vlanId",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "networkToNetworkInterconnectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network to Network Interconnect."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}/networkToNetworkInterconnects/{networkToNetworkInterconnectName}",
+      "operationId": "NetworkToNetworkInterconnects_Get",
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "networkToNetworkInterconnectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network to Network Interconnect."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}/networkToNetworkInterconnects/{networkToNetworkInterconnectName}",
+      "operationId": "NetworkToNetworkInterconnects_Update",
+      "bodySchema": "NetworkToNetworkInterconnectPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.egressAclId",
+        "properties.exportRoutePolicy",
+        "properties.importRoutePolicy",
+        "properties.ingressAclId",
+        "properties.layer2Configuration",
+        "properties.layer2Configuration.interfaces",
+        "properties.layer2Configuration.mtu",
+        "properties.npbStaticRouteConfiguration",
+        "properties.npbStaticRouteConfiguration.bfdConfiguration",
+        "properties.npbStaticRouteConfiguration.ipv4Routes",
+        "properties.npbStaticRouteConfiguration.ipv6Routes",
+        "properties.optionBLayer3Configuration",
+        "properties.optionBLayer3Configuration.fabricASN",
+        "properties.optionBLayer3Configuration.peerASN",
+        "properties.optionBLayer3Configuration.vlanId"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "networkToNetworkInterconnectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network to Network Interconnect."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}/networkToNetworkInterconnects/{networkToNetworkInterconnectName}",
+      "operationId": "NetworkToNetworkInterconnects_Delete",
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "networkToNetworkInterconnectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network to Network Interconnect."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabrics/{networkFabricName}/networkToNetworkInterconnects",
+      "operationId": "NetworkToNetworkInterconnects_ListByNetworkFabric",
+      "pathParameters": [
+        {
+          "name": "networkFabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

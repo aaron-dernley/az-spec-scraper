@@ -1,0 +1,185 @@
+{
+  "resource": "Azure::AwsConnector::DynamoDBContinuousBackupsDescriptions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions/{name}",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBContinuousBackupsDescription"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions/{name}",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_CreateOrReplace",
+      "bodySchema": "DynamoDBContinuousBackupsDescription",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.continuousBackupsStatus",
+        "properties.awsProperties.continuousBackupsStatus.value",
+        "properties.awsProperties.pointInTimeRecoveryDescription",
+        "properties.awsProperties.pointInTimeRecoveryDescription.earliestRestorableDateTime",
+        "properties.awsProperties.pointInTimeRecoveryDescription.latestRestorableDateTime",
+        "properties.awsProperties.pointInTimeRecoveryDescription.pointInTimeRecoveryStatus",
+        "properties.awsProperties.pointInTimeRecoveryDescription.pointInTimeRecoveryStatus.value",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBContinuousBackupsDescription"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions/{name}",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_Update",
+      "bodySchema": "DynamoDBContinuousBackupsDescriptionTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBContinuousBackupsDescription"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions/{name}",
+      "operationId": "DynamoDbContinuousBackupsDescriptions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DynamoDBContinuousBackupsDescription"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

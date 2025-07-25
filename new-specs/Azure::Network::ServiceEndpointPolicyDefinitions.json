@@ -1,0 +1,154 @@
+{
+  "resource": "Azure::Network::ServiceEndpointPolicyDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/serviceEndpointPolicies/{serviceEndpointPolicyName}/serviceEndpointPolicyDefinitions/{serviceEndpointPolicyDefinitionName}",
+      "operationId": "ServiceEndpointPolicyDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "serviceEndpointPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service Endpoint Policy."
+        },
+        {
+          "name": "serviceEndpointPolicyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy definition."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/serviceEndpointPolicies/{serviceEndpointPolicyName}/serviceEndpointPolicyDefinitions/{serviceEndpointPolicyDefinitionName}",
+      "operationId": "ServiceEndpointPolicyDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "serviceEndpointPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy name."
+        },
+        {
+          "name": "serviceEndpointPolicyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy definition name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/serviceEndpointPolicies/{serviceEndpointPolicyName}/serviceEndpointPolicyDefinitions/{serviceEndpointPolicyDefinitionName}",
+      "operationId": "ServiceEndpointPolicyDefinitions_CreateOrUpdate",
+      "bodySchema": "ServiceEndpointPolicyDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.provisioningState",
+        "properties.service",
+        "properties.serviceResources"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "serviceEndpointPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy."
+        },
+        {
+          "name": "serviceEndpointPolicyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy definition name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/serviceEndpointPolicies/{serviceEndpointPolicyName}/serviceEndpointPolicyDefinitions",
+      "operationId": "ServiceEndpointPolicyDefinitions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "serviceEndpointPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service endpoint policy name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

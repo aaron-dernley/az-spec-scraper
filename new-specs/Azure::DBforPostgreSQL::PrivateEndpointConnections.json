@@ -1,0 +1,144 @@
+{
+  "resource": "Azure::DBforPostgreSQL::PrivateEndpointConnections",
+  "version": "2024-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}/privateEndpointConnections",
+      "operationId": "PrivateEndpointConnections_ListByCluster",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "PrivateEndpointConnections_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection associated with the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "PrivateEndpointConnections_CreateOrUpdate",
+      "bodySchema": "PrivateEndpointConnection",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection associated with the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "PrivateEndpointConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection associated with the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

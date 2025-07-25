@@ -1,0 +1,157 @@
+{
+  "resource": "Azure::DataReplication::PrivateEndpointConnectionProxies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/privateEndpointConnectionProxies",
+      "operationId": "PrivateEndpointConnectionProxies_List",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyName}",
+      "operationId": "PrivateEndpointConnectionProxies_Get",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The private endpoint connection proxy name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyName}",
+      "operationId": "PrivateEndpointConnectionProxies_Create",
+      "bodySchema": "PrivateEndpointConnectionProxy",
+      "requiredProperties": [
+        "properties.remotePrivateEndpoint.id"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.provisioningState",
+        "properties.remotePrivateEndpoint",
+        "properties.remotePrivateEndpoint.connectionDetails",
+        "properties.remotePrivateEndpoint.manualPrivateLinkServiceConnections",
+        "properties.remotePrivateEndpoint.privateLinkServiceConnections",
+        "properties.remotePrivateEndpoint.privateLinkServiceProxies"
+      ],
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The private endpoint connection proxy name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyName}",
+      "operationId": "PrivateEndpointConnectionProxies_Delete",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The private endpoint connection proxy name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::Sql::Ipv6FirewallRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/ipv6FirewallRules",
+      "operationId": "IPv6FirewallRules_ListByServer",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/ipv6FirewallRules/{firewallRuleName}",
+      "operationId": "IPv6FirewallRules_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/ipv6FirewallRules/{firewallRuleName}",
+      "operationId": "IPv6FirewallRules_CreateOrUpdate",
+      "bodySchema": "IPv6FirewallRule",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.endIPv6Address",
+        "properties.startIPv6Address",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/ipv6FirewallRules/{firewallRuleName}",
+      "operationId": "IPv6FirewallRules_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

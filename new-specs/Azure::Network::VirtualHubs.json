@@ -1,0 +1,185 @@
+{
+  "resource": "Azure::Network::VirtualHubs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}",
+      "operationId": "VirtualHubs_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}",
+      "operationId": "VirtualHubs_CreateOrUpdate",
+      "bodySchema": "VirtualHub",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.addressPrefix",
+        "properties.allowBranchToBranchTraffic",
+        "properties.azureFirewall",
+        "properties.bgpConnections",
+        "properties.expressRouteGateway",
+        "properties.ipConfigurations",
+        "properties.p2SVpnGateway",
+        "properties.provisioningState",
+        "properties.routeTable",
+        "properties.routeTable.routes",
+        "properties.routingState",
+        "properties.securityPartnerProvider",
+        "properties.securityProviderName",
+        "properties.sku",
+        "properties.virtualHubRouteTableV2s",
+        "properties.virtualRouterAsn",
+        "properties.virtualRouterIps",
+        "properties.virtualWan",
+        "properties.vpnGateway"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}",
+      "operationId": "VirtualHubs_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}",
+      "operationId": "VirtualHubs_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs",
+      "operationId": "VirtualHubs_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/virtualHubs",
+      "operationId": "VirtualHubs_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

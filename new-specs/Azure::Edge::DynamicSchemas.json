@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::Edge::DynamicSchemas",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas",
+      "operationId": "DynamicSchemas_ListBySchema",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}",
+      "operationId": "DynamicSchemas_Get",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}",
+      "operationId": "DynamicSchemas_CreateOrUpdate",
+      "bodySchema": "DynamicSchema",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.configurationModel",
+        "properties.configurationType",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}",
+      "operationId": "DynamicSchemas_Update",
+      "bodySchema": "DynamicSchemaUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.configurationModel",
+        "properties.configurationType",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}",
+      "operationId": "DynamicSchemas_Delete",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

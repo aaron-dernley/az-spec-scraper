@@ -1,0 +1,271 @@
+{
+  "resource": "Azure::Compute::Hosts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+      "operationId": "DedicatedHosts_CreateOrUpdate",
+      "bodySchema": "DedicatedHost",
+      "requiredProperties": [
+        "location",
+        "sku"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.autoReplaceOnFailure",
+        "properties.hostId",
+        "properties.instanceView",
+        "properties.instanceView.assetId",
+        "properties.instanceView.availableCapacity",
+        "properties.instanceView.availableCapacity.allocatableVMs",
+        "properties.instanceView.statuses",
+        "properties.licenseType",
+        "properties.platformFaultDomain",
+        "properties.provisioningState",
+        "properties.provisioningTime",
+        "properties.virtualMachines",
+        "sku.capacity",
+        "sku.name",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hostGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host group."
+        },
+        {
+          "name": "hostName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host ."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+      "operationId": "DedicatedHosts_Update",
+      "bodySchema": "DedicatedHostUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoReplaceOnFailure",
+        "properties.hostId",
+        "properties.instanceView",
+        "properties.instanceView.assetId",
+        "properties.instanceView.availableCapacity",
+        "properties.instanceView.availableCapacity.allocatableVMs",
+        "properties.instanceView.statuses",
+        "properties.licenseType",
+        "properties.platformFaultDomain",
+        "properties.provisioningState",
+        "properties.provisioningTime",
+        "properties.virtualMachines",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hostGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host group."
+        },
+        {
+          "name": "hostName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host ."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+      "operationId": "DedicatedHosts_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hostGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host group."
+        },
+        {
+          "name": "hostName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts/{hostName}",
+      "operationId": "DedicatedHosts_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hostGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host group."
+        },
+        {
+          "name": "hostName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}/hosts",
+      "operationId": "DedicatedHosts_ListByHostGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hostGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated host group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

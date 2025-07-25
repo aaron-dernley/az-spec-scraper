@@ -1,0 +1,194 @@
+{
+  "resource": "Azure::Insights::Components",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/components",
+      "operationId": "Components_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components",
+      "operationId": "Components_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}",
+      "operationId": "Components_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}",
+      "operationId": "Components_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}",
+      "operationId": "Components_CreateOrUpdate",
+      "bodySchema": "ApplicationInsightsComponent",
+      "requiredProperties": [
+        "kind",
+        "location",
+        "properties.Application_Type"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.AppId",
+        "properties.ApplicationId",
+        "properties.ConnectionString",
+        "properties.CreationDate",
+        "properties.DisableIpMasking",
+        "properties.Flow_Type",
+        "properties.HockeyAppId",
+        "properties.HockeyAppToken",
+        "properties.ImmediatePurgeDataOn30Days",
+        "properties.IngestionMode",
+        "properties.InstrumentationKey",
+        "properties.PrivateLinkScopedResources",
+        "properties.Request_Source",
+        "properties.RetentionInDays",
+        "properties.SamplingPercentage",
+        "properties.TenantId",
+        "properties.provisioningState",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}",
+      "operationId": "Components_UpdateTags",
+      "bodySchema": "TagsResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

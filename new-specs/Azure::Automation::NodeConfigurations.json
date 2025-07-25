@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::Automation::NodeConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodeConfigurations/{nodeConfigurationName}",
+      "operationId": "DscNodeConfiguration_Delete",
+      "pathParameters": [
+        {
+          "name": "nodeConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Dsc node configuration name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodeConfigurations/{nodeConfigurationName}",
+      "operationId": "DscNodeConfiguration_Get",
+      "pathParameters": [
+        {
+          "name": "nodeConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Dsc node configuration name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodeConfigurations/{nodeConfigurationName}",
+      "operationId": "DscNodeConfiguration_CreateOrUpdate",
+      "bodySchema": "DscNodeConfigurationCreateOrUpdateParameters",
+      "requiredProperties": [
+        "properties.configuration",
+        "properties.source",
+        "properties.source.hash.algorithm",
+        "properties.source.hash.value"
+      ],
+      "optionalProperties": [
+        "name",
+        "properties",
+        "properties.configuration.name",
+        "properties.incrementNodeConfigurationBuild",
+        "properties.source.hash",
+        "properties.source.type",
+        "properties.source.value",
+        "properties.source.version",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "nodeConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Dsc node configuration name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodeConfigurations",
+      "operationId": "DscNodeConfiguration_ListByAutomationAccount",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of rows to skip."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of rows to take."
+        },
+        {
+          "name": "$inlinecount",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Return total rows."
+        }
+      ]
+    }
+  ]
+}

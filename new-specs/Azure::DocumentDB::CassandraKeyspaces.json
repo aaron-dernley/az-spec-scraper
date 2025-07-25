@@ -1,0 +1,160 @@
+{
+  "resource": "Azure::DocumentDB::CassandraKeyspaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces",
+      "operationId": "CassandraResources_ListCassandraKeyspaces",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}",
+      "operationId": "CassandraResources_GetCassandraKeyspace",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "keyspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB keyspace name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}",
+      "operationId": "CassandraResources_CreateUpdateCassandraKeyspace",
+      "bodySchema": "CassandraKeyspaceCreateUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.resource",
+        "properties.resource.id"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.options",
+        "properties.options.autoscaleSettings",
+        "properties.options.autoscaleSettings.maxThroughput",
+        "properties.options.throughput",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "keyspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB keyspace name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/cassandraKeyspaces/{keyspaceName}",
+      "operationId": "CassandraResources_DeleteCassandraKeyspace",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "keyspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB keyspace name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

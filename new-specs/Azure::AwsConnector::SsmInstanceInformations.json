@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::AwsConnector::SsmInstanceInformations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ssmInstanceInformations",
+      "operationId": "SsmInstanceInformations_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmInstanceInformations",
+      "operationId": "SsmInstanceInformations_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmInstanceInformations/{name}",
+      "operationId": "SsmInstanceInformations_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmInstanceInformation"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmInstanceInformations/{name}",
+      "operationId": "SsmInstanceInformations_CreateOrReplace",
+      "bodySchema": "SsmInstanceInformation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.activationId",
+        "properties.awsProperties.agentVersion",
+        "properties.awsProperties.associationOverview",
+        "properties.awsProperties.associationOverview.detailedStatus",
+        "properties.awsProperties.associationOverview.instanceAssociationStatusAggregatedCount",
+        "properties.awsProperties.associationStatus",
+        "properties.awsProperties.computerName",
+        "properties.awsProperties.iamRole",
+        "properties.awsProperties.instanceId",
+        "properties.awsProperties.ipAddress",
+        "properties.awsProperties.isLatestVersion",
+        "properties.awsProperties.lastAssociationExecutionDate",
+        "properties.awsProperties.lastPingDateTime",
+        "properties.awsProperties.lastSuccessfulAssociationExecutionDate",
+        "properties.awsProperties.name",
+        "properties.awsProperties.pingStatus",
+        "properties.awsProperties.pingStatus.value",
+        "properties.awsProperties.platformName",
+        "properties.awsProperties.platformType",
+        "properties.awsProperties.platformType.value",
+        "properties.awsProperties.platformVersion",
+        "properties.awsProperties.registrationDate",
+        "properties.awsProperties.resourceType",
+        "properties.awsProperties.resourceType.value",
+        "properties.awsProperties.sourceId",
+        "properties.awsProperties.sourceType",
+        "properties.awsProperties.sourceType.value",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmInstanceInformation"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmInstanceInformations/{name}",
+      "operationId": "SsmInstanceInformations_Update",
+      "bodySchema": "SsmInstanceInformationTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmInstanceInformation"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmInstanceInformations/{name}",
+      "operationId": "SsmInstanceInformations_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmInstanceInformation"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

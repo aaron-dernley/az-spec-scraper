@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::Insights::DataCollectionRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules",
+      "operationId": "DataCollectionRules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/dataCollectionRules",
+      "operationId": "DataCollectionRules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dataCollectionRuleName}",
+      "operationId": "DataCollectionRules_Get",
+      "pathParameters": [
+        {
+          "name": "dataCollectionRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection rule. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dataCollectionRuleName}",
+      "operationId": "DataCollectionRules_Create",
+      "bodySchema": "DataCollectionRuleResource",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "kind",
+        "name",
+        "properties",
+        "properties.dataCollectionEndpointId",
+        "properties.dataFlows",
+        "properties.dataSources",
+        "properties.dataSources.dataImports",
+        "properties.dataSources.dataImports.eventHub",
+        "properties.dataSources.dataImports.eventHub.consumerGroup",
+        "properties.dataSources.dataImports.eventHub.name",
+        "properties.dataSources.dataImports.eventHub.stream",
+        "properties.dataSources.extensions",
+        "properties.dataSources.iisLogs",
+        "properties.dataSources.logFiles",
+        "properties.dataSources.performanceCounters",
+        "properties.dataSources.platformTelemetry",
+        "properties.dataSources.prometheusForwarder",
+        "properties.dataSources.syslog",
+        "properties.dataSources.windowsEventLogs",
+        "properties.dataSources.windowsFirewallLogs",
+        "properties.description",
+        "properties.destinations",
+        "properties.destinations.azureMonitorMetrics",
+        "properties.destinations.azureMonitorMetrics.name",
+        "properties.destinations.eventHubs",
+        "properties.destinations.eventHubsDirect",
+        "properties.destinations.logAnalytics",
+        "properties.destinations.monitoringAccounts",
+        "properties.destinations.storageAccounts",
+        "properties.destinations.storageBlobsDirect",
+        "properties.destinations.storageTablesDirect",
+        "properties.immutableId",
+        "properties.metadata",
+        "properties.metadata.provisionedBy",
+        "properties.metadata.provisionedByResourceId",
+        "properties.provisioningState",
+        "properties.streamDeclarations",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "dataCollectionRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection rule. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dataCollectionRuleName}",
+      "operationId": "DataCollectionRules_Update",
+      "bodySchema": "ResourceForUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dataCollectionRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection rule. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dataCollectionRuleName}",
+      "operationId": "DataCollectionRules_Delete",
+      "pathParameters": [
+        {
+          "name": "dataCollectionRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection rule. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

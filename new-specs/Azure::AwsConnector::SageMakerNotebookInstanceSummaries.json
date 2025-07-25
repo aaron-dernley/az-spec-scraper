@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::AwsConnector::SageMakerNotebookInstanceSummaries",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries",
+      "operationId": "SageMakerNotebookInstanceSummaries_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries",
+      "operationId": "SageMakerNotebookInstanceSummaries_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries/{name}",
+      "operationId": "SageMakerNotebookInstanceSummaries_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SageMakerNotebookInstanceSummary"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries/{name}",
+      "operationId": "SageMakerNotebookInstanceSummaries_CreateOrReplace",
+      "bodySchema": "SageMakerNotebookInstanceSummary",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.additionalCodeRepositories",
+        "properties.awsProperties.creationTime",
+        "properties.awsProperties.defaultCodeRepository",
+        "properties.awsProperties.instanceType",
+        "properties.awsProperties.instanceType.value",
+        "properties.awsProperties.lastModifiedTime",
+        "properties.awsProperties.notebookInstanceArn",
+        "properties.awsProperties.notebookInstanceLifecycleConfigName",
+        "properties.awsProperties.notebookInstanceName",
+        "properties.awsProperties.notebookInstanceStatus",
+        "properties.awsProperties.notebookInstanceStatus.value",
+        "properties.awsProperties.url",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SageMakerNotebookInstanceSummary"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries/{name}",
+      "operationId": "SageMakerNotebookInstanceSummaries_Update",
+      "bodySchema": "SageMakerNotebookInstanceSummaryTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SageMakerNotebookInstanceSummary"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries/{name}",
+      "operationId": "SageMakerNotebookInstanceSummaries_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SageMakerNotebookInstanceSummary"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

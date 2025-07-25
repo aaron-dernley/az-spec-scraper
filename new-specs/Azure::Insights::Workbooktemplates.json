@@ -1,0 +1,172 @@
+{
+  "resource": "Azure::Insights::Workbooktemplates",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooktemplates",
+      "operationId": "WorkbookTemplates_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooktemplates/{resourceName}",
+      "operationId": "WorkbookTemplates_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooktemplates/{resourceName}",
+      "operationId": "WorkbookTemplates_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooktemplates/{resourceName}",
+      "operationId": "WorkbookTemplates_CreateOrUpdate",
+      "bodySchema": "WorkbookTemplate",
+      "requiredProperties": [
+        "location",
+        "properties.galleries",
+        "properties.templateData"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.author",
+        "properties.localized",
+        "properties.priority",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooktemplates/{resourceName}",
+      "operationId": "WorkbookTemplates_Update",
+      "bodySchema": "WorkbookTemplateUpdateParameters",
+      "requiredProperties": [
+        "properties.galleries",
+        "properties.templateData"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.author",
+        "properties.localized",
+        "properties.priority",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

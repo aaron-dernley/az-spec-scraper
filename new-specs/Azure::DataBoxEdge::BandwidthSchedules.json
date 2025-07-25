@@ -1,0 +1,189 @@
+{
+  "resource": "Azure::DataBoxEdge::BandwidthSchedules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/bandwidthSchedules",
+      "operationId": "BandwidthSchedules_ListByDataBoxEdgeDevice",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/bandwidthSchedules/{name}",
+      "operationId": "BandwidthSchedules_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The bandwidth schedule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/bandwidthSchedules/{name}",
+      "operationId": "BandwidthSchedules_CreateOrUpdate",
+      "bodySchema": "BandwidthSchedule",
+      "requiredProperties": [
+        "properties",
+        "properties.days",
+        "properties.rateInMbps",
+        "properties.start",
+        "properties.stop"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The bandwidth schedule name which needs to be added/updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/bandwidthSchedules/{name}",
+      "operationId": "BandwidthSchedules_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The bandwidth schedule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

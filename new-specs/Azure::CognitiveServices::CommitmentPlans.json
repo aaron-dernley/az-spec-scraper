@@ -1,0 +1,177 @@
+{
+  "resource": "Azure::CognitiveServices::CommitmentPlans",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/commitmentPlans",
+      "operationId": "CommitmentPlans_List",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/commitmentPlans/{commitmentPlanName}",
+      "operationId": "CommitmentPlans_Get",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "commitmentPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the commitmentPlan associated with the Cognitive Services Account"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/commitmentPlans/{commitmentPlanName}",
+      "operationId": "CommitmentPlans_CreateOrUpdate",
+      "bodySchema": "CommitmentPlan",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.autoRenew",
+        "properties.current",
+        "properties.current.count",
+        "properties.current.endDate",
+        "properties.current.quota",
+        "properties.current.quota.quantity",
+        "properties.current.quota.unit",
+        "properties.current.startDate",
+        "properties.current.tier",
+        "properties.hostingModel",
+        "properties.last",
+        "properties.last.count",
+        "properties.last.endDate",
+        "properties.last.quota",
+        "properties.last.quota.quantity",
+        "properties.last.quota.unit",
+        "properties.last.startDate",
+        "properties.last.tier",
+        "properties.next",
+        "properties.next.count",
+        "properties.next.endDate",
+        "properties.next.quota",
+        "properties.next.quota.quantity",
+        "properties.next.quota.unit",
+        "properties.next.startDate",
+        "properties.next.tier",
+        "properties.planType",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "commitmentPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the commitmentPlan associated with the Cognitive Services Account"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/commitmentPlans/{commitmentPlanName}",
+      "operationId": "CommitmentPlans_Delete",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "commitmentPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the commitmentPlan associated with the Cognitive Services Account"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

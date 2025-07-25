@@ -1,0 +1,256 @@
+{
+  "resource": "Azure::Web::Routes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes",
+      "operationId": "AppServicePlans_ListRoutesForVnet",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the App Service plan."
+        },
+        {
+          "name": "vnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes/{routeName}",
+      "operationId": "AppServicePlans_GetRouteForVnet",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the App Service plan."
+        },
+        {
+          "name": "vnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes/{routeName}",
+      "operationId": "AppServicePlans_CreateOrUpdateVnetRoute",
+      "bodySchema": "VnetRoute",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the App Service plan."
+        },
+        {
+          "name": "vnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes/{routeName}",
+      "operationId": "AppServicePlans_DeleteVnetRoute",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the App Service plan."
+        },
+        {
+          "name": "vnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes/{routeName}",
+      "operationId": "AppServicePlans_UpdateVnetRoute",
+      "bodySchema": "VnetRoute",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the App Service plan."
+        },
+        {
+          "name": "vnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Virtual Network route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

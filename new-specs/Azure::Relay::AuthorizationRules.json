@@ -1,0 +1,599 @@
+{
+  "resource": "Azure::Relay::AuthorizationRules",
+  "version": "2021-11-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/authorizationRules",
+      "operationId": "Namespaces_ListAuthorizationRules",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_CreateOrUpdateAuthorizationRule",
+      "bodySchema": "AuthorizationRule",
+      "requiredProperties": [
+        "properties",
+        "properties.rights"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_DeleteAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_GetAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/hybridConnections/{hybridConnectionName}/authorizationRules",
+      "operationId": "HybridConnections_ListAuthorizationRules",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "hybridConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid connection name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/hybridConnections/{hybridConnectionName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "HybridConnections_CreateOrUpdateAuthorizationRule",
+      "bodySchema": "AuthorizationRule",
+      "requiredProperties": [
+        "properties",
+        "properties.rights"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "hybridConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid connection name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/hybridConnections/{hybridConnectionName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "HybridConnections_DeleteAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "hybridConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid connection name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/hybridConnections/{hybridConnectionName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "HybridConnections_GetAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "hybridConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid connection name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/wcfRelays/{relayName}/authorizationRules",
+      "operationId": "WCFRelays_ListAuthorizationRules",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "relayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The relay name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/wcfRelays/{relayName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "WCFRelays_CreateOrUpdateAuthorizationRule",
+      "bodySchema": "AuthorizationRule",
+      "requiredProperties": [
+        "properties",
+        "properties.rights"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "relayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The relay name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/wcfRelays/{relayName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "WCFRelays_DeleteAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "relayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The relay name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Relay/namespaces/{namespaceName}/wcfRelays/{relayName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "WCFRelays_GetAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "relayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The relay name."
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The authorization rule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "resource": "Azure::PortalServices::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.PortalServices/copilotSettings/default",
+      "operationId": "CopilotSettings_Get",
+      "pathParameters": [],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.PortalServices/copilotSettings/default",
+      "operationId": "CopilotSettings_CreateOrUpdate",
+      "bodySchema": "CopilotSettingsResource",
+      "requiredProperties": [
+        "properties.accessControlEnabled"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.PortalServices/copilotSettings/default",
+      "operationId": "CopilotSettings_Update",
+      "bodySchema": "CopilotSettingsResourceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.accessControlEnabled"
+      ],
+      "pathParameters": [],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.PortalServices/copilotSettings/default",
+      "operationId": "CopilotSettings_Delete",
+      "pathParameters": [],
+      "queryParameters": []
+    }
+  ]
+}

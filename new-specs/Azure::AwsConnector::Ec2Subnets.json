@@ -1,0 +1,201 @@
+{
+  "resource": "Azure::AwsConnector::Ec2Subnets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ec2Subnets",
+      "operationId": "Ec2Subnets_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Subnets",
+      "operationId": "Ec2Subnets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Subnets/{name}",
+      "operationId": "Ec2Subnets_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Subnet"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Subnets/{name}",
+      "operationId": "Ec2Subnets_CreateOrReplace",
+      "bodySchema": "Ec2Subnet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.assignIpv6AddressOnCreation",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.availabilityZoneId",
+        "properties.awsProperties.cidrBlock",
+        "properties.awsProperties.enableDns64",
+        "properties.awsProperties.enableLniAtDeviceIndex",
+        "properties.awsProperties.ipv4IpamPoolId",
+        "properties.awsProperties.ipv4NetmaskLength",
+        "properties.awsProperties.ipv6CidrBlock",
+        "properties.awsProperties.ipv6CidrBlocks",
+        "properties.awsProperties.ipv6IpamPoolId",
+        "properties.awsProperties.ipv6Native",
+        "properties.awsProperties.ipv6NetmaskLength",
+        "properties.awsProperties.mapPublicIpOnLaunch",
+        "properties.awsProperties.networkAclAssociationId",
+        "properties.awsProperties.outpostArn",
+        "properties.awsProperties.privateDnsNameOptionsOnLaunch",
+        "properties.awsProperties.privateDnsNameOptionsOnLaunch.enableResourceNameDnsAAAARecord",
+        "properties.awsProperties.privateDnsNameOptionsOnLaunch.enableResourceNameDnsARecord",
+        "properties.awsProperties.privateDnsNameOptionsOnLaunch.hostnameType",
+        "properties.awsProperties.subnetId",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.vpcId",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Subnet"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Subnets/{name}",
+      "operationId": "Ec2Subnets_Update",
+      "bodySchema": "Ec2SubnetTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Subnet"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Subnets/{name}",
+      "operationId": "Ec2Subnets_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Subnet"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

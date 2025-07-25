@@ -1,0 +1,206 @@
+{
+  "resource": "Azure::MobileNetwork::PacketCoreControlPlanes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes/{packetCoreControlPlaneName}",
+      "operationId": "PacketCoreControlPlanes_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "packetCoreControlPlaneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes/{packetCoreControlPlaneName}",
+      "operationId": "PacketCoreControlPlanes_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "packetCoreControlPlaneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes/{packetCoreControlPlaneName}",
+      "operationId": "PacketCoreControlPlanes_CreateOrUpdate",
+      "bodySchema": "PacketCoreControlPlane",
+      "requiredProperties": [
+        "properties",
+        "properties.controlPlaneAccessInterface",
+        "properties.diagnosticsUpload.storageAccountContainerUrl",
+        "properties.eventHub.id",
+        "properties.localDiagnosticsAccess",
+        "properties.localDiagnosticsAccess.authenticationType",
+        "properties.localDiagnosticsAccess.httpsServerCertificate.certificateUrl",
+        "properties.platform",
+        "properties.platform.type",
+        "properties.signaling.nasReroute.macroMmeGroupId",
+        "properties.sites",
+        "properties.sku"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties.controlPlaneAccessVirtualIpv4Addresses",
+        "properties.coreNetworkTechnology",
+        "properties.diagnosticsUpload",
+        "properties.eventHub",
+        "properties.eventHub.reportingInterval",
+        "properties.installation",
+        "properties.installation.desiredState",
+        "properties.installation.operation",
+        "properties.installation.reasons",
+        "properties.installation.reinstallRequired",
+        "properties.installation.state",
+        "properties.installedVersion",
+        "properties.interopSettings",
+        "properties.localDiagnosticsAccess.httpsServerCertificate",
+        "properties.localDiagnosticsAccess.httpsServerCertificate.provisioning",
+        "properties.localDiagnosticsAccess.httpsServerCertificate.provisioning.reason",
+        "properties.localDiagnosticsAccess.httpsServerCertificate.provisioning.state",
+        "properties.platform.azureStackEdgeDevice",
+        "properties.platform.azureStackEdgeDevices",
+        "properties.platform.azureStackHciCluster",
+        "properties.platform.connectedCluster",
+        "properties.platform.customLocation",
+        "properties.provisioningState",
+        "properties.rollbackVersion",
+        "properties.signaling",
+        "properties.signaling.nasReroute",
+        "properties.ueMtu",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "packetCoreControlPlaneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes/{packetCoreControlPlaneName}",
+      "operationId": "PacketCoreControlPlanes_UpdateTags",
+      "bodySchema": "IdentityAndTagsObject",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "packetCoreControlPlaneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes",
+      "operationId": "PacketCoreControlPlanes_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MobileNetwork/packetCoreControlPlanes",
+      "operationId": "PacketCoreControlPlanes_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

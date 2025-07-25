@@ -1,0 +1,129 @@
+{
+  "resource": "Azure::ProviderHub::ProviderRegistrations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}",
+      "operationId": "ProviderRegistrations_Get",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}",
+      "operationId": "ProviderRegistrations_CreateOrUpdate",
+      "bodySchema": "ProviderRegistration",
+      "requiredProperties": [
+        "properties.featuresRule.requiredFeaturesPolicy",
+        "properties.providerAuthentication.allowedAudiences",
+        "properties.providerHubMetadata.providerAuthentication.allowedAudiences"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.capabilities",
+        "properties.featuresRule",
+        "properties.management",
+        "properties.management.incidentContactEmail",
+        "properties.management.incidentRoutingService",
+        "properties.management.incidentRoutingTeam",
+        "properties.management.manifestOwners",
+        "properties.management.resourceAccessPolicy",
+        "properties.management.resourceAccessRoles",
+        "properties.management.schemaOwners",
+        "properties.management.serviceTreeInfos",
+        "properties.metadata",
+        "properties.namespace",
+        "properties.providerAuthentication",
+        "properties.providerAuthorizations",
+        "properties.providerHubMetadata",
+        "properties.providerHubMetadata.providerAuthentication",
+        "properties.providerHubMetadata.providerAuthorizations",
+        "properties.providerHubMetadata.thirdPartyProviderAuthorization",
+        "properties.providerHubMetadata.thirdPartyProviderAuthorization.authorizations",
+        "properties.providerHubMetadata.thirdPartyProviderAuthorization.managedByTenantId",
+        "properties.providerType",
+        "properties.providerVersion",
+        "properties.provisioningState",
+        "properties.requestHeaderOptions",
+        "properties.requestHeaderOptions.optInHeaders",
+        "properties.requiredFeatures",
+        "properties.subscriptionLifecycleNotificationSpecifications",
+        "properties.subscriptionLifecycleNotificationSpecifications.softDeleteTTL",
+        "properties.subscriptionLifecycleNotificationSpecifications.subscriptionStateOverrideActions",
+        "properties.templateDeploymentOptions",
+        "properties.templateDeploymentOptions.preflightOptions",
+        "properties.templateDeploymentOptions.preflightSupported"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}",
+      "operationId": "ProviderRegistrations_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations",
+      "operationId": "ProviderRegistrations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

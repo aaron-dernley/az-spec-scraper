@@ -1,0 +1,195 @@
+{
+  "resource": "Azure::MachineLearningServices::Jobs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/jobs",
+      "operationId": "Jobs_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "jobType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Type of job to be returned."
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Jobs returned will have this tag key."
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        },
+        {
+          "name": "properties",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of user property names (and optionally values). Example: prop1,prop2=value2"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/jobs/{id}",
+      "operationId": "Jobs_Delete",
+      "pathParameters": [
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name and identifier for the Job. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/jobs/{id}",
+      "operationId": "Jobs_Get",
+      "pathParameters": [
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name and identifier for the Job. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/jobs/{id}",
+      "operationId": "Jobs_CreateOrUpdate",
+      "bodySchema": "JobBaseResource",
+      "requiredProperties": [
+        "properties",
+        "properties.identity.identityType",
+        "properties.jobType"
+      ],
+      "optionalProperties": [
+        "properties.componentId",
+        "properties.computeId",
+        "properties.description",
+        "properties.displayName",
+        "properties.experimentName",
+        "properties.identity",
+        "properties.isArchived",
+        "properties.notificationSetting",
+        "properties.notificationSetting.emailOn",
+        "properties.notificationSetting.emails",
+        "properties.notificationSetting.webhooks",
+        "properties.properties",
+        "properties.services",
+        "properties.status",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name and identifier for the Job. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::Sql::ElasticPools",
+  "version": "2014-04-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}",
+      "operationId": "ElasticPools_CreateOrUpdate",
+      "bodySchema": "ElasticPool",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "kind",
+        "properties",
+        "properties.creationDate",
+        "properties.databaseDtuMax",
+        "properties.databaseDtuMin",
+        "properties.dtu",
+        "properties.edition",
+        "properties.state",
+        "properties.storageMB",
+        "properties.zoneRedundant"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "elasticPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the elastic pool to be operated on (updated or created)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}",
+      "operationId": "ElasticPools_Update",
+      "bodySchema": "ElasticPoolUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.creationDate",
+        "properties.databaseDtuMax",
+        "properties.databaseDtuMin",
+        "properties.dtu",
+        "properties.edition",
+        "properties.state",
+        "properties.storageMB",
+        "properties.zoneRedundant",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "elasticPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the elastic pool to be updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}",
+      "operationId": "ElasticPools_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "elasticPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the elastic pool to be deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}",
+      "operationId": "ElasticPools_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "elasticPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the elastic pool to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools",
+      "operationId": "ElasticPools_ListByServer",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

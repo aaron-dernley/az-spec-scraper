@@ -1,0 +1,152 @@
+{
+  "resource": "Azure::DataReplication::ReplicationExtensions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/replicationExtensions",
+      "operationId": "ReplicationExtension_List",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/replicationExtensions/{replicationExtensionName}",
+      "operationId": "ReplicationExtension_Get",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "replicationExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The replication extension name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/replicationExtensions/{replicationExtensionName}",
+      "operationId": "ReplicationExtension_Create",
+      "bodySchema": "ReplicationExtensionModel",
+      "requiredProperties": [
+        "properties.customProperties",
+        "properties.customProperties.instanceType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "replicationExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The replication extension name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/replicationExtensions/{replicationExtensionName}",
+      "operationId": "ReplicationExtension_Delete",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "replicationExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The replication extension name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

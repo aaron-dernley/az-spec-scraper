@@ -1,0 +1,177 @@
+{
+  "resource": "Azure::Insights::PrivateLinkScopes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/privateLinkScopes",
+      "operationId": "PrivateLinkScopes_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes",
+      "operationId": "PrivateLinkScopes_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}",
+      "operationId": "PrivateLinkScopes_Delete",
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}",
+      "operationId": "PrivateLinkScopes_Get",
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}",
+      "operationId": "PrivateLinkScopes_CreateOrUpdate",
+      "bodySchema": "AzureMonitorPrivateLinkScope",
+      "requiredProperties": [
+        "properties",
+        "properties.accessModeSettings",
+        "properties.accessModeSettings.ingestionAccessMode",
+        "properties.accessModeSettings.queryAccessMode"
+      ],
+      "optionalProperties": [
+        "properties.accessModeSettings.exclusions",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}",
+      "operationId": "PrivateLinkScopes_UpdateTags",
+      "bodySchema": "TagsResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

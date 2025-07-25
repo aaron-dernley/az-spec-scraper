@@ -1,0 +1,258 @@
+{
+  "resource": "Azure::DataFactory::Factories",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DataFactory/factories",
+      "operationId": "Factories_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories",
+      "operationId": "Factories_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}",
+      "operationId": "Factories_CreateOrUpdate",
+      "bodySchema": "Factory",
+      "requiredProperties": [
+        "identity.type",
+        "properties.encryption.keyName",
+        "properties.encryption.vaultBaseUrl",
+        "properties.repoConfiguration.accountName",
+        "properties.repoConfiguration.collaborationBranch",
+        "properties.repoConfiguration.repositoryName",
+        "properties.repoConfiguration.rootFolder",
+        "properties.repoConfiguration.type"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "location",
+        "name",
+        "properties",
+        "properties.createTime",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.userAssignedIdentity",
+        "properties.encryption.keyVersion",
+        "properties.globalParameters",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.purviewConfiguration",
+        "properties.purviewConfiguration.purviewResourceId",
+        "properties.repoConfiguration",
+        "properties.repoConfiguration.disablePublish",
+        "properties.repoConfiguration.lastCommitId",
+        "properties.version",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}",
+      "operationId": "Factories_Update",
+      "bodySchema": "FactoryUpdateParameters",
+      "requiredProperties": [
+        "identity.type"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.publicNetworkAccess",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}",
+      "operationId": "Factories_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}",
+      "operationId": "Factories_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

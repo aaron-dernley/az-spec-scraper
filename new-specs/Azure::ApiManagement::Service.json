@@ -1,0 +1,252 @@
+{
+  "resource": "Azure::ApiManagement::Service",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}",
+      "operationId": "ApiManagementService_CreateOrUpdate",
+      "bodySchema": "ApiManagementServiceResource",
+      "requiredProperties": [
+        "identity.type",
+        "location",
+        "properties",
+        "properties.publisherEmail",
+        "properties.publisherName",
+        "sku",
+        "sku.capacity",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "name",
+        "properties.additionalLocations",
+        "properties.apiVersionConstraint",
+        "properties.apiVersionConstraint.minApiVersion",
+        "properties.certificates",
+        "properties.createdAtUtc",
+        "properties.customProperties",
+        "properties.developerPortalUrl",
+        "properties.disableGateway",
+        "properties.enableClientCertificate",
+        "properties.gatewayRegionalUrl",
+        "properties.gatewayUrl",
+        "properties.hostnameConfigurations",
+        "properties.managementApiUrl",
+        "properties.notificationSenderEmail",
+        "properties.portalUrl",
+        "properties.privateIPAddresses",
+        "properties.provisioningState",
+        "properties.publicIPAddresses",
+        "properties.scmUrl",
+        "properties.targetProvisioningState",
+        "properties.virtualNetworkConfiguration",
+        "properties.virtualNetworkConfiguration.subnetResourceId",
+        "properties.virtualNetworkConfiguration.subnetname",
+        "properties.virtualNetworkConfiguration.vnetid",
+        "properties.virtualNetworkType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}",
+      "operationId": "ApiManagementService_Update",
+      "bodySchema": "ApiManagementServiceUpdateParameters",
+      "requiredProperties": [
+        "identity.type",
+        "sku.capacity",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "name",
+        "properties",
+        "properties.additionalLocations",
+        "properties.apiVersionConstraint",
+        "properties.apiVersionConstraint.minApiVersion",
+        "properties.certificates",
+        "properties.createdAtUtc",
+        "properties.customProperties",
+        "properties.developerPortalUrl",
+        "properties.disableGateway",
+        "properties.enableClientCertificate",
+        "properties.gatewayRegionalUrl",
+        "properties.gatewayUrl",
+        "properties.hostnameConfigurations",
+        "properties.managementApiUrl",
+        "properties.notificationSenderEmail",
+        "properties.portalUrl",
+        "properties.privateIPAddresses",
+        "properties.provisioningState",
+        "properties.publicIPAddresses",
+        "properties.publisherEmail",
+        "properties.publisherName",
+        "properties.scmUrl",
+        "properties.targetProvisioningState",
+        "properties.virtualNetworkConfiguration",
+        "properties.virtualNetworkConfiguration.subnetResourceId",
+        "properties.virtualNetworkConfiguration.subnetname",
+        "properties.virtualNetworkConfiguration.vnetid",
+        "properties.virtualNetworkType",
+        "sku",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}",
+      "operationId": "ApiManagementService_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}",
+      "operationId": "ApiManagementService_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service",
+      "operationId": "ApiManagementService_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ApiManagement/service",
+      "operationId": "ApiManagementService_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

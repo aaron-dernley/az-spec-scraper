@@ -1,0 +1,162 @@
+{
+  "resource": "Azure::AzureStackHCI::DeploymentSettings",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/deploymentSettings",
+      "operationId": "DeploymentSettings_ListByClusters",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/deploymentSettings/{deploymentSettingsName}",
+      "operationId": "DeploymentSettings_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "deploymentSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Deployment Setting"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/deploymentSettings/{deploymentSettingsName}",
+      "operationId": "DeploymentSettings_CreateOrUpdate",
+      "bodySchema": "DeploymentSetting",
+      "requiredProperties": [
+        "properties.arcNodeResourceIds",
+        "properties.deploymentConfiguration",
+        "properties.deploymentConfiguration.scaleUnits",
+        "properties.deploymentMode"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.deploymentConfiguration.version",
+        "properties.provisioningState",
+        "properties.reportedProperties",
+        "properties.reportedProperties.deploymentStatus",
+        "properties.reportedProperties.deploymentStatus.status",
+        "properties.reportedProperties.deploymentStatus.steps",
+        "properties.reportedProperties.validationStatus",
+        "properties.reportedProperties.validationStatus.status",
+        "properties.reportedProperties.validationStatus.steps"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "deploymentSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Deployment Setting"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/deploymentSettings/{deploymentSettingsName}",
+      "operationId": "DeploymentSettings_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "deploymentSettingsName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Deployment Setting"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

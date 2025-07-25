@@ -1,0 +1,181 @@
+{
+  "resource": "Azure::StorageSync::CloudEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}/cloudEndpoints/{cloudEndpointName}",
+      "operationId": "CloudEndpoints_Create",
+      "bodySchema": "CloudEndpointCreateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.storageAccountResourceId",
+        "properties.storageAccountShareName",
+        "properties.storageAccountTenantId",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "cloudEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cloud Endpoint object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}/cloudEndpoints/{cloudEndpointName}",
+      "operationId": "CloudEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "cloudEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cloud Endpoint object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}/cloudEndpoints/{cloudEndpointName}",
+      "operationId": "CloudEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "cloudEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cloud Endpoint object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}/syncGroups/{syncGroupName}/cloudEndpoints",
+      "operationId": "CloudEndpoints_ListBySyncGroup",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Sync Group resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

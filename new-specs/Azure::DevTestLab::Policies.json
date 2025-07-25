@@ -1,0 +1,327 @@
+{
+  "resource": "Azure::DevTestLab::Policies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies",
+      "operationId": "Policies_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "policySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy set."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=description)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name}",
+      "operationId": "Policies_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "policySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy set."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=description)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name}",
+      "operationId": "Policies_CreateOrUpdate",
+      "bodySchema": "Policy",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.createdDate",
+        "properties.description",
+        "properties.evaluatorType",
+        "properties.factData",
+        "properties.factName",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.threshold",
+        "properties.uniqueIdentifier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "policySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy set."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name}",
+      "operationId": "Policies_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "policySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy set."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name}",
+      "operationId": "Policies_Update",
+      "bodySchema": "PolicyFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.evaluatorType",
+        "properties.factData",
+        "properties.factName",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.threshold",
+        "properties.uniqueIdentifier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "policySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy set."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

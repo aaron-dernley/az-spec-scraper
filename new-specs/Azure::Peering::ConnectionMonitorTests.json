@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::Peering::ConnectionMonitorTests",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peeringServices/{peeringServiceName}/connectionMonitorTests/{connectionMonitorTestName}",
+      "operationId": "ConnectionMonitorTests_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering service."
+        },
+        {
+          "name": "connectionMonitorTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor test"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peeringServices/{peeringServiceName}/connectionMonitorTests/{connectionMonitorTestName}",
+      "operationId": "ConnectionMonitorTests_CreateOrUpdate",
+      "bodySchema": "ConnectionMonitorTest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.destination",
+        "properties.destinationPort",
+        "properties.isTestSuccessful",
+        "properties.path",
+        "properties.provisioningState",
+        "properties.sourceAgent",
+        "properties.testFrequencyInSec",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering service."
+        },
+        {
+          "name": "connectionMonitorTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor test"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peeringServices/{peeringServiceName}/connectionMonitorTests/{connectionMonitorTestName}",
+      "operationId": "ConnectionMonitorTests_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering service."
+        },
+        {
+          "name": "connectionMonitorTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor test"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peeringServices/{peeringServiceName}/connectionMonitorTests",
+      "operationId": "ConnectionMonitorTests_ListByPeeringService",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering service."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

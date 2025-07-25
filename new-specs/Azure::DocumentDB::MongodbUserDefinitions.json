@@ -1,0 +1,154 @@
+{
+  "resource": "Azure::DocumentDB::MongodbUserDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions/{mongoUserDefinitionId}",
+      "operationId": "MongoDBResources_GetMongoUserDefinition",
+      "pathParameters": [
+        {
+          "name": "mongoUserDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID for the User Definition {dbName.userName}."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions/{mongoUserDefinitionId}",
+      "operationId": "MongoDBResources_CreateUpdateMongoUserDefinition",
+      "bodySchema": "MongoUserDefinitionCreateUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.customData",
+        "properties.databaseName",
+        "properties.mechanisms",
+        "properties.password",
+        "properties.roles",
+        "properties.userName"
+      ],
+      "pathParameters": [
+        {
+          "name": "mongoUserDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID for the User Definition {dbName.userName}."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions/{mongoUserDefinitionId}",
+      "operationId": "MongoDBResources_DeleteMongoUserDefinition",
+      "pathParameters": [
+        {
+          "name": "mongoUserDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID for the User Definition {dbName.userName}."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions",
+      "operationId": "MongoDBResources_ListMongoUserDefinitions",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

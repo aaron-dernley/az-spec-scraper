@@ -1,0 +1,139 @@
+{
+  "resource": "Azure::ManagedServices::RegistrationDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationDefinitions/{registrationDefinitionId}",
+      "operationId": "RegistrationDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        },
+        {
+          "name": "registrationDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration definition."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationDefinitions/{registrationDefinitionId}",
+      "operationId": "RegistrationDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "registrationDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration definition."
+        },
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationDefinitions/{registrationDefinitionId}",
+      "operationId": "RegistrationDefinitions_CreateOrUpdate",
+      "bodySchema": "RegistrationDefinition",
+      "requiredProperties": [
+        "plan.name",
+        "plan.product",
+        "plan.publisher",
+        "plan.version",
+        "properties.authorizations",
+        "properties.managedByTenantId"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "plan",
+        "properties",
+        "properties.description",
+        "properties.managedByTenantName",
+        "properties.provisioningState",
+        "properties.registrationDefinitionName",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "registrationDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration definition."
+        },
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationDefinitions",
+      "operationId": "RegistrationDefinitions_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

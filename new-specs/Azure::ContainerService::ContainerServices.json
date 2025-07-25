@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::ContainerService::ContainerServices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ContainerService/containerServices",
+      "operationId": "ContainerServices_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "operationId": "ContainerServices_CreateOrUpdate",
+      "bodySchema": "ContainerService",
+      "requiredProperties": [
+        "location",
+        "properties.agentPoolProfiles",
+        "properties.customProfile.orchestrator",
+        "properties.diagnosticsProfile.vmDiagnostics",
+        "properties.diagnosticsProfile.vmDiagnostics.enabled",
+        "properties.linuxProfile",
+        "properties.linuxProfile.adminUsername",
+        "properties.linuxProfile.ssh",
+        "properties.linuxProfile.ssh.publicKeys",
+        "properties.masterProfile",
+        "properties.masterProfile.dnsPrefix",
+        "properties.orchestratorProfile.orchestratorType",
+        "properties.servicePrincipalProfile.clientId",
+        "properties.servicePrincipalProfile.secret",
+        "properties.windowsProfile.adminPassword",
+        "properties.windowsProfile.adminUsername"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.customProfile",
+        "properties.diagnosticsProfile",
+        "properties.diagnosticsProfile.vmDiagnostics.storageUri",
+        "properties.masterProfile.count",
+        "properties.masterProfile.fqdn",
+        "properties.orchestratorProfile",
+        "properties.provisioningState",
+        "properties.servicePrincipalProfile",
+        "properties.windowsProfile",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "containerServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container service in the specified subscription and resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "operationId": "ContainerServices_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "containerServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container service in the specified subscription and resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices/{containerServiceName}",
+      "operationId": "ContainerServices_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "containerServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container service in the specified subscription and resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/containerServices",
+      "operationId": "ContainerServices_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

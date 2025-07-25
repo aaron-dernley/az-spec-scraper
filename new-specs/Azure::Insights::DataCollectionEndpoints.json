@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::Insights::DataCollectionEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionEndpoints",
+      "operationId": "DataCollectionEndpoints_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/dataCollectionEndpoints",
+      "operationId": "DataCollectionEndpoints_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionEndpoints/{dataCollectionEndpointName}",
+      "operationId": "DataCollectionEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "dataCollectionEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection endpoint. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionEndpoints/{dataCollectionEndpointName}",
+      "operationId": "DataCollectionEndpoints_Create",
+      "bodySchema": "DataCollectionEndpointResource",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "kind",
+        "name",
+        "properties",
+        "properties.configurationAccess",
+        "properties.configurationAccess.endpoint",
+        "properties.description",
+        "properties.failoverConfiguration",
+        "properties.failoverConfiguration.activeLocation",
+        "properties.failoverConfiguration.locations",
+        "properties.immutableId",
+        "properties.logsIngestion",
+        "properties.logsIngestion.endpoint",
+        "properties.metadata",
+        "properties.metadata.provisionedBy",
+        "properties.metadata.provisionedByResourceId",
+        "properties.metricsIngestion",
+        "properties.metricsIngestion.endpoint",
+        "properties.networkAcls",
+        "properties.networkAcls.publicNetworkAccess",
+        "properties.privateLinkScopedResources",
+        "properties.provisioningState",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "dataCollectionEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection endpoint. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionEndpoints/{dataCollectionEndpointName}",
+      "operationId": "DataCollectionEndpoints_Update",
+      "bodySchema": "ResourceForUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dataCollectionEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection endpoint. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionEndpoints/{dataCollectionEndpointName}",
+      "operationId": "DataCollectionEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "dataCollectionEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the data collection endpoint. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

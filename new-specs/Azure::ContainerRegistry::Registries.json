@@ -1,0 +1,312 @@
+{
+  "resource": "Azure::ContainerRegistry::Registries",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ContainerRegistry/registries",
+      "operationId": "Registries_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries",
+      "operationId": "Registries_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
+      "operationId": "Registries_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
+      "operationId": "Registries_Create",
+      "bodySchema": "Registry",
+      "requiredProperties": [
+        "location",
+        "properties.networkRuleSet.defaultAction",
+        "sku",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "name",
+        "properties",
+        "properties.adminUserEnabled",
+        "properties.creationDate",
+        "properties.dataEndpointEnabled",
+        "properties.dataEndpointHostNames",
+        "properties.encryption",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.identity",
+        "properties.encryption.keyVaultProperties.keyIdentifier",
+        "properties.encryption.keyVaultProperties.keyRotationEnabled",
+        "properties.encryption.keyVaultProperties.lastKeyRotationTimestamp",
+        "properties.encryption.keyVaultProperties.versionedKeyIdentifier",
+        "properties.encryption.status",
+        "properties.loginServer",
+        "properties.networkRuleBypassOptions",
+        "properties.networkRuleSet",
+        "properties.networkRuleSet.ipRules",
+        "properties.policies",
+        "properties.policies.exportPolicy",
+        "properties.policies.exportPolicy.status",
+        "properties.policies.quarantinePolicy",
+        "properties.policies.quarantinePolicy.status",
+        "properties.policies.retentionPolicy",
+        "properties.policies.retentionPolicy.days",
+        "properties.policies.retentionPolicy.lastUpdatedTime",
+        "properties.policies.retentionPolicy.status",
+        "properties.policies.trustPolicy",
+        "properties.policies.trustPolicy.status",
+        "properties.policies.trustPolicy.type",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.status",
+        "properties.status.displayStatus",
+        "properties.status.message",
+        "properties.status.timestamp",
+        "properties.zoneRedundancy",
+        "sku.tier",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
+      "operationId": "Registries_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}",
+      "operationId": "Registries_Update",
+      "bodySchema": "RegistryUpdateParameters",
+      "requiredProperties": [
+        "properties.networkRuleSet.defaultAction",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.adminUserEnabled",
+        "properties.dataEndpointEnabled",
+        "properties.encryption",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.identity",
+        "properties.encryption.keyVaultProperties.keyIdentifier",
+        "properties.encryption.keyVaultProperties.keyRotationEnabled",
+        "properties.encryption.keyVaultProperties.lastKeyRotationTimestamp",
+        "properties.encryption.keyVaultProperties.versionedKeyIdentifier",
+        "properties.encryption.status",
+        "properties.networkRuleBypassOptions",
+        "properties.networkRuleSet",
+        "properties.networkRuleSet.ipRules",
+        "properties.policies",
+        "properties.policies.exportPolicy",
+        "properties.policies.exportPolicy.status",
+        "properties.policies.quarantinePolicy",
+        "properties.policies.quarantinePolicy.status",
+        "properties.policies.retentionPolicy",
+        "properties.policies.retentionPolicy.days",
+        "properties.policies.retentionPolicy.lastUpdatedTime",
+        "properties.policies.retentionPolicy.status",
+        "properties.policies.trustPolicy",
+        "properties.policies.trustPolicy.status",
+        "properties.policies.trustPolicy.type",
+        "properties.publicNetworkAccess",
+        "sku",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

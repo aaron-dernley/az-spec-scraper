@@ -1,0 +1,166 @@
+{
+  "resource": "Azure::Marketplace::PrivateStores",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores",
+      "pathParameters": [],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        },
+        {
+          "name": "use-cache",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Determines if to use cache or DB for serving this request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores",
+      "operationId": "PrivateStore_List",
+      "pathParameters": [],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        },
+        {
+          "name": "use-cache",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Determines if to use cache or DB for serving this request"
+        }
+      ]
+    },
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}",
+      "operationId": "PrivateStore_Get",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}",
+      "operationId": "PrivateStore_CreateOrUpdate",
+      "bodySchema": "PrivateStore",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.availability",
+        "properties.branding",
+        "properties.collectionIds",
+        "properties.eTag",
+        "properties.isGov",
+        "properties.notificationsSettings",
+        "properties.notificationsSettings.recipients",
+        "properties.notificationsSettings.sendToAllMarketplaceAdmins",
+        "properties.privateStoreId",
+        "properties.privateStoreName",
+        "properties.tenantId",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}",
+      "operationId": "PrivateStore_Delete",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    }
+  ]
+}

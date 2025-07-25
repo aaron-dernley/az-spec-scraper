@@ -1,0 +1,151 @@
+{
+  "resource": "Azure::DBforMySQL::Databases",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/databases/{databaseName}",
+      "operationId": "Databases_CreateOrUpdate",
+      "bodySchema": "Database",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.charset",
+        "properties.collation",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/databases/{databaseName}",
+      "operationId": "Databases_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/databases/{databaseName}",
+      "operationId": "Databases_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/databases",
+      "operationId": "Databases_ListByServer",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

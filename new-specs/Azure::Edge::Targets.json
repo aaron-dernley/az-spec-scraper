@@ -1,0 +1,209 @@
+{
+  "resource": "Azure::Edge::Targets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/targets",
+      "operationId": "Targets_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets",
+      "operationId": "Targets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}",
+      "operationId": "Targets_Get",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}",
+      "operationId": "Targets_CreateOrUpdate",
+      "bodySchema": "Target",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.capabilities",
+        "properties.contextId",
+        "properties.description",
+        "properties.displayName",
+        "properties.hierarchyLevel",
+        "properties.targetSpecification"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.provisioningState",
+        "properties.solutionScope",
+        "properties.state",
+        "properties.status",
+        "properties.status.deployed",
+        "properties.status.expectedRunningJobId",
+        "properties.status.generation",
+        "properties.status.lastModified",
+        "properties.status.runningJobId",
+        "properties.status.status",
+        "properties.status.statusDetails",
+        "properties.status.targetStatuses"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}",
+      "operationId": "Targets_Update",
+      "bodySchema": "TargetUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.capabilities",
+        "properties.contextId",
+        "properties.description",
+        "properties.displayName",
+        "properties.hierarchyLevel",
+        "properties.solutionScope",
+        "properties.state",
+        "properties.targetSpecification",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}",
+      "operationId": "Targets_Delete",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceDelete",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Force delete"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "resource": "Azure::RecoveryServices::ProtectedItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{vaultName}/backupFabrics/{fabricName}/protectionContainers/{containerName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItems_Get",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Recovery Services vault."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group associated with the Recovery Services vault."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name associated with the backup item."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The container name associated with the backup item."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup item name used in this GET operation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "expand eq {extendedInfo}. This filter enables you to choose (or filter) specific items in the list of backup items."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{vaultName}/backupFabrics/{fabricName}/protectionContainers/{containerName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItems_CreateOrUpdate",
+      "bodySchema": "ProtectedItemResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.backupManagementType",
+        "properties.lastRecoveryPoint",
+        "properties.policyId",
+        "properties.protectedItemType",
+        "properties.sourceResourceId",
+        "properties.workloadType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Recovery Services vault."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group associated with the Recovery Services vault."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name associated with the backup item."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The container name associated with the backup item."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backup item."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/Subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{vaultName}/backupFabrics/{fabricName}/protectionContainers/{containerName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItems_Delete",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Recovery Services vault."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group associated with the Recovery Services vault."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": " The fabric name associated with the backup item."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The container name associated with the backup item."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup item to be deleted."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

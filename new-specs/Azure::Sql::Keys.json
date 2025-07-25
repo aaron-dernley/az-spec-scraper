@@ -1,0 +1,157 @@
+{
+  "resource": "Azure::Sql::Keys",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/keys",
+      "operationId": "ServerKeys_ListByServer",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/keys/{keyName}",
+      "operationId": "ServerKeys_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "keyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server key to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/keys/{keyName}",
+      "operationId": "ServerKeys_CreateOrUpdate",
+      "bodySchema": "ServerKey",
+      "requiredProperties": [
+        "properties.serverKeyType"
+      ],
+      "optionalProperties": [
+        "kind",
+        "location",
+        "properties",
+        "properties.autoRotationEnabled",
+        "properties.creationDate",
+        "properties.subregion",
+        "properties.thumbprint",
+        "properties.uri"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "keyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/keys/{keyName}",
+      "operationId": "ServerKeys_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "keyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server key to be deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

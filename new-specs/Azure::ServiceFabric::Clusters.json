@@ -1,0 +1,304 @@
+{
+  "resource": "Azure::ServiceFabric::Clusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}",
+      "operationId": "Clusters_Update",
+      "bodySchema": "ClusterUpdateParameters",
+      "requiredProperties": [
+        "properties.certificate.thumbprint",
+        "properties.reverseProxyCertificate.thumbprint",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentDeltaUnhealthyApplications",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentDeltaUnhealthyNodes",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentUpgradeDomainDeltaUnhealthyNodes",
+        "properties.upgradeDescription.healthCheckRetryTimeout",
+        "properties.upgradeDescription.healthCheckStableDuration",
+        "properties.upgradeDescription.healthCheckWaitDuration",
+        "properties.upgradeDescription.healthPolicy",
+        "properties.upgradeDescription.upgradeDomainTimeout",
+        "properties.upgradeDescription.upgradeReplicaSetCheckTimeout",
+        "properties.upgradeDescription.upgradeTimeout"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.certificate",
+        "properties.certificate.thumbprintSecondary",
+        "properties.certificate.x509StoreName",
+        "properties.clientCertificateCommonNames",
+        "properties.clientCertificateThumbprints",
+        "properties.clusterCodeVersion",
+        "properties.fabricSettings",
+        "properties.nodeTypes",
+        "properties.reliabilityLevel",
+        "properties.reverseProxyCertificate",
+        "properties.reverseProxyCertificate.thumbprintSecondary",
+        "properties.reverseProxyCertificate.x509StoreName",
+        "properties.upgradeDescription",
+        "properties.upgradeDescription.deltaHealthPolicy",
+        "properties.upgradeDescription.forceRestart",
+        "properties.upgradeDescription.healthPolicy.maxPercentUnhealthyApplications",
+        "properties.upgradeDescription.healthPolicy.maxPercentUnhealthyNodes",
+        "properties.upgradeDescription.overrideUserUpgradePolicy",
+        "properties.upgradeMode",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the resource belongs or get created"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}",
+      "operationId": "Clusters_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the resource belongs or get created"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}",
+      "operationId": "Clusters_Create",
+      "bodySchema": "Cluster",
+      "requiredProperties": [
+        "location",
+        "properties.certificate.thumbprint",
+        "properties.diagnosticsStorageAccountConfig.blobEndpoint",
+        "properties.diagnosticsStorageAccountConfig.protectedAccountKeyName",
+        "properties.diagnosticsStorageAccountConfig.queueEndpoint",
+        "properties.diagnosticsStorageAccountConfig.storageAccountName",
+        "properties.diagnosticsStorageAccountConfig.tableEndpoint",
+        "properties.managementEndpoint",
+        "properties.nodeTypes",
+        "properties.reverseProxyCertificate.thumbprint",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentDeltaUnhealthyApplications",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentDeltaUnhealthyNodes",
+        "properties.upgradeDescription.deltaHealthPolicy.maxPercentUpgradeDomainDeltaUnhealthyNodes",
+        "properties.upgradeDescription.healthCheckRetryTimeout",
+        "properties.upgradeDescription.healthCheckStableDuration",
+        "properties.upgradeDescription.healthCheckWaitDuration",
+        "properties.upgradeDescription.healthPolicy",
+        "properties.upgradeDescription.upgradeDomainTimeout",
+        "properties.upgradeDescription.upgradeReplicaSetCheckTimeout",
+        "properties.upgradeDescription.upgradeTimeout"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.availableClusterVersions",
+        "properties.azureActiveDirectory",
+        "properties.azureActiveDirectory.clientApplication",
+        "properties.azureActiveDirectory.clusterApplication",
+        "properties.azureActiveDirectory.tenantId",
+        "properties.certificate",
+        "properties.certificate.thumbprintSecondary",
+        "properties.certificate.x509StoreName",
+        "properties.clientCertificateCommonNames",
+        "properties.clientCertificateThumbprints",
+        "properties.clusterCodeVersion",
+        "properties.clusterEndpoint",
+        "properties.clusterId",
+        "properties.clusterState",
+        "properties.diagnosticsStorageAccountConfig",
+        "properties.fabricSettings",
+        "properties.provisioningState",
+        "properties.reliabilityLevel",
+        "properties.reverseProxyCertificate",
+        "properties.reverseProxyCertificate.thumbprintSecondary",
+        "properties.reverseProxyCertificate.x509StoreName",
+        "properties.upgradeDescription",
+        "properties.upgradeDescription.deltaHealthPolicy",
+        "properties.upgradeDescription.forceRestart",
+        "properties.upgradeDescription.healthPolicy.maxPercentUnhealthyApplications",
+        "properties.upgradeDescription.healthPolicy.maxPercentUnhealthyNodes",
+        "properties.upgradeDescription.overrideUserUpgradePolicy",
+        "properties.upgradeMode",
+        "properties.vmImage",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the resource belongs or get created"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}",
+      "operationId": "Clusters_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the resource belongs or get created"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters",
+      "operationId": "Clusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the resource belongs or get created"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ServiceFabric/clusters",
+      "operationId": "Clusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the ServiceFabric resource provider api"
+        }
+      ]
+    }
+  ]
+}

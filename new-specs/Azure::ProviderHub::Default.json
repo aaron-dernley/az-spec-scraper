@@ -1,0 +1,77 @@
+{
+  "resource": "Azure::ProviderHub::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/operations/default",
+      "operationId": "Operations_ListByProviderRegistration",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/operations/default",
+      "operationId": "Operations_CreateOrUpdate",
+      "bodySchema": "OperationsPutContent",
+      "requiredProperties": [
+        "contents"
+      ],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/operations/default",
+      "operationId": "Operations_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

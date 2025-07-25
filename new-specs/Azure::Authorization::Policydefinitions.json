@@ -1,0 +1,172 @@
+{
+  "resource": "Azure::Authorization::PolicyDefinitions",
+  "version": "2019-06-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_CreateOrUpdate",
+      "bodySchema": "PolicyDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.metadata",
+        "properties.mode",
+        "properties.parameters",
+        "properties.policyRule",
+        "properties.policyType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to create."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to get."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_GetBuiltIn",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the built-in policy definition to get."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions",
+      "operationId": "PolicyDefinitions_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Authorization/policyDefinitions",
+      "operationId": "PolicyDefinitions_ListBuiltIn",
+      "pathParameters": [],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    }
+  ]
+}

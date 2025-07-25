@@ -1,0 +1,167 @@
+{
+  "resource": "Azure::App::Sourcecontrols",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/sourcecontrols",
+      "operationId": "ContainerAppsSourceControls_ListByContainerApp",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/sourcecontrols/{sourceControlName}",
+      "operationId": "ContainerAppsSourceControls_Get",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App SourceControl."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/sourcecontrols/{sourceControlName}",
+      "operationId": "ContainerAppsSourceControls_CreateOrUpdate",
+      "bodySchema": "SourceControl",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.branch",
+        "properties.githubActionConfiguration",
+        "properties.githubActionConfiguration.azureCredentials",
+        "properties.githubActionConfiguration.azureCredentials.clientId",
+        "properties.githubActionConfiguration.azureCredentials.clientSecret",
+        "properties.githubActionConfiguration.azureCredentials.subscriptionId",
+        "properties.githubActionConfiguration.azureCredentials.tenantId",
+        "properties.githubActionConfiguration.contextPath",
+        "properties.githubActionConfiguration.image",
+        "properties.githubActionConfiguration.os",
+        "properties.githubActionConfiguration.publishType",
+        "properties.githubActionConfiguration.registryInfo",
+        "properties.githubActionConfiguration.registryInfo.registryPassword",
+        "properties.githubActionConfiguration.registryInfo.registryUrl",
+        "properties.githubActionConfiguration.registryInfo.registryUserName",
+        "properties.githubActionConfiguration.runtimeStack",
+        "properties.githubActionConfiguration.runtimeVersion",
+        "properties.operationState",
+        "properties.repoUrl"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App SourceControl."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/sourcecontrols/{sourceControlName}",
+      "operationId": "ContainerAppsSourceControls_Delete",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App SourceControl."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

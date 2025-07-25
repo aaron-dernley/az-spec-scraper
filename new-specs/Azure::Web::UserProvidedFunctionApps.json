@@ -1,0 +1,402 @@
+{
+  "resource": "Azure::Web::UserProvidedFunctionApps",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/builds/{environmentName}/userProvidedFunctionApps",
+      "operationId": "StaticSites_GetUserProvidedFunctionAppsForStaticSiteBuild",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The stage site identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/builds/{environmentName}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_GetUserProvidedFunctionAppForStaticSiteBuild",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The stage site identifier."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app registered with the static site build."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/builds/{environmentName}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_RegisterUserProvidedFunctionAppWithStaticSiteBuild",
+      "bodySchema": "StaticSiteUserProvidedFunctionAppARMResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.createdOn",
+        "properties.functionAppRegion",
+        "properties.functionAppResourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The stage site identifier."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app to register with the static site build."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "isForced",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/builds/{environmentName}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_DetachUserProvidedFunctionAppFromStaticSiteBuild",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The stage site identifier."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app registered with the static site build."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/userProvidedFunctionApps",
+      "operationId": "StaticSites_GetUserProvidedFunctionAppsForStaticSite",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_GetUserProvidedFunctionAppForStaticSite",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app registered with the static site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_RegisterUserProvidedFunctionAppWithStaticSite",
+      "bodySchema": "StaticSiteUserProvidedFunctionAppARMResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.createdOn",
+        "properties.functionAppRegion",
+        "properties.functionAppResourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app to register with the static site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "isForced",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/userProvidedFunctionApps/{functionAppName}",
+      "operationId": "StaticSites_DetachUserProvidedFunctionAppFromStaticSite",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "functionAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the function app registered with the static site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

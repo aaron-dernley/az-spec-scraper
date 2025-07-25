@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::ConnectedVMwarevSphere::InventoryItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConnectedVMwarevSphere/vcenters/{vcenterName}/inventoryItems/{inventoryItemName}",
+      "operationId": "InventoryItems_Create",
+      "bodySchema": "InventoryItem",
+      "requiredProperties": [
+        "properties",
+        "properties.inventoryType"
+      ],
+      "optionalProperties": [
+        "kind",
+        "properties.managedResourceId",
+        "properties.moName",
+        "properties.moRefId",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "vcenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the vCenter."
+        },
+        {
+          "name": "inventoryItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConnectedVMwarevSphere/vcenters/{vcenterName}/inventoryItems/{inventoryItemName}",
+      "operationId": "InventoryItems_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "vcenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the vCenter."
+        },
+        {
+          "name": "inventoryItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConnectedVMwarevSphere/vcenters/{vcenterName}/inventoryItems/{inventoryItemName}",
+      "operationId": "InventoryItems_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "vcenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the vCenter."
+        },
+        {
+          "name": "inventoryItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ConnectedVMwarevSphere/vcenters/{vcenterName}/inventoryItems",
+      "operationId": "InventoryItems_ListByVCenter",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "vcenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the vCenter."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

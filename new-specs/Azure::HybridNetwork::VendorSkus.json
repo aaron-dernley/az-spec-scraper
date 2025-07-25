@@ -1,0 +1,130 @@
+{
+  "resource": "Azure::HybridNetwork::VendorSkus",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}",
+      "operationId": "VendorSkus_Delete",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sku."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}",
+      "operationId": "VendorSkus_Get",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sku."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}",
+      "operationId": "VendorSkus_CreateOrUpdate",
+      "bodySchema": "VendorSku",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.deploymentMode",
+        "properties.managedApplicationParameters",
+        "properties.managedApplicationTemplate",
+        "properties.networkFunctionTemplate",
+        "properties.networkFunctionTemplate.networkFunctionRoleConfigurations",
+        "properties.networkFunctionType",
+        "properties.preview",
+        "properties.provisioningState",
+        "properties.skuType",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sku."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus",
+      "operationId": "VendorSkus_List",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

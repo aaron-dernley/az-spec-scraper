@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::CostManagement::Views",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.CostManagement/views",
+      "operationId": "Views_List",
+      "pathParameters": [],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/views",
+      "operationId": "Views_ListByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_Get",
+      "pathParameters": [
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_CreateOrUpdate",
+      "bodySchema": "View",
+      "requiredProperties": [
+        "properties.query.dataSet.filter.dimensions.name",
+        "properties.query.dataSet.filter.dimensions.operator",
+        "properties.query.dataSet.filter.dimensions.values",
+        "properties.query.dataSet.filter.tags.name",
+        "properties.query.dataSet.filter.tags.operator",
+        "properties.query.dataSet.filter.tags.values",
+        "properties.query.timePeriod.from",
+        "properties.query.timePeriod.to",
+        "properties.query.timeframe",
+        "properties.query.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.accumulated",
+        "properties.chart",
+        "properties.createdOn",
+        "properties.currency",
+        "properties.dateRange",
+        "properties.displayName",
+        "properties.kpis",
+        "properties.metric",
+        "properties.modifiedOn",
+        "properties.pivots",
+        "properties.query",
+        "properties.query.dataSet",
+        "properties.query.dataSet.aggregation",
+        "properties.query.dataSet.configuration",
+        "properties.query.dataSet.configuration.columns",
+        "properties.query.dataSet.filter",
+        "properties.query.dataSet.filter.and",
+        "properties.query.dataSet.filter.dimensions",
+        "properties.query.dataSet.filter.or",
+        "properties.query.dataSet.filter.tags",
+        "properties.query.dataSet.granularity",
+        "properties.query.dataSet.grouping",
+        "properties.query.dataSet.sorting",
+        "properties.query.includeMonetaryCommitment",
+        "properties.query.timePeriod",
+        "properties.scope"
+      ],
+      "pathParameters": [
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_Delete",
+      "pathParameters": [
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_GetByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_CreateOrUpdateByScope",
+      "bodySchema": "View",
+      "requiredProperties": [
+        "properties.query.dataSet.filter.dimensions.name",
+        "properties.query.dataSet.filter.dimensions.operator",
+        "properties.query.dataSet.filter.dimensions.values",
+        "properties.query.dataSet.filter.tags.name",
+        "properties.query.dataSet.filter.tags.operator",
+        "properties.query.dataSet.filter.tags.values",
+        "properties.query.timePeriod.from",
+        "properties.query.timePeriod.to",
+        "properties.query.timeframe",
+        "properties.query.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.accumulated",
+        "properties.chart",
+        "properties.createdOn",
+        "properties.currency",
+        "properties.dateRange",
+        "properties.displayName",
+        "properties.kpis",
+        "properties.metric",
+        "properties.modifiedOn",
+        "properties.pivots",
+        "properties.query",
+        "properties.query.dataSet",
+        "properties.query.dataSet.aggregation",
+        "properties.query.dataSet.configuration",
+        "properties.query.dataSet.configuration.columns",
+        "properties.query.dataSet.filter",
+        "properties.query.dataSet.filter.and",
+        "properties.query.dataSet.filter.dimensions",
+        "properties.query.dataSet.filter.or",
+        "properties.query.dataSet.filter.tags",
+        "properties.query.dataSet.granularity",
+        "properties.query.dataSet.grouping",
+        "properties.query.dataSet.sorting",
+        "properties.query.includeMonetaryCommitment",
+        "properties.query.timePeriod",
+        "properties.scope"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.CostManagement/views/{viewName}",
+      "operationId": "Views_DeleteByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "View name"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

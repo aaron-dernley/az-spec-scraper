@@ -1,0 +1,202 @@
+{
+  "resource": "Azure::NetworkCloud::MetricsConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/metricsConfigurations",
+      "operationId": "MetricsConfigurations_ListByCluster",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/metricsConfigurations/{metricsConfigurationName}",
+      "operationId": "MetricsConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "metricsConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the metrics configuration for the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/metricsConfigurations/{metricsConfigurationName}",
+      "operationId": "MetricsConfigurations_CreateOrUpdate",
+      "bodySchema": "ClusterMetricsConfiguration",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.collectionInterval"
+      ],
+      "optionalProperties": [
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.disabledMetrics",
+        "properties.enabledMetrics",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "metricsConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the metrics configuration for the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/metricsConfigurations/{metricsConfigurationName}",
+      "operationId": "MetricsConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "metricsConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the metrics configuration for the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/metricsConfigurations/{metricsConfigurationName}",
+      "operationId": "MetricsConfigurations_Update",
+      "bodySchema": "ClusterMetricsConfigurationPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.collectionInterval",
+        "properties.enabledMetrics",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "metricsConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the metrics configuration for the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

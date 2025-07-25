@@ -1,0 +1,157 @@
+{
+  "resource": "Azure::Network::BackendAddressPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools",
+      "operationId": "LoadBalancerBackendAddressPools_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the load balancer."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "operationId": "LoadBalancerBackendAddressPools_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the load balancer."
+        },
+        {
+          "name": "backendAddressPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backend address pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "operationId": "LoadBalancerBackendAddressPools_CreateOrUpdate",
+      "bodySchema": "BackendAddressPool",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.backendIPConfigurations",
+        "properties.loadBalancerBackendAddresses",
+        "properties.loadBalancingRules",
+        "properties.outboundRule",
+        "properties.outboundRules",
+        "properties.provisioningState",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the load balancer."
+        },
+        {
+          "name": "backendAddressPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backend address pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/backendAddressPools/{backendAddressPoolName}",
+      "operationId": "LoadBalancerBackendAddressPools_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the load balancer."
+        },
+        {
+          "name": "backendAddressPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backend address pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::SignalRService::CustomCertificates",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates",
+      "operationId": "SignalRCustomCertificates_List",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates/{certificateName}",
+      "operationId": "SignalRCustomCertificates_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Custom certificate name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates/{certificateName}",
+      "operationId": "SignalRCustomCertificates_CreateOrUpdate",
+      "bodySchema": "CustomCertificate",
+      "requiredProperties": [
+        "properties",
+        "properties.keyVaultBaseUri",
+        "properties.keyVaultSecretName"
+      ],
+      "optionalProperties": [
+        "properties.keyVaultSecretVersion",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Custom certificate name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates/{certificateName}",
+      "operationId": "SignalRCustomCertificates_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Custom certificate name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "resource": "Azure::BotService::BotServices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}",
+      "operationId": "Bots_Create",
+      "bodySchema": "Bot",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.endpoint",
+        "properties.msaAppId",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "kind",
+        "location",
+        "name",
+        "properties",
+        "properties.allSettings",
+        "properties.appPasswordHint",
+        "properties.cmekEncryptionStatus",
+        "properties.cmekKeyVaultUrl",
+        "properties.configuredChannels",
+        "properties.description",
+        "properties.developerAppInsightKey",
+        "properties.developerAppInsightsApiKey",
+        "properties.developerAppInsightsApplicationId",
+        "properties.disableLocalAuth",
+        "properties.enabledChannels",
+        "properties.endpointVersion",
+        "properties.iconUrl",
+        "properties.isCmekEnabled",
+        "properties.isDeveloperAppInsightsApiKeySet",
+        "properties.isStreamingSupported",
+        "properties.luisAppIds",
+        "properties.luisKey",
+        "properties.manifestUrl",
+        "properties.migrationToken",
+        "properties.msaAppMSIResourceId",
+        "properties.msaAppTenantId",
+        "properties.msaAppType",
+        "properties.openWithHint",
+        "properties.parameters",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.publishingCredentials",
+        "properties.schemaTransformationVersion",
+        "properties.storageResourceId",
+        "properties.tenantId",
+        "sku",
+        "sku.tier",
+        "tags",
+        "type",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource group in the user subscription."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}",
+      "operationId": "Bots_Update",
+      "bodySchema": "Bot",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.endpoint",
+        "properties.msaAppId",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "kind",
+        "location",
+        "name",
+        "properties",
+        "properties.allSettings",
+        "properties.appPasswordHint",
+        "properties.cmekEncryptionStatus",
+        "properties.cmekKeyVaultUrl",
+        "properties.configuredChannels",
+        "properties.description",
+        "properties.developerAppInsightKey",
+        "properties.developerAppInsightsApiKey",
+        "properties.developerAppInsightsApplicationId",
+        "properties.disableLocalAuth",
+        "properties.enabledChannels",
+        "properties.endpointVersion",
+        "properties.iconUrl",
+        "properties.isCmekEnabled",
+        "properties.isDeveloperAppInsightsApiKeySet",
+        "properties.isStreamingSupported",
+        "properties.luisAppIds",
+        "properties.luisKey",
+        "properties.manifestUrl",
+        "properties.migrationToken",
+        "properties.msaAppMSIResourceId",
+        "properties.msaAppTenantId",
+        "properties.msaAppType",
+        "properties.openWithHint",
+        "properties.parameters",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.publishingCredentials",
+        "properties.schemaTransformationVersion",
+        "properties.storageResourceId",
+        "properties.tenantId",
+        "sku",
+        "sku.tier",
+        "tags",
+        "type",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource group in the user subscription."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}",
+      "operationId": "Bots_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource group in the user subscription."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}",
+      "operationId": "Bots_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource group in the user subscription."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices",
+      "operationId": "Bots_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Bot resource group in the user subscription."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.BotService/botServices",
+      "operationId": "Bots_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

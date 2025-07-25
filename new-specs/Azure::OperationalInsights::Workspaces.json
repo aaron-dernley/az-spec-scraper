@@ -1,0 +1,242 @@
+{
+  "resource": "Azure::OperationalInsights::Workspaces",
+  "version": "2023-09-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.OperationalInsights/workspaces",
+      "operationId": "Workspaces_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces",
+      "operationId": "Workspaces_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}",
+      "operationId": "Workspaces_CreateOrUpdate",
+      "bodySchema": "Workspace",
+      "requiredProperties": [
+        "identity.type",
+        "properties.sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.createdDate",
+        "properties.customerId",
+        "properties.defaultDataCollectionRuleResourceId",
+        "properties.features",
+        "properties.features.clusterResourceId",
+        "properties.features.disableLocalAuth",
+        "properties.features.enableDataExport",
+        "properties.features.enableLogAccessUsingOnlyResourcePermissions",
+        "properties.features.immediatePurgeDataOn30Days",
+        "properties.features.unifiedSentinelBillingOnly",
+        "properties.forceCmkForQuery",
+        "properties.modifiedDate",
+        "properties.privateLinkScopedResources",
+        "properties.provisioningState",
+        "properties.publicNetworkAccessForIngestion",
+        "properties.publicNetworkAccessForQuery",
+        "properties.retentionInDays",
+        "properties.sku",
+        "properties.sku.capacityReservationLevel",
+        "properties.sku.lastSkuUpdate",
+        "properties.workspaceCapping",
+        "properties.workspaceCapping.dailyQuotaGb",
+        "properties.workspaceCapping.dataIngestionStatus",
+        "properties.workspaceCapping.quotaNextResetTime",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Deletes the workspace without the recovery option. A workspace that was deleted with this flag cannot be recovered."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Update",
+      "bodySchema": "WorkspacePatch",
+      "requiredProperties": [
+        "identity.type",
+        "properties.sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.createdDate",
+        "properties.customerId",
+        "properties.defaultDataCollectionRuleResourceId",
+        "properties.features",
+        "properties.features.clusterResourceId",
+        "properties.features.disableLocalAuth",
+        "properties.features.enableDataExport",
+        "properties.features.enableLogAccessUsingOnlyResourcePermissions",
+        "properties.features.immediatePurgeDataOn30Days",
+        "properties.features.unifiedSentinelBillingOnly",
+        "properties.forceCmkForQuery",
+        "properties.modifiedDate",
+        "properties.privateLinkScopedResources",
+        "properties.provisioningState",
+        "properties.publicNetworkAccessForIngestion",
+        "properties.publicNetworkAccessForQuery",
+        "properties.retentionInDays",
+        "properties.sku",
+        "properties.sku.capacityReservationLevel",
+        "properties.sku.lastSkuUpdate",
+        "properties.workspaceCapping",
+        "properties.workspaceCapping.dailyQuotaGb",
+        "properties.workspaceCapping.dataIngestionStatus",
+        "properties.workspaceCapping.quotaNextResetTime",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

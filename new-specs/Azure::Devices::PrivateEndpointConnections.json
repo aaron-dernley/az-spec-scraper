@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::Devices::PrivateEndpointConnections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{resourceName}/privateEndpointConnections",
+      "operationId": "IotDpsResource_ListPrivateEndpointConnections",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the provisioning service."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{resourceName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "IotDpsResource_GetPrivateEndpointConnection",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the provisioning service."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{resourceName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "IotDpsResource_CreateOrUpdatePrivateEndpointConnection",
+      "bodySchema": "PrivateEndpointConnection",
+      "requiredProperties": [
+        "properties",
+        "properties.privateLinkServiceConnectionState",
+        "properties.privateLinkServiceConnectionState.description",
+        "properties.privateLinkServiceConnectionState.status"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.privateEndpoint",
+        "properties.privateEndpoint.id",
+        "properties.privateLinkServiceConnectionState.actionsRequired",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the provisioning service."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{resourceName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "IotDpsResource_DeletePrivateEndpointConnection",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the provisioning service."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    }
+  ]
+}

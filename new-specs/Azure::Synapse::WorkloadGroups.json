@@ -1,0 +1,183 @@
+{
+  "resource": "Azure::Synapse::WorkloadGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}",
+      "operationId": "SqlPoolWorkloadGroup_Get",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}",
+      "operationId": "SqlPoolWorkloadGroup_CreateOrUpdate",
+      "bodySchema": "WorkloadGroup",
+      "requiredProperties": [
+        "properties.maxResourcePercent",
+        "properties.minResourcePercent",
+        "properties.minResourcePercentPerRequest"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.importance",
+        "properties.maxResourcePercentPerRequest",
+        "properties.queryExecutionTimeout"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}",
+      "operationId": "SqlPoolWorkloadGroup_Delete",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups",
+      "operationId": "SqlPoolWorkloadGroup_List",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "resource": "Azure::AzureDataTransfer::Flows",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/connections/{connectionName}/flows",
+      "operationId": "Flows_ListByConnection",
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the connection to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/connections/{connectionName}/flows/{flowName}",
+      "operationId": "Flows_Get",
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the connection to perform the operation on."
+        },
+        {
+          "name": "flowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the flow to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/connections/{connectionName}/flows/{flowName}",
+      "operationId": "Flows_CreateOrUpdate",
+      "bodySchema": "Flow",
+      "requiredProperties": [
+        "properties.connection.id"
+      ],
+      "optionalProperties": [
+        "identity",
+        "plan",
+        "properties",
+        "properties.apiFlowOptions",
+        "properties.apiFlowOptions.apiMode",
+        "properties.apiFlowOptions.audienceOverride",
+        "properties.apiFlowOptions.cname",
+        "properties.apiFlowOptions.identityTranslation",
+        "properties.apiFlowOptions.remoteCallingModeClientId",
+        "properties.apiFlowOptions.remoteEndpoint",
+        "properties.apiFlowOptions.senderClientId",
+        "properties.connection",
+        "properties.connection.location",
+        "properties.connection.name",
+        "properties.connection.subscriptionName",
+        "properties.consumerGroup",
+        "properties.customerManagedKeyVaultUri",
+        "properties.dataType",
+        "properties.destinationEndpointPorts",
+        "properties.destinationEndpoints",
+        "properties.eventHubId",
+        "properties.flowId",
+        "properties.flowType",
+        "properties.forceDisabledStatus",
+        "properties.keyVaultUri",
+        "properties.linkStatus",
+        "properties.linkedFlowId",
+        "properties.messagingOptions",
+        "properties.messagingOptions.billingTier",
+        "properties.passphrase",
+        "properties.policies",
+        "properties.provisioningState",
+        "properties.schema",
+        "properties.schema.connectionId",
+        "properties.schema.content",
+        "properties.schema.direction",
+        "properties.schema.id",
+        "properties.schema.name",
+        "properties.schema.schemaType",
+        "properties.schema.schemaUri",
+        "properties.schema.status",
+        "properties.serviceBusQueueId",
+        "properties.sourceAddresses",
+        "properties.sourceAddresses.sourceAddresses",
+        "properties.status",
+        "properties.storageAccountId",
+        "properties.storageAccountName",
+        "properties.storageContainerName",
+        "properties.storageTableName",
+        "properties.streamId",
+        "properties.streamLatency",
+        "properties.streamProtocol"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the connection to perform the operation on."
+        },
+        {
+          "name": "flowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the flow to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/connections/{connectionName}/flows/{flowName}",
+      "operationId": "Flows_Update",
+      "bodySchema": "FlowsPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the connection to perform the operation on."
+        },
+        {
+          "name": "flowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the flow to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/connections/{connectionName}/flows/{flowName}",
+      "operationId": "Flows_Delete",
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the connection to perform the operation on."
+        },
+        {
+          "name": "flowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the flow to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "resource": "Azure::Network::VirtualNetworkLinks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks",
+      "operationId": "VirtualNetworkLinks_List",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of virtual network links to return. If not specified, returns up to 100 virtual network links."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}",
+      "operationId": "VirtualNetworkLinks_Get",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "virtualNetworkLinkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network link."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}",
+      "operationId": "VirtualNetworkLinks_CreateOrUpdate",
+      "bodySchema": "VirtualNetworkLink",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "location",
+        "properties",
+        "properties.provisioningState",
+        "properties.registrationEnabled",
+        "properties.resolutionPolicy",
+        "properties.virtualNetwork",
+        "properties.virtualNetwork.id",
+        "properties.virtualNetworkLinkState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "virtualNetworkLinkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network link."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}",
+      "operationId": "VirtualNetworkLinks_Update",
+      "bodySchema": "VirtualNetworkLink",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "location",
+        "properties",
+        "properties.provisioningState",
+        "properties.registrationEnabled",
+        "properties.resolutionPolicy",
+        "properties.virtualNetwork",
+        "properties.virtualNetwork.id",
+        "properties.virtualNetworkLinkState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "virtualNetworkLinkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network link."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}",
+      "operationId": "VirtualNetworkLinks_Delete",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "virtualNetworkLinkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network link."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

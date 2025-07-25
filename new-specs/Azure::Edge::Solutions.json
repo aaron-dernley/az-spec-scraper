@@ -1,0 +1,200 @@
+{
+  "resource": "Azure::Edge::Solutions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions",
+      "operationId": "Solutions_ListByTarget",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}",
+      "operationId": "Solutions_Get",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}",
+      "operationId": "Solutions_CreateOrUpdate",
+      "bodySchema": "Solution",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.availableSolutionTemplateVersions",
+        "properties.provisioningState",
+        "properties.solutionTemplateId"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}",
+      "operationId": "Solutions_Update",
+      "bodySchema": "SolutionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.availableSolutionTemplateVersions",
+        "properties.provisioningState",
+        "properties.solutionTemplateId"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}",
+      "operationId": "Solutions_Delete",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

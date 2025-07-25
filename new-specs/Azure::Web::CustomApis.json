@@ -1,0 +1,301 @@
+{
+  "resource": "Azure::Web::CustomApis",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/customApis",
+      "operationId": "CustomApis_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of items to be included in the result"
+        },
+        {
+          "name": "skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip Token"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/customApis",
+      "operationId": "CustomApis_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of items to be included in the result"
+        },
+        {
+          "name": "skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip Token"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/customApis/{apiName}",
+      "operationId": "CustomApis_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "apiName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "API name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/customApis/{apiName}",
+      "operationId": "CustomApis_CreateOrUpdate",
+      "bodySchema": "CustomApiDefinition",
+      "requiredProperties": [
+        "properties.wsdlDefinition.service.qualifiedName"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.apiDefinitions",
+        "properties.apiDefinitions.modifiedSwaggerUrl",
+        "properties.apiDefinitions.originalSwaggerUrl",
+        "properties.apiType",
+        "properties.backendService",
+        "properties.backendService.serviceUrl",
+        "properties.brandColor",
+        "properties.capabilities",
+        "properties.connectionParameters",
+        "properties.description",
+        "properties.displayName",
+        "properties.iconUri",
+        "properties.runtimeUrls",
+        "properties.swagger",
+        "properties.wsdlDefinition",
+        "properties.wsdlDefinition.content",
+        "properties.wsdlDefinition.importMethod",
+        "properties.wsdlDefinition.service",
+        "properties.wsdlDefinition.service.endpointQualifiedNames",
+        "properties.wsdlDefinition.url",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "apiName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "API name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/customApis/{apiName}",
+      "operationId": "CustomApis_Update",
+      "bodySchema": "CustomApiDefinition",
+      "requiredProperties": [
+        "properties.wsdlDefinition.service.qualifiedName"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.apiDefinitions",
+        "properties.apiDefinitions.modifiedSwaggerUrl",
+        "properties.apiDefinitions.originalSwaggerUrl",
+        "properties.apiType",
+        "properties.backendService",
+        "properties.backendService.serviceUrl",
+        "properties.brandColor",
+        "properties.capabilities",
+        "properties.connectionParameters",
+        "properties.description",
+        "properties.displayName",
+        "properties.iconUri",
+        "properties.runtimeUrls",
+        "properties.swagger",
+        "properties.wsdlDefinition",
+        "properties.wsdlDefinition.content",
+        "properties.wsdlDefinition.importMethod",
+        "properties.wsdlDefinition.service",
+        "properties.wsdlDefinition.service.endpointQualifiedNames",
+        "properties.wsdlDefinition.url",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "apiName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "API name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/customApis/{apiName}",
+      "operationId": "CustomApis_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "apiName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "API name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "resource": "Azure::CertificateRegistration::CertificateOrders",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.CertificateRegistration/certificateOrders",
+      "operationId": "AppServiceCertificateOrders_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders",
+      "operationId": "AppServiceCertificateOrders_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName}",
+      "operationId": "AppServiceCertificateOrders_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "certificateOrderName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the certificate order.."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName}",
+      "operationId": "AppServiceCertificateOrders_CreateOrUpdate",
+      "bodySchema": "AppServiceCertificateOrder",
+      "requiredProperties": [
+        "properties.productType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.appServiceCertificateNotRenewableReasons",
+        "properties.autoRenew",
+        "properties.certificates",
+        "properties.contact",
+        "properties.contact.email",
+        "properties.contact.nameFirst",
+        "properties.contact.nameLast",
+        "properties.contact.phone",
+        "properties.csr",
+        "properties.distinguishedName",
+        "properties.domainVerificationToken",
+        "properties.expirationTime",
+        "properties.intermediate",
+        "properties.intermediate.issuer",
+        "properties.intermediate.notAfter",
+        "properties.intermediate.notBefore",
+        "properties.intermediate.rawData",
+        "properties.intermediate.serialNumber",
+        "properties.intermediate.signatureAlgorithm",
+        "properties.intermediate.subject",
+        "properties.intermediate.thumbprint",
+        "properties.intermediate.version",
+        "properties.isPrivateKeyExternal",
+        "properties.keySize",
+        "properties.lastCertificateIssuanceTime",
+        "properties.nextAutoRenewalTimeStamp",
+        "properties.provisioningState",
+        "properties.root",
+        "properties.root.issuer",
+        "properties.root.notAfter",
+        "properties.root.notBefore",
+        "properties.root.rawData",
+        "properties.root.serialNumber",
+        "properties.root.signatureAlgorithm",
+        "properties.root.subject",
+        "properties.root.thumbprint",
+        "properties.root.version",
+        "properties.serialNumber",
+        "properties.signedCertificate",
+        "properties.signedCertificate.issuer",
+        "properties.signedCertificate.notAfter",
+        "properties.signedCertificate.notBefore",
+        "properties.signedCertificate.rawData",
+        "properties.signedCertificate.serialNumber",
+        "properties.signedCertificate.signatureAlgorithm",
+        "properties.signedCertificate.subject",
+        "properties.signedCertificate.thumbprint",
+        "properties.signedCertificate.version",
+        "properties.status",
+        "properties.validityInYears"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "certificateOrderName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the certificate order."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName}",
+      "operationId": "AppServiceCertificateOrders_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "certificateOrderName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the certificate order."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName}",
+      "operationId": "AppServiceCertificateOrders_Update",
+      "bodySchema": "AppServiceCertificateOrderPatchResource",
+      "requiredProperties": [
+        "properties.productType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.appServiceCertificateNotRenewableReasons",
+        "properties.autoRenew",
+        "properties.certificates",
+        "properties.contact",
+        "properties.contact.email",
+        "properties.contact.nameFirst",
+        "properties.contact.nameLast",
+        "properties.contact.phone",
+        "properties.csr",
+        "properties.distinguishedName",
+        "properties.domainVerificationToken",
+        "properties.expirationTime",
+        "properties.intermediate",
+        "properties.intermediate.issuer",
+        "properties.intermediate.notAfter",
+        "properties.intermediate.notBefore",
+        "properties.intermediate.rawData",
+        "properties.intermediate.serialNumber",
+        "properties.intermediate.signatureAlgorithm",
+        "properties.intermediate.subject",
+        "properties.intermediate.thumbprint",
+        "properties.intermediate.version",
+        "properties.isPrivateKeyExternal",
+        "properties.keySize",
+        "properties.lastCertificateIssuanceTime",
+        "properties.nextAutoRenewalTimeStamp",
+        "properties.provisioningState",
+        "properties.root",
+        "properties.root.issuer",
+        "properties.root.notAfter",
+        "properties.root.notBefore",
+        "properties.root.rawData",
+        "properties.root.serialNumber",
+        "properties.root.signatureAlgorithm",
+        "properties.root.subject",
+        "properties.root.thumbprint",
+        "properties.root.version",
+        "properties.serialNumber",
+        "properties.signedCertificate",
+        "properties.signedCertificate.issuer",
+        "properties.signedCertificate.notAfter",
+        "properties.signedCertificate.notBefore",
+        "properties.signedCertificate.rawData",
+        "properties.signedCertificate.serialNumber",
+        "properties.signedCertificate.signatureAlgorithm",
+        "properties.signedCertificate.subject",
+        "properties.signedCertificate.thumbprint",
+        "properties.signedCertificate.version",
+        "properties.status",
+        "properties.validityInYears"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "certificateOrderName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the certificate order."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

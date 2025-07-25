@@ -1,0 +1,62 @@
+{
+  "resource": "Azure::ContainerService::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ContainerService/deploymentSafeguards/default",
+      "operationId": "DeploymentSafeguards_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ContainerService/deploymentSafeguards/default",
+      "operationId": "DeploymentSafeguards_Create",
+      "bodySchema": "DeploymentSafeguard",
+      "requiredProperties": [
+        "properties.level",
+        "properties.systemExcludedNamespaces"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.excludedNamespaces",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ContainerService/deploymentSafeguards/default",
+      "operationId": "DeploymentSafeguards_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "resource": "Azure::KubernetesConfiguration::FluxConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}",
+      "operationId": "FluxConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "fluxConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Flux Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}",
+      "operationId": "FluxConfigurations_CreateOrUpdate",
+      "bodySchema": "FluxConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.bucket",
+        "properties.bucket.accessKey",
+        "properties.bucket.bucketName",
+        "properties.bucket.insecure",
+        "properties.bucket.localAuthRef",
+        "properties.bucket.syncIntervalInSeconds",
+        "properties.bucket.timeoutInSeconds",
+        "properties.bucket.url",
+        "properties.complianceState",
+        "properties.configurationProtectedSettings",
+        "properties.errorMessage",
+        "properties.gitRepository",
+        "properties.gitRepository.httpsCACert",
+        "properties.gitRepository.httpsUser",
+        "properties.gitRepository.localAuthRef",
+        "properties.gitRepository.repositoryRef",
+        "properties.gitRepository.repositoryRef.branch",
+        "properties.gitRepository.repositoryRef.commit",
+        "properties.gitRepository.repositoryRef.semver",
+        "properties.gitRepository.repositoryRef.tag",
+        "properties.gitRepository.sshKnownHosts",
+        "properties.gitRepository.syncIntervalInSeconds",
+        "properties.gitRepository.timeoutInSeconds",
+        "properties.gitRepository.url",
+        "properties.kustomizations",
+        "properties.namespace",
+        "properties.provisioningState",
+        "properties.repositoryPublicKey",
+        "properties.scope",
+        "properties.sourceKind",
+        "properties.sourceSyncedCommitId",
+        "properties.sourceUpdatedAt",
+        "properties.statusUpdatedAt",
+        "properties.statuses",
+        "properties.suspend",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "fluxConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Flux Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}",
+      "operationId": "FluxConfigurations_Update",
+      "bodySchema": "FluxConfigurationPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.bucket",
+        "properties.bucket.accessKey",
+        "properties.bucket.bucketName",
+        "properties.bucket.insecure",
+        "properties.bucket.localAuthRef",
+        "properties.bucket.syncIntervalInSeconds",
+        "properties.bucket.timeoutInSeconds",
+        "properties.bucket.url",
+        "properties.configurationProtectedSettings",
+        "properties.gitRepository",
+        "properties.gitRepository.httpsCACert",
+        "properties.gitRepository.httpsUser",
+        "properties.gitRepository.localAuthRef",
+        "properties.gitRepository.repositoryRef",
+        "properties.gitRepository.repositoryRef.branch",
+        "properties.gitRepository.repositoryRef.commit",
+        "properties.gitRepository.repositoryRef.semver",
+        "properties.gitRepository.repositoryRef.tag",
+        "properties.gitRepository.sshKnownHosts",
+        "properties.gitRepository.syncIntervalInSeconds",
+        "properties.gitRepository.timeoutInSeconds",
+        "properties.gitRepository.url",
+        "properties.kustomizations",
+        "properties.sourceKind",
+        "properties.suspend"
+      ],
+      "pathParameters": [
+        {
+          "name": "fluxConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Flux Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}",
+      "operationId": "FluxConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "fluxConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Flux Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceDelete",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Delete the extension resource in Azure - not the normal asynchronous delete."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations",
+      "operationId": "FluxConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

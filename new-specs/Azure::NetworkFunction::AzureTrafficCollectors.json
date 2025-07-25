@@ -1,0 +1,233 @@
+{
+  "resource": "Azure::NetworkFunction::AzureTrafficCollectors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkFunction/azureTrafficCollectors",
+      "operationId": "AzureTrafficCollectorsBySubscription_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkFunction/azureTrafficCollectors",
+      "operationId": "AzureTrafficCollectorsByResourceGroup_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkFunction/azureTrafficCollectors/{azureTrafficCollectorName}",
+      "operationId": "AzureTrafficCollectors_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "azureTrafficCollectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Traffic Collector name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkFunction/azureTrafficCollectors/{azureTrafficCollectorName}",
+      "operationId": "AzureTrafficCollectors_CreateOrUpdate",
+      "bodySchema": "AzureTrafficCollector",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.collectorPolicies",
+        "properties.provisioningState",
+        "properties.virtualHub",
+        "properties.virtualHub.id",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "azureTrafficCollectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Traffic Collector name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkFunction/azureTrafficCollectors/{azureTrafficCollectorName}",
+      "operationId": "AzureTrafficCollectors_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "azureTrafficCollectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Traffic Collector name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkFunction/azureTrafficCollectors/{azureTrafficCollectorName}",
+      "operationId": "AzureTrafficCollectors_UpdateTags",
+      "bodySchema": "TagsObject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "azureTrafficCollectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Traffic Collector name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

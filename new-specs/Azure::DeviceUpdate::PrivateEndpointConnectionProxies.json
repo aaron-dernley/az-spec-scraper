@@ -1,0 +1,193 @@
+{
+  "resource": "Azure::DeviceUpdate::PrivateEndpointConnectionProxies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceUpdate/accounts/{accountName}/privateEndpointConnectionProxies",
+      "operationId": "PrivateEndpointConnectionProxies_ListByAccount",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Account name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "ADU schema API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceUpdate/accounts/{accountName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyId}",
+      "operationId": "PrivateEndpointConnectionProxies_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Account name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the private endpoint connection proxy object."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "ADU schema API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceUpdate/accounts/{accountName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyId}",
+      "operationId": "PrivateEndpointConnectionProxies_CreateOrUpdate",
+      "bodySchema": "PrivateEndpointConnectionProxy",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.provisioningState",
+        "remotePrivateEndpoint",
+        "remotePrivateEndpoint.connectionDetails",
+        "remotePrivateEndpoint.id",
+        "remotePrivateEndpoint.immutableResourceId",
+        "remotePrivateEndpoint.immutableSubscriptionId",
+        "remotePrivateEndpoint.location",
+        "remotePrivateEndpoint.manualPrivateLinkServiceConnections",
+        "remotePrivateEndpoint.privateLinkServiceConnections",
+        "remotePrivateEndpoint.privateLinkServiceProxies",
+        "remotePrivateEndpoint.vnetTrafficTag",
+        "status"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Account name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the private endpoint connection proxy object."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "ADU schema API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceUpdate/accounts/{accountName}/privateEndpointConnectionProxies/{privateEndpointConnectionProxyId}",
+      "operationId": "PrivateEndpointConnectionProxies_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Account name."
+        },
+        {
+          "name": "privateEndpointConnectionProxyId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the private endpoint connection proxy object."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "ADU schema API version."
+        }
+      ]
+    }
+  ]
+}

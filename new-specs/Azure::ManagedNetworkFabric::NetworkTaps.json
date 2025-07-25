@@ -1,0 +1,179 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkTaps",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTaps/{networkTapName}",
+      "operationId": "NetworkTaps_Create",
+      "bodySchema": "NetworkTap",
+      "requiredProperties": [
+        "properties",
+        "properties.destinations",
+        "properties.networkPacketBrokerId"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.pollingType",
+        "properties.provisioningState",
+        "properties.sourceTapRuleId"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkTapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTaps/{networkTapName}",
+      "operationId": "NetworkTaps_Get",
+      "pathParameters": [
+        {
+          "name": "networkTapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTaps/{networkTapName}",
+      "operationId": "NetworkTaps_Update",
+      "bodySchema": "NetworkTapPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.destinations",
+        "properties.pollingType"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkTapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTaps/{networkTapName}",
+      "operationId": "NetworkTaps_Delete",
+      "pathParameters": [
+        {
+          "name": "networkTapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTaps",
+      "operationId": "NetworkTaps_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkTaps",
+      "operationId": "NetworkTaps_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

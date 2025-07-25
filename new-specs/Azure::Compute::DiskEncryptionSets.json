@@ -1,0 +1,200 @@
+{
+  "resource": "Azure::Compute::DiskEncryptionSets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/diskEncryptionSets",
+      "operationId": "DiskEncryptionSets_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets",
+      "operationId": "DiskEncryptionSets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+      "operationId": "DiskEncryptionSets_Get",
+      "pathParameters": [
+        {
+          "name": "diskEncryptionSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+      "operationId": "DiskEncryptionSets_CreateOrUpdate",
+      "bodySchema": "DiskEncryptionSet",
+      "requiredProperties": [
+        "properties.activeKey.keyUrl"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.activeKey",
+        "properties.activeKey.sourceVault",
+        "properties.activeKey.sourceVault.id",
+        "properties.autoKeyRotationError",
+        "properties.encryptionType",
+        "properties.federatedClientId",
+        "properties.lastKeyRotationTimestamp",
+        "properties.previousKeys",
+        "properties.provisioningState",
+        "properties.rotationToLatestKeyVersionEnabled"
+      ],
+      "pathParameters": [
+        {
+          "name": "diskEncryptionSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+      "operationId": "DiskEncryptionSets_Update",
+      "bodySchema": "DiskEncryptionSetUpdate",
+      "requiredProperties": [
+        "properties.activeKey.keyUrl"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.activeKey",
+        "properties.activeKey.sourceVault",
+        "properties.activeKey.sourceVault.id",
+        "properties.encryptionType",
+        "properties.federatedClientId",
+        "properties.rotationToLatestKeyVersionEnabled",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "diskEncryptionSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}",
+      "operationId": "DiskEncryptionSets_Delete",
+      "pathParameters": [
+        {
+          "name": "diskEncryptionSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

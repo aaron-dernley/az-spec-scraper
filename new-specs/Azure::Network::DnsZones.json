@@ -1,0 +1,451 @@
+{
+  "resource": "Azure::Network::DnsZones",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Update",
+      "bodySchema": "RecordSet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.AAAARecords",
+        "properties.ARecords",
+        "properties.CNAMERecord",
+        "properties.CNAMERecord.cname",
+        "properties.MXRecords",
+        "properties.NSRecords",
+        "properties.PTRRecords",
+        "properties.SOARecord",
+        "properties.SOARecord.email",
+        "properties.SOARecord.expireTime",
+        "properties.SOARecord.host",
+        "properties.SOARecord.minimumTTL",
+        "properties.SOARecord.refreshTime",
+        "properties.SOARecord.retryTime",
+        "properties.SOARecord.serialNumber",
+        "properties.SRVRecords",
+        "properties.TTL",
+        "properties.TXTRecords",
+        "properties.caaRecords",
+        "properties.fqdn",
+        "properties.metadata",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_CreateOrUpdate",
+      "bodySchema": "RecordSet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.AAAARecords",
+        "properties.ARecords",
+        "properties.CNAMERecord",
+        "properties.CNAMERecord.cname",
+        "properties.MXRecords",
+        "properties.NSRecords",
+        "properties.PTRRecords",
+        "properties.SOARecord",
+        "properties.SOARecord.email",
+        "properties.SOARecord.expireTime",
+        "properties.SOARecord.host",
+        "properties.SOARecord.minimumTTL",
+        "properties.SOARecord.refreshTime",
+        "properties.SOARecord.retryTime",
+        "properties.SOARecord.serialNumber",
+        "properties.SRVRecords",
+        "properties.TTL",
+        "properties.TXTRecords",
+        "properties.caaRecords",
+        "properties.fqdn",
+        "properties.metadata",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set. Record sets of type SOA can be updated but not created (they are created when the DNS zone is created)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Delete",
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set. Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Get",
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/{recordType}",
+      "operationId": "RecordSets_ListByType",
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of record sets to enumerate."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return. If not specified, returns up to 100 record sets."
+        },
+        {
+          "name": "$recordsetnamesuffix",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The suffix label of the record set name that has to be used to filter the record set enumerations. If this parameter is specified, Enumeration will return only records that end with .<recordSetNameSuffix>"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}",
+      "operationId": "Zones_CreateOrUpdate",
+      "bodySchema": "Zone",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.maxNumberOfRecordSets",
+        "properties.maxNumberOfRecordsPerRecordSet",
+        "properties.nameServers",
+        "properties.numberOfRecordSets",
+        "properties.zoneType"
+      ],
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}",
+      "operationId": "Zones_Delete",
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}",
+      "operationId": "Zones_Get",
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}",
+      "operationId": "Zones_Update",
+      "bodySchema": "ZoneUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "zoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones",
+      "operationId": "Zones_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return. If not specified, returns up to 100 record sets."
+        }
+      ]
+    }
+  ]
+}

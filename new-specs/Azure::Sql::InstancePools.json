@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::Sql::InstancePools",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Sql/instancePools",
+      "operationId": "InstancePools_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools",
+      "operationId": "InstancePools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools/{instancePoolName}",
+      "operationId": "InstancePools_Get",
+      "pathParameters": [
+        {
+          "name": "instancePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the instance pool to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools/{instancePoolName}",
+      "operationId": "InstancePools_CreateOrUpdate",
+      "bodySchema": "InstancePool",
+      "requiredProperties": [
+        "properties.licenseType",
+        "properties.subnetId",
+        "properties.vCores"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.dnsZone",
+        "properties.maintenanceConfigurationId",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "instancePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the instance pool to be created or updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools/{instancePoolName}",
+      "operationId": "InstancePools_Delete",
+      "pathParameters": [
+        {
+          "name": "instancePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the instance pool to be deleted"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools/{instancePoolName}",
+      "operationId": "InstancePools_Update",
+      "bodySchema": "InstancePoolUpdate",
+      "requiredProperties": [
+        "properties.licenseType",
+        "properties.subnetId",
+        "properties.vCores"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.dnsZone",
+        "properties.maintenanceConfigurationId",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "instancePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the instance pool to be updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

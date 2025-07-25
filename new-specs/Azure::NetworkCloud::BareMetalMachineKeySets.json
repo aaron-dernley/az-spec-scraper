@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::NetworkCloud::BareMetalMachineKeySets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/bareMetalMachineKeySets",
+      "operationId": "BareMetalMachineKeySets_ListByCluster",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/bareMetalMachineKeySets/{bareMetalMachineKeySetName}",
+      "operationId": "BareMetalMachineKeySets_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "bareMetalMachineKeySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine key set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/bareMetalMachineKeySets/{bareMetalMachineKeySetName}",
+      "operationId": "BareMetalMachineKeySets_CreateOrUpdate",
+      "bodySchema": "BareMetalMachineKeySet",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.azureGroupId",
+        "properties.expiration",
+        "properties.jumpHostsAllowed",
+        "properties.privilegeLevel",
+        "properties.userList"
+      ],
+      "optionalProperties": [
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.lastValidation",
+        "properties.osGroupName",
+        "properties.provisioningState",
+        "properties.userListStatus"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "bareMetalMachineKeySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine key set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/bareMetalMachineKeySets/{bareMetalMachineKeySetName}",
+      "operationId": "BareMetalMachineKeySets_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "bareMetalMachineKeySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine key set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}/bareMetalMachineKeySets/{bareMetalMachineKeySetName}",
+      "operationId": "BareMetalMachineKeySets_Update",
+      "bodySchema": "BareMetalMachineKeySetPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.expiration",
+        "properties.jumpHostsAllowed",
+        "properties.userList",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "bareMetalMachineKeySetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine key set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

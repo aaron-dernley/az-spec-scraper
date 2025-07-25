@@ -1,0 +1,186 @@
+{
+  "resource": "Azure::ProviderHub::DefaultRollouts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/defaultRollouts/{rolloutName}",
+      "operationId": "DefaultRollouts_Get",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "rolloutName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The rollout name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/defaultRollouts/{rolloutName}",
+      "operationId": "DefaultRollouts_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "rolloutName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The rollout name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/defaultRollouts/{rolloutName}",
+      "operationId": "DefaultRollouts_CreateOrUpdate",
+      "bodySchema": "DefaultRollout",
+      "requiredProperties": [
+        "properties.specification.providerRegistration.properties.featuresRule.requiredFeaturesPolicy",
+        "properties.specification.providerRegistration.properties.providerAuthentication.allowedAudiences",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.providerAuthentication.allowedAudiences"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.specification",
+        "properties.specification.canary",
+        "properties.specification.canary.regions",
+        "properties.specification.canary.skipRegions",
+        "properties.specification.highTraffic",
+        "properties.specification.highTraffic.regions",
+        "properties.specification.highTraffic.waitDuration",
+        "properties.specification.lowTraffic",
+        "properties.specification.lowTraffic.regions",
+        "properties.specification.lowTraffic.waitDuration",
+        "properties.specification.mediumTraffic",
+        "properties.specification.mediumTraffic.regions",
+        "properties.specification.mediumTraffic.waitDuration",
+        "properties.specification.providerRegistration",
+        "properties.specification.providerRegistration.properties",
+        "properties.specification.providerRegistration.properties.capabilities",
+        "properties.specification.providerRegistration.properties.featuresRule",
+        "properties.specification.providerRegistration.properties.management",
+        "properties.specification.providerRegistration.properties.management.incidentContactEmail",
+        "properties.specification.providerRegistration.properties.management.incidentRoutingService",
+        "properties.specification.providerRegistration.properties.management.incidentRoutingTeam",
+        "properties.specification.providerRegistration.properties.management.manifestOwners",
+        "properties.specification.providerRegistration.properties.management.resourceAccessPolicy",
+        "properties.specification.providerRegistration.properties.management.resourceAccessRoles",
+        "properties.specification.providerRegistration.properties.management.schemaOwners",
+        "properties.specification.providerRegistration.properties.management.serviceTreeInfos",
+        "properties.specification.providerRegistration.properties.metadata",
+        "properties.specification.providerRegistration.properties.namespace",
+        "properties.specification.providerRegistration.properties.providerAuthentication",
+        "properties.specification.providerRegistration.properties.providerAuthorizations",
+        "properties.specification.providerRegistration.properties.providerHubMetadata",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.providerAuthentication",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.providerAuthorizations",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.thirdPartyProviderAuthorization",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.thirdPartyProviderAuthorization.authorizations",
+        "properties.specification.providerRegistration.properties.providerHubMetadata.thirdPartyProviderAuthorization.managedByTenantId",
+        "properties.specification.providerRegistration.properties.providerType",
+        "properties.specification.providerRegistration.properties.providerVersion",
+        "properties.specification.providerRegistration.properties.provisioningState",
+        "properties.specification.providerRegistration.properties.requestHeaderOptions",
+        "properties.specification.providerRegistration.properties.requestHeaderOptions.optInHeaders",
+        "properties.specification.providerRegistration.properties.requiredFeatures",
+        "properties.specification.providerRegistration.properties.subscriptionLifecycleNotificationSpecifications",
+        "properties.specification.providerRegistration.properties.subscriptionLifecycleNotificationSpecifications.softDeleteTTL",
+        "properties.specification.providerRegistration.properties.subscriptionLifecycleNotificationSpecifications.subscriptionStateOverrideActions",
+        "properties.specification.providerRegistration.properties.templateDeploymentOptions",
+        "properties.specification.providerRegistration.properties.templateDeploymentOptions.preflightOptions",
+        "properties.specification.providerRegistration.properties.templateDeploymentOptions.preflightSupported",
+        "properties.specification.resourceTypeRegistrations",
+        "properties.specification.restOfTheWorldGroupOne",
+        "properties.specification.restOfTheWorldGroupOne.regions",
+        "properties.specification.restOfTheWorldGroupOne.waitDuration",
+        "properties.specification.restOfTheWorldGroupTwo",
+        "properties.specification.restOfTheWorldGroupTwo.regions",
+        "properties.specification.restOfTheWorldGroupTwo.waitDuration",
+        "properties.status",
+        "properties.status.completedRegions",
+        "properties.status.failedOrSkippedRegions",
+        "properties.status.nextTrafficRegion",
+        "properties.status.nextTrafficRegionScheduledTime",
+        "properties.status.subscriptionReregistrationResult"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "rolloutName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The rollout name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/defaultRollouts",
+      "operationId": "DefaultRollouts_ListByProviderRegistration",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

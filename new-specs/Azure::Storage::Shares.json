@@ -1,0 +1,271 @@
+{
+  "resource": "Azure::Storage::Shares",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares",
+      "operationId": "FileShares_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$maxpagesize",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional. Specified maximum number of shares that can be included in the list."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional. When specified, only share names starting with the filter will be listed."
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional, used to expand the properties within share's properties. Valid values are: deleted, snapshots. Should be passed as a string with delimiter ','"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}",
+      "operationId": "FileShares_Create",
+      "bodySchema": "FileShare",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.accessTier",
+        "properties.accessTierChangeTime",
+        "properties.accessTierStatus",
+        "properties.deleted",
+        "properties.deletedTime",
+        "properties.enabledProtocols",
+        "properties.lastModifiedTime",
+        "properties.leaseDuration",
+        "properties.leaseState",
+        "properties.leaseStatus",
+        "properties.metadata",
+        "properties.remainingRetentionDays",
+        "properties.rootSquash",
+        "properties.shareQuota",
+        "properties.shareUsageBytes",
+        "properties.signedIdentifiers",
+        "properties.snapshotTime",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional, used to expand the properties within share's properties. Valid values are: snapshots. Should be passed as a string with delimiter ','"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}",
+      "operationId": "FileShares_Update",
+      "bodySchema": "FileShare",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.accessTier",
+        "properties.accessTierChangeTime",
+        "properties.accessTierStatus",
+        "properties.deleted",
+        "properties.deletedTime",
+        "properties.enabledProtocols",
+        "properties.lastModifiedTime",
+        "properties.leaseDuration",
+        "properties.leaseState",
+        "properties.leaseStatus",
+        "properties.metadata",
+        "properties.remainingRetentionDays",
+        "properties.rootSquash",
+        "properties.shareQuota",
+        "properties.shareUsageBytes",
+        "properties.signedIdentifiers",
+        "properties.snapshotTime",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}",
+      "operationId": "FileShares_Get",
+      "pathParameters": [
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional, used to expand the properties within share's properties. Valid values are: stats. Should be passed as a string with delimiter ','."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}",
+      "operationId": "FileShares_Delete",
+      "pathParameters": [
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$include",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional. Valid values are: snapshots, leased-snapshots, none. The default value is snapshots. For 'snapshots', the file share is deleted including all of its file share snapshots. If the file share contains leased-snapshots, the deletion fails. For 'leased-snapshots', the file share is deleted included all of its file share snapshots (leased/unleased). For 'none', the file share is deleted if it has no share snapshots. If the file share contains any snapshots (leased or unleased), the deletion fails."
+        }
+      ]
+    }
+  ]
+}

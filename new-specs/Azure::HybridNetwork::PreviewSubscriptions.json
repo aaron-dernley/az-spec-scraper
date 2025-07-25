@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::HybridNetwork::PreviewSubscriptions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}/previewSubscriptions",
+      "operationId": "VendorSkuPreview_List",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sku."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}/previewSubscriptions/{previewSubscription}",
+      "operationId": "VendorSkuPreview_CreateOrUpdate",
+      "bodySchema": "PreviewSubscription",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor sku."
+        },
+        {
+          "name": "previewSubscription",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Preview subscription ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}/previewSubscriptions/{previewSubscription}",
+      "operationId": "VendorSkuPreview_Get",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor sku."
+        },
+        {
+          "name": "previewSubscription",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Preview subscription ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}/vendorSkus/{skuName}/previewSubscriptions/{previewSubscription}",
+      "operationId": "VendorSkuPreview_Delete",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "skuName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor sku."
+        },
+        {
+          "name": "previewSubscription",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Preview subscription ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

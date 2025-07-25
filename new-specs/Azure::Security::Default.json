@@ -1,0 +1,162 @@
+{
+  "resource": "Azure::Security::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName}/devops/default",
+      "operationId": "DevOpsConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "securityConnectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The security connector name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName}/devops/default",
+      "operationId": "DevOpsConfigurations_CreateOrUpdate",
+      "bodySchema": "DevOpsConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.agentlessConfiguration",
+        "properties.agentlessConfiguration.agentlessAutoDiscovery",
+        "properties.agentlessConfiguration.agentlessEnabled",
+        "properties.agentlessConfiguration.inventoryList",
+        "properties.agentlessConfiguration.inventoryListType",
+        "properties.agentlessConfiguration.scanners",
+        "properties.authorization",
+        "properties.authorization.code",
+        "properties.autoDiscovery",
+        "properties.capabilities",
+        "properties.provisioningState",
+        "properties.provisioningStatusMessage",
+        "properties.provisioningStatusUpdateTimeUtc",
+        "properties.topLevelInventoryList",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "securityConnectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The security connector name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName}/devops/default",
+      "operationId": "DevOpsConfigurations_Update",
+      "bodySchema": "DevOpsConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.agentlessConfiguration",
+        "properties.agentlessConfiguration.agentlessAutoDiscovery",
+        "properties.agentlessConfiguration.agentlessEnabled",
+        "properties.agentlessConfiguration.inventoryList",
+        "properties.agentlessConfiguration.inventoryListType",
+        "properties.agentlessConfiguration.scanners",
+        "properties.authorization",
+        "properties.authorization.code",
+        "properties.autoDiscovery",
+        "properties.capabilities",
+        "properties.provisioningState",
+        "properties.provisioningStatusMessage",
+        "properties.provisioningStatusUpdateTimeUtc",
+        "properties.topLevelInventoryList",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "securityConnectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The security connector name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName}/devops/default",
+      "operationId": "DevOpsConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "securityConnectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The security connector name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

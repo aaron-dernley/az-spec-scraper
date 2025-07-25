@@ -1,0 +1,235 @@
+{
+  "resource": "Azure::DataFactory::IntegrationRuntimes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/integrationRuntimes",
+      "operationId": "IntegrationRuntimes_ListByFactory",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/integrationRuntimes/{integrationRuntimeName}",
+      "operationId": "IntegrationRuntimes_CreateOrUpdate",
+      "bodySchema": "IntegrationRuntimeResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "integrationRuntimeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration runtime name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/integrationRuntimes/{integrationRuntimeName}",
+      "operationId": "IntegrationRuntimes_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "integrationRuntimeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration runtime name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/integrationRuntimes/{integrationRuntimeName}",
+      "operationId": "IntegrationRuntimes_Update",
+      "bodySchema": "UpdateIntegrationRuntimeRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "autoUpdate",
+        "updateDelayOffset"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "integrationRuntimeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration runtime name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/integrationRuntimes/{integrationRuntimeName}",
+      "operationId": "IntegrationRuntimes_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "integrationRuntimeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration runtime name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "resource": "Azure::Web::Connections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/connections",
+      "operationId": "Connections_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of items to be included in the result"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/connections/{connectionName}",
+      "operationId": "Connections_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Connection name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/connections/{connectionName}",
+      "operationId": "Connections_CreateOrUpdate",
+      "bodySchema": "ApiConnectionDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.api",
+        "properties.api.brandColor",
+        "properties.api.description",
+        "properties.api.displayName",
+        "properties.api.iconUri",
+        "properties.api.id",
+        "properties.api.name",
+        "properties.api.swagger",
+        "properties.api.type",
+        "properties.changedTime",
+        "properties.createdTime",
+        "properties.customParameterValues",
+        "properties.displayName",
+        "properties.nonSecretParameterValues",
+        "properties.parameterValues",
+        "properties.statuses",
+        "properties.testLinks",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Connection name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/connections/{connectionName}",
+      "operationId": "Connections_Update",
+      "bodySchema": "ApiConnectionDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.api",
+        "properties.api.brandColor",
+        "properties.api.description",
+        "properties.api.displayName",
+        "properties.api.iconUri",
+        "properties.api.id",
+        "properties.api.name",
+        "properties.api.swagger",
+        "properties.api.type",
+        "properties.changedTime",
+        "properties.createdTime",
+        "properties.customParameterValues",
+        "properties.displayName",
+        "properties.nonSecretParameterValues",
+        "properties.parameterValues",
+        "properties.statuses",
+        "properties.testLinks",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Connection name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/connections/{connectionName}",
+      "operationId": "Connections_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group"
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Connection name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

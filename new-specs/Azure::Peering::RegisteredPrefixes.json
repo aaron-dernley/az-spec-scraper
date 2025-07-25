@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::Peering::RegisteredPrefixes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peerings/{peeringName}/registeredPrefixes/{registeredPrefixName}",
+      "operationId": "RegisteredPrefixes_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering."
+        },
+        {
+          "name": "registeredPrefixName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the registered prefix."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peerings/{peeringName}/registeredPrefixes/{registeredPrefixName}",
+      "operationId": "RegisteredPrefixes_CreateOrUpdate",
+      "bodySchema": "PeeringRegisteredPrefix",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.errorMessage",
+        "properties.peeringServicePrefixKey",
+        "properties.prefix",
+        "properties.prefixValidationState",
+        "properties.provisioningState",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering."
+        },
+        {
+          "name": "registeredPrefixName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the registered prefix."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peerings/{peeringName}/registeredPrefixes/{registeredPrefixName}",
+      "operationId": "RegisteredPrefixes_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering."
+        },
+        {
+          "name": "registeredPrefixName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the registered prefix."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Peering/peerings/{peeringName}/registeredPrefixes",
+      "operationId": "RegisteredPrefixes_ListByPeering",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

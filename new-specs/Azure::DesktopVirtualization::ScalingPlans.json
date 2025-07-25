@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::DesktopVirtualization::ScalingPlans",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/scalingPlans/{scalingPlanName}",
+      "operationId": "ScalingPlans_Get",
+      "pathParameters": [
+        {
+          "name": "scalingPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scaling plan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/scalingPlans/{scalingPlanName}",
+      "operationId": "ScalingPlans_Create",
+      "bodySchema": "ScalingPlan",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.exclusionTag",
+        "properties.friendlyName",
+        "properties.hostPoolReferences",
+        "properties.hostPoolType",
+        "properties.objectId",
+        "properties.schedules",
+        "properties.timeZone"
+      ],
+      "pathParameters": [
+        {
+          "name": "scalingPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scaling plan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/scalingPlans/{scalingPlanName}",
+      "operationId": "ScalingPlans_Delete",
+      "pathParameters": [
+        {
+          "name": "scalingPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scaling plan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/scalingPlans/{scalingPlanName}",
+      "operationId": "ScalingPlans_Update",
+      "bodySchema": "ScalingPlanPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.exclusionTag",
+        "properties.friendlyName",
+        "properties.hostPoolReferences",
+        "properties.hostPoolType",
+        "properties.schedules",
+        "properties.timeZone",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "scalingPlanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scaling plan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/scalingPlans",
+      "operationId": "ScalingPlans_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DesktopVirtualization/scalingPlans",
+      "operationId": "ScalingPlans_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/scalingPlans",
+      "operationId": "ScalingPlans_ListByHostPool",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

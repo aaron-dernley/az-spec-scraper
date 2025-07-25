@@ -1,0 +1,235 @@
+{
+  "resource": "Azure::MachineLearningServices::Connections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}",
+      "operationId": "WorkspaceConnections_Create",
+      "bodySchema": "WorkspaceConnectionPropertiesV2BasicResource",
+      "requiredProperties": [
+        "properties",
+        "properties.authType"
+      ],
+      "optionalProperties": [
+        "properties.category",
+        "properties.createdByWorkspaceArmId",
+        "properties.expiryTime",
+        "properties.group",
+        "properties.isSharedToAll",
+        "properties.metadata",
+        "properties.sharedUserList",
+        "properties.target",
+        "properties.value",
+        "properties.valueFormat"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Friendly name of the workspace connection"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}",
+      "operationId": "WorkspaceConnections_Get",
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Friendly name of the workspace connection"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}",
+      "operationId": "WorkspaceConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Friendly name of the workspace connection"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}",
+      "operationId": "WorkspaceConnections_Update",
+      "bodySchema": "WorkspaceConnectionUpdateParameter",
+      "requiredProperties": [
+        "properties.authType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.category",
+        "properties.createdByWorkspaceArmId",
+        "properties.expiryTime",
+        "properties.group",
+        "properties.isSharedToAll",
+        "properties.metadata",
+        "properties.sharedUserList",
+        "properties.target",
+        "properties.value",
+        "properties.valueFormat"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Friendly name of the workspace connection"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections",
+      "operationId": "WorkspaceConnections_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "target",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Target of the workspace connection."
+        },
+        {
+          "name": "category",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Category of the workspace connection."
+        },
+        {
+          "name": "includeAll",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "query parameter that indicates if get connection call should return both connections and datastores"
+        }
+      ]
+    }
+  ]
+}

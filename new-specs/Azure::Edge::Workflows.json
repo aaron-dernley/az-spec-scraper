@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::Edge::Workflows",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows",
+      "operationId": "Workflows_ListByContext",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}",
+      "operationId": "Workflows_Get",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}",
+      "operationId": "Workflows_CreateOrUpdate",
+      "bodySchema": "Workflow",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.provisioningState",
+        "properties.workflowTemplateId"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}",
+      "operationId": "Workflows_Update",
+      "bodySchema": "WorkflowUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.workflowTemplateId"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}",
+      "operationId": "Workflows_Delete",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

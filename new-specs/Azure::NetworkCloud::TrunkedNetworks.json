@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::NetworkCloud::TrunkedNetworks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/trunkedNetworks",
+      "operationId": "TrunkedNetworks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/trunkedNetworks",
+      "operationId": "TrunkedNetworks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/trunkedNetworks/{trunkedNetworkName}",
+      "operationId": "TrunkedNetworks_Get",
+      "pathParameters": [
+        {
+          "name": "trunkedNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the trunked network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/trunkedNetworks/{trunkedNetworkName}",
+      "operationId": "TrunkedNetworks_CreateOrUpdate",
+      "bodySchema": "TrunkedNetwork",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.isolationDomainIds",
+        "properties.vlans"
+      ],
+      "optionalProperties": [
+        "properties.associatedResourceIds",
+        "properties.clusterId",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.hybridAksClustersAssociatedIds",
+        "properties.hybridAksPluginType",
+        "properties.interfaceName",
+        "properties.provisioningState",
+        "properties.virtualMachinesAssociatedIds"
+      ],
+      "pathParameters": [
+        {
+          "name": "trunkedNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the trunked network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/trunkedNetworks/{trunkedNetworkName}",
+      "operationId": "TrunkedNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "trunkedNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the trunked network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/trunkedNetworks/{trunkedNetworkName}",
+      "operationId": "TrunkedNetworks_Update",
+      "bodySchema": "TrunkedNetworkPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "trunkedNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the trunked network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

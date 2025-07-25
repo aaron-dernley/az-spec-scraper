@@ -1,0 +1,213 @@
+{
+  "resource": "Azure::DataBoxEdge::Addons",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/addons",
+      "operationId": "Addons_ListByRole",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "roleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The role name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/addons/{addonName}",
+      "operationId": "Addons_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "roleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The role name."
+        },
+        {
+          "name": "addonName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The addon name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/addons/{addonName}",
+      "operationId": "Addons_CreateOrUpdate",
+      "bodySchema": "Addon",
+      "requiredProperties": [
+        "kind"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "roleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The role name."
+        },
+        {
+          "name": "addonName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The addon name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/roles/{roleName}/addons/{addonName}",
+      "operationId": "Addons_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "roleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The role name."
+        },
+        {
+          "name": "addonName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The addon name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

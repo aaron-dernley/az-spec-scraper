@@ -1,0 +1,228 @@
+{
+  "resource": "Azure::AwsConnector::AutoScalingAutoScalingGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups",
+      "operationId": "AutoScalingAutoScalingGroups_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups",
+      "operationId": "AutoScalingAutoScalingGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups/{name}",
+      "operationId": "AutoScalingAutoScalingGroups_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AutoScalingAutoScalingGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups/{name}",
+      "operationId": "AutoScalingAutoScalingGroups_CreateOrReplace",
+      "bodySchema": "AutoScalingAutoScalingGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.autoScalingGroupName",
+        "properties.awsProperties.availabilityZones",
+        "properties.awsProperties.capacityRebalance",
+        "properties.awsProperties.context",
+        "properties.awsProperties.cooldown",
+        "properties.awsProperties.defaultInstanceWarmup",
+        "properties.awsProperties.desiredCapacity",
+        "properties.awsProperties.desiredCapacityType",
+        "properties.awsProperties.healthCheckGracePeriod",
+        "properties.awsProperties.healthCheckType",
+        "properties.awsProperties.instanceId",
+        "properties.awsProperties.instanceMaintenancePolicy",
+        "properties.awsProperties.instanceMaintenancePolicy.maxHealthyPercentage",
+        "properties.awsProperties.instanceMaintenancePolicy.minHealthyPercentage",
+        "properties.awsProperties.launchConfigurationName",
+        "properties.awsProperties.launchTemplate",
+        "properties.awsProperties.launchTemplate.launchTemplateId",
+        "properties.awsProperties.launchTemplate.launchTemplateName",
+        "properties.awsProperties.launchTemplate.version",
+        "properties.awsProperties.lifecycleHookSpecificationList",
+        "properties.awsProperties.loadBalancerNames",
+        "properties.awsProperties.maxInstanceLifetime",
+        "properties.awsProperties.maxSize",
+        "properties.awsProperties.metricsCollection",
+        "properties.awsProperties.minSize",
+        "properties.awsProperties.mixedInstancesPolicy",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.onDemandAllocationStrategy",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.onDemandBaseCapacity",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.onDemandPercentageAboveBaseCapacity",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.spotAllocationStrategy",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.spotInstancePools",
+        "properties.awsProperties.mixedInstancesPolicy.instancesDistribution.spotMaxPrice",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate.launchTemplateSpecification",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate.launchTemplateSpecification.launchTemplateId",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate.launchTemplateSpecification.launchTemplateName",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate.launchTemplateSpecification.version",
+        "properties.awsProperties.mixedInstancesPolicy.launchTemplate.overrides",
+        "properties.awsProperties.newInstancesProtectedFromScaleIn",
+        "properties.awsProperties.notificationConfiguration",
+        "properties.awsProperties.notificationConfiguration.notificationTypes",
+        "properties.awsProperties.notificationConfiguration.topicARN",
+        "properties.awsProperties.notificationConfigurations",
+        "properties.awsProperties.placementGroup",
+        "properties.awsProperties.serviceLinkedRoleARN",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.targetGroupARNs",
+        "properties.awsProperties.terminationPolicies",
+        "properties.awsProperties.vpcZoneIdentifier",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AutoScalingAutoScalingGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups/{name}",
+      "operationId": "AutoScalingAutoScalingGroups_Update",
+      "bodySchema": "AutoScalingAutoScalingGroupTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AutoScalingAutoScalingGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/autoScalingAutoScalingGroups/{name}",
+      "operationId": "AutoScalingAutoScalingGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AutoScalingAutoScalingGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

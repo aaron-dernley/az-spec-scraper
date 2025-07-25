@@ -1,0 +1,175 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::IpCommunities",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipCommunities/{ipCommunityName}",
+      "operationId": "IpCommunities_Create",
+      "bodySchema": "IpCommunity",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.ipCommunityRules",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "ipCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipCommunities/{ipCommunityName}",
+      "operationId": "IpCommunities_Get",
+      "pathParameters": [
+        {
+          "name": "ipCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipCommunities/{ipCommunityName}",
+      "operationId": "IpCommunities_Update",
+      "bodySchema": "IpCommunityPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.ipCommunityRules"
+      ],
+      "pathParameters": [
+        {
+          "name": "ipCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipCommunities/{ipCommunityName}",
+      "operationId": "IpCommunities_Delete",
+      "pathParameters": [
+        {
+          "name": "ipCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipCommunities",
+      "operationId": "IpCommunities_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/ipCommunities",
+      "operationId": "IpCommunities_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

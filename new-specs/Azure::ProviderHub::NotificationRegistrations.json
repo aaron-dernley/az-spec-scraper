@@ -1,0 +1,125 @@
+{
+  "resource": "Azure::ProviderHub::NotificationRegistrations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/notificationRegistrations/{notificationRegistrationName}",
+      "operationId": "NotificationRegistrations_Get",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "notificationRegistrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The notification registration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/notificationRegistrations/{notificationRegistrationName}",
+      "operationId": "NotificationRegistrations_CreateOrUpdate",
+      "bodySchema": "NotificationRegistration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.includedEvents",
+        "properties.messageScope",
+        "properties.notificationEndpoints",
+        "properties.notificationMode",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "notificationRegistrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The notification registration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/notificationRegistrations/{notificationRegistrationName}",
+      "operationId": "NotificationRegistrations_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "notificationRegistrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The notification registration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/notificationRegistrations",
+      "operationId": "NotificationRegistrations_ListByProviderRegistration",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

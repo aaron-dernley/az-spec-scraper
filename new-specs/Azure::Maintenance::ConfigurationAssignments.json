@@ -1,0 +1,406 @@
+{
+  "resource": "Azure::Maintenance::ConfigurationAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments/{configurationAssignmentName}",
+      "operationId": "ConfigurationAssignments_CreateOrUpdateParent",
+      "bodySchema": "ConfigurationAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.maintenanceConfigurationId",
+        "properties.resourceId",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceParentType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent type"
+        },
+        {
+          "name": "resourceParentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent identifier"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        },
+        {
+          "name": "configurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Configuration assignment name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments/{configurationAssignmentName}",
+      "operationId": "ConfigurationAssignments_DeleteParent",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceParentType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent type"
+        },
+        {
+          "name": "resourceParentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent identifier"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        },
+        {
+          "name": "configurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique configuration assignment name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments/{configurationAssignmentName}",
+      "operationId": "ConfigurationAssignments_CreateOrUpdate",
+      "bodySchema": "ConfigurationAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.maintenanceConfigurationId",
+        "properties.resourceId",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        },
+        {
+          "name": "configurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Configuration assignment name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments/{configurationAssignmentName}",
+      "operationId": "ConfigurationAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        },
+        {
+          "name": "configurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique configuration assignment name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments",
+      "operationId": "ConfigurationAssignments_ListParent",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceParentType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent type"
+        },
+        {
+          "name": "resourceParentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource parent identifier"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/configurationAssignments",
+      "operationId": "ConfigurationAssignments_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name"
+        },
+        {
+          "name": "providerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource provider name"
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource type"
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource identifier"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

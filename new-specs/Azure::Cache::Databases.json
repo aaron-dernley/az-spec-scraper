@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::Cache::Databases",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases",
+      "operationId": "Databases_ListByCluster",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RedisEnterprise cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}",
+      "operationId": "Databases_Create",
+      "bodySchema": "Database",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.clientProtocol",
+        "properties.clusteringPolicy",
+        "properties.evictionPolicy",
+        "properties.geoReplication",
+        "properties.geoReplication.groupNickname",
+        "properties.geoReplication.linkedDatabases",
+        "properties.modules",
+        "properties.persistence",
+        "properties.persistence.aofEnabled",
+        "properties.persistence.aofFrequency",
+        "properties.persistence.rdbEnabled",
+        "properties.persistence.rdbFrequency",
+        "properties.port",
+        "properties.provisioningState",
+        "properties.resourceState"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RedisEnterprise cluster."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}",
+      "operationId": "Databases_Update",
+      "bodySchema": "DatabaseUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.clientProtocol",
+        "properties.clusteringPolicy",
+        "properties.evictionPolicy",
+        "properties.geoReplication",
+        "properties.geoReplication.groupNickname",
+        "properties.geoReplication.linkedDatabases",
+        "properties.modules",
+        "properties.persistence",
+        "properties.persistence.aofEnabled",
+        "properties.persistence.aofFrequency",
+        "properties.persistence.rdbEnabled",
+        "properties.persistence.rdbFrequency",
+        "properties.port",
+        "properties.provisioningState",
+        "properties.resourceState"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RedisEnterprise cluster."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}",
+      "operationId": "Databases_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RedisEnterprise cluster."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}",
+      "operationId": "Databases_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RedisEnterprise cluster."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

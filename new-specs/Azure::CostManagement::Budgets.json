@@ -1,0 +1,124 @@
+{
+  "resource": "Azure::CostManagement::Budgets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/budgets",
+      "operationId": "Budgets_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with budget operations.\n\n Supported scopes for **CategoryType: Cost**\n\n Azure RBAC Scopes:\n- '/subscriptions/{subscriptionId}/' for subscription scope\n- '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope\n- '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope\n\n EA (Enterprise Agreement) Scopes:\n\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope\n\n MCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)\n\n Supported scopes for **CategoryType: ReservationUtilization**\n\n EA (Enterprise Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account Scope\n\nMCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope (non-CSP only)\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter option. May be used to filter budgets by properties/category. The filter supports 'eq' only."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/budgets/{budgetName}",
+      "operationId": "Budgets_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with budget operations.\n\n Supported scopes for **CategoryType: Cost**\n\n Azure RBAC Scopes:\n- '/subscriptions/{subscriptionId}/' for subscription scope\n- '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope\n- '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope\n\n EA (Enterprise Agreement) Scopes:\n\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope\n\n MCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)\n\n Supported scopes for **CategoryType: ReservationUtilization**\n\n EA (Enterprise Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account Scope\n\nMCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope (non-CSP only)\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)"
+        },
+        {
+          "name": "budgetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Budget Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.CostManagement/budgets/{budgetName}",
+      "operationId": "Budgets_CreateOrUpdate",
+      "bodySchema": "Budget",
+      "requiredProperties": [
+        "properties.category",
+        "properties.filter.dimensions.name",
+        "properties.filter.dimensions.operator",
+        "properties.filter.dimensions.values",
+        "properties.filter.tags.name",
+        "properties.filter.tags.operator",
+        "properties.filter.tags.values",
+        "properties.timeGrain",
+        "properties.timePeriod",
+        "properties.timePeriod.startDate"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.amount",
+        "properties.currentSpend",
+        "properties.currentSpend.amount",
+        "properties.currentSpend.unit",
+        "properties.filter",
+        "properties.filter.and",
+        "properties.filter.dimensions",
+        "properties.filter.tags",
+        "properties.forecastSpend",
+        "properties.forecastSpend.amount",
+        "properties.forecastSpend.unit",
+        "properties.notifications",
+        "properties.timePeriod.endDate"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with budget operations.\n\n Supported scopes for **CategoryType: Cost**\n\n Azure RBAC Scopes:\n- '/subscriptions/{subscriptionId}/' for subscription scope\n- '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope\n- '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope\n\n EA (Enterprise Agreement) Scopes:\n\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope\n\n MCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)\n\n Supported scopes for **CategoryType: ReservationUtilization**\n\n EA (Enterprise Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account Scope\n\nMCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope (non-CSP only)\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)"
+        },
+        {
+          "name": "budgetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Budget Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.CostManagement/budgets/{budgetName}",
+      "operationId": "Budgets_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with budget operations.\n\n Supported scopes for **CategoryType: Cost**\n\n Azure RBAC Scopes:\n- '/subscriptions/{subscriptionId}/' for subscription scope\n- '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope\n- '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope\n\n EA (Enterprise Agreement) Scopes:\n\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope\n\n MCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)\n\n Supported scopes for **CategoryType: ReservationUtilization**\n\n EA (Enterprise Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account Scope\n\nMCA (Modern Customer Agreement) Scopes:\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope (non-CSP only)\n- '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' for customer scope (CSP only)"
+        },
+        {
+          "name": "budgetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Budget Name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

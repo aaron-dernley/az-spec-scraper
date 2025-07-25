@@ -1,0 +1,155 @@
+{
+  "resource": "Azure::Sql::StartStopSchedules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules",
+      "operationId": "StartStopManagedInstanceSchedules_ListByInstance",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/{startStopScheduleName}",
+      "operationId": "StartStopManagedInstanceSchedules_Get",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "startStopScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the managed instance Start/Stop schedule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/{startStopScheduleName}",
+      "operationId": "StartStopManagedInstanceSchedules_CreateOrUpdate",
+      "bodySchema": "StartStopManagedInstanceSchedule",
+      "requiredProperties": [
+        "properties.scheduleList"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.nextExecutionTime",
+        "properties.nextRunAction",
+        "properties.timeZoneId",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "startStopScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the managed instance Start/Stop schedule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/{startStopScheduleName}",
+      "operationId": "StartStopManagedInstanceSchedules_Delete",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "startStopScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the managed instance Start/Stop schedule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

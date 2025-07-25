@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::App::ManagedEnvironments",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.App/managedEnvironments",
+      "operationId": "ManagedEnvironments_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments",
+      "operationId": "ManagedEnvironments_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}",
+      "operationId": "ManagedEnvironments_Get",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}",
+      "operationId": "ManagedEnvironments_CreateOrUpdate",
+      "bodySchema": "ManagedEnvironment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.appLogsConfiguration",
+        "properties.appLogsConfiguration.destination",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.sharedKey",
+        "properties.daprAIConnectionString",
+        "properties.daprAIInstrumentationKey",
+        "properties.defaultDomain",
+        "properties.deploymentErrors",
+        "properties.provisioningState",
+        "properties.staticIp",
+        "properties.vnetConfiguration",
+        "properties.vnetConfiguration.dockerBridgeCidr",
+        "properties.vnetConfiguration.infrastructureSubnetId",
+        "properties.vnetConfiguration.internal",
+        "properties.vnetConfiguration.platformReservedCidr",
+        "properties.vnetConfiguration.platformReservedDnsIP",
+        "properties.vnetConfiguration.runtimeSubnetId",
+        "properties.zoneRedundant"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}",
+      "operationId": "ManagedEnvironments_Delete",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}",
+      "operationId": "ManagedEnvironments_Update",
+      "bodySchema": "ManagedEnvironment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.appLogsConfiguration",
+        "properties.appLogsConfiguration.destination",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.sharedKey",
+        "properties.daprAIConnectionString",
+        "properties.daprAIInstrumentationKey",
+        "properties.defaultDomain",
+        "properties.deploymentErrors",
+        "properties.provisioningState",
+        "properties.staticIp",
+        "properties.vnetConfiguration",
+        "properties.vnetConfiguration.dockerBridgeCidr",
+        "properties.vnetConfiguration.infrastructureSubnetId",
+        "properties.vnetConfiguration.internal",
+        "properties.vnetConfiguration.platformReservedCidr",
+        "properties.vnetConfiguration.platformReservedDnsIP",
+        "properties.vnetConfiguration.runtimeSubnetId",
+        "properties.zoneRedundant"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

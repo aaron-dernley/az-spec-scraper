@@ -1,0 +1,213 @@
+{
+  "resource": "Azure::DataFactory::ManagedPrivateEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/managedVirtualNetworks/{managedVirtualNetworkName}/managedPrivateEndpoints",
+      "operationId": "ManagedPrivateEndpoints_ListByFactory",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "managedVirtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed virtual network name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/managedVirtualNetworks/{managedVirtualNetworkName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_CreateOrUpdate",
+      "bodySchema": "ManagedPrivateEndpointResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "managedVirtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed virtual network name"
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed private endpoint name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/managedVirtualNetworks/{managedVirtualNetworkName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "managedVirtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed virtual network name"
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed private endpoint name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/managedVirtualNetworks/{managedVirtualNetworkName}/managedPrivateEndpoints/{managedPrivateEndpointName}",
+      "operationId": "ManagedPrivateEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "factoryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The factory name."
+        },
+        {
+          "name": "managedVirtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed virtual network name"
+        },
+        {
+          "name": "managedPrivateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed private endpoint name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

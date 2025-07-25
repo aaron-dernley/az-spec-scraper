@@ -1,0 +1,234 @@
+{
+  "resource": "Azure::Compute::Disks",
+  "version": "2021-09-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "operationId": "Disks_CreateOrUpdate",
+      "bodySchema": "Disk",
+      "requiredProperties": [
+        "properties.creationData"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "managedBy",
+        "managedByExtended",
+        "properties",
+        "properties.burstingEnabled",
+        "properties.burstingEnabledTime",
+        "properties.completionPercent",
+        "properties.dataAccessAuthMode",
+        "properties.diskAccessId",
+        "properties.diskIOPSReadOnly",
+        "properties.diskIOPSReadWrite",
+        "properties.diskMBpsReadOnly",
+        "properties.diskMBpsReadWrite",
+        "properties.diskSizeBytes",
+        "properties.diskSizeGB",
+        "properties.diskState",
+        "properties.encryption",
+        "properties.encryptionSettingsCollection",
+        "properties.hyperVGeneration",
+        "properties.maxShares",
+        "properties.networkAccessPolicy",
+        "properties.optimizedForFrequentAttach",
+        "properties.osType",
+        "properties.propertyUpdatesInProgress",
+        "properties.propertyUpdatesInProgress.targetTier",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.purchasePlan",
+        "properties.securityProfile",
+        "properties.shareInfo",
+        "properties.supportedCapabilities",
+        "properties.supportsHibernation",
+        "properties.tier",
+        "properties.timeCreated",
+        "properties.uniqueId",
+        "sku",
+        "sku.name",
+        "sku.tier",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "diskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "operationId": "Disks_Update",
+      "bodySchema": "DiskUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.burstingEnabled",
+        "properties.dataAccessAuthMode",
+        "properties.diskAccessId",
+        "properties.diskIOPSReadOnly",
+        "properties.diskIOPSReadWrite",
+        "properties.diskMBpsReadOnly",
+        "properties.diskMBpsReadWrite",
+        "properties.diskSizeGB",
+        "properties.encryption",
+        "properties.encryptionSettingsCollection",
+        "properties.maxShares",
+        "properties.networkAccessPolicy",
+        "properties.optimizedForFrequentAttach",
+        "properties.osType",
+        "properties.propertyUpdatesInProgress",
+        "properties.propertyUpdatesInProgress.targetTier",
+        "properties.publicNetworkAccess",
+        "properties.purchasePlan",
+        "properties.supportedCapabilities",
+        "properties.supportsHibernation",
+        "properties.tier",
+        "sku",
+        "sku.name",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "diskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "operationId": "Disks_Get",
+      "pathParameters": [
+        {
+          "name": "diskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}",
+      "operationId": "Disks_Delete",
+      "pathParameters": [
+        {
+          "name": "diskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks",
+      "operationId": "Disks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/disks",
+      "operationId": "Disks_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

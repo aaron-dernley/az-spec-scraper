@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::Sql::FailoverGroups",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups",
+      "operationId": "FailoverGroups_ListByServer",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server containing the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}",
+      "operationId": "FailoverGroups_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server containing the failover group."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}",
+      "operationId": "FailoverGroups_CreateOrUpdate",
+      "bodySchema": "FailoverGroup",
+      "requiredProperties": [
+        "properties.partnerServers",
+        "properties.readWriteEndpoint",
+        "properties.readWriteEndpoint.failoverPolicy"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.databases",
+        "properties.readOnlyEndpoint",
+        "properties.readOnlyEndpoint.failoverPolicy",
+        "properties.readOnlyEndpoint.targetServer",
+        "properties.readWriteEndpoint.failoverWithDataLossGracePeriodMinutes",
+        "properties.replicationRole",
+        "properties.replicationState",
+        "properties.secondaryType",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server containing the failover group."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}",
+      "operationId": "FailoverGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server containing the failover group."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}",
+      "operationId": "FailoverGroups_Update",
+      "bodySchema": "FailoverGroupUpdate",
+      "requiredProperties": [
+        "properties.readWriteEndpoint.failoverPolicy"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.databases",
+        "properties.partnerServers",
+        "properties.readOnlyEndpoint",
+        "properties.readOnlyEndpoint.failoverPolicy",
+        "properties.readOnlyEndpoint.targetServer",
+        "properties.readWriteEndpoint",
+        "properties.readWriteEndpoint.failoverWithDataLossGracePeriodMinutes",
+        "properties.secondaryType",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server containing the failover group."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

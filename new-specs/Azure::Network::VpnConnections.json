@@ -1,0 +1,174 @@
+{
+  "resource": "Azure::Network::VpnConnections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnGateways/{gatewayName}/vpnConnections/{connectionName}",
+      "operationId": "VpnConnections_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vpn connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnGateways/{gatewayName}/vpnConnections/{connectionName}",
+      "operationId": "VpnConnections_CreateOrUpdate",
+      "bodySchema": "VpnConnection",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.connectionBandwidth",
+        "properties.connectionStatus",
+        "properties.dpdTimeoutSeconds",
+        "properties.egressBytesTransferred",
+        "properties.enableBgp",
+        "properties.enableInternetSecurity",
+        "properties.enableRateLimiting",
+        "properties.ingressBytesTransferred",
+        "properties.ipsecPolicies",
+        "properties.provisioningState",
+        "properties.remoteVpnSite",
+        "properties.routingConfiguration",
+        "properties.routingConfiguration.associatedRouteTable",
+        "properties.routingConfiguration.propagatedRouteTables",
+        "properties.routingConfiguration.propagatedRouteTables.ids",
+        "properties.routingConfiguration.propagatedRouteTables.labels",
+        "properties.routingConfiguration.vnetRoutes",
+        "properties.routingConfiguration.vnetRoutes.staticRoutes",
+        "properties.routingWeight",
+        "properties.sharedKey",
+        "properties.useLocalAzureIpAddress",
+        "properties.usePolicyBasedTrafficSelectors",
+        "properties.vpnConnectionProtocolType",
+        "properties.vpnLinkConnections"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnGateways/{gatewayName}/vpnConnections/{connectionName}",
+      "operationId": "VpnConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnGateways/{gatewayName}/vpnConnections",
+      "operationId": "VpnConnections_ListByVpnGateway",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

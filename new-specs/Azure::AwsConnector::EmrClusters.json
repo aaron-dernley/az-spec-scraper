@@ -1,0 +1,242 @@
+{
+  "resource": "Azure::AwsConnector::EmrClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/emrClusters",
+      "operationId": "EmrClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/emrClusters",
+      "operationId": "EmrClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/emrClusters/{name}",
+      "operationId": "EmrClusters_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EmrCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/emrClusters/{name}",
+      "operationId": "EmrClusters_CreateOrReplace",
+      "bodySchema": "EmrCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.applications",
+        "properties.awsProperties.autoScalingRole",
+        "properties.awsProperties.autoTerminate",
+        "properties.awsProperties.clusterArn",
+        "properties.awsProperties.configurations",
+        "properties.awsProperties.customAmiId",
+        "properties.awsProperties.ebsRootVolumeIops",
+        "properties.awsProperties.ebsRootVolumeSize",
+        "properties.awsProperties.ebsRootVolumeThroughput",
+        "properties.awsProperties.ec2InstanceAttributes",
+        "properties.awsProperties.ec2InstanceAttributes.additionalMasterSecurityGroups",
+        "properties.awsProperties.ec2InstanceAttributes.additionalSlaveSecurityGroups",
+        "properties.awsProperties.ec2InstanceAttributes.ec2AvailabilityZone",
+        "properties.awsProperties.ec2InstanceAttributes.ec2KeyName",
+        "properties.awsProperties.ec2InstanceAttributes.ec2SubnetId",
+        "properties.awsProperties.ec2InstanceAttributes.emrManagedMasterSecurityGroup",
+        "properties.awsProperties.ec2InstanceAttributes.emrManagedSlaveSecurityGroup",
+        "properties.awsProperties.ec2InstanceAttributes.iamInstanceProfile",
+        "properties.awsProperties.ec2InstanceAttributes.requestedEc2AvailabilityZones",
+        "properties.awsProperties.ec2InstanceAttributes.requestedEc2SubnetIds",
+        "properties.awsProperties.ec2InstanceAttributes.serviceAccessSecurityGroup",
+        "properties.awsProperties.id",
+        "properties.awsProperties.instanceCollectionType",
+        "properties.awsProperties.instanceCollectionType.value",
+        "properties.awsProperties.kerberosAttributes",
+        "properties.awsProperties.kerberosAttributes.adDomainJoinPassword",
+        "properties.awsProperties.kerberosAttributes.adDomainJoinUser",
+        "properties.awsProperties.kerberosAttributes.crossRealmTrustPrincipalPassword",
+        "properties.awsProperties.kerberosAttributes.kdcAdminPassword",
+        "properties.awsProperties.kerberosAttributes.realm",
+        "properties.awsProperties.logEncryptionKmsKeyId",
+        "properties.awsProperties.logUri",
+        "properties.awsProperties.masterPublicDnsName",
+        "properties.awsProperties.name",
+        "properties.awsProperties.normalizedInstanceHours",
+        "properties.awsProperties.osReleaseLabel",
+        "properties.awsProperties.outpostArn",
+        "properties.awsProperties.placementGroups",
+        "properties.awsProperties.releaseLabel",
+        "properties.awsProperties.repoUpgradeOnBoot",
+        "properties.awsProperties.repoUpgradeOnBoot.value",
+        "properties.awsProperties.requestedAmiVersion",
+        "properties.awsProperties.runningAmiVersion",
+        "properties.awsProperties.scaleDownBehavior",
+        "properties.awsProperties.scaleDownBehavior.value",
+        "properties.awsProperties.securityConfiguration",
+        "properties.awsProperties.serviceRole",
+        "properties.awsProperties.status",
+        "properties.awsProperties.status.errorDetails",
+        "properties.awsProperties.status.state",
+        "properties.awsProperties.status.state.value",
+        "properties.awsProperties.status.stateChangeReason",
+        "properties.awsProperties.status.stateChangeReason.code",
+        "properties.awsProperties.status.stateChangeReason.code.value",
+        "properties.awsProperties.status.stateChangeReason.message",
+        "properties.awsProperties.status.timeline",
+        "properties.awsProperties.status.timeline.creationDateTime",
+        "properties.awsProperties.status.timeline.endDateTime",
+        "properties.awsProperties.status.timeline.readyDateTime",
+        "properties.awsProperties.stepConcurrencyLevel",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.terminationProtected",
+        "properties.awsProperties.unhealthyNodeReplacement",
+        "properties.awsProperties.visibleToAllUsers",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EmrCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/emrClusters/{name}",
+      "operationId": "EmrClusters_Update",
+      "bodySchema": "EmrClusterTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EmrCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/emrClusters/{name}",
+      "operationId": "EmrClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EmrCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

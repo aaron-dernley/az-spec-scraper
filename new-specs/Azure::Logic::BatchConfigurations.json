@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::Logic::BatchConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/batchConfigurations",
+      "operationId": "IntegrationAccountBatchConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/batchConfigurations/{batchConfigurationName}",
+      "operationId": "IntegrationAccountBatchConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "batchConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The batch configuration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/batchConfigurations/{batchConfigurationName}",
+      "operationId": "IntegrationAccountBatchConfigurations_CreateOrUpdate",
+      "bodySchema": "BatchConfiguration",
+      "requiredProperties": [
+        "properties",
+        "properties.batchGroupName",
+        "properties.releaseCriteria"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.changedTime",
+        "properties.createdTime",
+        "properties.metadata",
+        "properties.releaseCriteria.batchSize",
+        "properties.releaseCriteria.messageCount",
+        "properties.releaseCriteria.recurrence",
+        "properties.releaseCriteria.recurrence.endTime",
+        "properties.releaseCriteria.recurrence.frequency",
+        "properties.releaseCriteria.recurrence.interval",
+        "properties.releaseCriteria.recurrence.schedule",
+        "properties.releaseCriteria.recurrence.schedule.hours",
+        "properties.releaseCriteria.recurrence.schedule.minutes",
+        "properties.releaseCriteria.recurrence.schedule.monthDays",
+        "properties.releaseCriteria.recurrence.schedule.monthlyOccurrences",
+        "properties.releaseCriteria.recurrence.schedule.weekDays",
+        "properties.releaseCriteria.recurrence.startTime",
+        "properties.releaseCriteria.recurrence.timeZone",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "batchConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The batch configuration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/batchConfigurations/{batchConfigurationName}",
+      "operationId": "IntegrationAccountBatchConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "batchConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The batch configuration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

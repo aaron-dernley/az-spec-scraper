@@ -1,0 +1,285 @@
+{
+  "resource": "Azure::DataReplication::ProtectedItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/protectedItems",
+      "operationId": "ProtectedItem_List",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "odataOptions",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData options."
+        },
+        {
+          "name": "continuationToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Continuation token."
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Page size."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItem_Get",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The protected item name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItem_Create",
+      "bodySchema": "ProtectedItemModel",
+      "requiredProperties": [
+        "properties.customProperties",
+        "properties.customProperties.instanceType",
+        "properties.policyName",
+        "properties.replicationExtensionName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.allowedJobs",
+        "properties.correlationId",
+        "properties.currentJob",
+        "properties.currentJob.displayName",
+        "properties.currentJob.endTime",
+        "properties.currentJob.id",
+        "properties.currentJob.name",
+        "properties.currentJob.scenarioName",
+        "properties.currentJob.startTime",
+        "properties.currentJob.state",
+        "properties.fabricAgentId",
+        "properties.fabricId",
+        "properties.fabricObjectId",
+        "properties.fabricObjectName",
+        "properties.healthErrors",
+        "properties.lastFailedEnableProtectionJob",
+        "properties.lastFailedEnableProtectionJob.displayName",
+        "properties.lastFailedEnableProtectionJob.endTime",
+        "properties.lastFailedEnableProtectionJob.id",
+        "properties.lastFailedEnableProtectionJob.name",
+        "properties.lastFailedEnableProtectionJob.scenarioName",
+        "properties.lastFailedEnableProtectionJob.startTime",
+        "properties.lastFailedEnableProtectionJob.state",
+        "properties.lastFailedPlannedFailoverJob",
+        "properties.lastFailedPlannedFailoverJob.displayName",
+        "properties.lastFailedPlannedFailoverJob.endTime",
+        "properties.lastFailedPlannedFailoverJob.id",
+        "properties.lastFailedPlannedFailoverJob.name",
+        "properties.lastFailedPlannedFailoverJob.scenarioName",
+        "properties.lastFailedPlannedFailoverJob.startTime",
+        "properties.lastFailedPlannedFailoverJob.state",
+        "properties.lastSuccessfulPlannedFailoverTime",
+        "properties.lastSuccessfulTestFailoverTime",
+        "properties.lastSuccessfulUnplannedFailoverTime",
+        "properties.lastTestFailoverJob",
+        "properties.lastTestFailoverJob.displayName",
+        "properties.lastTestFailoverJob.endTime",
+        "properties.lastTestFailoverJob.id",
+        "properties.lastTestFailoverJob.name",
+        "properties.lastTestFailoverJob.scenarioName",
+        "properties.lastTestFailoverJob.startTime",
+        "properties.lastTestFailoverJob.state",
+        "properties.protectionState",
+        "properties.protectionStateDescription",
+        "properties.provisioningState",
+        "properties.replicationHealth",
+        "properties.resyncRequired",
+        "properties.resynchronizationState",
+        "properties.sourceFabricProviderId",
+        "properties.targetFabricAgentId",
+        "properties.targetFabricId",
+        "properties.targetFabricProviderId",
+        "properties.testFailoverState",
+        "properties.testFailoverStateDescription"
+      ],
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The protected item name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItem_Update",
+      "bodySchema": "ProtectedItemModelUpdate",
+      "requiredProperties": [
+        "properties.customProperties.instanceType"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.customProperties",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The protected item name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationVaults/{vaultName}/protectedItems/{protectedItemName}",
+      "operationId": "ProtectedItem_Delete",
+      "pathParameters": [
+        {
+          "name": "vaultName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vault name."
+        },
+        {
+          "name": "protectedItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The protected item name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceDelete",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "A flag indicating whether to do force delete or not."
+        }
+      ]
+    }
+  ]
+}

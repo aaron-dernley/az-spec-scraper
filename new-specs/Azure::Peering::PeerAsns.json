@@ -1,0 +1,132 @@
+{
+  "resource": "Azure::Peering::PeerAsns",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Peering/peerAsns/{peerAsnName}",
+      "operationId": "PeerAsns_Get",
+      "pathParameters": [
+        {
+          "name": "peerAsnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The peer ASN name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Peering/peerAsns/{peerAsnName}",
+      "operationId": "PeerAsns_CreateOrUpdate",
+      "bodySchema": "PeerAsn",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.errorMessage",
+        "properties.peerAsn",
+        "properties.peerContactDetail",
+        "properties.peerName",
+        "properties.validationState",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "peerAsnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The peer ASN name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Peering/peerAsns/{peerAsnName}",
+      "operationId": "PeerAsns_Delete",
+      "pathParameters": [
+        {
+          "name": "peerAsnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The peer ASN name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Peering/peerAsns",
+      "operationId": "PeerAsns_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

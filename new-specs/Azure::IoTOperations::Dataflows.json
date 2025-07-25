@@ -1,0 +1,183 @@
+{
+  "resource": "Azure::IoTOperations::Dataflows",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowProfiles/{dataflowProfileName}/dataflows",
+      "operationId": "Dataflow_ListByProfileResource",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowProfiles/{dataflowProfileName}/dataflows/{dataflowName}",
+      "operationId": "Dataflow_Get",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile resource"
+        },
+        {
+          "name": "dataflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile dataflow resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowProfiles/{dataflowProfileName}/dataflows/{dataflowName}",
+      "operationId": "Dataflow_CreateOrUpdate",
+      "bodySchema": "DataflowResource",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.operations"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.mode",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile resource"
+        },
+        {
+          "name": "dataflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile dataflow resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowProfiles/{dataflowProfileName}/dataflows/{dataflowName}",
+      "operationId": "Dataflow_Delete",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile resource"
+        },
+        {
+          "name": "dataflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowProfile dataflow resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

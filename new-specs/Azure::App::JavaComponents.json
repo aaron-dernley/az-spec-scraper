@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::App::JavaComponents",
+  "version": "2025-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/javaComponents",
+      "operationId": "JavaComponents_List",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/javaComponents/{name}",
+      "operationId": "JavaComponents_Get",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Java Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/javaComponents/{name}",
+      "operationId": "JavaComponents_CreateOrUpdate",
+      "bodySchema": "JavaComponent",
+      "requiredProperties": [
+        "properties.componentType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.configurations",
+        "properties.provisioningState",
+        "properties.scale",
+        "properties.scale.maxReplicas",
+        "properties.scale.minReplicas",
+        "properties.serviceBinds"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Java Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/javaComponents/{name}",
+      "operationId": "JavaComponents_Update",
+      "bodySchema": "JavaComponent",
+      "requiredProperties": [
+        "properties.componentType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.configurations",
+        "properties.provisioningState",
+        "properties.scale",
+        "properties.scale.maxReplicas",
+        "properties.scale.minReplicas",
+        "properties.serviceBinds"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Java Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/javaComponents/{name}",
+      "operationId": "JavaComponents_Delete",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Java Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

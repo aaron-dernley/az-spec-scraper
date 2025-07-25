@@ -1,0 +1,159 @@
+{
+  "resource": "Azure::Compute::PrivateEndpointConnections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "DiskAccesses_UpdateAPrivateEndpointConnection",
+      "bodySchema": "PrivateEndpointConnection",
+      "requiredProperties": [
+        "properties.privateLinkServiceConnectionState"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.privateEndpoint",
+        "properties.privateEndpoint.id",
+        "properties.privateLinkServiceConnectionState.actionsRequired",
+        "properties.privateLinkServiceConnectionState.description",
+        "properties.privateLinkServiceConnectionState.status",
+        "properties.provisioningState",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "diskAccessName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "DiskAccesses_GetAPrivateEndpointConnection",
+      "pathParameters": [
+        {
+          "name": "diskAccessName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections/{privateEndpointConnectionName}",
+      "operationId": "DiskAccesses_DeleteAPrivateEndpointConnection",
+      "pathParameters": [
+        {
+          "name": "diskAccessName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "privateEndpointConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}/privateEndpointConnections",
+      "operationId": "DiskAccesses_ListPrivateEndpointConnections",
+      "pathParameters": [
+        {
+          "name": "diskAccessName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The maximum name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

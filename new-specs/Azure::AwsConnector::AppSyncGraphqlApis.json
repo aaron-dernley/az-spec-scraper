@@ -1,0 +1,227 @@
+{
+  "resource": "Azure::AwsConnector::AppSyncGraphqlApis",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/appSyncGraphqlApis",
+      "operationId": "AppSyncGraphqlApis_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/appSyncGraphqlApis",
+      "operationId": "AppSyncGraphqlApis_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/appSyncGraphqlApis/{name}",
+      "operationId": "AppSyncGraphqlApis_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AppSyncGraphqlApi"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/appSyncGraphqlApis/{name}",
+      "operationId": "AppSyncGraphqlApis_CreateOrReplace",
+      "bodySchema": "AppSyncGraphqlApi",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.additionalAuthenticationProviders",
+        "properties.awsProperties.apiId",
+        "properties.awsProperties.apiType",
+        "properties.awsProperties.apiType.value",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.authenticationType",
+        "properties.awsProperties.authenticationType.value",
+        "properties.awsProperties.dns",
+        "properties.awsProperties.enhancedMetricsConfig",
+        "properties.awsProperties.enhancedMetricsConfig.dataSourceLevelMetricsBehavior",
+        "properties.awsProperties.enhancedMetricsConfig.dataSourceLevelMetricsBehavior.value",
+        "properties.awsProperties.enhancedMetricsConfig.operationLevelMetricsConfig",
+        "properties.awsProperties.enhancedMetricsConfig.operationLevelMetricsConfig.value",
+        "properties.awsProperties.enhancedMetricsConfig.resolverLevelMetricsBehavior",
+        "properties.awsProperties.enhancedMetricsConfig.resolverLevelMetricsBehavior.value",
+        "properties.awsProperties.introspectionConfig",
+        "properties.awsProperties.introspectionConfig.value",
+        "properties.awsProperties.lambdaAuthorizerConfig",
+        "properties.awsProperties.lambdaAuthorizerConfig.authorizerResultTtlInSeconds",
+        "properties.awsProperties.lambdaAuthorizerConfig.authorizerUri",
+        "properties.awsProperties.lambdaAuthorizerConfig.identityValidationExpression",
+        "properties.awsProperties.logConfig",
+        "properties.awsProperties.logConfig.cloudWatchLogsRoleArn",
+        "properties.awsProperties.logConfig.excludeVerboseContent",
+        "properties.awsProperties.logConfig.fieldLogLevel",
+        "properties.awsProperties.logConfig.fieldLogLevel.value",
+        "properties.awsProperties.mergedApiExecutionRoleArn",
+        "properties.awsProperties.name",
+        "properties.awsProperties.openIDConnectConfig",
+        "properties.awsProperties.openIDConnectConfig.authTTL",
+        "properties.awsProperties.openIDConnectConfig.clientId",
+        "properties.awsProperties.openIDConnectConfig.iatTTL",
+        "properties.awsProperties.openIDConnectConfig.issuer",
+        "properties.awsProperties.owner",
+        "properties.awsProperties.ownerContact",
+        "properties.awsProperties.queryDepthLimit",
+        "properties.awsProperties.resolverCountLimit",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.uris",
+        "properties.awsProperties.userPoolConfig",
+        "properties.awsProperties.userPoolConfig.appIdClientRegex",
+        "properties.awsProperties.userPoolConfig.awsRegion",
+        "properties.awsProperties.userPoolConfig.defaultAction",
+        "properties.awsProperties.userPoolConfig.defaultAction.value",
+        "properties.awsProperties.userPoolConfig.userPoolId",
+        "properties.awsProperties.visibility",
+        "properties.awsProperties.visibility.value",
+        "properties.awsProperties.wafWebAclArn",
+        "properties.awsProperties.xrayEnabled",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AppSyncGraphqlApi"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/appSyncGraphqlApis/{name}",
+      "operationId": "AppSyncGraphqlApis_Update",
+      "bodySchema": "AppSyncGraphqlApiTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AppSyncGraphqlApi"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/appSyncGraphqlApis/{name}",
+      "operationId": "AppSyncGraphqlApis_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of AppSyncGraphqlApi"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

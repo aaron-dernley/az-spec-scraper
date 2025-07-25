@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::AwsConnector::LightsailInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/lightsailInstances",
+      "operationId": "LightsailInstances_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lightsailInstances",
+      "operationId": "LightsailInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lightsailInstances/{name}",
+      "operationId": "LightsailInstances_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LightsailInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lightsailInstances/{name}",
+      "operationId": "LightsailInstances_CreateOrReplace",
+      "bodySchema": "LightsailInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.addOns",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.blueprintId",
+        "properties.awsProperties.bundleId",
+        "properties.awsProperties.hardware",
+        "properties.awsProperties.hardware.cpuCount",
+        "properties.awsProperties.hardware.disks",
+        "properties.awsProperties.hardware.ramSizeInGb",
+        "properties.awsProperties.instanceArn",
+        "properties.awsProperties.instanceName",
+        "properties.awsProperties.isStaticIp",
+        "properties.awsProperties.keyPairName",
+        "properties.awsProperties.location",
+        "properties.awsProperties.location.availabilityZone",
+        "properties.awsProperties.location.regionName",
+        "properties.awsProperties.networking",
+        "properties.awsProperties.networking.monthlyTransfer",
+        "properties.awsProperties.networking.monthlyTransfer.gbPerMonthAllocated",
+        "properties.awsProperties.networking.ports",
+        "properties.awsProperties.privateIpAddress",
+        "properties.awsProperties.publicIpAddress",
+        "properties.awsProperties.resourceType",
+        "properties.awsProperties.sshKeyName",
+        "properties.awsProperties.state",
+        "properties.awsProperties.state.code",
+        "properties.awsProperties.state.name",
+        "properties.awsProperties.supportCode",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.userData",
+        "properties.awsProperties.userName",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LightsailInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lightsailInstances/{name}",
+      "operationId": "LightsailInstances_Update",
+      "bodySchema": "LightsailInstanceTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LightsailInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lightsailInstances/{name}",
+      "operationId": "LightsailInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LightsailInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

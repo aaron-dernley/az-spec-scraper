@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::Insights::MetricAlerts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metricAlerts",
+      "operationId": "MetricAlerts_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts",
+      "operationId": "MetricAlerts_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}",
+      "operationId": "MetricAlerts_Get",
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}",
+      "operationId": "MetricAlerts_CreateOrUpdate",
+      "bodySchema": "MetricAlertResource",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.criteria",
+        "properties.criteria.odata.type",
+        "properties.enabled",
+        "properties.evaluationFrequency",
+        "properties.scopes",
+        "properties.severity",
+        "properties.windowSize"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.actions",
+        "properties.autoMitigate",
+        "properties.description",
+        "properties.isMigrated",
+        "properties.lastUpdatedTime",
+        "properties.targetResourceRegion",
+        "properties.targetResourceType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}",
+      "operationId": "MetricAlerts_Update",
+      "bodySchema": "MetricAlertResourcePatch",
+      "requiredProperties": [
+        "properties.criteria.odata.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.actions",
+        "properties.autoMitigate",
+        "properties.criteria",
+        "properties.description",
+        "properties.enabled",
+        "properties.evaluationFrequency",
+        "properties.isMigrated",
+        "properties.lastUpdatedTime",
+        "properties.scopes",
+        "properties.severity",
+        "properties.targetResourceRegion",
+        "properties.targetResourceType",
+        "properties.windowSize",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}",
+      "operationId": "MetricAlerts_Delete",
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

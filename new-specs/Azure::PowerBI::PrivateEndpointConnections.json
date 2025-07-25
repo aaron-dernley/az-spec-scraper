@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::PowerBI::PrivateEndpointConnections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBI/privateLinkServicesForPowerBI/{azureResourceName}/privateEndpointConnections",
+      "operationId": "PrivateEndpointConnections_ListByResource",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription."
+        },
+        {
+          "name": "azureResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the powerbi resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBI/privateLinkServicesForPowerBI/{azureResourceName}/privateEndpointConnections/{privateEndpointName}",
+      "operationId": "PrivateEndpointConnections_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBI/privateLinkServicesForPowerBI/{azureResourceName}/privateEndpointConnections/{privateEndpointName}",
+      "operationId": "PrivateEndpointConnections_Create",
+      "bodySchema": "PrivateEndpointConnection",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.privateEndpoint",
+        "properties.privateEndpoint.id",
+        "properties.privateLinkServiceConnectionState",
+        "properties.privateLinkServiceConnectionState.actionsRequired",
+        "properties.privateLinkServiceConnectionState.description",
+        "properties.privateLinkServiceConnectionState.status",
+        "properties.provisioningState",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBI/privateLinkServicesForPowerBI/{azureResourceName}/privateEndpointConnections/{privateEndpointName}",
+      "operationId": "PrivateEndpointConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    }
+  ]
+}

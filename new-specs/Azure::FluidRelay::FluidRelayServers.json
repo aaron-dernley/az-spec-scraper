@@ -1,0 +1,199 @@
+{
+  "resource": "Azure::FluidRelay::FluidRelayServers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.FluidRelay/fluidRelayServers/{fluidRelayServerName}",
+      "operationId": "FluidRelayServers_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        },
+        {
+          "name": "resourceGroup",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group containing the resource."
+        },
+        {
+          "name": "fluidRelayServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Fluid Relay server resource name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.FluidRelay/fluidRelayServers/{fluidRelayServerName}",
+      "operationId": "FluidRelayServers_CreateOrUpdate",
+      "bodySchema": "FluidRelayServer",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.encryption",
+        "properties.encryption.customerManagedKeyEncryption",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity.identityType",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity.userAssignedIdentityResourceId",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyUrl",
+        "properties.fluidRelayEndpoints",
+        "properties.fluidRelayEndpoints.ordererEndpoints",
+        "properties.fluidRelayEndpoints.storageEndpoints",
+        "properties.frsTenantId",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        },
+        {
+          "name": "resourceGroup",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group containing the resource."
+        },
+        {
+          "name": "fluidRelayServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Fluid Relay server resource name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.FluidRelay/fluidRelayServers/{fluidRelayServerName}",
+      "operationId": "FluidRelayServers_Update",
+      "bodySchema": "FluidRelayServerUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "properties",
+        "properties.encryption",
+        "properties.encryption.customerManagedKeyEncryption",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity.identityType",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyIdentity.userAssignedIdentityResourceId",
+        "properties.encryption.customerManagedKeyEncryption.keyEncryptionKeyUrl",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        },
+        {
+          "name": "resourceGroup",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group containing the resource."
+        },
+        {
+          "name": "fluidRelayServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Fluid Relay server resource name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.FluidRelay/fluidRelayServers/{fluidRelayServerName}",
+      "operationId": "FluidRelayServers_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        },
+        {
+          "name": "resourceGroup",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group containing the resource."
+        },
+        {
+          "name": "fluidRelayServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Fluid Relay server resource name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.FluidRelay/fluidRelayServers",
+      "operationId": "FluidRelayServers_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.FluidRelay/fluidRelayServers",
+      "operationId": "FluidRelayServers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id (GUID) for this resource."
+        },
+        {
+          "name": "resourceGroup",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group containing the resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

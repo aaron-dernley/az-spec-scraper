@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::Synapse::SqlPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}",
+      "operationId": "SqlPools_Get",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}",
+      "operationId": "SqlPools_Update",
+      "bodySchema": "SqlPoolPatchInfo",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.collation",
+        "properties.createMode",
+        "properties.creationDate",
+        "properties.maxSizeBytes",
+        "properties.provisioningState",
+        "properties.recoverableDatabaseId",
+        "properties.restorePointInTime",
+        "properties.sourceDatabaseId",
+        "properties.status",
+        "properties.storageAccountType",
+        "sku",
+        "sku.capacity",
+        "sku.name",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}",
+      "operationId": "SqlPools_Create",
+      "bodySchema": "SqlPool",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.collation",
+        "properties.createMode",
+        "properties.creationDate",
+        "properties.maxSizeBytes",
+        "properties.provisioningState",
+        "properties.recoverableDatabaseId",
+        "properties.restorePointInTime",
+        "properties.sourceDatabaseId",
+        "properties.status",
+        "properties.storageAccountType",
+        "sku",
+        "sku.capacity",
+        "sku.name",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}",
+      "operationId": "SqlPools_Delete",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools",
+      "operationId": "SqlPools_ListByWorkspace",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

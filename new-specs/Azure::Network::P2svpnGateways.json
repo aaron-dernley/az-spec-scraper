@@ -1,0 +1,178 @@
+{
+  "resource": "Azure::Network::P2svpnGateways",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways/{gatewayName}",
+      "operationId": "P2sVpnGateways_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the P2SVpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways/{gatewayName}",
+      "operationId": "P2sVpnGateways_CreateOrUpdate",
+      "bodySchema": "P2SVpnGateway",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.customDnsServers",
+        "properties.isRoutingPreferenceInternet",
+        "properties.p2SConnectionConfigurations",
+        "properties.provisioningState",
+        "properties.virtualHub",
+        "properties.vpnClientConnectionHealth",
+        "properties.vpnClientConnectionHealth.allocatedIpAddresses",
+        "properties.vpnClientConnectionHealth.totalEgressBytesTransferred",
+        "properties.vpnClientConnectionHealth.totalIngressBytesTransferred",
+        "properties.vpnClientConnectionHealth.vpnClientConnectionsCount",
+        "properties.vpnGatewayScaleUnit",
+        "properties.vpnServerConfiguration"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the P2SVpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways/{gatewayName}",
+      "operationId": "P2sVpnGateways_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the P2SVpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways/{gatewayName}",
+      "operationId": "P2sVpnGateways_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the P2SVpnGateway."
+        },
+        {
+          "name": "gatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/p2svpnGateways",
+      "operationId": "P2sVpnGateways_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the P2SVpnGateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/p2svpnGateways",
+      "operationId": "P2sVpnGateways_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

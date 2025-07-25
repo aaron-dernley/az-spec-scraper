@@ -1,0 +1,199 @@
+{
+  "resource": "Azure::SqlVirtualMachine::AvailabilityGroupListeners",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/{sqlVirtualMachineGroupName}/availabilityGroupListeners/{availabilityGroupListenerName}",
+      "operationId": "AvailabilityGroupListeners_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "sqlVirtualMachineGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the SQL virtual machine group."
+        },
+        {
+          "name": "availabilityGroupListenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the availability group listener."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription ID that identifies an Azure subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The child resources to include in the response."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/{sqlVirtualMachineGroupName}/availabilityGroupListeners/{availabilityGroupListenerName}",
+      "operationId": "AvailabilityGroupListeners_CreateOrUpdate",
+      "bodySchema": "AvailabilityGroupListener",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.availabilityGroupConfiguration",
+        "properties.availabilityGroupConfiguration.replicas",
+        "properties.availabilityGroupName",
+        "properties.createDefaultAvailabilityGroupIfNotExist",
+        "properties.loadBalancerConfigurations",
+        "properties.multiSubnetIpConfigurations",
+        "properties.port",
+        "properties.provisioningState",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "sqlVirtualMachineGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the SQL virtual machine group."
+        },
+        {
+          "name": "availabilityGroupListenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the availability group listener."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription ID that identifies an Azure subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/{sqlVirtualMachineGroupName}/availabilityGroupListeners/{availabilityGroupListenerName}",
+      "operationId": "AvailabilityGroupListeners_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "sqlVirtualMachineGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the SQL virtual machine group."
+        },
+        {
+          "name": "availabilityGroupListenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the availability group listener."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription ID that identifies an Azure subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/{sqlVirtualMachineGroupName}/availabilityGroupListeners",
+      "operationId": "AvailabilityGroupListeners_ListByGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "sqlVirtualMachineGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the SQL virtual machine group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription ID that identifies an Azure subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API version to use for the request."
+        }
+      ]
+    }
+  ]
+}

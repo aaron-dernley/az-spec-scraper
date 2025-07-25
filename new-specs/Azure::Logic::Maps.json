@@ -1,0 +1,216 @@
+{
+  "resource": "Azure::Logic::Maps",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/maps",
+      "operationId": "Maps_ListByIntegrationAccounts",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of items to be included in the result."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Options for filters include: MapType."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/maps/{mapName}",
+      "operationId": "Maps_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "mapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account map name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/maps/{mapName}",
+      "operationId": "Maps_CreateOrUpdate",
+      "bodySchema": "IntegrationAccountMap",
+      "requiredProperties": [
+        "properties",
+        "properties.mapType"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.changedTime",
+        "properties.content",
+        "properties.contentLink",
+        "properties.contentLink.contentHash",
+        "properties.contentLink.contentHash.algorithm",
+        "properties.contentLink.contentHash.value",
+        "properties.contentLink.contentSize",
+        "properties.contentLink.contentVersion",
+        "properties.contentLink.metadata",
+        "properties.contentLink.uri",
+        "properties.contentType",
+        "properties.createdTime",
+        "properties.metadata",
+        "properties.parametersSchema",
+        "properties.parametersSchema.ref",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "mapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account map name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/maps/{mapName}",
+      "operationId": "Maps_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "mapName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account map name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

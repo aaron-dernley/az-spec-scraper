@@ -1,0 +1,179 @@
+{
+  "resource": "Azure::OperationalInsights::Actions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}/actions",
+      "operationId": "Actions_ListByAlertRule",
+      "pathParameters": [
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Alert rule ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}/actions/{actionId}",
+      "operationId": "Actions_Get",
+      "pathParameters": [
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Alert rule ID"
+        },
+        {
+          "name": "actionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Action ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}/actions/{actionId}",
+      "operationId": "Actions_CreateOrUpdate",
+      "bodySchema": "ActionRequest",
+      "requiredProperties": [
+        "properties.logicAppResourceId",
+        "properties.triggerUri"
+      ],
+      "optionalProperties": [
+        "properties"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Alert rule ID"
+        },
+        {
+          "name": "actionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Action ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules/{ruleId}/actions/{actionId}",
+      "operationId": "Actions_Delete",
+      "pathParameters": [
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Alert rule ID"
+        },
+        {
+          "name": "actionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Action ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

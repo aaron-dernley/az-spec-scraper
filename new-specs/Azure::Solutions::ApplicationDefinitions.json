@@ -1,0 +1,185 @@
+{
+  "resource": "Azure::Solutions::ApplicationDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applicationDefinitions/{applicationDefinitionName}",
+      "operationId": "ApplicationDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application definition."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applicationDefinitions/{applicationDefinitionName}",
+      "operationId": "ApplicationDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application definition to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applicationDefinitions/{applicationDefinitionName}",
+      "operationId": "ApplicationDefinitions_CreateOrUpdate",
+      "bodySchema": "ApplicationDefinition",
+      "requiredProperties": [
+        "properties",
+        "properties.deploymentPolicy.deploymentMode",
+        "properties.lockLevel",
+        "properties.notificationPolicy.notificationEndpoints",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "managedBy",
+        "name",
+        "properties.artifacts",
+        "properties.authorizations",
+        "properties.createUiDefinition",
+        "properties.deploymentPolicy",
+        "properties.description",
+        "properties.displayName",
+        "properties.isEnabled",
+        "properties.lockingPolicy",
+        "properties.lockingPolicy.allowedActions",
+        "properties.lockingPolicy.allowedDataActions",
+        "properties.mainTemplate",
+        "properties.managementPolicy",
+        "properties.managementPolicy.mode",
+        "properties.notificationPolicy",
+        "properties.packageFileUri",
+        "properties.policies",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.model",
+        "sku.size",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application definition."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applicationDefinitions",
+      "operationId": "ApplicationDefinitions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

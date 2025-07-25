@@ -1,0 +1,179 @@
+{
+  "resource": "Azure::Sql::PrivateEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/privateEndpoints",
+      "operationId": "JobPrivateEndpoints_ListByAgent",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/privateEndpoints/{privateEndpointName}",
+      "operationId": "JobPrivateEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint to get."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/privateEndpoints/{privateEndpointName}",
+      "operationId": "JobPrivateEndpoints_CreateOrUpdate",
+      "bodySchema": "JobPrivateEndpoint",
+      "requiredProperties": [
+        "properties.targetServerAzureResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.privateEndpointId"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/privateEndpoints/{privateEndpointName}",
+      "operationId": "JobPrivateEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

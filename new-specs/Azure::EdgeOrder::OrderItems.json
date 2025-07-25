@@ -1,0 +1,435 @@
+{
+  "resource": "Azure::EdgeOrder::OrderItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/orderItems",
+      "operationId": "OrderItems_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$filter is supported to filter based on order id and order Item Type. Filter supports only equals operation."
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$expand is supported on parent device details, device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Parent Device Details for order item provides details on the devices of the product, Device Details for order item provides details on the devices of the child configurations of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of order items, which provides the next page in the list of order items."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "$top is supported on fetching list of resources. $top=10 means that the first 10 items in the list will be returned to the API caller."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/orderItems",
+      "operationId": "OrderItems_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$filter is supported to filter based on order id and order Item Type. Filter supports only equals operation."
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$expand is supported on parent device details, device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Parent Device Details for order item provides details on the devices of the product, Device Details for order item provides details on the devices of the child configurations of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of order items, which provides the next page in the list of order items."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "$top is supported on fetching list of resources. $top=10 means that the first 10 items in the list will be returned to the API caller."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/orderItems/{orderItemName}",
+      "operationId": "OrderItems_Get",
+      "pathParameters": [
+        {
+          "name": "orderItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the order item."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$expand is supported on parent device details, device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Parent Device Details for order item provides details on the devices of the product, Device Details for order item provides details on the devices of the child configurations of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/orderItems/{orderItemName}",
+      "operationId": "OrderItems_Create",
+      "bodySchema": "OrderItemResource",
+      "requiredProperties": [
+        "properties",
+        "properties.addressDetails.forwardAddress",
+        "properties.addressDetails.forwardAddress.shippingAddress.country",
+        "properties.addressDetails.returnAddress.shippingAddress.country",
+        "properties.orderId",
+        "properties.orderItemDetails",
+        "properties.orderItemDetails.orderItemType",
+        "properties.orderItemDetails.preferences.termCommitmentPreferences.preferredTermCommitmentType",
+        "properties.orderItemDetails.preferences.transportPreferences.preferredShipmentType",
+        "properties.orderItemDetails.productDetails",
+        "properties.orderItemDetails.productDetails.hierarchyInformation",
+        "properties.orderItemDetails.productDetails.termCommitmentInformation.termCommitmentType",
+        "properties.orderItemDetails.siteDetails.siteId"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties.addressDetails",
+        "properties.addressDetails.forwardAddress.addressClassification",
+        "properties.addressDetails.forwardAddress.addressValidationStatus",
+        "properties.addressDetails.forwardAddress.contactDetails",
+        "properties.addressDetails.forwardAddress.contactDetails.contactName",
+        "properties.addressDetails.forwardAddress.contactDetails.emailList",
+        "properties.addressDetails.forwardAddress.contactDetails.mobile",
+        "properties.addressDetails.forwardAddress.contactDetails.phone",
+        "properties.addressDetails.forwardAddress.contactDetails.phoneExtension",
+        "properties.addressDetails.forwardAddress.provisioningState",
+        "properties.addressDetails.forwardAddress.shippingAddress",
+        "properties.addressDetails.forwardAddress.shippingAddress.addressType",
+        "properties.addressDetails.forwardAddress.shippingAddress.city",
+        "properties.addressDetails.forwardAddress.shippingAddress.companyName",
+        "properties.addressDetails.forwardAddress.shippingAddress.postalCode",
+        "properties.addressDetails.forwardAddress.shippingAddress.stateOrProvince",
+        "properties.addressDetails.forwardAddress.shippingAddress.streetAddress1",
+        "properties.addressDetails.forwardAddress.shippingAddress.streetAddress2",
+        "properties.addressDetails.forwardAddress.shippingAddress.streetAddress3",
+        "properties.addressDetails.forwardAddress.shippingAddress.zipExtendedCode",
+        "properties.addressDetails.returnAddress",
+        "properties.addressDetails.returnAddress.addressClassification",
+        "properties.addressDetails.returnAddress.addressValidationStatus",
+        "properties.addressDetails.returnAddress.contactDetails",
+        "properties.addressDetails.returnAddress.contactDetails.contactName",
+        "properties.addressDetails.returnAddress.contactDetails.emailList",
+        "properties.addressDetails.returnAddress.contactDetails.mobile",
+        "properties.addressDetails.returnAddress.contactDetails.phone",
+        "properties.addressDetails.returnAddress.contactDetails.phoneExtension",
+        "properties.addressDetails.returnAddress.provisioningState",
+        "properties.addressDetails.returnAddress.shippingAddress",
+        "properties.addressDetails.returnAddress.shippingAddress.addressType",
+        "properties.addressDetails.returnAddress.shippingAddress.city",
+        "properties.addressDetails.returnAddress.shippingAddress.companyName",
+        "properties.addressDetails.returnAddress.shippingAddress.postalCode",
+        "properties.addressDetails.returnAddress.shippingAddress.stateOrProvince",
+        "properties.addressDetails.returnAddress.shippingAddress.streetAddress1",
+        "properties.addressDetails.returnAddress.shippingAddress.streetAddress2",
+        "properties.addressDetails.returnAddress.shippingAddress.streetAddress3",
+        "properties.addressDetails.returnAddress.shippingAddress.zipExtendedCode",
+        "properties.orderItemDetails.cancellationReason",
+        "properties.orderItemDetails.cancellationStatus",
+        "properties.orderItemDetails.currentStage",
+        "properties.orderItemDetails.currentStage.displayName",
+        "properties.orderItemDetails.currentStage.stageName",
+        "properties.orderItemDetails.currentStage.stageStatus",
+        "properties.orderItemDetails.currentStage.startTime",
+        "properties.orderItemDetails.deletionStatus",
+        "properties.orderItemDetails.error",
+        "properties.orderItemDetails.forwardShippingDetails",
+        "properties.orderItemDetails.forwardShippingDetails.carrierDisplayName",
+        "properties.orderItemDetails.forwardShippingDetails.carrierName",
+        "properties.orderItemDetails.forwardShippingDetails.trackingId",
+        "properties.orderItemDetails.forwardShippingDetails.trackingUrl",
+        "properties.orderItemDetails.managementRpDetailsList",
+        "properties.orderItemDetails.notificationEmailList",
+        "properties.orderItemDetails.orderItemMode",
+        "properties.orderItemDetails.orderItemStageHistory",
+        "properties.orderItemDetails.preferences",
+        "properties.orderItemDetails.preferences.encryptionPreferences",
+        "properties.orderItemDetails.preferences.encryptionPreferences.doubleEncryptionStatus",
+        "properties.orderItemDetails.preferences.managementResourcePreferences",
+        "properties.orderItemDetails.preferences.managementResourcePreferences.preferredManagementResourceId",
+        "properties.orderItemDetails.preferences.notificationPreferences",
+        "properties.orderItemDetails.preferences.termCommitmentPreferences",
+        "properties.orderItemDetails.preferences.termCommitmentPreferences.preferredTermCommitmentDuration",
+        "properties.orderItemDetails.preferences.transportPreferences",
+        "properties.orderItemDetails.productDetails.childConfigurationDeviceDetails",
+        "properties.orderItemDetails.productDetails.displayInfo",
+        "properties.orderItemDetails.productDetails.displayInfo.configurationDisplayName",
+        "properties.orderItemDetails.productDetails.displayInfo.productFamilyDisplayName",
+        "properties.orderItemDetails.productDetails.hierarchyInformation.configurationIdDisplayName",
+        "properties.orderItemDetails.productDetails.hierarchyInformation.configurationName",
+        "properties.orderItemDetails.productDetails.hierarchyInformation.productFamilyName",
+        "properties.orderItemDetails.productDetails.hierarchyInformation.productLineName",
+        "properties.orderItemDetails.productDetails.hierarchyInformation.productName",
+        "properties.orderItemDetails.productDetails.identificationType",
+        "properties.orderItemDetails.productDetails.optInAdditionalConfigurations",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.displaySerialNumber",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.managementResourceId",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.managementResourceTenantId",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.autoProvisioningStatus",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.devicePresenceVerification",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.devicePresenceVerification.message",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.devicePresenceVerification.status",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.managementResourceArmId",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.provisioningArmId",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.provisioningEndPoint",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.quantity",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.readyToConnectArmId",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.serialNumber",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.uniqueDeviceIdentifier",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningDetails.vendorName",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.provisioningSupport",
+        "properties.orderItemDetails.productDetails.parentDeviceDetails.serialNumber",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.autoProvisioningStatus",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification.message",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification.status",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.managementResourceArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.provisioningArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.provisioningEndPoint",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.quantity",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.readyToConnectArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.serialNumber",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.uniqueDeviceIdentifier",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.vendorName",
+        "properties.orderItemDetails.productDetails.productDoubleEncryptionStatus",
+        "properties.orderItemDetails.productDetails.termCommitmentInformation",
+        "properties.orderItemDetails.productDetails.termCommitmentInformation.pendingDaysForTerm",
+        "properties.orderItemDetails.productDetails.termCommitmentInformation.termCommitmentTypeDuration",
+        "properties.orderItemDetails.returnReason",
+        "properties.orderItemDetails.returnStatus",
+        "properties.orderItemDetails.reverseShippingDetails",
+        "properties.orderItemDetails.reverseShippingDetails.carrierDisplayName",
+        "properties.orderItemDetails.reverseShippingDetails.carrierName",
+        "properties.orderItemDetails.reverseShippingDetails.sasKeyForLabel",
+        "properties.orderItemDetails.reverseShippingDetails.trackingId",
+        "properties.orderItemDetails.reverseShippingDetails.trackingUrl",
+        "properties.orderItemDetails.siteDetails",
+        "properties.provisioningState",
+        "properties.startTime"
+      ],
+      "pathParameters": [
+        {
+          "name": "orderItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the order item."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/orderItems/{orderItemName}",
+      "operationId": "OrderItems_Update",
+      "bodySchema": "OrderItemUpdateParameter",
+      "requiredProperties": [
+        "properties.forwardAddress.shippingAddress.country",
+        "properties.orderItemDetails.siteDetails.siteId",
+        "properties.preferences.termCommitmentPreferences.preferredTermCommitmentType",
+        "properties.preferences.transportPreferences.preferredShipmentType"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.forwardAddress",
+        "properties.forwardAddress.addressClassification",
+        "properties.forwardAddress.addressValidationStatus",
+        "properties.forwardAddress.contactDetails",
+        "properties.forwardAddress.contactDetails.contactName",
+        "properties.forwardAddress.contactDetails.emailList",
+        "properties.forwardAddress.contactDetails.mobile",
+        "properties.forwardAddress.contactDetails.phone",
+        "properties.forwardAddress.contactDetails.phoneExtension",
+        "properties.forwardAddress.provisioningState",
+        "properties.forwardAddress.shippingAddress",
+        "properties.forwardAddress.shippingAddress.addressType",
+        "properties.forwardAddress.shippingAddress.city",
+        "properties.forwardAddress.shippingAddress.companyName",
+        "properties.forwardAddress.shippingAddress.postalCode",
+        "properties.forwardAddress.shippingAddress.stateOrProvince",
+        "properties.forwardAddress.shippingAddress.streetAddress1",
+        "properties.forwardAddress.shippingAddress.streetAddress2",
+        "properties.forwardAddress.shippingAddress.streetAddress3",
+        "properties.forwardAddress.shippingAddress.zipExtendedCode",
+        "properties.notificationEmailList",
+        "properties.orderItemDetails",
+        "properties.orderItemDetails.productDetails",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.autoProvisioningStatus",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification.message",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.devicePresenceVerification.status",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.managementResourceArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.provisioningArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.provisioningEndPoint",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.quantity",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.readyToConnectArmId",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.serialNumber",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.uniqueDeviceIdentifier",
+        "properties.orderItemDetails.productDetails.parentProvisioningDetails.vendorName",
+        "properties.orderItemDetails.siteDetails",
+        "properties.preferences",
+        "properties.preferences.encryptionPreferences",
+        "properties.preferences.encryptionPreferences.doubleEncryptionStatus",
+        "properties.preferences.managementResourcePreferences",
+        "properties.preferences.managementResourcePreferences.preferredManagementResourceId",
+        "properties.preferences.notificationPreferences",
+        "properties.preferences.termCommitmentPreferences",
+        "properties.preferences.termCommitmentPreferences.preferredTermCommitmentDuration",
+        "properties.preferences.transportPreferences",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "orderItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the order item."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/orderItems/{orderItemName}",
+      "operationId": "OrderItems_Delete",
+      "pathParameters": [
+        {
+          "name": "orderItemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the order item."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

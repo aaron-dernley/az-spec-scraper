@@ -1,0 +1,557 @@
+{
+  "resource": "Azure::MachineLearningServices::Deployments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/batchEndpoints/{endpointName}/deployments",
+      "operationId": "BatchDeployments_List",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Endpoint name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Top of list."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/batchEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "BatchDeployments_Delete",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Endpoint name"
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference deployment identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/batchEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "BatchDeployments_Get",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Endpoint name"
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier for the Batch deployments."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/batchEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "BatchDeployments_Update",
+      "bodySchema": "PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name"
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier for the Batch inference deployment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/batchEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "BatchDeployments_CreateOrUpdate",
+      "bodySchema": "BatchDeploymentTrackedResource",
+      "requiredProperties": [
+        "properties",
+        "properties.codeConfiguration.scoringScript",
+        "properties.deploymentConfiguration.deploymentConfigurationType",
+        "properties.model.referenceType"
+      ],
+      "optionalProperties": [
+        "identity",
+        "kind",
+        "properties.codeConfiguration",
+        "properties.codeConfiguration.codeId",
+        "properties.compute",
+        "properties.deploymentConfiguration",
+        "properties.description",
+        "properties.environmentId",
+        "properties.environmentVariables",
+        "properties.errorThreshold",
+        "properties.loggingLevel",
+        "properties.maxConcurrencyPerInstance",
+        "properties.miniBatchSize",
+        "properties.model",
+        "properties.outputAction",
+        "properties.outputFileName",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.resources",
+        "properties.resources.instanceCount",
+        "properties.resources.instanceType",
+        "properties.resources.properties",
+        "properties.retrySettings",
+        "properties.retrySettings.maxRetries",
+        "properties.retrySettings.timeout",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name"
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier for the Batch inference deployment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}/deployments",
+      "operationId": "OnlineDeployments_List",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Top of list."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "OnlineDeployments_Delete",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference Endpoint Deployment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "OnlineDeployments_Get",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference Endpoint Deployment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "OnlineDeployments_Update",
+      "bodySchema": "PartialMinimalTrackedResourceWithSku",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.name",
+        "sku.size",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Online Endpoint name."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference Endpoint Deployment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}/deployments/{deploymentName}",
+      "operationId": "OnlineDeployments_CreateOrUpdate",
+      "bodySchema": "OnlineDeploymentTrackedResource",
+      "requiredProperties": [
+        "properties",
+        "properties.codeConfiguration.scoringScript",
+        "properties.dataCollector.collections",
+        "properties.endpointComputeType",
+        "properties.scaleSettings.scaleType"
+      ],
+      "optionalProperties": [
+        "identity",
+        "kind",
+        "properties.appInsightsEnabled",
+        "properties.codeConfiguration",
+        "properties.codeConfiguration.codeId",
+        "properties.dataCollector",
+        "properties.dataCollector.requestLogging",
+        "properties.dataCollector.requestLogging.captureHeaders",
+        "properties.dataCollector.rollingRate",
+        "properties.description",
+        "properties.egressPublicNetworkAccess",
+        "properties.environmentId",
+        "properties.environmentVariables",
+        "properties.instanceType",
+        "properties.livenessProbe",
+        "properties.livenessProbe.failureThreshold",
+        "properties.livenessProbe.initialDelay",
+        "properties.livenessProbe.period",
+        "properties.livenessProbe.successThreshold",
+        "properties.livenessProbe.timeout",
+        "properties.model",
+        "properties.modelMountPath",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.readinessProbe",
+        "properties.readinessProbe.failureThreshold",
+        "properties.readinessProbe.initialDelay",
+        "properties.readinessProbe.period",
+        "properties.readinessProbe.successThreshold",
+        "properties.readinessProbe.timeout",
+        "properties.requestSettings",
+        "properties.requestSettings.maxConcurrentRequestsPerInstance",
+        "properties.requestSettings.maxQueueWait",
+        "properties.requestSettings.requestTimeout",
+        "properties.scaleSettings",
+        "properties.startupProbe",
+        "properties.startupProbe.failureThreshold",
+        "properties.startupProbe.initialDelay",
+        "properties.startupProbe.period",
+        "properties.startupProbe.successThreshold",
+        "properties.startupProbe.timeout",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference endpoint name."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Inference Endpoint Deployment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

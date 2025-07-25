@@ -1,0 +1,245 @@
+{
+  "resource": "Azure::PowerBIDedicated::Capacities",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBIDedicated/capacities/{dedicatedCapacityName}",
+      "operationId": "Capacities_GetDetails",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90."
+        },
+        {
+          "name": "dedicatedCapacityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBIDedicated/capacities/{dedicatedCapacityName}",
+      "operationId": "Capacities_Create",
+      "bodySchema": "DedicatedCapacity",
+      "requiredProperties": [
+        "location",
+        "sku",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.administration",
+        "properties.administration.members",
+        "properties.friendlyName",
+        "properties.mode",
+        "properties.provisioningState",
+        "properties.state",
+        "properties.tenantId",
+        "sku.capacity",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90."
+        },
+        {
+          "name": "dedicatedCapacityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBIDedicated/capacities/{dedicatedCapacityName}",
+      "operationId": "Capacities_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90."
+        },
+        {
+          "name": "dedicatedCapacityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBIDedicated/capacities/{dedicatedCapacityName}",
+      "operationId": "Capacities_Update",
+      "bodySchema": "DedicatedCapacityUpdateParameters",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.administration",
+        "properties.administration.members",
+        "properties.friendlyName",
+        "properties.mode",
+        "properties.tenantId",
+        "sku",
+        "sku.capacity",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90."
+        },
+        {
+          "name": "dedicatedCapacityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBIDedicated/capacities",
+      "operationId": "Capacities_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PowerBIDedicated/capacities",
+      "operationId": "Capacities_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A unique identifier for a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

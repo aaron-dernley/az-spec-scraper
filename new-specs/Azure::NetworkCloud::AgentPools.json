@@ -1,0 +1,225 @@
+{
+  "resource": "Azure::NetworkCloud::AgentPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}/agentPools",
+      "operationId": "AgentPools_ListByKubernetesCluster",
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}/agentPools/{agentPoolName}",
+      "operationId": "AgentPools_Get",
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster agent pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}/agentPools/{agentPoolName}",
+      "operationId": "AgentPools_CreateOrUpdate",
+      "bodySchema": "AgentPool",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.agentOptions.hugepagesCount",
+        "properties.count",
+        "properties.mode",
+        "properties.vmSkuName"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties.administratorConfiguration",
+        "properties.administratorConfiguration.adminUsername",
+        "properties.administratorConfiguration.sshPublicKeys",
+        "properties.agentOptions",
+        "properties.agentOptions.hugepagesSize",
+        "properties.attachedNetworkConfiguration",
+        "properties.attachedNetworkConfiguration.l2Networks",
+        "properties.attachedNetworkConfiguration.l3Networks",
+        "properties.attachedNetworkConfiguration.trunkedNetworks",
+        "properties.availabilityZones",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.kubernetesVersion",
+        "properties.labels",
+        "properties.provisioningState",
+        "properties.taints",
+        "properties.upgradeSettings",
+        "properties.upgradeSettings.drainTimeout",
+        "properties.upgradeSettings.maxSurge",
+        "properties.upgradeSettings.maxUnavailable"
+      ],
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster agent pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}/agentPools/{agentPoolName}",
+      "operationId": "AgentPools_Delete",
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster agent pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}/agentPools/{agentPoolName}",
+      "operationId": "AgentPools_Update",
+      "bodySchema": "AgentPoolPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.administratorConfiguration",
+        "properties.administratorConfiguration.sshPublicKeys",
+        "properties.count",
+        "properties.upgradeSettings",
+        "properties.upgradeSettings.drainTimeout",
+        "properties.upgradeSettings.maxSurge",
+        "properties.upgradeSettings.maxUnavailable",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "agentPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster agent pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

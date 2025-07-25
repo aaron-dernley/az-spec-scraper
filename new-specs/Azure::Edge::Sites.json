@@ -1,0 +1,309 @@
+{
+  "resource": "Azure::Edge::Sites",
+  "version": "2025-06-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/sites",
+      "operationId": "SitesBySubscription_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesBySubscription_Get",
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesBySubscription_CreateOrUpdate",
+      "bodySchema": "Site",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.provisioningState",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesBySubscription_Update",
+      "bodySchema": "SiteUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesBySubscription_Delete",
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites",
+      "operationId": "Sites_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "Sites_Get",
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "Sites_CreateOrUpdate",
+      "bodySchema": "Site",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.provisioningState",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "Sites_Update",
+      "bodySchema": "SiteUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "Sites_Delete",
+      "pathParameters": [
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Site resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

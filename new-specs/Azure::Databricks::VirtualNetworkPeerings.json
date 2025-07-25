@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::Databricks::VirtualNetworkPeerings",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}/virtualNetworkPeerings/{peeringName}",
+      "operationId": "vNetPeering_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace vNet peering."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}/virtualNetworkPeerings/{peeringName}",
+      "operationId": "vNetPeering_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace vNet peering."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}/virtualNetworkPeerings/{peeringName}",
+      "operationId": "vNetPeering_CreateOrUpdate",
+      "bodySchema": "VirtualNetworkPeering",
+      "requiredProperties": [
+        "properties",
+        "properties.remoteVirtualNetwork"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.allowForwardedTraffic",
+        "properties.allowGatewayTransit",
+        "properties.allowVirtualNetworkAccess",
+        "properties.databricksAddressSpace",
+        "properties.databricksAddressSpace.addressPrefixes",
+        "properties.databricksVirtualNetwork",
+        "properties.databricksVirtualNetwork.id",
+        "properties.peeringState",
+        "properties.provisioningState",
+        "properties.remoteAddressSpace",
+        "properties.remoteAddressSpace.addressPrefixes",
+        "properties.remoteVirtualNetwork.id",
+        "properties.useRemoteGateways",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "peeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace vNet peering."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}/virtualNetworkPeerings",
+      "operationId": "vNetPeering_ListByWorkspace",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

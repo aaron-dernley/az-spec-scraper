@@ -1,0 +1,176 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::IpExtendedCommunities",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/{ipExtendedCommunityName}",
+      "operationId": "IpExtendedCommunities_Create",
+      "bodySchema": "IpExtendedCommunity",
+      "requiredProperties": [
+        "properties",
+        "properties.ipExtendedCommunityRules"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "ipExtendedCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Extended Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/{ipExtendedCommunityName}",
+      "operationId": "IpExtendedCommunities_Get",
+      "pathParameters": [
+        {
+          "name": "ipExtendedCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Extended Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/{ipExtendedCommunityName}",
+      "operationId": "IpExtendedCommunities_Update",
+      "bodySchema": "IpExtendedCommunityPatch",
+      "requiredProperties": [
+        "properties.ipExtendedCommunityRules"
+      ],
+      "optionalProperties": [
+        "properties"
+      ],
+      "pathParameters": [
+        {
+          "name": "ipExtendedCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Extended Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/{ipExtendedCommunityName}",
+      "operationId": "IpExtendedCommunities_Delete",
+      "pathParameters": [
+        {
+          "name": "ipExtendedCommunityName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the IP Extended Community."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities",
+      "operationId": "IpExtendedCommunities_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities",
+      "operationId": "IpExtendedCommunities_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

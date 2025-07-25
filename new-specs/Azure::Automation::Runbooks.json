@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::Automation::Runbooks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}",
+      "operationId": "Runbook_Get",
+      "pathParameters": [
+        {
+          "name": "runbookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The runbook name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}",
+      "operationId": "Runbook_CreateOrUpdate",
+      "bodySchema": "RunbookCreateOrUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.draft.draftContentLink.contentHash.algorithm",
+        "properties.draft.draftContentLink.contentHash.value",
+        "properties.publishContentLink.contentHash.algorithm",
+        "properties.publishContentLink.contentHash.value",
+        "properties.runbookType"
+      ],
+      "optionalProperties": [
+        "location",
+        "name",
+        "properties.description",
+        "properties.draft",
+        "properties.draft.creationTime",
+        "properties.draft.draftContentLink",
+        "properties.draft.draftContentLink.contentHash",
+        "properties.draft.draftContentLink.uri",
+        "properties.draft.draftContentLink.version",
+        "properties.draft.inEdit",
+        "properties.draft.lastModifiedTime",
+        "properties.draft.outputTypes",
+        "properties.draft.parameters",
+        "properties.logActivityTrace",
+        "properties.logProgress",
+        "properties.logVerbose",
+        "properties.publishContentLink",
+        "properties.publishContentLink.contentHash",
+        "properties.publishContentLink.uri",
+        "properties.publishContentLink.version",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "runbookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The runbook name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}",
+      "operationId": "Runbook_Update",
+      "bodySchema": "RunbookUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.logActivityTrace",
+        "properties.logProgress",
+        "properties.logVerbose",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "runbookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The runbook name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks/{runbookName}",
+      "operationId": "Runbook_Delete",
+      "pathParameters": [
+        {
+          "name": "runbookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The runbook name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/runbooks",
+      "operationId": "Runbook_ListByAutomationAccount",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "resource": "Azure::IoTOperations::Authentications",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/authentications",
+      "operationId": "BrokerAuthentication_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/authentications/{authenticationName}",
+      "operationId": "BrokerAuthentication_Get",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "authenticationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker authentication resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/authentications/{authenticationName}",
+      "operationId": "BrokerAuthentication_CreateOrUpdate",
+      "bodySchema": "BrokerAuthenticationResource",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.authenticationMethods"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "authenticationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker authentication resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/authentications/{authenticationName}",
+      "operationId": "BrokerAuthentication_Delete",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "authenticationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker authentication resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

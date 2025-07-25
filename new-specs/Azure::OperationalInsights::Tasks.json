@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::OperationalInsights::Tasks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}/tasks",
+      "operationId": "IncidentTasks_List",
+      "pathParameters": [
+        {
+          "name": "incidentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}/tasks/{incidentTaskId}",
+      "operationId": "IncidentTasks_Get",
+      "pathParameters": [
+        {
+          "name": "incidentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident ID"
+        },
+        {
+          "name": "incidentTaskId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident task ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}/tasks/{incidentTaskId}",
+      "operationId": "IncidentTasks_CreateOrUpdate",
+      "bodySchema": "IncidentTask",
+      "requiredProperties": [
+        "properties",
+        "properties.status",
+        "properties.title"
+      ],
+      "optionalProperties": [
+        "properties.createdBy",
+        "properties.createdTimeUtc",
+        "properties.description",
+        "properties.lastModifiedBy",
+        "properties.lastModifiedTimeUtc"
+      ],
+      "pathParameters": [
+        {
+          "name": "incidentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident ID"
+        },
+        {
+          "name": "incidentTaskId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident task ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}/tasks/{incidentTaskId}",
+      "operationId": "IncidentTasks_Delete",
+      "pathParameters": [
+        {
+          "name": "incidentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident ID"
+        },
+        {
+          "name": "incidentTaskId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Incident task ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

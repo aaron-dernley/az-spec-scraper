@@ -1,0 +1,291 @@
+{
+  "resource": "Azure::KeyVault::ManagedHSMs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}",
+      "operationId": "ManagedHsms_CreateOrUpdate",
+      "bodySchema": "ManagedHsm",
+      "requiredProperties": [
+        "sku.family",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.createMode",
+        "properties.enablePurgeProtection",
+        "properties.enableSoftDelete",
+        "properties.hsmUri",
+        "properties.initialAdminObjectIds",
+        "properties.networkAcls",
+        "properties.networkAcls.bypass",
+        "properties.networkAcls.defaultAction",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.scheduledPurgeDate",
+        "properties.securityDomainProperties",
+        "properties.securityDomainProperties.activationStatus",
+        "properties.securityDomainProperties.activationStatusMessage",
+        "properties.softDeleteRetentionInDays",
+        "properties.statusMessage",
+        "properties.tenantId",
+        "sku",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the managed HSM pool."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the managed HSM Pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}",
+      "operationId": "ManagedHsms_Update",
+      "bodySchema": "ManagedHsm",
+      "requiredProperties": [
+        "sku.family",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.createMode",
+        "properties.enablePurgeProtection",
+        "properties.enableSoftDelete",
+        "properties.hsmUri",
+        "properties.initialAdminObjectIds",
+        "properties.networkAcls",
+        "properties.networkAcls.bypass",
+        "properties.networkAcls.defaultAction",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.scheduledPurgeDate",
+        "properties.securityDomainProperties",
+        "properties.securityDomainProperties.activationStatus",
+        "properties.securityDomainProperties.activationStatusMessage",
+        "properties.softDeleteRetentionInDays",
+        "properties.statusMessage",
+        "properties.tenantId",
+        "sku",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the managed HSM pool."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the managed HSM Pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}",
+      "operationId": "ManagedHsms_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the managed HSM pool."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed HSM Pool to delete"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}",
+      "operationId": "ManagedHsms_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the managed HSM pool."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed HSM Pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs",
+      "operationId": "ManagedHsms_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group that contains the managed HSM pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of results to return."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.KeyVault/managedHSMs",
+      "operationId": "ManagedHsms_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of results to return."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

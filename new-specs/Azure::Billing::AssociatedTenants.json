@@ -1,0 +1,106 @@
+{
+  "resource": "Azure::Billing::AssociatedTenants",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants/{associatedTenantName}",
+      "operationId": "AssociatedTenants_Delete",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "associatedTenantName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants/{associatedTenantName}",
+      "operationId": "AssociatedTenants_Get",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "associatedTenantName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants/{associatedTenantName}",
+      "operationId": "AssociatedTenants_CreateOrUpdate",
+      "bodySchema": "AssociatedTenant",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.billingManagementState",
+        "properties.displayName",
+        "properties.provisioningBillingRequestId",
+        "properties.provisioningManagementState",
+        "properties.provisioningState",
+        "properties.tenantId"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "associatedTenantName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/associatedTenants",
+      "operationId": "AssociatedTenants_ListByBillingAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "includeRevoked",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Can be used to get revoked associated tenants."
+        }
+      ]
+    }
+  ]
+}

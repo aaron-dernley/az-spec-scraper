@@ -1,0 +1,193 @@
+{
+  "resource": "Azure::Network::DnsResolverDomainLists",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverDomainLists/{dnsResolverDomainListName}",
+      "operationId": "DnsResolverDomainLists_CreateOrUpdate",
+      "bodySchema": "DnsResolverDomainList",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.domains",
+        "properties.domainsUrl",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverDomainListName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver domain list."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverDomainLists/{dnsResolverDomainListName}",
+      "operationId": "DnsResolverDomainLists_Update",
+      "bodySchema": "DnsResolverDomainListPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.domains",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverDomainListName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver domain list."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverDomainLists/{dnsResolverDomainListName}",
+      "operationId": "DnsResolverDomainLists_Delete",
+      "pathParameters": [
+        {
+          "name": "dnsResolverDomainListName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver domain list."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverDomainLists/{dnsResolverDomainListName}",
+      "operationId": "DnsResolverDomainLists_Get",
+      "pathParameters": [
+        {
+          "name": "dnsResolverDomainListName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver domain list."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverDomainLists",
+      "operationId": "DnsResolverDomainLists_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/dnsResolverDomainLists",
+      "operationId": "DnsResolverDomainLists_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    }
+  ]
+}

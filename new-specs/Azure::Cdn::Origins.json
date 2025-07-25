@@ -1,0 +1,283 @@
+{
+  "resource": "Azure::Cdn::Origins",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins",
+      "operationId": "Origins_ListByEndpoint",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the CDN profile which is unique within the resource group."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the endpoint under the profile which is unique globally."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. Current version is 2017-04-02."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}",
+      "operationId": "Origins_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the CDN profile which is unique within the resource group."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the endpoint under the profile which is unique globally."
+        },
+        {
+          "name": "originName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the origin which is unique within the endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. Current version is 2017-04-02."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}",
+      "operationId": "Origins_Create",
+      "bodySchema": "Origin",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.enabled",
+        "properties.hostName",
+        "properties.httpPort",
+        "properties.httpsPort",
+        "properties.originHostHeader",
+        "properties.priority",
+        "properties.provisioningState",
+        "properties.resourceState",
+        "properties.weight",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the CDN profile which is unique within the resource group."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the endpoint under the profile which is unique globally."
+        },
+        {
+          "name": "originName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the origin that is unique within the endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. Current version is 2017-04-02."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}",
+      "operationId": "Origins_Update",
+      "bodySchema": "OriginUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.enabled",
+        "properties.hostName",
+        "properties.httpPort",
+        "properties.httpsPort",
+        "properties.originHostHeader",
+        "properties.priority",
+        "properties.weight"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the CDN profile which is unique within the resource group."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the endpoint under the profile which is unique globally."
+        },
+        {
+          "name": "originName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the origin which is unique within the endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. Current version is 2017-04-02."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}",
+      "operationId": "Origins_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the CDN profile which is unique within the resource group."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the endpoint under the profile which is unique globally."
+        },
+        {
+          "name": "originName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the origin which is unique within the endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. Current version is 2017-04-02."
+        }
+      ]
+    }
+  ]
+}

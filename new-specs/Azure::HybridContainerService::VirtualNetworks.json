@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::HybridContainerService::VirtualNetworks",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridContainerService/virtualNetworks/{virtualNetworkName}",
+      "operationId": "virtualNetworks_Retrieve",
+      "pathParameters": [
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the virtual network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridContainerService/virtualNetworks/{virtualNetworkName}",
+      "operationId": "virtualNetworks_CreateOrUpdate",
+      "bodySchema": "virtualNetwork",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.dnsServers",
+        "properties.gateway",
+        "properties.infraVnetProfile",
+        "properties.infraVnetProfile.hci",
+        "properties.infraVnetProfile.hci.mocGroup",
+        "properties.infraVnetProfile.hci.mocLocation",
+        "properties.infraVnetProfile.hci.mocVnetName",
+        "properties.ipAddressPrefix",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.operationStatus",
+        "properties.status.operationStatus.error",
+        "properties.status.operationStatus.error.code",
+        "properties.status.operationStatus.error.message",
+        "properties.status.operationStatus.operationId",
+        "properties.status.operationStatus.status",
+        "properties.vipPool",
+        "properties.vlanID",
+        "properties.vmipPool"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the virtual network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridContainerService/virtualNetworks/{virtualNetworkName}",
+      "operationId": "virtualNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the virtual network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridContainerService/virtualNetworks/{virtualNetworkName}",
+      "operationId": "virtualNetworks_Update",
+      "bodySchema": "virtualNetworksPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Parameter for the name of the virtual network"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridContainerService/virtualNetworks",
+      "operationId": "virtualNetworks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridContainerService/virtualNetworks",
+      "operationId": "virtualNetworks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

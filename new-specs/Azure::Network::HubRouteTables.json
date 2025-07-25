@@ -1,0 +1,156 @@
+{
+  "resource": "Azure::Network::HubRouteTables",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/hubRouteTables/{routeTableName}",
+      "operationId": "HubRouteTables_CreateOrUpdate",
+      "bodySchema": "HubRouteTable",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.associatedConnections",
+        "properties.labels",
+        "properties.propagatingConnections",
+        "properties.provisioningState",
+        "properties.routes",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RouteTable."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/hubRouteTables/{routeTableName}",
+      "operationId": "HubRouteTables_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RouteTable."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/hubRouteTables/{routeTableName}",
+      "operationId": "HubRouteTables_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the RouteTable."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RouteTable."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/hubRouteTables",
+      "operationId": "HubRouteTables_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

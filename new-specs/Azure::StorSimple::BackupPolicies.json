@@ -1,0 +1,220 @@
+{
+  "resource": "Azure::StorSimple::BackupPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies",
+      "operationId": "BackupPolicies_ListByDevice",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}",
+      "operationId": "BackupPolicies_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of backup policy to be fetched."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}",
+      "operationId": "BackupPolicies_CreateOrUpdate",
+      "bodySchema": "BackupPolicy",
+      "requiredProperties": [
+        "properties",
+        "properties.volumeIds"
+      ],
+      "optionalProperties": [
+        "id",
+        "kind",
+        "name",
+        "properties.backupPolicyCreationType",
+        "properties.lastBackupTime",
+        "properties.nextBackupTime",
+        "properties.scheduledBackupStatus",
+        "properties.schedulesCount",
+        "properties.ssmHostName",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backup policy to be created/updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}",
+      "operationId": "BackupPolicies_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backup policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    }
+  ]
+}

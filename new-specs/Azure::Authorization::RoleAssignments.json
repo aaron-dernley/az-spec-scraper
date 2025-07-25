@@ -1,0 +1,213 @@
+{
+  "resource": "Azure::Authorization::RoleAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}/providers/Microsoft.Authorization/roleAssignments",
+      "operationId": "RoleAssignments_ListForResource",
+      "pathParameters": [
+        {
+          "name": "resourceProviderNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace of the resource provider."
+        },
+        {
+          "name": "parentResourcePath",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The parent resource identity."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type of the resource."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource to get role assignments for."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Use $filter=atScope() to return all role assignments at or above the scope. Use $filter=principalId eq {id} to return all role assignments at, above or below the scope for the specified principal."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Authorization/roleAssignments",
+      "operationId": "RoleAssignments_ListForResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Use $filter=atScope() to return all role assignments at or above the scope. Use $filter=principalId eq {id} to return all role assignments at, above or below the scope for the specified principal."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+      "operationId": "RoleAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role assignment to delete."
+        },
+        {
+          "name": "roleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the role assignment to delete."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+      "operationId": "RoleAssignments_Create",
+      "bodySchema": "RoleAssignmentCreateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.principalId",
+        "properties.roleDefinitionId"
+      ],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource."
+        },
+        {
+          "name": "roleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "A GUID for the role assignment to create. The name must be unique and different for each role assignment."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+      "operationId": "RoleAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role assignment."
+        },
+        {
+          "name": "roleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the role assignment to get."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/roleAssignments",
+      "operationId": "RoleAssignments_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Use $filter=atScope() to return all role assignments at or above the scope. Use $filter=principalId eq {id} to return all role assignments at, above or below the scope for the specified principal."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleAssignments",
+      "operationId": "RoleAssignments_ListForScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role assignments."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Use $filter=atScope() to return all role assignments at or above the scope. Use $filter=principalId eq {id} to return all role assignments at, above or below the scope for the specified principal."
+        }
+      ]
+    }
+  ]
+}

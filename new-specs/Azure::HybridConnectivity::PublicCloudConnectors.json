@@ -1,0 +1,180 @@
+{
+  "resource": "Azure::HybridConnectivity::PublicCloudConnectors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridConnectivity/publicCloudConnectors",
+      "operationId": "PublicCloudConnectors_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridConnectivity/publicCloudConnectors",
+      "operationId": "PublicCloudConnectors_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridConnectivity/publicCloudConnectors/{publicCloudConnector}",
+      "operationId": "PublicCloudConnectors_Get",
+      "pathParameters": [
+        {
+          "name": "publicCloudConnector",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent public cloud connectors resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridConnectivity/publicCloudConnectors/{publicCloudConnector}",
+      "operationId": "PublicCloudConnectors_CreateOrUpdate",
+      "bodySchema": "PublicCloudConnector",
+      "requiredProperties": [
+        "properties.awsCloudProfile",
+        "properties.awsCloudProfile.accountId",
+        "properties.hostType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.awsCloudProfile.excludedAccounts",
+        "properties.awsCloudProfile.isOrganizationalAccount",
+        "properties.connectorPrimaryIdentifier",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "publicCloudConnector",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent public cloud connectors resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridConnectivity/publicCloudConnectors/{publicCloudConnector}",
+      "operationId": "PublicCloudConnectors_Update",
+      "bodySchema": "PublicCloudConnectorUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.awsCloudProfile",
+        "properties.awsCloudProfile.excludedAccounts",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "publicCloudConnector",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent public cloud connectors resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridConnectivity/publicCloudConnectors/{publicCloudConnector}",
+      "operationId": "PublicCloudConnectors_Delete",
+      "pathParameters": [
+        {
+          "name": "publicCloudConnector",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent public cloud connectors resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

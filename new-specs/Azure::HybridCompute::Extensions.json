@@ -1,0 +1,225 @@
+{
+  "resource": "Azure::HybridCompute::Extensions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/extensions/{extensionName}",
+      "operationId": "MachineExtensions_CreateOrUpdate",
+      "bodySchema": "MachineExtension",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoUpgradeMinorVersion",
+        "properties.enableAutomaticUpgrade",
+        "properties.forceUpdateTag",
+        "properties.instanceView",
+        "properties.instanceView.name",
+        "properties.instanceView.status",
+        "properties.instanceView.status.code",
+        "properties.instanceView.status.displayStatus",
+        "properties.instanceView.status.level",
+        "properties.instanceView.status.message",
+        "properties.instanceView.status.time",
+        "properties.instanceView.type",
+        "properties.instanceView.typeHandlerVersion",
+        "properties.protectedSettings",
+        "properties.provisioningState",
+        "properties.publisher",
+        "properties.settings",
+        "properties.type",
+        "properties.typeHandlerVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine where the extension should be created or updated."
+        },
+        {
+          "name": "extensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/extensions/{extensionName}",
+      "operationId": "MachineExtensions_Update",
+      "bodySchema": "MachineExtensionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoUpgradeMinorVersion",
+        "properties.enableAutomaticUpgrade",
+        "properties.forceUpdateTag",
+        "properties.protectedSettings",
+        "properties.publisher",
+        "properties.settings",
+        "properties.type",
+        "properties.typeHandlerVersion",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine where the extension should be created or updated."
+        },
+        {
+          "name": "extensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/extensions/{extensionName}",
+      "operationId": "MachineExtensions_Delete",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine where the extension should be deleted."
+        },
+        {
+          "name": "extensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/extensions/{extensionName}",
+      "operationId": "MachineExtensions_Get",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine containing the extension."
+        },
+        {
+          "name": "extensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/extensions",
+      "operationId": "MachineExtensions_List",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the machine containing the extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

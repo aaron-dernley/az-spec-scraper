@@ -1,0 +1,96 @@
+{
+  "resource": "Azure::AzureStackHCI::EdgeDevices",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices",
+      "operationId": "EdgeDevices_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices/{edgeDeviceName}",
+      "operationId": "EdgeDevices_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "edgeDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Device"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices/{edgeDeviceName}",
+      "operationId": "EdgeDevices_CreateOrUpdate",
+      "bodySchema": "EdgeDevice",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.deviceConfiguration",
+        "properties.deviceConfiguration.deviceMetadata",
+        "properties.deviceConfiguration.nicDetails",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "edgeDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Device"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.AzureStackHCI/edgeDevices/{edgeDeviceName}",
+      "operationId": "EdgeDevices_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "edgeDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Device"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

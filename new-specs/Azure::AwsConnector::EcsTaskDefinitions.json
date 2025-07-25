@@ -1,0 +1,202 @@
+{
+  "resource": "Azure::AwsConnector::EcsTaskDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ecsTaskDefinitions",
+      "operationId": "EcsTaskDefinitions_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsTaskDefinitions",
+      "operationId": "EcsTaskDefinitions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsTaskDefinitions/{name}",
+      "operationId": "EcsTaskDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsTaskDefinition"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsTaskDefinitions/{name}",
+      "operationId": "EcsTaskDefinitions_CreateOrReplace",
+      "bodySchema": "EcsTaskDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.containerDefinitions",
+        "properties.awsProperties.cpu",
+        "properties.awsProperties.ephemeralStorage",
+        "properties.awsProperties.ephemeralStorage.sizeInGiB",
+        "properties.awsProperties.executionRoleArn",
+        "properties.awsProperties.family",
+        "properties.awsProperties.inferenceAccelerators",
+        "properties.awsProperties.ipcMode",
+        "properties.awsProperties.memory",
+        "properties.awsProperties.networkMode",
+        "properties.awsProperties.pidMode",
+        "properties.awsProperties.placementConstraints",
+        "properties.awsProperties.proxyConfiguration",
+        "properties.awsProperties.proxyConfiguration.containerName",
+        "properties.awsProperties.proxyConfiguration.proxyConfigurationProperties",
+        "properties.awsProperties.proxyConfiguration.type",
+        "properties.awsProperties.requiresCompatibilities",
+        "properties.awsProperties.runtimePlatform",
+        "properties.awsProperties.runtimePlatform.cpuArchitecture",
+        "properties.awsProperties.runtimePlatform.operatingSystemFamily",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.taskDefinitionArn",
+        "properties.awsProperties.taskRoleArn",
+        "properties.awsProperties.volumes",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsTaskDefinition"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsTaskDefinitions/{name}",
+      "operationId": "EcsTaskDefinitions_Update",
+      "bodySchema": "EcsTaskDefinitionTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsTaskDefinition"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsTaskDefinitions/{name}",
+      "operationId": "EcsTaskDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsTaskDefinition"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

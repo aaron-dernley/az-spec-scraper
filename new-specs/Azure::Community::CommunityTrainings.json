@@ -1,0 +1,200 @@
+{
+  "resource": "Azure::Community::CommunityTrainings",
+  "version": "2023-11-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Community/communityTrainings",
+      "operationId": "CommunityTrainings_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Community/communityTrainings",
+      "operationId": "CommunityTrainings_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Community/communityTrainings/{communityTrainingName}",
+      "operationId": "CommunityTrainings_Get",
+      "pathParameters": [
+        {
+          "name": "communityTrainingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Community Training Resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Community/communityTrainings/{communityTrainingName}",
+      "operationId": "CommunityTrainings_Create",
+      "bodySchema": "CommunityTraining",
+      "requiredProperties": [
+        "properties.disasterRecoveryEnabled",
+        "properties.identityConfiguration",
+        "properties.identityConfiguration.clientId",
+        "properties.identityConfiguration.clientSecret",
+        "properties.identityConfiguration.domainName",
+        "properties.identityConfiguration.identityType",
+        "properties.identityConfiguration.tenantId",
+        "properties.portalAdminEmailAddress",
+        "properties.portalName",
+        "properties.portalOwnerEmailAddress",
+        "properties.portalOwnerOrganizationName",
+        "properties.zoneRedundancyEnabled"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.identityConfiguration.b2cAuthenticationPolicy",
+        "properties.identityConfiguration.b2cPasswordResetPolicy",
+        "properties.identityConfiguration.customLoginParameters",
+        "properties.identityConfiguration.teamsEnabled",
+        "properties.provisioningState",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "communityTrainingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Community Training Resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Community/communityTrainings/{communityTrainingName}",
+      "operationId": "CommunityTrainings_Update",
+      "bodySchema": "CommunityTrainingUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.identityConfiguration",
+        "properties.identityConfiguration.b2cAuthenticationPolicy",
+        "properties.identityConfiguration.b2cPasswordResetPolicy",
+        "properties.identityConfiguration.clientId",
+        "properties.identityConfiguration.clientSecret",
+        "properties.identityConfiguration.customLoginParameters",
+        "properties.identityConfiguration.domainName",
+        "properties.identityConfiguration.identityType",
+        "properties.identityConfiguration.teamsEnabled",
+        "properties.identityConfiguration.tenantId",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "communityTrainingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Community Training Resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Community/communityTrainings/{communityTrainingName}",
+      "operationId": "CommunityTrainings_Delete",
+      "pathParameters": [
+        {
+          "name": "communityTrainingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Community Training Resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

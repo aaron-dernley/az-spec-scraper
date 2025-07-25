@@ -1,0 +1,171 @@
+{
+  "resource": "Azure::App::ConnectedEnvironments",
+  "version": "2024-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.App/connectedEnvironments",
+      "operationId": "ConnectedEnvironments_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/connectedEnvironments",
+      "operationId": "ConnectedEnvironments_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/connectedEnvironments/{connectedEnvironmentName}",
+      "operationId": "ConnectedEnvironments_Get",
+      "pathParameters": [
+        {
+          "name": "connectedEnvironmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the connectedEnvironment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/connectedEnvironments/{connectedEnvironmentName}",
+      "operationId": "ConnectedEnvironments_CreateOrUpdate",
+      "bodySchema": "ConnectedEnvironment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.customDomainConfiguration",
+        "properties.daprAIConnectionString",
+        "properties.defaultDomain",
+        "properties.deploymentErrors",
+        "properties.provisioningState",
+        "properties.staticIp"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectedEnvironmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the connectedEnvironment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/connectedEnvironments/{connectedEnvironmentName}",
+      "operationId": "ConnectedEnvironments_Delete",
+      "pathParameters": [
+        {
+          "name": "connectedEnvironmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the connectedEnvironment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/connectedEnvironments/{connectedEnvironmentName}",
+      "operationId": "ConnectedEnvironments_Update",
+      "pathParameters": [
+        {
+          "name": "connectedEnvironmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the connectedEnvironment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

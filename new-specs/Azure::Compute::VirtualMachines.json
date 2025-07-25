@@ -1,0 +1,382 @@
+{
+  "resource": "Azure::Compute::VirtualMachines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/virtualMachines",
+      "operationId": "VirtualMachines_ListByLocation",
+      "pathParameters": [
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The location for which virtual machines under the subscription are queried."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "operationId": "VirtualMachines_CreateOrUpdate",
+      "bodySchema": "VirtualMachine",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "plan",
+        "properties",
+        "properties.additionalCapabilities",
+        "properties.applicationProfile",
+        "properties.availabilitySet",
+        "properties.billingProfile",
+        "properties.capacityReservation",
+        "properties.diagnosticsProfile",
+        "properties.evictionPolicy",
+        "properties.extensionsTimeBudget",
+        "properties.hardwareProfile",
+        "properties.host",
+        "properties.hostGroup",
+        "properties.instanceView",
+        "properties.instanceView.assignedHost",
+        "properties.instanceView.bootDiagnostics",
+        "properties.instanceView.computerName",
+        "properties.instanceView.disks",
+        "properties.instanceView.extensions",
+        "properties.instanceView.hyperVGeneration",
+        "properties.instanceView.maintenanceRedeployStatus",
+        "properties.instanceView.osName",
+        "properties.instanceView.osVersion",
+        "properties.instanceView.patchStatus",
+        "properties.instanceView.patchStatus.availablePatchSummary",
+        "properties.instanceView.patchStatus.availablePatchSummary.assessmentActivityId",
+        "properties.instanceView.patchStatus.availablePatchSummary.criticalAndSecurityPatchCount",
+        "properties.instanceView.patchStatus.availablePatchSummary.error",
+        "properties.instanceView.patchStatus.availablePatchSummary.lastModifiedTime",
+        "properties.instanceView.patchStatus.availablePatchSummary.otherPatchCount",
+        "properties.instanceView.patchStatus.availablePatchSummary.rebootPending",
+        "properties.instanceView.patchStatus.availablePatchSummary.startTime",
+        "properties.instanceView.patchStatus.availablePatchSummary.status",
+        "properties.instanceView.patchStatus.configurationStatuses",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.error",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.excludedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.failedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.installationActivityId",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.installedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.lastModifiedTime",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.maintenanceWindowExceeded",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.notSelectedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.pendingPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.startTime",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.status",
+        "properties.instanceView.platformFaultDomain",
+        "properties.instanceView.platformUpdateDomain",
+        "properties.instanceView.rdpThumbPrint",
+        "properties.instanceView.statuses",
+        "properties.instanceView.vmAgent",
+        "properties.instanceView.vmAgent.extensionHandlers",
+        "properties.instanceView.vmAgent.statuses",
+        "properties.instanceView.vmAgent.vmAgentVersion",
+        "properties.instanceView.vmHealth",
+        "properties.instanceView.vmHealth.status",
+        "properties.licenseType",
+        "properties.networkProfile",
+        "properties.osProfile",
+        "properties.platformFaultDomain",
+        "properties.priority",
+        "properties.provisioningState",
+        "properties.proximityPlacementGroup",
+        "properties.scheduledEventsProfile",
+        "properties.securityProfile",
+        "properties.storageProfile",
+        "properties.timeCreated",
+        "properties.userData",
+        "properties.virtualMachineScaleSet",
+        "properties.vmId",
+        "resources",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "operationId": "VirtualMachines_Update",
+      "bodySchema": "VirtualMachineUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "plan",
+        "properties",
+        "properties.additionalCapabilities",
+        "properties.applicationProfile",
+        "properties.availabilitySet",
+        "properties.billingProfile",
+        "properties.capacityReservation",
+        "properties.diagnosticsProfile",
+        "properties.evictionPolicy",
+        "properties.extensionsTimeBudget",
+        "properties.hardwareProfile",
+        "properties.host",
+        "properties.hostGroup",
+        "properties.instanceView",
+        "properties.instanceView.assignedHost",
+        "properties.instanceView.bootDiagnostics",
+        "properties.instanceView.computerName",
+        "properties.instanceView.disks",
+        "properties.instanceView.extensions",
+        "properties.instanceView.hyperVGeneration",
+        "properties.instanceView.maintenanceRedeployStatus",
+        "properties.instanceView.osName",
+        "properties.instanceView.osVersion",
+        "properties.instanceView.patchStatus",
+        "properties.instanceView.patchStatus.availablePatchSummary",
+        "properties.instanceView.patchStatus.availablePatchSummary.assessmentActivityId",
+        "properties.instanceView.patchStatus.availablePatchSummary.criticalAndSecurityPatchCount",
+        "properties.instanceView.patchStatus.availablePatchSummary.error",
+        "properties.instanceView.patchStatus.availablePatchSummary.lastModifiedTime",
+        "properties.instanceView.patchStatus.availablePatchSummary.otherPatchCount",
+        "properties.instanceView.patchStatus.availablePatchSummary.rebootPending",
+        "properties.instanceView.patchStatus.availablePatchSummary.startTime",
+        "properties.instanceView.patchStatus.availablePatchSummary.status",
+        "properties.instanceView.patchStatus.configurationStatuses",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.error",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.excludedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.failedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.installationActivityId",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.installedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.lastModifiedTime",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.maintenanceWindowExceeded",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.notSelectedPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.pendingPatchCount",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.startTime",
+        "properties.instanceView.patchStatus.lastPatchInstallationSummary.status",
+        "properties.instanceView.platformFaultDomain",
+        "properties.instanceView.platformUpdateDomain",
+        "properties.instanceView.rdpThumbPrint",
+        "properties.instanceView.statuses",
+        "properties.instanceView.vmAgent",
+        "properties.instanceView.vmAgent.extensionHandlers",
+        "properties.instanceView.vmAgent.statuses",
+        "properties.instanceView.vmAgent.vmAgentVersion",
+        "properties.instanceView.vmHealth",
+        "properties.instanceView.vmHealth.status",
+        "properties.licenseType",
+        "properties.networkProfile",
+        "properties.osProfile",
+        "properties.platformFaultDomain",
+        "properties.priority",
+        "properties.provisioningState",
+        "properties.proximityPlacementGroup",
+        "properties.scheduledEventsProfile",
+        "properties.securityProfile",
+        "properties.storageProfile",
+        "properties.timeCreated",
+        "properties.userData",
+        "properties.virtualMachineScaleSet",
+        "properties.vmId",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "operationId": "VirtualMachines_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceDeletion",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Optional parameter to force delete virtual machines."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+      "operationId": "VirtualMachines_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines",
+      "operationId": "VirtualMachines_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The system query option to filter VMs returned in the response. Allowed value is 'virtualMachineScaleSet/id' eq /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmssName}'"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/virtualMachines",
+      "operationId": "VirtualMachines_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "statusOnly",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "statusOnly=true enables fetching run time status of all Virtual Machines in the subscription."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The system query option to filter VMs returned in the response. Allowed value is 'virtualMachineScaleSet/id' eq /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmssName}'"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "resource": "Azure::Edge::SiteReferences",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/siteReferences",
+      "operationId": "SiteReferences_ListByContext",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/siteReferences/{siteReferenceName}",
+      "operationId": "SiteReferences_Get",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "siteReferenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SiteReference"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/siteReferences/{siteReferenceName}",
+      "operationId": "SiteReferences_CreateOrUpdate",
+      "bodySchema": "SiteReference",
+      "requiredProperties": [
+        "properties.siteId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "siteReferenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SiteReference"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/siteReferences/{siteReferenceName}",
+      "operationId": "SiteReferences_Update",
+      "bodySchema": "SiteReferenceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.siteId"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "siteReferenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SiteReference"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/siteReferences/{siteReferenceName}",
+      "operationId": "SiteReferences_Delete",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "siteReferenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SiteReference"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

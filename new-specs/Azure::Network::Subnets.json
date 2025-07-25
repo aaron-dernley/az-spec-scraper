@@ -1,0 +1,177 @@
+{
+  "resource": "Azure::Network::Subnets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "operationId": "Subnets_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the subnet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "operationId": "Subnets_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the subnet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Expands referenced resources."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}",
+      "operationId": "Subnets_CreateOrUpdate",
+      "bodySchema": "Subnet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.addressPrefix",
+        "properties.addressPrefixes",
+        "properties.delegations",
+        "properties.ipAllocations",
+        "properties.ipConfigurationProfiles",
+        "properties.ipConfigurations",
+        "properties.natGateway",
+        "properties.networkSecurityGroup",
+        "properties.privateEndpointNetworkPolicies",
+        "properties.privateEndpoints",
+        "properties.privateLinkServiceNetworkPolicies",
+        "properties.provisioningState",
+        "properties.purpose",
+        "properties.resourceNavigationLinks",
+        "properties.routeTable",
+        "properties.serviceAssociationLinks",
+        "properties.serviceEndpointPolicies",
+        "properties.serviceEndpoints",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subnetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the subnet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets",
+      "operationId": "Subnets_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

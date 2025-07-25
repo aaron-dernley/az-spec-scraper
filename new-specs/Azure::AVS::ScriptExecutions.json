@@ -1,0 +1,164 @@
+{
+  "resource": "Azure::AVS::ScriptExecutions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/scriptExecutions",
+      "operationId": "ScriptExecutions_List",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/scriptExecutions/{scriptExecutionName}",
+      "operationId": "ScriptExecutions_Get",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "scriptExecutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the script cmdlet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/scriptExecutions/{scriptExecutionName}",
+      "operationId": "ScriptExecutions_CreateOrUpdate",
+      "bodySchema": "ScriptExecution",
+      "requiredProperties": [
+        "properties.timeout"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.errors",
+        "properties.failureReason",
+        "properties.finishedAt",
+        "properties.hiddenParameters",
+        "properties.information",
+        "properties.namedOutputs",
+        "properties.output",
+        "properties.parameters",
+        "properties.provisioningState",
+        "properties.retention",
+        "properties.scriptCmdletId",
+        "properties.startedAt",
+        "properties.submittedAt",
+        "properties.warnings"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "scriptExecutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the script cmdlet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/scriptExecutions/{scriptExecutionName}",
+      "operationId": "ScriptExecutions_Delete",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "scriptExecutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the script cmdlet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

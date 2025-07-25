@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::StreamAnalytics::Outputs",
+  "version": "2020-03-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs/{outputName}",
+      "operationId": "Outputs_CreateOrReplace",
+      "bodySchema": "Output",
+      "requiredProperties": [
+        "properties.datasource.type"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.datasource",
+        "properties.diagnostics",
+        "properties.etag",
+        "properties.serialization",
+        "properties.sizeWindow",
+        "properties.timeWindow",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "outputName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the output."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs/{outputName}",
+      "operationId": "Outputs_Update",
+      "bodySchema": "Output",
+      "requiredProperties": [
+        "properties.datasource.type"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.datasource",
+        "properties.diagnostics",
+        "properties.etag",
+        "properties.serialization",
+        "properties.sizeWindow",
+        "properties.timeWindow",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "outputName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the output."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs/{outputName}",
+      "operationId": "Outputs_Delete",
+      "pathParameters": [
+        {
+          "name": "outputName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the output."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs/{outputName}",
+      "operationId": "Outputs_Get",
+      "pathParameters": [
+        {
+          "name": "outputName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the output."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}/outputs",
+      "operationId": "Outputs_ListByStreamingJob",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$select",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The $select OData query parameter. This is a comma-separated list of structural properties to include in the response, or \"*\" to include all properties. By default, all properties are returned except diagnostics. Currently only accepts '*' as a valid value."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::StorageCache::StorageTargets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}/storageTargets",
+      "operationId": "StorageTargets_ListByCache",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}/storageTargets/{storageTargetName}",
+      "operationId": "StorageTargets_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        },
+        {
+          "name": "storageTargetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Target."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        },
+        {
+          "name": "force",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Boolean value requesting the force delete operation for a storage target. Force delete discards unwritten-data in the cache instead of flushing it to back-end storage."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}/storageTargets/{storageTargetName}",
+      "operationId": "StorageTargets_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        },
+        {
+          "name": "storageTargetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Target."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}/storageTargets/{storageTargetName}",
+      "operationId": "StorageTargets_CreateOrUpdate",
+      "bodySchema": "StorageTarget",
+      "requiredProperties": [
+        "properties.targetType"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.blobNfs",
+        "properties.blobNfs.target",
+        "properties.blobNfs.usageModel",
+        "properties.clfs",
+        "properties.clfs.target",
+        "properties.junctions",
+        "properties.nfs3",
+        "properties.nfs3.target",
+        "properties.nfs3.usageModel",
+        "properties.provisioningState",
+        "properties.state",
+        "properties.unknown",
+        "properties.unknown.attributes",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        },
+        {
+          "name": "storageTargetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Target."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

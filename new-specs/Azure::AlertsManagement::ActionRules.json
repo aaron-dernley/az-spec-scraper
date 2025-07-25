@@ -1,0 +1,236 @@
+{
+  "resource": "Azure::AlertsManagement::ActionRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AlertsManagement/actionRules",
+      "operationId": "AlertProcessingRules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/actionRules",
+      "operationId": "AlertProcessingRules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name where the resource is created."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/actionRules/{alertProcessingRuleName}",
+      "operationId": "AlertProcessingRules_GetByName",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name where the resource is created."
+        },
+        {
+          "name": "alertProcessingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the alert processing rule that needs to be fetched."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/actionRules/{alertProcessingRuleName}",
+      "operationId": "AlertProcessingRules_CreateOrUpdate",
+      "bodySchema": "AlertProcessingRule",
+      "requiredProperties": [
+        "location",
+        "properties.actions",
+        "properties.scopes"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.conditions",
+        "properties.description",
+        "properties.enabled",
+        "properties.schedule",
+        "properties.schedule.effectiveFrom",
+        "properties.schedule.effectiveUntil",
+        "properties.schedule.recurrences",
+        "properties.schedule.timeZone",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name where the resource is created."
+        },
+        {
+          "name": "alertProcessingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the alert processing rule that needs to be created/updated."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/actionRules/{alertProcessingRuleName}",
+      "operationId": "AlertProcessingRules_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name where the resource is created."
+        },
+        {
+          "name": "alertProcessingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the alert processing rule that needs to be deleted."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/actionRules/{alertProcessingRuleName}",
+      "operationId": "AlertProcessingRules_Update",
+      "bodySchema": "PatchObject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.enabled",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name where the resource is created."
+        },
+        {
+          "name": "alertProcessingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name that needs to be updated."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

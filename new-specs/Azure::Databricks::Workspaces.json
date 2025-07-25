@@ -1,0 +1,322 @@
+{
+  "resource": "Azure::Databricks::Workspaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}",
+      "operationId": "Workspaces_CreateOrUpdate",
+      "bodySchema": "Workspace",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.encryption.entities",
+        "properties.encryption.entities.managedDisk.keySource",
+        "properties.encryption.entities.managedDisk.keyVaultProperties",
+        "properties.encryption.entities.managedDisk.keyVaultProperties.keyName",
+        "properties.encryption.entities.managedDisk.keyVaultProperties.keyVaultUri",
+        "properties.encryption.entities.managedDisk.keyVaultProperties.keyVersion",
+        "properties.encryption.entities.managedServices.keySource",
+        "properties.encryption.entities.managedServices.keyVaultProperties.keyName",
+        "properties.encryption.entities.managedServices.keyVaultProperties.keyVaultUri",
+        "properties.encryption.entities.managedServices.keyVaultProperties.keyVersion",
+        "properties.managedResourceGroupId",
+        "properties.parameters.amlWorkspaceId.value",
+        "properties.parameters.customPrivateSubnetName.value",
+        "properties.parameters.customPublicSubnetName.value",
+        "properties.parameters.customVirtualNetworkId.value",
+        "properties.parameters.enableNoPublicIp.value",
+        "properties.parameters.loadBalancerBackendPoolName.value",
+        "properties.parameters.loadBalancerId.value",
+        "properties.parameters.natGatewayName.value",
+        "properties.parameters.prepareEncryption.value",
+        "properties.parameters.publicIpName.value",
+        "properties.parameters.requireInfrastructureEncryption.value",
+        "properties.parameters.resourceTags.value",
+        "properties.parameters.storageAccountName.value",
+        "properties.parameters.storageAccountSkuName.value",
+        "properties.parameters.vnetAddressPrefix.value",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.authorizations",
+        "properties.createdBy",
+        "properties.createdBy.applicationId",
+        "properties.createdBy.oid",
+        "properties.createdBy.puid",
+        "properties.createdDateTime",
+        "properties.diskEncryptionSetId",
+        "properties.encryption",
+        "properties.encryption.entities.managedDisk",
+        "properties.encryption.entities.managedDisk.rotationToLatestKeyVersionEnabled",
+        "properties.encryption.entities.managedServices",
+        "properties.encryption.entities.managedServices.keyVaultProperties",
+        "properties.managedDiskIdentity",
+        "properties.managedDiskIdentity.principalId",
+        "properties.managedDiskIdentity.tenantId",
+        "properties.managedDiskIdentity.type",
+        "properties.parameters",
+        "properties.parameters.amlWorkspaceId",
+        "properties.parameters.amlWorkspaceId.type",
+        "properties.parameters.customPrivateSubnetName",
+        "properties.parameters.customPrivateSubnetName.type",
+        "properties.parameters.customPublicSubnetName",
+        "properties.parameters.customPublicSubnetName.type",
+        "properties.parameters.customVirtualNetworkId",
+        "properties.parameters.customVirtualNetworkId.type",
+        "properties.parameters.enableNoPublicIp",
+        "properties.parameters.enableNoPublicIp.type",
+        "properties.parameters.encryption",
+        "properties.parameters.encryption.type",
+        "properties.parameters.encryption.value",
+        "properties.parameters.encryption.value.KeyName",
+        "properties.parameters.encryption.value.keySource",
+        "properties.parameters.encryption.value.keyvaulturi",
+        "properties.parameters.encryption.value.keyversion",
+        "properties.parameters.loadBalancerBackendPoolName",
+        "properties.parameters.loadBalancerBackendPoolName.type",
+        "properties.parameters.loadBalancerId",
+        "properties.parameters.loadBalancerId.type",
+        "properties.parameters.natGatewayName",
+        "properties.parameters.natGatewayName.type",
+        "properties.parameters.prepareEncryption",
+        "properties.parameters.prepareEncryption.type",
+        "properties.parameters.publicIpName",
+        "properties.parameters.publicIpName.type",
+        "properties.parameters.requireInfrastructureEncryption",
+        "properties.parameters.requireInfrastructureEncryption.type",
+        "properties.parameters.resourceTags",
+        "properties.parameters.resourceTags.type",
+        "properties.parameters.storageAccountName",
+        "properties.parameters.storageAccountName.type",
+        "properties.parameters.storageAccountSkuName",
+        "properties.parameters.storageAccountSkuName.type",
+        "properties.parameters.vnetAddressPrefix",
+        "properties.parameters.vnetAddressPrefix.type",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.requiredNsgRules",
+        "properties.storageAccountIdentity",
+        "properties.storageAccountIdentity.principalId",
+        "properties.storageAccountIdentity.tenantId",
+        "properties.storageAccountIdentity.type",
+        "properties.uiDefinitionUri",
+        "properties.updatedBy",
+        "properties.updatedBy.applicationId",
+        "properties.updatedBy.oid",
+        "properties.updatedBy.puid",
+        "properties.workspaceId",
+        "properties.workspaceUrl",
+        "sku",
+        "sku.tier",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Update",
+      "bodySchema": "WorkspaceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Databricks/workspaces",
+      "operationId": "Workspaces_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Databricks/workspaces",
+      "operationId": "Workspaces_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

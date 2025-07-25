@@ -1,0 +1,265 @@
+{
+  "resource": "Azure::Insights::Workbooks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/workbooks",
+      "operationId": "Workbooks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "category",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Category of workbook to return."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "array",
+          "in": "query",
+          "description": "Tags presents on each workbook returned."
+        },
+        {
+          "name": "canFetchContent",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag indicating whether or not to return the full content for each applicable workbook. If false, only return summary content for workbooks."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooks",
+      "operationId": "Workbooks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "category",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Category of workbook to return."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "array",
+          "in": "query",
+          "description": "Tags presents on each workbook returned."
+        },
+        {
+          "name": "sourceId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Azure Resource Id that will fetch all linked workbooks."
+        },
+        {
+          "name": "canFetchContent",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag indicating whether or not to return the full content for each applicable workbook. If false, only return summary content for workbooks."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooks/{resourceName}",
+      "operationId": "Workbooks_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooks/{resourceName}",
+      "operationId": "Workbooks_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooks/{resourceName}",
+      "operationId": "Workbooks_CreateOrUpdate",
+      "bodySchema": "Workbook",
+      "requiredProperties": [
+        "properties.category",
+        "properties.displayName",
+        "properties.serializedData"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "identity.userAssignedIdentities.clientId",
+        "identity.userAssignedIdentities.principalId",
+        "identity.userAssignedIdentities.tenantId",
+        "kind",
+        "location",
+        "name",
+        "properties",
+        "properties.sourceId",
+        "properties.storageUri",
+        "properties.tags",
+        "properties.timeModified",
+        "properties.userId",
+        "properties.version",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "sourceId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Azure Resource Id that will fetch all linked workbooks."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/workbooks/{resourceName}",
+      "operationId": "Workbooks_Update",
+      "bodySchema": "WorkbookUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "kind",
+        "properties",
+        "properties.category",
+        "properties.displayName",
+        "properties.serializedData",
+        "properties.tags",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "sourceId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Azure Resource Id that will fetch all linked workbooks."
+        }
+      ]
+    }
+  ]
+}

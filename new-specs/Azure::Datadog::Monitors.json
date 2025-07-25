@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::Datadog::Monitors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Datadog/monitors",
+      "operationId": "Monitors_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Datadog/monitors",
+      "operationId": "Monitors_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Datadog/monitors/{monitorName}",
+      "operationId": "Monitors_Get",
+      "pathParameters": [
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Datadog/monitors/{monitorName}",
+      "operationId": "Monitors_Create",
+      "bodySchema": "DatadogMonitorResource",
+      "requiredProperties": [
+        "location",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "name",
+        "properties",
+        "properties.datadogOrganizationProperties",
+        "properties.datadogOrganizationProperties.apiKey",
+        "properties.datadogOrganizationProperties.applicationKey",
+        "properties.datadogOrganizationProperties.enterpriseAppId",
+        "properties.datadogOrganizationProperties.id",
+        "properties.datadogOrganizationProperties.linkingAuthCode",
+        "properties.datadogOrganizationProperties.linkingClientId",
+        "properties.datadogOrganizationProperties.name",
+        "properties.datadogOrganizationProperties.redirectUri",
+        "properties.liftrResourceCategory",
+        "properties.liftrResourcePreference",
+        "properties.marketplaceSubscriptionStatus",
+        "properties.monitoringStatus",
+        "properties.provisioningState",
+        "properties.userInfo",
+        "properties.userInfo.emailAddress",
+        "properties.userInfo.name",
+        "properties.userInfo.phoneNumber",
+        "sku",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Datadog/monitors/{monitorName}",
+      "operationId": "Monitors_Update",
+      "bodySchema": "DatadogMonitorResourceUpdateParameters",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.monitoringStatus",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Datadog/monitors/{monitorName}",
+      "operationId": "Monitors_Delete",
+      "pathParameters": [
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

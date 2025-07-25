@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::AVS::Segments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/segments",
+      "operationId": "WorkloadNetworks_ListSegments",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/segments/{segmentId}",
+      "operationId": "WorkloadNetworks_GetSegment",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "segmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the NSX Segment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/segments/{segmentId}",
+      "operationId": "WorkloadNetworks_CreateSegments",
+      "bodySchema": "WorkloadNetworkSegment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.connectedGateway",
+        "properties.displayName",
+        "properties.portVif",
+        "properties.provisioningState",
+        "properties.revision",
+        "properties.status",
+        "properties.subnet",
+        "properties.subnet.dhcpRanges",
+        "properties.subnet.gatewayAddress"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "segmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the NSX Segment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/segments/{segmentId}",
+      "operationId": "WorkloadNetworks_UpdateSegments",
+      "bodySchema": "WorkloadNetworkSegment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.connectedGateway",
+        "properties.displayName",
+        "properties.portVif",
+        "properties.provisioningState",
+        "properties.revision",
+        "properties.status",
+        "properties.subnet",
+        "properties.subnet.dhcpRanges",
+        "properties.subnet.gatewayAddress"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "segmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the NSX Segment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/segments/{segmentId}",
+      "operationId": "WorkloadNetworks_DeleteSegment",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "segmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the NSX Segment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

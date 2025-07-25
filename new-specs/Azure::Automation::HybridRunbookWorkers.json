@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::Automation::HybridRunbookWorkers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/hybridRunbookWorkerGroups/{hybridRunbookWorkerGroupName}/hybridRunbookWorkers/{hybridRunbookWorkerId}",
+      "operationId": "HybridRunbookWorkers_Delete",
+      "pathParameters": [
+        {
+          "name": "hybridRunbookWorkerGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker group name"
+        },
+        {
+          "name": "hybridRunbookWorkerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker id"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/hybridRunbookWorkerGroups/{hybridRunbookWorkerGroupName}/hybridRunbookWorkers/{hybridRunbookWorkerId}",
+      "operationId": "HybridRunbookWorkers_Get",
+      "pathParameters": [
+        {
+          "name": "hybridRunbookWorkerGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker group name"
+        },
+        {
+          "name": "hybridRunbookWorkerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker id"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/hybridRunbookWorkerGroups/{hybridRunbookWorkerGroupName}/hybridRunbookWorkers/{hybridRunbookWorkerId}",
+      "operationId": "HybridRunbookWorkers_Create",
+      "bodySchema": "HybridRunbookWorkerCreateParameters",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "name",
+        "properties.vmResourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "hybridRunbookWorkerGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker group name"
+        },
+        {
+          "name": "hybridRunbookWorkerId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker id"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/hybridRunbookWorkerGroups/{hybridRunbookWorkerGroupName}/hybridRunbookWorkers",
+      "operationId": "HybridRunbookWorkers_ListByHybridRunbookWorkerGroup",
+      "pathParameters": [
+        {
+          "name": "hybridRunbookWorkerGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The hybrid runbook worker group name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

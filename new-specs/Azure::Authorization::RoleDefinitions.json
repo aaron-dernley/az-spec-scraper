@@ -1,0 +1,108 @@
+{
+  "resource": "Azure::Authorization::RoleDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}",
+      "operationId": "RoleDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role definition."
+        },
+        {
+          "name": "roleDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the role definition to delete."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}",
+      "operationId": "RoleDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role definition."
+        },
+        {
+          "name": "roleDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the role definition."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}",
+      "operationId": "RoleDefinitions_CreateOrUpdate",
+      "bodySchema": "RoleDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.assignableScopes",
+        "properties.description",
+        "properties.permissions",
+        "properties.roleName",
+        "properties.type",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role definition."
+        },
+        {
+          "name": "roleDefinitionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the role definition."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleDefinitions",
+      "operationId": "RoleDefinitions_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role definition."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. Use atScopeAndBelow filter to search below the given scope as well."
+        }
+      ]
+    }
+  ]
+}

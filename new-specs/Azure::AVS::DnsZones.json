@@ -1,0 +1,203 @@
+{
+  "resource": "Azure::AVS::DnsZones",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones",
+      "operationId": "WorkloadNetworks_ListDnsZones",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones/{dnsZoneId}",
+      "operationId": "WorkloadNetworks_GetDnsZone",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "dnsZoneId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "ID of the DNS zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones/{dnsZoneId}",
+      "operationId": "WorkloadNetworks_CreateDnsZone",
+      "bodySchema": "WorkloadNetworkDnsZone",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.dnsServerIps",
+        "properties.dnsServices",
+        "properties.domain",
+        "properties.provisioningState",
+        "properties.revision",
+        "properties.sourceIp"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "dnsZoneId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "ID of the DNS zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones/{dnsZoneId}",
+      "operationId": "WorkloadNetworks_UpdateDnsZone",
+      "bodySchema": "WorkloadNetworkDnsZone",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.dnsServerIps",
+        "properties.dnsServices",
+        "properties.domain",
+        "properties.provisioningState",
+        "properties.revision",
+        "properties.sourceIp"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "dnsZoneId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "ID of the DNS zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones/{dnsZoneId}",
+      "operationId": "WorkloadNetworks_DeleteDnsZone",
+      "pathParameters": [
+        {
+          "name": "dnsZoneId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "ID of the DNS zone."
+        },
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

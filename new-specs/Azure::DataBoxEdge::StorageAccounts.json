@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::DataBoxEdge::StorageAccounts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/storageAccounts",
+      "operationId": "StorageAccounts_ListByDataBoxEdgeDevice",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/storageAccounts/{storageAccountName}",
+      "operationId": "StorageAccounts_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "storageAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The storage account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/storageAccounts/{storageAccountName}",
+      "operationId": "StorageAccounts_CreateOrUpdate",
+      "bodySchema": "StorageAccount",
+      "requiredProperties": [
+        "properties",
+        "properties.dataPolicy"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.blobEndpoint",
+        "properties.containerCount",
+        "properties.description",
+        "properties.storageAccountCredentialId",
+        "properties.storageAccountStatus",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "storageAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The StorageAccount name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}/storageAccounts/{storageAccountName}",
+      "operationId": "StorageAccounts_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "storageAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The StorageAccount name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

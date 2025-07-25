@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::Network::FrontDoorWebApplicationFirewallPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies",
+      "operationId": "Policies_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies",
+      "operationId": "Policies_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Web Application Firewall Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_CreateOrUpdate",
+      "bodySchema": "WebApplicationFirewallPolicy",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.customRules",
+        "properties.customRules.rules",
+        "properties.frontendEndpointLinks",
+        "properties.managedRules",
+        "properties.managedRules.managedRuleSets",
+        "properties.policySettings",
+        "properties.policySettings.customBlockResponseBody",
+        "properties.policySettings.customBlockResponseStatusCode",
+        "properties.policySettings.enabledState",
+        "properties.policySettings.javascriptChallengeExpirationInMinutes",
+        "properties.policySettings.logScrubbing",
+        "properties.policySettings.logScrubbing.scrubbingRules",
+        "properties.policySettings.logScrubbing.state",
+        "properties.policySettings.mode",
+        "properties.policySettings.redirectUrl",
+        "properties.policySettings.requestBodyCheck",
+        "properties.provisioningState",
+        "properties.resourceState",
+        "properties.routingRuleLinks",
+        "properties.securityPolicyLinks",
+        "sku",
+        "sku.name"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Web Application Firewall Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Update",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Web Application Firewall Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Web Application Firewall Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

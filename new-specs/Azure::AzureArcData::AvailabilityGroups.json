@@ -1,0 +1,247 @@
+{
+  "resource": "Azure::AzureArcData::AvailabilityGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/availabilityGroups/{availabilityGroupName}",
+      "operationId": "SqlServerAvailabilityGroups_Create",
+      "bodySchema": "SqlServerAvailabilityGroupResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.availabilityGroupId",
+        "properties.collectionTimestamp",
+        "properties.databases",
+        "properties.databases.nextLink",
+        "properties.databases.value",
+        "properties.info",
+        "properties.info.automatedBackupPreferenceDescription",
+        "properties.info.basicFeatures",
+        "properties.info.clusterTypeDescription",
+        "properties.info.dbFailover",
+        "properties.info.dtcSupport",
+        "properties.info.failureConditionLevel",
+        "properties.info.healthCheckTimeout",
+        "properties.info.isContained",
+        "properties.info.isDistributed",
+        "properties.info.primaryRecoveryHealthDescription",
+        "properties.info.primaryReplica",
+        "properties.info.replicationPartnerType",
+        "properties.info.requiredSynchronizedSecondariesToCommit",
+        "properties.info.secondaryRecoveryHealthDescription",
+        "properties.info.synchronizationHealthDescription",
+        "properties.info.version",
+        "properties.instanceName",
+        "properties.provisioningState",
+        "properties.replicas",
+        "properties.replicas.nextLink",
+        "properties.replicas.value",
+        "properties.serverName"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "availabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Availability Group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/availabilityGroups/{availabilityGroupName}",
+      "operationId": "SqlServerAvailabilityGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "availabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Availability Group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/availabilityGroups/{availabilityGroupName}",
+      "operationId": "SqlServerAvailabilityGroups_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "availabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Availability Group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/availabilityGroups/{availabilityGroupName}",
+      "operationId": "SqlServerAvailabilityGroups_Update",
+      "bodySchema": "SqlServerAvailabilityGroupUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.availabilityGroupId",
+        "properties.collectionTimestamp",
+        "properties.databases",
+        "properties.databases.nextLink",
+        "properties.databases.value",
+        "properties.info",
+        "properties.info.automatedBackupPreferenceDescription",
+        "properties.info.basicFeatures",
+        "properties.info.clusterTypeDescription",
+        "properties.info.dbFailover",
+        "properties.info.dtcSupport",
+        "properties.info.failureConditionLevel",
+        "properties.info.healthCheckTimeout",
+        "properties.info.isContained",
+        "properties.info.isDistributed",
+        "properties.info.primaryRecoveryHealthDescription",
+        "properties.info.primaryReplica",
+        "properties.info.replicationPartnerType",
+        "properties.info.requiredSynchronizedSecondariesToCommit",
+        "properties.info.secondaryRecoveryHealthDescription",
+        "properties.info.synchronizationHealthDescription",
+        "properties.info.version",
+        "properties.instanceName",
+        "properties.provisioningState",
+        "properties.replicas",
+        "properties.replicas.nextLink",
+        "properties.replicas.value",
+        "properties.serverName",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "availabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Availability Group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/availabilityGroups",
+      "operationId": "SqlServerAvailabilityGroups_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

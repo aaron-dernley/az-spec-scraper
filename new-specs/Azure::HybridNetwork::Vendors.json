@@ -1,0 +1,95 @@
+{
+  "resource": "Azure::HybridNetwork::Vendors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}",
+      "operationId": "Vendors_Delete",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}",
+      "operationId": "Vendors_Get",
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors/{vendorName}",
+      "operationId": "Vendors_CreateOrUpdate",
+      "bodySchema": "Vendor",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.skus",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "vendorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vendor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridNetwork/vendors",
+      "operationId": "Vendors_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

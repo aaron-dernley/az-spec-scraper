@@ -1,0 +1,210 @@
+{
+  "resource": "Azure::Network::ConnectionMonitors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}",
+      "operationId": "ConnectionMonitors_CreateOrUpdate",
+      "bodySchema": "ConnectionMonitor",
+      "requiredProperties": [
+        "properties",
+        "properties.source.resourceId"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties.autoStart",
+        "properties.destination",
+        "properties.destination.address",
+        "properties.destination.port",
+        "properties.destination.resourceId",
+        "properties.endpoints",
+        "properties.monitoringIntervalInSeconds",
+        "properties.notes",
+        "properties.outputs",
+        "properties.source",
+        "properties.source.port",
+        "properties.testConfigurations",
+        "properties.testGroups",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing Network Watcher."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Watcher resource."
+        },
+        {
+          "name": "connectionMonitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "migrate",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Value indicating whether connection monitor V1 should be migrated to V2 format."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}",
+      "operationId": "ConnectionMonitors_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing Network Watcher."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Watcher resource."
+        },
+        {
+          "name": "connectionMonitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}",
+      "operationId": "ConnectionMonitors_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing Network Watcher."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Watcher resource."
+        },
+        {
+          "name": "connectionMonitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors/{connectionMonitorName}",
+      "operationId": "ConnectionMonitors_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network watcher."
+        },
+        {
+          "name": "connectionMonitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection monitor."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/connectionMonitors",
+      "operationId": "ConnectionMonitors_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing Network Watcher."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Watcher resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

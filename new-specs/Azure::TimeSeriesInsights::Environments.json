@@ -1,0 +1,241 @@
+{
+  "resource": "Azure::TimeSeriesInsights::Environments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.TimeSeriesInsights/environments/{environmentName}",
+      "operationId": "Environments_CreateOrUpdate",
+      "bodySchema": "EnvironmentCreateOrUpdateParameters",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.dataRetentionTime",
+        "sku",
+        "sku.capacity",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties.partitionKeyProperties",
+        "properties.storageLimitExceededBehavior",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of an Azure Resource group."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the environment"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.TimeSeriesInsights/environments/{environmentName}",
+      "operationId": "Environments_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of an Azure Resource group."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Time Series Insights environment associated with the specified resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.TimeSeriesInsights/environments/{environmentName}",
+      "operationId": "Environments_Update",
+      "bodySchema": "EnvironmentUpdateParameters",
+      "requiredProperties": [
+        "sku.capacity",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.dataRetentionTime",
+        "properties.partitionKeyProperties",
+        "properties.storageLimitExceededBehavior",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of an Azure Resource group."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Time Series Insights environment associated with the specified resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.TimeSeriesInsights/environments/{environmentName}",
+      "operationId": "Environments_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of an Azure Resource group."
+        },
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Time Series Insights environment associated with the specified resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.TimeSeriesInsights/environments",
+      "operationId": "Environments_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of an Azure Resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.TimeSeriesInsights/environments",
+      "operationId": "Environments_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure Subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

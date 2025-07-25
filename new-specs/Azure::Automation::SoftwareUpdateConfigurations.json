@@ -1,0 +1,209 @@
+{
+  "resource": "Azure::Automation::SoftwareUpdateConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations/{softwareUpdateConfigurationName}",
+      "operationId": "SoftwareUpdateConfigurations_Create",
+      "bodySchema": "softwareUpdateConfiguration",
+      "requiredProperties": [
+        "properties",
+        "properties.scheduleInfo",
+        "properties.updateConfiguration",
+        "properties.updateConfiguration.operatingSystem"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.createdBy",
+        "properties.creationTime",
+        "properties.error",
+        "properties.lastModifiedBy",
+        "properties.lastModifiedTime",
+        "properties.provisioningState",
+        "properties.scheduleInfo.advancedSchedule",
+        "properties.scheduleInfo.advancedSchedule.monthDays",
+        "properties.scheduleInfo.advancedSchedule.monthlyOccurrences",
+        "properties.scheduleInfo.advancedSchedule.weekDays",
+        "properties.scheduleInfo.creationTime",
+        "properties.scheduleInfo.description",
+        "properties.scheduleInfo.expiryTime",
+        "properties.scheduleInfo.expiryTimeOffsetMinutes",
+        "properties.scheduleInfo.frequency",
+        "properties.scheduleInfo.interval",
+        "properties.scheduleInfo.isEnabled",
+        "properties.scheduleInfo.lastModifiedTime",
+        "properties.scheduleInfo.nextRun",
+        "properties.scheduleInfo.nextRunOffsetMinutes",
+        "properties.scheduleInfo.startTime",
+        "properties.scheduleInfo.startTimeOffsetMinutes",
+        "properties.scheduleInfo.timeZone",
+        "properties.tasks",
+        "properties.tasks.postTask",
+        "properties.tasks.postTask.parameters",
+        "properties.tasks.postTask.source",
+        "properties.tasks.preTask",
+        "properties.tasks.preTask.parameters",
+        "properties.tasks.preTask.source",
+        "properties.updateConfiguration.azureVirtualMachines",
+        "properties.updateConfiguration.duration",
+        "properties.updateConfiguration.linux",
+        "properties.updateConfiguration.linux.excludedPackageNameMasks",
+        "properties.updateConfiguration.linux.includedPackageClassifications",
+        "properties.updateConfiguration.linux.includedPackageNameMasks",
+        "properties.updateConfiguration.linux.rebootSetting",
+        "properties.updateConfiguration.nonAzureComputerNames",
+        "properties.updateConfiguration.targets",
+        "properties.updateConfiguration.targets.azureQueries",
+        "properties.updateConfiguration.targets.nonAzureQueries",
+        "properties.updateConfiguration.windows",
+        "properties.updateConfiguration.windows.excludedKbNumbers",
+        "properties.updateConfiguration.windows.includedKbNumbers",
+        "properties.updateConfiguration.windows.includedUpdateClassifications",
+        "properties.updateConfiguration.windows.rebootSetting",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "softwareUpdateConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the software update configuration to be created."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations/{softwareUpdateConfigurationName}",
+      "operationId": "SoftwareUpdateConfigurations_GetByName",
+      "pathParameters": [
+        {
+          "name": "softwareUpdateConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the software update configuration to be created."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations/{softwareUpdateConfigurationName}",
+      "operationId": "SoftwareUpdateConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "softwareUpdateConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the software update configuration to be created."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations",
+      "operationId": "SoftwareUpdateConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

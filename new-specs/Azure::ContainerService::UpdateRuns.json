@@ -1,0 +1,171 @@
+{
+  "resource": "Azure::ContainerService::UpdateRuns",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns",
+      "operationId": "UpdateRuns_ListByFleet",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_Get",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateRun resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_CreateOrUpdate",
+      "bodySchema": "UpdateRun",
+      "requiredProperties": [
+        "properties.managedClusterUpdate",
+        "properties.managedClusterUpdate.nodeImageSelection.type",
+        "properties.managedClusterUpdate.upgrade",
+        "properties.managedClusterUpdate.upgrade.type",
+        "properties.strategy.stages"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.autoUpgradeProfileId",
+        "properties.managedClusterUpdate.nodeImageSelection",
+        "properties.managedClusterUpdate.nodeImageSelection.customNodeImageVersions",
+        "properties.managedClusterUpdate.upgrade.kubernetesVersion",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.nodeImageSelection",
+        "properties.status.nodeImageSelection.selectedNodeImageVersions",
+        "properties.status.stages",
+        "properties.status.status",
+        "properties.status.status.completedTime",
+        "properties.status.status.error",
+        "properties.status.status.startTime",
+        "properties.status.status.state",
+        "properties.strategy",
+        "properties.updateStrategyId"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateRun resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_Delete",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateRun resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

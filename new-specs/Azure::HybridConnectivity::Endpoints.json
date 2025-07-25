@@ -1,0 +1,127 @@
+{
+  "resource": "Azure::HybridConnectivity::Endpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints",
+      "operationId": "Endpoints_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}",
+      "operationId": "Endpoints_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}",
+      "operationId": "Endpoints_CreateOrUpdate",
+      "bodySchema": "EndpointResource",
+      "requiredProperties": [
+        "properties.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.resourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}",
+      "operationId": "Endpoints_Update",
+      "bodySchema": "EndpointResource",
+      "requiredProperties": [
+        "properties.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.resourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}",
+      "operationId": "Endpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

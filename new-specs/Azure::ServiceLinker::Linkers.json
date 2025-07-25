@@ -1,0 +1,144 @@
+{
+  "resource": "Azure::ServiceLinker::Linkers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ServiceLinker/linkers",
+      "operationId": "Linker_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource to be connected."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ServiceLinker/linkers/{linkerName}",
+      "operationId": "Linker_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource to be connected."
+        },
+        {
+          "name": "linkerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name Linker resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ServiceLinker/linkers/{linkerName}",
+      "operationId": "Linker_CreateOrUpdate",
+      "bodySchema": "LinkerResource",
+      "requiredProperties": [
+        "properties",
+        "properties.authInfo.authType",
+        "properties.targetService.type"
+      ],
+      "optionalProperties": [
+        "properties.authInfo",
+        "properties.clientType",
+        "properties.provisioningState",
+        "properties.scope",
+        "properties.secretStore",
+        "properties.secretStore.keyVaultId",
+        "properties.targetService",
+        "properties.vNetSolution",
+        "properties.vNetSolution.type",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource to be connected."
+        },
+        {
+          "name": "linkerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name Linker resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ServiceLinker/linkers/{linkerName}",
+      "operationId": "Linker_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource to be connected."
+        },
+        {
+          "name": "linkerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name Linker resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.ServiceLinker/linkers/{linkerName}",
+      "operationId": "Linker_Update",
+      "bodySchema": "LinkerPatch",
+      "requiredProperties": [
+        "properties.authInfo.authType",
+        "properties.targetService.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.authInfo",
+        "properties.clientType",
+        "properties.provisioningState",
+        "properties.scope",
+        "properties.secretStore",
+        "properties.secretStore.keyVaultId",
+        "properties.targetService",
+        "properties.vNetSolution",
+        "properties.vNetSolution.type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource to be connected."
+        },
+        {
+          "name": "linkerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name Linker resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

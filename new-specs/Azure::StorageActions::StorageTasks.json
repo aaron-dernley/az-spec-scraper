@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::StorageActions::StorageTasks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StorageActions/storageTasks",
+      "operationId": "StorageTasks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageActions/storageTasks",
+      "operationId": "StorageTasks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageActions/storageTasks/{storageTaskName}",
+      "operationId": "StorageTasks_Get",
+      "pathParameters": [
+        {
+          "name": "storageTaskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task within the specified resource group. Storage task names must be between 3 and 18 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageActions/storageTasks/{storageTaskName}",
+      "operationId": "StorageTasks_Create",
+      "bodySchema": "StorageTask",
+      "requiredProperties": [
+        "identity",
+        "properties",
+        "properties.action",
+        "properties.action.else.operations",
+        "properties.action.if",
+        "properties.action.if.condition",
+        "properties.action.if.operations",
+        "properties.description",
+        "properties.enabled"
+      ],
+      "optionalProperties": [
+        "properties.action.else",
+        "properties.creationTimeInUtc",
+        "properties.provisioningState",
+        "properties.taskVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageTaskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task within the specified resource group. Storage task names must be between 3 and 18 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageActions/storageTasks/{storageTaskName}",
+      "operationId": "StorageTasks_Update",
+      "bodySchema": "StorageTaskUpdateParameters",
+      "requiredProperties": [
+        "properties.action.else.operations",
+        "properties.action.if",
+        "properties.action.if.condition",
+        "properties.action.if.operations"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.action",
+        "properties.action.else",
+        "properties.creationTimeInUtc",
+        "properties.description",
+        "properties.enabled",
+        "properties.provisioningState",
+        "properties.taskVersion",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageTaskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task within the specified resource group. Storage task names must be between 3 and 18 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageActions/storageTasks/{storageTaskName}",
+      "operationId": "StorageTasks_Delete",
+      "pathParameters": [
+        {
+          "name": "storageTaskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task within the specified resource group. Storage task names must be between 3 and 18 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

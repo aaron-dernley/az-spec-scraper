@@ -1,0 +1,192 @@
+{
+  "resource": "Azure::AzureSphere::Products",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products",
+      "operationId": "Products_ListByCatalog",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}",
+      "operationId": "Products_Get",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}",
+      "operationId": "Products_CreateOrUpdate",
+      "bodySchema": "Product",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}",
+      "operationId": "Products_Update",
+      "bodySchema": "ProductUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}",
+      "operationId": "Products_Delete",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

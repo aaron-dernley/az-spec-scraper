@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::Maps::Creators",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/creators",
+      "operationId": "Creators_ListByAccount",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/creators/{creatorName}",
+      "operationId": "Creators_CreateOrUpdate",
+      "bodySchema": "Creator",
+      "requiredProperties": [
+        "properties",
+        "properties.storageUnits"
+      ],
+      "optionalProperties": [
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Account."
+        },
+        {
+          "name": "creatorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Creator instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/creators/{creatorName}",
+      "operationId": "Creators_Update",
+      "bodySchema": "CreatorUpdateParameters",
+      "requiredProperties": [
+        "properties.storageUnits"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Account."
+        },
+        {
+          "name": "creatorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Creator instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/creators/{creatorName}",
+      "operationId": "Creators_Delete",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Account."
+        },
+        {
+          "name": "creatorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Creator instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Maps/accounts/{accountName}/creators/{creatorName}",
+      "operationId": "Creators_Get",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Account."
+        },
+        {
+          "name": "creatorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Maps Creator instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

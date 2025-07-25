@@ -1,0 +1,230 @@
+{
+  "resource": "Azure::CustomerInsights::RoleAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/roleAssignments",
+      "operationId": "RoleAssignments_ListByHub",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/roleAssignments/{assignmentName}",
+      "operationId": "RoleAssignments_CreateOrUpdate",
+      "bodySchema": "RoleAssignmentResourceFormat",
+      "requiredProperties": [
+        "properties.principals",
+        "properties.role"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.assignmentName",
+        "properties.conflationPolicies",
+        "properties.conflationPolicies.elements",
+        "properties.conflationPolicies.exceptions",
+        "properties.connectors",
+        "properties.connectors.elements",
+        "properties.connectors.exceptions",
+        "properties.description",
+        "properties.displayName",
+        "properties.interactions",
+        "properties.interactions.elements",
+        "properties.interactions.exceptions",
+        "properties.kpis",
+        "properties.kpis.elements",
+        "properties.kpis.exceptions",
+        "properties.links",
+        "properties.links.elements",
+        "properties.links.exceptions",
+        "properties.profiles",
+        "properties.profiles.elements",
+        "properties.profiles.exceptions",
+        "properties.provisioningState",
+        "properties.relationshipLinks",
+        "properties.relationshipLinks.elements",
+        "properties.relationshipLinks.exceptions",
+        "properties.relationships",
+        "properties.relationships.elements",
+        "properties.relationships.exceptions",
+        "properties.roleAssignments",
+        "properties.roleAssignments.elements",
+        "properties.roleAssignments.exceptions",
+        "properties.sasPolicies",
+        "properties.sasPolicies.elements",
+        "properties.sasPolicies.exceptions",
+        "properties.segments",
+        "properties.segments.elements",
+        "properties.segments.exceptions",
+        "properties.tenantId",
+        "properties.views",
+        "properties.views.elements",
+        "properties.views.exceptions",
+        "properties.widgetTypes",
+        "properties.widgetTypes.elements",
+        "properties.widgetTypes.exceptions",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "assignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The assignment name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/roleAssignments/{assignmentName}",
+      "operationId": "RoleAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "assignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the role assignment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/roleAssignments/{assignmentName}",
+      "operationId": "RoleAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "assignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the role assignment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

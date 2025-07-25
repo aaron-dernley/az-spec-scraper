@@ -1,0 +1,171 @@
+{
+  "resource": "Azure::DataReplication::FabricAgents",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationFabrics/{fabricName}/fabricAgents",
+      "operationId": "FabricAgent_List",
+      "pathParameters": [
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationFabrics/{fabricName}/fabricAgents/{fabricAgentName}",
+      "operationId": "FabricAgent_Get",
+      "pathParameters": [
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name."
+        },
+        {
+          "name": "fabricAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric agent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationFabrics/{fabricName}/fabricAgents/{fabricAgentName}",
+      "operationId": "FabricAgent_Create",
+      "bodySchema": "FabricAgentModel",
+      "requiredProperties": [
+        "properties.authenticationIdentity",
+        "properties.authenticationIdentity.aadAuthority",
+        "properties.authenticationIdentity.applicationId",
+        "properties.authenticationIdentity.audience",
+        "properties.authenticationIdentity.objectId",
+        "properties.authenticationIdentity.tenantId",
+        "properties.customProperties",
+        "properties.customProperties.instanceType",
+        "properties.machineId",
+        "properties.machineName",
+        "properties.resourceAccessIdentity",
+        "properties.resourceAccessIdentity.aadAuthority",
+        "properties.resourceAccessIdentity.applicationId",
+        "properties.resourceAccessIdentity.audience",
+        "properties.resourceAccessIdentity.objectId",
+        "properties.resourceAccessIdentity.tenantId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.correlationId",
+        "properties.healthErrors",
+        "properties.isResponsive",
+        "properties.lastHeartbeat",
+        "properties.provisioningState",
+        "properties.versionNumber"
+      ],
+      "pathParameters": [
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name."
+        },
+        {
+          "name": "fabricAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric agent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataReplication/replicationFabrics/{fabricName}/fabricAgents/{fabricAgentName}",
+      "operationId": "FabricAgent_Delete",
+      "pathParameters": [
+        {
+          "name": "fabricName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric name."
+        },
+        {
+          "name": "fabricAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fabric agent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

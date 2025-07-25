@@ -1,0 +1,240 @@
+{
+  "resource": "Azure::Sql::Rules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/baselines/{baselineName}/rules",
+      "operationId": "SqlVulnerabilityAssessmentRuleBaseline_ListByBaseline",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "systemDatabaseName",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The vulnerability assessment system database name."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/baselines/{baselineName}/rules/{ruleId}",
+      "operationId": "SqlVulnerabilityAssessmentRuleBaseline_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "systemDatabaseName",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The vulnerability assessment system database name."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/baselines/{baselineName}/rules/{ruleId}",
+      "operationId": "SqlVulnerabilityAssessmentRuleBaseline_CreateOrUpdate",
+      "bodySchema": "DatabaseSqlVulnerabilityAssessmentRuleBaselineInput",
+      "requiredProperties": [
+        "properties.latestScan",
+        "properties.results"
+      ],
+      "optionalProperties": [
+        "properties",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "systemDatabaseName",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The vulnerability assessment system database name."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/sqlVulnerabilityAssessments/{vulnerabilityAssessmentName}/baselines/{baselineName}/rules/{ruleId}",
+      "operationId": "SqlVulnerabilityAssessmentRuleBaselines_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "systemDatabaseName",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The vulnerability assessment system database name."
+        }
+      ]
+    }
+  ]
+}

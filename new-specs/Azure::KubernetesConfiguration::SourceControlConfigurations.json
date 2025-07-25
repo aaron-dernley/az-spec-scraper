@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::KubernetesConfiguration::SourceControlConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/{sourceControlConfigurationName}",
+      "operationId": "SourceControlConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "sourceControlConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Source Control Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/{sourceControlConfigurationName}",
+      "operationId": "SourceControlConfigurations_CreateOrUpdate",
+      "bodySchema": "SourceControlConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.complianceStatus",
+        "properties.complianceStatus.complianceState",
+        "properties.complianceStatus.lastConfigApplied",
+        "properties.complianceStatus.message",
+        "properties.complianceStatus.messageLevel",
+        "properties.configurationProtectedSettings",
+        "properties.enableHelmOperator",
+        "properties.helmOperatorProperties",
+        "properties.helmOperatorProperties.chartValues",
+        "properties.helmOperatorProperties.chartVersion",
+        "properties.operatorInstanceName",
+        "properties.operatorNamespace",
+        "properties.operatorParams",
+        "properties.operatorScope",
+        "properties.operatorType",
+        "properties.provisioningState",
+        "properties.repositoryPublicKey",
+        "properties.repositoryUrl",
+        "properties.sshKnownHostsContents",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "sourceControlConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Source Control Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/{sourceControlConfigurationName}",
+      "operationId": "SourceControlConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "sourceControlConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Source Control Configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations",
+      "operationId": "SourceControlConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterRp",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

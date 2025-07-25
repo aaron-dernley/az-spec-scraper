@@ -1,0 +1,260 @@
+{
+  "resource": "Azure::AzureArcData::SqlManagedInstances",
+  "version": "2021-11-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureArcData/sqlManagedInstances",
+      "operationId": "SqlManagedInstances_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlManagedInstances",
+      "operationId": "SqlManagedInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlManagedInstances/{sqlManagedInstanceName}",
+      "operationId": "SqlManagedInstances_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlManagedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Managed Instance"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlManagedInstances/{sqlManagedInstanceName}",
+      "operationId": "SqlManagedInstances_Create",
+      "bodySchema": "SqlManagedInstance",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "id",
+        "name",
+        "properties.admin",
+        "properties.basicLoginInformation",
+        "properties.basicLoginInformation.password",
+        "properties.basicLoginInformation.username",
+        "properties.clusterId",
+        "properties.dataControllerId",
+        "properties.endTime",
+        "properties.extensionId",
+        "properties.k8sRaw",
+        "properties.k8sRaw.spec",
+        "properties.k8sRaw.spec.replicas",
+        "properties.k8sRaw.spec.scheduling",
+        "properties.k8sRaw.spec.scheduling.default",
+        "properties.k8sRaw.spec.scheduling.default.resources",
+        "properties.k8sRaw.spec.scheduling.default.resources.limits",
+        "properties.k8sRaw.spec.scheduling.default.resources.requests",
+        "properties.lastUploadedDate",
+        "properties.licenseType",
+        "properties.provisioningState",
+        "properties.startTime",
+        "sku",
+        "sku.capacity",
+        "sku.dev",
+        "sku.family",
+        "sku.size",
+        "sku.tier",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlManagedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of SQL Managed Instances"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlManagedInstances/{sqlManagedInstanceName}",
+      "operationId": "SqlManagedInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlManagedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Sql Managed Instances"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlManagedInstances/{sqlManagedInstanceName}",
+      "operationId": "SqlManagedInstances_Update",
+      "bodySchema": "SqlManagedInstanceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlManagedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of sqlManagedInstance"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    }
+  ]
+}

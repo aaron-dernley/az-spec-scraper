@@ -1,0 +1,128 @@
+{
+  "resource": "Azure::HybridConnectivity::SolutionConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/solutionConfigurations",
+      "operationId": "SolutionConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/solutionConfigurations/{solutionConfiguration}",
+      "operationId": "SolutionConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "solutionConfiguration",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent Solution Configuration Resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/solutionConfigurations/{solutionConfiguration}",
+      "operationId": "SolutionConfigurations_CreateOrUpdate",
+      "bodySchema": "SolutionConfiguration",
+      "requiredProperties": [
+        "properties.solutionType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.lastSyncTime",
+        "properties.provisioningState",
+        "properties.solutionSettings",
+        "properties.status",
+        "properties.statusDetails"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "solutionConfiguration",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent Solution Configuration Resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/solutionConfigurations/{solutionConfiguration}",
+      "operationId": "SolutionConfigurations_Update",
+      "bodySchema": "SolutionConfigurationUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.solutionSettings",
+        "properties.solutionType"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "solutionConfiguration",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent Solution Configuration Resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/solutionConfigurations/{solutionConfiguration}",
+      "operationId": "SolutionConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "solutionConfiguration",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Represent Solution Configuration Resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

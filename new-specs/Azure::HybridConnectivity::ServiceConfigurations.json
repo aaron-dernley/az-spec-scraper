@@ -1,0 +1,160 @@
+{
+  "resource": "Azure::HybridConnectivity::ServiceConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}/serviceConfigurations",
+      "operationId": "ServiceConfigurations_ListByEndpointResource",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}/serviceConfigurations/{serviceConfigurationName}",
+      "operationId": "ServiceConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        },
+        {
+          "name": "serviceConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The service name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}/serviceConfigurations/{serviceConfigurationName}",
+      "operationId": "ServiceConfigurations_CreateOrupdate",
+      "bodySchema": "ServiceConfigurationResource",
+      "requiredProperties": [
+        "properties.serviceName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.port",
+        "properties.provisioningState",
+        "properties.resourceId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        },
+        {
+          "name": "serviceConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The service name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}/serviceConfigurations/{serviceConfigurationName}",
+      "operationId": "ServiceConfigurations_Update",
+      "bodySchema": "ServiceConfigurationResourcePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.port"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        },
+        {
+          "name": "serviceConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The service name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.HybridConnectivity/endpoints/{endpointName}/serviceConfigurations/{serviceConfigurationName}",
+      "operationId": "ServiceConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The endpoint name."
+        },
+        {
+          "name": "serviceConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The service name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

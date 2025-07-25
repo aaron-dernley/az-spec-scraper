@@ -1,0 +1,307 @@
+{
+  "resource": "Azure::CognitiveServices::Accounts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+      "operationId": "Accounts_Create",
+      "bodySchema": "Account",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "location",
+        "properties",
+        "properties.allowedFqdnList",
+        "properties.apiProperties",
+        "properties.apiProperties.aadClientId",
+        "properties.apiProperties.aadTenantId",
+        "properties.apiProperties.eventHubConnectionString",
+        "properties.apiProperties.qnaAzureSearchEndpointId",
+        "properties.apiProperties.qnaAzureSearchEndpointKey",
+        "properties.apiProperties.qnaRuntimeEndpoint",
+        "properties.apiProperties.statisticsEnabled",
+        "properties.apiProperties.storageAccountConnectionString",
+        "properties.apiProperties.superUser",
+        "properties.apiProperties.websiteName",
+        "properties.callRateLimit",
+        "properties.callRateLimit.count",
+        "properties.callRateLimit.renewalPeriod",
+        "properties.callRateLimit.rules",
+        "properties.capabilities",
+        "properties.customSubDomainName",
+        "properties.dateCreated",
+        "properties.deletionDate",
+        "properties.disableLocalAuth",
+        "properties.dynamicThrottlingEnabled",
+        "properties.encryption",
+        "properties.encryption.keySource",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.identityClientId",
+        "properties.encryption.keyVaultProperties.keyName",
+        "properties.encryption.keyVaultProperties.keyVaultUri",
+        "properties.encryption.keyVaultProperties.keyVersion",
+        "properties.endpoint",
+        "properties.endpoints",
+        "properties.internalId",
+        "properties.isMigrated",
+        "properties.migrationToken",
+        "properties.networkAcls",
+        "properties.networkAcls.defaultAction",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.quotaLimit",
+        "properties.quotaLimit.count",
+        "properties.quotaLimit.renewalPeriod",
+        "properties.quotaLimit.rules",
+        "properties.restore",
+        "properties.restrictOutboundNetworkAccess",
+        "properties.scheduledPurgeDate",
+        "properties.skuChangeInfo",
+        "properties.skuChangeInfo.countOfDowngrades",
+        "properties.skuChangeInfo.countOfUpgradesAfterDowngrades",
+        "properties.skuChangeInfo.lastChangeDate",
+        "properties.userOwnedStorage",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier",
+        "systemData",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+      "operationId": "Accounts_Update",
+      "bodySchema": "Account",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "location",
+        "properties",
+        "properties.allowedFqdnList",
+        "properties.apiProperties",
+        "properties.apiProperties.aadClientId",
+        "properties.apiProperties.aadTenantId",
+        "properties.apiProperties.eventHubConnectionString",
+        "properties.apiProperties.qnaAzureSearchEndpointId",
+        "properties.apiProperties.qnaAzureSearchEndpointKey",
+        "properties.apiProperties.qnaRuntimeEndpoint",
+        "properties.apiProperties.statisticsEnabled",
+        "properties.apiProperties.storageAccountConnectionString",
+        "properties.apiProperties.superUser",
+        "properties.apiProperties.websiteName",
+        "properties.callRateLimit",
+        "properties.callRateLimit.count",
+        "properties.callRateLimit.renewalPeriod",
+        "properties.callRateLimit.rules",
+        "properties.capabilities",
+        "properties.customSubDomainName",
+        "properties.dateCreated",
+        "properties.deletionDate",
+        "properties.disableLocalAuth",
+        "properties.dynamicThrottlingEnabled",
+        "properties.encryption",
+        "properties.encryption.keySource",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.identityClientId",
+        "properties.encryption.keyVaultProperties.keyName",
+        "properties.encryption.keyVaultProperties.keyVaultUri",
+        "properties.encryption.keyVaultProperties.keyVersion",
+        "properties.endpoint",
+        "properties.endpoints",
+        "properties.internalId",
+        "properties.isMigrated",
+        "properties.migrationToken",
+        "properties.networkAcls",
+        "properties.networkAcls.defaultAction",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.quotaLimit",
+        "properties.quotaLimit.count",
+        "properties.quotaLimit.renewalPeriod",
+        "properties.quotaLimit.rules",
+        "properties.restore",
+        "properties.restrictOutboundNetworkAccess",
+        "properties.scheduledPurgeDate",
+        "properties.skuChangeInfo",
+        "properties.skuChangeInfo.countOfDowngrades",
+        "properties.skuChangeInfo.countOfUpgradesAfterDowngrades",
+        "properties.skuChangeInfo.lastChangeDate",
+        "properties.userOwnedStorage",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier",
+        "systemData",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+      "operationId": "Accounts_Delete",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+      "operationId": "Accounts_Get",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Cognitive Services account."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts",
+      "operationId": "Accounts_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.CognitiveServices/accounts",
+      "operationId": "Accounts_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

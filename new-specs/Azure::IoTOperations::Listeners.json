@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::IoTOperations::Listeners",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/listeners",
+      "operationId": "BrokerListener_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/listeners/{listenerName}",
+      "operationId": "BrokerListener_Get",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "listenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker listener resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/listeners/{listenerName}",
+      "operationId": "BrokerListener_CreateOrUpdate",
+      "bodySchema": "BrokerListenerResource",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.ports"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.serviceName",
+        "properties.serviceType"
+      ],
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "listenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker listener resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}/listeners/{listenerName}",
+      "operationId": "BrokerListener_Delete",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "listenerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance broker listener resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

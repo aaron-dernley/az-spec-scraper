@@ -1,0 +1,212 @@
+{
+  "resource": "Azure::CustomerInsights::Views",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/views",
+      "operationId": "Views_ListByHub",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "userId",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The user ID. Use * to retrieve hub level views."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/views/{viewName}",
+      "operationId": "Views_CreateOrUpdate",
+      "bodySchema": "ViewResourceFormat",
+      "requiredProperties": [
+        "properties.definition"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.changed",
+        "properties.created",
+        "properties.displayName",
+        "properties.tenantId",
+        "properties.userId",
+        "properties.viewName",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the view."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/views/{viewName}",
+      "operationId": "Views_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the view."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "userId",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The user ID. Use * to retrieve hub level view."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/views/{viewName}",
+      "operationId": "Views_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "viewName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the view."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "userId",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The user ID. Use * to retrieve hub level view."
+        }
+      ]
+    }
+  ]
+}

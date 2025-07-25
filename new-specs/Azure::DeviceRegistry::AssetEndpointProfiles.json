@@ -1,0 +1,199 @@
+{
+  "resource": "Azure::DeviceRegistry::AssetEndpointProfiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles",
+      "operationId": "AssetEndpointProfiles_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles",
+      "operationId": "AssetEndpointProfiles_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles/{assetEndpointProfileName}",
+      "operationId": "AssetEndpointProfiles_Get",
+      "pathParameters": [
+        {
+          "name": "assetEndpointProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset Endpoint Profile name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles/{assetEndpointProfileName}",
+      "operationId": "AssetEndpointProfiles_CreateOrReplace",
+      "bodySchema": "AssetEndpointProfile",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.authentication.method",
+        "properties.authentication.usernamePasswordCredentials.passwordSecretName",
+        "properties.authentication.usernamePasswordCredentials.usernameSecretName",
+        "properties.authentication.x509Credentials.certificateSecretName",
+        "properties.endpointProfileType",
+        "properties.targetAddress"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.additionalConfiguration",
+        "properties.authentication",
+        "properties.authentication.usernamePasswordCredentials",
+        "properties.authentication.x509Credentials",
+        "properties.discoveredAssetEndpointProfileRef",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.errors",
+        "properties.uuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "assetEndpointProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset Endpoint Profile name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles/{assetEndpointProfileName}",
+      "operationId": "AssetEndpointProfiles_Update",
+      "bodySchema": "AssetEndpointProfileUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.additionalConfiguration",
+        "properties.authentication",
+        "properties.authentication.method",
+        "properties.authentication.usernamePasswordCredentials",
+        "properties.authentication.usernamePasswordCredentials.passwordSecretName",
+        "properties.authentication.usernamePasswordCredentials.usernameSecretName",
+        "properties.authentication.x509Credentials",
+        "properties.authentication.x509Credentials.certificateSecretName",
+        "properties.endpointProfileType",
+        "properties.targetAddress",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "assetEndpointProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset Endpoint Profile name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assetEndpointProfiles/{assetEndpointProfileName}",
+      "operationId": "AssetEndpointProfiles_Delete",
+      "pathParameters": [
+        {
+          "name": "assetEndpointProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset Endpoint Profile name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

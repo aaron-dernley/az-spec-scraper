@@ -1,0 +1,287 @@
+{
+  "resource": "Azure::VMwareCloudSimple::DedicatedCloudNodes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes",
+      "operationId": "DedicatedCloudNodes_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the list operation"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return"
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "to be used by nextLink implementation"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes",
+      "operationId": "DedicatedCloudNodes_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the list operation"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return"
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "to be used by nextLink implementation"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/{dedicatedCloudNodeName}",
+      "operationId": "DedicatedCloudNodes_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group"
+        },
+        {
+          "name": "dedicatedCloudNodeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "dedicated cloud node name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/{dedicatedCloudNodeName}",
+      "operationId": "DedicatedCloudNodes_CreateOrUpdate",
+      "bodySchema": "DedicatedCloudNode",
+      "requiredProperties": [
+        "location",
+        "properties.availabilityZoneId",
+        "properties.nodesCount",
+        "properties.placementGroupId",
+        "properties.purchaseId",
+        "properties.skuDescription.id",
+        "properties.skuDescription.name",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.availabilityZoneName",
+        "properties.cloudRackName",
+        "properties.created",
+        "properties.placementGroupName",
+        "properties.privateCloudId",
+        "properties.privateCloudName",
+        "properties.provisioningState",
+        "properties.skuDescription",
+        "properties.status",
+        "properties.vmwareClusterName",
+        "sku",
+        "sku.capacity",
+        "sku.description",
+        "sku.family",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group"
+        },
+        {
+          "name": "dedicatedCloudNodeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "dedicated cloud node name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/{dedicatedCloudNodeName}",
+      "operationId": "DedicatedCloudNodes_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group"
+        },
+        {
+          "name": "dedicatedCloudNodeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "dedicated cloud node name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/{dedicatedCloudNodeName}",
+      "operationId": "DedicatedCloudNodes_Update",
+      "bodySchema": "PatchPayload",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group"
+        },
+        {
+          "name": "dedicatedCloudNodeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "dedicated cloud node name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

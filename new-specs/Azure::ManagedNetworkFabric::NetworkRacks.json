@@ -1,0 +1,172 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkRacks",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkRacks/{networkRackName}",
+      "operationId": "NetworkRacks_Create",
+      "bodySchema": "NetworkRack",
+      "requiredProperties": [
+        "properties",
+        "properties.networkFabricId"
+      ],
+      "optionalProperties": [
+        "properties.networkDevices",
+        "properties.networkRackType",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkRackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Rack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkRacks/{networkRackName}",
+      "operationId": "NetworkRacks_Get",
+      "pathParameters": [
+        {
+          "name": "networkRackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Rack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkRacks/{networkRackName}",
+      "operationId": "NetworkRacks_Update",
+      "bodySchema": "NetworkRackPatch",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "networkRackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Rack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkRacks/{networkRackName}",
+      "operationId": "NetworkRacks_Delete",
+      "pathParameters": [
+        {
+          "name": "networkRackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Rack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkRacks",
+      "operationId": "NetworkRacks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkRacks",
+      "operationId": "NetworkRacks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

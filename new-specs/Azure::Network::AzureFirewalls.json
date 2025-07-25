@@ -1,0 +1,194 @@
+{
+  "resource": "Azure::Network::AzureFirewalls",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}",
+      "operationId": "AzureFirewalls_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureFirewallName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Firewall."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}",
+      "operationId": "AzureFirewalls_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureFirewallName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Firewall."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}",
+      "operationId": "AzureFirewalls_CreateOrUpdate",
+      "bodySchema": "AzureFirewall",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.additionalProperties",
+        "properties.applicationRuleCollections",
+        "properties.firewallPolicy",
+        "properties.hubIPAddresses",
+        "properties.hubIPAddresses.privateIPAddress",
+        "properties.hubIPAddresses.publicIPs",
+        "properties.hubIPAddresses.publicIPs.addresses",
+        "properties.hubIPAddresses.publicIPs.count",
+        "properties.ipConfigurations",
+        "properties.ipGroups",
+        "properties.managementIpConfiguration",
+        "properties.managementIpConfiguration.etag",
+        "properties.managementIpConfiguration.name",
+        "properties.managementIpConfiguration.properties",
+        "properties.managementIpConfiguration.properties.privateIPAddress",
+        "properties.managementIpConfiguration.properties.provisioningState",
+        "properties.managementIpConfiguration.properties.publicIPAddress",
+        "properties.managementIpConfiguration.properties.subnet",
+        "properties.managementIpConfiguration.type",
+        "properties.natRuleCollections",
+        "properties.networkRuleCollections",
+        "properties.provisioningState",
+        "properties.sku",
+        "properties.sku.name",
+        "properties.sku.tier",
+        "properties.threatIntelMode",
+        "properties.virtualHub",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureFirewallName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Firewall."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls/{azureFirewallName}",
+      "operationId": "AzureFirewalls_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "azureFirewallName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Firewall."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/azureFirewalls",
+      "operationId": "AzureFirewalls_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/azureFirewalls",
+      "operationId": "AzureFirewalls_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

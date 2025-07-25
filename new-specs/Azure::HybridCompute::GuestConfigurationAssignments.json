@@ -1,0 +1,174 @@
+{
+  "resource": "Azure::HybridCompute::GuestConfigurationAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments/{guestConfigurationAssignmentName}",
+      "operationId": "GuestConfigurationHCRPAssignments_CreateOrUpdate",
+      "bodySchema": "GuestConfigurationAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.assignmentHash",
+        "properties.complianceStatus",
+        "properties.context",
+        "properties.guestConfiguration",
+        "properties.guestConfiguration.assignmentType",
+        "properties.guestConfiguration.configurationParameter",
+        "properties.guestConfiguration.configurationProtectedParameter",
+        "properties.guestConfiguration.configurationSetting",
+        "properties.guestConfiguration.configurationSetting.actionAfterReboot",
+        "properties.guestConfiguration.configurationSetting.allowModuleOverwrite",
+        "properties.guestConfiguration.configurationSetting.configurationMode",
+        "properties.guestConfiguration.configurationSetting.configurationModeFrequencyMins",
+        "properties.guestConfiguration.configurationSetting.rebootIfNeeded",
+        "properties.guestConfiguration.configurationSetting.refreshFrequencyMins",
+        "properties.guestConfiguration.contentHash",
+        "properties.guestConfiguration.contentType",
+        "properties.guestConfiguration.contentUri",
+        "properties.guestConfiguration.kind",
+        "properties.guestConfiguration.name",
+        "properties.guestConfiguration.version",
+        "properties.lastComplianceStatusChecked",
+        "properties.latestReportId",
+        "properties.parameterHash",
+        "properties.provisioningState",
+        "properties.resourceType",
+        "properties.vmssVMList"
+      ],
+      "pathParameters": [
+        {
+          "name": "guestConfigurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the guest configuration assignment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments/{guestConfigurationAssignmentName}",
+      "operationId": "GuestConfigurationHCRPAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "guestConfigurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The guest configuration assignment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments/{guestConfigurationAssignmentName}",
+      "operationId": "GuestConfigurationHCRPAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "guestConfigurationAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the guest configuration assignment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments",
+      "operationId": "GuestConfigurationHCRPAssignments_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

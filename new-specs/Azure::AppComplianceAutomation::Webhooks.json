@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::AppComplianceAutomation::Webhooks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/webhooks",
+      "operationId": "Webhook_List",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip over when retrieving results."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Number of elements to return when retrieving results."
+        },
+        {
+          "name": "$select",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. ?$select=reportName,id."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData order by query option."
+        },
+        {
+          "name": "offerGuid",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The offerGuid which mapping to the reports."
+        },
+        {
+          "name": "reportCreatorTenantId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The tenant id of the report creator."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/webhooks/{webhookName}",
+      "operationId": "Webhook_Get",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "webhookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Webhook Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/webhooks/{webhookName}",
+      "operationId": "Webhook_CreateOrUpdate",
+      "bodySchema": "WebhookResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.contentType",
+        "properties.deliveryStatus",
+        "properties.enableSslVerification",
+        "properties.events",
+        "properties.payloadUrl",
+        "properties.provisioningState",
+        "properties.sendAllEvents",
+        "properties.status",
+        "properties.tenantId",
+        "properties.updateWebhookKey",
+        "properties.webhookId",
+        "properties.webhookKey",
+        "properties.webhookKeyEnabled"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "webhookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Webhook Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/webhooks/{webhookName}",
+      "operationId": "Webhook_Update",
+      "bodySchema": "WebhookResourcePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.contentType",
+        "properties.deliveryStatus",
+        "properties.enableSslVerification",
+        "properties.events",
+        "properties.payloadUrl",
+        "properties.provisioningState",
+        "properties.sendAllEvents",
+        "properties.status",
+        "properties.tenantId",
+        "properties.updateWebhookKey",
+        "properties.webhookId",
+        "properties.webhookKey",
+        "properties.webhookKeyEnabled"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "webhookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Webhook Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/webhooks/{webhookName}",
+      "operationId": "Webhook_Delete",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "webhookName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Webhook Name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

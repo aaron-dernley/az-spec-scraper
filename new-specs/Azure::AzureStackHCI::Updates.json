@@ -1,0 +1,171 @@
+{
+  "resource": "Azure::AzureStackHCI::Updates",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates",
+      "operationId": "Updates_List",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}",
+      "operationId": "Updates_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}",
+      "operationId": "Updates_Put",
+      "bodySchema": "Update",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.additionalProperties",
+        "properties.availabilityType",
+        "properties.componentVersions",
+        "properties.description",
+        "properties.displayName",
+        "properties.healthCheckDate",
+        "properties.healthCheckResult",
+        "properties.healthState",
+        "properties.installedDate",
+        "properties.packagePath",
+        "properties.packageSizeInMb",
+        "properties.packageType",
+        "properties.prerequisites",
+        "properties.provisioningState",
+        "properties.publisher",
+        "properties.rebootRequired",
+        "properties.releaseLink",
+        "properties.state",
+        "properties.updateStateProperties",
+        "properties.updateStateProperties.notifyMessage",
+        "properties.updateStateProperties.progressPercentage",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}",
+      "operationId": "Updates_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

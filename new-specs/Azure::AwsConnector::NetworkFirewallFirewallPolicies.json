@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::AwsConnector::NetworkFirewallFirewallPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies",
+      "operationId": "NetworkFirewallFirewallPolicies_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies",
+      "operationId": "NetworkFirewallFirewallPolicies_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies/{name}",
+      "operationId": "NetworkFirewallFirewallPolicies_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallFirewallPolicy"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies/{name}",
+      "operationId": "NetworkFirewallFirewallPolicies_CreateOrReplace",
+      "bodySchema": "NetworkFirewallFirewallPolicy",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.description",
+        "properties.awsProperties.firewallPolicy",
+        "properties.awsProperties.firewallPolicy.policyVariables",
+        "properties.awsProperties.firewallPolicy.policyVariables.ruleVariables",
+        "properties.awsProperties.firewallPolicy.statefulDefaultActions",
+        "properties.awsProperties.firewallPolicy.statefulEngineOptions",
+        "properties.awsProperties.firewallPolicy.statefulEngineOptions.ruleOrder",
+        "properties.awsProperties.firewallPolicy.statefulEngineOptions.streamExceptionPolicy",
+        "properties.awsProperties.firewallPolicy.statefulRuleGroupReferences",
+        "properties.awsProperties.firewallPolicy.statelessCustomActions",
+        "properties.awsProperties.firewallPolicy.statelessDefaultActions",
+        "properties.awsProperties.firewallPolicy.statelessFragmentDefaultActions",
+        "properties.awsProperties.firewallPolicy.statelessRuleGroupReferences",
+        "properties.awsProperties.firewallPolicy.tlsInspectionConfigurationArn",
+        "properties.awsProperties.firewallPolicyArn",
+        "properties.awsProperties.firewallPolicyId",
+        "properties.awsProperties.firewallPolicyName",
+        "properties.awsProperties.tags",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallFirewallPolicy"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies/{name}",
+      "operationId": "NetworkFirewallFirewallPolicies_Update",
+      "bodySchema": "NetworkFirewallFirewallPolicyTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallFirewallPolicy"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallFirewallPolicies/{name}",
+      "operationId": "NetworkFirewallFirewallPolicies_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallFirewallPolicy"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

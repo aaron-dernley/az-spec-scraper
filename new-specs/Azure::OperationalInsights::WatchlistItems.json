@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::OperationalInsights::WatchlistItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}/watchlistItems",
+      "operationId": "WatchlistItems_List",
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}/watchlistItems/{watchlistItemId}",
+      "operationId": "WatchlistItems_Get",
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "watchlistItemId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist item id (GUID)"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}/watchlistItems/{watchlistItemId}",
+      "operationId": "WatchlistItems_Delete",
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "watchlistItemId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist item id (GUID)"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}/watchlistItems/{watchlistItemId}",
+      "operationId": "WatchlistItems_CreateOrUpdate",
+      "bodySchema": "WatchlistItem",
+      "requiredProperties": [
+        "properties.itemsKeyValue"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.created",
+        "properties.createdBy",
+        "properties.entityMapping",
+        "properties.isDeleted",
+        "properties.tenantId",
+        "properties.updated",
+        "properties.updatedBy",
+        "properties.watchlistItemId",
+        "properties.watchlistItemType"
+      ],
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "watchlistItemId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist item id (GUID)"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "resource": "Azure::Insights::Logprofiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/logprofiles/{logProfileName}",
+      "operationId": "LogProfiles_Delete",
+      "pathParameters": [
+        {
+          "name": "logProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the log profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/logprofiles/{logProfileName}",
+      "operationId": "LogProfiles_Get",
+      "pathParameters": [
+        {
+          "name": "logProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the log profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/logprofiles/{logProfileName}",
+      "operationId": "LogProfiles_CreateOrUpdate",
+      "bodySchema": "LogProfileResource",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.categories",
+        "properties.locations",
+        "properties.retentionPolicy",
+        "properties.retentionPolicy.days",
+        "properties.retentionPolicy.enabled"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties.serviceBusRuleId",
+        "properties.storageAccountId",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "logProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the log profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/logprofiles/{logProfileName}",
+      "operationId": "LogProfiles_Update",
+      "bodySchema": "LogProfileResourcePatch",
+      "requiredProperties": [
+        "properties.categories",
+        "properties.locations",
+        "properties.retentionPolicy",
+        "properties.retentionPolicy.days",
+        "properties.retentionPolicy.enabled"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.serviceBusRuleId",
+        "properties.storageAccountId",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "logProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the log profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/logprofiles",
+      "operationId": "LogProfiles_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

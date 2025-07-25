@@ -1,0 +1,230 @@
+{
+  "resource": "Azure::RedHatOpenShift::OpenShiftClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.RedHatOpenShift/openShiftClusters",
+      "operationId": "OpenShiftClusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters",
+      "operationId": "OpenShiftClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}",
+      "operationId": "OpenShiftClusters_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}",
+      "operationId": "OpenShiftClusters_CreateOrUpdate",
+      "bodySchema": "OpenShiftCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.apiserverProfile",
+        "properties.apiserverProfile.ip",
+        "properties.apiserverProfile.url",
+        "properties.apiserverProfile.visibility",
+        "properties.clusterProfile",
+        "properties.clusterProfile.domain",
+        "properties.clusterProfile.fipsValidatedModules",
+        "properties.clusterProfile.pullSecret",
+        "properties.clusterProfile.resourceGroupId",
+        "properties.clusterProfile.version",
+        "properties.consoleProfile",
+        "properties.consoleProfile.url",
+        "properties.ingressProfiles",
+        "properties.masterProfile",
+        "properties.masterProfile.diskEncryptionSetId",
+        "properties.masterProfile.encryptionAtHost",
+        "properties.masterProfile.subnetId",
+        "properties.masterProfile.vmSize",
+        "properties.networkProfile",
+        "properties.networkProfile.outboundType",
+        "properties.networkProfile.podCidr",
+        "properties.networkProfile.preconfiguredNSG",
+        "properties.networkProfile.serviceCidr",
+        "properties.provisioningState",
+        "properties.servicePrincipalProfile",
+        "properties.servicePrincipalProfile.clientId",
+        "properties.servicePrincipalProfile.clientSecret",
+        "properties.workerProfiles",
+        "properties.workerProfilesStatus",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}",
+      "operationId": "OpenShiftClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}",
+      "operationId": "OpenShiftClusters_Update",
+      "bodySchema": "OpenShiftClusterUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.apiserverProfile",
+        "properties.apiserverProfile.ip",
+        "properties.apiserverProfile.url",
+        "properties.apiserverProfile.visibility",
+        "properties.clusterProfile",
+        "properties.clusterProfile.domain",
+        "properties.clusterProfile.fipsValidatedModules",
+        "properties.clusterProfile.pullSecret",
+        "properties.clusterProfile.resourceGroupId",
+        "properties.clusterProfile.version",
+        "properties.consoleProfile",
+        "properties.consoleProfile.url",
+        "properties.ingressProfiles",
+        "properties.masterProfile",
+        "properties.masterProfile.diskEncryptionSetId",
+        "properties.masterProfile.encryptionAtHost",
+        "properties.masterProfile.subnetId",
+        "properties.masterProfile.vmSize",
+        "properties.networkProfile",
+        "properties.networkProfile.outboundType",
+        "properties.networkProfile.podCidr",
+        "properties.networkProfile.preconfiguredNSG",
+        "properties.networkProfile.serviceCidr",
+        "properties.provisioningState",
+        "properties.servicePrincipalProfile",
+        "properties.servicePrincipalProfile.clientId",
+        "properties.servicePrincipalProfile.clientSecret",
+        "properties.workerProfiles",
+        "properties.workerProfilesStatus",
+        "systemData",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the OpenShift cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

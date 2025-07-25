@@ -1,0 +1,288 @@
+{
+  "resource": "Azure::DataBoxEdge::DataBoxEdgeDevices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+      "operationId": "Devices_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify $expand=details to populate additional fields related to the resource or Specify $skipToken=<token> to populate the next page in the list."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices",
+      "operationId": "Devices_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify $expand=details to populate additional fields related to the resource or Specify $skipToken=<token> to populate the next page in the list."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+      "operationId": "Devices_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+      "operationId": "Devices_CreateOrUpdate",
+      "bodySchema": "DataBoxEdgeDevice",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "kind",
+        "name",
+        "properties",
+        "properties.configuredRoleTypes",
+        "properties.culture",
+        "properties.dataBoxEdgeDeviceStatus",
+        "properties.dataResidency",
+        "properties.dataResidency.type",
+        "properties.description",
+        "properties.deviceHcsVersion",
+        "properties.deviceLocalCapacity",
+        "properties.deviceModel",
+        "properties.deviceSoftwareVersion",
+        "properties.deviceType",
+        "properties.edgeProfile",
+        "properties.edgeProfile.subscription",
+        "properties.edgeProfile.subscription.id",
+        "properties.edgeProfile.subscription.properties",
+        "properties.edgeProfile.subscription.properties.locationPlacementId",
+        "properties.edgeProfile.subscription.properties.quotaId",
+        "properties.edgeProfile.subscription.properties.registeredFeatures",
+        "properties.edgeProfile.subscription.properties.serializedDetails",
+        "properties.edgeProfile.subscription.properties.tenantId",
+        "properties.edgeProfile.subscription.registrationDate",
+        "properties.edgeProfile.subscription.registrationId",
+        "properties.edgeProfile.subscription.state",
+        "properties.edgeProfile.subscription.subscriptionId",
+        "properties.friendlyName",
+        "properties.modelDescription",
+        "properties.nodeCount",
+        "properties.resourceMoveDetails",
+        "properties.resourceMoveDetails.operationInProgress",
+        "properties.resourceMoveDetails.operationInProgressLockTimeoutInUTC",
+        "properties.serialNumber",
+        "properties.systemData",
+        "properties.timeZone",
+        "sku",
+        "sku.name",
+        "sku.tier",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+      "operationId": "Devices_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/{deviceName}",
+      "operationId": "Devices_Update",
+      "bodySchema": "DataBoxEdgeDevicePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "properties",
+        "properties.edgeProfile",
+        "properties.edgeProfile.subscription",
+        "properties.edgeProfile.subscription.id",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "resource": "Azure::AVS::PrivateClouds",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AVS/privateClouds",
+      "operationId": "PrivateClouds_ListInSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds",
+      "operationId": "PrivateClouds_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+      "operationId": "PrivateClouds_Get",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+      "operationId": "PrivateClouds_CreateOrUpdate",
+      "bodySchema": "PrivateCloud",
+      "requiredProperties": [
+        "properties.managementCluster",
+        "properties.networkBlock",
+        "sku"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.availability",
+        "properties.availability.secondaryZone",
+        "properties.availability.strategy",
+        "properties.availability.zone",
+        "properties.circuit",
+        "properties.circuit.expressRouteID",
+        "properties.circuit.expressRoutePrivatePeeringID",
+        "properties.circuit.primarySubnet",
+        "properties.circuit.secondarySubnet",
+        "properties.dnsZoneType",
+        "properties.encryption",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.autoDetectedKeyVersion",
+        "properties.encryption.keyVaultProperties.keyName",
+        "properties.encryption.keyVaultProperties.keyState",
+        "properties.encryption.keyVaultProperties.keyVaultUrl",
+        "properties.encryption.keyVaultProperties.keyVersion",
+        "properties.encryption.keyVaultProperties.versionType",
+        "properties.encryption.status",
+        "properties.endpoints",
+        "properties.endpoints.hcxCloudManager",
+        "properties.endpoints.hcxCloudManagerIp",
+        "properties.endpoints.nsxtManager",
+        "properties.endpoints.nsxtManagerIp",
+        "properties.endpoints.vcenterIp",
+        "properties.endpoints.vcsa",
+        "properties.extendedNetworkBlocks",
+        "properties.externalCloudLinks",
+        "properties.identitySources",
+        "properties.internet",
+        "properties.managementCluster.clusterId",
+        "properties.managementCluster.clusterSize",
+        "properties.managementCluster.hosts",
+        "properties.managementCluster.provisioningState",
+        "properties.managementCluster.vsanDatastoreName",
+        "properties.managementNetwork",
+        "properties.nsxPublicIpQuotaRaised",
+        "properties.nsxtCertificateThumbprint",
+        "properties.nsxtPassword",
+        "properties.provisioningNetwork",
+        "properties.provisioningState",
+        "properties.secondaryCircuit",
+        "properties.secondaryCircuit.expressRouteID",
+        "properties.secondaryCircuit.expressRoutePrivatePeeringID",
+        "properties.secondaryCircuit.primarySubnet",
+        "properties.secondaryCircuit.secondarySubnet",
+        "properties.vcenterCertificateThumbprint",
+        "properties.vcenterPassword",
+        "properties.virtualNetworkId",
+        "properties.vmotionNetwork"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+      "operationId": "PrivateClouds_Update",
+      "bodySchema": "PrivateCloudUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.availability",
+        "properties.availability.secondaryZone",
+        "properties.availability.strategy",
+        "properties.availability.zone",
+        "properties.dnsZoneType",
+        "properties.encryption",
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.autoDetectedKeyVersion",
+        "properties.encryption.keyVaultProperties.keyName",
+        "properties.encryption.keyVaultProperties.keyState",
+        "properties.encryption.keyVaultProperties.keyVaultUrl",
+        "properties.encryption.keyVaultProperties.keyVersion",
+        "properties.encryption.keyVaultProperties.versionType",
+        "properties.encryption.status",
+        "properties.extendedNetworkBlocks",
+        "properties.identitySources",
+        "properties.internet",
+        "properties.managementCluster",
+        "properties.managementCluster.clusterId",
+        "properties.managementCluster.clusterSize",
+        "properties.managementCluster.hosts",
+        "properties.managementCluster.provisioningState",
+        "properties.managementCluster.vsanDatastoreName",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}",
+      "operationId": "PrivateClouds_Delete",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

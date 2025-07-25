@@ -1,0 +1,204 @@
+{
+  "resource": "Azure::Network::Experiments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/NetworkExperimentProfiles/{profileName}/Experiments",
+      "operationId": "Experiments_ListByProfile",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Profile identifier associated with the Tenant and Partner"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/NetworkExperimentProfiles/{profileName}/Experiments/{experimentName}",
+      "operationId": "Experiments_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Profile identifier associated with the Tenant and Partner"
+        },
+        {
+          "name": "experimentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Experiment identifier associated with the Experiment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/NetworkExperimentProfiles/{profileName}/Experiments/{experimentName}",
+      "operationId": "Experiments_CreateOrUpdate",
+      "bodySchema": "Experiment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "name",
+        "properties",
+        "properties.description",
+        "properties.enabledState",
+        "properties.endpointA",
+        "properties.endpointA.endpoint",
+        "properties.endpointA.name",
+        "properties.endpointB",
+        "properties.endpointB.endpoint",
+        "properties.endpointB.name",
+        "properties.resourceState",
+        "properties.scriptFileUri",
+        "properties.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Profile identifier associated with the Tenant and Partner"
+        },
+        {
+          "name": "experimentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Experiment identifier associated with the Experiment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/NetworkExperimentProfiles/{profileName}/Experiments/{experimentName}",
+      "operationId": "Experiments_Update",
+      "bodySchema": "ExperimentUpdateModel",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.enabledState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Profile identifier associated with the Tenant and Partner"
+        },
+        {
+          "name": "experimentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Experiment identifier associated with the Experiment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/NetworkExperimentProfiles/{profileName}/Experiments/{experimentName}",
+      "operationId": "Experiments_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Profile identifier associated with the Tenant and Partner"
+        },
+        {
+          "name": "experimentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Experiment identifier associated with the Experiment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

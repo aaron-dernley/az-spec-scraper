@@ -1,0 +1,284 @@
+{
+  "resource": "Azure::ContainerRegistry::Tasks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}/tasks",
+      "operationId": "Tasks_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}/tasks/{taskName}",
+      "operationId": "Tasks_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        },
+        {
+          "name": "taskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry task."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}/tasks/{taskName}",
+      "operationId": "Tasks_Create",
+      "bodySchema": "Task",
+      "requiredProperties": [
+        "location",
+        "properties.platform",
+        "properties.platform.os",
+        "properties.step",
+        "properties.trigger.baseImageTrigger.baseImageTriggerType",
+        "properties.trigger.baseImageTrigger.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.agentConfiguration",
+        "properties.agentConfiguration.cpu",
+        "properties.creationDate",
+        "properties.credentials",
+        "properties.credentials.customRegistries",
+        "properties.credentials.sourceRegistry",
+        "properties.credentials.sourceRegistry.loginMode",
+        "properties.platform.architecture",
+        "properties.platform.variant",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.step.baseImageDependencies",
+        "properties.step.contextAccessToken",
+        "properties.step.contextPath",
+        "properties.step.type",
+        "properties.timeout",
+        "properties.trigger",
+        "properties.trigger.baseImageTrigger",
+        "properties.trigger.baseImageTrigger.status",
+        "properties.trigger.sourceTriggers",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        },
+        {
+          "name": "taskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry task."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}/tasks/{taskName}",
+      "operationId": "Tasks_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        },
+        {
+          "name": "taskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry task."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}/tasks/{taskName}",
+      "operationId": "Tasks_Update",
+      "bodySchema": "TaskUpdateParameters",
+      "requiredProperties": [
+        "properties.trigger.baseImageTrigger.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.agentConfiguration",
+        "properties.agentConfiguration.cpu",
+        "properties.credentials",
+        "properties.credentials.customRegistries",
+        "properties.credentials.sourceRegistry",
+        "properties.credentials.sourceRegistry.loginMode",
+        "properties.platform",
+        "properties.platform.architecture",
+        "properties.platform.os",
+        "properties.platform.variant",
+        "properties.status",
+        "properties.step",
+        "properties.step.contextAccessToken",
+        "properties.step.contextPath",
+        "properties.step.type",
+        "properties.timeout",
+        "properties.trigger",
+        "properties.trigger.baseImageTrigger",
+        "properties.trigger.baseImageTrigger.baseImageTriggerType",
+        "properties.trigger.baseImageTrigger.status",
+        "properties.trigger.sourceTriggers",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry."
+        },
+        {
+          "name": "taskName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the container registry task."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

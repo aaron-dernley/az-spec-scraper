@@ -1,0 +1,274 @@
+{
+  "resource": "Azure::Edge::Executions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}/executions",
+      "operationId": "Executions_ListByWorkflowVersion",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}/executions/{executionName}",
+      "operationId": "Executions_Get",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "executionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Execution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}/executions/{executionName}",
+      "operationId": "Executions_CreateOrUpdate",
+      "bodySchema": "Execution",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.workflowVersionId"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.provisioningState",
+        "properties.specification",
+        "properties.status",
+        "properties.status.stageHistory",
+        "properties.status.status",
+        "properties.status.statusMessage",
+        "properties.status.updateTime"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "executionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Execution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}/executions/{executionName}",
+      "operationId": "Executions_Update",
+      "bodySchema": "ExecutionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.specification",
+        "properties.workflowVersionId"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "executionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Execution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}/executions/{executionName}",
+      "operationId": "Executions_Delete",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "executionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Execution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "resource": "Azure::Authorization::PolicyAssignments",
+  "version": "2019-06-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}providers/Microsoft.Authorization/policyAssignments",
+      "operationId": "PolicyAssignments_ListForResource",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "resourceProviderNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider."
+        },
+        {
+          "name": "parentResourcePath",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The parent resource path."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Authorization/policyAssignments",
+      "operationId": "PolicyAssignments_ListForResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}",
+      "operationId": "PolicyAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope."
+        },
+        {
+          "name": "policyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Policy assignment name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}",
+      "operationId": "PolicyAssignments_Create",
+      "bodySchema": "PolicyAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "name",
+        "properties",
+        "properties.displayName",
+        "properties.policyDefinitionId",
+        "properties.scope"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope."
+        },
+        {
+          "name": "policyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Policy assignment name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}",
+      "operationId": "PolicyAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope."
+        },
+        {
+          "name": "policyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Policy assignment name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyAssignments",
+      "operationId": "PolicyAssignments_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/policyAssignments",
+      "operationId": "PolicyAssignments_ListForScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

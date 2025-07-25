@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::Synapse::Baselines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}",
+      "operationId": "SqlPoolVulnerabilityAssessmentRuleBaselines_CreateOrUpdate",
+      "bodySchema": "SqlPoolVulnerabilityAssessmentRuleBaseline",
+      "requiredProperties": [
+        "properties.baselineResults"
+      ],
+      "optionalProperties": [
+        "properties"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment rule baseline (default implies a baseline on a Sql pool level rule and master for workspace level rule)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}",
+      "operationId": "SqlPoolVulnerabilityAssessmentRuleBaselines_Delete",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment rule baseline (default implies a baseline on a Sql pool level rule and master for workspace level rule)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}/baselines/{baselineName}",
+      "operationId": "SqlPoolVulnerabilityAssessmentRuleBaselines_Get",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "vulnerabilityAssessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment."
+        },
+        {
+          "name": "ruleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The vulnerability assessment rule ID."
+        },
+        {
+          "name": "baselineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the vulnerability assessment rule baseline (default implies a baseline on a Sql pool level rule and master for server level rule)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

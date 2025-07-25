@@ -1,0 +1,754 @@
+{
+  "resource": "Azure::ProviderHub::Skus",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/skus/{sku}",
+      "operationId": "Skus_Get",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/skus/{sku}",
+      "operationId": "Skus_CreateOrUpdate",
+      "bodySchema": "SkuResource",
+      "requiredProperties": [
+        "properties.skuSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/skus/{sku}",
+      "operationId": "Skus_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/skus/{sku}",
+      "operationId": "Skus_GetNestedResourceTypeFirst",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/skus/{sku}",
+      "operationId": "Skus_CreateOrUpdateNestedResourceTypeFirst",
+      "bodySchema": "SkuResource",
+      "requiredProperties": [
+        "properties.skuSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/skus/{sku}",
+      "operationId": "Skus_DeleteNestedResourceTypeFirst",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/skus/{sku}",
+      "operationId": "Skus_GetNestedResourceTypeSecond",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/skus/{sku}",
+      "operationId": "Skus_CreateOrUpdateNestedResourceTypeSecond",
+      "bodySchema": "SkuResource",
+      "requiredProperties": [
+        "properties.skuSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/skus/{sku}",
+      "operationId": "Skus_DeleteNestedResourceTypeSecond",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/resourcetypeRegistrations/{nestedResourceTypeThird}/skus/{sku}",
+      "operationId": "Skus_GetNestedResourceTypeThird",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "nestedResourceTypeThird",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The third child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/resourcetypeRegistrations/{nestedResourceTypeThird}/skus/{sku}",
+      "operationId": "Skus_CreateOrUpdateNestedResourceTypeThird",
+      "bodySchema": "SkuResource",
+      "requiredProperties": [
+        "properties.skuSettings"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "nestedResourceTypeThird",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The third child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/resourcetypeRegistrations/{nestedResourceTypeThird}/skus/{sku}",
+      "operationId": "Skus_DeleteNestedResourceTypeThird",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "nestedResourceTypeThird",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The third child resource type."
+        },
+        {
+          "name": "sku",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The SKU."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/skus",
+      "operationId": "Skus_ListByResourceTypeRegistrations",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/skus",
+      "operationId": "Skus_ListByResourceTypeRegistrationsNestedResourceTypeFirst",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/skus",
+      "operationId": "Skus_ListByResourceTypeRegistrationsNestedResourceTypeSecond",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}/resourcetypeRegistrations/{nestedResourceTypeFirst}/resourcetypeRegistrations/{nestedResourceTypeSecond}/resourcetypeRegistrations/{nestedResourceTypeThird}/skus",
+      "operationId": "Skus_ListByResourceTypeRegistrationsNestedResourceTypeThird",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "nestedResourceTypeFirst",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The first child resource type."
+        },
+        {
+          "name": "nestedResourceTypeSecond",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The second child resource type."
+        },
+        {
+          "name": "nestedResourceTypeThird",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The third child resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

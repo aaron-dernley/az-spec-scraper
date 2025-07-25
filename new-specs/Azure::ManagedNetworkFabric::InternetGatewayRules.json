@@ -1,0 +1,173 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::InternetGatewayRules",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/{internetGatewayRuleName}",
+      "operationId": "InternetGatewayRules_Create",
+      "bodySchema": "InternetGatewayRule",
+      "requiredProperties": [
+        "properties",
+        "properties.ruleProperties",
+        "properties.ruleProperties.action",
+        "properties.ruleProperties.addressList"
+      ],
+      "optionalProperties": [
+        "properties.internetGatewayIds",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "internetGatewayRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internet Gateway rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/{internetGatewayRuleName}",
+      "operationId": "InternetGatewayRules_Get",
+      "pathParameters": [
+        {
+          "name": "internetGatewayRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internet Gateway rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/{internetGatewayRuleName}",
+      "operationId": "InternetGatewayRules_Update",
+      "bodySchema": "InternetGatewayRulePatch",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "internetGatewayRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internet Gateway rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/{internetGatewayRuleName}",
+      "operationId": "InternetGatewayRules_Delete",
+      "pathParameters": [
+        {
+          "name": "internetGatewayRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internet Gateway rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules",
+      "operationId": "InternetGatewayRules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules",
+      "operationId": "InternetGatewayRules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

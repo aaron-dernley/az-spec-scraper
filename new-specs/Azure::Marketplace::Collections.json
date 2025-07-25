@@ -1,0 +1,227 @@
+{
+  "resource": "Azure::Marketplace::Collections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections",
+      "operationId": "PrivateStoreCollection_List",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PARAMETERS",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}",
+      "operationId": "PrivateStoreCollection_Get",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}",
+      "operationId": "PrivateStoreCollection_CreateOrUpdate",
+      "bodySchema": "Collection",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.allSubscriptions",
+        "properties.approveAllItems",
+        "properties.approveAllItemsModifiedAt",
+        "properties.claim",
+        "properties.collectionId",
+        "properties.collectionName",
+        "properties.enabled",
+        "properties.numberOfOffers",
+        "properties.subscriptionsList",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}",
+      "operationId": "PrivateStoreCollection_Delete",
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/providers/Microsoft.Marketplace/privateStores/{privateStoreId}/collections/{collectionId}",
+      "operationId": "PrivateStoreCollection_Post",
+      "bodySchema": "PrivateStoreOperation",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "privateStoreId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The store ID - must use the tenant ID"
+        },
+        {
+          "name": "collectionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The collection ID"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request."
+        }
+      ]
+    }
+  ]
+}

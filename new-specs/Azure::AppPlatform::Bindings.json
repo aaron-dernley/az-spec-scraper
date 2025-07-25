@@ -1,0 +1,286 @@
+{
+  "resource": "Azure::AppPlatform::Bindings",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+      "operationId": "Bindings_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        },
+        {
+          "name": "bindingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Binding resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+      "operationId": "Bindings_CreateOrUpdate",
+      "bodySchema": "BindingResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.bindingParameters",
+        "properties.createdAt",
+        "properties.generatedProperties",
+        "properties.key",
+        "properties.resourceId",
+        "properties.resourceName",
+        "properties.resourceType",
+        "properties.updatedAt",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        },
+        {
+          "name": "bindingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Binding resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+      "operationId": "Bindings_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        },
+        {
+          "name": "bindingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Binding resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings/{bindingName}",
+      "operationId": "Bindings_Update",
+      "bodySchema": "BindingResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.bindingParameters",
+        "properties.createdAt",
+        "properties.generatedProperties",
+        "properties.key",
+        "properties.resourceId",
+        "properties.resourceName",
+        "properties.resourceType",
+        "properties.updatedAt",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        },
+        {
+          "name": "bindingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Binding resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}/bindings",
+      "operationId": "Bindings_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

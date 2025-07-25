@@ -1,0 +1,114 @@
+{
+  "resource": "Azure::Security::StandardAssignments",
+  "version": "2024-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.Security/standardAssignments/{standardAssignmentName}",
+      "operationId": "StandardAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "standardAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The standard assignments assignment key - unique key for the standard assignment"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceId}/providers/Microsoft.Security/standardAssignments/{standardAssignmentName}",
+      "operationId": "StandardAssignments_Create",
+      "bodySchema": "StandardAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.assignedStandard",
+        "properties.assignedStandard.id",
+        "properties.attestationData",
+        "properties.attestationData.assignedAssessment",
+        "properties.attestationData.assignedAssessment.assessmentKey",
+        "properties.attestationData.complianceDate",
+        "properties.attestationData.complianceState",
+        "properties.attestationData.evidence",
+        "properties.description",
+        "properties.displayName",
+        "properties.effect",
+        "properties.excludedScopes",
+        "properties.exemptionData",
+        "properties.exemptionData.assignedAssessment",
+        "properties.exemptionData.assignedAssessment.assessmentKey",
+        "properties.exemptionData.exemptionCategory",
+        "properties.expiresOn",
+        "properties.metadata",
+        "properties.metadata.createdBy",
+        "properties.metadata.createdOn",
+        "properties.metadata.lastUpdatedBy",
+        "properties.metadata.lastUpdatedOn"
+      ],
+      "pathParameters": [
+        {
+          "name": "standardAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The standard assignments assignment key - unique key for the standard assignment"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceId}/providers/Microsoft.Security/standardAssignments/{standardAssignmentName}",
+      "operationId": "StandardAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "standardAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The standard assignments assignment key - unique key for the standard assignment"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/standardAssignments",
+      "operationId": "StandardAssignments_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the standard assignment. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

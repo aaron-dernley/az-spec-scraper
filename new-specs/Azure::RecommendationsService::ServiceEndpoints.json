@@ -1,0 +1,194 @@
+{
+  "resource": "Azure::RecommendationsService::ServiceEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecommendationsService/accounts/{accountName}/serviceEndpoints",
+      "operationId": "ServiceEndpoints_ListByAccountResource",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RecommendationsService Account resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecommendationsService/accounts/{accountName}/serviceEndpoints/{serviceEndpointName}",
+      "operationId": "ServiceEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RecommendationsService Account resource."
+        },
+        {
+          "name": "serviceEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ServiceEndpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecommendationsService/accounts/{accountName}/serviceEndpoints/{serviceEndpointName}",
+      "operationId": "ServiceEndpoints_CreateOrUpdate",
+      "bodySchema": "ServiceEndpointResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.pairedLocation",
+        "properties.preAllocatedCapacity",
+        "properties.provisioningState",
+        "properties.url",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RecommendationsService Account resource."
+        },
+        {
+          "name": "serviceEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ServiceEndpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecommendationsService/accounts/{accountName}/serviceEndpoints/{serviceEndpointName}",
+      "operationId": "ServiceEndpoints_Update",
+      "bodySchema": "ServiceEndpointPatchResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RecommendationsService Account resource."
+        },
+        {
+          "name": "serviceEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ServiceEndpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecommendationsService/accounts/{accountName}/serviceEndpoints/{serviceEndpointName}",
+      "operationId": "ServiceEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the RecommendationsService Account resource."
+        },
+        {
+          "name": "serviceEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ServiceEndpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

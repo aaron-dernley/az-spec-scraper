@@ -1,0 +1,180 @@
+{
+  "resource": "Azure::Sql::ServerTrustGroups",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/serverTrustGroups",
+      "operationId": "ServerTrustGroups_ListByLocation",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/serverTrustGroups/{serverTrustGroupName}",
+      "operationId": "ServerTrustGroups_Get",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "serverTrustGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server trust group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/serverTrustGroups/{serverTrustGroupName}",
+      "operationId": "ServerTrustGroups_CreateOrUpdate",
+      "bodySchema": "ServerTrustGroup",
+      "requiredProperties": [
+        "properties.groupMembers",
+        "properties.trustScopes"
+      ],
+      "optionalProperties": [
+        "properties"
+      ],
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "serverTrustGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server trust group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/serverTrustGroups/{serverTrustGroupName}",
+      "operationId": "ServerTrustGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "serverTrustGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server trust group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/serverTrustGroups",
+      "operationId": "ServerTrustGroups_ListByInstance",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

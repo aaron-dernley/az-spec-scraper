@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::Kusto::AttachedDatabaseConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/attachedDatabaseConfigurations",
+      "operationId": "AttachedDatabaseConfigurations_ListByCluster",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/attachedDatabaseConfigurations/{attachedDatabaseConfigurationName}",
+      "operationId": "AttachedDatabaseConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "attachedDatabaseConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attached database configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/attachedDatabaseConfigurations/{attachedDatabaseConfigurationName}",
+      "operationId": "AttachedDatabaseConfigurations_CreateOrUpdate",
+      "bodySchema": "AttachedDatabaseConfiguration",
+      "requiredProperties": [
+        "properties.clusterResourceId",
+        "properties.databaseName",
+        "properties.defaultPrincipalsModificationKind"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.attachedDatabaseNames",
+        "properties.databaseNameOverride",
+        "properties.databaseNamePrefix",
+        "properties.provisioningState",
+        "properties.tableLevelSharingProperties",
+        "properties.tableLevelSharingProperties.externalTablesToExclude",
+        "properties.tableLevelSharingProperties.externalTablesToInclude",
+        "properties.tableLevelSharingProperties.materializedViewsToExclude",
+        "properties.tableLevelSharingProperties.materializedViewsToInclude",
+        "properties.tableLevelSharingProperties.tablesToExclude",
+        "properties.tableLevelSharingProperties.tablesToInclude"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "attachedDatabaseConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attached database configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/attachedDatabaseConfigurations/{attachedDatabaseConfigurationName}",
+      "operationId": "AttachedDatabaseConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Kusto cluster."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kusto cluster."
+        },
+        {
+          "name": "attachedDatabaseConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attached database configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API Version."
+        }
+      ]
+    }
+  ]
+}

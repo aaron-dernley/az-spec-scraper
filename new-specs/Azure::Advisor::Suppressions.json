@@ -1,0 +1,165 @@
+{
+  "resource": "Azure::Advisor::Suppressions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.Advisor/recommendations/{recommendationId}/suppressions/{name}",
+      "operationId": "Suppressions_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies."
+        },
+        {
+          "name": "recommendationId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The recommendation ID."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the suppression."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.Advisor/recommendations/{recommendationId}/suppressions/{name}",
+      "operationId": "Suppressions_Create",
+      "bodySchema": "SuppressionContract",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.expirationTimeStamp",
+        "properties.suppressionId",
+        "properties.ttl",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies."
+        },
+        {
+          "name": "recommendationId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The recommendation ID."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the suppression."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.Advisor/recommendations/{recommendationId}/suppressions/{name}",
+      "operationId": "Suppressions_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies."
+        },
+        {
+          "name": "recommendationId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The recommendation ID."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the suppression."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Advisor/suppressions",
+      "operationId": "Suppressions_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API to be used with the client request."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of suppressions per page if a paged version of this API is being used."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The page-continuation token to use with a paged version of this API."
+        }
+      ]
+    }
+  ]
+}

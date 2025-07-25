@@ -1,0 +1,376 @@
+{
+  "resource": "Azure::PolicyInsights::Attestations",
+  "version": "2022-09-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/attestations",
+      "operationId": "Attestations_ListForSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_CreateOrUpdateAtSubscription",
+      "bodySchema": "Attestation",
+      "requiredProperties": [
+        "properties",
+        "properties.policyAssignmentId"
+      ],
+      "optionalProperties": [
+        "properties.assessmentDate",
+        "properties.comments",
+        "properties.complianceState",
+        "properties.evidence",
+        "properties.expiresOn",
+        "properties.lastComplianceStateChangeAt",
+        "properties.metadata",
+        "properties.owner",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_GetAtSubscription",
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_DeleteAtSubscription",
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/attestations",
+      "operationId": "Attestations_ListForResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_CreateOrUpdateAtResourceGroup",
+      "bodySchema": "Attestation",
+      "requiredProperties": [
+        "properties",
+        "properties.policyAssignmentId"
+      ],
+      "optionalProperties": [
+        "properties.assessmentDate",
+        "properties.comments",
+        "properties.complianceState",
+        "properties.evidence",
+        "properties.expiresOn",
+        "properties.lastComplianceStateChangeAt",
+        "properties.metadata",
+        "properties.owner",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_GetAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_DeleteAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/attestations",
+      "operationId": "Attestations_ListForResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_CreateOrUpdateAtResource",
+      "bodySchema": "Attestation",
+      "requiredProperties": [
+        "properties",
+        "properties.policyAssignmentId"
+      ],
+      "optionalProperties": [
+        "properties.assessmentDate",
+        "properties.comments",
+        "properties.complianceState",
+        "properties.evidence",
+        "properties.expiresOn",
+        "properties.lastComplianceStateChangeAt",
+        "properties.metadata",
+        "properties.owner",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_GetAtResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+      "operationId": "Attestations_DeleteAtResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "attestationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the attestation."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

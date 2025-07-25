@@ -1,0 +1,164 @@
+{
+  "resource": "Azure::AppComplianceAutomation::Evidences",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/evidences",
+      "operationId": "Evidence_ListByReport",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip over when retrieving results."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Number of elements to return when retrieving results."
+        },
+        {
+          "name": "$select",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. ?$select=reportName,id."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData order by query option."
+        },
+        {
+          "name": "offerGuid",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The offerGuid which mapping to the reports."
+        },
+        {
+          "name": "reportCreatorTenantId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The tenant id of the report creator."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/evidences/{evidenceName}",
+      "operationId": "Evidence_Get",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "evidenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The evidence name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/evidences/{evidenceName}",
+      "operationId": "Evidence_CreateOrUpdate",
+      "bodySchema": "EvidenceResource",
+      "requiredProperties": [
+        "properties",
+        "properties.filePath"
+      ],
+      "optionalProperties": [
+        "properties.controlId",
+        "properties.evidenceType",
+        "properties.extraData",
+        "properties.provisioningState",
+        "properties.responsibilityId"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "evidenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The evidence name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "offerGuid",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The offerGuid which mapping to the reports."
+        },
+        {
+          "name": "reportCreatorTenantId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The tenant id of the report creator."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/evidences/{evidenceName}",
+      "operationId": "Evidence_Delete",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "evidenceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The evidence name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

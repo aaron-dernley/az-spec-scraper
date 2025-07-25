@@ -1,0 +1,194 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::L3IsolationDomains",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}",
+      "operationId": "L3IsolationDomains_Create",
+      "bodySchema": "L3IsolationDomain",
+      "requiredProperties": [
+        "properties",
+        "properties.networkFabricId"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.aggregateRouteConfiguration",
+        "properties.aggregateRouteConfiguration.ipv4Routes",
+        "properties.aggregateRouteConfiguration.ipv6Routes",
+        "properties.configurationState",
+        "properties.connectedSubnetRoutePolicy",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy.exportIpv4RoutePolicyId",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy.exportIpv6RoutePolicyId",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicyId",
+        "properties.provisioningState",
+        "properties.redistributeConnectedSubnets",
+        "properties.redistributeStaticRoutes"
+      ],
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}",
+      "operationId": "L3IsolationDomains_Get",
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}",
+      "operationId": "L3IsolationDomains_Update",
+      "bodySchema": "L3IsolationDomainPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.aggregateRouteConfiguration",
+        "properties.aggregateRouteConfiguration.ipv4Routes",
+        "properties.aggregateRouteConfiguration.ipv6Routes",
+        "properties.connectedSubnetRoutePolicy",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy.exportIpv4RoutePolicyId",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicy.exportIpv6RoutePolicyId",
+        "properties.connectedSubnetRoutePolicy.exportRoutePolicyId",
+        "properties.redistributeConnectedSubnets",
+        "properties.redistributeStaticRoutes"
+      ],
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}",
+      "operationId": "L3IsolationDomains_Delete",
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+      "operationId": "L3IsolationDomains_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains",
+      "operationId": "L3IsolationDomains_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

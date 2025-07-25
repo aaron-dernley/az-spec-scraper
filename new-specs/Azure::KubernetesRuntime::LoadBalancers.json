@@ -1,0 +1,98 @@
+{
+  "resource": "Azure::KubernetesRuntime::LoadBalancers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers",
+      "operationId": "LoadBalancers_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}",
+      "operationId": "LoadBalancers_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the LoadBalancer"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}",
+      "operationId": "LoadBalancers_CreateOrUpdate",
+      "bodySchema": "LoadBalancer",
+      "requiredProperties": [
+        "properties.addresses",
+        "properties.advertiseMode"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.bgpPeers",
+        "properties.provisioningState",
+        "properties.serviceSelector"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the LoadBalancer"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/loadBalancers/{loadBalancerName}",
+      "operationId": "LoadBalancers_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "loadBalancerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the LoadBalancer"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

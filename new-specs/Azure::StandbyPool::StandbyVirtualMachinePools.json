@@ -1,0 +1,183 @@
+{
+  "resource": "Azure::StandbyPool::StandbyVirtualMachinePools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools",
+      "operationId": "StandbyVirtualMachinePools_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools",
+      "operationId": "StandbyVirtualMachinePools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/{standbyVirtualMachinePoolName}",
+      "operationId": "StandbyVirtualMachinePools_Get",
+      "pathParameters": [
+        {
+          "name": "standbyVirtualMachinePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby virtual machine pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/{standbyVirtualMachinePoolName}",
+      "operationId": "StandbyVirtualMachinePools_CreateOrUpdate",
+      "bodySchema": "StandbyVirtualMachinePoolResource",
+      "requiredProperties": [
+        "properties.elasticityProfile.maxReadyCapacity",
+        "properties.virtualMachineState"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.attachedVirtualMachineScaleSetId",
+        "properties.elasticityProfile",
+        "properties.elasticityProfile.minReadyCapacity",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "standbyVirtualMachinePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby virtual machine pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/{standbyVirtualMachinePoolName}",
+      "operationId": "StandbyVirtualMachinePools_Update",
+      "bodySchema": "StandbyVirtualMachinePoolResourceUpdate",
+      "requiredProperties": [
+        "properties.elasticityProfile.maxReadyCapacity"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.attachedVirtualMachineScaleSetId",
+        "properties.elasticityProfile",
+        "properties.elasticityProfile.minReadyCapacity",
+        "properties.virtualMachineState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "standbyVirtualMachinePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby virtual machine pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/{standbyVirtualMachinePoolName}",
+      "operationId": "StandbyVirtualMachinePools_Delete",
+      "pathParameters": [
+        {
+          "name": "standbyVirtualMachinePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby virtual machine pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

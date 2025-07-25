@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::ScVmm::Clouds",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ScVmm/clouds",
+      "operationId": "Clouds_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/clouds",
+      "operationId": "Clouds_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/clouds/{cloudResourceName}",
+      "operationId": "Clouds_Get",
+      "pathParameters": [
+        {
+          "name": "cloudResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Cloud."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/clouds/{cloudResourceName}",
+      "operationId": "Clouds_CreateOrUpdate",
+      "bodySchema": "Cloud",
+      "requiredProperties": [
+        "extendedLocation"
+      ],
+      "optionalProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.cloudCapacity",
+        "properties.cloudCapacity.cpuCount",
+        "properties.cloudCapacity.memoryMB",
+        "properties.cloudCapacity.vmCount",
+        "properties.cloudName",
+        "properties.inventoryItemId",
+        "properties.provisioningState",
+        "properties.storageQoSPolicies",
+        "properties.uuid",
+        "properties.vmmServerId"
+      ],
+      "pathParameters": [
+        {
+          "name": "cloudResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Cloud."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/clouds/{cloudResourceName}",
+      "operationId": "Clouds_Update",
+      "bodySchema": "CloudTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "cloudResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Cloud."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/clouds/{cloudResourceName}",
+      "operationId": "Clouds_Delete",
+      "pathParameters": [
+        {
+          "name": "cloudResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Cloud."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Forces the resource to be deleted."
+        }
+      ]
+    }
+  ]
+}

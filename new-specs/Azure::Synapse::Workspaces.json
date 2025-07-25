@@ -1,0 +1,241 @@
+{
+  "resource": "Azure::Synapse::Workspaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces",
+      "operationId": "Workspaces_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Get",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Update",
+      "bodySchema": "WorkspacePatchInfo",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "properties",
+        "properties.encryption",
+        "properties.encryption.cmk",
+        "properties.encryption.cmk.key",
+        "properties.encryption.cmk.key.keyVaultUrl",
+        "properties.encryption.cmk.key.name",
+        "properties.encryption.cmk.status",
+        "properties.encryption.doubleEncryptionEnabled",
+        "properties.managedVirtualNetworkSettings",
+        "properties.managedVirtualNetworkSettings.allowedAadTenantIdsForLinking",
+        "properties.managedVirtualNetworkSettings.linkedAccessCheckOnTargetResource",
+        "properties.managedVirtualNetworkSettings.preventDataExfiltration",
+        "properties.provisioningState",
+        "properties.purviewConfiguration",
+        "properties.purviewConfiguration.purviewResourceId",
+        "properties.sqlAdministratorLoginPassword",
+        "properties.workspaceRepositoryConfiguration",
+        "properties.workspaceRepositoryConfiguration.accountName",
+        "properties.workspaceRepositoryConfiguration.collaborationBranch",
+        "properties.workspaceRepositoryConfiguration.hostName",
+        "properties.workspaceRepositoryConfiguration.lastCommitId",
+        "properties.workspaceRepositoryConfiguration.projectName",
+        "properties.workspaceRepositoryConfiguration.repositoryName",
+        "properties.workspaceRepositoryConfiguration.rootFolder",
+        "properties.workspaceRepositoryConfiguration.tenantId",
+        "properties.workspaceRepositoryConfiguration.type",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}",
+      "operationId": "Workspaces_CreateOrUpdate",
+      "bodySchema": "Workspace",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "properties",
+        "properties.adlaResourceId",
+        "properties.connectivityEndpoints",
+        "properties.defaultDataLakeStorage",
+        "properties.defaultDataLakeStorage.accountUrl",
+        "properties.defaultDataLakeStorage.filesystem",
+        "properties.encryption",
+        "properties.encryption.cmk",
+        "properties.encryption.cmk.key",
+        "properties.encryption.cmk.key.keyVaultUrl",
+        "properties.encryption.cmk.key.name",
+        "properties.encryption.cmk.status",
+        "properties.encryption.doubleEncryptionEnabled",
+        "properties.extraProperties",
+        "properties.managedResourceGroupName",
+        "properties.managedVirtualNetwork",
+        "properties.managedVirtualNetworkSettings",
+        "properties.managedVirtualNetworkSettings.allowedAadTenantIdsForLinking",
+        "properties.managedVirtualNetworkSettings.linkedAccessCheckOnTargetResource",
+        "properties.managedVirtualNetworkSettings.preventDataExfiltration",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.purviewConfiguration",
+        "properties.purviewConfiguration.purviewResourceId",
+        "properties.sqlAdministratorLogin",
+        "properties.sqlAdministratorLoginPassword",
+        "properties.virtualNetworkProfile",
+        "properties.virtualNetworkProfile.computeSubnetId",
+        "properties.workspaceRepositoryConfiguration",
+        "properties.workspaceRepositoryConfiguration.accountName",
+        "properties.workspaceRepositoryConfiguration.collaborationBranch",
+        "properties.workspaceRepositoryConfiguration.hostName",
+        "properties.workspaceRepositoryConfiguration.lastCommitId",
+        "properties.workspaceRepositoryConfiguration.projectName",
+        "properties.workspaceRepositoryConfiguration.repositoryName",
+        "properties.workspaceRepositoryConfiguration.rootFolder",
+        "properties.workspaceRepositoryConfiguration.tenantId",
+        "properties.workspaceRepositoryConfiguration.type",
+        "properties.workspaceUID"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Delete",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workspace"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Synapse/workspaces",
+      "operationId": "Workspaces_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

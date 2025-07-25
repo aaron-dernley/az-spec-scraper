@@ -1,0 +1,238 @@
+{
+  "resource": "Azure::Insights::Favorites",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites",
+      "operationId": "Favorites_List",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "favoriteType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The type of favorite. Value can be either shared or user."
+        },
+        {
+          "name": "sourceType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Source type of favorite to return. When left out, the source type defaults to 'other' (not present in this enum)."
+        },
+        {
+          "name": "canFetchContent",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag indicating whether or not to return the full content for each applicable favorite. If false, only return summary content for favorites."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "array",
+          "in": "query",
+          "description": "Tags that must be present on each favorite returned."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteId}",
+      "operationId": "Favorites_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "favoriteId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Id of a specific favorite defined in the Application Insights component"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteId}",
+      "operationId": "Favorites_Add",
+      "bodySchema": "ApplicationInsightsComponentFavorite",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "Category",
+        "Config",
+        "FavoriteId",
+        "FavoriteType",
+        "IsGeneratedFromTemplate",
+        "Name",
+        "SourceType",
+        "Tags",
+        "TimeModified",
+        "UserId",
+        "Version"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "favoriteId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Id of a specific favorite defined in the Application Insights component"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteId}",
+      "operationId": "Favorites_Update",
+      "bodySchema": "ApplicationInsightsComponentFavorite",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "Category",
+        "Config",
+        "FavoriteId",
+        "FavoriteType",
+        "IsGeneratedFromTemplate",
+        "Name",
+        "SourceType",
+        "Tags",
+        "TimeModified",
+        "UserId",
+        "Version"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "favoriteId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Id of a specific favorite defined in the Application Insights component"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteId}",
+      "operationId": "Favorites_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Application Insights component resource."
+        },
+        {
+          "name": "favoriteId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Id of a specific favorite defined in the Application Insights component"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

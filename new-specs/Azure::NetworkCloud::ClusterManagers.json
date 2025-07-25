@@ -1,0 +1,186 @@
+{
+  "resource": "Azure::NetworkCloud::ClusterManagers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/clusterManagers",
+      "operationId": "ClusterManagers_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusterManagers",
+      "operationId": "ClusterManagers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusterManagers/{clusterManagerName}",
+      "operationId": "ClusterManagers_Get",
+      "pathParameters": [
+        {
+          "name": "clusterManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster manager."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusterManagers/{clusterManagerName}",
+      "operationId": "ClusterManagers_CreateOrUpdate",
+      "bodySchema": "ClusterManager",
+      "requiredProperties": [
+        "properties",
+        "properties.fabricControllerId",
+        "properties.managerExtendedLocation.name",
+        "properties.managerExtendedLocation.type"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties.analyticsWorkspaceId",
+        "properties.availabilityZones",
+        "properties.clusterVersions",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.managedResourceGroupConfiguration",
+        "properties.managedResourceGroupConfiguration.location",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.managerExtendedLocation",
+        "properties.provisioningState",
+        "properties.vmSize"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster manager."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusterManagers/{clusterManagerName}",
+      "operationId": "ClusterManagers_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster manager."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusterManagers/{clusterManagerName}",
+      "operationId": "ClusterManagers_Update",
+      "bodySchema": "ClusterManagerPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster manager."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

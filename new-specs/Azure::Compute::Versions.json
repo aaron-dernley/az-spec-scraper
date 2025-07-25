@@ -1,0 +1,636 @@
+{
+  "resource": "Azure::Compute::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName}",
+      "operationId": "GalleryImageVersions_CreateOrUpdate",
+      "bodySchema": "GalleryImageVersion",
+      "requiredProperties": [
+        "location",
+        "properties.storageProfile"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "properties.publishingProfile",
+        "properties.publishingProfile.endOfLifeDate",
+        "properties.publishingProfile.excludeFromLatest",
+        "properties.publishingProfile.publishedDate",
+        "properties.publishingProfile.replicaCount",
+        "properties.publishingProfile.storageAccountType",
+        "properties.publishingProfile.targetRegions",
+        "properties.replicationStatus",
+        "properties.replicationStatus.aggregatedState",
+        "properties.replicationStatus.summary",
+        "properties.storageProfile.dataDiskImages",
+        "properties.storageProfile.osDiskImage",
+        "properties.storageProfile.osDiskImage.hostCaching",
+        "properties.storageProfile.osDiskImage.sizeInGB",
+        "properties.storageProfile.osDiskImage.source",
+        "properties.storageProfile.osDiskImage.source.id",
+        "properties.storageProfile.source",
+        "properties.storageProfile.source.id",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery in which the Image Definition resides."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Definition in which the Image Version is to be created."
+        },
+        {
+          "name": "galleryImageVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName}",
+      "operationId": "GalleryImageVersions_Update",
+      "bodySchema": "GalleryImageVersionUpdate",
+      "requiredProperties": [
+        "properties.storageProfile"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "properties.publishingProfile",
+        "properties.publishingProfile.endOfLifeDate",
+        "properties.publishingProfile.excludeFromLatest",
+        "properties.publishingProfile.publishedDate",
+        "properties.publishingProfile.replicaCount",
+        "properties.publishingProfile.storageAccountType",
+        "properties.publishingProfile.targetRegions",
+        "properties.replicationStatus",
+        "properties.replicationStatus.aggregatedState",
+        "properties.replicationStatus.summary",
+        "properties.storageProfile.dataDiskImages",
+        "properties.storageProfile.osDiskImage",
+        "properties.storageProfile.osDiskImage.hostCaching",
+        "properties.storageProfile.osDiskImage.sizeInGB",
+        "properties.storageProfile.osDiskImage.source",
+        "properties.storageProfile.osDiskImage.source.id",
+        "properties.storageProfile.source",
+        "properties.storageProfile.source.id",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery in which the Image Definition resides."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Definition in which the Image Version is to be updated."
+        },
+        {
+          "name": "galleryImageVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Version to be updated. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName}",
+      "operationId": "GalleryImageVersions_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery in which the Image Definition resides."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Definition in which the Image Version resides."
+        },
+        {
+          "name": "galleryImageVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Version to be retrieved."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName}",
+      "operationId": "GalleryImageVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery in which the Image Definition resides."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Definition in which the Image Version resides."
+        },
+        {
+          "name": "galleryImageVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image Version to be deleted."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{galleryApplicationName}/versions/{galleryApplicationVersionName}",
+      "operationId": "GalleryApplicationVersions_CreateOrUpdate",
+      "bodySchema": "GalleryApplicationVersion",
+      "requiredProperties": [
+        "location",
+        "properties.publishingProfile",
+        "properties.publishingProfile.manageActions.install",
+        "properties.publishingProfile.manageActions.remove",
+        "properties.publishingProfile.source",
+        "properties.publishingProfile.source.mediaLink"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "properties.publishingProfile.enableHealthCheck",
+        "properties.publishingProfile.endOfLifeDate",
+        "properties.publishingProfile.excludeFromLatest",
+        "properties.publishingProfile.manageActions",
+        "properties.publishingProfile.manageActions.update",
+        "properties.publishingProfile.publishedDate",
+        "properties.publishingProfile.replicaCount",
+        "properties.publishingProfile.source.defaultConfigurationLink",
+        "properties.publishingProfile.storageAccountType",
+        "properties.publishingProfile.targetRegions",
+        "properties.replicationStatus",
+        "properties.replicationStatus.aggregatedState",
+        "properties.replicationStatus.summary",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery in which the Application Definition resides."
+        },
+        {
+          "name": "galleryApplicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Definition in which the Application Version is to be created."
+        },
+        {
+          "name": "galleryApplicationVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{galleryApplicationName}/versions/{galleryApplicationVersionName}",
+      "operationId": "GalleryApplicationVersions_Update",
+      "bodySchema": "GalleryApplicationVersionUpdate",
+      "requiredProperties": [
+        "properties.publishingProfile",
+        "properties.publishingProfile.manageActions.install",
+        "properties.publishingProfile.manageActions.remove",
+        "properties.publishingProfile.source",
+        "properties.publishingProfile.source.mediaLink"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "properties.publishingProfile.enableHealthCheck",
+        "properties.publishingProfile.endOfLifeDate",
+        "properties.publishingProfile.excludeFromLatest",
+        "properties.publishingProfile.manageActions",
+        "properties.publishingProfile.manageActions.update",
+        "properties.publishingProfile.publishedDate",
+        "properties.publishingProfile.replicaCount",
+        "properties.publishingProfile.source.defaultConfigurationLink",
+        "properties.publishingProfile.storageAccountType",
+        "properties.publishingProfile.targetRegions",
+        "properties.replicationStatus",
+        "properties.replicationStatus.aggregatedState",
+        "properties.replicationStatus.summary",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery in which the Application Definition resides."
+        },
+        {
+          "name": "galleryApplicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Definition in which the Application Version is to be updated."
+        },
+        {
+          "name": "galleryApplicationVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Version to be updated. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{galleryApplicationName}/versions/{galleryApplicationVersionName}",
+      "operationId": "GalleryApplicationVersions_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery in which the Application Definition resides."
+        },
+        {
+          "name": "galleryApplicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Definition in which the Application Version resides."
+        },
+        {
+          "name": "galleryApplicationVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Version to be retrieved."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{galleryApplicationName}/versions/{galleryApplicationVersionName}",
+      "operationId": "GalleryApplicationVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery in which the Application Definition resides."
+        },
+        {
+          "name": "galleryApplicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Definition in which the Application Version resides."
+        },
+        {
+          "name": "galleryApplicationVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Application Version to be deleted."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions",
+      "operationId": "GalleryImageVersions_ListByGalleryImage",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery in which the Image Definition resides."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{galleryApplicationName}/versions",
+      "operationId": "GalleryApplicationVersions_ListByGalleryApplication",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery in which the Application Definition resides."
+        },
+        {
+          "name": "galleryApplicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Application Gallery Application Definition from which the Application Versions are to be listed."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

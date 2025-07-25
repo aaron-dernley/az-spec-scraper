@@ -1,0 +1,169 @@
+{
+  "resource": "Azure::OperationalInsights::Watchlists",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists",
+      "operationId": "Watchlists_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}",
+      "operationId": "Watchlists_Get",
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}",
+      "operationId": "Watchlists_Delete",
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/watchlists/{watchlistAlias}",
+      "operationId": "Watchlists_CreateOrUpdate",
+      "bodySchema": "Watchlist",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.itemsSearchKey",
+        "properties.provider"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.contentType",
+        "properties.created",
+        "properties.createdBy",
+        "properties.defaultDuration",
+        "properties.description",
+        "properties.isDeleted",
+        "properties.labels",
+        "properties.numberOfLinesToSkip",
+        "properties.rawContent",
+        "properties.source",
+        "properties.tenantId",
+        "properties.updated",
+        "properties.updatedBy",
+        "properties.uploadStatus",
+        "properties.watchlistAlias",
+        "properties.watchlistId",
+        "properties.watchlistType"
+      ],
+      "pathParameters": [
+        {
+          "name": "watchlistAlias",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The watchlist alias"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

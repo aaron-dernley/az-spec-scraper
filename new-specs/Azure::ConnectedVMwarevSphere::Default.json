@@ -1,0 +1,305 @@
+{
+  "resource": "Azure::ConnectedVMwarevSphere::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_CreateOrUpdate",
+      "bodySchema": "VirtualMachineInstance",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.hardwareProfile",
+        "properties.hardwareProfile.cpuHotAddEnabled",
+        "properties.hardwareProfile.cpuHotRemoveEnabled",
+        "properties.hardwareProfile.memoryHotAddEnabled",
+        "properties.hardwareProfile.memorySizeMB",
+        "properties.hardwareProfile.numCPUs",
+        "properties.hardwareProfile.numCoresPerSocket",
+        "properties.infrastructureProfile",
+        "properties.infrastructureProfile.customResourceName",
+        "properties.infrastructureProfile.firmwareType",
+        "properties.infrastructureProfile.folderPath",
+        "properties.infrastructureProfile.instanceUuid",
+        "properties.infrastructureProfile.inventoryItemId",
+        "properties.infrastructureProfile.moName",
+        "properties.infrastructureProfile.moRefId",
+        "properties.infrastructureProfile.smbiosUuid",
+        "properties.infrastructureProfile.templateId",
+        "properties.infrastructureProfile.vCenterId",
+        "properties.networkProfile",
+        "properties.networkProfile.networkInterfaces",
+        "properties.osProfile",
+        "properties.osProfile.adminPassword",
+        "properties.osProfile.adminUsername",
+        "properties.osProfile.computerName",
+        "properties.osProfile.guestId",
+        "properties.osProfile.osSku",
+        "properties.osProfile.osType",
+        "properties.osProfile.toolsRunningStatus",
+        "properties.osProfile.toolsVersion",
+        "properties.osProfile.toolsVersionStatus",
+        "properties.osProfile.windowsConfiguration",
+        "properties.osProfile.windowsConfiguration.autoLogon",
+        "properties.osProfile.windowsConfiguration.autoLogonCount",
+        "properties.osProfile.windowsConfiguration.domainName",
+        "properties.osProfile.windowsConfiguration.domainUserPassword",
+        "properties.osProfile.windowsConfiguration.domainUsername",
+        "properties.osProfile.windowsConfiguration.firstLogonCommands",
+        "properties.osProfile.windowsConfiguration.fullName",
+        "properties.osProfile.windowsConfiguration.orgName",
+        "properties.osProfile.windowsConfiguration.productId",
+        "properties.osProfile.windowsConfiguration.timeZone",
+        "properties.osProfile.windowsConfiguration.workGroupName",
+        "properties.placementProfile",
+        "properties.placementProfile.clusterId",
+        "properties.placementProfile.datastoreId",
+        "properties.placementProfile.hostId",
+        "properties.placementProfile.resourcePoolId",
+        "properties.powerState",
+        "properties.provisioningState",
+        "properties.resourceUid",
+        "properties.securityProfile",
+        "properties.securityProfile.uefiSettings",
+        "properties.securityProfile.uefiSettings.secureBootEnabled",
+        "properties.statuses",
+        "properties.storageProfile",
+        "properties.storageProfile.disks",
+        "properties.storageProfile.scsiControllers"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Update",
+      "bodySchema": "VirtualMachineInstanceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.hardwareProfile",
+        "properties.hardwareProfile.cpuHotAddEnabled",
+        "properties.hardwareProfile.cpuHotRemoveEnabled",
+        "properties.hardwareProfile.memoryHotAddEnabled",
+        "properties.hardwareProfile.memorySizeMB",
+        "properties.hardwareProfile.numCPUs",
+        "properties.hardwareProfile.numCoresPerSocket",
+        "properties.networkProfile",
+        "properties.networkProfile.networkInterfaces",
+        "properties.storageProfile",
+        "properties.storageProfile.disks"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "deleteFromHost",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Whether to delete the VM from the vCenter."
+        },
+        {
+          "name": "force",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Whether force delete was specified."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default/hybridIdentityMetadata/default",
+      "operationId": "VmInstanceHybridIdentityMetadata_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "VMInstanceGuestAgents_Create",
+      "bodySchema": "GuestAgent",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.credentials",
+        "properties.credentials.password",
+        "properties.credentials.privateKey",
+        "properties.credentials.username",
+        "properties.customResourceName",
+        "properties.httpProxyConfig",
+        "properties.httpProxyConfig.httpsProxy",
+        "properties.privateLinkScopeResourceId",
+        "properties.provisioningAction",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.statuses",
+        "properties.uuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "VMInstanceGuestAgents_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "VMInstanceGuestAgents_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

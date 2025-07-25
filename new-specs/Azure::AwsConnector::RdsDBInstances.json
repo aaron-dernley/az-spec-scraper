@@ -1,0 +1,265 @@
+{
+  "resource": "Azure::AwsConnector::RdsDBInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/rdsDBInstances",
+      "operationId": "RdsDbInstances_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBInstances",
+      "operationId": "RdsDbInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBInstances/{name}",
+      "operationId": "RdsDbInstances_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBInstances/{name}",
+      "operationId": "RdsDbInstances_CreateOrReplace",
+      "bodySchema": "RdsDBInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.allocatedStorage",
+        "properties.awsProperties.allowMajorVersionUpgrade",
+        "properties.awsProperties.associatedRoles",
+        "properties.awsProperties.autoMinorVersionUpgrade",
+        "properties.awsProperties.automaticBackupReplicationKmsKeyId",
+        "properties.awsProperties.automaticBackupReplicationRegion",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.backupRetentionPeriod",
+        "properties.awsProperties.caCertificateIdentifier",
+        "properties.awsProperties.certificateDetails",
+        "properties.awsProperties.certificateDetails.caIdentifier",
+        "properties.awsProperties.certificateDetails.validTill",
+        "properties.awsProperties.certificateRotationRestart",
+        "properties.awsProperties.characterSetName",
+        "properties.awsProperties.copyTagsToSnapshot",
+        "properties.awsProperties.customIAMInstanceProfile",
+        "properties.awsProperties.dbClusterIdentifier",
+        "properties.awsProperties.dbClusterSnapshotIdentifier",
+        "properties.awsProperties.dbInstanceArn",
+        "properties.awsProperties.dbInstanceClass",
+        "properties.awsProperties.dbInstanceIdentifier",
+        "properties.awsProperties.dbName",
+        "properties.awsProperties.dbParameterGroupName",
+        "properties.awsProperties.dbSecurityGroups",
+        "properties.awsProperties.dbSnapshotIdentifier",
+        "properties.awsProperties.dbSubnetGroupName",
+        "properties.awsProperties.dbSystemId",
+        "properties.awsProperties.dbiResourceId",
+        "properties.awsProperties.dedicatedLogVolume",
+        "properties.awsProperties.deleteAutomatedBackups",
+        "properties.awsProperties.deletionProtection",
+        "properties.awsProperties.domain",
+        "properties.awsProperties.domainAuthSecretArn",
+        "properties.awsProperties.domainDnsIps",
+        "properties.awsProperties.domainFqdn",
+        "properties.awsProperties.domainIAMRoleName",
+        "properties.awsProperties.domainOu",
+        "properties.awsProperties.enableCloudwatchLogsExports",
+        "properties.awsProperties.enableIAMDatabaseAuthentication",
+        "properties.awsProperties.enablePerformanceInsights",
+        "properties.awsProperties.endpoint",
+        "properties.awsProperties.endpoint.address",
+        "properties.awsProperties.endpoint.hostedZoneId",
+        "properties.awsProperties.endpoint.port",
+        "properties.awsProperties.engine",
+        "properties.awsProperties.engineVersion",
+        "properties.awsProperties.iops",
+        "properties.awsProperties.kmsKeyId",
+        "properties.awsProperties.licenseModel",
+        "properties.awsProperties.manageMasterUserPassword",
+        "properties.awsProperties.masterUserPassword",
+        "properties.awsProperties.masterUserSecret",
+        "properties.awsProperties.masterUserSecret.kmsKeyId",
+        "properties.awsProperties.masterUserSecret.secretArn",
+        "properties.awsProperties.masterUsername",
+        "properties.awsProperties.maxAllocatedStorage",
+        "properties.awsProperties.monitoringInterval",
+        "properties.awsProperties.monitoringRoleArn",
+        "properties.awsProperties.multiAZ",
+        "properties.awsProperties.ncharCharacterSetName",
+        "properties.awsProperties.networkType",
+        "properties.awsProperties.optionGroupName",
+        "properties.awsProperties.performanceInsightsKMSKeyId",
+        "properties.awsProperties.performanceInsightsRetentionPeriod",
+        "properties.awsProperties.port",
+        "properties.awsProperties.preferredBackupWindow",
+        "properties.awsProperties.preferredMaintenanceWindow",
+        "properties.awsProperties.processorFeatures",
+        "properties.awsProperties.promotionTier",
+        "properties.awsProperties.publiclyAccessible",
+        "properties.awsProperties.replicaMode",
+        "properties.awsProperties.restoreTime",
+        "properties.awsProperties.sourceDBClusterIdentifier",
+        "properties.awsProperties.sourceDBInstanceAutomatedBackupsArn",
+        "properties.awsProperties.sourceDBInstanceIdentifier",
+        "properties.awsProperties.sourceDbiResourceId",
+        "properties.awsProperties.sourceRegion",
+        "properties.awsProperties.storageEncrypted",
+        "properties.awsProperties.storageThroughput",
+        "properties.awsProperties.storageType",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.tdeCredentialArn",
+        "properties.awsProperties.tdeCredentialPassword",
+        "properties.awsProperties.timezone",
+        "properties.awsProperties.useDefaultProcessorFeatures",
+        "properties.awsProperties.useLatestRestorableTime",
+        "properties.awsProperties.vpcSecurityGroups",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBInstances/{name}",
+      "operationId": "RdsDbInstances_Update",
+      "bodySchema": "RdsDBInstanceTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBInstances/{name}",
+      "operationId": "RdsDbInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

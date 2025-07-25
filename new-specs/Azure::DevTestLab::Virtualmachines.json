@@ -1,0 +1,496 @@
+{
+  "resource": "Azure::DevTestLab::Virtualmachines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines",
+      "operationId": "VirtualMachines_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}",
+      "operationId": "VirtualMachines_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}",
+      "operationId": "VirtualMachines_CreateOrUpdate",
+      "bodySchema": "LabVirtualMachine",
+      "requiredProperties": [
+        "properties",
+        "properties.applicableSchedule.properties",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties",
+        "properties.applicableSchedule.properties.labVmsStartup.properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.allowClaim",
+        "properties.applicableSchedule",
+        "properties.applicableSchedule.id",
+        "properties.applicableSchedule.location",
+        "properties.applicableSchedule.name",
+        "properties.applicableSchedule.properties.labVmsShutdown",
+        "properties.applicableSchedule.properties.labVmsShutdown.id",
+        "properties.applicableSchedule.properties.labVmsShutdown.location",
+        "properties.applicableSchedule.properties.labVmsShutdown.name",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.createdDate",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence.minute",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.status",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.timeInMinutes",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.webhookUrl",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.provisioningState",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.status",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.targetResourceId",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.taskType",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.timeZoneId",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.uniqueIdentifier",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.weekdays",
+        "properties.applicableSchedule.properties.labVmsShutdown.tags",
+        "properties.applicableSchedule.properties.labVmsShutdown.type",
+        "properties.applicableSchedule.properties.labVmsStartup",
+        "properties.applicableSchedule.properties.labVmsStartup.id",
+        "properties.applicableSchedule.properties.labVmsStartup.location",
+        "properties.applicableSchedule.properties.labVmsStartup.name",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.createdDate",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence.minute",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.status",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.timeInMinutes",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.webhookUrl",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.provisioningState",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.status",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.targetResourceId",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.taskType",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.timeZoneId",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.uniqueIdentifier",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.weekdays",
+        "properties.applicableSchedule.properties.labVmsStartup.tags",
+        "properties.applicableSchedule.properties.labVmsStartup.type",
+        "properties.applicableSchedule.tags",
+        "properties.applicableSchedule.type",
+        "properties.artifactDeploymentStatus",
+        "properties.artifactDeploymentStatus.artifactsApplied",
+        "properties.artifactDeploymentStatus.deploymentStatus",
+        "properties.artifactDeploymentStatus.totalArtifacts",
+        "properties.artifacts",
+        "properties.computeId",
+        "properties.computeVm",
+        "properties.computeVm.dataDiskIds",
+        "properties.computeVm.dataDisks",
+        "properties.computeVm.networkInterfaceId",
+        "properties.computeVm.osDiskId",
+        "properties.computeVm.osType",
+        "properties.computeVm.statuses",
+        "properties.computeVm.vmSize",
+        "properties.createdByUser",
+        "properties.createdByUserId",
+        "properties.createdDate",
+        "properties.customImageId",
+        "properties.disallowPublicIpAddress",
+        "properties.environmentId",
+        "properties.expirationDate",
+        "properties.fqdn",
+        "properties.galleryImageReference",
+        "properties.galleryImageReference.offer",
+        "properties.galleryImageReference.osType",
+        "properties.galleryImageReference.publisher",
+        "properties.galleryImageReference.sku",
+        "properties.galleryImageReference.version",
+        "properties.isAuthenticationWithSshKey",
+        "properties.labSubnetName",
+        "properties.labVirtualNetworkId",
+        "properties.networkInterface",
+        "properties.networkInterface.dnsName",
+        "properties.networkInterface.privateIpAddress",
+        "properties.networkInterface.publicIpAddress",
+        "properties.networkInterface.publicIpAddressId",
+        "properties.networkInterface.rdpAuthority",
+        "properties.networkInterface.sharedPublicIpAddressConfiguration",
+        "properties.networkInterface.sharedPublicIpAddressConfiguration.inboundNatRules",
+        "properties.networkInterface.sshAuthority",
+        "properties.networkInterface.subnetId",
+        "properties.networkInterface.virtualNetworkId",
+        "properties.notes",
+        "properties.osType",
+        "properties.ownerObjectId",
+        "properties.ownerUserPrincipalName",
+        "properties.password",
+        "properties.provisioningState",
+        "properties.size",
+        "properties.sshKey",
+        "properties.storageType",
+        "properties.uniqueIdentifier",
+        "properties.userName",
+        "properties.virtualMachineCreationSource",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}",
+      "operationId": "VirtualMachines_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{name}",
+      "operationId": "VirtualMachines_Update",
+      "bodySchema": "LabVirtualMachineFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.allowClaim",
+        "properties.applicableSchedule",
+        "properties.applicableSchedule.id",
+        "properties.applicableSchedule.location",
+        "properties.applicableSchedule.name",
+        "properties.applicableSchedule.properties",
+        "properties.applicableSchedule.properties.labVmsShutdown",
+        "properties.applicableSchedule.properties.labVmsShutdown.id",
+        "properties.applicableSchedule.properties.labVmsShutdown.location",
+        "properties.applicableSchedule.properties.labVmsShutdown.name",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence.minute",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.status",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.timeInMinutes",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.webhookUrl",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.provisioningState",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.status",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.targetResourceId",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.taskType",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.timeZoneId",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.uniqueIdentifier",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.weekdays",
+        "properties.applicableSchedule.properties.labVmsShutdown.tags",
+        "properties.applicableSchedule.properties.labVmsShutdown.type",
+        "properties.applicableSchedule.properties.labVmsStartup",
+        "properties.applicableSchedule.properties.labVmsStartup.id",
+        "properties.applicableSchedule.properties.labVmsStartup.location",
+        "properties.applicableSchedule.properties.labVmsStartup.name",
+        "properties.applicableSchedule.properties.labVmsStartup.properties",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence.minute",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.status",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.timeInMinutes",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.webhookUrl",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.provisioningState",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.status",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.targetResourceId",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.taskType",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.timeZoneId",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.uniqueIdentifier",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.time",
+        "properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.weekdays",
+        "properties.applicableSchedule.properties.labVmsStartup.tags",
+        "properties.applicableSchedule.properties.labVmsStartup.type",
+        "properties.applicableSchedule.tags",
+        "properties.applicableSchedule.type",
+        "properties.artifactDeploymentStatus",
+        "properties.artifactDeploymentStatus.artifactsApplied",
+        "properties.artifactDeploymentStatus.deploymentStatus",
+        "properties.artifactDeploymentStatus.totalArtifacts",
+        "properties.artifacts",
+        "properties.computeVm",
+        "properties.computeVm.dataDiskIds",
+        "properties.computeVm.dataDisks",
+        "properties.computeVm.networkInterfaceId",
+        "properties.computeVm.osDiskId",
+        "properties.computeVm.osType",
+        "properties.computeVm.statuses",
+        "properties.computeVm.vmSize",
+        "properties.createdByUser",
+        "properties.createdByUserId",
+        "properties.createdDate",
+        "properties.customImageId",
+        "properties.disallowPublicIpAddress",
+        "properties.environmentId",
+        "properties.expirationDate",
+        "properties.fqdn",
+        "properties.galleryImageReference",
+        "properties.galleryImageReference.offer",
+        "properties.galleryImageReference.osType",
+        "properties.galleryImageReference.publisher",
+        "properties.galleryImageReference.sku",
+        "properties.galleryImageReference.version",
+        "properties.isAuthenticationWithSshKey",
+        "properties.labSubnetName",
+        "properties.labVirtualNetworkId",
+        "properties.networkInterface",
+        "properties.networkInterface.dnsName",
+        "properties.networkInterface.privateIpAddress",
+        "properties.networkInterface.publicIpAddress",
+        "properties.networkInterface.publicIpAddressId",
+        "properties.networkInterface.rdpAuthority",
+        "properties.networkInterface.sharedPublicIpAddressConfiguration",
+        "properties.networkInterface.sharedPublicIpAddressConfiguration.inboundNatRules",
+        "properties.networkInterface.sshAuthority",
+        "properties.networkInterface.subnetId",
+        "properties.networkInterface.virtualNetworkId",
+        "properties.notes",
+        "properties.osType",
+        "properties.ownerObjectId",
+        "properties.ownerUserPrincipalName",
+        "properties.password",
+        "properties.provisioningState",
+        "properties.size",
+        "properties.sshKey",
+        "properties.storageType",
+        "properties.uniqueIdentifier",
+        "properties.userName",
+        "properties.virtualMachineCreationSource",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

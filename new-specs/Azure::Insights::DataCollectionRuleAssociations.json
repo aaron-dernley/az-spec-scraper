@@ -1,0 +1,104 @@
+{
+  "resource": "Azure::Insights::DataCollectionRuleAssociations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.Insights/dataCollectionRuleAssociations",
+      "operationId": "DataCollectionRuleAssociations_ListByResource",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.Insights/dataCollectionRuleAssociations/{associationName}",
+      "operationId": "DataCollectionRuleAssociations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier of the resource."
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the association. The name is case insensitive."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.Insights/dataCollectionRuleAssociations/{associationName}",
+      "operationId": "DataCollectionRuleAssociations_Create",
+      "bodySchema": "DataCollectionRuleAssociationProxyOnlyResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.dataCollectionEndpointId",
+        "properties.dataCollectionRuleId",
+        "properties.description",
+        "properties.metadata",
+        "properties.metadata.provisionedBy",
+        "properties.metadata.provisionedByResourceId",
+        "properties.provisioningState",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier of the resource."
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the association. The name is case insensitive."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.Insights/dataCollectionRuleAssociations/{associationName}",
+      "operationId": "DataCollectionRuleAssociations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The identifier of the resource."
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the association. The name is case insensitive."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

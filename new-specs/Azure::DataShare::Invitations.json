@@ -1,0 +1,249 @@
+{
+  "resource": "Azure::DataShare::Invitations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shares/{shareName}/invitations/{invitationName}",
+      "operationId": "Invitations_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share account."
+        },
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share."
+        },
+        {
+          "name": "invitationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the invitation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version to use."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shares/{shareName}/invitations/{invitationName}",
+      "operationId": "Invitations_Create",
+      "bodySchema": "Invitation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.expirationDate",
+        "properties.invitationId",
+        "properties.invitationStatus",
+        "properties.respondedAt",
+        "properties.sentAt",
+        "properties.targetActiveDirectoryId",
+        "properties.targetEmail",
+        "properties.targetObjectId",
+        "properties.userEmail",
+        "properties.userName",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share account."
+        },
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share to send the invitation for."
+        },
+        {
+          "name": "invitationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the invitation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version to use."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shares/{shareName}/invitations/{invitationName}",
+      "operationId": "Invitations_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share account."
+        },
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share."
+        },
+        {
+          "name": "invitationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the invitation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version to use."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shares/{shareName}/invitations",
+      "operationId": "Invitations_ListByShare",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share account."
+        },
+        {
+          "name": "shareName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the share."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version to use."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The continuation token"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Filters the results using OData syntax."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Sorts the results using OData syntax."
+        }
+      ]
+    }
+  ]
+}

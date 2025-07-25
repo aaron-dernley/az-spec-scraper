@@ -1,0 +1,232 @@
+{
+  "resource": "Azure::ServiceBus::Subscriptions",
+  "version": "2017-04-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions",
+      "operationId": "Subscriptions_ListAll",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "topicName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The topic name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}",
+      "operationId": "Subscriptions_CreateOrUpdate",
+      "bodySchema": "SubscriptionCreateOrUpdateParameters",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.accessedAt",
+        "properties.autoDeleteOnIdle",
+        "properties.countDetails",
+        "properties.countDetails.activeMessageCount",
+        "properties.countDetails.deadLetterMessageCount",
+        "properties.countDetails.scheduledMessageCount",
+        "properties.countDetails.transferDeadLetterMessageCount",
+        "properties.countDetails.transferMessageCount",
+        "properties.createdAt",
+        "properties.deadLetteringOnFilterEvaluationExceptions",
+        "properties.deadLetteringOnMessageExpiration",
+        "properties.defaultMessageTimeToLive",
+        "properties.enableBatchedOperations",
+        "properties.entityAvailabilityStatus",
+        "properties.isReadOnly",
+        "properties.lockDuration",
+        "properties.maxDeliveryCount",
+        "properties.messageCount",
+        "properties.requiresSession",
+        "properties.status",
+        "properties.updatedAt",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "topicName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The topic name."
+        },
+        {
+          "name": "subscriptionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}",
+      "operationId": "Subscriptions_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "topicName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The topic name."
+        },
+        {
+          "name": "subscriptionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}",
+      "operationId": "Subscriptions_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "topicName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The topic name."
+        },
+        {
+          "name": "subscriptionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

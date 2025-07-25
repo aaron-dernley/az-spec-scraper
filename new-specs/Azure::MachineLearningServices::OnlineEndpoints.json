@@ -1,0 +1,252 @@
+{
+  "resource": "Azure::MachineLearningServices::OnlineEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints",
+      "operationId": "OnlineEndpoints_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Name of the endpoint."
+        },
+        {
+          "name": "count",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Number of endpoints to be retrieved in a page of results."
+        },
+        {
+          "name": "computeType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "EndpointComputeType to be filtered by."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "A set of tags with which to filter the returned models. It is a comma separated string of tags key or tags key=value. Example: tagKey1,tagKey2,tagKey3=value3 ."
+        },
+        {
+          "name": "properties",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "A set of properties with which to filter the returned models. It is a comma separated string of properties key and/or properties key=value Example: propKey1,propKey2,propKey3=value3 ."
+        },
+        {
+          "name": "orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The option to order the response."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}",
+      "operationId": "OnlineEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Online Endpoint name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}",
+      "operationId": "OnlineEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Online Endpoint name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}",
+      "operationId": "OnlineEndpoints_Update",
+      "bodySchema": "PartialMinimalTrackedResourceWithIdentity",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Online Endpoint name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/onlineEndpoints/{endpointName}",
+      "operationId": "OnlineEndpoints_CreateOrUpdate",
+      "bodySchema": "OnlineEndpointTrackedResource",
+      "requiredProperties": [
+        "properties",
+        "properties.authMode"
+      ],
+      "optionalProperties": [
+        "identity",
+        "kind",
+        "properties.compute",
+        "properties.description",
+        "properties.keys",
+        "properties.keys.primaryKey",
+        "properties.keys.secondaryKey",
+        "properties.mirrorTraffic",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.scoringUri",
+        "properties.swaggerUri",
+        "properties.traffic",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Online Endpoint name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

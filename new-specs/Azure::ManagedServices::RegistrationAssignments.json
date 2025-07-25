@@ -1,0 +1,162 @@
+{
+  "resource": "Azure::ManagedServices::RegistrationAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationAssignments/{registrationAssignmentId}",
+      "operationId": "RegistrationAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        },
+        {
+          "name": "registrationAssignmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration assignment."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expandRegistrationDefinition",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Tells whether to return registration definition details also along with registration assignment details."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationAssignments/{registrationAssignmentId}",
+      "operationId": "RegistrationAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        },
+        {
+          "name": "registrationAssignmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration assignment."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationAssignments/{registrationAssignmentId}",
+      "operationId": "RegistrationAssignments_CreateOrUpdate",
+      "bodySchema": "RegistrationAssignment",
+      "requiredProperties": [
+        "properties.registrationDefinition.plan.name",
+        "properties.registrationDefinition.plan.product",
+        "properties.registrationDefinition.plan.publisher",
+        "properties.registrationDefinition.plan.version",
+        "properties.registrationDefinitionId"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.provisioningState",
+        "properties.registrationDefinition",
+        "properties.registrationDefinition.id",
+        "properties.registrationDefinition.name",
+        "properties.registrationDefinition.plan",
+        "properties.registrationDefinition.properties",
+        "properties.registrationDefinition.properties.authorizations",
+        "properties.registrationDefinition.properties.description",
+        "properties.registrationDefinition.properties.managedByTenantId",
+        "properties.registrationDefinition.properties.managedByTenantName",
+        "properties.registrationDefinition.properties.manageeTenantId",
+        "properties.registrationDefinition.properties.manageeTenantName",
+        "properties.registrationDefinition.properties.provisioningState",
+        "properties.registrationDefinition.properties.registrationDefinitionName",
+        "properties.registrationDefinition.type",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        },
+        {
+          "name": "registrationAssignmentId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Guid of the registration assignment."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.ManagedServices/registrationAssignments",
+      "operationId": "RegistrationAssignments_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scope of the resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expandRegistrationDefinition",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Tells whether to return registration definition details also along with registration assignment details."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

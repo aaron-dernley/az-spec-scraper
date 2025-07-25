@@ -1,0 +1,154 @@
+{
+  "resource": "Azure::Network::RuleCollectionGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/firewallPolicies/{firewallPolicyName}/ruleCollectionGroups/{ruleCollectionGroupName}",
+      "operationId": "FirewallPolicyRuleCollectionGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "firewallPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Firewall Policy."
+        },
+        {
+          "name": "ruleCollectionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the FirewallPolicyRuleCollectionGroup."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/firewallPolicies/{firewallPolicyName}/ruleCollectionGroups/{ruleCollectionGroupName}",
+      "operationId": "FirewallPolicyRuleCollectionGroups_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "firewallPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Firewall Policy."
+        },
+        {
+          "name": "ruleCollectionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the FirewallPolicyRuleCollectionGroup."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/firewallPolicies/{firewallPolicyName}/ruleCollectionGroups/{ruleCollectionGroupName}",
+      "operationId": "FirewallPolicyRuleCollectionGroups_CreateOrUpdate",
+      "bodySchema": "FirewallPolicyRuleCollectionGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.priority",
+        "properties.provisioningState",
+        "properties.ruleCollections",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "firewallPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Firewall Policy."
+        },
+        {
+          "name": "ruleCollectionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the FirewallPolicyRuleCollectionGroup."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/firewallPolicies/{firewallPolicyName}/ruleCollectionGroups",
+      "operationId": "FirewallPolicyRuleCollectionGroups_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "firewallPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Firewall Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

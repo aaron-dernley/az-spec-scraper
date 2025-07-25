@@ -1,0 +1,152 @@
+{
+  "resource": "Azure::DocumentDB::FirewallRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules",
+      "operationId": "FirewallRules_ListByMongoCluster",
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules/{firewallRuleName}",
+      "operationId": "FirewallRules_Get",
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules/{firewallRuleName}",
+      "operationId": "FirewallRules_CreateOrUpdate",
+      "bodySchema": "FirewallRule",
+      "requiredProperties": [
+        "properties.endIpAddress",
+        "properties.startIpAddress"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules/{firewallRuleName}",
+      "operationId": "FirewallRules_Delete",
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "firewallRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster firewall rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

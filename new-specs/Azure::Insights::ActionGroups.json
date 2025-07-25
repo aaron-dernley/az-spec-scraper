@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::Insights::ActionGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}",
+      "operationId": "ActionGroups_CreateOrUpdate",
+      "bodySchema": "ActionGroupResource",
+      "requiredProperties": [
+        "location",
+        "properties.enabled",
+        "properties.groupShortName"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.armRoleReceivers",
+        "properties.automationRunbookReceivers",
+        "properties.azureAppPushReceivers",
+        "properties.azureFunctionReceivers",
+        "properties.emailReceivers",
+        "properties.eventHubReceivers",
+        "properties.itsmReceivers",
+        "properties.logicAppReceivers",
+        "properties.smsReceivers",
+        "properties.voiceReceivers",
+        "properties.webhookReceivers",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "actionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the action group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}",
+      "operationId": "ActionGroups_Get",
+      "pathParameters": [
+        {
+          "name": "actionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the action group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}",
+      "operationId": "ActionGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "actionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the action group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}",
+      "operationId": "ActionGroups_Update",
+      "bodySchema": "ActionGroupPatchBody",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.enabled",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "actionGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the action group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/actionGroups",
+      "operationId": "ActionGroups_ListBySubscriptionId",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups",
+      "operationId": "ActionGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

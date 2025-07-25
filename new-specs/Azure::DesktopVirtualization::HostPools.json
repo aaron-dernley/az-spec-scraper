@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::DesktopVirtualization::HostPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}",
+      "operationId": "HostPools_Get",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}",
+      "operationId": "HostPools_CreateOrUpdate",
+      "bodySchema": "HostPool",
+      "requiredProperties": [
+        "properties",
+        "properties.hostPoolType",
+        "properties.loadBalancerType",
+        "properties.preferredAppGroupType"
+      ],
+      "optionalProperties": [
+        "properties.applicationGroupReferences",
+        "properties.cloudPcResource",
+        "properties.customRdpProperty",
+        "properties.description",
+        "properties.friendlyName",
+        "properties.maxSessionLimit",
+        "properties.migrationRequest",
+        "properties.migrationRequest.migrationPath",
+        "properties.migrationRequest.operation",
+        "properties.objectId",
+        "properties.personalDesktopAssignmentType",
+        "properties.registrationInfo",
+        "properties.registrationInfo.expirationTime",
+        "properties.registrationInfo.registrationTokenOperation",
+        "properties.registrationInfo.token",
+        "properties.ring",
+        "properties.ssoClientId",
+        "properties.ssoClientSecretKeyVaultPath",
+        "properties.ssoSecretType",
+        "properties.ssoadfsAuthority",
+        "properties.startVMOnConnect",
+        "properties.validationEnvironment",
+        "properties.vmTemplate"
+      ],
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}",
+      "operationId": "HostPools_Delete",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Force flag to delete sessionHost."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}",
+      "operationId": "HostPools_Update",
+      "bodySchema": "HostPoolPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.customRdpProperty",
+        "properties.description",
+        "properties.friendlyName",
+        "properties.loadBalancerType",
+        "properties.maxSessionLimit",
+        "properties.personalDesktopAssignmentType",
+        "properties.preferredAppGroupType",
+        "properties.registrationInfo",
+        "properties.registrationInfo.expirationTime",
+        "properties.registrationInfo.registrationTokenOperation",
+        "properties.ring",
+        "properties.ssoClientId",
+        "properties.ssoClientSecretKeyVaultPath",
+        "properties.ssoSecretType",
+        "properties.ssoadfsAuthority",
+        "properties.startVMOnConnect",
+        "properties.validationEnvironment",
+        "properties.vmTemplate",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools",
+      "operationId": "HostPools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DesktopVirtualization/hostPools",
+      "operationId": "HostPools_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

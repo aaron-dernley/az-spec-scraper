@@ -1,0 +1,189 @@
+{
+  "resource": "Azure::Network::NetworkVirtualAppliances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "operationId": "NetworkVirtualAppliances_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Network Virtual Appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "operationId": "NetworkVirtualAppliances_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Network Virtual Appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Expands referenced resources."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "operationId": "NetworkVirtualAppliances_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of Network Virtual Appliance."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Network Virtual Appliance being updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}",
+      "operationId": "NetworkVirtualAppliances_CreateOrUpdate",
+      "bodySchema": "NetworkVirtualAppliance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "identity",
+        "properties",
+        "properties.addressPrefix",
+        "properties.bootStrapConfigurationBlobs",
+        "properties.cloudInitConfiguration",
+        "properties.cloudInitConfigurationBlobs",
+        "properties.inboundSecurityRules",
+        "properties.nvaSku",
+        "properties.nvaSku.bundledScaleUnit",
+        "properties.nvaSku.marketPlaceVersion",
+        "properties.nvaSku.vendor",
+        "properties.provisioningState",
+        "properties.virtualApplianceAsn",
+        "properties.virtualApplianceNics",
+        "properties.virtualApplianceSites",
+        "properties.virtualHub"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of Network Virtual Appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances",
+      "operationId": "NetworkVirtualAppliances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/networkVirtualAppliances",
+      "operationId": "NetworkVirtualAppliances_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

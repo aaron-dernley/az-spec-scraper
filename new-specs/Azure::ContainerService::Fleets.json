@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::ContainerService::Fleets",
+  "version": "2025-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ContainerService/fleets",
+      "operationId": "Fleets_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets",
+      "operationId": "Fleets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}",
+      "operationId": "Fleets_Get",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}",
+      "operationId": "Fleets_CreateOrUpdate",
+      "bodySchema": "Fleet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "identity",
+        "properties",
+        "properties.hubProfile",
+        "properties.hubProfile.agentProfile",
+        "properties.hubProfile.agentProfile.subnetId",
+        "properties.hubProfile.agentProfile.vmSize",
+        "properties.hubProfile.apiServerAccessProfile",
+        "properties.hubProfile.apiServerAccessProfile.enablePrivateCluster",
+        "properties.hubProfile.apiServerAccessProfile.enableVnetIntegration",
+        "properties.hubProfile.apiServerAccessProfile.subnetId",
+        "properties.hubProfile.dnsPrefix",
+        "properties.hubProfile.fqdn",
+        "properties.hubProfile.kubernetesVersion",
+        "properties.hubProfile.portalFqdn",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.lastOperationError",
+        "properties.status.lastOperationId"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}",
+      "operationId": "Fleets_Update",
+      "bodySchema": "FleetPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}",
+      "operationId": "Fleets_Delete",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

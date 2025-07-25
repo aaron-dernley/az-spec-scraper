@@ -1,0 +1,166 @@
+{
+  "resource": "Azure::ProviderHub::ResourcetypeRegistrations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}",
+      "operationId": "ResourceTypeRegistrations_Get",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}",
+      "operationId": "ResourceTypeRegistrations_CreateOrUpdate",
+      "bodySchema": "ResourceTypeRegistration",
+      "requiredProperties": [
+        "properties.featuresRule.requiredFeaturesPolicy"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.allowedUnauthorizedActions",
+        "properties.authorizationActionMappings",
+        "properties.checkNameAvailabilitySpecifications",
+        "properties.checkNameAvailabilitySpecifications.enableDefaultValidation",
+        "properties.checkNameAvailabilitySpecifications.resourceTypesWithCustomValidation",
+        "properties.defaultApiVersion",
+        "properties.disallowedActionVerbs",
+        "properties.enableAsyncOperation",
+        "properties.enableThirdPartyS2S",
+        "properties.endpoints",
+        "properties.extendedLocations",
+        "properties.extensionOptions",
+        "properties.extensionOptions.resourceCreationBegin",
+        "properties.extensionOptions.resourceCreationBegin.request",
+        "properties.extensionOptions.resourceCreationBegin.response",
+        "properties.featuresRule",
+        "properties.identityManagement",
+        "properties.identityManagement.applicationId",
+        "properties.identityManagement.type",
+        "properties.isPureProxy",
+        "properties.linkedAccessChecks",
+        "properties.loggingRules",
+        "properties.marketplaceType",
+        "properties.provisioningState",
+        "properties.regionality",
+        "properties.requestHeaderOptions",
+        "properties.requestHeaderOptions.optInHeaders",
+        "properties.requiredFeatures",
+        "properties.resourceDeletionPolicy",
+        "properties.resourceMovePolicy",
+        "properties.resourceMovePolicy.crossResourceGroupMoveEnabled",
+        "properties.resourceMovePolicy.crossSubscriptionMoveEnabled",
+        "properties.resourceMovePolicy.validationRequired",
+        "properties.routingType",
+        "properties.serviceTreeInfos",
+        "properties.subscriptionLifecycleNotificationSpecifications",
+        "properties.subscriptionLifecycleNotificationSpecifications.softDeleteTTL",
+        "properties.subscriptionLifecycleNotificationSpecifications.subscriptionStateOverrideActions",
+        "properties.subscriptionStateRules",
+        "properties.swaggerSpecifications",
+        "properties.templateDeploymentOptions",
+        "properties.templateDeploymentOptions.preflightOptions",
+        "properties.templateDeploymentOptions.preflightSupported",
+        "properties.throttlingRules"
+      ],
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType}",
+      "operationId": "ResourceTypeRegistrations_Delete",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "resourceType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource type."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations",
+      "operationId": "ResourceTypeRegistrations_ListByProviderRegistration",
+      "pathParameters": [
+        {
+          "name": "providerNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource provider hosted within ProviderHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

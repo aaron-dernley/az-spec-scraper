@@ -1,0 +1,342 @@
+{
+  "resource": "Azure::NotificationHubs::AuthorizationRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "NotificationHubs_CreateOrUpdateAuthorizationRule",
+      "bodySchema": "SharedAccessAuthorizationRuleResource",
+      "requiredProperties": [
+        "properties.rights"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.claimType",
+        "properties.claimValue",
+        "properties.createdTime",
+        "properties.keyName",
+        "properties.modifiedTime",
+        "properties.primaryKey",
+        "properties.revision",
+        "properties.secondaryKey",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "notificationHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Notification Hub name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "NotificationHubs_DeleteAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "notificationHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Notification Hub name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "NotificationHubs_GetAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "notificationHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Notification Hub name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}/authorizationRules",
+      "operationId": "NotificationHubs_ListAuthorizationRules",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "notificationHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Notification Hub name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_CreateOrUpdateAuthorizationRule",
+      "bodySchema": "SharedAccessAuthorizationRuleResource",
+      "requiredProperties": [
+        "properties.rights"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.claimType",
+        "properties.claimValue",
+        "properties.createdTime",
+        "properties.keyName",
+        "properties.modifiedTime",
+        "properties.primaryKey",
+        "properties.revision",
+        "properties.secondaryKey",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_DeleteAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/authorizationRules/{authorizationRuleName}",
+      "operationId": "Namespaces_GetAuthorizationRule",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "authorizationRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Authorization Rule Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/authorizationRules",
+      "operationId": "Namespaces_ListAuthorizationRules",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

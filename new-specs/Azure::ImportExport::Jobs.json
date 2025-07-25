@@ -1,0 +1,326 @@
+{
+  "resource": "Azure::ImportExport::Jobs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ImportExport/jobs",
+      "operationId": "Jobs_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "An integer value that specifies how many jobs at most should be returned. The value cannot exceed 100."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Can be used to restrict the results to certain conditions."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ImportExport/jobs",
+      "operationId": "Jobs_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name uniquely identifies the resource group within the user subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "An integer value that specifies how many jobs at most should be returned. The value cannot exceed 100."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Can be used to restrict the results to certain conditions."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ImportExport/jobs/{jobName}",
+      "operationId": "Jobs_Get",
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the import/export job."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name uniquely identifies the resource group within the user subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ImportExport/jobs/{jobName}",
+      "operationId": "Jobs_Update",
+      "bodySchema": "UpdateJobParameters",
+      "requiredProperties": [
+        "properties.deliveryPackage.carrierName",
+        "properties.deliveryPackage.trackingNumber",
+        "properties.returnAddress.city",
+        "properties.returnAddress.countryOrRegion",
+        "properties.returnAddress.email",
+        "properties.returnAddress.phone",
+        "properties.returnAddress.postalCode",
+        "properties.returnAddress.recipientName",
+        "properties.returnAddress.streetAddress1",
+        "properties.returnShipping.carrierAccountNumber",
+        "properties.returnShipping.carrierName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.backupDriveManifest",
+        "properties.cancelRequested",
+        "properties.deliveryPackage",
+        "properties.deliveryPackage.driveCount",
+        "properties.deliveryPackage.shipDate",
+        "properties.driveList",
+        "properties.logLevel",
+        "properties.returnAddress",
+        "properties.returnAddress.stateOrProvince",
+        "properties.returnAddress.streetAddress2",
+        "properties.returnShipping",
+        "properties.state",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the import/export job."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name uniquely identifies the resource group within the user subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ImportExport/jobs/{jobName}",
+      "operationId": "Jobs_Create",
+      "bodySchema": "PutJobParameters",
+      "requiredProperties": [
+        "properties.deliveryPackage.carrierName",
+        "properties.deliveryPackage.trackingNumber",
+        "properties.returnAddress.city",
+        "properties.returnAddress.countryOrRegion",
+        "properties.returnAddress.email",
+        "properties.returnAddress.phone",
+        "properties.returnAddress.postalCode",
+        "properties.returnAddress.recipientName",
+        "properties.returnAddress.streetAddress1",
+        "properties.returnPackage.carrierName",
+        "properties.returnPackage.driveCount",
+        "properties.returnPackage.shipDate",
+        "properties.returnPackage.trackingNumber",
+        "properties.returnShipping.carrierAccountNumber",
+        "properties.returnShipping.carrierName"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.backupDriveManifest",
+        "properties.cancelRequested",
+        "properties.deliveryPackage",
+        "properties.deliveryPackage.driveCount",
+        "properties.deliveryPackage.shipDate",
+        "properties.diagnosticsPath",
+        "properties.driveList",
+        "properties.encryptionKey",
+        "properties.encryptionKey.kekType",
+        "properties.encryptionKey.kekUrl",
+        "properties.encryptionKey.kekVaultResourceID",
+        "properties.export",
+        "properties.export.blobList",
+        "properties.export.blobList.blobPath",
+        "properties.export.blobList.blobPathPrefix",
+        "properties.export.blobListBlobPath",
+        "properties.incompleteBlobListUri",
+        "properties.jobType",
+        "properties.logLevel",
+        "properties.percentComplete",
+        "properties.provisioningState",
+        "properties.returnAddress",
+        "properties.returnAddress.stateOrProvince",
+        "properties.returnAddress.streetAddress2",
+        "properties.returnPackage",
+        "properties.returnShipping",
+        "properties.shippingInformation",
+        "properties.shippingInformation.additionalInformation",
+        "properties.shippingInformation.city",
+        "properties.shippingInformation.countryOrRegion",
+        "properties.shippingInformation.phone",
+        "properties.shippingInformation.postalCode",
+        "properties.shippingInformation.recipientName",
+        "properties.shippingInformation.stateOrProvince",
+        "properties.shippingInformation.streetAddress1",
+        "properties.shippingInformation.streetAddress2",
+        "properties.state",
+        "properties.storageAccountId",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the import/export job."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name uniquely identifies the resource group within the user subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ImportExport/jobs/{jobName}",
+      "operationId": "Jobs_Delete",
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the import/export job."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID for the Azure user."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name uniquely identifies the resource group within the user subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the API version to use for this request."
+        }
+      ]
+    }
+  ]
+}

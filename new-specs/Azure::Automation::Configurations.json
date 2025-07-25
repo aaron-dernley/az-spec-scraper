@@ -1,0 +1,247 @@
+{
+  "resource": "Azure::Automation::Configurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/configurations/{configurationName}",
+      "operationId": "DscConfiguration_Delete",
+      "pathParameters": [
+        {
+          "name": "configurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/configurations/{configurationName}",
+      "operationId": "DscConfiguration_Get",
+      "pathParameters": [
+        {
+          "name": "configurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/configurations/{configurationName}",
+      "operationId": "DscConfiguration_CreateOrUpdate",
+      "bodySchema": "DscConfigurationCreateOrUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.source",
+        "properties.source.hash.algorithm",
+        "properties.source.hash.value"
+      ],
+      "optionalProperties": [
+        "location",
+        "name",
+        "properties.description",
+        "properties.logProgress",
+        "properties.logVerbose",
+        "properties.parameters",
+        "properties.source.hash",
+        "properties.source.type",
+        "properties.source.value",
+        "properties.source.version",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "configurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The create or update parameters for configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/configurations/{configurationName}",
+      "operationId": "DscConfiguration_Update",
+      "bodySchema": "DscConfigurationUpdateParameters",
+      "requiredProperties": [
+        "properties.source",
+        "properties.source.hash.algorithm",
+        "properties.source.hash.value"
+      ],
+      "optionalProperties": [
+        "name",
+        "properties",
+        "properties.description",
+        "properties.logProgress",
+        "properties.logVerbose",
+        "properties.parameters",
+        "properties.source.hash",
+        "properties.source.type",
+        "properties.source.value",
+        "properties.source.version",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "configurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The create or update parameters for configuration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/configurations",
+      "operationId": "DscConfiguration_ListByAutomationAccount",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of rows to skip."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of rows to take."
+        },
+        {
+          "name": "$inlinecount",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Return total rows."
+        }
+      ]
+    }
+  ]
+}

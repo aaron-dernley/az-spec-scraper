@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::Compute::RestorePoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "operationId": "RestorePoints_Create",
+      "bodySchema": "RestorePoint",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.consistencyMode",
+        "properties.excludeDisks",
+        "properties.instanceView",
+        "properties.instanceView.diskRestorePoints",
+        "properties.instanceView.statuses",
+        "properties.provisioningState",
+        "properties.sourceMetadata",
+        "properties.sourceMetadata.diagnosticsProfile",
+        "properties.sourceMetadata.hardwareProfile",
+        "properties.sourceMetadata.licenseType",
+        "properties.sourceMetadata.location",
+        "properties.sourceMetadata.osProfile",
+        "properties.sourceMetadata.securityProfile",
+        "properties.sourceMetadata.storageProfile",
+        "properties.sourceMetadata.storageProfile.dataDisks",
+        "properties.sourceMetadata.storageProfile.osDisk",
+        "properties.sourceMetadata.storageProfile.osDisk.caching",
+        "properties.sourceMetadata.storageProfile.osDisk.diskRestorePoint",
+        "properties.sourceMetadata.storageProfile.osDisk.diskSizeGB",
+        "properties.sourceMetadata.storageProfile.osDisk.encryptionSettings",
+        "properties.sourceMetadata.storageProfile.osDisk.managedDisk",
+        "properties.sourceMetadata.storageProfile.osDisk.name",
+        "properties.sourceMetadata.storageProfile.osDisk.osType",
+        "properties.sourceMetadata.vmId",
+        "properties.sourceRestorePoint",
+        "properties.timeCreated"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "restorePointCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the restore point collection."
+        },
+        {
+          "name": "restorePointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the restore point."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "operationId": "RestorePoints_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "restorePointCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Restore Point Collection."
+        },
+        {
+          "name": "restorePointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the restore point."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/restorePointCollections/{restorePointCollectionName}/restorePoints/{restorePointName}",
+      "operationId": "RestorePoints_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "restorePointCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the restore point collection."
+        },
+        {
+          "name": "restorePointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the restore point."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation. 'InstanceView' retrieves information about the run-time state of a restore point."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::Network::ApplicationGateways",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}",
+      "operationId": "ApplicationGateways_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "applicationGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}",
+      "operationId": "ApplicationGateways_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "applicationGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}",
+      "operationId": "ApplicationGateways_CreateOrUpdate",
+      "bodySchema": "ApplicationGateway",
+      "requiredProperties": [
+        "properties.autoscaleConfiguration.minCapacity",
+        "properties.webApplicationFirewallConfiguration.enabled",
+        "properties.webApplicationFirewallConfiguration.firewallMode",
+        "properties.webApplicationFirewallConfiguration.ruleSetType",
+        "properties.webApplicationFirewallConfiguration.ruleSetVersion"
+      ],
+      "optionalProperties": [
+        "etag",
+        "identity",
+        "properties",
+        "properties.authenticationCertificates",
+        "properties.autoscaleConfiguration",
+        "properties.autoscaleConfiguration.maxCapacity",
+        "properties.backendAddressPools",
+        "properties.backendHttpSettingsCollection",
+        "properties.customErrorConfigurations",
+        "properties.enableFips",
+        "properties.enableHttp2",
+        "properties.firewallPolicy",
+        "properties.forceFirewallPolicyAssociation",
+        "properties.frontendIPConfigurations",
+        "properties.frontendPorts",
+        "properties.gatewayIPConfigurations",
+        "properties.httpListeners",
+        "properties.operationalState",
+        "properties.privateEndpointConnections",
+        "properties.privateLinkConfigurations",
+        "properties.probes",
+        "properties.provisioningState",
+        "properties.redirectConfigurations",
+        "properties.requestRoutingRules",
+        "properties.resourceGuid",
+        "properties.rewriteRuleSets",
+        "properties.sku",
+        "properties.sku.capacity",
+        "properties.sku.name",
+        "properties.sku.tier",
+        "properties.sslCertificates",
+        "properties.sslPolicy",
+        "properties.sslPolicy.cipherSuites",
+        "properties.sslPolicy.disabledSslProtocols",
+        "properties.sslPolicy.minProtocolVersion",
+        "properties.sslPolicy.policyName",
+        "properties.sslPolicy.policyType",
+        "properties.sslProfiles",
+        "properties.trustedClientCertificates",
+        "properties.trustedRootCertificates",
+        "properties.urlPathMaps",
+        "properties.webApplicationFirewallConfiguration",
+        "properties.webApplicationFirewallConfiguration.disabledRuleGroups",
+        "properties.webApplicationFirewallConfiguration.exclusions",
+        "properties.webApplicationFirewallConfiguration.fileUploadLimitInMb",
+        "properties.webApplicationFirewallConfiguration.maxRequestBodySize",
+        "properties.webApplicationFirewallConfiguration.maxRequestBodySizeInKb",
+        "properties.webApplicationFirewallConfiguration.requestBodyCheck",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "applicationGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}",
+      "operationId": "ApplicationGateways_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "applicationGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways",
+      "operationId": "ApplicationGateways_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/applicationGateways",
+      "operationId": "ApplicationGateways_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

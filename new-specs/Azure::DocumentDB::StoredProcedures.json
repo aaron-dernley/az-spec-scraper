@@ -1,0 +1,217 @@
+{
+  "resource": "Azure::DocumentDB::StoredProcedures",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures",
+      "operationId": "SqlResources_ListSqlStoredProcedures",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures/{storedProcedureName}",
+      "operationId": "SqlResources_GetSqlStoredProcedure",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "storedProcedureName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB storedProcedure name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures/{storedProcedureName}",
+      "operationId": "SqlResources_CreateUpdateSqlStoredProcedure",
+      "bodySchema": "SqlStoredProcedureCreateUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.resource",
+        "properties.resource.id"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.options",
+        "properties.options.autoscaleSettings",
+        "properties.options.autoscaleSettings.maxThroughput",
+        "properties.options.throughput",
+        "properties.resource.body",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "storedProcedureName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB storedProcedure name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures/{storedProcedureName}",
+      "operationId": "SqlResources_DeleteSqlStoredProcedure",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "storedProcedureName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB storedProcedure name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

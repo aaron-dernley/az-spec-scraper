@@ -1,0 +1,155 @@
+{
+  "resource": "Azure::Network::Routes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+      "operationId": "Routes_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route table."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+      "operationId": "Routes_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route table."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes/{routeName}",
+      "operationId": "Routes_CreateOrUpdate",
+      "bodySchema": "Route",
+      "requiredProperties": [
+        "properties.nextHopType"
+      ],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.addressPrefix",
+        "properties.nextHopIpAddress",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route table."
+        },
+        {
+          "name": "routeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}/routes",
+      "operationId": "Routes_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeTableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route table."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "resource": "Azure::Management::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{groupId}/settings/default",
+      "operationId": "HierarchySettings_Get",
+      "pathParameters": [
+        {
+          "name": "groupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. The current version is 2018-01-01-preview."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/managementGroups/{groupId}/settings/default",
+      "operationId": "HierarchySettings_CreateOrUpdate",
+      "bodySchema": "CreateOrUpdateSettingsRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.defaultManagementGroup",
+        "properties.requireAuthorizationForGroupCreation"
+      ],
+      "pathParameters": [
+        {
+          "name": "groupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. The current version is 2018-01-01-preview."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Management/managementGroups/{groupId}/settings/default",
+      "operationId": "HierarchySettings_Update",
+      "bodySchema": "CreateOrUpdateSettingsRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.defaultManagementGroup",
+        "properties.requireAuthorizationForGroupCreation"
+      ],
+      "pathParameters": [
+        {
+          "name": "groupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. The current version is 2018-01-01-preview."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/managementGroups/{groupId}/settings/default",
+      "operationId": "HierarchySettings_Delete",
+      "pathParameters": [
+        {
+          "name": "groupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request. The current version is 2018-01-01-preview."
+        }
+      ]
+    }
+  ]
+}

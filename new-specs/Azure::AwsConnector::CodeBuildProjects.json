@@ -1,0 +1,291 @@
+{
+  "resource": "Azure::AwsConnector::CodeBuildProjects",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/codeBuildProjects",
+      "operationId": "CodeBuildProjects_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/codeBuildProjects",
+      "operationId": "CodeBuildProjects_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/codeBuildProjects/{name}",
+      "operationId": "CodeBuildProjects_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CodeBuildProject"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/codeBuildProjects/{name}",
+      "operationId": "CodeBuildProjects_CreateOrReplace",
+      "bodySchema": "CodeBuildProject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.artifacts",
+        "properties.awsProperties.artifacts.artifactIdentifier",
+        "properties.awsProperties.artifacts.bucketOwnerAccess",
+        "properties.awsProperties.artifacts.bucketOwnerAccess.value",
+        "properties.awsProperties.artifacts.encryptionDisabled",
+        "properties.awsProperties.artifacts.location",
+        "properties.awsProperties.artifacts.name",
+        "properties.awsProperties.artifacts.namespaceType",
+        "properties.awsProperties.artifacts.namespaceType.value",
+        "properties.awsProperties.artifacts.overrideArtifactName",
+        "properties.awsProperties.artifacts.packaging",
+        "properties.awsProperties.artifacts.packaging.value",
+        "properties.awsProperties.artifacts.path",
+        "properties.awsProperties.artifacts.type",
+        "properties.awsProperties.artifacts.type.value",
+        "properties.awsProperties.badge",
+        "properties.awsProperties.badge.badgeEnabled",
+        "properties.awsProperties.badge.badgeRequestUrl",
+        "properties.awsProperties.buildBatchConfig",
+        "properties.awsProperties.buildBatchConfig.batchReportMode",
+        "properties.awsProperties.buildBatchConfig.batchReportMode.value",
+        "properties.awsProperties.buildBatchConfig.combineArtifacts",
+        "properties.awsProperties.buildBatchConfig.restrictions",
+        "properties.awsProperties.buildBatchConfig.restrictions.computeTypesAllowed",
+        "properties.awsProperties.buildBatchConfig.restrictions.maximumBuildsAllowed",
+        "properties.awsProperties.buildBatchConfig.serviceRole",
+        "properties.awsProperties.buildBatchConfig.timeoutInMins",
+        "properties.awsProperties.cache",
+        "properties.awsProperties.cache.location",
+        "properties.awsProperties.cache.modes",
+        "properties.awsProperties.cache.type",
+        "properties.awsProperties.cache.type.value",
+        "properties.awsProperties.concurrentBuildLimit",
+        "properties.awsProperties.created",
+        "properties.awsProperties.description",
+        "properties.awsProperties.encryptionKey",
+        "properties.awsProperties.environment",
+        "properties.awsProperties.environment.certificate",
+        "properties.awsProperties.environment.computeType",
+        "properties.awsProperties.environment.computeType.value",
+        "properties.awsProperties.environment.environmentVariables",
+        "properties.awsProperties.environment.fleet",
+        "properties.awsProperties.environment.fleet.fleetArn",
+        "properties.awsProperties.environment.image",
+        "properties.awsProperties.environment.imagePullCredentialsType",
+        "properties.awsProperties.environment.imagePullCredentialsType.value",
+        "properties.awsProperties.environment.privilegedMode",
+        "properties.awsProperties.environment.registryCredential",
+        "properties.awsProperties.environment.registryCredential.credential",
+        "properties.awsProperties.environment.registryCredential.credentialProvider",
+        "properties.awsProperties.environment.registryCredential.credentialProvider.value",
+        "properties.awsProperties.environment.type",
+        "properties.awsProperties.environment.type.value",
+        "properties.awsProperties.fileSystemLocations",
+        "properties.awsProperties.lastModified",
+        "properties.awsProperties.logsConfig",
+        "properties.awsProperties.logsConfig.cloudWatchLogs",
+        "properties.awsProperties.logsConfig.cloudWatchLogs.groupName",
+        "properties.awsProperties.logsConfig.cloudWatchLogs.status",
+        "properties.awsProperties.logsConfig.cloudWatchLogs.status.value",
+        "properties.awsProperties.logsConfig.cloudWatchLogs.streamName",
+        "properties.awsProperties.logsConfig.s3Logs",
+        "properties.awsProperties.logsConfig.s3Logs.bucketOwnerAccess",
+        "properties.awsProperties.logsConfig.s3Logs.bucketOwnerAccess.value",
+        "properties.awsProperties.logsConfig.s3Logs.encryptionDisabled",
+        "properties.awsProperties.logsConfig.s3Logs.location",
+        "properties.awsProperties.logsConfig.s3Logs.status",
+        "properties.awsProperties.logsConfig.s3Logs.status.value",
+        "properties.awsProperties.name",
+        "properties.awsProperties.projectVisibility",
+        "properties.awsProperties.projectVisibility.value",
+        "properties.awsProperties.publicProjectAlias",
+        "properties.awsProperties.queuedTimeoutInMinutes",
+        "properties.awsProperties.resourceAccessRole",
+        "properties.awsProperties.secondaryArtifacts",
+        "properties.awsProperties.secondarySourceVersions",
+        "properties.awsProperties.secondarySources",
+        "properties.awsProperties.serviceRole",
+        "properties.awsProperties.source",
+        "properties.awsProperties.source.auth",
+        "properties.awsProperties.source.auth.resource",
+        "properties.awsProperties.source.auth.type",
+        "properties.awsProperties.source.auth.type.value",
+        "properties.awsProperties.source.buildStatusConfig",
+        "properties.awsProperties.source.buildStatusConfig.context",
+        "properties.awsProperties.source.buildStatusConfig.targetUrl",
+        "properties.awsProperties.source.buildspec",
+        "properties.awsProperties.source.gitCloneDepth",
+        "properties.awsProperties.source.gitSubmodulesConfig",
+        "properties.awsProperties.source.gitSubmodulesConfig.fetchSubmodules",
+        "properties.awsProperties.source.insecureSsl",
+        "properties.awsProperties.source.location",
+        "properties.awsProperties.source.reportBuildStatus",
+        "properties.awsProperties.source.sourceIdentifier",
+        "properties.awsProperties.source.type",
+        "properties.awsProperties.source.type.value",
+        "properties.awsProperties.sourceVersion",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.timeoutInMinutes",
+        "properties.awsProperties.vpcConfig",
+        "properties.awsProperties.vpcConfig.securityGroupIds",
+        "properties.awsProperties.vpcConfig.subnets",
+        "properties.awsProperties.vpcConfig.vpcId",
+        "properties.awsProperties.webhook",
+        "properties.awsProperties.webhook.branchFilter",
+        "properties.awsProperties.webhook.buildType",
+        "properties.awsProperties.webhook.buildType.value",
+        "properties.awsProperties.webhook.filterGroups",
+        "properties.awsProperties.webhook.lastModifiedSecret",
+        "properties.awsProperties.webhook.payloadUrl",
+        "properties.awsProperties.webhook.secret",
+        "properties.awsProperties.webhook.url",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CodeBuildProject"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/codeBuildProjects/{name}",
+      "operationId": "CodeBuildProjects_Update",
+      "bodySchema": "CodeBuildProjectTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CodeBuildProject"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/codeBuildProjects/{name}",
+      "operationId": "CodeBuildProjects_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CodeBuildProject"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

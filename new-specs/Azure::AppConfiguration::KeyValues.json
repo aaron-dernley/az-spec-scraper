@@ -1,0 +1,154 @@
+{
+  "resource": "Azure::AppConfiguration::KeyValues",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}/keyValues/{keyValueName}",
+      "operationId": "KeyValues_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "configStoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the configuration store."
+        },
+        {
+          "name": "keyValueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of key and label combination. Key and label are joined by $ character. Label is optional."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}/keyValues/{keyValueName}",
+      "operationId": "KeyValues_CreateOrUpdate",
+      "bodySchema": "KeyValue",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.contentType",
+        "properties.eTag",
+        "properties.key",
+        "properties.label",
+        "properties.lastModified",
+        "properties.locked",
+        "properties.tags",
+        "properties.value",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "configStoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the configuration store."
+        },
+        {
+          "name": "keyValueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of key and label combination. Key and label are joined by $ character. Label is optional."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}/keyValues/{keyValueName}",
+      "operationId": "KeyValues_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the container registry belongs."
+        },
+        {
+          "name": "configStoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the configuration store."
+        },
+        {
+          "name": "keyValueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of key and label combination. Key and label are joined by $ character. Label is optional."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The client API version."
+        }
+      ]
+    }
+  ]
+}

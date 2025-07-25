@@ -1,0 +1,197 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkInterfaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkDevices/{networkDeviceName}/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Create",
+      "bodySchema": "NetworkInterface",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.connectedTo",
+        "properties.interfaceType",
+        "properties.ipv4Address",
+        "properties.ipv6Address",
+        "properties.physicalIdentifier",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Device."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkDevices/{networkDeviceName}/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Get",
+      "pathParameters": [
+        {
+          "name": "networkDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Device."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkDevices/{networkDeviceName}/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Update",
+      "bodySchema": "NetworkInterfacePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Device."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkDevices/{networkDeviceName}/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Delete",
+      "pathParameters": [
+        {
+          "name": "networkDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Device."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkDevices/{networkDeviceName}/networkInterfaces",
+      "operationId": "NetworkInterfaces_ListByNetworkDevice",
+      "pathParameters": [
+        {
+          "name": "networkDeviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Device."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

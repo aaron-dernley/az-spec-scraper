@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::DocumentDB::Containers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers",
+      "operationId": "SqlResources_ListSqlContainers",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}",
+      "operationId": "SqlResources_GetSqlContainer",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}",
+      "operationId": "SqlResources_CreateUpdateSqlContainer",
+      "bodySchema": "SqlContainerCreateUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.resource",
+        "properties.resource.id"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.options",
+        "properties.options.autoscaleSettings",
+        "properties.options.autoscaleSettings.maxThroughput",
+        "properties.options.throughput",
+        "properties.resource.analyticalStorageTtl",
+        "properties.resource.conflictResolutionPolicy",
+        "properties.resource.conflictResolutionPolicy.conflictResolutionPath",
+        "properties.resource.conflictResolutionPolicy.conflictResolutionProcedure",
+        "properties.resource.conflictResolutionPolicy.mode",
+        "properties.resource.defaultTtl",
+        "properties.resource.indexingPolicy",
+        "properties.resource.indexingPolicy.automatic",
+        "properties.resource.indexingPolicy.compositeIndexes",
+        "properties.resource.indexingPolicy.excludedPaths",
+        "properties.resource.indexingPolicy.includedPaths",
+        "properties.resource.indexingPolicy.indexingMode",
+        "properties.resource.indexingPolicy.spatialIndexes",
+        "properties.resource.partitionKey",
+        "properties.resource.partitionKey.kind",
+        "properties.resource.partitionKey.paths",
+        "properties.resource.partitionKey.systemKey",
+        "properties.resource.partitionKey.version",
+        "properties.resource.uniqueKeyPolicy",
+        "properties.resource.uniqueKeyPolicy.uniqueKeys",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}",
+      "operationId": "SqlResources_DeleteSqlContainer",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database name."
+        },
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

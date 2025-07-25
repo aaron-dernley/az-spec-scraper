@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::Migrate::MoveResources",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/moveCollections/{moveCollectionName}/moveResources",
+      "operationId": "MoveResources_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "moveCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Collection Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation. For example, you can use $filter=Properties/ProvisioningState eq 'Succeeded'."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/moveCollections/{moveCollectionName}/moveResources/{moveResourceName}",
+      "operationId": "MoveResources_Create",
+      "bodySchema": "MoveResource",
+      "requiredProperties": [
+        "properties.resourceSettings.resourceType",
+        "properties.sourceId",
+        "properties.sourceResourceSettings.resourceType"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.dependsOn",
+        "properties.dependsOnOverrides",
+        "properties.errors",
+        "properties.errors.properties",
+        "properties.errors.properties.code",
+        "properties.errors.properties.details",
+        "properties.errors.properties.message",
+        "properties.errors.properties.target",
+        "properties.existingTargetId",
+        "properties.isResolveRequired",
+        "properties.moveStatus",
+        "properties.moveStatus.errors",
+        "properties.moveStatus.errors.properties",
+        "properties.moveStatus.errors.properties.code",
+        "properties.moveStatus.errors.properties.details",
+        "properties.moveStatus.errors.properties.message",
+        "properties.moveStatus.errors.properties.target",
+        "properties.moveStatus.jobStatus",
+        "properties.moveStatus.jobStatus.jobName",
+        "properties.moveStatus.jobStatus.jobProgress",
+        "properties.moveStatus.moveState",
+        "properties.provisioningState",
+        "properties.resourceSettings",
+        "properties.resourceSettings.targetResourceGroupName",
+        "properties.resourceSettings.targetResourceName",
+        "properties.sourceResourceSettings",
+        "properties.sourceResourceSettings.targetResourceGroupName",
+        "properties.sourceResourceSettings.targetResourceName",
+        "properties.targetId",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "moveCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Collection Name."
+        },
+        {
+          "name": "moveResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Resource Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/moveCollections/{moveCollectionName}/moveResources/{moveResourceName}",
+      "operationId": "MoveResources_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "moveCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Collection Name."
+        },
+        {
+          "name": "moveResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Resource Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/moveCollections/{moveCollectionName}/moveResources/{moveResourceName}",
+      "operationId": "MoveResources_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name."
+        },
+        {
+          "name": "moveCollectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Collection Name."
+        },
+        {
+          "name": "moveResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Move Resource Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

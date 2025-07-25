@@ -1,0 +1,185 @@
+{
+  "resource": "Azure::AzureDataTransfer::Pipelines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureDataTransfer/pipelines",
+      "operationId": "Pipelines_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/pipelines",
+      "operationId": "Pipelines_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/pipelines/{pipelineName}",
+      "operationId": "Pipelines_Get",
+      "pathParameters": [
+        {
+          "name": "pipelineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the pipeline to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/pipelines/{pipelineName}",
+      "operationId": "Pipelines_CreateOrUpdate",
+      "bodySchema": "Pipeline",
+      "requiredProperties": [
+        "properties.remoteCloud"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.connections",
+        "properties.disabledFlowTypes",
+        "properties.displayName",
+        "properties.flowTypes",
+        "properties.policies",
+        "properties.provisioningState",
+        "properties.quarantineDownloadStorageAccount",
+        "properties.quarantineDownloadStorageContainer",
+        "properties.status",
+        "properties.subscribers"
+      ],
+      "pathParameters": [
+        {
+          "name": "pipelineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the pipeline to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/pipelines/{pipelineName}",
+      "operationId": "Pipelines_Update",
+      "bodySchema": "PipelinesPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.flowTypes",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "pipelineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the pipeline to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureDataTransfer/pipelines/{pipelineName}",
+      "operationId": "Pipelines_Delete",
+      "pathParameters": [
+        {
+          "name": "pipelineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name for the pipeline to perform the operation on."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "resource": "Azure::Sql::SyncGroups",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups",
+      "operationId": "SyncGroups_ListByDatabase",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database on which the sync group is hosted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database on which the sync group is hosted."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sync group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_CreateOrUpdate",
+      "bodySchema": "SyncGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.conflictLoggingRetentionInDays",
+        "properties.conflictResolutionPolicy",
+        "properties.enableConflictLogging",
+        "properties.hubDatabasePassword",
+        "properties.hubDatabaseUserName",
+        "properties.interval",
+        "properties.lastSyncTime",
+        "properties.privateEndpointName",
+        "properties.schema",
+        "properties.schema.masterSyncMemberName",
+        "properties.schema.tables",
+        "properties.syncDatabaseId",
+        "properties.syncState",
+        "properties.usePrivateLinkConnection",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database on which the sync group is hosted."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sync group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database on which the sync group is hosted."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sync group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/syncGroups/{syncGroupName}",
+      "operationId": "SyncGroups_Update",
+      "bodySchema": "SyncGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.conflictLoggingRetentionInDays",
+        "properties.conflictResolutionPolicy",
+        "properties.enableConflictLogging",
+        "properties.hubDatabasePassword",
+        "properties.hubDatabaseUserName",
+        "properties.interval",
+        "properties.lastSyncTime",
+        "properties.privateEndpointName",
+        "properties.schema",
+        "properties.schema.masterSyncMemberName",
+        "properties.schema.tables",
+        "properties.syncDatabaseId",
+        "properties.syncState",
+        "properties.usePrivateLinkConnection",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database on which the sync group is hosted."
+        },
+        {
+          "name": "syncGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the sync group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "resource": "Azure::App::DaprComponents",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/daprComponents",
+      "operationId": "DaprComponents_List",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/daprComponents/{componentName}",
+      "operationId": "DaprComponents_Get",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Dapr Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/daprComponents/{componentName}",
+      "operationId": "DaprComponents_CreateOrUpdate",
+      "bodySchema": "DaprComponent",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.componentType",
+        "properties.ignoreErrors",
+        "properties.initTimeout",
+        "properties.metadata",
+        "properties.scopes",
+        "properties.secrets",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Dapr Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}/daprComponents/{componentName}",
+      "operationId": "DaprComponents_Delete",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Managed Environment."
+        },
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Dapr Component."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

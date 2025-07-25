@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::AwsConnector::DatabaseMigrationServiceReplicationInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances/{name}",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DatabaseMigrationServiceReplicationInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances/{name}",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_CreateOrReplace",
+      "bodySchema": "DatabaseMigrationServiceReplicationInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.allocatedStorage",
+        "properties.awsProperties.autoMinorVersionUpgrade",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.dnsNameServers",
+        "properties.awsProperties.engineVersion",
+        "properties.awsProperties.freeUntil",
+        "properties.awsProperties.instanceCreateTime",
+        "properties.awsProperties.kmsKeyId",
+        "properties.awsProperties.multiAZ",
+        "properties.awsProperties.networkType",
+        "properties.awsProperties.pendingModifiedValues",
+        "properties.awsProperties.pendingModifiedValues.allocatedStorage",
+        "properties.awsProperties.pendingModifiedValues.engineVersion",
+        "properties.awsProperties.pendingModifiedValues.multiAZ",
+        "properties.awsProperties.pendingModifiedValues.networkType",
+        "properties.awsProperties.pendingModifiedValues.replicationInstanceClass",
+        "properties.awsProperties.preferredMaintenanceWindow",
+        "properties.awsProperties.publiclyAccessible",
+        "properties.awsProperties.replicationInstanceArn",
+        "properties.awsProperties.replicationInstanceClass",
+        "properties.awsProperties.replicationInstanceIdentifier",
+        "properties.awsProperties.replicationInstanceIpv6Addresses",
+        "properties.awsProperties.replicationInstancePrivateIpAddress",
+        "properties.awsProperties.replicationInstancePrivateIpAddresses",
+        "properties.awsProperties.replicationInstancePublicIpAddress",
+        "properties.awsProperties.replicationInstancePublicIpAddresses",
+        "properties.awsProperties.replicationInstanceStatus",
+        "properties.awsProperties.replicationSubnetGroup",
+        "properties.awsProperties.replicationSubnetGroup.replicationSubnetGroupDescription",
+        "properties.awsProperties.replicationSubnetGroup.replicationSubnetGroupIdentifier",
+        "properties.awsProperties.replicationSubnetGroup.subnetGroupStatus",
+        "properties.awsProperties.replicationSubnetGroup.subnets",
+        "properties.awsProperties.replicationSubnetGroup.supportedNetworkTypes",
+        "properties.awsProperties.replicationSubnetGroup.vpcId",
+        "properties.awsProperties.secondaryAvailabilityZone",
+        "properties.awsProperties.vpcSecurityGroups",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DatabaseMigrationServiceReplicationInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances/{name}",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_Update",
+      "bodySchema": "DatabaseMigrationServiceReplicationInstanceTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DatabaseMigrationServiceReplicationInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances/{name}",
+      "operationId": "DatabaseMigrationServiceReplicationInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DatabaseMigrationServiceReplicationInstance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

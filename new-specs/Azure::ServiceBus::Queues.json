@@ -1,0 +1,210 @@
+{
+  "resource": "Azure::ServiceBus::Queues",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues",
+      "operationId": "Queues_ListAll",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}",
+      "operationId": "Queues_CreateOrUpdate",
+      "bodySchema": "QueueCreateOrUpdateParameters",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "name",
+        "properties",
+        "properties.accessedAt",
+        "properties.autoDeleteOnIdle",
+        "properties.countDetails",
+        "properties.countDetails.activeMessageCount",
+        "properties.countDetails.deadLetterMessageCount",
+        "properties.countDetails.scheduledMessageCount",
+        "properties.countDetails.transferDeadLetterMessageCount",
+        "properties.countDetails.transferMessageCount",
+        "properties.createdAt",
+        "properties.deadLetteringOnMessageExpiration",
+        "properties.defaultMessageTimeToLive",
+        "properties.duplicateDetectionHistoryTimeWindow",
+        "properties.enableBatchedOperations",
+        "properties.enableExpress",
+        "properties.enablePartitioning",
+        "properties.entityAvailabilityStatus",
+        "properties.isAnonymousAccessible",
+        "properties.lockDuration",
+        "properties.maxDeliveryCount",
+        "properties.maxSizeInMegabytes",
+        "properties.messageCount",
+        "properties.requiresDuplicateDetection",
+        "properties.requiresSession",
+        "properties.sizeInBytes",
+        "properties.status",
+        "properties.supportOrdering",
+        "properties.updatedAt"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "queueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The queue name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}",
+      "operationId": "Queues_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "queueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The queue name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}",
+      "operationId": "Queues_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace name"
+        },
+        {
+          "name": "queueName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The queue name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

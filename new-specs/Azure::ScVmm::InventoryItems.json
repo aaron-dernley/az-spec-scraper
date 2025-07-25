@@ -1,0 +1,155 @@
+{
+  "resource": "Azure::ScVmm::InventoryItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/vmmServers/{vmmServerName}/inventoryItems",
+      "operationId": "InventoryItems_ListByVmmServer",
+      "pathParameters": [
+        {
+          "name": "vmmServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VmmServer."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/vmmServers/{vmmServerName}/inventoryItems/{inventoryItemResourceName}",
+      "operationId": "InventoryItems_Get",
+      "pathParameters": [
+        {
+          "name": "vmmServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VmmServer."
+        },
+        {
+          "name": "inventoryItemResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/vmmServers/{vmmServerName}/inventoryItems/{inventoryItemResourceName}",
+      "operationId": "InventoryItems_Create",
+      "bodySchema": "InventoryItem",
+      "requiredProperties": [
+        "properties.inventoryType"
+      ],
+      "optionalProperties": [
+        "kind",
+        "properties",
+        "properties.inventoryItemName",
+        "properties.managedResourceId",
+        "properties.provisioningState",
+        "properties.uuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "vmmServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VmmServer."
+        },
+        {
+          "name": "inventoryItemResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/vmmServers/{vmmServerName}/inventoryItems/{inventoryItemResourceName}",
+      "operationId": "InventoryItems_Delete",
+      "pathParameters": [
+        {
+          "name": "vmmServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VmmServer."
+        },
+        {
+          "name": "inventoryItemResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the inventoryItem."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

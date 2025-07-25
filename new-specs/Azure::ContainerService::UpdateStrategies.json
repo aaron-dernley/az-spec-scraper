@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::ContainerService::UpdateStrategies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateStrategies",
+      "operationId": "FleetUpdateStrategies_ListByFleet",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateStrategies/{updateStrategyName}",
+      "operationId": "FleetUpdateStrategies_Get",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateStrategyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateStrategy resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateStrategies/{updateStrategyName}",
+      "operationId": "FleetUpdateStrategies_CreateOrUpdate",
+      "bodySchema": "FleetUpdateStrategy",
+      "requiredProperties": [
+        "properties.strategy",
+        "properties.strategy.stages"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateStrategyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateStrategy resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateStrategies/{updateStrategyName}",
+      "operationId": "FleetUpdateStrategies_Delete",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "updateStrategyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the UpdateStrategy resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

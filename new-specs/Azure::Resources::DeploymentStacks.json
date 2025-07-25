@@ -1,0 +1,348 @@
+{
+  "resource": "Azure::Resources::DeploymentStacks",
+  "version": "2024-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentStacks",
+      "operationId": "DeploymentStacks_ListAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/deploymentStacks",
+      "operationId": "DeploymentStacks_ListAtSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_CreateOrUpdateAtResourceGroup",
+      "bodySchema": "DeploymentStack",
+      "requiredProperties": [
+        "properties.actionOnUnmanage",
+        "properties.actionOnUnmanage.resources",
+        "properties.denySettings",
+        "properties.denySettings.mode",
+        "properties.parametersLink.uri"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.actionOnUnmanage.managementGroups",
+        "properties.actionOnUnmanage.resourceGroups",
+        "properties.bypassStackOutOfSyncError",
+        "properties.correlationId",
+        "properties.debugSetting",
+        "properties.debugSetting.detailLevel",
+        "properties.deletedResources",
+        "properties.denySettings.applyToChildScopes",
+        "properties.denySettings.excludedActions",
+        "properties.denySettings.excludedPrincipals",
+        "properties.deploymentId",
+        "properties.deploymentScope",
+        "properties.description",
+        "properties.detachedResources",
+        "properties.duration",
+        "properties.error",
+        "properties.failedResources",
+        "properties.outputs",
+        "properties.parameters",
+        "properties.parametersLink",
+        "properties.parametersLink.contentVersion",
+        "properties.provisioningState",
+        "properties.resources",
+        "properties.template",
+        "properties.templateLink",
+        "properties.templateLink.contentVersion",
+        "properties.templateLink.id",
+        "properties.templateLink.queryString",
+        "properties.templateLink.relativePath",
+        "properties.templateLink.uri",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_GetAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_DeleteAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "unmanageAction.Resources",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged resources."
+        },
+        {
+          "name": "unmanageAction.ResourceGroups",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged resource groups."
+        },
+        {
+          "name": "unmanageAction.ManagementGroups",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged management groups."
+        },
+        {
+          "name": "bypassStackOutOfSyncError",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag to bypass service errors that indicate the stack resource list is not correctly synchronized."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_CreateOrUpdateAtSubscription",
+      "bodySchema": "DeploymentStack",
+      "requiredProperties": [
+        "properties.actionOnUnmanage",
+        "properties.actionOnUnmanage.resources",
+        "properties.denySettings",
+        "properties.denySettings.mode",
+        "properties.parametersLink.uri"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.actionOnUnmanage.managementGroups",
+        "properties.actionOnUnmanage.resourceGroups",
+        "properties.bypassStackOutOfSyncError",
+        "properties.correlationId",
+        "properties.debugSetting",
+        "properties.debugSetting.detailLevel",
+        "properties.deletedResources",
+        "properties.denySettings.applyToChildScopes",
+        "properties.denySettings.excludedActions",
+        "properties.denySettings.excludedPrincipals",
+        "properties.deploymentId",
+        "properties.deploymentScope",
+        "properties.description",
+        "properties.detachedResources",
+        "properties.duration",
+        "properties.error",
+        "properties.failedResources",
+        "properties.outputs",
+        "properties.parameters",
+        "properties.parametersLink",
+        "properties.parametersLink.contentVersion",
+        "properties.provisioningState",
+        "properties.resources",
+        "properties.template",
+        "properties.templateLink",
+        "properties.templateLink.contentVersion",
+        "properties.templateLink.id",
+        "properties.templateLink.queryString",
+        "properties.templateLink.relativePath",
+        "properties.templateLink.uri",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_GetAtSubscription",
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Resources/deploymentStacks/{deploymentStackName}",
+      "operationId": "DeploymentStacks_DeleteAtSubscription",
+      "pathParameters": [
+        {
+          "name": "deploymentStackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the deployment stack."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "unmanageAction.Resources",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged resources."
+        },
+        {
+          "name": "unmanageAction.ResourceGroups",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged resource groups."
+        },
+        {
+          "name": "unmanageAction.ManagementGroups",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Flag to indicate delete rather than detach for unmanaged management groups."
+        },
+        {
+          "name": "bypassStackOutOfSyncError",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag to bypass service errors that indicate the stack resource list is not correctly synchronized."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "resource": "Azure::Network::RouteFilterRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeFilters/{routeFilterName}/routeFilterRules/{ruleName}",
+      "operationId": "RouteFilterRules_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeFilterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route filter."
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeFilters/{routeFilterName}/routeFilterRules/{ruleName}",
+      "operationId": "RouteFilterRules_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeFilterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route filter."
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeFilters/{routeFilterName}/routeFilterRules/{ruleName}",
+      "operationId": "RouteFilterRules_CreateOrUpdate",
+      "bodySchema": "RouteFilterRule",
+      "requiredProperties": [
+        "properties.access",
+        "properties.communities",
+        "properties.routeFilterRuleType"
+      ],
+      "optionalProperties": [
+        "etag",
+        "location",
+        "name",
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeFilterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route filter."
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route filter rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeFilters/{routeFilterName}/routeFilterRules",
+      "operationId": "RouteFilterRules_ListByRouteFilter",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "routeFilterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the route filter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

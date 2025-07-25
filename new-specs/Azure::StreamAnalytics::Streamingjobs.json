@@ -1,0 +1,253 @@
+{
+  "resource": "Azure::StreamAnalytics::Streamingjobs",
+  "version": "2020-03-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}",
+      "operationId": "StreamingJobs_CreateOrReplace",
+      "bodySchema": "StreamingJob",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "properties",
+        "properties.cluster",
+        "properties.cluster.id",
+        "properties.compatibilityLevel",
+        "properties.contentStoragePolicy",
+        "properties.createdDate",
+        "properties.dataLocale",
+        "properties.etag",
+        "properties.eventsLateArrivalMaxDelayInSeconds",
+        "properties.eventsOutOfOrderMaxDelayInSeconds",
+        "properties.eventsOutOfOrderPolicy",
+        "properties.functions",
+        "properties.inputs",
+        "properties.jobId",
+        "properties.jobState",
+        "properties.jobStorageAccount",
+        "properties.jobStorageAccount.authenticationMode",
+        "properties.jobType",
+        "properties.lastOutputEventTime",
+        "properties.outputErrorPolicy",
+        "properties.outputStartMode",
+        "properties.outputStartTime",
+        "properties.outputs",
+        "properties.provisioningState",
+        "properties.sku",
+        "properties.sku.name",
+        "properties.transformation"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}",
+      "operationId": "StreamingJobs_Update",
+      "bodySchema": "StreamingJob",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "properties",
+        "properties.cluster",
+        "properties.cluster.id",
+        "properties.compatibilityLevel",
+        "properties.contentStoragePolicy",
+        "properties.createdDate",
+        "properties.dataLocale",
+        "properties.etag",
+        "properties.eventsLateArrivalMaxDelayInSeconds",
+        "properties.eventsOutOfOrderMaxDelayInSeconds",
+        "properties.eventsOutOfOrderPolicy",
+        "properties.functions",
+        "properties.inputs",
+        "properties.jobId",
+        "properties.jobState",
+        "properties.jobStorageAccount",
+        "properties.jobStorageAccount.authenticationMode",
+        "properties.jobType",
+        "properties.lastOutputEventTime",
+        "properties.outputErrorPolicy",
+        "properties.outputStartMode",
+        "properties.outputStartTime",
+        "properties.outputs",
+        "properties.provisioningState",
+        "properties.sku",
+        "properties.sku.name",
+        "properties.transformation"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}",
+      "operationId": "StreamingJobs_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs/{jobName}",
+      "operationId": "StreamingJobs_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than 'inputs', 'transformation', 'outputs', and 'functions'."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StreamAnalytics/streamingjobs",
+      "operationId": "StreamingJobs_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than 'inputs', 'transformation', 'outputs', and 'functions'."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StreamAnalytics/streamingjobs",
+      "operationId": "StreamingJobs_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The $expand OData query parameter. This is a comma-separated list of additional streaming job properties to include in the response, beyond the default set returned when this parameter is absent. The default set is all streaming job properties other than 'inputs', 'transformation', 'outputs', and 'functions'."
+        }
+      ]
+    }
+  ]
+}

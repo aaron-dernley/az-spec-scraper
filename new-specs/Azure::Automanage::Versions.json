@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::Automanage::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Automanage/bestPractices/{bestPracticeName}/versions/{versionName}",
+      "operationId": "BestPracticesVersions_Get",
+      "pathParameters": [
+        {
+          "name": "bestPracticeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Automanage best practice name."
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Automanage best practice version name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Automanage/bestPractices/{bestPracticeName}/versions",
+      "operationId": "BestPracticesVersions_ListByTenant",
+      "pathParameters": [
+        {
+          "name": "bestPracticeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Automanage best practice name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}/versions/{versionName}",
+      "operationId": "ConfigurationProfilesVersions_CreateOrUpdate",
+      "bodySchema": "ConfigurationProfile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.configuration",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "configurationProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the configuration profile."
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration profile version name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}/versions/{versionName}",
+      "operationId": "ConfigurationProfilesVersions_Get",
+      "pathParameters": [
+        {
+          "name": "configurationProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration profile name."
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration profile version name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}/versions/{versionName}",
+      "operationId": "ConfigurationProfilesVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "configurationProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the configuration profile"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration profile version name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}/versions",
+      "operationId": "ConfigurationProfilesVersions_ListChildResources",
+      "pathParameters": [
+        {
+          "name": "configurationProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the configuration profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

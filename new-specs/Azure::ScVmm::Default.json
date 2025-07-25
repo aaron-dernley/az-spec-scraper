@@ -1,0 +1,230 @@
+{
+  "resource": "Azure::ScVmm::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_CreateOrUpdate",
+      "bodySchema": "VirtualMachineInstance",
+      "requiredProperties": [
+        "extendedLocation"
+      ],
+      "optionalProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.availabilitySets",
+        "properties.hardwareProfile",
+        "properties.hardwareProfile.cpuCount",
+        "properties.hardwareProfile.dynamicMemoryEnabled",
+        "properties.hardwareProfile.dynamicMemoryMaxMB",
+        "properties.hardwareProfile.dynamicMemoryMinMB",
+        "properties.hardwareProfile.isHighlyAvailable",
+        "properties.hardwareProfile.limitCpuForMigration",
+        "properties.hardwareProfile.memoryMB",
+        "properties.infrastructureProfile",
+        "properties.infrastructureProfile.biosGuid",
+        "properties.infrastructureProfile.checkpointType",
+        "properties.infrastructureProfile.checkpoints",
+        "properties.infrastructureProfile.cloudId",
+        "properties.infrastructureProfile.generation",
+        "properties.infrastructureProfile.inventoryItemId",
+        "properties.infrastructureProfile.lastRestoredVMCheckpoint",
+        "properties.infrastructureProfile.lastRestoredVMCheckpoint.checkpointID",
+        "properties.infrastructureProfile.lastRestoredVMCheckpoint.description",
+        "properties.infrastructureProfile.lastRestoredVMCheckpoint.name",
+        "properties.infrastructureProfile.lastRestoredVMCheckpoint.parentCheckpointID",
+        "properties.infrastructureProfile.templateId",
+        "properties.infrastructureProfile.uuid",
+        "properties.infrastructureProfile.vmName",
+        "properties.infrastructureProfile.vmmServerId",
+        "properties.networkProfile",
+        "properties.networkProfile.networkInterfaces",
+        "properties.osProfile",
+        "properties.osProfile.adminPassword",
+        "properties.osProfile.computerName",
+        "properties.osProfile.domainName",
+        "properties.osProfile.domainPassword",
+        "properties.osProfile.domainUsername",
+        "properties.osProfile.osSku",
+        "properties.osProfile.osType",
+        "properties.osProfile.osVersion",
+        "properties.osProfile.productKey",
+        "properties.osProfile.runOnceCommands",
+        "properties.osProfile.timezone",
+        "properties.osProfile.workgroup",
+        "properties.powerState",
+        "properties.provisioningState",
+        "properties.storageProfile",
+        "properties.storageProfile.disks"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Update",
+      "bodySchema": "VirtualMachineInstanceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.availabilitySets",
+        "properties.hardwareProfile",
+        "properties.hardwareProfile.cpuCount",
+        "properties.hardwareProfile.dynamicMemoryEnabled",
+        "properties.hardwareProfile.dynamicMemoryMaxMB",
+        "properties.hardwareProfile.dynamicMemoryMinMB",
+        "properties.hardwareProfile.limitCpuForMigration",
+        "properties.hardwareProfile.memoryMB",
+        "properties.infrastructureProfile",
+        "properties.infrastructureProfile.checkpointType",
+        "properties.networkProfile",
+        "properties.networkProfile.networkInterfaces",
+        "properties.storageProfile",
+        "properties.storageProfile.disks"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default",
+      "operationId": "VirtualMachineInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Forces the resource to be deleted."
+        },
+        {
+          "name": "deleteFromHost",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Whether to disable the VM from azure and also delete it from Vmm."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "GuestAgents_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "GuestAgents_Create",
+      "bodySchema": "GuestAgent",
+      "requiredProperties": [
+        "properties.credentials.password",
+        "properties.credentials.username"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.credentials",
+        "properties.customResourceName",
+        "properties.httpProxyConfig",
+        "properties.httpProxyConfig.httpsProxy",
+        "properties.privateLinkScopeResourceId",
+        "properties.provisioningAction",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.uuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default/guestAgents/default",
+      "operationId": "GuestAgents_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.ScVmm/virtualMachineInstances/default/hybridIdentityMetadata/default",
+      "operationId": "VmInstanceHybridIdentityMetadatas_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

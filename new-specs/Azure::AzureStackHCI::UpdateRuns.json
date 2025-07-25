@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::AzureStackHCI::UpdateRuns",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/updateRuns",
+      "operationId": "UpdateRuns_List",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update Run"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_Put",
+      "bodySchema": "UpdateRun",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.duration",
+        "properties.lastUpdatedTime",
+        "properties.progress",
+        "properties.progress.description",
+        "properties.progress.endTimeUtc",
+        "properties.progress.errorMessage",
+        "properties.progress.lastUpdatedTimeUtc",
+        "properties.progress.name",
+        "properties.progress.startTimeUtc",
+        "properties.progress.status",
+        "properties.progress.steps",
+        "properties.provisioningState",
+        "properties.state",
+        "properties.timeStarted"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update Run"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/clusters/{clusterName}/updates/{updateName}/updateRuns/{updateRunName}",
+      "operationId": "UpdateRuns_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "updateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update"
+        },
+        {
+          "name": "updateRunName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Update Run"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

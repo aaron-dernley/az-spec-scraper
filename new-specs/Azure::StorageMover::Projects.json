@@ -1,0 +1,192 @@
+{
+  "resource": "Azure::StorageMover::Projects",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects",
+      "operationId": "Projects_List",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}",
+      "operationId": "Projects_Get",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}",
+      "operationId": "Projects_CreateOrUpdate",
+      "bodySchema": "Project",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}",
+      "operationId": "Projects_Update",
+      "bodySchema": "ProjectUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}",
+      "operationId": "Projects_Delete",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

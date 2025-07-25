@@ -1,0 +1,226 @@
+{
+  "resource": "Azure::App::Jobs",
+  "version": "2024-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.App/jobs",
+      "operationId": "Jobs_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs",
+      "operationId": "Jobs_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}",
+      "operationId": "Jobs_Get",
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Job Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}",
+      "operationId": "Jobs_CreateOrUpdate",
+      "bodySchema": "Job",
+      "requiredProperties": [
+        "properties.configuration.replicaTimeout",
+        "properties.configuration.scheduleTriggerConfig.cronExpression",
+        "properties.configuration.triggerType"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.configuration",
+        "properties.configuration.eventTriggerConfig",
+        "properties.configuration.eventTriggerConfig.parallelism",
+        "properties.configuration.eventTriggerConfig.replicaCompletionCount",
+        "properties.configuration.eventTriggerConfig.scale",
+        "properties.configuration.eventTriggerConfig.scale.maxExecutions",
+        "properties.configuration.eventTriggerConfig.scale.minExecutions",
+        "properties.configuration.eventTriggerConfig.scale.pollingInterval",
+        "properties.configuration.eventTriggerConfig.scale.rules",
+        "properties.configuration.manualTriggerConfig",
+        "properties.configuration.manualTriggerConfig.parallelism",
+        "properties.configuration.manualTriggerConfig.replicaCompletionCount",
+        "properties.configuration.registries",
+        "properties.configuration.replicaRetryLimit",
+        "properties.configuration.scheduleTriggerConfig",
+        "properties.configuration.scheduleTriggerConfig.parallelism",
+        "properties.configuration.scheduleTriggerConfig.replicaCompletionCount",
+        "properties.configuration.secrets",
+        "properties.environmentId",
+        "properties.eventStreamEndpoint",
+        "properties.outboundIpAddresses",
+        "properties.provisioningState",
+        "properties.template",
+        "properties.workloadProfileName"
+      ],
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Job Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}",
+      "operationId": "Jobs_Delete",
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Job Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}",
+      "operationId": "Jobs_Update",
+      "bodySchema": "JobPatchProperties",
+      "requiredProperties": [
+        "properties.configuration.replicaTimeout",
+        "properties.configuration.scheduleTriggerConfig.cronExpression",
+        "properties.configuration.triggerType"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.configuration",
+        "properties.configuration.eventTriggerConfig",
+        "properties.configuration.eventTriggerConfig.parallelism",
+        "properties.configuration.eventTriggerConfig.replicaCompletionCount",
+        "properties.configuration.eventTriggerConfig.scale",
+        "properties.configuration.eventTriggerConfig.scale.maxExecutions",
+        "properties.configuration.eventTriggerConfig.scale.minExecutions",
+        "properties.configuration.eventTriggerConfig.scale.pollingInterval",
+        "properties.configuration.eventTriggerConfig.scale.rules",
+        "properties.configuration.manualTriggerConfig",
+        "properties.configuration.manualTriggerConfig.parallelism",
+        "properties.configuration.manualTriggerConfig.replicaCompletionCount",
+        "properties.configuration.registries",
+        "properties.configuration.replicaRetryLimit",
+        "properties.configuration.scheduleTriggerConfig",
+        "properties.configuration.scheduleTriggerConfig.parallelism",
+        "properties.configuration.scheduleTriggerConfig.replicaCompletionCount",
+        "properties.configuration.secrets",
+        "properties.environmentId",
+        "properties.eventStreamEndpoint",
+        "properties.outboundIpAddresses",
+        "properties.template",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Job Name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

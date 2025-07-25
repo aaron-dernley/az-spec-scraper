@@ -1,0 +1,279 @@
+{
+  "resource": "Azure::Web::StaticSites",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/staticSites",
+      "operationId": "StaticSites_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites",
+      "operationId": "StaticSites_GetStaticSitesByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+      "operationId": "StaticSites_GetStaticSite",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+      "operationId": "StaticSites_CreateOrUpdateStaticSite",
+      "bodySchema": "StaticSiteARMResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.allowConfigFileUpdates",
+        "properties.branch",
+        "properties.buildProperties",
+        "properties.buildProperties.apiBuildCommand",
+        "properties.buildProperties.apiLocation",
+        "properties.buildProperties.appArtifactLocation",
+        "properties.buildProperties.appBuildCommand",
+        "properties.buildProperties.appLocation",
+        "properties.buildProperties.githubActionSecretNameOverride",
+        "properties.buildProperties.outputLocation",
+        "properties.buildProperties.skipGithubActionWorkflowGeneration",
+        "properties.contentDistributionEndpoint",
+        "properties.customDomains",
+        "properties.defaultHostname",
+        "properties.enterpriseGradeCdnStatus",
+        "properties.keyVaultReferenceIdentity",
+        "properties.linkedBackends",
+        "properties.privateEndpointConnections",
+        "properties.provider",
+        "properties.publicNetworkAccess",
+        "properties.repositoryToken",
+        "properties.repositoryUrl",
+        "properties.stagingEnvironmentPolicy",
+        "properties.templateProperties",
+        "properties.templateProperties.description",
+        "properties.templateProperties.isPrivate",
+        "properties.templateProperties.owner",
+        "properties.templateProperties.repositoryName",
+        "properties.templateProperties.templateRepositoryUrl",
+        "properties.userProvidedFunctionApps",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site to create or update."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+      "operationId": "StaticSites_DeleteStaticSite",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}",
+      "operationId": "StaticSites_UpdateStaticSite",
+      "bodySchema": "StaticSitePatchResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.allowConfigFileUpdates",
+        "properties.branch",
+        "properties.buildProperties",
+        "properties.buildProperties.apiBuildCommand",
+        "properties.buildProperties.apiLocation",
+        "properties.buildProperties.appArtifactLocation",
+        "properties.buildProperties.appBuildCommand",
+        "properties.buildProperties.appLocation",
+        "properties.buildProperties.githubActionSecretNameOverride",
+        "properties.buildProperties.outputLocation",
+        "properties.buildProperties.skipGithubActionWorkflowGeneration",
+        "properties.contentDistributionEndpoint",
+        "properties.customDomains",
+        "properties.defaultHostname",
+        "properties.enterpriseGradeCdnStatus",
+        "properties.keyVaultReferenceIdentity",
+        "properties.linkedBackends",
+        "properties.privateEndpointConnections",
+        "properties.provider",
+        "properties.publicNetworkAccess",
+        "properties.repositoryToken",
+        "properties.repositoryUrl",
+        "properties.stagingEnvironmentPolicy",
+        "properties.templateProperties",
+        "properties.templateProperties.description",
+        "properties.templateProperties.isPrivate",
+        "properties.templateProperties.owner",
+        "properties.templateProperties.repositoryName",
+        "properties.templateProperties.templateRepositoryUrl",
+        "properties.userProvidedFunctionApps"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the static site to create or update."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

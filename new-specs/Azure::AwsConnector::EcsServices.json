@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::AwsConnector::EcsServices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ecsServices",
+      "operationId": "EcsServices_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsServices",
+      "operationId": "EcsServices_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsServices/{name}",
+      "operationId": "EcsServices_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsService"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsServices/{name}",
+      "operationId": "EcsServices_CreateOrReplace",
+      "bodySchema": "EcsService",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.capacityProviderStrategy",
+        "properties.awsProperties.cluster",
+        "properties.awsProperties.deploymentConfiguration",
+        "properties.awsProperties.deploymentConfiguration.alarms",
+        "properties.awsProperties.deploymentConfiguration.alarms.alarmNames",
+        "properties.awsProperties.deploymentConfiguration.alarms.enable",
+        "properties.awsProperties.deploymentConfiguration.alarms.rollback",
+        "properties.awsProperties.deploymentConfiguration.deploymentCircuitBreaker",
+        "properties.awsProperties.deploymentConfiguration.deploymentCircuitBreaker.enable",
+        "properties.awsProperties.deploymentConfiguration.deploymentCircuitBreaker.rollback",
+        "properties.awsProperties.deploymentConfiguration.maximumPercent",
+        "properties.awsProperties.deploymentConfiguration.minimumHealthyPercent",
+        "properties.awsProperties.deploymentController",
+        "properties.awsProperties.deploymentController.type",
+        "properties.awsProperties.desiredCount",
+        "properties.awsProperties.enableECSManagedTags",
+        "properties.awsProperties.enableExecuteCommand",
+        "properties.awsProperties.healthCheckGracePeriodSeconds",
+        "properties.awsProperties.launchType",
+        "properties.awsProperties.loadBalancers",
+        "properties.awsProperties.name",
+        "properties.awsProperties.networkConfiguration",
+        "properties.awsProperties.networkConfiguration.awsvpcConfiguration",
+        "properties.awsProperties.networkConfiguration.awsvpcConfiguration.assignPublicIp",
+        "properties.awsProperties.networkConfiguration.awsvpcConfiguration.securityGroups",
+        "properties.awsProperties.networkConfiguration.awsvpcConfiguration.subnets",
+        "properties.awsProperties.placementConstraints",
+        "properties.awsProperties.placementStrategies",
+        "properties.awsProperties.platformVersion",
+        "properties.awsProperties.propagateTags",
+        "properties.awsProperties.role",
+        "properties.awsProperties.schedulingStrategy",
+        "properties.awsProperties.serviceArn",
+        "properties.awsProperties.serviceConnectConfiguration",
+        "properties.awsProperties.serviceConnectConfiguration.enabled",
+        "properties.awsProperties.serviceConnectConfiguration.logConfiguration",
+        "properties.awsProperties.serviceConnectConfiguration.logConfiguration.logDriver",
+        "properties.awsProperties.serviceConnectConfiguration.logConfiguration.options",
+        "properties.awsProperties.serviceConnectConfiguration.logConfiguration.secretOptions",
+        "properties.awsProperties.serviceConnectConfiguration.namespace",
+        "properties.awsProperties.serviceConnectConfiguration.services",
+        "properties.awsProperties.serviceName",
+        "properties.awsProperties.serviceRegistries",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.taskDefinition",
+        "properties.awsProperties.volumeConfigurations",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsService"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsServices/{name}",
+      "operationId": "EcsServices_Update",
+      "bodySchema": "EcsServiceTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsService"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ecsServices/{name}",
+      "operationId": "EcsServices_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EcsService"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

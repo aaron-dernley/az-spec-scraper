@@ -1,0 +1,291 @@
+{
+  "resource": "Azure::AwsConnector::OpenSearchDomainStatuses",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/openSearchDomainStatuses",
+      "operationId": "OpenSearchDomainStatuses_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/openSearchDomainStatuses",
+      "operationId": "OpenSearchDomainStatuses_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/openSearchDomainStatuses/{name}",
+      "operationId": "OpenSearchDomainStatuses_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of OpenSearchDomainStatus"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/openSearchDomainStatuses/{name}",
+      "operationId": "OpenSearchDomainStatuses_CreateOrReplace",
+      "bodySchema": "OpenSearchDomainStatus",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.accessPolicies",
+        "properties.awsProperties.advancedOptions",
+        "properties.awsProperties.advancedSecurityOptions",
+        "properties.awsProperties.advancedSecurityOptions.anonymousAuthDisableDate",
+        "properties.awsProperties.advancedSecurityOptions.anonymousAuthEnabled",
+        "properties.awsProperties.advancedSecurityOptions.enabled",
+        "properties.awsProperties.advancedSecurityOptions.internalUserDatabaseEnabled",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.enabled",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.idp",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.idp.entityId",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.idp.metadataContent",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.rolesKey",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.sessionTimeoutMinutes",
+        "properties.awsProperties.advancedSecurityOptions.samlOptions.subjectKey",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.autoTuneOptions",
+        "properties.awsProperties.autoTuneOptions.errorMessage",
+        "properties.awsProperties.autoTuneOptions.state",
+        "properties.awsProperties.autoTuneOptions.state.value",
+        "properties.awsProperties.autoTuneOptions.useOffPeakWindow",
+        "properties.awsProperties.changeProgressDetails",
+        "properties.awsProperties.changeProgressDetails.changeId",
+        "properties.awsProperties.changeProgressDetails.configChangeStatus",
+        "properties.awsProperties.changeProgressDetails.configChangeStatus.value",
+        "properties.awsProperties.changeProgressDetails.initiatedBy",
+        "properties.awsProperties.changeProgressDetails.initiatedBy.value",
+        "properties.awsProperties.changeProgressDetails.lastUpdatedTime",
+        "properties.awsProperties.changeProgressDetails.message",
+        "properties.awsProperties.changeProgressDetails.startTime",
+        "properties.awsProperties.clusterConfig",
+        "properties.awsProperties.clusterConfig.coldStorageOptions",
+        "properties.awsProperties.clusterConfig.coldStorageOptions.enabled",
+        "properties.awsProperties.clusterConfig.dedicatedMasterCount",
+        "properties.awsProperties.clusterConfig.dedicatedMasterEnabled",
+        "properties.awsProperties.clusterConfig.dedicatedMasterType",
+        "properties.awsProperties.clusterConfig.dedicatedMasterType.value",
+        "properties.awsProperties.clusterConfig.instanceCount",
+        "properties.awsProperties.clusterConfig.instanceType",
+        "properties.awsProperties.clusterConfig.instanceType.value",
+        "properties.awsProperties.clusterConfig.multiAZWithStandbyEnabled",
+        "properties.awsProperties.clusterConfig.warmCount",
+        "properties.awsProperties.clusterConfig.warmEnabled",
+        "properties.awsProperties.clusterConfig.warmType",
+        "properties.awsProperties.clusterConfig.warmType.value",
+        "properties.awsProperties.clusterConfig.zoneAwarenessConfig",
+        "properties.awsProperties.clusterConfig.zoneAwarenessConfig.availabilityZoneCount",
+        "properties.awsProperties.clusterConfig.zoneAwarenessEnabled",
+        "properties.awsProperties.cognitoOptions",
+        "properties.awsProperties.cognitoOptions.enabled",
+        "properties.awsProperties.cognitoOptions.identityPoolId",
+        "properties.awsProperties.cognitoOptions.roleArn",
+        "properties.awsProperties.cognitoOptions.userPoolId",
+        "properties.awsProperties.created",
+        "properties.awsProperties.deleted",
+        "properties.awsProperties.domainEndpointOptions",
+        "properties.awsProperties.domainEndpointOptions.customEndpoint",
+        "properties.awsProperties.domainEndpointOptions.customEndpointCertificateArn",
+        "properties.awsProperties.domainEndpointOptions.customEndpointEnabled",
+        "properties.awsProperties.domainEndpointOptions.enforceHTTPS",
+        "properties.awsProperties.domainEndpointOptions.tlsSecurityPolicy",
+        "properties.awsProperties.domainEndpointOptions.tlsSecurityPolicy.value",
+        "properties.awsProperties.domainId",
+        "properties.awsProperties.domainName",
+        "properties.awsProperties.domainProcessingStatus",
+        "properties.awsProperties.domainProcessingStatus.value",
+        "properties.awsProperties.ebsOptions",
+        "properties.awsProperties.ebsOptions.ebsEnabled",
+        "properties.awsProperties.ebsOptions.iops",
+        "properties.awsProperties.ebsOptions.throughput",
+        "properties.awsProperties.ebsOptions.volumeSize",
+        "properties.awsProperties.ebsOptions.volumeType",
+        "properties.awsProperties.ebsOptions.volumeType.value",
+        "properties.awsProperties.encryptionAtRestOptions",
+        "properties.awsProperties.encryptionAtRestOptions.enabled",
+        "properties.awsProperties.encryptionAtRestOptions.kmsKeyId",
+        "properties.awsProperties.endpoint",
+        "properties.awsProperties.endpointV2",
+        "properties.awsProperties.endpoints",
+        "properties.awsProperties.engineVersion",
+        "properties.awsProperties.ipAddressType",
+        "properties.awsProperties.ipAddressType.value",
+        "properties.awsProperties.logPublishingOptions",
+        "properties.awsProperties.modifyingProperties",
+        "properties.awsProperties.nodeToNodeEncryptionOptions",
+        "properties.awsProperties.nodeToNodeEncryptionOptions.enabled",
+        "properties.awsProperties.offPeakWindowOptions",
+        "properties.awsProperties.offPeakWindowOptions.enabled",
+        "properties.awsProperties.offPeakWindowOptions.offPeakWindow",
+        "properties.awsProperties.offPeakWindowOptions.offPeakWindow.windowStartTime",
+        "properties.awsProperties.offPeakWindowOptions.offPeakWindow.windowStartTime.hours",
+        "properties.awsProperties.offPeakWindowOptions.offPeakWindow.windowStartTime.minutes",
+        "properties.awsProperties.processing",
+        "properties.awsProperties.serviceSoftwareOptions",
+        "properties.awsProperties.serviceSoftwareOptions.automatedUpdateDate",
+        "properties.awsProperties.serviceSoftwareOptions.cancellable",
+        "properties.awsProperties.serviceSoftwareOptions.currentVersion",
+        "properties.awsProperties.serviceSoftwareOptions.description",
+        "properties.awsProperties.serviceSoftwareOptions.newVersion",
+        "properties.awsProperties.serviceSoftwareOptions.optionalDeployment",
+        "properties.awsProperties.serviceSoftwareOptions.updateAvailable",
+        "properties.awsProperties.serviceSoftwareOptions.updateStatus",
+        "properties.awsProperties.serviceSoftwareOptions.updateStatus.value",
+        "properties.awsProperties.snapshotOptions",
+        "properties.awsProperties.snapshotOptions.automatedSnapshotStartHour",
+        "properties.awsProperties.softwareUpdateOptions",
+        "properties.awsProperties.softwareUpdateOptions.autoSoftwareUpdateEnabled",
+        "properties.awsProperties.upgradeProcessing",
+        "properties.awsProperties.vpcOptions",
+        "properties.awsProperties.vpcOptions.availabilityZones",
+        "properties.awsProperties.vpcOptions.securityGroupIds",
+        "properties.awsProperties.vpcOptions.subnetIds",
+        "properties.awsProperties.vpcOptions.vpcId",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of OpenSearchDomainStatus"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/openSearchDomainStatuses/{name}",
+      "operationId": "OpenSearchDomainStatuses_Update",
+      "bodySchema": "OpenSearchDomainStatusTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of OpenSearchDomainStatus"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/openSearchDomainStatuses/{name}",
+      "operationId": "OpenSearchDomainStatuses_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of OpenSearchDomainStatus"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "resource": "Azure::Network::IpConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/ipConfigurations/{ipConfigName}",
+      "operationId": "VirtualHubIpConfiguration_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "ipConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipconfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/ipConfigurations/{ipConfigName}",
+      "operationId": "VirtualHubIpConfiguration_CreateOrUpdate",
+      "bodySchema": "HubIpConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.privateIPAddress",
+        "properties.privateIPAllocationMethod",
+        "properties.provisioningState",
+        "properties.publicIPAddress",
+        "properties.subnet",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "ipConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipconfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/ipConfigurations/{ipConfigName}",
+      "operationId": "VirtualHubIpConfiguration_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHubBgpConnection."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "ipConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ipconfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualHubs/{virtualHubName}/ipConfigurations",
+      "operationId": "VirtualHubIpConfiguration_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VirtualHub."
+        },
+        {
+          "name": "virtualHubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualHub."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

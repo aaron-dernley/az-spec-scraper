@@ -1,0 +1,236 @@
+{
+  "resource": "Azure::Storage::StorageTaskAssignments",
+  "version": "2023-05-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/storageTaskAssignments/{storageTaskAssignmentName}",
+      "operationId": "StorageTaskAssignments_Create",
+      "bodySchema": "StorageTaskAssignment",
+      "requiredProperties": [
+        "properties",
+        "properties.description",
+        "properties.enabled",
+        "properties.executionContext",
+        "properties.executionContext.trigger",
+        "properties.executionContext.trigger.parameters",
+        "properties.executionContext.trigger.type",
+        "properties.report",
+        "properties.report.prefix",
+        "properties.taskId"
+      ],
+      "optionalProperties": [
+        "properties.executionContext.target",
+        "properties.executionContext.target.excludePrefix",
+        "properties.executionContext.target.prefix",
+        "properties.executionContext.trigger.parameters.endBy",
+        "properties.executionContext.trigger.parameters.interval",
+        "properties.executionContext.trigger.parameters.intervalUnit",
+        "properties.executionContext.trigger.parameters.startFrom",
+        "properties.executionContext.trigger.parameters.startOn",
+        "properties.provisioningState",
+        "properties.runStatus"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageTaskAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/storageTaskAssignments/{storageTaskAssignmentName}",
+      "operationId": "StorageTaskAssignments_Update",
+      "bodySchema": "StorageTaskAssignmentUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.enabled",
+        "properties.executionContext",
+        "properties.executionContext.target",
+        "properties.executionContext.target.excludePrefix",
+        "properties.executionContext.target.prefix",
+        "properties.executionContext.trigger",
+        "properties.executionContext.trigger.parameters",
+        "properties.executionContext.trigger.parameters.endBy",
+        "properties.executionContext.trigger.parameters.interval",
+        "properties.executionContext.trigger.parameters.intervalUnit",
+        "properties.executionContext.trigger.parameters.startFrom",
+        "properties.executionContext.trigger.parameters.startOn",
+        "properties.executionContext.trigger.type",
+        "properties.provisioningState",
+        "properties.report",
+        "properties.report.prefix",
+        "properties.runStatus",
+        "properties.taskId"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageTaskAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/storageTaskAssignments/{storageTaskAssignmentName}",
+      "operationId": "StorageTaskAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "storageTaskAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/storageTaskAssignments/{storageTaskAssignmentName}",
+      "operationId": "StorageTaskAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "storageTaskAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/storageTaskAssignments",
+      "operationId": "StorageTaskAssignments_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$maxpagesize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Optional, specifies the maximum number of storage task assignment Ids to be included in the list response."
+        }
+      ]
+    }
+  ]
+}

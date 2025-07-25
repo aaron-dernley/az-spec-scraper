@@ -1,0 +1,154 @@
+{
+  "resource": "Azure::KubernetesRuntime::StorageClasses",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/storageClasses",
+      "operationId": "StorageClass_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/storageClasses/{storageClassName}",
+      "operationId": "StorageClass_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "storageClassName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the the storage class"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/storageClasses/{storageClassName}",
+      "operationId": "StorageClass_CreateOrUpdate",
+      "bodySchema": "StorageClassResource",
+      "requiredProperties": [
+        "properties.typeProperties",
+        "properties.typeProperties.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.accessModes",
+        "properties.allowVolumeExpansion",
+        "properties.dataResilience",
+        "properties.failoverSpeed",
+        "properties.limitations",
+        "properties.mountOptions",
+        "properties.performance",
+        "properties.priority",
+        "properties.provisioner",
+        "properties.provisioningState",
+        "properties.volumeBindingMode"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "storageClassName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the the storage class"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/storageClasses/{storageClassName}",
+      "operationId": "StorageClass_Update",
+      "bodySchema": "StorageClassResourceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.accessModes",
+        "properties.allowVolumeExpansion",
+        "properties.dataResilience",
+        "properties.failoverSpeed",
+        "properties.limitations",
+        "properties.mountOptions",
+        "properties.performance",
+        "properties.priority",
+        "properties.typeProperties",
+        "properties.typeProperties.azureStorageAccountKey",
+        "properties.typeProperties.azureStorageAccountName",
+        "properties.typeProperties.backingStorageClassName",
+        "properties.typeProperties.domain",
+        "properties.typeProperties.mountPermissions",
+        "properties.typeProperties.onDelete",
+        "properties.typeProperties.password",
+        "properties.typeProperties.server",
+        "properties.typeProperties.share",
+        "properties.typeProperties.source",
+        "properties.typeProperties.subDir",
+        "properties.typeProperties.username"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "storageClassName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the the storage class"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/storageClasses/{storageClassName}",
+      "operationId": "StorageClass_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "storageClassName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the the storage class"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

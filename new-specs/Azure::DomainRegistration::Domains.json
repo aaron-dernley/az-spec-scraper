@@ -1,0 +1,392 @@
+{
+  "resource": "Azure::DomainRegistration::Domains",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DomainRegistration/domains",
+      "operationId": "Domains_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains",
+      "operationId": "Domains_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName}",
+      "operationId": "Domains_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "domainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName}",
+      "operationId": "Domains_CreateOrUpdate",
+      "bodySchema": "Domain",
+      "requiredProperties": [
+        "properties.consent",
+        "properties.contactAdmin",
+        "properties.contactAdmin.addressMailing.address1",
+        "properties.contactAdmin.addressMailing.city",
+        "properties.contactAdmin.addressMailing.country",
+        "properties.contactAdmin.addressMailing.postalCode",
+        "properties.contactAdmin.addressMailing.state",
+        "properties.contactAdmin.email",
+        "properties.contactAdmin.nameFirst",
+        "properties.contactAdmin.nameLast",
+        "properties.contactAdmin.phone",
+        "properties.contactBilling",
+        "properties.contactBilling.addressMailing.address1",
+        "properties.contactBilling.addressMailing.city",
+        "properties.contactBilling.addressMailing.country",
+        "properties.contactBilling.addressMailing.postalCode",
+        "properties.contactBilling.addressMailing.state",
+        "properties.contactBilling.email",
+        "properties.contactBilling.nameFirst",
+        "properties.contactBilling.nameLast",
+        "properties.contactBilling.phone",
+        "properties.contactRegistrant",
+        "properties.contactRegistrant.addressMailing.address1",
+        "properties.contactRegistrant.addressMailing.city",
+        "properties.contactRegistrant.addressMailing.country",
+        "properties.contactRegistrant.addressMailing.postalCode",
+        "properties.contactRegistrant.addressMailing.state",
+        "properties.contactRegistrant.email",
+        "properties.contactRegistrant.nameFirst",
+        "properties.contactRegistrant.nameLast",
+        "properties.contactRegistrant.phone",
+        "properties.contactTech",
+        "properties.contactTech.addressMailing.address1",
+        "properties.contactTech.addressMailing.city",
+        "properties.contactTech.addressMailing.country",
+        "properties.contactTech.addressMailing.postalCode",
+        "properties.contactTech.addressMailing.state",
+        "properties.contactTech.email",
+        "properties.contactTech.nameFirst",
+        "properties.contactTech.nameLast",
+        "properties.contactTech.phone"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.authCode",
+        "properties.autoRenew",
+        "properties.consent.agreedAt",
+        "properties.consent.agreedBy",
+        "properties.consent.agreementKeys",
+        "properties.contactAdmin.addressMailing",
+        "properties.contactAdmin.addressMailing.address2",
+        "properties.contactAdmin.fax",
+        "properties.contactAdmin.jobTitle",
+        "properties.contactAdmin.nameMiddle",
+        "properties.contactAdmin.organization",
+        "properties.contactBilling.addressMailing",
+        "properties.contactBilling.addressMailing.address2",
+        "properties.contactBilling.fax",
+        "properties.contactBilling.jobTitle",
+        "properties.contactBilling.nameMiddle",
+        "properties.contactBilling.organization",
+        "properties.contactRegistrant.addressMailing",
+        "properties.contactRegistrant.addressMailing.address2",
+        "properties.contactRegistrant.fax",
+        "properties.contactRegistrant.jobTitle",
+        "properties.contactRegistrant.nameMiddle",
+        "properties.contactRegistrant.organization",
+        "properties.contactTech.addressMailing",
+        "properties.contactTech.addressMailing.address2",
+        "properties.contactTech.fax",
+        "properties.contactTech.jobTitle",
+        "properties.contactTech.nameMiddle",
+        "properties.contactTech.organization",
+        "properties.createdTime",
+        "properties.dnsType",
+        "properties.dnsZoneId",
+        "properties.domainNotRenewableReasons",
+        "properties.expirationTime",
+        "properties.lastRenewedTime",
+        "properties.managedHostNames",
+        "properties.nameServers",
+        "properties.privacy",
+        "properties.provisioningState",
+        "properties.readyForDnsRecordManagement",
+        "properties.registrationStatus",
+        "properties.targetDnsType"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "domainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName}",
+      "operationId": "Domains_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "domainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceHardDeleteDomain",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Specify <code>true</code> to delete the domain immediately. The default is <code>false</code> which deletes the domain after 24 hours."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName}",
+      "operationId": "Domains_Update",
+      "bodySchema": "DomainPatchResource",
+      "requiredProperties": [
+        "properties.consent",
+        "properties.contactAdmin",
+        "properties.contactAdmin.addressMailing.address1",
+        "properties.contactAdmin.addressMailing.city",
+        "properties.contactAdmin.addressMailing.country",
+        "properties.contactAdmin.addressMailing.postalCode",
+        "properties.contactAdmin.addressMailing.state",
+        "properties.contactAdmin.email",
+        "properties.contactAdmin.nameFirst",
+        "properties.contactAdmin.nameLast",
+        "properties.contactAdmin.phone",
+        "properties.contactBilling",
+        "properties.contactBilling.addressMailing.address1",
+        "properties.contactBilling.addressMailing.city",
+        "properties.contactBilling.addressMailing.country",
+        "properties.contactBilling.addressMailing.postalCode",
+        "properties.contactBilling.addressMailing.state",
+        "properties.contactBilling.email",
+        "properties.contactBilling.nameFirst",
+        "properties.contactBilling.nameLast",
+        "properties.contactBilling.phone",
+        "properties.contactRegistrant",
+        "properties.contactRegistrant.addressMailing.address1",
+        "properties.contactRegistrant.addressMailing.city",
+        "properties.contactRegistrant.addressMailing.country",
+        "properties.contactRegistrant.addressMailing.postalCode",
+        "properties.contactRegistrant.addressMailing.state",
+        "properties.contactRegistrant.email",
+        "properties.contactRegistrant.nameFirst",
+        "properties.contactRegistrant.nameLast",
+        "properties.contactRegistrant.phone",
+        "properties.contactTech",
+        "properties.contactTech.addressMailing.address1",
+        "properties.contactTech.addressMailing.city",
+        "properties.contactTech.addressMailing.country",
+        "properties.contactTech.addressMailing.postalCode",
+        "properties.contactTech.addressMailing.state",
+        "properties.contactTech.email",
+        "properties.contactTech.nameFirst",
+        "properties.contactTech.nameLast",
+        "properties.contactTech.phone"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.authCode",
+        "properties.autoRenew",
+        "properties.consent.agreedAt",
+        "properties.consent.agreedBy",
+        "properties.consent.agreementKeys",
+        "properties.contactAdmin.addressMailing",
+        "properties.contactAdmin.addressMailing.address2",
+        "properties.contactAdmin.fax",
+        "properties.contactAdmin.jobTitle",
+        "properties.contactAdmin.nameMiddle",
+        "properties.contactAdmin.organization",
+        "properties.contactBilling.addressMailing",
+        "properties.contactBilling.addressMailing.address2",
+        "properties.contactBilling.fax",
+        "properties.contactBilling.jobTitle",
+        "properties.contactBilling.nameMiddle",
+        "properties.contactBilling.organization",
+        "properties.contactRegistrant.addressMailing",
+        "properties.contactRegistrant.addressMailing.address2",
+        "properties.contactRegistrant.fax",
+        "properties.contactRegistrant.jobTitle",
+        "properties.contactRegistrant.nameMiddle",
+        "properties.contactRegistrant.organization",
+        "properties.contactTech.addressMailing",
+        "properties.contactTech.addressMailing.address2",
+        "properties.contactTech.fax",
+        "properties.contactTech.jobTitle",
+        "properties.contactTech.nameMiddle",
+        "properties.contactTech.organization",
+        "properties.createdTime",
+        "properties.dnsType",
+        "properties.dnsZoneId",
+        "properties.domainNotRenewableReasons",
+        "properties.expirationTime",
+        "properties.lastRenewedTime",
+        "properties.managedHostNames",
+        "properties.nameServers",
+        "properties.privacy",
+        "properties.provisioningState",
+        "properties.readyForDnsRecordManagement",
+        "properties.registrationStatus",
+        "properties.targetDnsType"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "domainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

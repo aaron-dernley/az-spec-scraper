@@ -1,0 +1,171 @@
+{
+  "resource": "Azure::StorageSync::StorageSyncServices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}",
+      "operationId": "StorageSyncServices_Create",
+      "bodySchema": "StorageSyncServiceCreateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "location",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}",
+      "operationId": "StorageSyncServices_Get",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}",
+      "operationId": "StorageSyncServices_Update",
+      "bodySchema": "StorageSyncServiceUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices/{storageSyncServiceName}",
+      "operationId": "StorageSyncServices_Delete",
+      "pathParameters": [
+        {
+          "name": "storageSyncServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Storage Sync Service resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageSync/storageSyncServices",
+      "operationId": "StorageSyncServices_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StorageSync/storageSyncServices",
+      "operationId": "StorageSyncServices_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "resource": "Azure::Sql::SensitivityLabels",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SensitivityLabels_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SensitivityLabels_CreateOrUpdate",
+      "bodySchema": "SensitivityLabel",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "managedBy",
+        "properties",
+        "properties.clientClassificationSource",
+        "properties.columnName",
+        "properties.informationType",
+        "properties.informationTypeId",
+        "properties.isDisabled",
+        "properties.labelId",
+        "properties.labelName",
+        "properties.rank",
+        "properties.schemaName",
+        "properties.tableName"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}/sensitivityLabels/{sensitivityLabelSource}",
+      "operationId": "SensitivityLabels_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schema."
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the table."
+        },
+        {
+          "name": "columnName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the column."
+        },
+        {
+          "name": "sensitivityLabelSource",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source of the sensitivity label."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/sensitivityLabels",
+      "operationId": "SensitivityLabels_ListByDatabase",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "An OData filter expression that filters elements in the collection."
+        }
+      ]
+    }
+  ]
+}

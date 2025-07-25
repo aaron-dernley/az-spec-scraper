@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::Network::ForwardingRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules/{forwardingRuleName}",
+      "operationId": "ForwardingRules_CreateOrUpdate",
+      "bodySchema": "ForwardingRule",
+      "requiredProperties": [
+        "properties",
+        "properties.domainName",
+        "properties.targetDnsServers"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.forwardingRuleState",
+        "properties.metadata",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsForwardingRulesetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS forwarding ruleset."
+        },
+        {
+          "name": "forwardingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the forwarding rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules/{forwardingRuleName}",
+      "operationId": "ForwardingRules_Update",
+      "bodySchema": "ForwardingRulePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.forwardingRuleState",
+        "properties.metadata",
+        "properties.targetDnsServers"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsForwardingRulesetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS forwarding ruleset."
+        },
+        {
+          "name": "forwardingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the forwarding rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules/{forwardingRuleName}",
+      "operationId": "ForwardingRules_Delete",
+      "pathParameters": [
+        {
+          "name": "dnsForwardingRulesetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS forwarding ruleset."
+        },
+        {
+          "name": "forwardingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the forwarding rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules/{forwardingRuleName}",
+      "operationId": "ForwardingRules_Get",
+      "pathParameters": [
+        {
+          "name": "dnsForwardingRulesetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS forwarding ruleset."
+        },
+        {
+          "name": "forwardingRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the forwarding rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules",
+      "operationId": "ForwardingRules_List",
+      "pathParameters": [
+        {
+          "name": "dnsForwardingRulesetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS forwarding ruleset."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    }
+  ]
+}

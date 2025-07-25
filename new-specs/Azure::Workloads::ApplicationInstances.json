@@ -1,0 +1,209 @@
+{
+  "resource": "Azure::Workloads::ApplicationInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/applicationInstances/{applicationInstanceName}",
+      "operationId": "SAPApplicationServerInstances_Get",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "applicationInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of SAP Application Server instance resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/applicationInstances/{applicationInstanceName}",
+      "operationId": "SAPApplicationServerInstances_Create",
+      "bodySchema": "SAPApplicationServerInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.errors",
+        "properties.errors.properties",
+        "properties.errors.properties.code",
+        "properties.errors.properties.details",
+        "properties.errors.properties.message",
+        "properties.gatewayPort",
+        "properties.health",
+        "properties.hostname",
+        "properties.icmHttpPort",
+        "properties.icmHttpsPort",
+        "properties.instanceNo",
+        "properties.ipAddress",
+        "properties.kernelPatch",
+        "properties.kernelVersion",
+        "properties.loadBalancerDetails",
+        "properties.loadBalancerDetails.id",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.subnet",
+        "properties.vmDetails"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "applicationInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of SAP Application Server instance resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/applicationInstances/{applicationInstanceName}",
+      "operationId": "SAPApplicationServerInstances_Update",
+      "bodySchema": "UpdateSAPApplicationInstanceRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "applicationInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of SAP Application Server instance resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/applicationInstances/{applicationInstanceName}",
+      "operationId": "SAPApplicationServerInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "applicationInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of SAP Application Server instance resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/applicationInstances",
+      "operationId": "SAPApplicationServerInstances_List",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

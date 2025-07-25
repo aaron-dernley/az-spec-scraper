@@ -1,0 +1,161 @@
+{
+  "resource": "Azure::ContainerService::AutoUpgradeProfiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/autoUpgradeProfiles",
+      "operationId": "AutoUpgradeProfiles_ListByFleet",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/autoUpgradeProfiles/{autoUpgradeProfileName}",
+      "operationId": "AutoUpgradeProfiles_Get",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "autoUpgradeProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the AutoUpgradeProfile resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/autoUpgradeProfiles/{autoUpgradeProfileName}",
+      "operationId": "AutoUpgradeProfiles_CreateOrUpdate",
+      "bodySchema": "AutoUpgradeProfile",
+      "requiredProperties": [
+        "properties.channel",
+        "properties.nodeImageSelection.type"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.autoUpgradeProfileStatus",
+        "properties.autoUpgradeProfileStatus.lastTriggerError",
+        "properties.autoUpgradeProfileStatus.lastTriggerStatus",
+        "properties.autoUpgradeProfileStatus.lastTriggerUpgradeVersions",
+        "properties.autoUpgradeProfileStatus.lastTriggeredAt",
+        "properties.disabled",
+        "properties.nodeImageSelection",
+        "properties.provisioningState",
+        "properties.updateStrategyId"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "autoUpgradeProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the AutoUpgradeProfile resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/autoUpgradeProfiles/{autoUpgradeProfileName}",
+      "operationId": "AutoUpgradeProfiles_Delete",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "autoUpgradeProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the AutoUpgradeProfile resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

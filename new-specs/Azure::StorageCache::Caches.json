@@ -1,0 +1,353 @@
+{
+  "resource": "Azure::StorageCache::Caches",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StorageCache/caches",
+      "operationId": "Caches_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches",
+      "operationId": "Caches_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}",
+      "operationId": "Caches_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}",
+      "operationId": "Caches_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}",
+      "operationId": "Caches_CreateOrUpdate",
+      "bodySchema": "Cache",
+      "requiredProperties": [
+        "properties.directoryServicesSettings.activeDirectory.cacheNetBiosName",
+        "properties.directoryServicesSettings.activeDirectory.credentials.password",
+        "properties.directoryServicesSettings.activeDirectory.credentials.username",
+        "properties.directoryServicesSettings.activeDirectory.domainName",
+        "properties.directoryServicesSettings.activeDirectory.domainNetBiosName",
+        "properties.directoryServicesSettings.activeDirectory.primaryDnsIpAddress",
+        "properties.encryptionSettings.keyEncryptionKey.keyUrl",
+        "properties.encryptionSettings.keyEncryptionKey.sourceVault"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "name",
+        "properties",
+        "properties.cacheSizeGB",
+        "properties.directoryServicesSettings",
+        "properties.directoryServicesSettings.activeDirectory",
+        "properties.directoryServicesSettings.activeDirectory.credentials",
+        "properties.directoryServicesSettings.activeDirectory.domainJoined",
+        "properties.directoryServicesSettings.activeDirectory.secondaryDnsIpAddress",
+        "properties.directoryServicesSettings.usernameDownload",
+        "properties.directoryServicesSettings.usernameDownload.autoDownloadCertificate",
+        "properties.directoryServicesSettings.usernameDownload.caCertificateURI",
+        "properties.directoryServicesSettings.usernameDownload.credentials",
+        "properties.directoryServicesSettings.usernameDownload.credentials.bindDn",
+        "properties.directoryServicesSettings.usernameDownload.credentials.bindPassword",
+        "properties.directoryServicesSettings.usernameDownload.encryptLdapConnection",
+        "properties.directoryServicesSettings.usernameDownload.extendedGroups",
+        "properties.directoryServicesSettings.usernameDownload.groupFileURI",
+        "properties.directoryServicesSettings.usernameDownload.ldapBaseDN",
+        "properties.directoryServicesSettings.usernameDownload.ldapServer",
+        "properties.directoryServicesSettings.usernameDownload.requireValidCertificate",
+        "properties.directoryServicesSettings.usernameDownload.userFileURI",
+        "properties.directoryServicesSettings.usernameDownload.usernameDownloaded",
+        "properties.directoryServicesSettings.usernameDownload.usernameSource",
+        "properties.encryptionSettings",
+        "properties.encryptionSettings.keyEncryptionKey",
+        "properties.encryptionSettings.keyEncryptionKey.sourceVault.id",
+        "properties.encryptionSettings.rotationToLatestKeyVersionEnabled",
+        "properties.health",
+        "properties.health.conditions",
+        "properties.health.state",
+        "properties.health.statusDescription",
+        "properties.mountAddresses",
+        "properties.networkSettings",
+        "properties.networkSettings.dnsSearchDomain",
+        "properties.networkSettings.dnsServers",
+        "properties.networkSettings.mtu",
+        "properties.networkSettings.ntpServer",
+        "properties.networkSettings.utilityAddresses",
+        "properties.provisioningState",
+        "properties.securitySettings",
+        "properties.securitySettings.accessPolicies",
+        "properties.subnet",
+        "properties.upgradeStatus",
+        "properties.upgradeStatus.currentFirmwareVersion",
+        "properties.upgradeStatus.firmwareUpdateDeadline",
+        "properties.upgradeStatus.firmwareUpdateStatus",
+        "properties.upgradeStatus.lastFirmwareUpdate",
+        "properties.upgradeStatus.pendingFirmwareVersion",
+        "sku",
+        "sku.name",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.StorageCache/caches/{cacheName}",
+      "operationId": "Caches_Update",
+      "bodySchema": "Cache",
+      "requiredProperties": [
+        "properties.directoryServicesSettings.activeDirectory.cacheNetBiosName",
+        "properties.directoryServicesSettings.activeDirectory.credentials.password",
+        "properties.directoryServicesSettings.activeDirectory.credentials.username",
+        "properties.directoryServicesSettings.activeDirectory.domainName",
+        "properties.directoryServicesSettings.activeDirectory.domainNetBiosName",
+        "properties.directoryServicesSettings.activeDirectory.primaryDnsIpAddress",
+        "properties.encryptionSettings.keyEncryptionKey.keyUrl",
+        "properties.encryptionSettings.keyEncryptionKey.sourceVault"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "name",
+        "properties",
+        "properties.cacheSizeGB",
+        "properties.directoryServicesSettings",
+        "properties.directoryServicesSettings.activeDirectory",
+        "properties.directoryServicesSettings.activeDirectory.credentials",
+        "properties.directoryServicesSettings.activeDirectory.domainJoined",
+        "properties.directoryServicesSettings.activeDirectory.secondaryDnsIpAddress",
+        "properties.directoryServicesSettings.usernameDownload",
+        "properties.directoryServicesSettings.usernameDownload.autoDownloadCertificate",
+        "properties.directoryServicesSettings.usernameDownload.caCertificateURI",
+        "properties.directoryServicesSettings.usernameDownload.credentials",
+        "properties.directoryServicesSettings.usernameDownload.credentials.bindDn",
+        "properties.directoryServicesSettings.usernameDownload.credentials.bindPassword",
+        "properties.directoryServicesSettings.usernameDownload.encryptLdapConnection",
+        "properties.directoryServicesSettings.usernameDownload.extendedGroups",
+        "properties.directoryServicesSettings.usernameDownload.groupFileURI",
+        "properties.directoryServicesSettings.usernameDownload.ldapBaseDN",
+        "properties.directoryServicesSettings.usernameDownload.ldapServer",
+        "properties.directoryServicesSettings.usernameDownload.requireValidCertificate",
+        "properties.directoryServicesSettings.usernameDownload.userFileURI",
+        "properties.directoryServicesSettings.usernameDownload.usernameDownloaded",
+        "properties.directoryServicesSettings.usernameDownload.usernameSource",
+        "properties.encryptionSettings",
+        "properties.encryptionSettings.keyEncryptionKey",
+        "properties.encryptionSettings.keyEncryptionKey.sourceVault.id",
+        "properties.encryptionSettings.rotationToLatestKeyVersionEnabled",
+        "properties.health",
+        "properties.health.conditions",
+        "properties.health.state",
+        "properties.health.statusDescription",
+        "properties.mountAddresses",
+        "properties.networkSettings",
+        "properties.networkSettings.dnsSearchDomain",
+        "properties.networkSettings.dnsServers",
+        "properties.networkSettings.mtu",
+        "properties.networkSettings.ntpServer",
+        "properties.networkSettings.utilityAddresses",
+        "properties.provisioningState",
+        "properties.securitySettings",
+        "properties.securitySettings.accessPolicies",
+        "properties.subnet",
+        "properties.upgradeStatus",
+        "properties.upgradeStatus.currentFirmwareVersion",
+        "properties.upgradeStatus.firmwareUpdateDeadline",
+        "properties.upgradeStatus.firmwareUpdateStatus",
+        "properties.upgradeStatus.lastFirmwareUpdate",
+        "properties.upgradeStatus.pendingFirmwareVersion",
+        "sku",
+        "sku.name",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Target resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "cacheName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

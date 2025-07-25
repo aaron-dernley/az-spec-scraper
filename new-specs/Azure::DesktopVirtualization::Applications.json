@@ -1,0 +1,216 @@
+{
+  "resource": "Azure::DesktopVirtualization::Applications",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}/applications/{applicationName}",
+      "operationId": "Applications_Get",
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application within the specified application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}/applications/{applicationName}",
+      "operationId": "Applications_CreateOrUpdate",
+      "bodySchema": "Application",
+      "requiredProperties": [
+        "properties",
+        "properties.commandLineSetting"
+      ],
+      "optionalProperties": [
+        "properties.applicationType",
+        "properties.commandLineArguments",
+        "properties.description",
+        "properties.filePath",
+        "properties.friendlyName",
+        "properties.iconContent",
+        "properties.iconHash",
+        "properties.iconIndex",
+        "properties.iconPath",
+        "properties.msixPackageApplicationId",
+        "properties.msixPackageFamilyName",
+        "properties.objectId",
+        "properties.showInPortal"
+      ],
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application within the specified application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}/applications/{applicationName}",
+      "operationId": "Applications_Delete",
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application within the specified application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}/applications/{applicationName}",
+      "operationId": "Applications_Update",
+      "bodySchema": "ApplicationPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.applicationType",
+        "properties.commandLineArguments",
+        "properties.commandLineSetting",
+        "properties.description",
+        "properties.filePath",
+        "properties.friendlyName",
+        "properties.iconIndex",
+        "properties.iconPath",
+        "properties.msixPackageApplicationId",
+        "properties.msixPackageFamilyName",
+        "properties.showInPortal",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application within the specified application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}/applications",
+      "operationId": "Applications_List",
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

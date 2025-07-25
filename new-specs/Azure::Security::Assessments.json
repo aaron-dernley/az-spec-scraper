@@ -1,0 +1,114 @@
+{
+  "resource": "Azure::Security::Assessments",
+  "version": "2021-06-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/assessments",
+      "operationId": "Assessments_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.Security/assessments/{assessmentName}",
+      "operationId": "Assessments_Get",
+      "pathParameters": [
+        {
+          "name": "assessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData expand. Optional."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceId}/providers/Microsoft.Security/assessments/{assessmentName}",
+      "operationId": "Assessments_CreateOrUpdate",
+      "bodySchema": "SecurityAssessment",
+      "requiredProperties": [
+        "properties.partnersData.partnerName",
+        "properties.partnersData.secret",
+        "properties.resourceDetails",
+        "properties.status",
+        "properties.status.code"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.additionalData",
+        "properties.displayName",
+        "properties.links",
+        "properties.links.azurePortalUri",
+        "properties.metadata",
+        "properties.partnersData",
+        "properties.status.cause",
+        "properties.status.description"
+      ],
+      "pathParameters": [
+        {
+          "name": "assessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceId}/providers/Microsoft.Security/assessments/{assessmentName}",
+      "operationId": "Assessments_Delete",
+      "pathParameters": [
+        {
+          "name": "assessmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

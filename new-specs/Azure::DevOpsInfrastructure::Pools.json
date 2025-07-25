@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::DevOpsInfrastructure::Pools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DevOpsInfrastructure/pools",
+      "operationId": "Pools_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevOpsInfrastructure/pools",
+      "operationId": "Pools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevOpsInfrastructure/pools/{poolName}",
+      "operationId": "Pools_Get",
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the pool. It needs to be globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevOpsInfrastructure/pools/{poolName}",
+      "operationId": "Pools_CreateOrUpdate",
+      "bodySchema": "Pool",
+      "requiredProperties": [
+        "properties.agentProfile",
+        "properties.agentProfile.kind",
+        "properties.agentProfile.resourcePredictionsProfile.kind",
+        "properties.devCenterProjectResourceId",
+        "properties.fabricProfile",
+        "properties.fabricProfile.kind",
+        "properties.maximumConcurrency",
+        "properties.organizationProfile",
+        "properties.organizationProfile.kind"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.agentProfile.resourcePredictions",
+        "properties.agentProfile.resourcePredictionsProfile",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the pool. It needs to be globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevOpsInfrastructure/pools/{poolName}",
+      "operationId": "Pools_Update",
+      "bodySchema": "PoolUpdate",
+      "requiredProperties": [
+        "properties.agentProfile.kind",
+        "properties.agentProfile.resourcePredictionsProfile.kind",
+        "properties.fabricProfile.kind",
+        "properties.organizationProfile.kind"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.agentProfile",
+        "properties.agentProfile.resourcePredictions",
+        "properties.agentProfile.resourcePredictionsProfile",
+        "properties.devCenterProjectResourceId",
+        "properties.fabricProfile",
+        "properties.maximumConcurrency",
+        "properties.organizationProfile",
+        "properties.provisioningState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the pool. It needs to be globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevOpsInfrastructure/pools/{poolName}",
+      "operationId": "Pools_Delete",
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the pool. It needs to be globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

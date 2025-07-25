@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::Network::VpnServerConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnServerConfigurations/{vpnServerConfigurationName}",
+      "operationId": "VpnServerConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnServerConfiguration."
+        },
+        {
+          "name": "vpnServerConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnServerConfiguration being retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnServerConfigurations/{vpnServerConfigurationName}",
+      "operationId": "VpnServerConfigurations_CreateOrUpdate",
+      "bodySchema": "VpnServerConfiguration",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.aadAuthenticationParameters",
+        "properties.aadAuthenticationParameters.aadAudience",
+        "properties.aadAuthenticationParameters.aadIssuer",
+        "properties.aadAuthenticationParameters.aadTenant",
+        "properties.etag",
+        "properties.name",
+        "properties.p2SVpnGateways",
+        "properties.provisioningState",
+        "properties.radiusClientRootCertificates",
+        "properties.radiusServerAddress",
+        "properties.radiusServerRootCertificates",
+        "properties.radiusServerSecret",
+        "properties.radiusServers",
+        "properties.vpnAuthenticationTypes",
+        "properties.vpnClientIpsecPolicies",
+        "properties.vpnClientRevokedCertificates",
+        "properties.vpnClientRootCertificates",
+        "properties.vpnProtocols"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnServerConfiguration."
+        },
+        {
+          "name": "vpnServerConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnServerConfiguration being created or updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnServerConfigurations/{vpnServerConfigurationName}",
+      "operationId": "VpnServerConfigurations_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnServerConfiguration."
+        },
+        {
+          "name": "vpnServerConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnServerConfiguration being updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnServerConfigurations/{vpnServerConfigurationName}",
+      "operationId": "VpnServerConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnServerConfiguration."
+        },
+        {
+          "name": "vpnServerConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnServerConfiguration being deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnServerConfigurations",
+      "operationId": "VpnServerConfigurations_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnServerConfiguration."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/vpnServerConfigurations",
+      "operationId": "VpnServerConfigurations_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "POST",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{virtualWANName}/vpnServerConfigurations",
+      "operationId": "VpnServerConfigurationsAssociatedWithVirtualWan_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "virtualWANName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VirtualWAN whose associated VpnServerConfigurations is needed."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

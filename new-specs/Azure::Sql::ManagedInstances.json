@@ -1,0 +1,335 @@
+{
+  "resource": "Azure::Sql::ManagedInstances",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Sql/managedInstances",
+      "operationId": "ManagedInstances_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The child resources to include in the response."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/instancePools/{instancePoolName}/managedInstances",
+      "operationId": "ManagedInstances_ListByInstancePool",
+      "pathParameters": [
+        {
+          "name": "instancePoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance pool name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The child resources to include in the response."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances",
+      "operationId": "ManagedInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The child resources to include in the response."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}",
+      "operationId": "ManagedInstances_Get",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The child resources to include in the response."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}",
+      "operationId": "ManagedInstances_CreateOrUpdate",
+      "bodySchema": "ManagedInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.administratorLogin",
+        "properties.administratorLoginPassword",
+        "properties.administrators",
+        "properties.administrators.administratorType",
+        "properties.administrators.azureADOnlyAuthentication",
+        "properties.administrators.login",
+        "properties.administrators.principalType",
+        "properties.administrators.sid",
+        "properties.administrators.tenantId",
+        "properties.authenticationMetadata",
+        "properties.collation",
+        "properties.createTime",
+        "properties.currentBackupStorageRedundancy",
+        "properties.databaseFormat",
+        "properties.dnsZone",
+        "properties.dnsZonePartner",
+        "properties.externalGovernanceStatus",
+        "properties.fullyQualifiedDomainName",
+        "properties.hybridSecondaryUsage",
+        "properties.hybridSecondaryUsageDetected",
+        "properties.instancePoolId",
+        "properties.isGeneralPurposeV2",
+        "properties.keyId",
+        "properties.licenseType",
+        "properties.maintenanceConfigurationId",
+        "properties.managedInstanceCreateMode",
+        "properties.minimalTlsVersion",
+        "properties.pricingModel",
+        "properties.primaryUserAssignedIdentityId",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.proxyOverride",
+        "properties.publicDataEndpointEnabled",
+        "properties.requestedBackupStorageRedundancy",
+        "properties.restorePointInTime",
+        "properties.servicePrincipal",
+        "properties.servicePrincipal.clientId",
+        "properties.servicePrincipal.principalId",
+        "properties.servicePrincipal.tenantId",
+        "properties.servicePrincipal.type",
+        "properties.sourceManagedInstanceId",
+        "properties.state",
+        "properties.storageIOps",
+        "properties.storageSizeInGB",
+        "properties.storageThroughputMBps",
+        "properties.subnetId",
+        "properties.timezoneId",
+        "properties.vCores",
+        "properties.virtualClusterId",
+        "properties.zoneRedundant",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}",
+      "operationId": "ManagedInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}",
+      "operationId": "ManagedInstances_Update",
+      "bodySchema": "ManagedInstanceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.administratorLogin",
+        "properties.administratorLoginPassword",
+        "properties.administrators",
+        "properties.administrators.administratorType",
+        "properties.administrators.azureADOnlyAuthentication",
+        "properties.administrators.login",
+        "properties.administrators.principalType",
+        "properties.administrators.sid",
+        "properties.administrators.tenantId",
+        "properties.authenticationMetadata",
+        "properties.collation",
+        "properties.createTime",
+        "properties.currentBackupStorageRedundancy",
+        "properties.databaseFormat",
+        "properties.dnsZone",
+        "properties.dnsZonePartner",
+        "properties.externalGovernanceStatus",
+        "properties.fullyQualifiedDomainName",
+        "properties.hybridSecondaryUsage",
+        "properties.hybridSecondaryUsageDetected",
+        "properties.instancePoolId",
+        "properties.isGeneralPurposeV2",
+        "properties.keyId",
+        "properties.licenseType",
+        "properties.maintenanceConfigurationId",
+        "properties.managedInstanceCreateMode",
+        "properties.minimalTlsVersion",
+        "properties.pricingModel",
+        "properties.primaryUserAssignedIdentityId",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.proxyOverride",
+        "properties.publicDataEndpointEnabled",
+        "properties.requestedBackupStorageRedundancy",
+        "properties.restorePointInTime",
+        "properties.servicePrincipal",
+        "properties.servicePrincipal.clientId",
+        "properties.servicePrincipal.principalId",
+        "properties.servicePrincipal.tenantId",
+        "properties.servicePrincipal.type",
+        "properties.sourceManagedInstanceId",
+        "properties.state",
+        "properties.storageIOps",
+        "properties.storageSizeInGB",
+        "properties.storageThroughputMBps",
+        "properties.subnetId",
+        "properties.timezoneId",
+        "properties.vCores",
+        "properties.virtualClusterId",
+        "properties.zoneRedundant",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

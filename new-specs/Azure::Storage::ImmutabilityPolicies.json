@@ -1,0 +1,145 @@
+{
+  "resource": "Azure::Storage::ImmutabilityPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}/immutabilityPolicies/{immutabilityPolicyName}",
+      "operationId": "BlobContainers_CreateOrUpdateImmutabilityPolicy",
+      "bodySchema": "ImmutabilityPolicy",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.allowProtectedAppendWrites",
+        "properties.allowProtectedAppendWritesAll",
+        "properties.immutabilityPeriodSinceCreationInDays",
+        "properties.state"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "immutabilityPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be 'default'"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}/immutabilityPolicies/{immutabilityPolicyName}",
+      "operationId": "BlobContainers_GetImmutabilityPolicy",
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "immutabilityPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be 'default'"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}/immutabilityPolicies/{immutabilityPolicyName}",
+      "operationId": "BlobContainers_DeleteImmutabilityPolicy",
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "immutabilityPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be 'default'"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

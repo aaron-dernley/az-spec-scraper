@@ -1,0 +1,96 @@
+{
+  "resource": "Azure::Security::DeviceSecurityGroups",
+  "version": "2019-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.Security/deviceSecurityGroups",
+      "operationId": "DeviceSecurityGroups_List",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.Security/deviceSecurityGroups/{deviceSecurityGroupName}",
+      "operationId": "DeviceSecurityGroups_Get",
+      "pathParameters": [
+        {
+          "name": "deviceSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the device security group. Note that the name of the device security group is case insensitive."
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceId}/providers/Microsoft.Security/deviceSecurityGroups/{deviceSecurityGroupName}",
+      "operationId": "DeviceSecurityGroups_CreateOrUpdate",
+      "bodySchema": "DeviceSecurityGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.allowlistRules",
+        "properties.denylistRules",
+        "properties.thresholdRules",
+        "properties.timeWindowRules"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the device security group. Note that the name of the device security group is case insensitive."
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceId}/providers/Microsoft.Security/deviceSecurityGroups/{deviceSecurityGroupName}",
+      "operationId": "DeviceSecurityGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the device security group. Note that the name of the device security group is case insensitive."
+        },
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

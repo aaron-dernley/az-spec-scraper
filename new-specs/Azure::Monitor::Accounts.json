@@ -1,0 +1,180 @@
+{
+  "resource": "Azure::Monitor::Accounts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts",
+      "operationId": "AzureMonitorWorkspaces_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Monitor/accounts",
+      "operationId": "AzureMonitorWorkspaces_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts/{azureMonitorWorkspaceName}",
+      "operationId": "AzureMonitorWorkspaces_Get",
+      "pathParameters": [
+        {
+          "name": "azureMonitorWorkspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor Workspace. The name is case insensitive"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts/{azureMonitorWorkspaceName}",
+      "operationId": "AzureMonitorWorkspaces_Create",
+      "bodySchema": "AzureMonitorWorkspaceResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.accountId",
+        "properties.defaultIngestionSettings",
+        "properties.defaultIngestionSettings.dataCollectionEndpointResourceId",
+        "properties.defaultIngestionSettings.dataCollectionRuleResourceId",
+        "properties.metrics",
+        "properties.metrics.internalId",
+        "properties.metrics.prometheusQueryEndpoint",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess"
+      ],
+      "pathParameters": [
+        {
+          "name": "azureMonitorWorkspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor Workspace. The name is case insensitive"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts/{azureMonitorWorkspaceName}",
+      "operationId": "AzureMonitorWorkspaces_Update",
+      "bodySchema": "AzureMonitorWorkspaceResourceForUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "azureMonitorWorkspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor Workspace. The name is case insensitive"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts/{azureMonitorWorkspaceName}",
+      "operationId": "AzureMonitorWorkspaces_Delete",
+      "pathParameters": [
+        {
+          "name": "azureMonitorWorkspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor Workspace. The name is case insensitive"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

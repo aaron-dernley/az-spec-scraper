@@ -1,0 +1,359 @@
+{
+  "resource": "Azure::Storage::StorageAccounts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}",
+      "operationId": "StorageAccounts_Create",
+      "bodySchema": "StorageAccountCreateParameters",
+      "requiredProperties": [
+        "identity.type",
+        "kind",
+        "location",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.azureStorageSid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainGuid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainName",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainSid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.forestName",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.netBiosDomainName",
+        "properties.azureFilesIdentityBasedAuthentication.directoryServiceOptions",
+        "properties.customDomain.name",
+        "properties.encryption.keySource",
+        "properties.keyPolicy.keyExpirationPeriodInDays",
+        "properties.networkAcls.defaultAction",
+        "properties.sasPolicy.expirationAction",
+        "properties.sasPolicy.sasExpirationPeriod",
+        "sku"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.accessTier",
+        "properties.allowBlobPublicAccess",
+        "properties.allowCrossTenantReplication",
+        "properties.allowSharedKeyAccess",
+        "properties.allowedCopyScope",
+        "properties.azureFilesIdentityBasedAuthentication",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.accountType",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.samAccountName",
+        "properties.azureFilesIdentityBasedAuthentication.defaultSharePermission",
+        "properties.customDomain",
+        "properties.customDomain.useSubDomainName",
+        "properties.defaultToOAuthAuthentication",
+        "properties.dnsEndpointType",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.federatedIdentityClientId",
+        "properties.encryption.identity.userAssignedIdentity",
+        "properties.encryption.keyvaultproperties",
+        "properties.encryption.keyvaultproperties.currentVersionedKeyExpirationTimestamp",
+        "properties.encryption.keyvaultproperties.currentVersionedKeyIdentifier",
+        "properties.encryption.keyvaultproperties.keyname",
+        "properties.encryption.keyvaultproperties.keyvaulturi",
+        "properties.encryption.keyvaultproperties.keyversion",
+        "properties.encryption.keyvaultproperties.lastKeyRotationTimestamp",
+        "properties.encryption.requireInfrastructureEncryption",
+        "properties.encryption.services",
+        "properties.encryption.services.blob",
+        "properties.encryption.services.blob.enabled",
+        "properties.encryption.services.blob.keyType",
+        "properties.encryption.services.blob.lastEnabledTime",
+        "properties.encryption.services.file",
+        "properties.encryption.services.file.enabled",
+        "properties.encryption.services.file.keyType",
+        "properties.encryption.services.file.lastEnabledTime",
+        "properties.encryption.services.queue",
+        "properties.encryption.services.queue.enabled",
+        "properties.encryption.services.queue.keyType",
+        "properties.encryption.services.queue.lastEnabledTime",
+        "properties.encryption.services.table",
+        "properties.encryption.services.table.enabled",
+        "properties.encryption.services.table.keyType",
+        "properties.encryption.services.table.lastEnabledTime",
+        "properties.immutableStorageWithVersioning",
+        "properties.immutableStorageWithVersioning.enabled",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.allowProtectedAppendWrites",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.immutabilityPeriodSinceCreationInDays",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.state",
+        "properties.isHnsEnabled",
+        "properties.isLocalUserEnabled",
+        "properties.isNfsV3Enabled",
+        "properties.isSftpEnabled",
+        "properties.keyPolicy",
+        "properties.largeFileSharesState",
+        "properties.minimumTlsVersion",
+        "properties.networkAcls",
+        "properties.networkAcls.bypass",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.resourceAccessRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.publicNetworkAccess",
+        "properties.routingPreference",
+        "properties.routingPreference.publishInternetEndpoints",
+        "properties.routingPreference.publishMicrosoftEndpoints",
+        "properties.routingPreference.routingChoice",
+        "properties.sasPolicy",
+        "properties.supportsHttpsTrafficOnly",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription. The name is case insensitive."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}",
+      "operationId": "StorageAccounts_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription. The name is case insensitive."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}",
+      "operationId": "StorageAccounts_GetProperties",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription. The name is case insensitive."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "May be used to expand the properties within account's properties. By default, data is not included when fetching properties. Currently we only support geoReplicationStats and blobRestoreStatus."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}",
+      "operationId": "StorageAccounts_Update",
+      "bodySchema": "StorageAccountUpdateParameters",
+      "requiredProperties": [
+        "identity.type",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.azureStorageSid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainGuid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainName",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.domainSid",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.forestName",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.netBiosDomainName",
+        "properties.azureFilesIdentityBasedAuthentication.directoryServiceOptions",
+        "properties.customDomain.name",
+        "properties.encryption.keySource",
+        "properties.keyPolicy.keyExpirationPeriodInDays",
+        "properties.networkAcls.defaultAction",
+        "properties.sasPolicy.expirationAction",
+        "properties.sasPolicy.sasExpirationPeriod"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "kind",
+        "properties",
+        "properties.accessTier",
+        "properties.allowBlobPublicAccess",
+        "properties.allowCrossTenantReplication",
+        "properties.allowSharedKeyAccess",
+        "properties.allowedCopyScope",
+        "properties.azureFilesIdentityBasedAuthentication",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.accountType",
+        "properties.azureFilesIdentityBasedAuthentication.activeDirectoryProperties.samAccountName",
+        "properties.azureFilesIdentityBasedAuthentication.defaultSharePermission",
+        "properties.customDomain",
+        "properties.customDomain.useSubDomainName",
+        "properties.defaultToOAuthAuthentication",
+        "properties.dnsEndpointType",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.federatedIdentityClientId",
+        "properties.encryption.identity.userAssignedIdentity",
+        "properties.encryption.keyvaultproperties",
+        "properties.encryption.keyvaultproperties.currentVersionedKeyExpirationTimestamp",
+        "properties.encryption.keyvaultproperties.currentVersionedKeyIdentifier",
+        "properties.encryption.keyvaultproperties.keyname",
+        "properties.encryption.keyvaultproperties.keyvaulturi",
+        "properties.encryption.keyvaultproperties.keyversion",
+        "properties.encryption.keyvaultproperties.lastKeyRotationTimestamp",
+        "properties.encryption.requireInfrastructureEncryption",
+        "properties.encryption.services",
+        "properties.encryption.services.blob",
+        "properties.encryption.services.blob.enabled",
+        "properties.encryption.services.blob.keyType",
+        "properties.encryption.services.blob.lastEnabledTime",
+        "properties.encryption.services.file",
+        "properties.encryption.services.file.enabled",
+        "properties.encryption.services.file.keyType",
+        "properties.encryption.services.file.lastEnabledTime",
+        "properties.encryption.services.queue",
+        "properties.encryption.services.queue.enabled",
+        "properties.encryption.services.queue.keyType",
+        "properties.encryption.services.queue.lastEnabledTime",
+        "properties.encryption.services.table",
+        "properties.encryption.services.table.enabled",
+        "properties.encryption.services.table.keyType",
+        "properties.encryption.services.table.lastEnabledTime",
+        "properties.immutableStorageWithVersioning",
+        "properties.immutableStorageWithVersioning.enabled",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.allowProtectedAppendWrites",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.immutabilityPeriodSinceCreationInDays",
+        "properties.immutableStorageWithVersioning.immutabilityPolicy.state",
+        "properties.isLocalUserEnabled",
+        "properties.isSftpEnabled",
+        "properties.keyPolicy",
+        "properties.largeFileSharesState",
+        "properties.minimumTlsVersion",
+        "properties.networkAcls",
+        "properties.networkAcls.bypass",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.resourceAccessRules",
+        "properties.networkAcls.virtualNetworkRules",
+        "properties.publicNetworkAccess",
+        "properties.routingPreference",
+        "properties.routingPreference.publishInternetEndpoints",
+        "properties.routingPreference.publishMicrosoftEndpoints",
+        "properties.routingPreference.routingChoice",
+        "properties.sasPolicy",
+        "properties.supportsHttpsTrafficOnly",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription. The name is case insensitive."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Storage/storageAccounts",
+      "operationId": "StorageAccounts_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts",
+      "operationId": "StorageAccounts_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group within the user's subscription. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

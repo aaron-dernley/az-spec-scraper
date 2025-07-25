@@ -1,0 +1,176 @@
+{
+  "resource": "Azure::Edge::ConfigTemplates",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/configTemplates",
+      "operationId": "ConfigTemplates_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates",
+      "operationId": "ConfigTemplates_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}",
+      "operationId": "ConfigTemplates_Get",
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}",
+      "operationId": "ConfigTemplates_CreateOrUpdate",
+      "bodySchema": "ConfigTemplate",
+      "requiredProperties": [
+        "properties.description"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.latestVersion",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}",
+      "operationId": "ConfigTemplates_Update",
+      "bodySchema": "ConfigTemplateUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}",
+      "operationId": "ConfigTemplates_Delete",
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

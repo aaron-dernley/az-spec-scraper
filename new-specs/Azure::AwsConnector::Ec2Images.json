@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::AwsConnector::Ec2Images",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ec2Images",
+      "operationId": "Ec2Images_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Images",
+      "operationId": "Ec2Images_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Images/{name}",
+      "operationId": "Ec2Images_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Images/{name}",
+      "operationId": "Ec2Images_CreateOrReplace",
+      "bodySchema": "Ec2Image",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.architecture",
+        "properties.awsProperties.architecture.value",
+        "properties.awsProperties.blockDeviceMappings",
+        "properties.awsProperties.bootMode",
+        "properties.awsProperties.bootMode.value",
+        "properties.awsProperties.creationDate",
+        "properties.awsProperties.deprecationTime",
+        "properties.awsProperties.deregistrationProtection",
+        "properties.awsProperties.description",
+        "properties.awsProperties.enaSupport",
+        "properties.awsProperties.hypervisor",
+        "properties.awsProperties.hypervisor.value",
+        "properties.awsProperties.imageId",
+        "properties.awsProperties.imageLocation",
+        "properties.awsProperties.imageOwnerAlias",
+        "properties.awsProperties.imageType",
+        "properties.awsProperties.imageType.value",
+        "properties.awsProperties.imdsSupport",
+        "properties.awsProperties.imdsSupport.value",
+        "properties.awsProperties.kernelId",
+        "properties.awsProperties.lastLaunchedTime",
+        "properties.awsProperties.name",
+        "properties.awsProperties.ownerId",
+        "properties.awsProperties.platform",
+        "properties.awsProperties.platform.value",
+        "properties.awsProperties.platformDetails",
+        "properties.awsProperties.productCodes",
+        "properties.awsProperties.public",
+        "properties.awsProperties.ramdiskId",
+        "properties.awsProperties.rootDeviceName",
+        "properties.awsProperties.rootDeviceType",
+        "properties.awsProperties.rootDeviceType.value",
+        "properties.awsProperties.sourceInstanceId",
+        "properties.awsProperties.sriovNetSupport",
+        "properties.awsProperties.state",
+        "properties.awsProperties.state.value",
+        "properties.awsProperties.stateReason",
+        "properties.awsProperties.stateReason.code",
+        "properties.awsProperties.stateReason.message",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.tpmSupport",
+        "properties.awsProperties.tpmSupport.value",
+        "properties.awsProperties.usageOperation",
+        "properties.awsProperties.virtualizationType",
+        "properties.awsProperties.virtualizationType.value",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Images/{name}",
+      "operationId": "Ec2Images_Update",
+      "bodySchema": "Ec2ImageTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ec2Images/{name}",
+      "operationId": "Ec2Images_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Ec2Image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

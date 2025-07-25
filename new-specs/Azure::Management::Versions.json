@@ -1,0 +1,147 @@
+{
+  "resource": "Azure::Management::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_CreateOrUpdateAtManagementGroup",
+      "bodySchema": "PolicyDefinitionVersion",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.externalEvaluationEnforcementSettings",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings.details",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings.kind",
+        "properties.externalEvaluationEnforcementSettings.missingTokenAction",
+        "properties.externalEvaluationEnforcementSettings.resultLifespan",
+        "properties.externalEvaluationEnforcementSettings.roleDefinitionIds",
+        "properties.metadata",
+        "properties.mode",
+        "properties.parameters",
+        "properties.policyRule",
+        "properties.policyType",
+        "properties.version",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "managementGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_DeleteAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "managementGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_GetAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "managementGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions",
+      "operationId": "PolicyDefinitionVersions_ListByManagementGroup",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "managementGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return. When the $top filter is not provided, it will return 500 records."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "resource": "Azure::Devices::IotHubs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+      "operationId": "IotHubResource_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the IoT hub."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT hub."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+      "operationId": "IotHubResource_CreateOrUpdate",
+      "bodySchema": "IotHubDescription",
+      "requiredProperties": [
+        "location",
+        "properties.routing.fallbackRoute.endpointNames",
+        "properties.routing.fallbackRoute.isEnabled",
+        "properties.routing.fallbackRoute.source",
+        "sku",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.authorizationPolicies",
+        "properties.cloudToDevice",
+        "properties.cloudToDevice.defaultTtlAsIso8601",
+        "properties.cloudToDevice.feedback",
+        "properties.cloudToDevice.feedback.lockDurationAsIso8601",
+        "properties.cloudToDevice.feedback.maxDeliveryCount",
+        "properties.cloudToDevice.feedback.ttlAsIso8601",
+        "properties.cloudToDevice.maxDeliveryCount",
+        "properties.comments",
+        "properties.enableFileUploadNotifications",
+        "properties.eventHubEndpoints",
+        "properties.features",
+        "properties.hostName",
+        "properties.ipFilterRules",
+        "properties.locations",
+        "properties.messagingEndpoints",
+        "properties.minTlsVersion",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.routing",
+        "properties.routing.endpoints",
+        "properties.routing.endpoints.eventHubs",
+        "properties.routing.endpoints.serviceBusQueues",
+        "properties.routing.endpoints.serviceBusTopics",
+        "properties.routing.endpoints.storageContainers",
+        "properties.routing.enrichments",
+        "properties.routing.fallbackRoute",
+        "properties.routing.fallbackRoute.condition",
+        "properties.routing.fallbackRoute.name",
+        "properties.routing.routes",
+        "properties.state",
+        "properties.storageEndpoints",
+        "sku.capacity",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the IoT hub."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT hub."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+      "operationId": "IotHubResource_Update",
+      "bodySchema": "TagsResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group identifier."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of iot hub to update."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+      "operationId": "IotHubResource_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the IoT hub."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT hub."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Devices/IotHubs",
+      "operationId": "IotHubResource_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs",
+      "operationId": "IotHubResource_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the IoT hub."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    }
+  ]
+}

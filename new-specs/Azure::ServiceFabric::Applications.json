@@ -1,0 +1,302 @@
+{
+  "resource": "Azure::ServiceFabric::Applications",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}/applications/{applicationName}",
+      "operationId": "Applications_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2020-03-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}/applications/{applicationName}",
+      "operationId": "Applications_CreateOrUpdate",
+      "bodySchema": "ApplicationResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "name",
+        "properties",
+        "properties.managedIdentities",
+        "properties.maximumNodes",
+        "properties.metrics",
+        "properties.minimumNodes",
+        "properties.parameters",
+        "properties.provisioningState",
+        "properties.removeApplicationCapacity",
+        "properties.typeName",
+        "properties.typeVersion",
+        "properties.upgradePolicy",
+        "properties.upgradePolicy.applicationHealthPolicy",
+        "properties.upgradePolicy.applicationHealthPolicy.considerWarningAsError",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices",
+        "properties.upgradePolicy.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications",
+        "properties.upgradePolicy.applicationHealthPolicy.serviceTypeHealthPolicyMap",
+        "properties.upgradePolicy.forceRestart",
+        "properties.upgradePolicy.recreateApplication",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.failureAction",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckRetryTimeout",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckStableDuration",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckWaitDuration",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.upgradeDomainTimeout",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.upgradeTimeout",
+        "properties.upgradePolicy.upgradeMode",
+        "properties.upgradePolicy.upgradeReplicaSetCheckTimeout",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2020-03-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}/applications/{applicationName}",
+      "operationId": "Applications_Update",
+      "bodySchema": "ApplicationResourceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.managedIdentities",
+        "properties.maximumNodes",
+        "properties.metrics",
+        "properties.minimumNodes",
+        "properties.parameters",
+        "properties.removeApplicationCapacity",
+        "properties.typeVersion",
+        "properties.upgradePolicy",
+        "properties.upgradePolicy.applicationHealthPolicy",
+        "properties.upgradePolicy.applicationHealthPolicy.considerWarningAsError",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition",
+        "properties.upgradePolicy.applicationHealthPolicy.defaultServiceTypeHealthPolicy.maxPercentUnhealthyServices",
+        "properties.upgradePolicy.applicationHealthPolicy.maxPercentUnhealthyDeployedApplications",
+        "properties.upgradePolicy.applicationHealthPolicy.serviceTypeHealthPolicyMap",
+        "properties.upgradePolicy.forceRestart",
+        "properties.upgradePolicy.recreateApplication",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.failureAction",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckRetryTimeout",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckStableDuration",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.healthCheckWaitDuration",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.upgradeDomainTimeout",
+        "properties.upgradePolicy.rollingUpgradeMonitoringPolicy.upgradeTimeout",
+        "properties.upgradePolicy.upgradeMode",
+        "properties.upgradePolicy.upgradeReplicaSetCheckTimeout",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2020-03-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}/applications/{applicationName}",
+      "operationId": "Applications_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2020-03-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/clusters/{clusterName}/applications",
+      "operationId": "Applications_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2020-03-01\" for this specification."
+        }
+      ]
+    }
+  ]
+}

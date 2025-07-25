@@ -1,0 +1,2677 @@
+{
+  "resource": "Azure::MachineLearningServices::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/codes/{codeName}/versions",
+      "operationId": "RegistryCodeVersions_List",
+      "pathParameters": [
+        {
+          "name": "codeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/codes/{codeName}/versions/{version}",
+      "operationId": "RegistryCodeVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "codeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/codes/{codeName}/versions/{version}",
+      "operationId": "RegistryCodeVersions_Get",
+      "pathParameters": [
+        {
+          "name": "codeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/codes/{codeName}/versions/{version}",
+      "operationId": "RegistryCodeVersions_CreateOrUpdate",
+      "bodySchema": "CodeVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.codeUri",
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "codeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/components/{componentName}/versions",
+      "operationId": "RegistryComponentVersions_List",
+      "pathParameters": [
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/components/{componentName}/versions/{version}",
+      "operationId": "RegistryComponentVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/components/{componentName}/versions/{version}",
+      "operationId": "RegistryComponentVersions_Get",
+      "pathParameters": [
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/components/{componentName}/versions/{version}",
+      "operationId": "RegistryComponentVersions_CreateOrUpdate",
+      "bodySchema": "ComponentVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.componentSpec",
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "componentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/data/{name}/versions",
+      "operationId": "RegistryDataVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data container's name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Please choose OrderBy value from ['createdtime', 'modifiedtime']"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Top count of results, top count cannot be greater than the page size.\r\n                              If topCount > page size, results with be default page size count will be returned"
+        },
+        {
+          "name": "$tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "[ListViewType.ActiveOnly, ListViewType.ArchivedOnly, ListViewType.All]View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/data/{name}/versions/{version}",
+      "operationId": "RegistryDataVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/data/{name}/versions/{version}",
+      "operationId": "RegistryDataVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/data/{name}/versions/{version}",
+      "operationId": "RegistryDataVersions_CreateOrUpdate",
+      "bodySchema": "DataVersionBaseResource",
+      "requiredProperties": [
+        "properties",
+        "properties.dataType",
+        "properties.dataUri"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "POST",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/datareferences/{name}/versions/{version}",
+      "operationId": "RegistryDataReferences_GetBlobReferenceSAS",
+      "bodySchema": "GetBlobReferenceSASRequestDto",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "assetId",
+        "blobUri"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data reference name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/environments/{environmentName}/versions",
+      "operationId": "RegistryEnvironmentVersions_List",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/environments/{environmentName}/versions/{version}",
+      "operationId": "RegistryEnvironmentVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/environments/{environmentName}/versions/{version}",
+      "operationId": "RegistryEnvironmentVersions_Get",
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/environments/{environmentName}/versions/{version}",
+      "operationId": "RegistryEnvironmentVersions_CreateOrUpdate",
+      "bodySchema": "EnvironmentVersionResource",
+      "requiredProperties": [
+        "properties",
+        "properties.build.contextUri",
+        "properties.inferenceConfig.livenessRoute.path",
+        "properties.inferenceConfig.livenessRoute.port",
+        "properties.inferenceConfig.readinessRoute.path",
+        "properties.inferenceConfig.readinessRoute.port",
+        "properties.inferenceConfig.scoringRoute.path",
+        "properties.inferenceConfig.scoringRoute.port",
+        "properties.inferenceConfig.startupRoute.path",
+        "properties.inferenceConfig.startupRoute.port"
+      ],
+      "optionalProperties": [
+        "properties.autoRebuild",
+        "properties.build",
+        "properties.build.dockerfilePath",
+        "properties.condaFile",
+        "properties.description",
+        "properties.environmentType",
+        "properties.image",
+        "properties.inferenceConfig",
+        "properties.inferenceConfig.livenessRoute",
+        "properties.inferenceConfig.readinessRoute",
+        "properties.inferenceConfig.scoringRoute",
+        "properties.inferenceConfig.startupRoute",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.osType",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "environmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/models/{modelName}/versions",
+      "operationId": "RegistryModelVersions_List",
+      "pathParameters": [
+        {
+          "name": "modelName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "version",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Version identifier."
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Model description."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "properties",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of property names (and optionally values). Example: prop1,prop2=value2"
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/models/{modelName}/versions/{version}",
+      "operationId": "RegistryModelVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "modelName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/models/{modelName}/versions/{version}",
+      "operationId": "RegistryModelVersions_Get",
+      "pathParameters": [
+        {
+          "name": "modelName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}/models/{modelName}/versions/{version}",
+      "operationId": "RegistryModelVersions_CreateOrUpdate",
+      "bodySchema": "ModelVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.flavors",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.jobName",
+        "properties.modelType",
+        "properties.modelUri",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "modelName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "registryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/codes/{name}/versions",
+      "operationId": "CodeVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "hash",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "If specified, return CodeVersion assets with specified content hash value, regardless of name"
+        },
+        {
+          "name": "hashVersion",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Hash algorithm version when listing by hash"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/codes/{name}/versions/{version}",
+      "operationId": "CodeVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/codes/{name}/versions/{version}",
+      "operationId": "CodeVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/codes/{name}/versions/{version}",
+      "operationId": "CodeVersions_CreateOrUpdate",
+      "bodySchema": "CodeVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.codeUri",
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/components/{name}/versions",
+      "operationId": "ComponentVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Component name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/components/{name}/versions/{version}",
+      "operationId": "ComponentVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/components/{name}/versions/{version}",
+      "operationId": "ComponentVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/components/{name}/versions/{version}",
+      "operationId": "ComponentVersions_CreateOrUpdate",
+      "bodySchema": "ComponentVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.componentSpec",
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/data/{name}/versions",
+      "operationId": "DataVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data container's name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Please choose OrderBy value from ['createdtime', 'modifiedtime']"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Top count of results, top count cannot be greater than the page size.\r\n                              If topCount > page size, results with be default page size count will be returned"
+        },
+        {
+          "name": "$tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "[ListViewType.ActiveOnly, ListViewType.ArchivedOnly, ListViewType.All]View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/data/{name}/versions/{version}",
+      "operationId": "DataVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/data/{name}/versions/{version}",
+      "operationId": "DataVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/data/{name}/versions/{version}",
+      "operationId": "DataVersions_CreateOrUpdate",
+      "bodySchema": "DataVersionBaseResource",
+      "requiredProperties": [
+        "properties",
+        "properties.dataType",
+        "properties.dataUri"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/environments/{name}/versions",
+      "operationId": "EnvironmentVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/environments/{name}/versions/{version}",
+      "operationId": "EnvironmentVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/environments/{name}/versions/{version}",
+      "operationId": "EnvironmentVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/environments/{name}/versions/{version}",
+      "operationId": "EnvironmentVersions_CreateOrUpdate",
+      "bodySchema": "EnvironmentVersionResource",
+      "requiredProperties": [
+        "properties",
+        "properties.build.contextUri",
+        "properties.inferenceConfig.livenessRoute.path",
+        "properties.inferenceConfig.livenessRoute.port",
+        "properties.inferenceConfig.readinessRoute.path",
+        "properties.inferenceConfig.readinessRoute.port",
+        "properties.inferenceConfig.scoringRoute.path",
+        "properties.inferenceConfig.scoringRoute.port",
+        "properties.inferenceConfig.startupRoute.path",
+        "properties.inferenceConfig.startupRoute.port"
+      ],
+      "optionalProperties": [
+        "properties.autoRebuild",
+        "properties.build",
+        "properties.build.dockerfilePath",
+        "properties.condaFile",
+        "properties.description",
+        "properties.environmentType",
+        "properties.image",
+        "properties.inferenceConfig",
+        "properties.inferenceConfig.livenessRoute",
+        "properties.inferenceConfig.readinessRoute",
+        "properties.inferenceConfig.scoringRoute",
+        "properties.inferenceConfig.startupRoute",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.osType",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of EnvironmentVersion. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version of EnvironmentVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featuresets/{name}/versions",
+      "operationId": "FeaturesetVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Featureset name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "[ListViewType.ActiveOnly, ListViewType.ArchivedOnly, ListViewType.All]View type for including/excluding (for example) archived entities."
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "page size"
+        },
+        {
+          "name": "versionName",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "name for the featureset version"
+        },
+        {
+          "name": "version",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "featureset version"
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "description for the feature set version"
+        },
+        {
+          "name": "createdBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "createdBy user name"
+        },
+        {
+          "name": "stage",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the featurestore stage"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featuresets/{name}/versions/{version}",
+      "operationId": "FeaturesetVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featuresets/{name}/versions/{version}",
+      "operationId": "FeaturesetVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featuresets/{name}/versions/{version}",
+      "operationId": "FeaturesetVersions_CreateOrUpdate",
+      "bodySchema": "FeaturesetVersionResource",
+      "requiredProperties": [
+        "properties",
+        "properties.materializationSettings.schedule.frequency",
+        "properties.materializationSettings.schedule.interval",
+        "properties.materializationSettings.schedule.schedule.hours",
+        "properties.materializationSettings.schedule.schedule.minutes",
+        "properties.materializationSettings.schedule.triggerType"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.entities",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.materializationSettings",
+        "properties.materializationSettings.notification",
+        "properties.materializationSettings.notification.emailOn",
+        "properties.materializationSettings.notification.emails",
+        "properties.materializationSettings.notification.webhooks",
+        "properties.materializationSettings.resource",
+        "properties.materializationSettings.resource.instanceType",
+        "properties.materializationSettings.schedule",
+        "properties.materializationSettings.schedule.endTime",
+        "properties.materializationSettings.schedule.schedule",
+        "properties.materializationSettings.schedule.schedule.monthDays",
+        "properties.materializationSettings.schedule.schedule.weekDays",
+        "properties.materializationSettings.schedule.startTime",
+        "properties.materializationSettings.schedule.timeZone",
+        "properties.materializationSettings.sparkConfiguration",
+        "properties.materializationSettings.storeType",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.specification",
+        "properties.specification.path",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featurestoreEntities/{name}/versions",
+      "operationId": "FeaturestoreEntityVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Feature entity name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "[ListViewType.ActiveOnly, ListViewType.ArchivedOnly, ListViewType.All]View type for including/excluding (for example) archived entities."
+        },
+        {
+          "name": "pageSize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "page size"
+        },
+        {
+          "name": "versionName",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "name for the featurestore entity version"
+        },
+        {
+          "name": "version",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "featurestore entity version"
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "description for the feature entity version"
+        },
+        {
+          "name": "createdBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "createdBy user name"
+        },
+        {
+          "name": "stage",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specifies the featurestore stage"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featurestoreEntities/{name}/versions/{version}",
+      "operationId": "FeaturestoreEntityVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featurestoreEntities/{name}/versions/{version}",
+      "operationId": "FeaturestoreEntityVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/featurestoreEntities/{name}/versions/{version}",
+      "operationId": "FeaturestoreEntityVersions_CreateOrUpdate",
+      "bodySchema": "FeaturestoreEntityVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.indexColumns",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/models/{name}/versions",
+      "operationId": "ModelVersions_List",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Model name. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Ordering of list."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "version",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Model version."
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Model description."
+        },
+        {
+          "name": "offset",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Number of initial results to skip."
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of tag names (and optionally values). Example: tag1,tag2=value2"
+        },
+        {
+          "name": "properties",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Comma-separated list of property names (and optionally values). Example: prop1,prop2=value2"
+        },
+        {
+          "name": "feed",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Name of the feed."
+        },
+        {
+          "name": "listViewType",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "View type for including/excluding (for example) archived entities."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/models/{name}/versions/{version}",
+      "operationId": "ModelVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/models/{name}/versions/{version}",
+      "operationId": "ModelVersions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/models/{name}/versions/{version}",
+      "operationId": "ModelVersions_CreateOrUpdate",
+      "bodySchema": "ModelVersionResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.flavors",
+        "properties.isAnonymous",
+        "properties.isArchived",
+        "properties.jobName",
+        "properties.modelType",
+        "properties.modelUri",
+        "properties.properties",
+        "properties.provisioningState",
+        "properties.stage",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Container name. This is case-sensitive."
+        },
+        {
+          "name": "version",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Version identifier. This is case-sensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "resource": "Azure::Authorization::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_CreateOrUpdate",
+      "bodySchema": "PolicyDefinitionVersion",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.externalEvaluationEnforcementSettings",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings.details",
+        "properties.externalEvaluationEnforcementSettings.endpointSettings.kind",
+        "properties.externalEvaluationEnforcementSettings.missingTokenAction",
+        "properties.externalEvaluationEnforcementSettings.resultLifespan",
+        "properties.externalEvaluationEnforcementSettings.roleDefinitionIds",
+        "properties.metadata",
+        "properties.mode",
+        "properties.parameters",
+        "properties.policyRule",
+        "properties.policyType",
+        "properties.version",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_Get",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions/{policyDefinitionVersion}",
+      "operationId": "PolicyDefinitionVersions_GetBuiltIn",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "policyDefinitionVersion",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy definition version.  The format is x.y.z where x is the major version number, y is the minor version number, and z is the patch number"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions",
+      "operationId": "PolicyDefinitionVersions_List",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return. When the $top filter is not provided, it will return 500 records."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}/versions",
+      "operationId": "PolicyDefinitionVersions_ListBuiltIn",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return. When the $top filter is not provided, it will return 500 records."
+        }
+      ]
+    }
+  ]
+}

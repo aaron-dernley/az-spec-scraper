@@ -1,0 +1,175 @@
+{
+  "resource": "Azure::Edge::Schemas",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Edge/schemas",
+      "operationId": "Schemas_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas",
+      "operationId": "Schemas_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}",
+      "operationId": "Schemas_Get",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}",
+      "operationId": "Schemas_CreateOrUpdate",
+      "bodySchema": "Schema",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.currentVersion",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}",
+      "operationId": "Schemas_Update",
+      "bodySchema": "SchemaUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.currentVersion",
+        "properties.provisioningState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}",
+      "operationId": "Schemas_Delete",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

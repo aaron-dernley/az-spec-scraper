@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::StorSimple::VolumeContainers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/volumeContainers",
+      "operationId": "VolumeContainers_ListByDevice",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/volumeContainers/{volumeContainerName}",
+      "operationId": "VolumeContainers_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "volumeContainerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume container."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/volumeContainers/{volumeContainerName}",
+      "operationId": "VolumeContainers_CreateOrUpdate",
+      "bodySchema": "VolumeContainer",
+      "requiredProperties": [
+        "properties",
+        "properties.encryptionKey.encryptionAlgorithm",
+        "properties.encryptionKey.value",
+        "properties.storageAccountCredentialId"
+      ],
+      "optionalProperties": [
+        "id",
+        "kind",
+        "name",
+        "properties.bandWidthRateInMbps",
+        "properties.bandwidthSettingId",
+        "properties.encryptionKey",
+        "properties.encryptionKey.encryptionCertThumbprint",
+        "properties.encryptionStatus",
+        "properties.ownerShipStatus",
+        "properties.totalCloudStorageUsageInBytes",
+        "properties.volumeCount",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "volumeContainerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume container."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/volumeContainers/{volumeContainerName}",
+      "operationId": "VolumeContainers_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "volumeContainerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume container."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    }
+  ]
+}

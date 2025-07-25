@@ -1,0 +1,204 @@
+{
+  "resource": "Azure::StorageCache::ImportJobs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}/importJobs/{importJobName}",
+      "operationId": "importJobs_Delete",
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "importJobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the import job. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}/importJobs/{importJobName}",
+      "operationId": "importJobs_Get",
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "importJobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the import job. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}/importJobs/{importJobName}",
+      "operationId": "importJobs_CreateOrUpdate",
+      "bodySchema": "ImportJob",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.conflictResolutionMode",
+        "properties.importPrefixes",
+        "properties.maximumErrors",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.blobsImportedPerSecond",
+        "properties.status.blobsWalkedPerSecond",
+        "properties.status.lastCompletionTime",
+        "properties.status.lastStartedTime",
+        "properties.status.state",
+        "properties.status.statusMessage",
+        "properties.status.totalBlobsImported",
+        "properties.status.totalBlobsWalked",
+        "properties.status.totalConflicts",
+        "properties.status.totalErrors"
+      ],
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "importJobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the import job. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}/importJobs/{importJobName}",
+      "operationId": "importJobs_Update",
+      "bodySchema": "ImportJobUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "importJobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the import job. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}/importJobs",
+      "operationId": "importJobs_ListByAmlFilesystem",
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

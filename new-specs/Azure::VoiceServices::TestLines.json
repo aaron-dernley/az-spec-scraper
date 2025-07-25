@@ -1,0 +1,193 @@
+{
+  "resource": "Azure::VoiceServices::TestLines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VoiceServices/communicationsGateways/{communicationsGatewayName}/testLines",
+      "operationId": "TestLines_ListByCommunicationsGateway",
+      "pathParameters": [
+        {
+          "name": "communicationsGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this deployment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VoiceServices/communicationsGateways/{communicationsGatewayName}/testLines/{testLineName}",
+      "operationId": "TestLines_Get",
+      "pathParameters": [
+        {
+          "name": "communicationsGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this deployment"
+        },
+        {
+          "name": "testLineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this test line"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VoiceServices/communicationsGateways/{communicationsGatewayName}/testLines/{testLineName}",
+      "operationId": "TestLines_CreateOrUpdate",
+      "bodySchema": "TestLine",
+      "requiredProperties": [
+        "properties.phoneNumber",
+        "properties.purpose"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "communicationsGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this deployment"
+        },
+        {
+          "name": "testLineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this test line"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VoiceServices/communicationsGateways/{communicationsGatewayName}/testLines/{testLineName}",
+      "operationId": "TestLines_Update",
+      "bodySchema": "TestLineUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "communicationsGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this deployment"
+        },
+        {
+          "name": "testLineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this test line"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VoiceServices/communicationsGateways/{communicationsGatewayName}/testLines/{testLineName}",
+      "operationId": "TestLines_Delete",
+      "pathParameters": [
+        {
+          "name": "communicationsGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this deployment"
+        },
+        {
+          "name": "testLineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique identifier for this test line"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

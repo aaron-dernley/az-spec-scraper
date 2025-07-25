@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::NetworkCloud::CloudServicesNetworks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/cloudServicesNetworks",
+      "operationId": "CloudServicesNetworks_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/cloudServicesNetworks",
+      "operationId": "CloudServicesNetworks_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/cloudServicesNetworks/{cloudServicesNetworkName}",
+      "operationId": "CloudServicesNetworks_Get",
+      "pathParameters": [
+        {
+          "name": "cloudServicesNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cloud services network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/cloudServicesNetworks/{cloudServicesNetworkName}",
+      "operationId": "CloudServicesNetworks_CreateOrUpdate",
+      "bodySchema": "CloudServicesNetwork",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.additionalEgressEndpoints",
+        "properties.associatedResourceIds",
+        "properties.clusterId",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.enableDefaultEgressEndpoints",
+        "properties.enabledEgressEndpoints",
+        "properties.hybridAksClustersAssociatedIds",
+        "properties.interfaceName",
+        "properties.provisioningState",
+        "properties.virtualMachinesAssociatedIds"
+      ],
+      "pathParameters": [
+        {
+          "name": "cloudServicesNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cloud services network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/cloudServicesNetworks/{cloudServicesNetworkName}",
+      "operationId": "CloudServicesNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "cloudServicesNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cloud services network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/cloudServicesNetworks/{cloudServicesNetworkName}",
+      "operationId": "CloudServicesNetworks_Update",
+      "bodySchema": "CloudServicesNetworkPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.additionalEgressEndpoints",
+        "properties.enableDefaultEgressEndpoints",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "cloudServicesNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cloud services network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::L2IsolationDomains",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains/{l2IsolationDomainName}",
+      "operationId": "L2IsolationDomains_Create",
+      "bodySchema": "L2IsolationDomain",
+      "requiredProperties": [
+        "properties",
+        "properties.networkFabricId",
+        "properties.vlanId"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.mtu",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "l2IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L2 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains/{l2IsolationDomainName}",
+      "operationId": "L2IsolationDomains_Get",
+      "pathParameters": [
+        {
+          "name": "l2IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L2 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains/{l2IsolationDomainName}",
+      "operationId": "L2IsolationDomains_Update",
+      "bodySchema": "L2IsolationDomainPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.mtu"
+      ],
+      "pathParameters": [
+        {
+          "name": "l2IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L2 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains/{l2IsolationDomainName}",
+      "operationId": "L2IsolationDomains_Delete",
+      "pathParameters": [
+        {
+          "name": "l2IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L2 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+      "operationId": "L2IsolationDomains_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/l2IsolationDomains",
+      "operationId": "L2IsolationDomains_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

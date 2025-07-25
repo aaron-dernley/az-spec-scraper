@@ -1,0 +1,162 @@
+{
+  "resource": "Azure::Network::LocalNetworkGateways",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/localNetworkGateways/{localNetworkGatewayName}",
+      "operationId": "LocalNetworkGateways_CreateOrUpdate",
+      "bodySchema": "LocalNetworkGateway",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.bgpSettings",
+        "properties.bgpSettings.asn",
+        "properties.bgpSettings.bgpPeeringAddress",
+        "properties.bgpSettings.bgpPeeringAddresses",
+        "properties.bgpSettings.peerWeight",
+        "properties.fqdn",
+        "properties.gatewayIpAddress",
+        "properties.localNetworkAddressSpace",
+        "properties.provisioningState",
+        "properties.resourceGuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "localNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the local network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/localNetworkGateways/{localNetworkGatewayName}",
+      "operationId": "LocalNetworkGateways_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "localNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the local network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/localNetworkGateways/{localNetworkGatewayName}",
+      "operationId": "LocalNetworkGateways_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "localNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the local network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/localNetworkGateways/{localNetworkGatewayName}",
+      "operationId": "LocalNetworkGateways_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "localNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the local network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/localNetworkGateways",
+      "operationId": "LocalNetworkGateways_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "resource": "Azure::Insights::ScopedResources",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}/scopedResources/{name}",
+      "operationId": "PrivateLinkScopedResources_Get",
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scoped resource object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}/scopedResources/{name}",
+      "operationId": "PrivateLinkScopedResources_CreateOrUpdate",
+      "bodySchema": "ScopedResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.linkedResourceId",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scoped resource object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}/scopedResources/{name}",
+      "operationId": "PrivateLinkScopedResources_Delete",
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the scoped resource object."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/privateLinkScopes/{scopeName}/scopedResources",
+      "operationId": "PrivateLinkScopedResources_ListByPrivateLinkScope",
+      "pathParameters": [
+        {
+          "name": "scopeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure Monitor PrivateLinkScope resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

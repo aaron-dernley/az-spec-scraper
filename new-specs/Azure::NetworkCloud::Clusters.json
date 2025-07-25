@@ -1,0 +1,279 @@
+{
+  "resource": "Azure::NetworkCloud::Clusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/clusters",
+      "operationId": "Clusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters",
+      "operationId": "Clusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}",
+      "operationId": "Clusters_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}",
+      "operationId": "Clusters_CreateOrUpdate",
+      "bodySchema": "Cluster",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.aggregatorOrSingleRackDefinition",
+        "properties.aggregatorOrSingleRackDefinition.networkRackId",
+        "properties.aggregatorOrSingleRackDefinition.rackSerialNumber",
+        "properties.aggregatorOrSingleRackDefinition.rackSkuId",
+        "properties.clusterExtendedLocation.name",
+        "properties.clusterExtendedLocation.type",
+        "properties.clusterServicePrincipal.applicationId",
+        "properties.clusterServicePrincipal.password",
+        "properties.clusterServicePrincipal.principalId",
+        "properties.clusterServicePrincipal.tenantId",
+        "properties.clusterType",
+        "properties.clusterVersion",
+        "properties.computeDeploymentThreshold.grouping",
+        "properties.computeDeploymentThreshold.type",
+        "properties.computeDeploymentThreshold.value",
+        "properties.hybridAksExtendedLocation.name",
+        "properties.hybridAksExtendedLocation.type",
+        "properties.networkFabricId",
+        "properties.secretArchive.keyVaultId",
+        "properties.updateStrategy.strategyType",
+        "properties.updateStrategy.thresholdType",
+        "properties.updateStrategy.thresholdValue"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties.aggregatorOrSingleRackDefinition.availabilityZone",
+        "properties.aggregatorOrSingleRackDefinition.bareMetalMachineConfigurationData",
+        "properties.aggregatorOrSingleRackDefinition.rackLocation",
+        "properties.aggregatorOrSingleRackDefinition.storageApplianceConfigurationData",
+        "properties.analyticsWorkspaceId",
+        "properties.availableUpgradeVersions",
+        "properties.clusterCapacity",
+        "properties.clusterCapacity.availableApplianceStorageGB",
+        "properties.clusterCapacity.availableCoreCount",
+        "properties.clusterCapacity.availableHostStorageGB",
+        "properties.clusterCapacity.availableMemoryGB",
+        "properties.clusterCapacity.totalApplianceStorageGB",
+        "properties.clusterCapacity.totalCoreCount",
+        "properties.clusterCapacity.totalHostStorageGB",
+        "properties.clusterCapacity.totalMemoryGB",
+        "properties.clusterConnectionStatus",
+        "properties.clusterExtendedLocation",
+        "properties.clusterLocation",
+        "properties.clusterManagerConnectionStatus",
+        "properties.clusterManagerId",
+        "properties.clusterServicePrincipal",
+        "properties.commandOutputSettings",
+        "properties.commandOutputSettings.associatedIdentity",
+        "properties.commandOutputSettings.associatedIdentity.identityType",
+        "properties.commandOutputSettings.associatedIdentity.userAssignedIdentityResourceId",
+        "properties.commandOutputSettings.containerUrl",
+        "properties.computeDeploymentThreshold",
+        "properties.computeRackDefinitions",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.hybridAksExtendedLocation",
+        "properties.managedResourceGroupConfiguration",
+        "properties.managedResourceGroupConfiguration.location",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.manualActionCount",
+        "properties.provisioningState",
+        "properties.runtimeProtectionConfiguration",
+        "properties.runtimeProtectionConfiguration.enforcementLevel",
+        "properties.secretArchive",
+        "properties.secretArchive.useKeyVault",
+        "properties.supportExpiryDate",
+        "properties.updateStrategy",
+        "properties.updateStrategy.maxUnavailable",
+        "properties.updateStrategy.waitTimeMinutes",
+        "properties.workloadResourceIds"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}",
+      "operationId": "Clusters_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/clusters/{clusterName}",
+      "operationId": "Clusters_Update",
+      "bodySchema": "ClusterPatchParameters",
+      "requiredProperties": [
+        "properties.aggregatorOrSingleRackDefinition.networkRackId",
+        "properties.aggregatorOrSingleRackDefinition.rackSerialNumber",
+        "properties.aggregatorOrSingleRackDefinition.rackSkuId",
+        "properties.clusterServicePrincipal.applicationId",
+        "properties.clusterServicePrincipal.password",
+        "properties.clusterServicePrincipal.principalId",
+        "properties.clusterServicePrincipal.tenantId",
+        "properties.computeDeploymentThreshold.grouping",
+        "properties.computeDeploymentThreshold.type",
+        "properties.computeDeploymentThreshold.value",
+        "properties.secretArchive.keyVaultId",
+        "properties.updateStrategy.strategyType",
+        "properties.updateStrategy.thresholdType",
+        "properties.updateStrategy.thresholdValue"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.aggregatorOrSingleRackDefinition",
+        "properties.aggregatorOrSingleRackDefinition.availabilityZone",
+        "properties.aggregatorOrSingleRackDefinition.bareMetalMachineConfigurationData",
+        "properties.aggregatorOrSingleRackDefinition.rackLocation",
+        "properties.aggregatorOrSingleRackDefinition.storageApplianceConfigurationData",
+        "properties.clusterLocation",
+        "properties.clusterServicePrincipal",
+        "properties.commandOutputSettings",
+        "properties.commandOutputSettings.associatedIdentity",
+        "properties.commandOutputSettings.associatedIdentity.identityType",
+        "properties.commandOutputSettings.associatedIdentity.userAssignedIdentityResourceId",
+        "properties.commandOutputSettings.containerUrl",
+        "properties.computeDeploymentThreshold",
+        "properties.computeRackDefinitions",
+        "properties.runtimeProtectionConfiguration",
+        "properties.runtimeProtectionConfiguration.enforcementLevel",
+        "properties.secretArchive",
+        "properties.secretArchive.useKeyVault",
+        "properties.updateStrategy",
+        "properties.updateStrategy.maxUnavailable",
+        "properties.updateStrategy.waitTimeMinutes",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

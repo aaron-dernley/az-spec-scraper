@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::Workloads::SapVirtualInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}",
+      "operationId": "SAPVirtualInstances_Create",
+      "bodySchema": "SAPVirtualInstance",
+      "requiredProperties": [
+        "properties",
+        "properties.configuration",
+        "properties.configuration.configurationType",
+        "properties.environment",
+        "properties.sapProduct"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties.errors",
+        "properties.errors.properties",
+        "properties.errors.properties.code",
+        "properties.errors.properties.details",
+        "properties.errors.properties.message",
+        "properties.health",
+        "properties.managedResourceGroupConfiguration",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.provisioningState",
+        "properties.state",
+        "properties.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}",
+      "operationId": "SAPVirtualInstances_Get",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}",
+      "operationId": "SAPVirtualInstances_Update",
+      "bodySchema": "UpdateSAPVirtualInstanceRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}",
+      "operationId": "SAPVirtualInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances",
+      "operationId": "SAPVirtualInstances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Workloads/sapVirtualInstances",
+      "operationId": "SAPVirtualInstances_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

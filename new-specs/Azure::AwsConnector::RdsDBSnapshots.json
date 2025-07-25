@@ -1,0 +1,214 @@
+{
+  "resource": "Azure::AwsConnector::RdsDBSnapshots",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/rdsDBSnapshots",
+      "operationId": "RdsDbSnapshots_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBSnapshots",
+      "operationId": "RdsDbSnapshots_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBSnapshots/{name}",
+      "operationId": "RdsDbSnapshots_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBSnapshot"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBSnapshots/{name}",
+      "operationId": "RdsDbSnapshots_CreateOrReplace",
+      "bodySchema": "RdsDBSnapshot",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.allocatedStorage",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.dbInstanceIdentifier",
+        "properties.awsProperties.dbSnapshotArn",
+        "properties.awsProperties.dbSnapshotIdentifier",
+        "properties.awsProperties.dbSystemId",
+        "properties.awsProperties.dbiResourceId",
+        "properties.awsProperties.dedicatedLogVolume",
+        "properties.awsProperties.encrypted",
+        "properties.awsProperties.engine",
+        "properties.awsProperties.engineVersion",
+        "properties.awsProperties.iamDatabaseAuthenticationEnabled",
+        "properties.awsProperties.instanceCreateTime",
+        "properties.awsProperties.iops",
+        "properties.awsProperties.kmsKeyId",
+        "properties.awsProperties.licenseModel",
+        "properties.awsProperties.masterUsername",
+        "properties.awsProperties.multiTenant",
+        "properties.awsProperties.optionGroupName",
+        "properties.awsProperties.originalSnapshotCreateTime",
+        "properties.awsProperties.percentProgress",
+        "properties.awsProperties.port",
+        "properties.awsProperties.processorFeatures",
+        "properties.awsProperties.snapshotCreateTime",
+        "properties.awsProperties.snapshotDatabaseTime",
+        "properties.awsProperties.snapshotTarget",
+        "properties.awsProperties.snapshotType",
+        "properties.awsProperties.sourceDBSnapshotIdentifier",
+        "properties.awsProperties.sourceRegion",
+        "properties.awsProperties.status",
+        "properties.awsProperties.storageThroughput",
+        "properties.awsProperties.storageType",
+        "properties.awsProperties.tagList",
+        "properties.awsProperties.tdeCredentialArn",
+        "properties.awsProperties.timezone",
+        "properties.awsProperties.vpcId",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBSnapshot"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBSnapshots/{name}",
+      "operationId": "RdsDbSnapshots_Update",
+      "bodySchema": "RdsDBSnapshotTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBSnapshot"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBSnapshots/{name}",
+      "operationId": "RdsDbSnapshots_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBSnapshot"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

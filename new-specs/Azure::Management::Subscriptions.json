@@ -1,0 +1,144 @@
+{
+  "resource": "Azure::Management::Subscriptions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}/subscriptions/{subscriptionId}",
+      "operationId": "GroupQuotaSubscriptions_CreateOrUpdate",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}/subscriptions/{subscriptionId}",
+      "operationId": "GroupQuotaSubscriptions_Update",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}/subscriptions/{subscriptionId}",
+      "operationId": "GroupQuotaSubscriptions_Delete",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}/subscriptions/{subscriptionId}",
+      "operationId": "GroupQuotaSubscriptions_Get",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}/subscriptions",
+      "operationId": "GroupQuotaSubscriptions_List",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

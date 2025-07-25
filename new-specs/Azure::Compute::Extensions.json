@@ -1,0 +1,232 @@
+{
+  "resource": "Azure::Compute::Extensions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "operationId": "VirtualMachineExtensions_CreateOrUpdate",
+      "bodySchema": "VirtualMachineExtension",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoUpgradeMinorVersion",
+        "properties.enableAutomaticUpgrade",
+        "properties.forceUpdateTag",
+        "properties.instanceView",
+        "properties.instanceView.name",
+        "properties.instanceView.statuses",
+        "properties.instanceView.substatuses",
+        "properties.instanceView.type",
+        "properties.instanceView.typeHandlerVersion",
+        "properties.protectedSettings",
+        "properties.protectedSettingsFromKeyVault",
+        "properties.provisioningState",
+        "properties.publisher",
+        "properties.settings",
+        "properties.suppressFailures",
+        "properties.type",
+        "properties.typeHandlerVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the extension should be created or updated."
+        },
+        {
+          "name": "vmExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "operationId": "VirtualMachineExtensions_Update",
+      "bodySchema": "VirtualMachineExtensionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoUpgradeMinorVersion",
+        "properties.enableAutomaticUpgrade",
+        "properties.forceUpdateTag",
+        "properties.protectedSettings",
+        "properties.protectedSettingsFromKeyVault",
+        "properties.publisher",
+        "properties.settings",
+        "properties.suppressFailures",
+        "properties.type",
+        "properties.typeHandlerVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the extension should be updated."
+        },
+        {
+          "name": "vmExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "operationId": "VirtualMachineExtensions_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the extension should be deleted."
+        },
+        {
+          "name": "vmExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}",
+      "operationId": "VirtualMachineExtensions_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine containing the extension."
+        },
+        {
+          "name": "vmExtensionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions",
+      "operationId": "VirtualMachineExtensions_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine containing the extension."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

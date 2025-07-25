@@ -1,0 +1,115 @@
+{
+  "resource": "Azure::AwsConnector::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.AwsConnector/eksClusters/default",
+      "operationId": "EksClusters_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.AwsConnector/eksClusters/default",
+      "operationId": "EksClusters_CreateOrReplace",
+      "bodySchema": "EksCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.accessConfig",
+        "properties.awsProperties.accessConfig.authenticationMode",
+        "properties.awsProperties.accessConfig.authenticationMode.value",
+        "properties.awsProperties.accessConfig.bootstrapClusterCreatorAdminPermissions",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.certificateAuthority",
+        "properties.awsProperties.certificateAuthority.data",
+        "properties.awsProperties.clientRequestToken",
+        "properties.awsProperties.connectorConfig",
+        "properties.awsProperties.connectorConfig.activationCode",
+        "properties.awsProperties.connectorConfig.activationExpiry",
+        "properties.awsProperties.connectorConfig.activationId",
+        "properties.awsProperties.connectorConfig.provider",
+        "properties.awsProperties.connectorConfig.roleArn",
+        "properties.awsProperties.createdAt",
+        "properties.awsProperties.encryptionConfig",
+        "properties.awsProperties.endpoint",
+        "properties.awsProperties.health",
+        "properties.awsProperties.health.issues",
+        "properties.awsProperties.id",
+        "properties.awsProperties.identity",
+        "properties.awsProperties.identity.oidc",
+        "properties.awsProperties.identity.oidc.issuer",
+        "properties.awsProperties.kubernetesNetworkConfig",
+        "properties.awsProperties.kubernetesNetworkConfig.ipFamily",
+        "properties.awsProperties.kubernetesNetworkConfig.ipFamily.value",
+        "properties.awsProperties.kubernetesNetworkConfig.serviceIpv4Cidr",
+        "properties.awsProperties.kubernetesNetworkConfig.serviceIpv6Cidr",
+        "properties.awsProperties.logging",
+        "properties.awsProperties.logging.clusterLogging",
+        "properties.awsProperties.name",
+        "properties.awsProperties.outpostConfig",
+        "properties.awsProperties.outpostConfig.controlPlaneInstanceType",
+        "properties.awsProperties.outpostConfig.controlPlanePlacement",
+        "properties.awsProperties.outpostConfig.controlPlanePlacement.groupName",
+        "properties.awsProperties.outpostConfig.outpostArns",
+        "properties.awsProperties.platformVersion",
+        "properties.awsProperties.resourcesVpcConfig",
+        "properties.awsProperties.resourcesVpcConfig.clusterSecurityGroupId",
+        "properties.awsProperties.resourcesVpcConfig.endpointPrivateAccess",
+        "properties.awsProperties.resourcesVpcConfig.endpointPublicAccess",
+        "properties.awsProperties.resourcesVpcConfig.publicAccessCidrs",
+        "properties.awsProperties.resourcesVpcConfig.securityGroupIds",
+        "properties.awsProperties.resourcesVpcConfig.subnetIds",
+        "properties.awsProperties.resourcesVpcConfig.vpcId",
+        "properties.awsProperties.roleArn",
+        "properties.awsProperties.status",
+        "properties.awsProperties.status.value",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.version",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.AwsConnector/eksClusters/default",
+      "operationId": "EksClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::StorageMover::Endpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/endpoints",
+      "operationId": "Endpoints_List",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/endpoints/{endpointName}",
+      "operationId": "Endpoints_Get",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Endpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/endpoints/{endpointName}",
+      "operationId": "Endpoints_CreateOrUpdate",
+      "bodySchema": "Endpoint",
+      "requiredProperties": [
+        "properties",
+        "properties.endpointType"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Endpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/endpoints/{endpointName}",
+      "operationId": "Endpoints_Update",
+      "bodySchema": "EndpointBaseUpdateParameters",
+      "requiredProperties": [
+        "properties.endpointType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.description"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Endpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/endpoints/{endpointName}",
+      "operationId": "Endpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Endpoint resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

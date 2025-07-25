@@ -1,0 +1,289 @@
+{
+  "resource": "Azure::HybridContainerService::Default",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default",
+      "operationId": "provisionedClusterInstances_Get",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default",
+      "operationId": "provisionedClusterInstances_CreateOrUpdate",
+      "bodySchema": "provisionedCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.agentPoolProfiles",
+        "properties.autoScalerProfile",
+        "properties.autoScalerProfile.balance-similar-node-groups",
+        "properties.autoScalerProfile.expander",
+        "properties.autoScalerProfile.max-empty-bulk-delete",
+        "properties.autoScalerProfile.max-graceful-termination-sec",
+        "properties.autoScalerProfile.max-node-provision-time",
+        "properties.autoScalerProfile.max-total-unready-percentage",
+        "properties.autoScalerProfile.new-pod-scale-up-delay",
+        "properties.autoScalerProfile.ok-total-unready-count",
+        "properties.autoScalerProfile.scale-down-delay-after-add",
+        "properties.autoScalerProfile.scale-down-delay-after-delete",
+        "properties.autoScalerProfile.scale-down-delay-after-failure",
+        "properties.autoScalerProfile.scale-down-unneeded-time",
+        "properties.autoScalerProfile.scale-down-unready-time",
+        "properties.autoScalerProfile.scale-down-utilization-threshold",
+        "properties.autoScalerProfile.scan-interval",
+        "properties.autoScalerProfile.skip-nodes-with-local-storage",
+        "properties.autoScalerProfile.skip-nodes-with-system-pods",
+        "properties.cloudProviderProfile",
+        "properties.cloudProviderProfile.infraNetworkProfile",
+        "properties.cloudProviderProfile.infraNetworkProfile.vnetSubnetIds",
+        "properties.clusterVMAccessProfile",
+        "properties.clusterVMAccessProfile.authorizedIPRanges",
+        "properties.controlPlane",
+        "properties.controlPlane.controlPlaneEndpoint",
+        "properties.controlPlane.controlPlaneEndpoint.hostIP",
+        "properties.controlPlane.count",
+        "properties.controlPlane.vmSize",
+        "properties.kubernetesVersion",
+        "properties.licenseProfile",
+        "properties.licenseProfile.azureHybridBenefit",
+        "properties.linuxProfile",
+        "properties.linuxProfile.ssh",
+        "properties.linuxProfile.ssh.publicKeys",
+        "properties.networkProfile",
+        "properties.networkProfile.loadBalancerProfile",
+        "properties.networkProfile.loadBalancerProfile.count",
+        "properties.networkProfile.networkPolicy",
+        "properties.networkProfile.podCidr",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.controlPlaneStatus",
+        "properties.status.currentState",
+        "properties.status.errorMessage",
+        "properties.storageProfile",
+        "properties.storageProfile.nfsCsiDriver",
+        "properties.storageProfile.nfsCsiDriver.enabled",
+        "properties.storageProfile.smbCsiDriver",
+        "properties.storageProfile.smbCsiDriver.enabled"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default",
+      "operationId": "provisionedClusterInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/upgradeProfiles/default",
+      "operationId": "provisionedClusterInstances_GetUpgradeProfile",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/hybridIdentityMetadata/default",
+      "operationId": "HybridIdentityMetadata_Put",
+      "bodySchema": "hybridIdentityMetadata",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.provisioningState",
+        "properties.publicKey",
+        "properties.resourceUid",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/hybridIdentityMetadata/default",
+      "operationId": "HybridIdentityMetadata_Get",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{connectedClusterResourceUri}/providers/Microsoft.HybridContainerService/provisionedClusterInstances/default/hybridIdentityMetadata/default",
+      "operationId": "HybridIdentityMetadata_Delete",
+      "pathParameters": [
+        {
+          "name": "connectedClusterResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the connected cluster resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/kubernetesVersions/default",
+      "operationId": "GetKubernetesVersions",
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/kubernetesVersions/default",
+      "operationId": "PutKubernetesVersions",
+      "bodySchema": "KubernetesVersionProfile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.provisioningState",
+        "properties.values"
+      ],
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/kubernetesVersions/default",
+      "operationId": "DeleteKubernetesVersions",
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/skus/default",
+      "operationId": "GetVMSkus",
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/skus/default",
+      "operationId": "PutVMSkus",
+      "bodySchema": "VmSkuProfile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.provisioningState",
+        "properties.values"
+      ],
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{customLocationResourceUri}/providers/Microsoft.HybridContainerService/skus/default",
+      "operationId": "DeleteVMSkus",
+      "pathParameters": [
+        {
+          "name": "customLocationResourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource Manager identifier of the custom location resource."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

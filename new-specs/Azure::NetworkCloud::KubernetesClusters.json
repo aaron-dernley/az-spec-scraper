@@ -1,0 +1,225 @@
+{
+  "resource": "Azure::NetworkCloud::KubernetesClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/kubernetesClusters",
+      "operationId": "KubernetesClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters",
+      "operationId": "KubernetesClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}",
+      "operationId": "KubernetesClusters_Get",
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}",
+      "operationId": "KubernetesClusters_CreateOrUpdate",
+      "bodySchema": "KubernetesCluster",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.aadConfiguration.adminGroupObjectIds",
+        "properties.controlPlaneNodeConfiguration",
+        "properties.controlPlaneNodeConfiguration.count",
+        "properties.controlPlaneNodeConfiguration.vmSkuName",
+        "properties.initialAgentPoolConfigurations",
+        "properties.kubernetesVersion",
+        "properties.networkConfiguration",
+        "properties.networkConfiguration.cloudServicesNetworkId",
+        "properties.networkConfiguration.cniNetworkId"
+      ],
+      "optionalProperties": [
+        "properties.aadConfiguration",
+        "properties.administratorConfiguration",
+        "properties.administratorConfiguration.adminUsername",
+        "properties.administratorConfiguration.sshPublicKeys",
+        "properties.attachedNetworkIds",
+        "properties.availableUpgrades",
+        "properties.clusterId",
+        "properties.connectedClusterId",
+        "properties.controlPlaneKubernetesVersion",
+        "properties.controlPlaneNodeConfiguration.administratorConfiguration",
+        "properties.controlPlaneNodeConfiguration.administratorConfiguration.adminUsername",
+        "properties.controlPlaneNodeConfiguration.administratorConfiguration.sshPublicKeys",
+        "properties.controlPlaneNodeConfiguration.availabilityZones",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.featureStatuses",
+        "properties.managedResourceGroupConfiguration",
+        "properties.managedResourceGroupConfiguration.location",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.networkConfiguration.attachedNetworkConfiguration",
+        "properties.networkConfiguration.attachedNetworkConfiguration.l2Networks",
+        "properties.networkConfiguration.attachedNetworkConfiguration.l3Networks",
+        "properties.networkConfiguration.attachedNetworkConfiguration.trunkedNetworks",
+        "properties.networkConfiguration.bgpServiceLoadBalancerConfiguration",
+        "properties.networkConfiguration.bgpServiceLoadBalancerConfiguration.bgpAdvertisements",
+        "properties.networkConfiguration.bgpServiceLoadBalancerConfiguration.bgpPeers",
+        "properties.networkConfiguration.bgpServiceLoadBalancerConfiguration.fabricPeeringEnabled",
+        "properties.networkConfiguration.bgpServiceLoadBalancerConfiguration.ipAddressPools",
+        "properties.networkConfiguration.dnsServiceIp",
+        "properties.networkConfiguration.l2ServiceLoadBalancerConfiguration",
+        "properties.networkConfiguration.l2ServiceLoadBalancerConfiguration.ipAddressPools",
+        "properties.networkConfiguration.podCidrs",
+        "properties.networkConfiguration.serviceCidrs",
+        "properties.nodes",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}",
+      "operationId": "KubernetesClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/kubernetesClusters/{kubernetesClusterName}",
+      "operationId": "KubernetesClusters_Update",
+      "bodySchema": "KubernetesClusterPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.administratorConfiguration",
+        "properties.administratorConfiguration.sshPublicKeys",
+        "properties.controlPlaneNodeConfiguration",
+        "properties.controlPlaneNodeConfiguration.administratorConfiguration",
+        "properties.controlPlaneNodeConfiguration.administratorConfiguration.sshPublicKeys",
+        "properties.controlPlaneNodeConfiguration.count",
+        "properties.kubernetesVersion",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "kubernetesClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Kubernetes cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

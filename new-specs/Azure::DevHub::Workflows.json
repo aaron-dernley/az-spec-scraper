@@ -1,0 +1,222 @@
+{
+  "resource": "Azure::DevHub::Workflows",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DevHub/workflows",
+      "operationId": "Workflow_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevHub/workflows",
+      "operationId": "Workflow_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "managedClusterResource",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ManagedCluster resource associated with the workflows."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevHub/workflows/{workflowName}",
+      "operationId": "Workflow_Get",
+      "pathParameters": [
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflow resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevHub/workflows/{workflowName}",
+      "operationId": "Workflow_CreateOrUpdate",
+      "bodySchema": "Workflow",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.artifactGenerationProperties",
+        "properties.artifactGenerationProperties.appName",
+        "properties.artifactGenerationProperties.builderVersion",
+        "properties.artifactGenerationProperties.dockerfileGenerationMode",
+        "properties.artifactGenerationProperties.dockerfileOutputDirectory",
+        "properties.artifactGenerationProperties.generationLanguage",
+        "properties.artifactGenerationProperties.imageName",
+        "properties.artifactGenerationProperties.imageTag",
+        "properties.artifactGenerationProperties.languageVersion",
+        "properties.artifactGenerationProperties.manifestGenerationMode",
+        "properties.artifactGenerationProperties.manifestOutputDirectory",
+        "properties.artifactGenerationProperties.manifestType",
+        "properties.artifactGenerationProperties.namespace",
+        "properties.artifactGenerationProperties.port",
+        "properties.githubWorkflowProfile",
+        "properties.githubWorkflowProfile.acr",
+        "properties.githubWorkflowProfile.acr.acrRegistryName",
+        "properties.githubWorkflowProfile.acr.acrRepositoryName",
+        "properties.githubWorkflowProfile.acr.acrResourceGroup",
+        "properties.githubWorkflowProfile.acr.acrSubscriptionId",
+        "properties.githubWorkflowProfile.aksResourceId",
+        "properties.githubWorkflowProfile.authStatus",
+        "properties.githubWorkflowProfile.branchName",
+        "properties.githubWorkflowProfile.deploymentProperties",
+        "properties.githubWorkflowProfile.deploymentProperties.helmChartPath",
+        "properties.githubWorkflowProfile.deploymentProperties.helmValues",
+        "properties.githubWorkflowProfile.deploymentProperties.kubeManifestLocations",
+        "properties.githubWorkflowProfile.deploymentProperties.manifestType",
+        "properties.githubWorkflowProfile.deploymentProperties.overrides",
+        "properties.githubWorkflowProfile.dockerBuildContext",
+        "properties.githubWorkflowProfile.dockerfile",
+        "properties.githubWorkflowProfile.lastWorkflowRun",
+        "properties.githubWorkflowProfile.lastWorkflowRun.lastRunAt",
+        "properties.githubWorkflowProfile.lastWorkflowRun.succeeded",
+        "properties.githubWorkflowProfile.lastWorkflowRun.workflowRunStatus",
+        "properties.githubWorkflowProfile.lastWorkflowRun.workflowRunURL",
+        "properties.githubWorkflowProfile.namespace",
+        "properties.githubWorkflowProfile.oidcCredentials",
+        "properties.githubWorkflowProfile.oidcCredentials.azureClientId",
+        "properties.githubWorkflowProfile.oidcCredentials.azureTenantId",
+        "properties.githubWorkflowProfile.prStatus",
+        "properties.githubWorkflowProfile.prURL",
+        "properties.githubWorkflowProfile.pullNumber",
+        "properties.githubWorkflowProfile.repositoryName",
+        "properties.githubWorkflowProfile.repositoryOwner"
+      ],
+      "pathParameters": [
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflow resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevHub/workflows/{workflowName}",
+      "operationId": "Workflow_Delete",
+      "pathParameters": [
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflow resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevHub/workflows/{workflowName}",
+      "operationId": "Workflow_UpdateTags",
+      "bodySchema": "TagsObject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflow resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

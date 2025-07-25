@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::AVS::Datastores",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/clusters/{clusterName}/datastores",
+      "operationId": "Datastores_List",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the cluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/clusters/{clusterName}/datastores/{datastoreName}",
+      "operationId": "Datastores_Get",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the cluster"
+        },
+        {
+          "name": "datastoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the datastore"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/clusters/{clusterName}/datastores/{datastoreName}",
+      "operationId": "Datastores_CreateOrUpdate",
+      "bodySchema": "Datastore",
+      "requiredProperties": [
+        "properties.diskPoolVolume.lunName",
+        "properties.diskPoolVolume.targetId",
+        "properties.elasticSanVolume.targetId",
+        "properties.netAppVolume.id"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.diskPoolVolume",
+        "properties.diskPoolVolume.mountOption",
+        "properties.diskPoolVolume.path",
+        "properties.elasticSanVolume",
+        "properties.netAppVolume",
+        "properties.provisioningState",
+        "properties.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the cluster"
+        },
+        {
+          "name": "datastoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the datastore"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/clusters/{clusterName}/datastores/{datastoreName}",
+      "operationId": "Datastores_Delete",
+      "pathParameters": [
+        {
+          "name": "privateCloudName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the private cloud"
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the cluster"
+        },
+        {
+          "name": "datastoreName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the datastore"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

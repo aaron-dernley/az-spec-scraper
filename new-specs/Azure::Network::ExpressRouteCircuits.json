@@ -1,0 +1,187 @@
+{
+  "resource": "Azure::Network::ExpressRouteCircuits",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}",
+      "operationId": "ExpressRouteCircuits_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "circuitName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the express route circuit."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}",
+      "operationId": "ExpressRouteCircuits_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "circuitName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of express route circuit."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}",
+      "operationId": "ExpressRouteCircuits_CreateOrUpdate",
+      "bodySchema": "ExpressRouteCircuit",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.allowClassicOperations",
+        "properties.authorizations",
+        "properties.bandwidthInGbps",
+        "properties.circuitProvisioningState",
+        "properties.expressRoutePort",
+        "properties.gatewayManagerEtag",
+        "properties.globalReachEnabled",
+        "properties.peerings",
+        "properties.provisioningState",
+        "properties.serviceKey",
+        "properties.serviceProviderNotes",
+        "properties.serviceProviderProperties",
+        "properties.serviceProviderProperties.bandwidthInMbps",
+        "properties.serviceProviderProperties.peeringLocation",
+        "properties.serviceProviderProperties.serviceProviderName",
+        "properties.serviceProviderProvisioningState",
+        "properties.stag",
+        "sku",
+        "sku.family",
+        "sku.name",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "circuitName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the circuit."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}",
+      "operationId": "ExpressRouteCircuits_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "circuitName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the circuit."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits",
+      "operationId": "ExpressRouteCircuits_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/expressRouteCircuits",
+      "operationId": "ExpressRouteCircuits_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

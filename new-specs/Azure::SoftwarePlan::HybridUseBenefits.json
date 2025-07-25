@@ -1,0 +1,180 @@
+{
+  "resource": "Azure::SoftwarePlan::HybridUseBenefits",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.SoftwarePlan/hybridUseBenefits",
+      "operationId": "HybridUseBenefit_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api-version to be used by the service"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Supports applying filter on the type of SKU"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/{planId}",
+      "operationId": "HybridUseBenefit_Create",
+      "bodySchema": "HybridUseBenefitModel",
+      "requiredProperties": [
+        "sku"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.createdDate",
+        "properties.lastUpdatedDate",
+        "properties.provisioningState",
+        "sku.name"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now"
+        },
+        {
+          "name": "planId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "This is a unique identifier for a plan. Should be a guid."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api-version to be used by the service"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/{scope}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/{planId}",
+      "operationId": "HybridUseBenefit_Update",
+      "bodySchema": "HybridUseBenefitModel",
+      "requiredProperties": [
+        "sku"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.createdDate",
+        "properties.lastUpdatedDate",
+        "properties.provisioningState",
+        "sku.name"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now"
+        },
+        {
+          "name": "planId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "This is a unique identifier for a plan. Should be a guid."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api-version to be used by the service"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/{planId}",
+      "operationId": "HybridUseBenefit_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now"
+        },
+        {
+          "name": "planId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "This is a unique identifier for a plan. Should be a guid."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api-version to be used by the service"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/{planId}",
+      "operationId": "HybridUseBenefit_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now"
+        },
+        {
+          "name": "planId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "This is a unique identifier for a plan. Should be a guid."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api-version to be used by the service"
+        }
+      ]
+    }
+  ]
+}

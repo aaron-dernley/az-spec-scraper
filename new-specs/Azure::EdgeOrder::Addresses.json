@@ -1,0 +1,253 @@
+{
+  "resource": "Azure::EdgeOrder::Addresses",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/addresses",
+      "operationId": "Addresses_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$filter is supported to filter based on shipping address properties. Filter supports only equals operation."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of addresses, which provides the next page in the list of addresses."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "$top is supported on fetching list of resources. $top=10 means that the first 10 items in the list will be returned to the API caller."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/addresses",
+      "operationId": "Addresses_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$filter is supported to filter based on shipping address properties. Filter supports only equals operation."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of addresses, which provides the next page in the list of addresses."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "$top is supported on fetching list of resources. $top=10 means that the first 10 items in the list will be returned to the API caller."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/addresses/{addressName}",
+      "operationId": "Addresses_Get",
+      "pathParameters": [
+        {
+          "name": "addressName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/addresses/{addressName}",
+      "operationId": "Addresses_Create",
+      "bodySchema": "AddressResource",
+      "requiredProperties": [
+        "properties",
+        "properties.shippingAddress.country"
+      ],
+      "optionalProperties": [
+        "properties.addressClassification",
+        "properties.addressValidationStatus",
+        "properties.contactDetails",
+        "properties.contactDetails.contactName",
+        "properties.contactDetails.emailList",
+        "properties.contactDetails.mobile",
+        "properties.contactDetails.phone",
+        "properties.contactDetails.phoneExtension",
+        "properties.provisioningState",
+        "properties.shippingAddress",
+        "properties.shippingAddress.addressType",
+        "properties.shippingAddress.city",
+        "properties.shippingAddress.companyName",
+        "properties.shippingAddress.postalCode",
+        "properties.shippingAddress.stateOrProvince",
+        "properties.shippingAddress.streetAddress1",
+        "properties.shippingAddress.streetAddress2",
+        "properties.shippingAddress.streetAddress3",
+        "properties.shippingAddress.zipExtendedCode"
+      ],
+      "pathParameters": [
+        {
+          "name": "addressName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/addresses/{addressName}",
+      "operationId": "Addresses_Update",
+      "bodySchema": "AddressUpdateParameter",
+      "requiredProperties": [
+        "properties.shippingAddress.country"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.contactDetails",
+        "properties.contactDetails.contactName",
+        "properties.contactDetails.emailList",
+        "properties.contactDetails.mobile",
+        "properties.contactDetails.phone",
+        "properties.contactDetails.phoneExtension",
+        "properties.shippingAddress",
+        "properties.shippingAddress.addressType",
+        "properties.shippingAddress.city",
+        "properties.shippingAddress.companyName",
+        "properties.shippingAddress.postalCode",
+        "properties.shippingAddress.stateOrProvince",
+        "properties.shippingAddress.streetAddress1",
+        "properties.shippingAddress.streetAddress2",
+        "properties.shippingAddress.streetAddress3",
+        "properties.shippingAddress.zipExtendedCode",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "addressName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EdgeOrder/addresses/{addressName}",
+      "operationId": "Addresses_Delete",
+      "pathParameters": [
+        {
+          "name": "addressName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

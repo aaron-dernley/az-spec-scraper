@@ -1,0 +1,250 @@
+{
+  "resource": "Azure::StorSimple::Schedules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}/schedules",
+      "operationId": "BackupSchedules_ListByBackupPolicy",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup policy name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}/schedules/{backupScheduleName}",
+      "operationId": "BackupSchedules_Get",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup policy name."
+        },
+        {
+          "name": "backupScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the backup schedule to be fetched"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}/schedules/{backupScheduleName}",
+      "operationId": "BackupSchedules_CreateOrUpdate",
+      "bodySchema": "BackupSchedule",
+      "requiredProperties": [
+        "properties",
+        "properties.backupType",
+        "properties.retentionCount",
+        "properties.scheduleRecurrence",
+        "properties.scheduleRecurrence.recurrenceType",
+        "properties.scheduleRecurrence.recurrenceValue",
+        "properties.scheduleStatus",
+        "properties.startTime"
+      ],
+      "optionalProperties": [
+        "id",
+        "kind",
+        "name",
+        "properties.lastSuccessfulRun",
+        "properties.scheduleRecurrence.weeklyDaysList",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup policy name."
+        },
+        {
+          "name": "backupScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup schedule name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/devices/{deviceName}/backupPolicies/{backupPolicyName}/schedules/{backupScheduleName}",
+      "operationId": "BackupSchedules_Delete",
+      "pathParameters": [
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The device name"
+        },
+        {
+          "name": "backupPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The backup policy name."
+        },
+        {
+          "name": "backupScheduleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name the backup schedule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    }
+  ]
+}

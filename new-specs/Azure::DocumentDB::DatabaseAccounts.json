@@ -1,0 +1,286 @@
+{
+  "resource": "Azure::DocumentDB::DatabaseAccounts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
+      "operationId": "DatabaseAccounts_Get",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
+      "operationId": "DatabaseAccounts_Update",
+      "bodySchema": "DatabaseAccountUpdateParameters",
+      "requiredProperties": [
+        "properties.backupPolicy.type",
+        "properties.consistencyPolicy.defaultConsistencyLevel"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "properties",
+        "properties.analyticalStorageConfiguration",
+        "properties.analyticalStorageConfiguration.schemaType",
+        "properties.apiProperties",
+        "properties.apiProperties.serverVersion",
+        "properties.backupPolicy",
+        "properties.backupPolicy.migrationState",
+        "properties.backupPolicy.migrationState.startTime",
+        "properties.backupPolicy.migrationState.status",
+        "properties.backupPolicy.migrationState.targetType",
+        "properties.capabilities",
+        "properties.capacity",
+        "properties.capacity.totalThroughputLimit",
+        "properties.connectorOffer",
+        "properties.consistencyPolicy",
+        "properties.consistencyPolicy.maxIntervalInSeconds",
+        "properties.consistencyPolicy.maxStalenessPrefix",
+        "properties.cors",
+        "properties.defaultIdentity",
+        "properties.disableKeyBasedMetadataWriteAccess",
+        "properties.disableLocalAuth",
+        "properties.enableAnalyticalStorage",
+        "properties.enableAutomaticFailover",
+        "properties.enableCassandraConnector",
+        "properties.enableFreeTier",
+        "properties.enableMultipleWriteLocations",
+        "properties.enablePartitionMerge",
+        "properties.ipRules",
+        "properties.isVirtualNetworkFilterEnabled",
+        "properties.keyVaultKeyUri",
+        "properties.keysMetadata",
+        "properties.keysMetadata.primaryMasterKey",
+        "properties.keysMetadata.primaryMasterKey.generationTime",
+        "properties.keysMetadata.primaryReadonlyMasterKey",
+        "properties.keysMetadata.primaryReadonlyMasterKey.generationTime",
+        "properties.keysMetadata.secondaryMasterKey",
+        "properties.keysMetadata.secondaryMasterKey.generationTime",
+        "properties.keysMetadata.secondaryReadonlyMasterKey",
+        "properties.keysMetadata.secondaryReadonlyMasterKey.generationTime",
+        "properties.locations",
+        "properties.networkAclBypass",
+        "properties.networkAclBypassResourceIds",
+        "properties.publicNetworkAccess",
+        "properties.virtualNetworkRules",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
+      "operationId": "DatabaseAccounts_CreateOrUpdate",
+      "bodySchema": "DatabaseAccountCreateUpdateParameters",
+      "requiredProperties": [
+        "properties",
+        "properties.backupPolicy.type",
+        "properties.consistencyPolicy.defaultConsistencyLevel",
+        "properties.databaseAccountOfferType",
+        "properties.locations"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "location",
+        "name",
+        "properties.analyticalStorageConfiguration",
+        "properties.analyticalStorageConfiguration.schemaType",
+        "properties.apiProperties",
+        "properties.apiProperties.serverVersion",
+        "properties.backupPolicy",
+        "properties.backupPolicy.migrationState",
+        "properties.backupPolicy.migrationState.startTime",
+        "properties.backupPolicy.migrationState.status",
+        "properties.backupPolicy.migrationState.targetType",
+        "properties.capabilities",
+        "properties.capacity",
+        "properties.capacity.totalThroughputLimit",
+        "properties.connectorOffer",
+        "properties.consistencyPolicy",
+        "properties.consistencyPolicy.maxIntervalInSeconds",
+        "properties.consistencyPolicy.maxStalenessPrefix",
+        "properties.cors",
+        "properties.createMode",
+        "properties.defaultIdentity",
+        "properties.disableKeyBasedMetadataWriteAccess",
+        "properties.disableLocalAuth",
+        "properties.enableAnalyticalStorage",
+        "properties.enableAutomaticFailover",
+        "properties.enableCassandraConnector",
+        "properties.enableFreeTier",
+        "properties.enableMultipleWriteLocations",
+        "properties.enablePartitionMerge",
+        "properties.ipRules",
+        "properties.isVirtualNetworkFilterEnabled",
+        "properties.keyVaultKeyUri",
+        "properties.keysMetadata",
+        "properties.keysMetadata.primaryMasterKey",
+        "properties.keysMetadata.primaryMasterKey.generationTime",
+        "properties.keysMetadata.primaryReadonlyMasterKey",
+        "properties.keysMetadata.primaryReadonlyMasterKey.generationTime",
+        "properties.keysMetadata.secondaryMasterKey",
+        "properties.keysMetadata.secondaryMasterKey.generationTime",
+        "properties.keysMetadata.secondaryReadonlyMasterKey",
+        "properties.keysMetadata.secondaryReadonlyMasterKey.generationTime",
+        "properties.networkAclBypass",
+        "properties.networkAclBypassResourceIds",
+        "properties.publicNetworkAccess",
+        "properties.restoreParameters",
+        "properties.restoreParameters.databasesToRestore",
+        "properties.restoreParameters.restoreMode",
+        "properties.restoreParameters.restoreSource",
+        "properties.restoreParameters.restoreTimestampInUtc",
+        "properties.virtualNetworkRules",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}",
+      "operationId": "DatabaseAccounts_Delete",
+      "pathParameters": [
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cosmos DB database account name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/databaseAccounts",
+      "operationId": "DatabaseAccounts_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts",
+      "operationId": "DatabaseAccounts_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

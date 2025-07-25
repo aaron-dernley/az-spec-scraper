@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::StorSimple::VaultExtendedInfo",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/extendedInformation/vaultExtendedInfo",
+      "operationId": "Managers_GetExtendedInfo",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/extendedInformation/vaultExtendedInfo",
+      "operationId": "Managers_CreateExtendedInfo",
+      "bodySchema": "ManagerExtendedInfo",
+      "requiredProperties": [
+        "properties.algorithm",
+        "properties.integrityKey"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "kind",
+        "name",
+        "properties",
+        "properties.encryptionKey",
+        "properties.encryptionKeyThumbprint",
+        "properties.portalCertificateThumbprint",
+        "properties.version",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/extendedInformation/vaultExtendedInfo",
+      "operationId": "Managers_DeleteExtendedInfo",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorSimple/managers/{managerName}/extendedInformation/vaultExtendedInfo",
+      "operationId": "Managers_UpdateExtendedInfo",
+      "bodySchema": "ManagerExtendedInfo",
+      "requiredProperties": [
+        "properties.algorithm",
+        "properties.integrityKey"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "kind",
+        "name",
+        "properties",
+        "properties.encryptionKey",
+        "properties.encryptionKeyThumbprint",
+        "properties.portalCertificateThumbprint",
+        "properties.version",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name"
+        },
+        {
+          "name": "managerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The manager name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The api version"
+        }
+      ]
+    }
+  ]
+}

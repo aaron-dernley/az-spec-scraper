@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::DocumentDB::MongoClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/mongoClusters",
+      "operationId": "MongoClusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters",
+      "operationId": "MongoClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}",
+      "operationId": "MongoClusters_Get",
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}",
+      "operationId": "MongoClusters_CreateOrUpdate",
+      "bodySchema": "MongoCluster",
+      "requiredProperties": [
+        "properties.replicaParameters.sourceLocation",
+        "properties.replicaParameters.sourceResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.administrator",
+        "properties.administrator.password",
+        "properties.administrator.userName",
+        "properties.backup",
+        "properties.backup.earliestRestoreTime",
+        "properties.clusterStatus",
+        "properties.compute",
+        "properties.compute.tier",
+        "properties.connectionString",
+        "properties.createMode",
+        "properties.highAvailability",
+        "properties.highAvailability.targetMode",
+        "properties.infrastructureVersion",
+        "properties.previewFeatures",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.replica",
+        "properties.replica.replicationState",
+        "properties.replica.role",
+        "properties.replica.sourceResourceId",
+        "properties.replicaParameters",
+        "properties.restoreParameters",
+        "properties.restoreParameters.pointInTimeUTC",
+        "properties.restoreParameters.sourceResourceId",
+        "properties.serverVersion",
+        "properties.sharding",
+        "properties.sharding.shardCount",
+        "properties.storage",
+        "properties.storage.sizeGb"
+      ],
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}",
+      "operationId": "MongoClusters_Update",
+      "bodySchema": "MongoClusterUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.administrator",
+        "properties.administrator.password",
+        "properties.administrator.userName",
+        "properties.backup",
+        "properties.backup.earliestRestoreTime",
+        "properties.compute",
+        "properties.compute.tier",
+        "properties.highAvailability",
+        "properties.highAvailability.targetMode",
+        "properties.previewFeatures",
+        "properties.publicNetworkAccess",
+        "properties.serverVersion",
+        "properties.sharding",
+        "properties.sharding.shardCount",
+        "properties.storage",
+        "properties.storage.sizeGb",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}",
+      "operationId": "MongoClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "mongoClusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the mongo cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

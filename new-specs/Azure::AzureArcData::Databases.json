@@ -1,0 +1,293 @@
+{
+  "resource": "Azure::AzureArcData::Databases",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/databases/{databaseName}",
+      "operationId": "SqlServerDatabases_Create",
+      "bodySchema": "SqlServerDatabaseResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.backupInformation",
+        "properties.backupInformation.lastFullBackup",
+        "properties.backupInformation.lastLogBackup",
+        "properties.backupPolicy",
+        "properties.backupPolicy.differentialBackupHours",
+        "properties.backupPolicy.fullBackupDays",
+        "properties.backupPolicy.retentionPeriodDays",
+        "properties.backupPolicy.transactionLogBackupMinutes",
+        "properties.collationName",
+        "properties.compatibilityLevel",
+        "properties.createMode",
+        "properties.databaseCreationDate",
+        "properties.databaseOptions",
+        "properties.databaseOptions.isAutoCloseOn",
+        "properties.databaseOptions.isAutoCreateStatsOn",
+        "properties.databaseOptions.isAutoShrinkOn",
+        "properties.databaseOptions.isAutoUpdateStatsOn",
+        "properties.databaseOptions.isEncrypted",
+        "properties.databaseOptions.isMemoryOptimizationEnabled",
+        "properties.databaseOptions.isRemoteDataArchiveEnabled",
+        "properties.databaseOptions.isTrustworthyOn",
+        "properties.earliestRestoreDate",
+        "properties.isReadOnly",
+        "properties.lastDatabaseUploadTime",
+        "properties.provisioningState",
+        "properties.recoveryMode",
+        "properties.restorePointInTime",
+        "properties.sizeMB",
+        "properties.sourceDatabaseId",
+        "properties.spaceAvailableMB",
+        "properties.state"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the database"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/databases/{databaseName}",
+      "operationId": "SqlServerDatabases_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the database"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/databases/{databaseName}",
+      "operationId": "SqlServerDatabases_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the database"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/databases/{databaseName}",
+      "operationId": "SqlServerDatabases_Update",
+      "bodySchema": "SqlServerDatabaseUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.backupInformation",
+        "properties.backupInformation.lastFullBackup",
+        "properties.backupInformation.lastLogBackup",
+        "properties.backupPolicy",
+        "properties.backupPolicy.differentialBackupHours",
+        "properties.backupPolicy.fullBackupDays",
+        "properties.backupPolicy.retentionPeriodDays",
+        "properties.backupPolicy.transactionLogBackupMinutes",
+        "properties.collationName",
+        "properties.compatibilityLevel",
+        "properties.createMode",
+        "properties.databaseCreationDate",
+        "properties.databaseOptions",
+        "properties.databaseOptions.isAutoCloseOn",
+        "properties.databaseOptions.isAutoCreateStatsOn",
+        "properties.databaseOptions.isAutoShrinkOn",
+        "properties.databaseOptions.isAutoUpdateStatsOn",
+        "properties.databaseOptions.isEncrypted",
+        "properties.databaseOptions.isMemoryOptimizationEnabled",
+        "properties.databaseOptions.isRemoteDataArchiveEnabled",
+        "properties.databaseOptions.isTrustworthyOn",
+        "properties.earliestRestoreDate",
+        "properties.isReadOnly",
+        "properties.lastDatabaseUploadTime",
+        "properties.provisioningState",
+        "properties.recoveryMode",
+        "properties.restorePointInTime",
+        "properties.sizeMB",
+        "properties.sourceDatabaseId",
+        "properties.spaceAvailableMB",
+        "properties.state",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the database"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/sqlServerInstances/{sqlServerInstanceName}/databases",
+      "operationId": "SqlServerDatabases_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "sqlServerInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SQL Server Instance"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    }
+  ]
+}

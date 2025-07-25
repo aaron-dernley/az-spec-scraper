@@ -1,0 +1,305 @@
+{
+  "resource": "Azure::NetApp::Snapshots",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots",
+      "operationId": "Snapshots_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the NetApp account"
+        },
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity pool"
+        },
+        {
+          "name": "volumeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the NetApp account"
+        },
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity pool"
+        },
+        {
+          "name": "volumeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume"
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Create",
+      "bodySchema": "snapshot",
+      "requiredProperties": [
+        "location"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.created",
+        "properties.provisioningState",
+        "properties.snapshotId",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the NetApp account"
+        },
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity pool"
+        },
+        {
+          "name": "volumeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume"
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Update",
+      "bodySchema": "snapshotPatch",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the NetApp account"
+        },
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity pool"
+        },
+        {
+          "name": "volumeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume"
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetApp/netAppAccounts/{accountName}/capacityPools/{poolName}/volumes/{volumeName}/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the NetApp account"
+        },
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity pool"
+        },
+        {
+          "name": "volumeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume"
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

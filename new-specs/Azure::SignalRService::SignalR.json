@@ -1,0 +1,265 @@
+{
+  "resource": "Azure::SignalRService::SignalR",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.SignalRService/signalR",
+      "operationId": "SignalR_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR",
+      "operationId": "SignalR_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
+      "operationId": "SignalR_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
+      "operationId": "SignalR_CreateOrUpdate",
+      "bodySchema": "SignalRResource",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "properties",
+        "properties.cors",
+        "properties.cors.allowedOrigins",
+        "properties.disableAadAuth",
+        "properties.disableLocalAuth",
+        "properties.externalIP",
+        "properties.features",
+        "properties.hostName",
+        "properties.hostNamePrefix",
+        "properties.liveTraceConfiguration",
+        "properties.liveTraceConfiguration.categories",
+        "properties.liveTraceConfiguration.enabled",
+        "properties.networkACLs",
+        "properties.networkACLs.defaultAction",
+        "properties.networkACLs.ipRules",
+        "properties.networkACLs.privateEndpoints",
+        "properties.networkACLs.publicNetwork",
+        "properties.networkACLs.publicNetwork.allow",
+        "properties.networkACLs.publicNetwork.deny",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.publicPort",
+        "properties.regionEndpointEnabled",
+        "properties.resourceLogConfiguration",
+        "properties.resourceLogConfiguration.categories",
+        "properties.resourceStopped",
+        "properties.serverPort",
+        "properties.serverless",
+        "properties.serverless.connectionTimeoutInSeconds",
+        "properties.sharedPrivateLinkResources",
+        "properties.tls",
+        "properties.tls.clientCertEnabled",
+        "properties.upstream",
+        "properties.upstream.templates",
+        "properties.version",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
+      "operationId": "SignalR_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}",
+      "operationId": "SignalR_Update",
+      "bodySchema": "SignalRResource",
+      "requiredProperties": [
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "properties",
+        "properties.cors",
+        "properties.cors.allowedOrigins",
+        "properties.disableAadAuth",
+        "properties.disableLocalAuth",
+        "properties.externalIP",
+        "properties.features",
+        "properties.hostName",
+        "properties.hostNamePrefix",
+        "properties.liveTraceConfiguration",
+        "properties.liveTraceConfiguration.categories",
+        "properties.liveTraceConfiguration.enabled",
+        "properties.networkACLs",
+        "properties.networkACLs.defaultAction",
+        "properties.networkACLs.ipRules",
+        "properties.networkACLs.privateEndpoints",
+        "properties.networkACLs.publicNetwork",
+        "properties.networkACLs.publicNetwork.allow",
+        "properties.networkACLs.publicNetwork.deny",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.publicPort",
+        "properties.regionEndpointEnabled",
+        "properties.resourceLogConfiguration",
+        "properties.resourceLogConfiguration.categories",
+        "properties.resourceStopped",
+        "properties.serverPort",
+        "properties.serverless",
+        "properties.serverless.connectionTimeoutInSeconds",
+        "properties.sharedPrivateLinkResources",
+        "properties.tls",
+        "properties.tls.clientCertEnabled",
+        "properties.upstream",
+        "properties.upstream.templates",
+        "properties.version",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

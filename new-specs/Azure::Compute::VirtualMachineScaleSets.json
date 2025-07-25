@@ -1,0 +1,418 @@
+{
+  "resource": "Azure::Compute::VirtualMachineScaleSets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "operationId": "VirtualMachineScaleSets_CreateOrUpdate",
+      "bodySchema": "VirtualMachineScaleSet",
+      "requiredProperties": [
+        "location",
+        "properties.virtualMachineProfile.storageProfile.osDisk.createOption"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "name",
+        "plan",
+        "plan.name",
+        "plan.product",
+        "plan.promotionCode",
+        "plan.publisher",
+        "properties",
+        "properties.additionalCapabilities",
+        "properties.additionalCapabilities.ultraSSDEnabled",
+        "properties.automaticRepairsPolicy",
+        "properties.automaticRepairsPolicy.enabled",
+        "properties.automaticRepairsPolicy.gracePeriod",
+        "properties.doNotRunExtensionsOnOverprovisionedVMs",
+        "properties.overprovision",
+        "properties.platformFaultDomainCount",
+        "properties.provisioningState",
+        "properties.proximityPlacementGroup",
+        "properties.proximityPlacementGroup.id",
+        "properties.scaleInPolicy",
+        "properties.scaleInPolicy.rules",
+        "properties.singlePlacementGroup",
+        "properties.uniqueId",
+        "properties.upgradePolicy",
+        "properties.upgradePolicy.automaticOSUpgradePolicy",
+        "properties.upgradePolicy.automaticOSUpgradePolicy.disableAutomaticRollback",
+        "properties.upgradePolicy.automaticOSUpgradePolicy.enableAutomaticOSUpgrade",
+        "properties.upgradePolicy.mode",
+        "properties.upgradePolicy.rollingUpgradePolicy",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxBatchInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxUnhealthyInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.pauseTimeBetweenBatches",
+        "properties.virtualMachineProfile",
+        "properties.virtualMachineProfile.billingProfile",
+        "properties.virtualMachineProfile.billingProfile.maxPrice",
+        "properties.virtualMachineProfile.diagnosticsProfile",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics.enabled",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics.storageUri",
+        "properties.virtualMachineProfile.evictionPolicy",
+        "properties.virtualMachineProfile.extensionProfile",
+        "properties.virtualMachineProfile.extensionProfile.extensions",
+        "properties.virtualMachineProfile.licenseType",
+        "properties.virtualMachineProfile.networkProfile",
+        "properties.virtualMachineProfile.networkProfile.healthProbe",
+        "properties.virtualMachineProfile.networkProfile.healthProbe.id",
+        "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations",
+        "properties.virtualMachineProfile.osProfile",
+        "properties.virtualMachineProfile.osProfile.adminPassword",
+        "properties.virtualMachineProfile.osProfile.adminUsername",
+        "properties.virtualMachineProfile.osProfile.computerNamePrefix",
+        "properties.virtualMachineProfile.osProfile.customData",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.provisionVMAgent",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.ssh",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys",
+        "properties.virtualMachineProfile.osProfile.secrets",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.timeZone",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.winRM",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners",
+        "properties.virtualMachineProfile.priority",
+        "properties.virtualMachineProfile.scheduledEventsProfile",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile.enable",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile.notBeforeTimeout",
+        "properties.virtualMachineProfile.storageProfile",
+        "properties.virtualMachineProfile.storageProfile.dataDisks",
+        "properties.virtualMachineProfile.storageProfile.imageReference",
+        "properties.virtualMachineProfile.storageProfile.imageReference.exactVersion",
+        "properties.virtualMachineProfile.storageProfile.imageReference.id",
+        "properties.virtualMachineProfile.storageProfile.imageReference.offer",
+        "properties.virtualMachineProfile.storageProfile.imageReference.publisher",
+        "properties.virtualMachineProfile.storageProfile.imageReference.sku",
+        "properties.virtualMachineProfile.storageProfile.imageReference.version",
+        "properties.virtualMachineProfile.storageProfile.osDisk",
+        "properties.virtualMachineProfile.storageProfile.osDisk.caching",
+        "properties.virtualMachineProfile.storageProfile.osDisk.diffDiskSettings",
+        "properties.virtualMachineProfile.storageProfile.osDisk.diffDiskSettings.option",
+        "properties.virtualMachineProfile.storageProfile.osDisk.diffDiskSettings.placement",
+        "properties.virtualMachineProfile.storageProfile.osDisk.diskSizeGB",
+        "properties.virtualMachineProfile.storageProfile.osDisk.image",
+        "properties.virtualMachineProfile.storageProfile.osDisk.image.uri",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.diskEncryptionSet.id",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.storageAccountType",
+        "properties.virtualMachineProfile.storageProfile.osDisk.name",
+        "properties.virtualMachineProfile.storageProfile.osDisk.osType",
+        "properties.virtualMachineProfile.storageProfile.osDisk.vhdContainers",
+        "properties.virtualMachineProfile.storageProfile.osDisk.writeAcceleratorEnabled",
+        "properties.zoneBalance",
+        "sku",
+        "sku.capacity",
+        "sku.name",
+        "sku.tier",
+        "tags",
+        "type",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set to create or update."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "operationId": "VirtualMachineScaleSets_Update",
+      "bodySchema": "VirtualMachineScaleSetUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "plan",
+        "plan.name",
+        "plan.product",
+        "plan.promotionCode",
+        "plan.publisher",
+        "properties",
+        "properties.additionalCapabilities",
+        "properties.additionalCapabilities.ultraSSDEnabled",
+        "properties.automaticRepairsPolicy",
+        "properties.automaticRepairsPolicy.enabled",
+        "properties.automaticRepairsPolicy.gracePeriod",
+        "properties.doNotRunExtensionsOnOverprovisionedVMs",
+        "properties.overprovision",
+        "properties.proximityPlacementGroup",
+        "properties.proximityPlacementGroup.id",
+        "properties.scaleInPolicy",
+        "properties.scaleInPolicy.rules",
+        "properties.singlePlacementGroup",
+        "properties.upgradePolicy",
+        "properties.upgradePolicy.automaticOSUpgradePolicy",
+        "properties.upgradePolicy.automaticOSUpgradePolicy.disableAutomaticRollback",
+        "properties.upgradePolicy.automaticOSUpgradePolicy.enableAutomaticOSUpgrade",
+        "properties.upgradePolicy.mode",
+        "properties.upgradePolicy.rollingUpgradePolicy",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxBatchInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxUnhealthyInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent",
+        "properties.upgradePolicy.rollingUpgradePolicy.pauseTimeBetweenBatches",
+        "properties.virtualMachineProfile",
+        "properties.virtualMachineProfile.billingProfile",
+        "properties.virtualMachineProfile.billingProfile.maxPrice",
+        "properties.virtualMachineProfile.diagnosticsProfile",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics.enabled",
+        "properties.virtualMachineProfile.diagnosticsProfile.bootDiagnostics.storageUri",
+        "properties.virtualMachineProfile.extensionProfile",
+        "properties.virtualMachineProfile.extensionProfile.extensions",
+        "properties.virtualMachineProfile.licenseType",
+        "properties.virtualMachineProfile.networkProfile",
+        "properties.virtualMachineProfile.networkProfile.healthProbe",
+        "properties.virtualMachineProfile.networkProfile.healthProbe.id",
+        "properties.virtualMachineProfile.networkProfile.networkInterfaceConfigurations",
+        "properties.virtualMachineProfile.osProfile",
+        "properties.virtualMachineProfile.osProfile.customData",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.disablePasswordAuthentication",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.provisionVMAgent",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.ssh",
+        "properties.virtualMachineProfile.osProfile.linuxConfiguration.ssh.publicKeys",
+        "properties.virtualMachineProfile.osProfile.secrets",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.additionalUnattendContent",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.enableAutomaticUpdates",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.provisionVMAgent",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.timeZone",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.winRM",
+        "properties.virtualMachineProfile.osProfile.windowsConfiguration.winRM.listeners",
+        "properties.virtualMachineProfile.scheduledEventsProfile",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile.enable",
+        "properties.virtualMachineProfile.scheduledEventsProfile.terminateNotificationProfile.notBeforeTimeout",
+        "properties.virtualMachineProfile.storageProfile",
+        "properties.virtualMachineProfile.storageProfile.dataDisks",
+        "properties.virtualMachineProfile.storageProfile.imageReference",
+        "properties.virtualMachineProfile.storageProfile.imageReference.exactVersion",
+        "properties.virtualMachineProfile.storageProfile.imageReference.id",
+        "properties.virtualMachineProfile.storageProfile.imageReference.offer",
+        "properties.virtualMachineProfile.storageProfile.imageReference.publisher",
+        "properties.virtualMachineProfile.storageProfile.imageReference.sku",
+        "properties.virtualMachineProfile.storageProfile.imageReference.version",
+        "properties.virtualMachineProfile.storageProfile.osDisk",
+        "properties.virtualMachineProfile.storageProfile.osDisk.caching",
+        "properties.virtualMachineProfile.storageProfile.osDisk.diskSizeGB",
+        "properties.virtualMachineProfile.storageProfile.osDisk.image",
+        "properties.virtualMachineProfile.storageProfile.osDisk.image.uri",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.diskEncryptionSet",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.diskEncryptionSet.id",
+        "properties.virtualMachineProfile.storageProfile.osDisk.managedDisk.storageAccountType",
+        "properties.virtualMachineProfile.storageProfile.osDisk.vhdContainers",
+        "properties.virtualMachineProfile.storageProfile.osDisk.writeAcceleratorEnabled",
+        "sku",
+        "sku.capacity",
+        "sku.name",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set to create or update."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "operationId": "VirtualMachineScaleSets_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}",
+      "operationId": "VirtualMachineScaleSets_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets",
+      "operationId": "VirtualMachineScaleSets_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/virtualMachineScaleSets",
+      "operationId": "VirtualMachineScaleSets_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

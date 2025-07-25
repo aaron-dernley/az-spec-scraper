@@ -1,0 +1,103 @@
+{
+  "resource": "Azure::Billing::CostAllocationRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.CostManagement/costAllocationRules",
+      "operationId": "CostAllocationRules_List",
+      "pathParameters": [
+        {
+          "name": "billingAccountId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "BillingAccount ID"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.CostManagement/costAllocationRules/{ruleName}",
+      "operationId": "CostAllocationRules_Get",
+      "pathParameters": [
+        {
+          "name": "billingAccountId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "BillingAccount ID"
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.CostManagement/costAllocationRules/{ruleName}",
+      "operationId": "CostAllocationRules_CreateOrUpdate",
+      "bodySchema": "CostAllocationRuleDefinition",
+      "requiredProperties": [
+        "properties.details",
+        "properties.status"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdDate",
+        "properties.description",
+        "properties.details.sourceResources",
+        "properties.details.targetResources",
+        "properties.updatedDate",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "BillingAccount ID"
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.CostManagement/costAllocationRules/{ruleName}",
+      "operationId": "CostAllocationRules_Delete",
+      "pathParameters": [
+        {
+          "name": "billingAccountId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "BillingAccount ID"
+        },
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

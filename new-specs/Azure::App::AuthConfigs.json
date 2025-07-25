@@ -1,0 +1,239 @@
+{
+  "resource": "Azure::App::AuthConfigs",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs",
+      "operationId": "ContainerAppsAuthConfigs_ListByContainerApp",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs/{authConfigName}",
+      "operationId": "ContainerAppsAuthConfigs_Get",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "authConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App AuthConfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs/{authConfigName}",
+      "operationId": "ContainerAppsAuthConfigs_CreateOrUpdate",
+      "bodySchema": "AuthConfig",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.globalValidation",
+        "properties.globalValidation.excludedPaths",
+        "properties.globalValidation.redirectToProvider",
+        "properties.globalValidation.unauthenticatedClientAction",
+        "properties.httpSettings",
+        "properties.httpSettings.forwardProxy",
+        "properties.httpSettings.forwardProxy.convention",
+        "properties.httpSettings.forwardProxy.customHostHeaderName",
+        "properties.httpSettings.forwardProxy.customProtoHeaderName",
+        "properties.httpSettings.requireHttps",
+        "properties.httpSettings.routes",
+        "properties.httpSettings.routes.apiPrefix",
+        "properties.identityProviders",
+        "properties.identityProviders.apple",
+        "properties.identityProviders.apple.enabled",
+        "properties.identityProviders.apple.login",
+        "properties.identityProviders.apple.login.scopes",
+        "properties.identityProviders.apple.registration",
+        "properties.identityProviders.apple.registration.clientId",
+        "properties.identityProviders.apple.registration.clientSecretSettingName",
+        "properties.identityProviders.azureActiveDirectory",
+        "properties.identityProviders.azureActiveDirectory.enabled",
+        "properties.identityProviders.azureActiveDirectory.isAutoProvisioned",
+        "properties.identityProviders.azureActiveDirectory.login",
+        "properties.identityProviders.azureActiveDirectory.login.disableWWWAuthenticate",
+        "properties.identityProviders.azureActiveDirectory.login.loginParameters",
+        "properties.identityProviders.azureActiveDirectory.registration",
+        "properties.identityProviders.azureActiveDirectory.registration.clientId",
+        "properties.identityProviders.azureActiveDirectory.registration.clientSecretCertificateIssuer",
+        "properties.identityProviders.azureActiveDirectory.registration.clientSecretCertificateSubjectAlternativeName",
+        "properties.identityProviders.azureActiveDirectory.registration.clientSecretCertificateThumbprint",
+        "properties.identityProviders.azureActiveDirectory.registration.clientSecretSettingName",
+        "properties.identityProviders.azureActiveDirectory.registration.openIdIssuer",
+        "properties.identityProviders.azureActiveDirectory.validation",
+        "properties.identityProviders.azureActiveDirectory.validation.allowedAudiences",
+        "properties.identityProviders.azureActiveDirectory.validation.defaultAuthorizationPolicy",
+        "properties.identityProviders.azureActiveDirectory.validation.defaultAuthorizationPolicy.allowedApplications",
+        "properties.identityProviders.azureActiveDirectory.validation.defaultAuthorizationPolicy.allowedPrincipals",
+        "properties.identityProviders.azureActiveDirectory.validation.defaultAuthorizationPolicy.allowedPrincipals.groups",
+        "properties.identityProviders.azureActiveDirectory.validation.defaultAuthorizationPolicy.allowedPrincipals.identities",
+        "properties.identityProviders.azureActiveDirectory.validation.jwtClaimChecks",
+        "properties.identityProviders.azureActiveDirectory.validation.jwtClaimChecks.allowedClientApplications",
+        "properties.identityProviders.azureActiveDirectory.validation.jwtClaimChecks.allowedGroups",
+        "properties.identityProviders.azureStaticWebApps",
+        "properties.identityProviders.azureStaticWebApps.enabled",
+        "properties.identityProviders.azureStaticWebApps.registration",
+        "properties.identityProviders.azureStaticWebApps.registration.clientId",
+        "properties.identityProviders.customOpenIdConnectProviders",
+        "properties.identityProviders.facebook",
+        "properties.identityProviders.facebook.enabled",
+        "properties.identityProviders.facebook.graphApiVersion",
+        "properties.identityProviders.facebook.login",
+        "properties.identityProviders.facebook.login.scopes",
+        "properties.identityProviders.facebook.registration",
+        "properties.identityProviders.facebook.registration.appId",
+        "properties.identityProviders.facebook.registration.appSecretSettingName",
+        "properties.identityProviders.gitHub",
+        "properties.identityProviders.gitHub.enabled",
+        "properties.identityProviders.gitHub.login",
+        "properties.identityProviders.gitHub.login.scopes",
+        "properties.identityProviders.gitHub.registration",
+        "properties.identityProviders.gitHub.registration.clientId",
+        "properties.identityProviders.gitHub.registration.clientSecretSettingName",
+        "properties.identityProviders.google",
+        "properties.identityProviders.google.enabled",
+        "properties.identityProviders.google.login",
+        "properties.identityProviders.google.login.scopes",
+        "properties.identityProviders.google.registration",
+        "properties.identityProviders.google.registration.clientId",
+        "properties.identityProviders.google.registration.clientSecretSettingName",
+        "properties.identityProviders.google.validation",
+        "properties.identityProviders.google.validation.allowedAudiences",
+        "properties.identityProviders.twitter",
+        "properties.identityProviders.twitter.enabled",
+        "properties.identityProviders.twitter.registration",
+        "properties.identityProviders.twitter.registration.consumerKey",
+        "properties.identityProviders.twitter.registration.consumerSecretSettingName",
+        "properties.login",
+        "properties.login.allowedExternalRedirectUrls",
+        "properties.login.cookieExpiration",
+        "properties.login.cookieExpiration.convention",
+        "properties.login.cookieExpiration.timeToExpiration",
+        "properties.login.nonce",
+        "properties.login.nonce.nonceExpirationInterval",
+        "properties.login.nonce.validateNonce",
+        "properties.login.preserveUrlFragmentsForLogins",
+        "properties.login.routes",
+        "properties.login.routes.logoutEndpoint",
+        "properties.platform",
+        "properties.platform.enabled",
+        "properties.platform.runtimeVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "authConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App AuthConfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs/{authConfigName}",
+      "operationId": "ContainerAppsAuthConfigs_Delete",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "authConfigName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App AuthConfig."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

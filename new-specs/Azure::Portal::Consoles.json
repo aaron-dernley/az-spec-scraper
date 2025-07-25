@@ -1,0 +1,174 @@
+{
+  "resource": "Azure::Portal::Consoles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}",
+      "operationId": "getConsoleWithLocation",
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}",
+      "operationId": "putConsoleWithLocation",
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}",
+      "operationId": "deleteConsoleWithLocation",
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        },
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The provider location"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Portal/consoles/{consoleName}",
+      "operationId": "GetConsole",
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Portal/consoles/{consoleName}",
+      "operationId": "PutConsole",
+      "bodySchema": "ConsoleDefinition",
+      "requiredProperties": [
+        "properties",
+        "properties.osType"
+      ],
+      "optionalProperties": [
+        "properties.provisioningState",
+        "properties.uri"
+      ],
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Portal/consoles/{consoleName}",
+      "operationId": "DeleteConsole",
+      "pathParameters": [
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the console"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "resource": "Azure::AzureSphere::Deployments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/deployments",
+      "operationId": "Deployments_ListByDeviceGroup",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Filter the result list using the given expression"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of result items to return."
+        },
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of result items to skip."
+        },
+        {
+          "name": "$maxpagesize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of result items per page."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/deployments/{deploymentName}",
+      "operationId": "Deployments_Get",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Deployment name. Use .default for deployment creation and to get the current deployment for the associated device group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/deployments/{deploymentName}",
+      "operationId": "Deployments_CreateOrUpdate",
+      "bodySchema": "Deployment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.deployedImages",
+        "properties.deploymentDateUtc",
+        "properties.deploymentId",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Deployment name. Use .default for deployment creation and to get the current deployment for the associated device group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/deployments/{deploymentName}",
+      "operationId": "Deployments_Delete",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deploymentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Deployment name. Use .default for deployment creation and to get the current deployment for the associated device group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

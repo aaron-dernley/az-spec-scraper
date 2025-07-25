@@ -1,0 +1,181 @@
+{
+  "resource": "Azure::Sql::BackupLongTermRetentionPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/backupLongTermRetentionPolicies",
+      "operationId": "ManagedInstanceLongTermRetentionPolicies_ListByDatabase",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/backupLongTermRetentionPolicies/{policyName}",
+      "operationId": "ManagedInstanceLongTermRetentionPolicies_Get",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy name. Should always be Default."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/backupLongTermRetentionPolicies/{policyName}",
+      "operationId": "ManagedInstanceLongTermRetentionPolicies_CreateOrUpdate",
+      "bodySchema": "ManagedInstanceLongTermRetentionPolicy",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.backupStorageAccessTier",
+        "properties.monthlyRetention",
+        "properties.weekOfYear",
+        "properties.weeklyRetention",
+        "properties.yearlyRetention"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy name. Should always be Default."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/backupLongTermRetentionPolicies/{policyName}",
+      "operationId": "ManagedInstanceLongTermRetentionPolicies_Delete",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "databaseName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the database."
+        },
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The policy name. Should always be Default."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

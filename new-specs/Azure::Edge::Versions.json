@@ -1,0 +1,1018 @@
+{
+  "resource": "Azure::Edge::Versions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}/versions",
+      "operationId": "ConfigTemplateVersions_ListByConfigTemplate",
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/configTemplates/{configTemplateName}/versions/{configTemplateVersionName}",
+      "operationId": "ConfigTemplateVersions_Get",
+      "pathParameters": [
+        {
+          "name": "configTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplate"
+        },
+        {
+          "name": "configTemplateVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ConfigTemplateVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions",
+      "operationId": "WorkflowVersions_ListByWorkflow",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}",
+      "operationId": "WorkflowVersions_Get",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}",
+      "operationId": "WorkflowVersions_CreateOrUpdate",
+      "bodySchema": "WorkflowVersion",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.stageSpec"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.configuration",
+        "properties.provisioningState",
+        "properties.reviewId",
+        "properties.revision",
+        "properties.specification",
+        "properties.state"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}",
+      "operationId": "WorkflowVersions_Update",
+      "bodySchema": "WorkflowVersionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.specification",
+        "properties.stageSpec"
+      ],
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/contexts/{contextName}/workflows/{workflowName}/versions/{versionName}",
+      "operationId": "WorkflowVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "contextName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Context."
+        },
+        {
+          "name": "workflowName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the workflow"
+        },
+        {
+          "name": "versionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workflowVersion."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}/versions",
+      "operationId": "DynamicSchemaVersions_ListByDynamicSchema",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}/versions/{schemaVersionName}",
+      "operationId": "DynamicSchemaVersions_Get",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}/versions/{schemaVersionName}",
+      "operationId": "DynamicSchemaVersions_CreateOrUpdate",
+      "bodySchema": "DynamicSchemaVersion",
+      "requiredProperties": [
+        "properties.value"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}/versions/{schemaVersionName}",
+      "operationId": "DynamicSchemaVersions_Update",
+      "bodySchema": "DynamicSchemaVersionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.value"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/dynamicSchemas/{dynamicSchemaName}/versions/{schemaVersionName}",
+      "operationId": "DynamicSchemaVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "dynamicSchemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DynamicSchema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/versions",
+      "operationId": "SchemaVersions_ListBySchema",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/versions/{schemaVersionName}",
+      "operationId": "SchemaVersions_Get",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/versions/{schemaVersionName}",
+      "operationId": "SchemaVersions_CreateOrUpdate",
+      "bodySchema": "SchemaVersion",
+      "requiredProperties": [
+        "properties.value"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/versions/{schemaVersionName}",
+      "operationId": "SchemaVersions_Update",
+      "bodySchema": "SchemaVersionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.value"
+      ],
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/schemas/{schemaName}/versions/{schemaVersionName}",
+      "operationId": "SchemaVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "schemaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Schema"
+        },
+        {
+          "name": "schemaVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SchemaVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/solutionTemplates/{solutionTemplateName}/versions",
+      "operationId": "SolutionTemplateVersions_ListBySolutionTemplate",
+      "pathParameters": [
+        {
+          "name": "solutionTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SolutionTemplate"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/solutionTemplates/{solutionTemplateName}/versions/{solutionTemplateVersionName}",
+      "operationId": "SolutionTemplateVersions_Get",
+      "pathParameters": [
+        {
+          "name": "solutionTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SolutionTemplate"
+        },
+        {
+          "name": "solutionTemplateVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the SolutionTemplateVersion"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/versions",
+      "operationId": "SolutionVersions_ListBySolution",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/versions/{solutionVersionName}",
+      "operationId": "SolutionVersions_Get",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "solutionVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution version"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/versions/{solutionVersionName}",
+      "operationId": "SolutionVersions_CreateOrUpdate",
+      "bodySchema": "SolutionVersion",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.specification"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.actionType",
+        "properties.configuration",
+        "properties.errorDetails",
+        "properties.externalValidationId",
+        "properties.latestActionTrackingUri",
+        "properties.provisioningState",
+        "properties.reviewId",
+        "properties.revision",
+        "properties.solutionDependencies",
+        "properties.solutionInstanceName",
+        "properties.solutionTemplateVersionId",
+        "properties.state",
+        "properties.targetDisplayName",
+        "properties.targetLevelConfiguration"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "solutionVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution version"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/versions/{solutionVersionName}",
+      "operationId": "SolutionVersions_Update",
+      "bodySchema": "SolutionVersionUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.specification"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "solutionVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution version"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/versions/{solutionVersionName}",
+      "operationId": "SolutionVersions_Delete",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "solutionVersionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution version"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

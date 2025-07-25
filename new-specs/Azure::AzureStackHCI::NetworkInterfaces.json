@@ -1,0 +1,181 @@
+{
+  "resource": "Azure::AzureStackHCI::NetworkInterfaces",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Get",
+      "pathParameters": [
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the network interface"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_CreateOrUpdate",
+      "bodySchema": "NetworkInterfaces",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.dnsSettings",
+        "properties.dnsSettings.dnsServers",
+        "properties.ipConfigurations",
+        "properties.macAddress",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.errorCode",
+        "properties.status.errorMessage",
+        "properties.status.provisioningStatus",
+        "properties.status.provisioningStatus.operationId",
+        "properties.status.provisioningStatus.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the network interface"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Delete",
+      "pathParameters": [
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the network interface"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Update",
+      "bodySchema": "NetworkInterfacesUpdateRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the network interface"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/networkInterfaces",
+      "operationId": "NetworkInterfaces_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureStackHCI/networkInterfaces",
+      "operationId": "NetworkInterfaces_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

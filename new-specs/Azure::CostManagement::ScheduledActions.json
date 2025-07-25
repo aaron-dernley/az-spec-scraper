@@ -1,0 +1,215 @@
+{
+  "resource": "Azure::CostManagement::ScheduledActions",
+  "version": "2023-09-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.CostManagement/scheduledActions",
+      "operationId": "ScheduledActions_List",
+      "pathParameters": [],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "May be used to filter scheduled actions by properties/viewId. Supported operator is 'eq'."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/scheduledActions",
+      "operationId": "ScheduledActions_ListByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with scheduled action operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope. Note: Insight Alerts are only available on subscription scope."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "May be used to filter scheduled actions by properties/viewId. Supported operator is 'eq'."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_CreateOrUpdate",
+      "bodySchema": "ScheduledAction",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.notification",
+        "properties.notification.subject",
+        "properties.notification.to",
+        "properties.schedule",
+        "properties.schedule.endDate",
+        "properties.schedule.frequency",
+        "properties.schedule.startDate",
+        "properties.status",
+        "properties.viewId"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "kind",
+        "properties",
+        "properties.fileDestination",
+        "properties.fileDestination.fileFormats",
+        "properties.notification.language",
+        "properties.notification.message",
+        "properties.notification.regionalFormat",
+        "properties.notificationEmail",
+        "properties.schedule.dayOfMonth",
+        "properties.schedule.daysOfWeek",
+        "properties.schedule.hourOfDay",
+        "properties.schedule.weeksOfMonth",
+        "properties.scope",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_CreateOrUpdateByScope",
+      "bodySchema": "ScheduledAction",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.notification",
+        "properties.notification.subject",
+        "properties.notification.to",
+        "properties.schedule",
+        "properties.schedule.endDate",
+        "properties.schedule.frequency",
+        "properties.schedule.startDate",
+        "properties.status",
+        "properties.viewId"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "kind",
+        "properties",
+        "properties.fileDestination",
+        "properties.fileDestination.fileFormats",
+        "properties.notification.language",
+        "properties.notification.message",
+        "properties.notification.regionalFormat",
+        "properties.notificationEmail",
+        "properties.schedule.dayOfMonth",
+        "properties.schedule.daysOfWeek",
+        "properties.schedule.hourOfDay",
+        "properties.schedule.weeksOfMonth",
+        "properties.scope",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with scheduled action operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope. Note: Insight Alerts are only available on subscription scope."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_GetByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with scheduled action operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope. Note: Insight Alerts are only available on subscription scope."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.CostManagement/scheduledActions/{name}",
+      "operationId": "ScheduledActions_DeleteByScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with scheduled action operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope. Note: Insight Alerts are only available on subscription scope."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Scheduled action name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "resource": "Azure::CostManagement::Exports",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/exports",
+      "operationId": "Exports_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last run of each export."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.CostManagement/exports/{exportName}",
+      "operationId": "Exports_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners."
+        },
+        {
+          "name": "exportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Export Name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "May be used to expand the properties within an export. Currently only 'runHistory' is supported and will return information for the last 10 runs of the export."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.CostManagement/exports/{exportName}",
+      "operationId": "Exports_CreateOrUpdate",
+      "bodySchema": "Export",
+      "requiredProperties": [
+        "properties.definition",
+        "properties.definition.timePeriod.from",
+        "properties.definition.timePeriod.to",
+        "properties.definition.timeframe",
+        "properties.definition.type",
+        "properties.deliveryInfo",
+        "properties.deliveryInfo.destination",
+        "properties.deliveryInfo.destination.container",
+        "properties.schedule.recurrencePeriod.from"
+      ],
+      "optionalProperties": [
+        "identity",
+        "location",
+        "properties",
+        "properties.definition.dataSet",
+        "properties.definition.dataSet.configuration",
+        "properties.definition.dataSet.configuration.columns",
+        "properties.definition.dataSet.granularity",
+        "properties.definition.timePeriod",
+        "properties.deliveryInfo.destination.resourceId",
+        "properties.deliveryInfo.destination.rootFolderPath",
+        "properties.deliveryInfo.destination.sasToken",
+        "properties.deliveryInfo.destination.storageAccount",
+        "properties.format",
+        "properties.nextRunTimeEstimate",
+        "properties.partitionData",
+        "properties.runHistory",
+        "properties.runHistory.value",
+        "properties.schedule",
+        "properties.schedule.recurrence",
+        "properties.schedule.recurrencePeriod",
+        "properties.schedule.recurrencePeriod.to",
+        "properties.schedule.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners."
+        },
+        {
+          "name": "exportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Export Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.CostManagement/exports/{exportName}",
+      "operationId": "Exports_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners."
+        },
+        {
+          "name": "exportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Export Name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

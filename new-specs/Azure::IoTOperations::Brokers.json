@@ -1,0 +1,239 @@
+{
+  "resource": "Azure::IoTOperations::Brokers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers",
+      "operationId": "Broker_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}",
+      "operationId": "Broker_Get",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}",
+      "operationId": "Broker_CreateOrUpdate",
+      "bodySchema": "BrokerResource",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.advanced.internalCerts.duration",
+        "properties.advanced.internalCerts.privateKey",
+        "properties.advanced.internalCerts.privateKey.algorithm",
+        "properties.advanced.internalCerts.privateKey.rotationPolicy",
+        "properties.advanced.internalCerts.renewBefore",
+        "properties.cardinality.backendChain",
+        "properties.cardinality.backendChain.partitions",
+        "properties.cardinality.backendChain.redundancyFactor",
+        "properties.cardinality.frontend",
+        "properties.cardinality.frontend.replicas",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSource.kind",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSource.name",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSourceRef.kind",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSourceRef.name",
+        "properties.diskBackedMessageBuffer.maxSize",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSource.kind",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSource.name",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSourceRef.kind",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSourceRef.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.advanced",
+        "properties.advanced.clients",
+        "properties.advanced.clients.maxKeepAliveSeconds",
+        "properties.advanced.clients.maxMessageExpirySeconds",
+        "properties.advanced.clients.maxPacketSizeBytes",
+        "properties.advanced.clients.maxReceiveMaximum",
+        "properties.advanced.clients.maxSessionExpirySeconds",
+        "properties.advanced.clients.subscriberQueueLimit",
+        "properties.advanced.clients.subscriberQueueLimit.length",
+        "properties.advanced.clients.subscriberQueueLimit.strategy",
+        "properties.advanced.encryptInternalTraffic",
+        "properties.advanced.internalCerts",
+        "properties.cardinality",
+        "properties.cardinality.backendChain.workers",
+        "properties.cardinality.frontend.workers",
+        "properties.diagnostics",
+        "properties.diagnostics.logs",
+        "properties.diagnostics.logs.level",
+        "properties.diagnostics.metrics",
+        "properties.diagnostics.metrics.prometheusPort",
+        "properties.diagnostics.selfCheck",
+        "properties.diagnostics.selfCheck.intervalSeconds",
+        "properties.diagnostics.selfCheck.mode",
+        "properties.diagnostics.selfCheck.timeoutSeconds",
+        "properties.diagnostics.traces",
+        "properties.diagnostics.traces.cacheSizeMegabytes",
+        "properties.diagnostics.traces.mode",
+        "properties.diagnostics.traces.selfTracing",
+        "properties.diagnostics.traces.selfTracing.intervalSeconds",
+        "properties.diagnostics.traces.selfTracing.mode",
+        "properties.diagnostics.traces.spanChannelCapacity",
+        "properties.diskBackedMessageBuffer",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.accessModes",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSource",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSource.apiGroup",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSourceRef",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSourceRef.apiGroup",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.dataSourceRef.namespace",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.resources",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.resources.limits",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.resources.requests",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.selector",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.selector.matchExpressions",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.selector.matchLabels",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.storageClassName",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.volumeMode",
+        "properties.diskBackedMessageBuffer.ephemeralVolumeClaimSpec.volumeName",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.accessModes",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSource",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSource.apiGroup",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSourceRef",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSourceRef.apiGroup",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.dataSourceRef.namespace",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.resources",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.resources.limits",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.resources.requests",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.selector",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.selector.matchExpressions",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.selector.matchLabels",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.storageClassName",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.volumeMode",
+        "properties.diskBackedMessageBuffer.persistentVolumeClaimSpec.volumeName",
+        "properties.generateResourceLimits",
+        "properties.generateResourceLimits.cpu",
+        "properties.memoryProfile",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/brokers/{brokerName}",
+      "operationId": "Broker_Delete",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "brokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

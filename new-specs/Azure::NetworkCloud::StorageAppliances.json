@@ -1,0 +1,195 @@
+{
+  "resource": "Azure::NetworkCloud::StorageAppliances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/storageAppliances",
+      "operationId": "StorageAppliances_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/storageAppliances",
+      "operationId": "StorageAppliances_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/storageAppliances/{storageApplianceName}",
+      "operationId": "StorageAppliances_Get",
+      "pathParameters": [
+        {
+          "name": "storageApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/storageAppliances/{storageApplianceName}",
+      "operationId": "StorageAppliances_CreateOrUpdate",
+      "bodySchema": "StorageAppliance",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.administratorCredentials",
+        "properties.administratorCredentials.password",
+        "properties.administratorCredentials.username",
+        "properties.rackId",
+        "properties.rackSlot",
+        "properties.serialNumber",
+        "properties.storageApplianceSkuId"
+      ],
+      "optionalProperties": [
+        "properties.capacity",
+        "properties.capacityUsed",
+        "properties.clusterId",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.managementIpv4Address",
+        "properties.manufacturer",
+        "properties.model",
+        "properties.provisioningState",
+        "properties.remoteVendorManagementFeature",
+        "properties.remoteVendorManagementStatus",
+        "properties.secretRotationStatus",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/storageAppliances/{storageApplianceName}",
+      "operationId": "StorageAppliances_Delete",
+      "pathParameters": [
+        {
+          "name": "storageApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/storageAppliances/{storageApplianceName}",
+      "operationId": "StorageAppliances_Update",
+      "bodySchema": "StorageAppliancePatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.serialNumber",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the storage appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

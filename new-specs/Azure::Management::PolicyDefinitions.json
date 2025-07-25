@@ -1,0 +1,134 @@
+{
+  "resource": "Azure::Management::PolicyDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/managementgroups/{managementGroupId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_CreateOrUpdateAtManagementGroup",
+      "bodySchema": "PolicyDefinition",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.metadata",
+        "properties.mode",
+        "properties.parameters",
+        "properties.policyRule",
+        "properties.policyType",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to create."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the management group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/managementgroups/{managementGroupId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_DeleteAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to delete."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the management group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementgroups/{managementGroupId}/providers/Microsoft.Authorization/policyDefinitions/{policyDefinitionName}",
+      "operationId": "PolicyDefinitions_GetAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "policyDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the policy definition to get."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the management group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementgroups/{managementGroupId}/providers/Microsoft.Authorization/policyDefinitions",
+      "operationId": "PolicyDefinitions_ListByManagementGroup",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the management group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the operation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "resource": "Azure::OperationalInsights::Queries",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/queryPacks/{queryPackName}/queries",
+      "operationId": "Queries_List",
+      "pathParameters": [
+        {
+          "name": "queryPackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Log Analytics QueryPack resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum items returned in page."
+        },
+        {
+          "name": "includeBody",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag indicating whether or not to return the body of each applicable query. If false, only return the query information."
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Base64 encoded token used to fetch the next page of items. Default is null."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/queryPacks/{queryPackName}/queries/{id}",
+      "operationId": "Queries_Get",
+      "pathParameters": [
+        {
+          "name": "queryPackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Log Analytics QueryPack resource."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The id of a specific query defined in the Log Analytics QueryPack"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/queryPacks/{queryPackName}/queries/{id}",
+      "operationId": "Queries_Put",
+      "bodySchema": "LogAnalyticsQueryPackQuery",
+      "requiredProperties": [
+        "properties.body",
+        "properties.displayName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.author",
+        "properties.description",
+        "properties.id",
+        "properties.properties",
+        "properties.related",
+        "properties.related.categories",
+        "properties.related.resourceTypes",
+        "properties.related.solutions",
+        "properties.tags",
+        "properties.timeCreated",
+        "properties.timeModified"
+      ],
+      "pathParameters": [
+        {
+          "name": "queryPackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Log Analytics QueryPack resource."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The id of a specific query defined in the Log Analytics QueryPack"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/queryPacks/{queryPackName}/queries/{id}",
+      "operationId": "Queries_Update",
+      "bodySchema": "LogAnalyticsQueryPackQuery",
+      "requiredProperties": [
+        "properties.body",
+        "properties.displayName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.author",
+        "properties.description",
+        "properties.id",
+        "properties.properties",
+        "properties.related",
+        "properties.related.categories",
+        "properties.related.resourceTypes",
+        "properties.related.solutions",
+        "properties.tags",
+        "properties.timeCreated",
+        "properties.timeModified"
+      ],
+      "pathParameters": [
+        {
+          "name": "queryPackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Log Analytics QueryPack resource."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The id of a specific query defined in the Log Analytics QueryPack"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/queryPacks/{queryPackName}/queries/{id}",
+      "operationId": "Queries_Delete",
+      "pathParameters": [
+        {
+          "name": "queryPackName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Log Analytics QueryPack resource."
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The id of a specific query defined in the Log Analytics QueryPack"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

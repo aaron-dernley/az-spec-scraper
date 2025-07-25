@@ -1,0 +1,265 @@
+{
+  "resource": "Azure::OperationalInsights::Tables",
+  "version": "2023-09-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/tables",
+      "operationId": "Tables_ListByWorkspace",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/tables/{tableName}",
+      "operationId": "Tables_CreateOrUpdate",
+      "bodySchema": "Table",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.archiveRetentionInDays",
+        "properties.lastPlanModifiedDate",
+        "properties.plan",
+        "properties.provisioningState",
+        "properties.restoredLogs",
+        "properties.restoredLogs.azureAsyncOperationId",
+        "properties.restoredLogs.endRestoreTime",
+        "properties.restoredLogs.sourceTable",
+        "properties.restoredLogs.startRestoreTime",
+        "properties.resultStatistics",
+        "properties.resultStatistics.ingestedRecords",
+        "properties.resultStatistics.progress",
+        "properties.resultStatistics.scannedGb",
+        "properties.retentionInDays",
+        "properties.retentionInDaysAsDefault",
+        "properties.schema",
+        "properties.schema.categories",
+        "properties.schema.columns",
+        "properties.schema.description",
+        "properties.schema.displayName",
+        "properties.schema.labels",
+        "properties.schema.name",
+        "properties.schema.solutions",
+        "properties.schema.source",
+        "properties.schema.standardColumns",
+        "properties.schema.tableSubType",
+        "properties.schema.tableType",
+        "properties.searchResults",
+        "properties.searchResults.azureAsyncOperationId",
+        "properties.searchResults.description",
+        "properties.searchResults.endSearchTime",
+        "properties.searchResults.limit",
+        "properties.searchResults.query",
+        "properties.searchResults.sourceTable",
+        "properties.searchResults.startSearchTime",
+        "properties.totalRetentionInDays",
+        "properties.totalRetentionInDaysAsDefault",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/tables/{tableName}",
+      "operationId": "Tables_Update",
+      "bodySchema": "Table",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.archiveRetentionInDays",
+        "properties.lastPlanModifiedDate",
+        "properties.plan",
+        "properties.provisioningState",
+        "properties.restoredLogs",
+        "properties.restoredLogs.azureAsyncOperationId",
+        "properties.restoredLogs.endRestoreTime",
+        "properties.restoredLogs.sourceTable",
+        "properties.restoredLogs.startRestoreTime",
+        "properties.resultStatistics",
+        "properties.resultStatistics.ingestedRecords",
+        "properties.resultStatistics.progress",
+        "properties.resultStatistics.scannedGb",
+        "properties.retentionInDays",
+        "properties.retentionInDaysAsDefault",
+        "properties.schema",
+        "properties.schema.categories",
+        "properties.schema.columns",
+        "properties.schema.description",
+        "properties.schema.displayName",
+        "properties.schema.labels",
+        "properties.schema.name",
+        "properties.schema.solutions",
+        "properties.schema.source",
+        "properties.schema.standardColumns",
+        "properties.schema.tableSubType",
+        "properties.schema.tableType",
+        "properties.searchResults",
+        "properties.searchResults.azureAsyncOperationId",
+        "properties.searchResults.description",
+        "properties.searchResults.endSearchTime",
+        "properties.searchResults.limit",
+        "properties.searchResults.query",
+        "properties.searchResults.sourceTable",
+        "properties.searchResults.startSearchTime",
+        "properties.totalRetentionInDays",
+        "properties.totalRetentionInDaysAsDefault",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/tables/{tableName}",
+      "operationId": "Tables_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/tables/{tableName}",
+      "operationId": "Tables_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "tableName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

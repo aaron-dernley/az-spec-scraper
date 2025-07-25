@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::ContainerService::Members",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members",
+      "operationId": "FleetMembers_ListByFleet",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members/{fleetMemberName}",
+      "operationId": "FleetMembers_Get",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "fleetMemberName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet member resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members/{fleetMemberName}",
+      "operationId": "FleetMembers_Create",
+      "bodySchema": "FleetMember",
+      "requiredProperties": [
+        "properties.clusterResourceId"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "properties",
+        "properties.group",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.lastOperationError",
+        "properties.status.lastOperationId"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "fleetMemberName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet member resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members/{fleetMemberName}",
+      "operationId": "FleetMembers_Update",
+      "bodySchema": "FleetMemberUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.group"
+      ],
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "fleetMemberName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet member resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members/{fleetMemberName}",
+      "operationId": "FleetMembers_Delete",
+      "pathParameters": [
+        {
+          "name": "fleetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet resource."
+        },
+        {
+          "name": "fleetMemberName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Fleet member resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

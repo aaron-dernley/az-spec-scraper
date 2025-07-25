@@ -1,0 +1,97 @@
+{
+  "resource": "Azure::KubernetesRuntime::BgpPeers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/bgpPeers",
+      "operationId": "BgpPeers_List",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/bgpPeers/{bgpPeerName}",
+      "operationId": "BgpPeers_Get",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "bgpPeerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the BgpPeer"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/bgpPeers/{bgpPeerName}",
+      "operationId": "BgpPeers_CreateOrUpdate",
+      "bodySchema": "BgpPeer",
+      "requiredProperties": [
+        "properties.myAsn",
+        "properties.peerAddress",
+        "properties.peerAsn"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "bgpPeerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the BgpPeer"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceUri}/providers/Microsoft.KubernetesRuntime/bgpPeers/{bgpPeerName}",
+      "operationId": "BgpPeers_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceUri",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The fully qualified Azure Resource manager identifier of the resource."
+        },
+        {
+          "name": "bgpPeerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the BgpPeer"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

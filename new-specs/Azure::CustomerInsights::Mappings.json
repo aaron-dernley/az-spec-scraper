@@ -1,0 +1,247 @@
+{
+  "resource": "Azure::CustomerInsights::Mappings",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/connectors/{connectorName}/mappings/{mappingName}",
+      "operationId": "ConnectorMappings_CreateOrUpdate",
+      "bodySchema": "ConnectorMappingResourceFormat",
+      "requiredProperties": [
+        "properties.entityType",
+        "properties.entityTypeName",
+        "properties.mappingProperties",
+        "properties.mappingProperties.availability",
+        "properties.mappingProperties.availability.interval",
+        "properties.mappingProperties.completeOperation",
+        "properties.mappingProperties.errorManagement",
+        "properties.mappingProperties.errorManagement.errorManagementType",
+        "properties.mappingProperties.format",
+        "properties.mappingProperties.format.formatType",
+        "properties.mappingProperties.structure"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.connectorMappingName",
+        "properties.connectorName",
+        "properties.connectorType",
+        "properties.created",
+        "properties.dataFormatId",
+        "properties.description",
+        "properties.displayName",
+        "properties.lastModified",
+        "properties.mappingProperties.availability.frequency",
+        "properties.mappingProperties.completeOperation.completionOperationType",
+        "properties.mappingProperties.completeOperation.destinationFolder",
+        "properties.mappingProperties.errorManagement.errorLimit",
+        "properties.mappingProperties.fileFilter",
+        "properties.mappingProperties.folderPath",
+        "properties.mappingProperties.format.acceptLanguage",
+        "properties.mappingProperties.format.arraySeparator",
+        "properties.mappingProperties.format.columnDelimiter",
+        "properties.mappingProperties.format.quoteCharacter",
+        "properties.mappingProperties.format.quoteEscapeCharacter",
+        "properties.mappingProperties.hasHeader",
+        "properties.nextRunTime",
+        "properties.runId",
+        "properties.state",
+        "properties.tenantId",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "connectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector."
+        },
+        {
+          "name": "mappingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector mapping."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/connectors/{connectorName}/mappings/{mappingName}",
+      "operationId": "ConnectorMappings_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "connectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector."
+        },
+        {
+          "name": "mappingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector mapping."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/connectors/{connectorName}/mappings/{mappingName}",
+      "operationId": "ConnectorMappings_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "connectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector."
+        },
+        {
+          "name": "mappingName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector mapping."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomerInsights/hubs/{hubName}/connectors/{connectorName}/mappings",
+      "operationId": "ConnectorMappings_ListByConnector",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "hubName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hub."
+        },
+        {
+          "name": "connectorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connector."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

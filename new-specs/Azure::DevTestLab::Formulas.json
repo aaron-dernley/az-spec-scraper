@@ -1,0 +1,347 @@
+{
+  "resource": "Azure::DevTestLab::Formulas",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas",
+      "operationId": "Formulas_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=description)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas/{name}",
+      "operationId": "Formulas_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the formula."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=description)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas/{name}",
+      "operationId": "Formulas_CreateOrUpdate",
+      "bodySchema": "Formula",
+      "requiredProperties": [
+        "properties",
+        "properties.formulaContent.properties.applicableSchedule.properties",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.author",
+        "properties.creationDate",
+        "properties.description",
+        "properties.formulaContent",
+        "properties.formulaContent.location",
+        "properties.formulaContent.name",
+        "properties.formulaContent.properties",
+        "properties.formulaContent.properties.allowClaim",
+        "properties.formulaContent.properties.applicableSchedule",
+        "properties.formulaContent.properties.applicableSchedule.id",
+        "properties.formulaContent.properties.applicableSchedule.location",
+        "properties.formulaContent.properties.applicableSchedule.name",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.id",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.location",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.name",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.createdDate",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.dailyRecurrence.time",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.hourlyRecurrence.minute",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.status",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.timeInMinutes",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.notificationSettings.webhookUrl",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.provisioningState",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.status",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.targetResourceId",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.taskType",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.timeZoneId",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.uniqueIdentifier",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.time",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.properties.weeklyRecurrence.weekdays",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.tags",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsShutdown.type",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.id",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.location",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.name",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.createdDate",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.dailyRecurrence.time",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.hourlyRecurrence.minute",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.status",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.timeInMinutes",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.notificationSettings.webhookUrl",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.provisioningState",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.status",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.targetResourceId",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.taskType",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.timeZoneId",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.uniqueIdentifier",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.time",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.properties.weeklyRecurrence.weekdays",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.tags",
+        "properties.formulaContent.properties.applicableSchedule.properties.labVmsStartup.type",
+        "properties.formulaContent.properties.applicableSchedule.tags",
+        "properties.formulaContent.properties.applicableSchedule.type",
+        "properties.formulaContent.properties.artifactDeploymentStatus",
+        "properties.formulaContent.properties.artifactDeploymentStatus.artifactsApplied",
+        "properties.formulaContent.properties.artifactDeploymentStatus.deploymentStatus",
+        "properties.formulaContent.properties.artifactDeploymentStatus.totalArtifacts",
+        "properties.formulaContent.properties.artifacts",
+        "properties.formulaContent.properties.bulkCreationParameters",
+        "properties.formulaContent.properties.bulkCreationParameters.instanceCount",
+        "properties.formulaContent.properties.computeVm",
+        "properties.formulaContent.properties.computeVm.dataDiskIds",
+        "properties.formulaContent.properties.computeVm.dataDisks",
+        "properties.formulaContent.properties.computeVm.networkInterfaceId",
+        "properties.formulaContent.properties.computeVm.osDiskId",
+        "properties.formulaContent.properties.computeVm.osType",
+        "properties.formulaContent.properties.computeVm.statuses",
+        "properties.formulaContent.properties.computeVm.vmSize",
+        "properties.formulaContent.properties.createdByUser",
+        "properties.formulaContent.properties.createdByUserId",
+        "properties.formulaContent.properties.createdDate",
+        "properties.formulaContent.properties.customImageId",
+        "properties.formulaContent.properties.disallowPublicIpAddress",
+        "properties.formulaContent.properties.environmentId",
+        "properties.formulaContent.properties.expirationDate",
+        "properties.formulaContent.properties.fqdn",
+        "properties.formulaContent.properties.galleryImageReference",
+        "properties.formulaContent.properties.galleryImageReference.offer",
+        "properties.formulaContent.properties.galleryImageReference.osType",
+        "properties.formulaContent.properties.galleryImageReference.publisher",
+        "properties.formulaContent.properties.galleryImageReference.sku",
+        "properties.formulaContent.properties.galleryImageReference.version",
+        "properties.formulaContent.properties.isAuthenticationWithSshKey",
+        "properties.formulaContent.properties.labSubnetName",
+        "properties.formulaContent.properties.labVirtualNetworkId",
+        "properties.formulaContent.properties.networkInterface",
+        "properties.formulaContent.properties.networkInterface.dnsName",
+        "properties.formulaContent.properties.networkInterface.privateIpAddress",
+        "properties.formulaContent.properties.networkInterface.publicIpAddress",
+        "properties.formulaContent.properties.networkInterface.publicIpAddressId",
+        "properties.formulaContent.properties.networkInterface.rdpAuthority",
+        "properties.formulaContent.properties.networkInterface.sharedPublicIpAddressConfiguration",
+        "properties.formulaContent.properties.networkInterface.sharedPublicIpAddressConfiguration.inboundNatRules",
+        "properties.formulaContent.properties.networkInterface.sshAuthority",
+        "properties.formulaContent.properties.networkInterface.subnetId",
+        "properties.formulaContent.properties.networkInterface.virtualNetworkId",
+        "properties.formulaContent.properties.notes",
+        "properties.formulaContent.properties.osType",
+        "properties.formulaContent.properties.ownerObjectId",
+        "properties.formulaContent.properties.ownerUserPrincipalName",
+        "properties.formulaContent.properties.password",
+        "properties.formulaContent.properties.provisioningState",
+        "properties.formulaContent.properties.size",
+        "properties.formulaContent.properties.sshKey",
+        "properties.formulaContent.properties.storageType",
+        "properties.formulaContent.properties.uniqueIdentifier",
+        "properties.formulaContent.properties.userName",
+        "properties.formulaContent.properties.virtualMachineCreationSource",
+        "properties.formulaContent.tags",
+        "properties.osType",
+        "properties.provisioningState",
+        "properties.uniqueIdentifier",
+        "properties.vm",
+        "properties.vm.labVmId",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the formula."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas/{name}",
+      "operationId": "Formulas_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the formula."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

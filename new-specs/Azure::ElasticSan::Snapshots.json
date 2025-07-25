@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::ElasticSan::Snapshots",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/snapshots",
+      "operationId": "VolumeSnapshots_ListByVolumeGroup",
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "volumeGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VolumeGroup."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify $filter='volumeName eq <volume name>' to filter on volume."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/snapshots/{snapshotName}",
+      "operationId": "VolumeSnapshots_Create",
+      "bodySchema": "Snapshot",
+      "requiredProperties": [
+        "properties",
+        "properties.creationData",
+        "properties.creationData.sourceId"
+      ],
+      "optionalProperties": [
+        "properties.provisioningState",
+        "properties.sourceVolumeSizeGiB",
+        "properties.volumeName"
+      ],
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "volumeGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VolumeGroup."
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume snapshot within the given volume group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/snapshots/{snapshotName}",
+      "operationId": "VolumeSnapshots_Delete",
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "volumeGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VolumeGroup."
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume snapshot within the given volume group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/snapshots/{snapshotName}",
+      "operationId": "VolumeSnapshots_Get",
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "volumeGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VolumeGroup."
+        },
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the volume snapshot within the given volume group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

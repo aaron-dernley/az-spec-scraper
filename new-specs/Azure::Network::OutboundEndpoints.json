@@ -1,0 +1,204 @@
+{
+  "resource": "Azure::Network::OutboundEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/outboundEndpoints/{outboundEndpointName}",
+      "operationId": "OutboundEndpoints_CreateOrUpdate",
+      "bodySchema": "OutboundEndpoint",
+      "requiredProperties": [
+        "properties",
+        "properties.subnet",
+        "properties.subnet.id"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "outboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the outbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/outboundEndpoints/{outboundEndpointName}",
+      "operationId": "OutboundEndpoints_Update",
+      "bodySchema": "OutboundEndpointPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "outboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the outbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/outboundEndpoints/{outboundEndpointName}",
+      "operationId": "OutboundEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "outboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the outbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/outboundEndpoints/{outboundEndpointName}",
+      "operationId": "OutboundEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "outboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the outbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/outboundEndpoints",
+      "operationId": "OutboundEndpoints_List",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    }
+  ]
+}

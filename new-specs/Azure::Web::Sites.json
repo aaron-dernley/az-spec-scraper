@@ -1,0 +1,276 @@
+{
+  "resource": "Azure::Web::Sites",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/sites",
+      "operationId": "WebApps_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites",
+      "operationId": "WebApps_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "includeSlots",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Specify <strong>true</strong> to include deployment slots in results. The default is false, which only gives you the production slot of all apps."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}",
+      "operationId": "WebApps_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}",
+      "operationId": "WebApps_CreateOrUpdate",
+      "bodySchema": "Site",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}",
+      "operationId": "WebApps_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the app to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "deleteMetrics",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "If true, web app metrics are also deleted."
+        },
+        {
+          "name": "deleteEmptyServerFarm",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Specify false if you want to keep empty App Service plan. By default, empty App Service plan is deleted."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}",
+      "operationId": "WebApps_Update",
+      "bodySchema": "SitePatchResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.availabilityState",
+        "properties.clientAffinityEnabled",
+        "properties.clientCertEnabled",
+        "properties.clientCertExclusionPaths",
+        "properties.clientCertMode",
+        "properties.cloningInfo",
+        "properties.containerSize",
+        "properties.customDomainVerificationId",
+        "properties.dailyMemoryTimeQuota",
+        "properties.defaultHostName",
+        "properties.enabled",
+        "properties.enabledHostNames",
+        "properties.hostNameSslStates",
+        "properties.hostNames",
+        "properties.hostNamesDisabled",
+        "properties.hostingEnvironmentProfile",
+        "properties.httpsOnly",
+        "properties.hyperV",
+        "properties.inProgressOperationId",
+        "properties.isDefaultContainer",
+        "properties.isXenon",
+        "properties.keyVaultReferenceIdentity",
+        "properties.lastModifiedTimeUtc",
+        "properties.maxNumberOfWorkers",
+        "properties.outboundIpAddresses",
+        "properties.possibleOutboundIpAddresses",
+        "properties.redundancyMode",
+        "properties.repositorySiteName",
+        "properties.reserved",
+        "properties.resourceGroup",
+        "properties.scmSiteAlsoStopped",
+        "properties.serverFarmId",
+        "properties.siteConfig",
+        "properties.slotSwapStatus",
+        "properties.state",
+        "properties.storageAccountRequired",
+        "properties.suspendedTill",
+        "properties.targetSwapSlot",
+        "properties.trafficManagerHostNames",
+        "properties.usageState",
+        "properties.virtualNetworkSubnetId"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

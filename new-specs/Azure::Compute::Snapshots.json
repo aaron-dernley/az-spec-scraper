@@ -1,0 +1,212 @@
+{
+  "resource": "Azure::Compute::Snapshots",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "operationId": "Snapshots_CreateOrUpdate",
+      "bodySchema": "Snapshot",
+      "requiredProperties": [
+        "properties.creationData"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "managedBy",
+        "properties",
+        "properties.completionPercent",
+        "properties.copyCompletionError",
+        "properties.dataAccessAuthMode",
+        "properties.diskAccessId",
+        "properties.diskSizeBytes",
+        "properties.diskSizeGB",
+        "properties.diskState",
+        "properties.encryption",
+        "properties.encryptionSettingsCollection",
+        "properties.hyperVGeneration",
+        "properties.incremental",
+        "properties.incrementalSnapshotFamilyId",
+        "properties.networkAccessPolicy",
+        "properties.osType",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.purchasePlan",
+        "properties.securityProfile",
+        "properties.supportedCapabilities",
+        "properties.supportsHibernation",
+        "properties.timeCreated",
+        "properties.uniqueId",
+        "sku",
+        "sku.name",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The max name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Update",
+      "bodySchema": "SnapshotUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.dataAccessAuthMode",
+        "properties.diskAccessId",
+        "properties.diskSizeGB",
+        "properties.encryption",
+        "properties.encryptionSettingsCollection",
+        "properties.networkAccessPolicy",
+        "properties.osType",
+        "properties.publicNetworkAccess",
+        "properties.supportedCapabilities",
+        "properties.supportsHibernation",
+        "sku",
+        "sku.name",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The max name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Get",
+      "pathParameters": [
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The max name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+      "operationId": "Snapshots_Delete",
+      "pathParameters": [
+        {
+          "name": "snapshotName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9, _ and -. The max name length is 80 characters."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots",
+      "operationId": "Snapshots_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/snapshots",
+      "operationId": "Snapshots_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "resource": "Azure::StandbyPool::StandbyContainerGroupPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StandbyPool/standbyContainerGroupPools",
+      "operationId": "StandbyContainerGroupPools_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools",
+      "operationId": "StandbyContainerGroupPools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools/{standbyContainerGroupPoolName}",
+      "operationId": "StandbyContainerGroupPools_Get",
+      "pathParameters": [
+        {
+          "name": "standbyContainerGroupPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby container group pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools/{standbyContainerGroupPoolName}",
+      "operationId": "StandbyContainerGroupPools_CreateOrUpdate",
+      "bodySchema": "StandbyContainerGroupPoolResource",
+      "requiredProperties": [
+        "properties.containerGroupProperties",
+        "properties.containerGroupProperties.containerGroupProfile",
+        "properties.containerGroupProperties.containerGroupProfile.id",
+        "properties.elasticityProfile",
+        "properties.elasticityProfile.maxReadyCapacity"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.containerGroupProperties.containerGroupProfile.revision",
+        "properties.containerGroupProperties.subnetIds",
+        "properties.elasticityProfile.refillPolicy",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "standbyContainerGroupPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby container group pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools/{standbyContainerGroupPoolName}",
+      "operationId": "StandbyContainerGroupPools_Update",
+      "bodySchema": "StandbyContainerGroupPoolResourceUpdate",
+      "requiredProperties": [
+        "properties.containerGroupProperties.containerGroupProfile",
+        "properties.containerGroupProperties.containerGroupProfile.id",
+        "properties.elasticityProfile.maxReadyCapacity"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.containerGroupProperties",
+        "properties.containerGroupProperties.containerGroupProfile.revision",
+        "properties.containerGroupProperties.subnetIds",
+        "properties.elasticityProfile",
+        "properties.elasticityProfile.refillPolicy",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "standbyContainerGroupPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby container group pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StandbyPool/standbyContainerGroupPools/{standbyContainerGroupPoolName}",
+      "operationId": "StandbyContainerGroupPools_Delete",
+      "pathParameters": [
+        {
+          "name": "standbyContainerGroupPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the standby container group pool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

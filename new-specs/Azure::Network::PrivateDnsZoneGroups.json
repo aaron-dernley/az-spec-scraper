@@ -1,0 +1,152 @@
+{
+  "resource": "Azure::Network::PrivateDnsZoneGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}",
+      "operationId": "PrivateDnsZoneGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        },
+        {
+          "name": "privateDnsZoneGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private dns zone group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}",
+      "operationId": "PrivateDnsZoneGroups_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        },
+        {
+          "name": "privateDnsZoneGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private dns zone group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}",
+      "operationId": "PrivateDnsZoneGroups_CreateOrUpdate",
+      "bodySchema": "PrivateDnsZoneGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.privateDnsZoneConfigs",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        },
+        {
+          "name": "privateDnsZoneGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private dns zone group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups",
+      "operationId": "PrivateDnsZoneGroups_List",
+      "pathParameters": [
+        {
+          "name": "privateEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the private endpoint."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

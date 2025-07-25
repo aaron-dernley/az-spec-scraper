@@ -1,0 +1,217 @@
+{
+  "resource": "Azure::Network::StaticCidrs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs",
+      "operationId": "StaticCidrs_List",
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Pool resource name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional skip token."
+        },
+        {
+          "name": "skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Optional num entries to skip."
+        },
+        {
+          "name": "top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Optional num entries to show."
+        },
+        {
+          "name": "sortKey",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional key by which to sort."
+        },
+        {
+          "name": "sortValue",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional sort value for pagination."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}",
+      "operationId": "StaticCidrs_Create",
+      "bodySchema": "StaticCidr",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.addressPrefixes",
+        "properties.description",
+        "properties.numberOfIPAddressesToAllocate",
+        "properties.provisioningState",
+        "properties.totalNumberOfIPAddresses"
+      ],
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "IP Address Manager Pool resource name."
+        },
+        {
+          "name": "staticCidrName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Static Cidr allocation name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}",
+      "operationId": "StaticCidrs_Get",
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Pool resource name."
+        },
+        {
+          "name": "staticCidrName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "StaticCidr resource name to retrieve."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}",
+      "operationId": "StaticCidrs_Delete",
+      "pathParameters": [
+        {
+          "name": "poolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Pool resource name."
+        },
+        {
+          "name": "staticCidrName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "StaticCidr resource name to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

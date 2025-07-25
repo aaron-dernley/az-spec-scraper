@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::App::ContainerApps",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.App/containerApps",
+      "operationId": "ContainerApps_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps",
+      "operationId": "ContainerApps_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}",
+      "operationId": "ContainerApps_Get",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}",
+      "operationId": "ContainerApps_CreateOrUpdate",
+      "bodySchema": "ContainerApp",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.configuration",
+        "properties.configuration.activeRevisionsMode",
+        "properties.configuration.dapr",
+        "properties.configuration.dapr.appId",
+        "properties.configuration.dapr.appPort",
+        "properties.configuration.dapr.appProtocol",
+        "properties.configuration.dapr.enabled",
+        "properties.configuration.ingress",
+        "properties.configuration.ingress.allowInsecure",
+        "properties.configuration.ingress.customDomains",
+        "properties.configuration.ingress.external",
+        "properties.configuration.ingress.fqdn",
+        "properties.configuration.ingress.targetPort",
+        "properties.configuration.ingress.traffic",
+        "properties.configuration.ingress.transport",
+        "properties.configuration.registries",
+        "properties.configuration.secrets",
+        "properties.customDomainVerificationId",
+        "properties.latestRevisionFqdn",
+        "properties.latestRevisionName",
+        "properties.managedEnvironmentId",
+        "properties.outboundIpAddresses",
+        "properties.provisioningState",
+        "properties.template"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}",
+      "operationId": "ContainerApps_Delete",
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}",
+      "operationId": "ContainerApps_Update",
+      "bodySchema": "ContainerApp",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.configuration",
+        "properties.configuration.activeRevisionsMode",
+        "properties.configuration.dapr",
+        "properties.configuration.dapr.appId",
+        "properties.configuration.dapr.appPort",
+        "properties.configuration.dapr.appProtocol",
+        "properties.configuration.dapr.enabled",
+        "properties.configuration.ingress",
+        "properties.configuration.ingress.allowInsecure",
+        "properties.configuration.ingress.customDomains",
+        "properties.configuration.ingress.external",
+        "properties.configuration.ingress.fqdn",
+        "properties.configuration.ingress.targetPort",
+        "properties.configuration.ingress.traffic",
+        "properties.configuration.ingress.transport",
+        "properties.configuration.registries",
+        "properties.configuration.secrets",
+        "properties.customDomainVerificationId",
+        "properties.latestRevisionFqdn",
+        "properties.latestRevisionName",
+        "properties.managedEnvironmentId",
+        "properties.outboundIpAddresses",
+        "properties.provisioningState",
+        "properties.template"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerAppName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Container App."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

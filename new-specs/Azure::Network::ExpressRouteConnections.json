@@ -1,0 +1,163 @@
+{
+  "resource": "Azure::Network::ExpressRouteConnections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteGateways/{expressRouteGatewayName}/expressRouteConnections/{connectionName}",
+      "operationId": "ExpressRouteConnections_CreateOrUpdate",
+      "bodySchema": "ExpressRouteConnection",
+      "requiredProperties": [
+        "name",
+        "properties.expressRouteCircuitPeering"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.authorizationKey",
+        "properties.enableInternetSecurity",
+        "properties.expressRouteCircuitPeering.id",
+        "properties.provisioningState",
+        "properties.routingConfiguration",
+        "properties.routingConfiguration.associatedRouteTable",
+        "properties.routingConfiguration.propagatedRouteTables",
+        "properties.routingConfiguration.propagatedRouteTables.ids",
+        "properties.routingConfiguration.propagatedRouteTables.labels",
+        "properties.routingConfiguration.vnetRoutes",
+        "properties.routingConfiguration.vnetRoutes.staticRoutes",
+        "properties.routingWeight"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "expressRouteGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ExpressRoute gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection subresource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteGateways/{expressRouteGatewayName}/expressRouteConnections/{connectionName}",
+      "operationId": "ExpressRouteConnections_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "expressRouteGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ExpressRoute gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ExpressRoute connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteGateways/{expressRouteGatewayName}/expressRouteConnections/{connectionName}",
+      "operationId": "ExpressRouteConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "expressRouteGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ExpressRoute gateway."
+        },
+        {
+          "name": "connectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the connection subresource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteGateways/{expressRouteGatewayName}/expressRouteConnections",
+      "operationId": "ExpressRouteConnections_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "expressRouteGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ExpressRoute gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "resource": "Azure::Network::Connections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}/connections",
+      "operationId": "VirtualNetworkGateways_ListConnections",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}",
+      "operationId": "VirtualNetworkGatewayConnections_CreateOrUpdate",
+      "bodySchema": "VirtualNetworkGatewayConnection",
+      "requiredProperties": [
+        "properties",
+        "properties.connectionType",
+        "properties.localNetworkGateway2.properties",
+        "properties.virtualNetworkGateway1",
+        "properties.virtualNetworkGateway1.properties",
+        "properties.virtualNetworkGateway2.properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.authorizationKey",
+        "properties.connectionMode",
+        "properties.connectionProtocol",
+        "properties.connectionStatus",
+        "properties.dpdTimeoutSeconds",
+        "properties.egressBytesTransferred",
+        "properties.enableBgp",
+        "properties.expressRouteGatewayBypass",
+        "properties.ingressBytesTransferred",
+        "properties.ipsecPolicies",
+        "properties.localNetworkGateway2",
+        "properties.localNetworkGateway2.etag",
+        "properties.localNetworkGateway2.properties.bgpSettings",
+        "properties.localNetworkGateway2.properties.bgpSettings.asn",
+        "properties.localNetworkGateway2.properties.bgpSettings.bgpPeeringAddress",
+        "properties.localNetworkGateway2.properties.bgpSettings.bgpPeeringAddresses",
+        "properties.localNetworkGateway2.properties.bgpSettings.peerWeight",
+        "properties.localNetworkGateway2.properties.fqdn",
+        "properties.localNetworkGateway2.properties.gatewayIpAddress",
+        "properties.localNetworkGateway2.properties.localNetworkAddressSpace",
+        "properties.localNetworkGateway2.properties.provisioningState",
+        "properties.localNetworkGateway2.properties.resourceGuid",
+        "properties.peer",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "properties.routingWeight",
+        "properties.sharedKey",
+        "properties.trafficSelectorPolicies",
+        "properties.tunnelConnectionStatus",
+        "properties.useLocalAzureIpAddress",
+        "properties.usePolicyBasedTrafficSelectors",
+        "properties.virtualNetworkGateway1.etag",
+        "properties.virtualNetworkGateway1.extendedLocation",
+        "properties.virtualNetworkGateway1.properties.activeActive",
+        "properties.virtualNetworkGateway1.properties.bgpSettings",
+        "properties.virtualNetworkGateway1.properties.bgpSettings.asn",
+        "properties.virtualNetworkGateway1.properties.bgpSettings.bgpPeeringAddress",
+        "properties.virtualNetworkGateway1.properties.bgpSettings.bgpPeeringAddresses",
+        "properties.virtualNetworkGateway1.properties.bgpSettings.peerWeight",
+        "properties.virtualNetworkGateway1.properties.customRoutes",
+        "properties.virtualNetworkGateway1.properties.enableBgp",
+        "properties.virtualNetworkGateway1.properties.enableDnsForwarding",
+        "properties.virtualNetworkGateway1.properties.enablePrivateIpAddress",
+        "properties.virtualNetworkGateway1.properties.gatewayDefaultSite",
+        "properties.virtualNetworkGateway1.properties.gatewayType",
+        "properties.virtualNetworkGateway1.properties.inboundDnsForwardingEndpoint",
+        "properties.virtualNetworkGateway1.properties.ipConfigurations",
+        "properties.virtualNetworkGateway1.properties.provisioningState",
+        "properties.virtualNetworkGateway1.properties.resourceGuid",
+        "properties.virtualNetworkGateway1.properties.sku",
+        "properties.virtualNetworkGateway1.properties.sku.capacity",
+        "properties.virtualNetworkGateway1.properties.sku.name",
+        "properties.virtualNetworkGateway1.properties.sku.tier",
+        "properties.virtualNetworkGateway1.properties.vNetExtendedLocationResourceId",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.aadAudience",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.aadIssuer",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.aadTenant",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.radiusServerAddress",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.radiusServerSecret",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.radiusServers",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.vpnClientAddressPool",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.vpnClientIpsecPolicies",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.vpnClientProtocols",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.vpnClientRevokedCertificates",
+        "properties.virtualNetworkGateway1.properties.vpnClientConfiguration.vpnClientRootCertificates",
+        "properties.virtualNetworkGateway1.properties.vpnGatewayGeneration",
+        "properties.virtualNetworkGateway1.properties.vpnType",
+        "properties.virtualNetworkGateway2",
+        "properties.virtualNetworkGateway2.etag",
+        "properties.virtualNetworkGateway2.extendedLocation",
+        "properties.virtualNetworkGateway2.properties.activeActive",
+        "properties.virtualNetworkGateway2.properties.bgpSettings",
+        "properties.virtualNetworkGateway2.properties.bgpSettings.asn",
+        "properties.virtualNetworkGateway2.properties.bgpSettings.bgpPeeringAddress",
+        "properties.virtualNetworkGateway2.properties.bgpSettings.bgpPeeringAddresses",
+        "properties.virtualNetworkGateway2.properties.bgpSettings.peerWeight",
+        "properties.virtualNetworkGateway2.properties.customRoutes",
+        "properties.virtualNetworkGateway2.properties.enableBgp",
+        "properties.virtualNetworkGateway2.properties.enableDnsForwarding",
+        "properties.virtualNetworkGateway2.properties.enablePrivateIpAddress",
+        "properties.virtualNetworkGateway2.properties.gatewayDefaultSite",
+        "properties.virtualNetworkGateway2.properties.gatewayType",
+        "properties.virtualNetworkGateway2.properties.inboundDnsForwardingEndpoint",
+        "properties.virtualNetworkGateway2.properties.ipConfigurations",
+        "properties.virtualNetworkGateway2.properties.provisioningState",
+        "properties.virtualNetworkGateway2.properties.resourceGuid",
+        "properties.virtualNetworkGateway2.properties.sku",
+        "properties.virtualNetworkGateway2.properties.sku.capacity",
+        "properties.virtualNetworkGateway2.properties.sku.name",
+        "properties.virtualNetworkGateway2.properties.sku.tier",
+        "properties.virtualNetworkGateway2.properties.vNetExtendedLocationResourceId",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.aadAudience",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.aadIssuer",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.aadTenant",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.radiusServerAddress",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.radiusServerSecret",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.radiusServers",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.vpnClientAddressPool",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.vpnClientIpsecPolicies",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.vpnClientProtocols",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.vpnClientRevokedCertificates",
+        "properties.virtualNetworkGateway2.properties.vpnClientConfiguration.vpnClientRootCertificates",
+        "properties.virtualNetworkGateway2.properties.vpnGatewayGeneration",
+        "properties.virtualNetworkGateway2.properties.vpnType"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}",
+      "operationId": "VirtualNetworkGatewayConnections_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}",
+      "operationId": "VirtualNetworkGatewayConnections_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}",
+      "operationId": "VirtualNetworkGatewayConnections_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway connection."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections",
+      "operationId": "VirtualNetworkGatewayConnections_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

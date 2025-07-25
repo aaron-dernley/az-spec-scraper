@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::AzureStackHCI::GalleryImages",
+  "version": "2024-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/galleryImages/{galleryImageName}",
+      "operationId": "GalleryImages_Get",
+      "pathParameters": [
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/galleryImages/{galleryImageName}",
+      "operationId": "GalleryImages_CreateOrUpdate",
+      "bodySchema": "GalleryImages",
+      "requiredProperties": [
+        "properties.identifier.offer",
+        "properties.identifier.publisher",
+        "properties.identifier.sku",
+        "properties.osType",
+        "properties.version.properties.storageProfile"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.cloudInitDataSource",
+        "properties.containerId",
+        "properties.hyperVGeneration",
+        "properties.identifier",
+        "properties.imagePath",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.status.downloadStatus",
+        "properties.status.downloadStatus.downloadSizeInMB",
+        "properties.status.errorCode",
+        "properties.status.errorMessage",
+        "properties.status.progressPercentage",
+        "properties.status.provisioningStatus",
+        "properties.status.provisioningStatus.operationId",
+        "properties.status.provisioningStatus.status",
+        "properties.version",
+        "properties.version.name",
+        "properties.version.properties",
+        "properties.version.properties.storageProfile.osDiskImage",
+        "properties.version.properties.storageProfile.osDiskImage.sizeInMB"
+      ],
+      "pathParameters": [
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/galleryImages/{galleryImageName}",
+      "operationId": "GalleryImages_Delete",
+      "pathParameters": [
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/galleryImages/{galleryImageName}",
+      "operationId": "GalleryImages_Update",
+      "bodySchema": "GalleryImagesUpdateRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the gallery image"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureStackHCI/galleryImages",
+      "operationId": "GalleryImages_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureStackHCI/galleryImages",
+      "operationId": "GalleryImages_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

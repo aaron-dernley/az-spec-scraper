@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::Network::VirtualNetworks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "operationId": "VirtualNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "operationId": "VirtualNetworks_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Expands referenced resources."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "operationId": "VirtualNetworks_CreateOrUpdate",
+      "bodySchema": "VirtualNetwork",
+      "requiredProperties": [
+        "properties.bgpCommunities.virtualNetworkCommunity"
+      ],
+      "optionalProperties": [
+        "etag",
+        "extendedLocation",
+        "properties",
+        "properties.addressSpace",
+        "properties.addressSpace.addressPrefixes",
+        "properties.bgpCommunities",
+        "properties.bgpCommunities.regionalCommunity",
+        "properties.ddosProtectionPlan",
+        "properties.dhcpOptions",
+        "properties.dhcpOptions.dnsServers",
+        "properties.enableDdosProtection",
+        "properties.enableVmProtection",
+        "properties.ipAllocations",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "properties.subnets",
+        "properties.virtualNetworkPeerings"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}",
+      "operationId": "VirtualNetworks_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/virtualNetworks",
+      "operationId": "VirtualNetworks_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks",
+      "operationId": "VirtualNetworks_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

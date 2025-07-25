@@ -1,0 +1,153 @@
+{
+  "resource": "Azure::HybridCompute::ConfigurationProfileAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.Automanage/configurationProfileAssignments/{configurationProfileAssignmentName}",
+      "operationId": "ConfigurationProfileHCRPAssignments_CreateOrUpdate",
+      "bodySchema": "ConfigurationProfileAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "managedBy",
+        "properties",
+        "properties.configurationProfile",
+        "properties.status",
+        "properties.targetId",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Arc machine."
+        },
+        {
+          "name": "configurationProfileAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the configuration profile assignment. Only default is supported."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.Automanage/configurationProfileAssignments/{configurationProfileAssignmentName}",
+      "operationId": "ConfigurationProfileHCRPAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Arc machine."
+        },
+        {
+          "name": "configurationProfileAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The configuration profile assignment name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.Automanage/configurationProfileAssignments/{configurationProfileAssignmentName}",
+      "operationId": "ConfigurationProfileHCRPAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Arc machine."
+        },
+        {
+          "name": "configurationProfileAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the configuration profile assignment"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}/providers/Microsoft.Automanage/configurationProfileAssignments",
+      "operationId": "ConfigurationProfileAssignments_ListByMachineName",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Arc machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

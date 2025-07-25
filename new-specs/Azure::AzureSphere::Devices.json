@@ -1,0 +1,267 @@
+{
+  "resource": "Azure::AzureSphere::Devices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/devices",
+      "operationId": "Devices_ListByDeviceGroup",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/devices/{deviceName}",
+      "operationId": "Devices_Get",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/devices/{deviceName}",
+      "operationId": "Devices_CreateOrUpdate",
+      "bodySchema": "Device",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.chipSku",
+        "properties.deviceId",
+        "properties.lastAvailableOsVersion",
+        "properties.lastInstalledOsVersion",
+        "properties.lastOsUpdateUtc",
+        "properties.lastUpdateRequestUtc",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/devices/{deviceName}",
+      "operationId": "Devices_Update",
+      "bodySchema": "DeviceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.deviceGroupId"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/products/{productName}/deviceGroups/{deviceGroupName}/devices/{deviceName}",
+      "operationId": "Devices_Delete",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "productName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of product."
+        },
+        {
+          "name": "deviceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of device group."
+        },
+        {
+          "name": "deviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Device name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

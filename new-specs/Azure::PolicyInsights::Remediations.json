@@ -1,0 +1,650 @@
+{
+  "resource": "Azure::PolicyInsights::Remediations",
+  "version": "2019-07-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations",
+      "operationId": "Remediations_ListForManagementGroup",
+      "pathParameters": [
+        {
+          "name": "managementGroupsNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace for Microsoft Management RP; only \"Microsoft.Management\" is allowed."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management group ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_CreateOrUpdateAtManagementGroup",
+      "bodySchema": "Remediation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdOn",
+        "properties.deploymentStatus",
+        "properties.deploymentStatus.failedDeployments",
+        "properties.deploymentStatus.successfulDeployments",
+        "properties.deploymentStatus.totalDeployments",
+        "properties.filters",
+        "properties.filters.locations",
+        "properties.lastUpdatedOn",
+        "properties.policyAssignmentId",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "properties.resourceDiscoveryMode",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "managementGroupsNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace for Microsoft Management RP; only \"Microsoft.Management\" is allowed."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management group ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_GetAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "managementGroupsNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace for Microsoft Management RP; only \"Microsoft.Management\" is allowed."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management group ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_DeleteAtManagementGroup",
+      "pathParameters": [
+        {
+          "name": "managementGroupsNamespace",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The namespace for Microsoft Management RP; only \"Microsoft.Management\" is allowed."
+        },
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management group ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/remediations",
+      "operationId": "Remediations_ListForSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_CreateOrUpdateAtSubscription",
+      "bodySchema": "Remediation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdOn",
+        "properties.deploymentStatus",
+        "properties.deploymentStatus.failedDeployments",
+        "properties.deploymentStatus.successfulDeployments",
+        "properties.deploymentStatus.totalDeployments",
+        "properties.filters",
+        "properties.filters.locations",
+        "properties.lastUpdatedOn",
+        "properties.policyAssignmentId",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "properties.resourceDiscoveryMode",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_GetAtSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_DeleteAtSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/remediations",
+      "operationId": "Remediations_ListForResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_CreateOrUpdateAtResourceGroup",
+      "bodySchema": "Remediation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdOn",
+        "properties.deploymentStatus",
+        "properties.deploymentStatus.failedDeployments",
+        "properties.deploymentStatus.successfulDeployments",
+        "properties.deploymentStatus.totalDeployments",
+        "properties.filters",
+        "properties.filters.locations",
+        "properties.lastUpdatedOn",
+        "properties.policyAssignmentId",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "properties.resourceDiscoveryMode",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_GetAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_DeleteAtResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Microsoft Azure subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group name."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/remediations",
+      "operationId": "Remediations_ListForResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of records to return."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_CreateOrUpdateAtResource",
+      "bodySchema": "Remediation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.createdOn",
+        "properties.deploymentStatus",
+        "properties.deploymentStatus.failedDeployments",
+        "properties.deploymentStatus.successfulDeployments",
+        "properties.deploymentStatus.totalDeployments",
+        "properties.filters",
+        "properties.filters.locations",
+        "properties.lastUpdatedOn",
+        "properties.policyAssignmentId",
+        "properties.policyDefinitionReferenceId",
+        "properties.provisioningState",
+        "properties.resourceDiscoveryMode",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_GetAtResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+      "operationId": "Remediations_DeleteAtResource",
+      "pathParameters": [
+        {
+          "name": "resourceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource ID."
+        },
+        {
+          "name": "remediationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the remediation."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

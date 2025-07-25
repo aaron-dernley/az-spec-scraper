@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::Compute::CapacityReservations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+      "operationId": "CapacityReservations_CreateOrUpdate",
+      "bodySchema": "CapacityReservation",
+      "requiredProperties": [
+        "sku"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.instanceView",
+        "properties.instanceView.statuses",
+        "properties.instanceView.utilizationInfo",
+        "properties.instanceView.utilizationInfo.virtualMachinesAllocated",
+        "properties.provisioningState",
+        "properties.provisioningTime",
+        "properties.reservationId",
+        "properties.timeCreated",
+        "properties.virtualMachinesAssociated",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "capacityReservationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation group."
+        },
+        {
+          "name": "capacityReservationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+      "operationId": "CapacityReservations_Update",
+      "bodySchema": "CapacityReservationUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.instanceView",
+        "properties.instanceView.statuses",
+        "properties.instanceView.utilizationInfo",
+        "properties.instanceView.utilizationInfo.virtualMachinesAllocated",
+        "properties.provisioningState",
+        "properties.provisioningTime",
+        "properties.reservationId",
+        "properties.timeCreated",
+        "properties.virtualMachinesAssociated",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "capacityReservationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation group."
+        },
+        {
+          "name": "capacityReservationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+      "operationId": "CapacityReservations_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "capacityReservationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation group."
+        },
+        {
+          "name": "capacityReservationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations/{capacityReservationName}",
+      "operationId": "CapacityReservations_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "capacityReservationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation group."
+        },
+        {
+          "name": "capacityReservationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/capacityReservationGroups/{capacityReservationGroupName}/capacityReservations",
+      "operationId": "CapacityReservations_ListByCapacityReservationGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "capacityReservationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the capacity reservation group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

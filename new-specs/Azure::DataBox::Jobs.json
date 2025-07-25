@@ -1,0 +1,442 @@
+{
+  "resource": "Azure::DataBox::Jobs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DataBox/jobs",
+      "operationId": "Jobs_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of jobs, which provides the next page in the list of jobs."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBox/jobs",
+      "operationId": "Jobs_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        },
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$skipToken is supported on Get list of jobs, which provides the next page in the list of jobs."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBox/jobs/{jobName}",
+      "operationId": "Jobs_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        },
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "$expand is supported on details parameter for job, which provides details on the job stages."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBox/jobs/{jobName}",
+      "operationId": "Jobs_Create",
+      "bodySchema": "JobResource",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.details.contactDetails",
+        "properties.details.contactDetails.contactName",
+        "properties.details.contactDetails.emailList",
+        "properties.details.contactDetails.phone",
+        "properties.details.datacenterAddress.datacenterAddressType",
+        "properties.details.jobDetailsType",
+        "properties.details.keyEncryptionKey.kekType",
+        "properties.details.preferences.reverseTransportPreferences.preferredShipmentType",
+        "properties.details.preferences.transportPreferences.preferredShipmentType",
+        "properties.details.reverseShippingDetails.contactDetails.contactName",
+        "properties.details.reverseShippingDetails.contactDetails.phone",
+        "properties.details.reverseShippingDetails.shippingAddress.country",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress1",
+        "properties.details.shippingAddress.country",
+        "properties.details.shippingAddress.streetAddress1",
+        "properties.transferType",
+        "sku",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "name",
+        "properties.cancellationReason",
+        "properties.deliveryInfo",
+        "properties.deliveryInfo.scheduledDateTime",
+        "properties.deliveryType",
+        "properties.details",
+        "properties.details.actions",
+        "properties.details.chainOfCustodySasKey",
+        "properties.details.contactDetails.mobile",
+        "properties.details.contactDetails.notificationPreference",
+        "properties.details.contactDetails.phoneExtension",
+        "properties.details.copyLogDetails",
+        "properties.details.dataCenterCode",
+        "properties.details.dataExportDetails",
+        "properties.details.dataImportDetails",
+        "properties.details.datacenterAddress",
+        "properties.details.datacenterAddress.dataCenterAzureLocation",
+        "properties.details.datacenterAddress.supportedCarriersForReturnShipment",
+        "properties.details.deliveryPackage",
+        "properties.details.deliveryPackage.carrierName",
+        "properties.details.deliveryPackage.trackingId",
+        "properties.details.deliveryPackage.trackingUrl",
+        "properties.details.deviceErasureDetails",
+        "properties.details.deviceErasureDetails.deviceErasureStatus",
+        "properties.details.deviceErasureDetails.erasureOrDestructionCertificateSasKey",
+        "properties.details.expectedDataSizeInTeraBytes",
+        "properties.details.jobStages",
+        "properties.details.keyEncryptionKey",
+        "properties.details.keyEncryptionKey.identityProperties",
+        "properties.details.keyEncryptionKey.identityProperties.type",
+        "properties.details.keyEncryptionKey.identityProperties.userAssigned",
+        "properties.details.keyEncryptionKey.identityProperties.userAssigned.resourceId",
+        "properties.details.keyEncryptionKey.kekUrl",
+        "properties.details.keyEncryptionKey.kekVaultResourceID",
+        "properties.details.lastMitigationActionOnJob",
+        "properties.details.lastMitigationActionOnJob.actionDateTimeInUtc",
+        "properties.details.lastMitigationActionOnJob.customerResolution",
+        "properties.details.lastMitigationActionOnJob.isPerformedByCustomer",
+        "properties.details.preferences",
+        "properties.details.preferences.encryptionPreferences",
+        "properties.details.preferences.encryptionPreferences.doubleEncryption",
+        "properties.details.preferences.encryptionPreferences.hardwareEncryption",
+        "properties.details.preferences.preferredDataCenterRegion",
+        "properties.details.preferences.reverseTransportPreferences",
+        "properties.details.preferences.reverseTransportPreferences.isUpdated",
+        "properties.details.preferences.storageAccountAccessTierPreferences",
+        "properties.details.preferences.transportPreferences",
+        "properties.details.preferences.transportPreferences.isUpdated",
+        "properties.details.returnPackage",
+        "properties.details.returnPackage.carrierName",
+        "properties.details.returnPackage.trackingId",
+        "properties.details.returnPackage.trackingUrl",
+        "properties.details.reverseShipmentLabelSasKey",
+        "properties.details.reverseShippingDetails",
+        "properties.details.reverseShippingDetails.contactDetails",
+        "properties.details.reverseShippingDetails.contactDetails.mobile",
+        "properties.details.reverseShippingDetails.contactDetails.phoneExtension",
+        "properties.details.reverseShippingDetails.isUpdated",
+        "properties.details.reverseShippingDetails.shippingAddress",
+        "properties.details.reverseShippingDetails.shippingAddress.addressType",
+        "properties.details.reverseShippingDetails.shippingAddress.city",
+        "properties.details.reverseShippingDetails.shippingAddress.companyName",
+        "properties.details.reverseShippingDetails.shippingAddress.postalCode",
+        "properties.details.reverseShippingDetails.shippingAddress.skipAddressValidation",
+        "properties.details.reverseShippingDetails.shippingAddress.stateOrProvince",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress2",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress3",
+        "properties.details.reverseShippingDetails.shippingAddress.taxIdentificationNumber",
+        "properties.details.reverseShippingDetails.shippingAddress.zipExtendedCode",
+        "properties.details.shippingAddress",
+        "properties.details.shippingAddress.addressType",
+        "properties.details.shippingAddress.city",
+        "properties.details.shippingAddress.companyName",
+        "properties.details.shippingAddress.postalCode",
+        "properties.details.shippingAddress.skipAddressValidation",
+        "properties.details.shippingAddress.stateOrProvince",
+        "properties.details.shippingAddress.streetAddress2",
+        "properties.details.shippingAddress.streetAddress3",
+        "properties.details.shippingAddress.taxIdentificationNumber",
+        "properties.details.shippingAddress.zipExtendedCode",
+        "properties.error",
+        "properties.error.additionalInfo",
+        "properties.error.code",
+        "properties.error.details",
+        "properties.error.message",
+        "properties.error.target",
+        "properties.isCancellable",
+        "properties.isCancellableWithoutFee",
+        "properties.isDeletable",
+        "properties.isPrepareToShipEnabled",
+        "properties.isShippingAddressEditable",
+        "properties.reverseShippingDetailsUpdate",
+        "properties.reverseTransportPreferenceUpdate",
+        "properties.startTime",
+        "properties.status",
+        "sku.displayName",
+        "sku.family",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBox/jobs/{jobName}",
+      "operationId": "Jobs_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataBox/jobs/{jobName}",
+      "operationId": "Jobs_Update",
+      "bodySchema": "JobResourceUpdateParameter",
+      "requiredProperties": [
+        "properties.details.contactDetails.contactName",
+        "properties.details.contactDetails.emailList",
+        "properties.details.contactDetails.phone",
+        "properties.details.keyEncryptionKey.kekType",
+        "properties.details.preferences.reverseTransportPreferences.preferredShipmentType",
+        "properties.details.preferences.transportPreferences.preferredShipmentType",
+        "properties.details.reverseShippingDetails.contactDetails.contactName",
+        "properties.details.reverseShippingDetails.contactDetails.phone",
+        "properties.details.reverseShippingDetails.shippingAddress.country",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress1",
+        "properties.details.shippingAddress.country",
+        "properties.details.shippingAddress.streetAddress1"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.details",
+        "properties.details.contactDetails",
+        "properties.details.contactDetails.mobile",
+        "properties.details.contactDetails.notificationPreference",
+        "properties.details.contactDetails.phoneExtension",
+        "properties.details.keyEncryptionKey",
+        "properties.details.keyEncryptionKey.identityProperties",
+        "properties.details.keyEncryptionKey.identityProperties.type",
+        "properties.details.keyEncryptionKey.identityProperties.userAssigned",
+        "properties.details.keyEncryptionKey.identityProperties.userAssigned.resourceId",
+        "properties.details.keyEncryptionKey.kekUrl",
+        "properties.details.keyEncryptionKey.kekVaultResourceID",
+        "properties.details.preferences",
+        "properties.details.preferences.encryptionPreferences",
+        "properties.details.preferences.encryptionPreferences.doubleEncryption",
+        "properties.details.preferences.encryptionPreferences.hardwareEncryption",
+        "properties.details.preferences.preferredDataCenterRegion",
+        "properties.details.preferences.reverseTransportPreferences",
+        "properties.details.preferences.reverseTransportPreferences.isUpdated",
+        "properties.details.preferences.storageAccountAccessTierPreferences",
+        "properties.details.preferences.transportPreferences",
+        "properties.details.preferences.transportPreferences.isUpdated",
+        "properties.details.returnToCustomerPackageDetails",
+        "properties.details.returnToCustomerPackageDetails.carrierAccountNumber",
+        "properties.details.returnToCustomerPackageDetails.carrierName",
+        "properties.details.returnToCustomerPackageDetails.trackingId",
+        "properties.details.reverseShippingDetails",
+        "properties.details.reverseShippingDetails.contactDetails",
+        "properties.details.reverseShippingDetails.contactDetails.mobile",
+        "properties.details.reverseShippingDetails.contactDetails.phoneExtension",
+        "properties.details.reverseShippingDetails.isUpdated",
+        "properties.details.reverseShippingDetails.shippingAddress",
+        "properties.details.reverseShippingDetails.shippingAddress.addressType",
+        "properties.details.reverseShippingDetails.shippingAddress.city",
+        "properties.details.reverseShippingDetails.shippingAddress.companyName",
+        "properties.details.reverseShippingDetails.shippingAddress.postalCode",
+        "properties.details.reverseShippingDetails.shippingAddress.skipAddressValidation",
+        "properties.details.reverseShippingDetails.shippingAddress.stateOrProvince",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress2",
+        "properties.details.reverseShippingDetails.shippingAddress.streetAddress3",
+        "properties.details.reverseShippingDetails.shippingAddress.taxIdentificationNumber",
+        "properties.details.reverseShippingDetails.shippingAddress.zipExtendedCode",
+        "properties.details.shippingAddress",
+        "properties.details.shippingAddress.addressType",
+        "properties.details.shippingAddress.city",
+        "properties.details.shippingAddress.companyName",
+        "properties.details.shippingAddress.postalCode",
+        "properties.details.shippingAddress.skipAddressValidation",
+        "properties.details.shippingAddress.stateOrProvince",
+        "properties.details.shippingAddress.streetAddress2",
+        "properties.details.shippingAddress.streetAddress3",
+        "properties.details.shippingAddress.taxIdentificationNumber",
+        "properties.details.shippingAddress.zipExtendedCode",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Subscription Id"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Resource Group Name"
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API Version"
+        }
+      ]
+    }
+  ]
+}

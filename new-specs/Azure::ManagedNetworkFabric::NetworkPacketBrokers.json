@@ -1,0 +1,174 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkPacketBrokers",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers/{networkPacketBrokerName}",
+      "operationId": "NetworkPacketBrokers_Create",
+      "bodySchema": "NetworkPacketBroker",
+      "requiredProperties": [
+        "properties",
+        "properties.networkFabricId"
+      ],
+      "optionalProperties": [
+        "properties.neighborGroupIds",
+        "properties.networkDeviceIds",
+        "properties.networkTapIds",
+        "properties.provisioningState",
+        "properties.sourceInterfaceIds"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkPacketBrokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Packet Broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers/{networkPacketBrokerName}",
+      "operationId": "NetworkPacketBrokers_Get",
+      "pathParameters": [
+        {
+          "name": "networkPacketBrokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Packet Broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers/{networkPacketBrokerName}",
+      "operationId": "NetworkPacketBrokers_Update",
+      "bodySchema": "NetworkPacketBrokerPatch",
+      "requiredProperties": [],
+      "optionalProperties": [],
+      "pathParameters": [
+        {
+          "name": "networkPacketBrokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Packet Broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers/{networkPacketBrokerName}",
+      "operationId": "NetworkPacketBrokers_Delete",
+      "pathParameters": [
+        {
+          "name": "networkPacketBrokerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Packet Broker."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers",
+      "operationId": "NetworkPacketBrokers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkPacketBrokers",
+      "operationId": "NetworkPacketBrokers_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

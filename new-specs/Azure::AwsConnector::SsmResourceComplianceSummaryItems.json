@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::AwsConnector::SsmResourceComplianceSummaryItems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems",
+      "operationId": "SsmResourceComplianceSummaryItems_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems",
+      "operationId": "SsmResourceComplianceSummaryItems_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems/{name}",
+      "operationId": "SsmResourceComplianceSummaryItems_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmResourceComplianceSummaryItem"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems/{name}",
+      "operationId": "SsmResourceComplianceSummaryItems_CreateOrReplace",
+      "bodySchema": "SsmResourceComplianceSummaryItem",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.complianceType",
+        "properties.awsProperties.compliantSummary",
+        "properties.awsProperties.compliantSummary.compliantCount",
+        "properties.awsProperties.compliantSummary.severitySummary",
+        "properties.awsProperties.compliantSummary.severitySummary.criticalCount",
+        "properties.awsProperties.compliantSummary.severitySummary.highCount",
+        "properties.awsProperties.compliantSummary.severitySummary.informationalCount",
+        "properties.awsProperties.compliantSummary.severitySummary.lowCount",
+        "properties.awsProperties.compliantSummary.severitySummary.mediumCount",
+        "properties.awsProperties.compliantSummary.severitySummary.unspecifiedCount",
+        "properties.awsProperties.executionSummary",
+        "properties.awsProperties.executionSummary.executionId",
+        "properties.awsProperties.executionSummary.executionTime",
+        "properties.awsProperties.executionSummary.executionType",
+        "properties.awsProperties.nonCompliantSummary",
+        "properties.awsProperties.nonCompliantSummary.nonCompliantCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.criticalCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.highCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.informationalCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.lowCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.mediumCount",
+        "properties.awsProperties.nonCompliantSummary.severitySummary.unspecifiedCount",
+        "properties.awsProperties.overallSeverity",
+        "properties.awsProperties.overallSeverity.value",
+        "properties.awsProperties.resourceId",
+        "properties.awsProperties.resourceType",
+        "properties.awsProperties.status",
+        "properties.awsProperties.status.value",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmResourceComplianceSummaryItem"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems/{name}",
+      "operationId": "SsmResourceComplianceSummaryItems_Update",
+      "bodySchema": "SsmResourceComplianceSummaryItemTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmResourceComplianceSummaryItem"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/ssmResourceComplianceSummaryItems/{name}",
+      "operationId": "SsmResourceComplianceSummaryItems_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of SsmResourceComplianceSummaryItem"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

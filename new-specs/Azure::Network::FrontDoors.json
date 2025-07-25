@@ -1,0 +1,151 @@
+{
+  "resource": "Azure::Network::FrontDoors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/frontDoors",
+      "operationId": "FrontDoors_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors",
+      "operationId": "FrontDoors_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}",
+      "operationId": "FrontDoors_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "frontDoorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Front Door which is globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}",
+      "operationId": "FrontDoors_CreateOrUpdate",
+      "bodySchema": "FrontDoor",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.backendPools",
+        "properties.backendPoolsSettings",
+        "properties.backendPoolsSettings.enforceCertificateNameCheck",
+        "properties.backendPoolsSettings.sendRecvTimeoutSeconds",
+        "properties.cname",
+        "properties.enabledState",
+        "properties.extendedProperties",
+        "properties.friendlyName",
+        "properties.frontdoorId",
+        "properties.frontendEndpoints",
+        "properties.healthProbeSettings",
+        "properties.loadBalancingSettings",
+        "properties.provisioningState",
+        "properties.resourceState",
+        "properties.routingRules",
+        "properties.rulesEngines"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "frontDoorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Front Door which is globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/frontDoors/{frontDoorName}",
+      "operationId": "FrontDoors_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Resource group within the Azure subscription."
+        },
+        {
+          "name": "frontDoorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Front Door which is globally unique."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

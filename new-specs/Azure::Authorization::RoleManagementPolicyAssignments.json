@@ -1,0 +1,112 @@
+{
+  "resource": "Azure::Authorization::RoleManagementPolicyAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleManagementPolicyAssignments/{roleManagementPolicyAssignmentName}",
+      "operationId": "RoleManagementPolicyAssignments_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role management policy."
+        },
+        {
+          "name": "roleManagementPolicyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of format {guid_guid} the role management policy assignment to get."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleManagementPolicyAssignments/{roleManagementPolicyAssignmentName}",
+      "operationId": "RoleManagementPolicyAssignments_Create",
+      "bodySchema": "RoleManagementPolicyAssignment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.effectiveRules",
+        "properties.policyAssignmentProperties",
+        "properties.policyAssignmentProperties.policy",
+        "properties.policyAssignmentProperties.policy.id",
+        "properties.policyAssignmentProperties.policy.lastModifiedBy",
+        "properties.policyAssignmentProperties.policy.lastModifiedDateTime",
+        "properties.policyAssignmentProperties.roleDefinition",
+        "properties.policyAssignmentProperties.roleDefinition.displayName",
+        "properties.policyAssignmentProperties.roleDefinition.id",
+        "properties.policyAssignmentProperties.roleDefinition.type",
+        "properties.policyAssignmentProperties.scope",
+        "properties.policyAssignmentProperties.scope.displayName",
+        "properties.policyAssignmentProperties.scope.id",
+        "properties.policyAssignmentProperties.scope.type",
+        "properties.policyId",
+        "properties.roleDefinitionId",
+        "properties.scope",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role management policy assignment to upsert."
+        },
+        {
+          "name": "roleManagementPolicyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of format {guid_guid} the role management policy assignment to upsert."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleManagementPolicyAssignments/{roleManagementPolicyAssignmentName}",
+      "operationId": "RoleManagementPolicyAssignments_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role management policy assignment to delete."
+        },
+        {
+          "name": "roleManagementPolicyAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of format {guid_guid} the role management policy assignment to delete."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Authorization/roleManagementPolicyAssignments",
+      "operationId": "RoleManagementPolicyAssignments_ListForScope",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the role management policy."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

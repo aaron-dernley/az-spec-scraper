@@ -1,0 +1,273 @@
+{
+  "resource": "Azure::DBforPostgreSQL::Migrations",
+  "version": "2024-08-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{targetDbServerName}/migrations/{migrationName}",
+      "operationId": "Migrations_Create",
+      "bodySchema": "MigrationResource",
+      "requiredProperties": [
+        "properties.secretParameters.adminCredentials",
+        "properties.secretParameters.adminCredentials.sourceServerPassword",
+        "properties.secretParameters.adminCredentials.targetServerPassword"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.cancel",
+        "properties.currentStatus",
+        "properties.currentStatus.currentSubStateDetails",
+        "properties.currentStatus.currentSubStateDetails.currentSubState",
+        "properties.currentStatus.currentSubStateDetails.dbDetails",
+        "properties.currentStatus.currentSubStateDetails.validationDetails",
+        "properties.currentStatus.currentSubStateDetails.validationDetails.dbLevelValidationDetails",
+        "properties.currentStatus.currentSubStateDetails.validationDetails.serverLevelValidationDetails",
+        "properties.currentStatus.currentSubStateDetails.validationDetails.status",
+        "properties.currentStatus.currentSubStateDetails.validationDetails.validationEndTimeInUtc",
+        "properties.currentStatus.currentSubStateDetails.validationDetails.validationStartTimeInUtc",
+        "properties.currentStatus.error",
+        "properties.currentStatus.state",
+        "properties.dbsToCancelMigrationOn",
+        "properties.dbsToMigrate",
+        "properties.dbsToTriggerCutoverOn",
+        "properties.migrateRoles",
+        "properties.migrationId",
+        "properties.migrationInstanceResourceId",
+        "properties.migrationMode",
+        "properties.migrationOption",
+        "properties.migrationWindowEndTimeInUtc",
+        "properties.migrationWindowStartTimeInUtc",
+        "properties.overwriteDbsInTarget",
+        "properties.secretParameters",
+        "properties.secretParameters.sourceServerUsername",
+        "properties.secretParameters.targetServerUsername",
+        "properties.setupLogicalReplicationOnSourceDbIfNeeded",
+        "properties.sourceDbServerFullyQualifiedDomainName",
+        "properties.sourceDbServerMetadata",
+        "properties.sourceDbServerMetadata.location",
+        "properties.sourceDbServerMetadata.sku",
+        "properties.sourceDbServerMetadata.sku.name",
+        "properties.sourceDbServerMetadata.sku.tier",
+        "properties.sourceDbServerMetadata.storageMb",
+        "properties.sourceDbServerMetadata.version",
+        "properties.sourceDbServerResourceId",
+        "properties.sourceType",
+        "properties.sslMode",
+        "properties.startDataMigration",
+        "properties.targetDbServerFullyQualifiedDomainName",
+        "properties.targetDbServerMetadata",
+        "properties.targetDbServerMetadata.location",
+        "properties.targetDbServerMetadata.sku",
+        "properties.targetDbServerMetadata.sku.name",
+        "properties.targetDbServerMetadata.sku.tier",
+        "properties.targetDbServerMetadata.storageMb",
+        "properties.targetDbServerMetadata.version",
+        "properties.targetDbServerResourceId",
+        "properties.triggerCutover"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of subscription of target database server."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group of target database server."
+        },
+        {
+          "name": "targetDbServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of target database server."
+        },
+        {
+          "name": "migrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of migration."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{targetDbServerName}/migrations/{migrationName}",
+      "operationId": "Migrations_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of subscription of target database server."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group of target database server."
+        },
+        {
+          "name": "targetDbServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of target database server."
+        },
+        {
+          "name": "migrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of migration."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{targetDbServerName}/migrations/{migrationName}",
+      "operationId": "Migrations_Update",
+      "bodySchema": "MigrationResourceForPatch",
+      "requiredProperties": [
+        "properties.secretParameters.adminCredentials",
+        "properties.secretParameters.adminCredentials.sourceServerPassword",
+        "properties.secretParameters.adminCredentials.targetServerPassword"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.cancel",
+        "properties.dbsToCancelMigrationOn",
+        "properties.dbsToMigrate",
+        "properties.dbsToTriggerCutoverOn",
+        "properties.migrateRoles",
+        "properties.migrationMode",
+        "properties.migrationWindowStartTimeInUtc",
+        "properties.overwriteDbsInTarget",
+        "properties.secretParameters",
+        "properties.secretParameters.sourceServerUsername",
+        "properties.secretParameters.targetServerUsername",
+        "properties.setupLogicalReplicationOnSourceDbIfNeeded",
+        "properties.sourceDbServerFullyQualifiedDomainName",
+        "properties.sourceDbServerResourceId",
+        "properties.startDataMigration",
+        "properties.targetDbServerFullyQualifiedDomainName",
+        "properties.triggerCutover",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of subscription of target database server."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group of target database server."
+        },
+        {
+          "name": "targetDbServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of target database server."
+        },
+        {
+          "name": "migrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of migration."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{targetDbServerName}/migrations/{migrationName}",
+      "operationId": "Migrations_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of subscription of target database server."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group of target database server."
+        },
+        {
+          "name": "targetDbServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of target database server."
+        },
+        {
+          "name": "migrationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of migration."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{targetDbServerName}/migrations",
+      "operationId": "Migrations_ListByTargetServer",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Identifier of subscription of target database server."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group of target database server."
+        },
+        {
+          "name": "targetDbServerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of target database server."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "migrationListFilter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Migration list filter. Retrieves either active migrations or all migrations."
+        }
+      ]
+    }
+  ]
+}

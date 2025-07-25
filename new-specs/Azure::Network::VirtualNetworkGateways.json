@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::Network::VirtualNetworkGateways",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}",
+      "operationId": "VirtualNetworkGateways_CreateOrUpdate",
+      "bodySchema": "VirtualNetworkGateway",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "extendedLocation",
+        "properties.activeActive",
+        "properties.bgpSettings",
+        "properties.bgpSettings.asn",
+        "properties.bgpSettings.bgpPeeringAddress",
+        "properties.bgpSettings.bgpPeeringAddresses",
+        "properties.bgpSettings.peerWeight",
+        "properties.customRoutes",
+        "properties.enableBgp",
+        "properties.enableDnsForwarding",
+        "properties.enablePrivateIpAddress",
+        "properties.gatewayDefaultSite",
+        "properties.gatewayType",
+        "properties.inboundDnsForwardingEndpoint",
+        "properties.ipConfigurations",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "properties.sku",
+        "properties.sku.capacity",
+        "properties.sku.name",
+        "properties.sku.tier",
+        "properties.vNetExtendedLocationResourceId",
+        "properties.vpnClientConfiguration",
+        "properties.vpnClientConfiguration.aadAudience",
+        "properties.vpnClientConfiguration.aadIssuer",
+        "properties.vpnClientConfiguration.aadTenant",
+        "properties.vpnClientConfiguration.radiusServerAddress",
+        "properties.vpnClientConfiguration.radiusServerSecret",
+        "properties.vpnClientConfiguration.radiusServers",
+        "properties.vpnClientConfiguration.vpnClientAddressPool",
+        "properties.vpnClientConfiguration.vpnClientIpsecPolicies",
+        "properties.vpnClientConfiguration.vpnClientProtocols",
+        "properties.vpnClientConfiguration.vpnClientRevokedCertificates",
+        "properties.vpnClientConfiguration.vpnClientRootCertificates",
+        "properties.vpnGatewayGeneration",
+        "properties.vpnType"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}",
+      "operationId": "VirtualNetworkGateways_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}",
+      "operationId": "VirtualNetworkGateways_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}",
+      "operationId": "VirtualNetworkGateways_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkGatewayName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network gateway."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways",
+      "operationId": "VirtualNetworkGateways_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

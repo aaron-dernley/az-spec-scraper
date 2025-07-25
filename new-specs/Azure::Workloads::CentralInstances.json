@@ -1,0 +1,228 @@
+{
+  "resource": "Azure::Workloads::CentralInstances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/centralInstances/{centralInstanceName}",
+      "operationId": "SAPCentralInstances_Get",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "centralInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Central Services Instance resource name string modeled as parameter for auto generation to work correctly."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/centralInstances/{centralInstanceName}",
+      "operationId": "SAPCentralInstances_Create",
+      "bodySchema": "SAPCentralServerInstance",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.enqueueReplicationServerProperties",
+        "properties.enqueueReplicationServerProperties.ersVersion",
+        "properties.enqueueReplicationServerProperties.health",
+        "properties.enqueueReplicationServerProperties.hostname",
+        "properties.enqueueReplicationServerProperties.instanceNo",
+        "properties.enqueueReplicationServerProperties.ipAddress",
+        "properties.enqueueReplicationServerProperties.kernelPatch",
+        "properties.enqueueReplicationServerProperties.kernelVersion",
+        "properties.enqueueServerProperties",
+        "properties.enqueueServerProperties.health",
+        "properties.enqueueServerProperties.hostname",
+        "properties.enqueueServerProperties.ipAddress",
+        "properties.enqueueServerProperties.port",
+        "properties.errors",
+        "properties.errors.properties",
+        "properties.errors.properties.code",
+        "properties.errors.properties.details",
+        "properties.errors.properties.message",
+        "properties.gatewayServerProperties",
+        "properties.gatewayServerProperties.health",
+        "properties.gatewayServerProperties.port",
+        "properties.health",
+        "properties.instanceNo",
+        "properties.kernelPatch",
+        "properties.kernelVersion",
+        "properties.loadBalancerDetails",
+        "properties.loadBalancerDetails.id",
+        "properties.messageServerProperties",
+        "properties.messageServerProperties.health",
+        "properties.messageServerProperties.hostname",
+        "properties.messageServerProperties.httpPort",
+        "properties.messageServerProperties.httpsPort",
+        "properties.messageServerProperties.internalMsPort",
+        "properties.messageServerProperties.ipAddress",
+        "properties.messageServerProperties.msPort",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.subnet",
+        "properties.vmDetails"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "centralInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Central Services Instance resource name string modeled as parameter for auto generation to work correctly."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/centralInstances/{centralInstanceName}",
+      "operationId": "SAPCentralInstances_Update",
+      "bodySchema": "UpdateSAPCentralInstanceRequest",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "centralInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Central Services Instance resource name string modeled as parameter for auto generation to work correctly."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/centralInstances/{centralInstanceName}",
+      "operationId": "SAPCentralInstances_Delete",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "centralInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Central Services Instance resource name string modeled as parameter for auto generation to work correctly."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Workloads/sapVirtualInstances/{sapVirtualInstanceName}/centralInstances",
+      "operationId": "SAPCentralInstances_List",
+      "pathParameters": [
+        {
+          "name": "sapVirtualInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Virtual Instances for SAP solutions resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

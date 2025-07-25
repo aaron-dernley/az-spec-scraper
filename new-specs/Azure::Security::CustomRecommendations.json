@@ -1,0 +1,101 @@
+{
+  "resource": "Azure::Security::CustomRecommendations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/customRecommendations",
+      "operationId": "CustomRecommendations_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the custom recommendation. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/customRecommendations/{customRecommendationName}",
+      "operationId": "CustomRecommendations_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the custom recommendation. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "customRecommendationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Custom Recommendation."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Security/customRecommendations/{customRecommendationName}",
+      "operationId": "CustomRecommendations_CreateOrUpdate",
+      "bodySchema": "CustomRecommendation",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.assessmentKey",
+        "properties.cloudProviders",
+        "properties.description",
+        "properties.displayName",
+        "properties.query",
+        "properties.remediationDescription",
+        "properties.securityIssue",
+        "properties.severity",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the custom recommendation. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "customRecommendationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Custom Recommendation."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Security/customRecommendations/{customRecommendationName}",
+      "operationId": "CustomRecommendations_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the custom recommendation. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "customRecommendationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Custom Recommendation."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

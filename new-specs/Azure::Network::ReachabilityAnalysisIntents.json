@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::Network::ReachabilityAnalysisIntents",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents",
+      "operationId": "ReachabilityAnalysisIntents_List",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Workspace name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional skip token."
+        },
+        {
+          "name": "skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Optional num entries to skip."
+        },
+        {
+          "name": "top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Optional num entries to show."
+        },
+        {
+          "name": "sortKey",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional key by which to sort."
+        },
+        {
+          "name": "sortValue",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional sort value for pagination."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "operationId": "ReachabilityAnalysisIntents_Get",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Workspace name."
+        },
+        {
+          "name": "reachabilityAnalysisIntentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Reachability Analysis Intent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "operationId": "ReachabilityAnalysisIntents_Create",
+      "bodySchema": "ReachabilityAnalysisIntent",
+      "requiredProperties": [
+        "properties",
+        "properties.destinationResourceId",
+        "properties.ipTraffic",
+        "properties.ipTraffic.destinationIps",
+        "properties.ipTraffic.destinationPorts",
+        "properties.ipTraffic.protocols",
+        "properties.ipTraffic.sourceIps",
+        "properties.ipTraffic.sourcePorts",
+        "properties.sourceResourceId"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Workspace name."
+        },
+        {
+          "name": "reachabilityAnalysisIntentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Reachability Analysis Intent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/verifierWorkspaces/{workspaceName}/reachabilityAnalysisIntents/{reachabilityAnalysisIntentName}",
+      "operationId": "ReachabilityAnalysisIntents_Delete",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Workspace name."
+        },
+        {
+          "name": "reachabilityAnalysisIntentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Reachability Analysis Intent name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "networkManagerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

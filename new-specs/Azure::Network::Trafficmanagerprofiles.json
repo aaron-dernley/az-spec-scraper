@@ -1,0 +1,513 @@
+{
+  "resource": "Azure::Network::Trafficmanagerprofiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}",
+      "operationId": "Endpoints_Update",
+      "bodySchema": "Endpoint",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.customHeaders",
+        "properties.endpointLocation",
+        "properties.endpointMonitorStatus",
+        "properties.endpointStatus",
+        "properties.geoMapping",
+        "properties.minChildEndpoints",
+        "properties.minChildEndpointsIPv4",
+        "properties.minChildEndpointsIPv6",
+        "properties.priority",
+        "properties.subnets",
+        "properties.target",
+        "properties.targetResourceId",
+        "properties.weight",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager endpoint to be updated."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "endpointType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of the Traffic Manager endpoint to be updated."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager endpoint to be updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}",
+      "operationId": "Endpoints_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager endpoint."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "endpointType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of the Traffic Manager endpoint."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager endpoint."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}",
+      "operationId": "Endpoints_CreateOrUpdate",
+      "bodySchema": "Endpoint",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.customHeaders",
+        "properties.endpointLocation",
+        "properties.endpointMonitorStatus",
+        "properties.endpointStatus",
+        "properties.geoMapping",
+        "properties.minChildEndpoints",
+        "properties.minChildEndpointsIPv4",
+        "properties.minChildEndpointsIPv6",
+        "properties.priority",
+        "properties.subnets",
+        "properties.target",
+        "properties.targetResourceId",
+        "properties.weight",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager endpoint to be created or updated."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "endpointType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of the Traffic Manager endpoint to be created or updated."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager endpoint to be created or updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}",
+      "operationId": "Endpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager endpoint to be deleted."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "endpointType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of the Traffic Manager endpoint to be deleted."
+        },
+        {
+          "name": "endpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager endpoint to be deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles",
+      "operationId": "Profiles_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager profiles to be listed."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficmanagerprofiles",
+      "operationId": "Profiles_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}",
+      "operationId": "Profiles_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager profile."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}",
+      "operationId": "Profiles_CreateOrUpdate",
+      "bodySchema": "Profile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.allowedEndpointRecordTypes",
+        "properties.dnsConfig",
+        "properties.dnsConfig.fqdn",
+        "properties.dnsConfig.relativeName",
+        "properties.dnsConfig.ttl",
+        "properties.endpoints",
+        "properties.maxReturn",
+        "properties.monitorConfig",
+        "properties.monitorConfig.customHeaders",
+        "properties.monitorConfig.expectedStatusCodeRanges",
+        "properties.monitorConfig.intervalInSeconds",
+        "properties.monitorConfig.path",
+        "properties.monitorConfig.port",
+        "properties.monitorConfig.profileMonitorStatus",
+        "properties.monitorConfig.protocol",
+        "properties.monitorConfig.timeoutInSeconds",
+        "properties.monitorConfig.toleratedNumberOfFailures",
+        "properties.profileStatus",
+        "properties.trafficRoutingMethod",
+        "properties.trafficViewEnrollmentStatus",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager profile."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}",
+      "operationId": "Profiles_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager profile to be deleted."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile to be deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}",
+      "operationId": "Profiles_Update",
+      "bodySchema": "Profile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.allowedEndpointRecordTypes",
+        "properties.dnsConfig",
+        "properties.dnsConfig.fqdn",
+        "properties.dnsConfig.relativeName",
+        "properties.dnsConfig.ttl",
+        "properties.endpoints",
+        "properties.maxReturn",
+        "properties.monitorConfig",
+        "properties.monitorConfig.customHeaders",
+        "properties.monitorConfig.expectedStatusCodeRanges",
+        "properties.monitorConfig.intervalInSeconds",
+        "properties.monitorConfig.path",
+        "properties.monitorConfig.port",
+        "properties.monitorConfig.profileMonitorStatus",
+        "properties.monitorConfig.protocol",
+        "properties.monitorConfig.timeoutInSeconds",
+        "properties.monitorConfig.toleratedNumberOfFailures",
+        "properties.profileStatus",
+        "properties.trafficRoutingMethod",
+        "properties.trafficViewEnrollmentStatus",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing the Traffic Manager profile."
+        },
+        {
+          "name": "profileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Traffic Manager profile."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

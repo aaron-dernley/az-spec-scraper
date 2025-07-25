@@ -1,0 +1,247 @@
+{
+  "resource": "Azure::HybridCompute::Machines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}",
+      "operationId": "Machines_CreateOrUpdate",
+      "bodySchema": "Machine",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.adFqdn",
+        "properties.agentConfiguration",
+        "properties.agentConfiguration.configMode",
+        "properties.agentConfiguration.extensionsAllowList",
+        "properties.agentConfiguration.extensionsBlockList",
+        "properties.agentConfiguration.extensionsEnabled",
+        "properties.agentConfiguration.guestConfigurationEnabled",
+        "properties.agentConfiguration.incomingConnectionsPorts",
+        "properties.agentConfiguration.proxyBypass",
+        "properties.agentConfiguration.proxyUrl",
+        "properties.agentVersion",
+        "properties.clientPublicKey",
+        "properties.cloudMetadata",
+        "properties.cloudMetadata.provider",
+        "properties.detectedProperties",
+        "properties.displayName",
+        "properties.dnsFqdn",
+        "properties.domainName",
+        "properties.errorDetails",
+        "properties.extensions",
+        "properties.lastStatusChange",
+        "properties.locationData",
+        "properties.machineFqdn",
+        "properties.mssqlDiscovered",
+        "properties.osName",
+        "properties.osProfile",
+        "properties.osProfile.computerName",
+        "properties.osProfile.linuxConfiguration",
+        "properties.osProfile.linuxConfiguration.patchSettings",
+        "properties.osProfile.linuxConfiguration.patchSettings.assessmentMode",
+        "properties.osProfile.linuxConfiguration.patchSettings.patchMode",
+        "properties.osProfile.windowsConfiguration",
+        "properties.osProfile.windowsConfiguration.patchSettings",
+        "properties.osProfile.windowsConfiguration.patchSettings.assessmentMode",
+        "properties.osProfile.windowsConfiguration.patchSettings.patchMode",
+        "properties.osSku",
+        "properties.osType",
+        "properties.osVersion",
+        "properties.parentClusterResourceId",
+        "properties.privateLinkScopeResourceId",
+        "properties.provisioningState",
+        "properties.serviceStatuses",
+        "properties.serviceStatuses.extensionService",
+        "properties.serviceStatuses.extensionService.startupType",
+        "properties.serviceStatuses.extensionService.status",
+        "properties.serviceStatuses.guestConfigurationService",
+        "properties.serviceStatuses.guestConfigurationService.startupType",
+        "properties.serviceStatuses.guestConfigurationService.status",
+        "properties.status",
+        "properties.vmId",
+        "properties.vmUuid",
+        "resources"
+      ],
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hybrid machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}",
+      "operationId": "Machines_Update",
+      "bodySchema": "MachineUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.cloudMetadata",
+        "properties.cloudMetadata.provider",
+        "properties.locationData",
+        "properties.osProfile",
+        "properties.osProfile.computerName",
+        "properties.osProfile.linuxConfiguration",
+        "properties.osProfile.linuxConfiguration.patchSettings",
+        "properties.osProfile.linuxConfiguration.patchSettings.assessmentMode",
+        "properties.osProfile.linuxConfiguration.patchSettings.patchMode",
+        "properties.osProfile.windowsConfiguration",
+        "properties.osProfile.windowsConfiguration.patchSettings",
+        "properties.osProfile.windowsConfiguration.patchSettings.assessmentMode",
+        "properties.osProfile.windowsConfiguration.patchSettings.patchMode",
+        "properties.parentClusterResourceId",
+        "properties.privateLinkScopeResourceId",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hybrid machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}",
+      "operationId": "Machines_Delete",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hybrid machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines/{machineName}",
+      "operationId": "Machines_Get",
+      "pathParameters": [
+        {
+          "name": "machineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the hybrid machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HybridCompute/machines",
+      "operationId": "Machines_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.HybridCompute/machines",
+      "operationId": "Machines_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

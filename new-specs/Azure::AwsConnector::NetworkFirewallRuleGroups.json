@@ -1,0 +1,203 @@
+{
+  "resource": "Azure::AwsConnector::NetworkFirewallRuleGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups",
+      "operationId": "NetworkFirewallRuleGroups_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups",
+      "operationId": "NetworkFirewallRuleGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups/{name}",
+      "operationId": "NetworkFirewallRuleGroups_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallRuleGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups/{name}",
+      "operationId": "NetworkFirewallRuleGroups_CreateOrReplace",
+      "bodySchema": "NetworkFirewallRuleGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.capacity",
+        "properties.awsProperties.description",
+        "properties.awsProperties.ruleGroup",
+        "properties.awsProperties.ruleGroup.referenceSets",
+        "properties.awsProperties.ruleGroup.referenceSets.ipSetReferences",
+        "properties.awsProperties.ruleGroup.ruleVariables",
+        "properties.awsProperties.ruleGroup.ruleVariables.ipSets",
+        "properties.awsProperties.ruleGroup.ruleVariables.portSets",
+        "properties.awsProperties.ruleGroup.rulesSource",
+        "properties.awsProperties.ruleGroup.rulesSource.rulesSourceList",
+        "properties.awsProperties.ruleGroup.rulesSource.rulesSourceList.generatedRulesType",
+        "properties.awsProperties.ruleGroup.rulesSource.rulesSourceList.targetTypes",
+        "properties.awsProperties.ruleGroup.rulesSource.rulesSourceList.targets",
+        "properties.awsProperties.ruleGroup.rulesSource.rulesString",
+        "properties.awsProperties.ruleGroup.rulesSource.statefulRules",
+        "properties.awsProperties.ruleGroup.rulesSource.statelessRulesAndCustomActions",
+        "properties.awsProperties.ruleGroup.rulesSource.statelessRulesAndCustomActions.customActions",
+        "properties.awsProperties.ruleGroup.rulesSource.statelessRulesAndCustomActions.statelessRules",
+        "properties.awsProperties.ruleGroup.statefulRuleOptions",
+        "properties.awsProperties.ruleGroup.statefulRuleOptions.ruleOrder",
+        "properties.awsProperties.ruleGroupArn",
+        "properties.awsProperties.ruleGroupId",
+        "properties.awsProperties.ruleGroupName",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.type",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallRuleGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups/{name}",
+      "operationId": "NetworkFirewallRuleGroups_Update",
+      "bodySchema": "NetworkFirewallRuleGroupTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallRuleGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/networkFirewallRuleGroups/{name}",
+      "operationId": "NetworkFirewallRuleGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of NetworkFirewallRuleGroup"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

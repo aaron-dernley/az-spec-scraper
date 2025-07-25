@@ -1,0 +1,279 @@
+{
+  "resource": "Azure::Storage::Containers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers",
+      "operationId": "BlobContainers_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$maxpagesize",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional. Specified maximum number of containers that can be included in the list."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional. When specified, only container names starting with the filter will be listed."
+        },
+        {
+          "name": "$include",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Optional, used to include the properties for soft deleted blob containers."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}",
+      "operationId": "BlobContainers_Create",
+      "bodySchema": "BlobContainer",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.defaultEncryptionScope",
+        "properties.deleted",
+        "properties.deletedTime",
+        "properties.denyEncryptionScopeOverride",
+        "properties.enableNfsV3AllSquash",
+        "properties.enableNfsV3RootSquash",
+        "properties.hasImmutabilityPolicy",
+        "properties.hasLegalHold",
+        "properties.immutabilityPolicy",
+        "properties.immutabilityPolicy.etag",
+        "properties.immutabilityPolicy.properties",
+        "properties.immutabilityPolicy.properties.allowProtectedAppendWrites",
+        "properties.immutabilityPolicy.properties.allowProtectedAppendWritesAll",
+        "properties.immutabilityPolicy.properties.immutabilityPeriodSinceCreationInDays",
+        "properties.immutabilityPolicy.properties.state",
+        "properties.immutabilityPolicy.updateHistory",
+        "properties.immutableStorageWithVersioning",
+        "properties.immutableStorageWithVersioning.enabled",
+        "properties.immutableStorageWithVersioning.migrationState",
+        "properties.immutableStorageWithVersioning.timeStamp",
+        "properties.lastModifiedTime",
+        "properties.leaseDuration",
+        "properties.leaseState",
+        "properties.leaseStatus",
+        "properties.legalHold",
+        "properties.legalHold.hasLegalHold",
+        "properties.legalHold.protectedAppendWritesHistory",
+        "properties.legalHold.protectedAppendWritesHistory.allowProtectedAppendWritesAll",
+        "properties.legalHold.protectedAppendWritesHistory.timestamp",
+        "properties.legalHold.tags",
+        "properties.metadata",
+        "properties.publicAccess",
+        "properties.remainingRetentionDays",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}",
+      "operationId": "BlobContainers_Update",
+      "bodySchema": "BlobContainer",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.defaultEncryptionScope",
+        "properties.deleted",
+        "properties.deletedTime",
+        "properties.denyEncryptionScopeOverride",
+        "properties.enableNfsV3AllSquash",
+        "properties.enableNfsV3RootSquash",
+        "properties.hasImmutabilityPolicy",
+        "properties.hasLegalHold",
+        "properties.immutabilityPolicy",
+        "properties.immutabilityPolicy.etag",
+        "properties.immutabilityPolicy.properties",
+        "properties.immutabilityPolicy.properties.allowProtectedAppendWrites",
+        "properties.immutabilityPolicy.properties.allowProtectedAppendWritesAll",
+        "properties.immutabilityPolicy.properties.immutabilityPeriodSinceCreationInDays",
+        "properties.immutabilityPolicy.properties.state",
+        "properties.immutabilityPolicy.updateHistory",
+        "properties.immutableStorageWithVersioning",
+        "properties.immutableStorageWithVersioning.enabled",
+        "properties.immutableStorageWithVersioning.migrationState",
+        "properties.immutableStorageWithVersioning.timeStamp",
+        "properties.lastModifiedTime",
+        "properties.leaseDuration",
+        "properties.leaseState",
+        "properties.leaseStatus",
+        "properties.legalHold",
+        "properties.legalHold.hasLegalHold",
+        "properties.legalHold.protectedAppendWritesHistory",
+        "properties.legalHold.protectedAppendWritesHistory.allowProtectedAppendWritesAll",
+        "properties.legalHold.protectedAppendWritesHistory.timestamp",
+        "properties.legalHold.tags",
+        "properties.metadata",
+        "properties.publicAccess",
+        "properties.remainingRetentionDays",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}",
+      "operationId": "BlobContainers_Get",
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}",
+      "operationId": "BlobContainers_Delete",
+      "pathParameters": [
+        {
+          "name": "containerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "accountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

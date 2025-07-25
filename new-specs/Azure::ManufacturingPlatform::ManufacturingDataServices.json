@@ -1,0 +1,260 @@
+{
+  "resource": "Azure::ManufacturingPlatform::ManufacturingDataServices",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices",
+      "operationId": "ManufacturingDataServices_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices",
+      "operationId": "ManufacturingDataServices_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices/{mdsResourceName}",
+      "operationId": "ManufacturingDataServices_Get",
+      "pathParameters": [
+        {
+          "name": "mdsResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices/{mdsResourceName}",
+      "operationId": "ManufacturingDataServices_CreateOrUpdate",
+      "bodySchema": "MdsResource",
+      "requiredProperties": [
+        "properties.aadApplicationId",
+        "properties.cmkProfile.keyUri",
+        "properties.fabricProfile.keyUri",
+        "properties.fabricProfile.oneLakePath",
+        "properties.fabricProfile.oneLakeUri",
+        "properties.managedOnBehalfOfConfiguration.moboBrokerResources",
+        "properties.managedResourceGroupConfiguration.location",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.userManagedOpenAIProfile.embeddingModelDeploymentName",
+        "properties.userManagedOpenAIProfile.gptModelDeploymentName",
+        "properties.userManagedOpenAIProfile.id"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.adxProfile",
+        "properties.adxProfile.dataIngestionUri",
+        "properties.adxProfile.id",
+        "properties.adxProfile.uri",
+        "properties.aksAdminGroupId",
+        "properties.aksProfile",
+        "properties.aksProfile.id",
+        "properties.cmkProfile",
+        "properties.databaseProfile",
+        "properties.databaseProfile.cosmosId",
+        "properties.denyAssignmentExclusions",
+        "properties.enableCopilot",
+        "properties.enableDiagnosticSettings",
+        "properties.eventHubProfile",
+        "properties.eventHubProfile.adxInstanceId",
+        "properties.eventHubProfile.hostName",
+        "properties.fabricProfile",
+        "properties.functionAppProfile",
+        "properties.functionAppProfile.id",
+        "properties.managedOnBehalfOfConfiguration",
+        "properties.managedResourceGroupConfiguration",
+        "properties.monitoringProfile",
+        "properties.monitoringProfile.id",
+        "properties.openAIProfile",
+        "properties.openAIProfile.embeddingModelCapacity",
+        "properties.openAIProfile.embeddingModelName",
+        "properties.openAIProfile.embeddingModelSkuName",
+        "properties.openAIProfile.embeddingModelVersion",
+        "properties.openAIProfile.gptModelCapacity",
+        "properties.openAIProfile.gptModelName",
+        "properties.openAIProfile.gptModelSkuName",
+        "properties.openAIProfile.gptModelVersion",
+        "properties.openAIProfile.id",
+        "properties.provisioningState",
+        "properties.redisProfile",
+        "properties.redisProfile.id",
+        "properties.redundancyState",
+        "properties.resourceState",
+        "properties.serviceUrl",
+        "properties.storageProfile",
+        "properties.storageProfile.id",
+        "properties.userManagedOpenAIProfile",
+        "properties.userManagedOpenAIProfile.embeddingModelType",
+        "properties.version",
+        "sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "mdsResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices/{mdsResourceName}",
+      "operationId": "ManufacturingDataServices_Update",
+      "bodySchema": "MdsResourceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.denyAssignmentExclusions",
+        "properties.enableCopilot",
+        "properties.enableDiagnosticSettings",
+        "properties.fabricProfile",
+        "properties.fabricProfile.keyUri",
+        "properties.fabricProfile.oneLakePath",
+        "properties.fabricProfile.oneLakeUri",
+        "properties.openAIProfile",
+        "properties.openAIProfile.embeddingModelCapacity",
+        "properties.openAIProfile.embeddingModelName",
+        "properties.openAIProfile.embeddingModelSkuName",
+        "properties.openAIProfile.embeddingModelVersion",
+        "properties.openAIProfile.gptModelCapacity",
+        "properties.openAIProfile.gptModelName",
+        "properties.openAIProfile.gptModelSkuName",
+        "properties.openAIProfile.gptModelVersion",
+        "properties.openAIProfile.id",
+        "properties.resourceState",
+        "properties.userManagedOpenAIProfile",
+        "properties.userManagedOpenAIProfile.embeddingModelDeploymentName",
+        "properties.userManagedOpenAIProfile.gptModelDeploymentName",
+        "properties.userManagedOpenAIProfile.id",
+        "properties.version",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.name",
+        "sku.size",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "mdsResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManufacturingPlatform/manufacturingDataServices/{mdsResourceName}",
+      "operationId": "ManufacturingDataServices_Delete",
+      "pathParameters": [
+        {
+          "name": "mdsResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

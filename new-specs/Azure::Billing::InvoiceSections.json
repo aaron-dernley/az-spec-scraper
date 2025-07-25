@@ -1,0 +1,135 @@
+{
+  "resource": "Azure::Billing::InvoiceSections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}",
+      "operationId": "InvoiceSections_Delete",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}",
+      "operationId": "InvoiceSections_Get",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}",
+      "operationId": "InvoiceSections_CreateOrUpdate",
+      "bodySchema": "InvoiceSection",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.provisioningState",
+        "properties.reasonCode",
+        "properties.state",
+        "properties.systemId",
+        "properties.tags",
+        "properties.targetCloud"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections",
+      "operationId": "InvoiceSections_ListByBillingProfile",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "includeDeleted",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Can be used to get deleted invoice sections."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::NetworkCloud::Consoles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}/consoles",
+      "operationId": "Consoles_ListByVirtualMachine",
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}/consoles/{consoleName}",
+      "operationId": "Consoles_Get",
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine console."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}/consoles/{consoleName}",
+      "operationId": "Consoles_CreateOrUpdate",
+      "bodySchema": "Console",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.enabled",
+        "properties.sshPublicKey",
+        "properties.sshPublicKey.keyData"
+      ],
+      "optionalProperties": [
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.expiration",
+        "properties.privateLinkServiceId",
+        "properties.provisioningState",
+        "properties.virtualMachineAccessId"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine console."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}/consoles/{consoleName}",
+      "operationId": "Consoles_Delete",
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine console."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}/consoles/{consoleName}",
+      "operationId": "Consoles_Update",
+      "bodySchema": "ConsolePatchParameters",
+      "requiredProperties": [
+        "properties.sshPublicKey.keyData"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.enabled",
+        "properties.expiration",
+        "properties.sshPublicKey",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "consoleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine console."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

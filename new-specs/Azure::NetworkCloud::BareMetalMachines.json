@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::NetworkCloud::BareMetalMachines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/bareMetalMachines",
+      "operationId": "BareMetalMachines_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/bareMetalMachines",
+      "operationId": "BareMetalMachines_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/bareMetalMachines/{bareMetalMachineName}",
+      "operationId": "BareMetalMachines_Get",
+      "pathParameters": [
+        {
+          "name": "bareMetalMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/bareMetalMachines/{bareMetalMachineName}",
+      "operationId": "BareMetalMachines_CreateOrUpdate",
+      "bodySchema": "BareMetalMachine",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.bmcConnectionString",
+        "properties.bmcCredentials",
+        "properties.bmcCredentials.password",
+        "properties.bmcCredentials.username",
+        "properties.bmcMacAddress",
+        "properties.bootMacAddress",
+        "properties.machineDetails",
+        "properties.machineName",
+        "properties.machineSkuId",
+        "properties.rackId",
+        "properties.rackSlot",
+        "properties.serialNumber"
+      ],
+      "optionalProperties": [
+        "properties.associatedResourceIds",
+        "properties.clusterId",
+        "properties.cordonStatus",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.hardwareInventory",
+        "properties.hardwareInventory.additionalHostInformation",
+        "properties.hardwareInventory.interfaces",
+        "properties.hardwareInventory.nics",
+        "properties.hardwareValidationStatus",
+        "properties.hardwareValidationStatus.lastValidationTime",
+        "properties.hardwareValidationStatus.result",
+        "properties.hybridAksClustersAssociatedIds",
+        "properties.kubernetesNodeName",
+        "properties.kubernetesVersion",
+        "properties.machineClusterVersion",
+        "properties.machineRoles",
+        "properties.oamIpv4Address",
+        "properties.oamIpv6Address",
+        "properties.osImage",
+        "properties.powerState",
+        "properties.provisioningState",
+        "properties.readyState",
+        "properties.runtimeProtectionStatus",
+        "properties.runtimeProtectionStatus.definitionsLastUpdated",
+        "properties.runtimeProtectionStatus.definitionsVersion",
+        "properties.runtimeProtectionStatus.scanCompletedTime",
+        "properties.runtimeProtectionStatus.scanScheduledTime",
+        "properties.runtimeProtectionStatus.scanStartedTime",
+        "properties.secretRotationStatus",
+        "properties.serviceTag",
+        "properties.virtualMachinesAssociatedIds"
+      ],
+      "pathParameters": [
+        {
+          "name": "bareMetalMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/bareMetalMachines/{bareMetalMachineName}",
+      "operationId": "BareMetalMachines_Delete",
+      "pathParameters": [
+        {
+          "name": "bareMetalMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/bareMetalMachines/{bareMetalMachineName}",
+      "operationId": "BareMetalMachines_Update",
+      "bodySchema": "BareMetalMachinePatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.machineDetails",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "bareMetalMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the bare metal machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

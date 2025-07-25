@@ -1,0 +1,258 @@
+{
+  "resource": "Azure::AzureArcData::DataControllers",
+  "version": "2021-11-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AzureArcData/dataControllers",
+      "operationId": "DataControllers_ListInSubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/dataControllers",
+      "operationId": "DataControllers_ListInGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/dataControllers/{dataControllerName}",
+      "operationId": "DataControllers_PutDataController",
+      "bodySchema": "DataControllerResource",
+      "requiredProperties": [
+        "location",
+        "properties",
+        "properties.onPremiseProperty.id",
+        "properties.onPremiseProperty.publicSigningKey"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "id",
+        "name",
+        "properties.basicLoginInformation",
+        "properties.basicLoginInformation.password",
+        "properties.basicLoginInformation.username",
+        "properties.clusterId",
+        "properties.extensionId",
+        "properties.infrastructure",
+        "properties.k8sRaw",
+        "properties.lastUploadedDate",
+        "properties.logAnalyticsWorkspaceConfig",
+        "properties.logAnalyticsWorkspaceConfig.primaryKey",
+        "properties.logAnalyticsWorkspaceConfig.workspaceId",
+        "properties.onPremiseProperty",
+        "properties.onPremiseProperty.signingCertificateThumbprint",
+        "properties.provisioningState",
+        "properties.uploadServicePrincipal",
+        "properties.uploadServicePrincipal.authority",
+        "properties.uploadServicePrincipal.clientId",
+        "properties.uploadServicePrincipal.clientSecret",
+        "properties.uploadServicePrincipal.tenantId",
+        "properties.uploadWatermark",
+        "properties.uploadWatermark.logs",
+        "properties.uploadWatermark.metrics",
+        "properties.uploadWatermark.usages",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "dataControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/dataControllers/{dataControllerName}",
+      "operationId": "DataControllers_DeleteDataController",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "dataControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/dataControllers/{dataControllerName}",
+      "operationId": "DataControllers_GetDataController",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "dataControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureArcData/dataControllers/{dataControllerName}",
+      "operationId": "DataControllers_PatchDataController",
+      "bodySchema": "DataControllerUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the Azure subscription"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Azure resource group"
+        },
+        {
+          "name": "dataControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": ""
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for the request"
+        }
+      ]
+    }
+  ]
+}

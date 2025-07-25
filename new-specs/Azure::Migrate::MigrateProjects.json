@@ -1,0 +1,197 @@
+{
+  "resource": "Azure::Migrate::MigrateProjects",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Migrate/migrateProjects",
+      "operationId": "Projects_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects",
+      "operationId": "Projects_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}",
+      "operationId": "MigrateProjectsController_GetMigrateProject",
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}",
+      "operationId": "MigrateProjectsController_PutMigrateProject",
+      "bodySchema": "MigrateProject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.lastSummaryRefreshedTime",
+        "properties.privateEndpointConnections",
+        "properties.publicNetworkAccess",
+        "properties.refreshSummaryState",
+        "properties.registeredTools",
+        "properties.serviceEndpoint",
+        "properties.summary",
+        "properties.utilityStorageAccountId",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}",
+      "operationId": "MigrateProjectsController_DeleteMigrateProject",
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}",
+      "operationId": "MigrateProjectsController_PatchMigrateProject",
+      "bodySchema": "MigrateProject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "eTag",
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.lastSummaryRefreshedTime",
+        "properties.privateEndpointConnections",
+        "properties.publicNetworkAccess",
+        "properties.refreshSummaryState",
+        "properties.registeredTools",
+        "properties.serviceEndpoint",
+        "properties.summary",
+        "properties.utilityStorageAccountId",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

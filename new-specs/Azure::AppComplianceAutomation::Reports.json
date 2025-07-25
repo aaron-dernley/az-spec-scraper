@@ -1,0 +1,182 @@
+{
+  "resource": "Azure::AppComplianceAutomation::Reports",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports",
+      "operationId": "Report_List",
+      "pathParameters": [],
+      "queryParameters": [
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip over when retrieving results."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Number of elements to return when retrieving results."
+        },
+        {
+          "name": "$select",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData Select statement. Limits the properties on each entry to just those requested, e.g. ?$select=reportName,id."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData order by query option."
+        },
+        {
+          "name": "offerGuid",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The offerGuid which mapping to the reports."
+        },
+        {
+          "name": "reportCreatorTenantId",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The tenant id of the report creator."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}",
+      "operationId": "Report_Get",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}",
+      "operationId": "Report_CreateOrUpdate",
+      "bodySchema": "ReportResource",
+      "requiredProperties": [
+        "properties",
+        "properties.resources",
+        "properties.timeZone",
+        "properties.triggerTime"
+      ],
+      "optionalProperties": [
+        "properties.certRecords",
+        "properties.complianceStatus",
+        "properties.complianceStatus.m365",
+        "properties.complianceStatus.m365.failedCount",
+        "properties.complianceStatus.m365.manualCount",
+        "properties.complianceStatus.m365.notApplicableCount",
+        "properties.complianceStatus.m365.passedCount",
+        "properties.complianceStatus.m365.pendingCount",
+        "properties.errors",
+        "properties.lastTriggerTime",
+        "properties.nextTriggerTime",
+        "properties.offerGuid",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.storageInfo",
+        "properties.storageInfo.accountName",
+        "properties.storageInfo.location",
+        "properties.storageInfo.resourceGroup",
+        "properties.storageInfo.subscriptionId",
+        "properties.subscriptions",
+        "properties.tenantId"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}",
+      "operationId": "Report_Update",
+      "bodySchema": "ReportResourcePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.certRecords",
+        "properties.complianceStatus",
+        "properties.complianceStatus.m365",
+        "properties.complianceStatus.m365.failedCount",
+        "properties.complianceStatus.m365.manualCount",
+        "properties.complianceStatus.m365.notApplicableCount",
+        "properties.complianceStatus.m365.passedCount",
+        "properties.complianceStatus.m365.pendingCount",
+        "properties.errors",
+        "properties.lastTriggerTime",
+        "properties.nextTriggerTime",
+        "properties.offerGuid",
+        "properties.provisioningState",
+        "properties.resources",
+        "properties.status",
+        "properties.storageInfo",
+        "properties.storageInfo.accountName",
+        "properties.storageInfo.location",
+        "properties.storageInfo.resourceGroup",
+        "properties.storageInfo.subscriptionId",
+        "properties.subscriptions",
+        "properties.tenantId",
+        "properties.timeZone",
+        "properties.triggerTime"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}",
+      "operationId": "Report_Delete",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

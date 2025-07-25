@@ -1,0 +1,158 @@
+{
+  "resource": "Azure::Network::VirtualApplianceSites",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}",
+      "operationId": "VirtualApplianceSites_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Virtual Appliance."
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}",
+      "operationId": "VirtualApplianceSites_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Virtual Appliance."
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites/{siteName}",
+      "operationId": "VirtualApplianceSites_CreateOrUpdate",
+      "bodySchema": "VirtualApplianceSite",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.addressPrefix",
+        "properties.o365Policy",
+        "properties.o365Policy.breakOutCategories",
+        "properties.o365Policy.breakOutCategories.allow",
+        "properties.o365Policy.breakOutCategories.default",
+        "properties.o365Policy.breakOutCategories.optimize",
+        "properties.provisioningState",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Virtual Appliance."
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkVirtualAppliances/{networkVirtualApplianceName}/virtualApplianceSites",
+      "operationId": "VirtualApplianceSites_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkVirtualApplianceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Virtual Appliance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

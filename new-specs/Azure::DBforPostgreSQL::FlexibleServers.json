@@ -1,0 +1,257 @@
+{
+  "resource": "Azure::DBforPostgreSQL::FlexibleServers",
+  "version": "2022-12-01",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Create",
+      "bodySchema": "Server",
+      "requiredProperties": [
+        "identity.type",
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.administratorLogin",
+        "properties.administratorLoginPassword",
+        "properties.authConfig",
+        "properties.authConfig.activeDirectoryAuth",
+        "properties.authConfig.passwordAuth",
+        "properties.authConfig.tenantId",
+        "properties.availabilityZone",
+        "properties.backup",
+        "properties.backup.backupRetentionDays",
+        "properties.backup.earliestRestoreDate",
+        "properties.backup.geoRedundantBackup",
+        "properties.createMode",
+        "properties.dataEncryption",
+        "properties.dataEncryption.primaryKeyURI",
+        "properties.dataEncryption.primaryUserAssignedIdentityId",
+        "properties.dataEncryption.type",
+        "properties.fullyQualifiedDomainName",
+        "properties.highAvailability",
+        "properties.highAvailability.mode",
+        "properties.highAvailability.standbyAvailabilityZone",
+        "properties.highAvailability.state",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.minorVersion",
+        "properties.network",
+        "properties.network.delegatedSubnetResourceId",
+        "properties.network.privateDnsZoneArmResourceId",
+        "properties.network.publicNetworkAccess",
+        "properties.pointInTimeUTC",
+        "properties.replicaCapacity",
+        "properties.replicationRole",
+        "properties.sourceServerResourceId",
+        "properties.state",
+        "properties.storage",
+        "properties.storage.storageSizeGB",
+        "properties.version",
+        "sku",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Update",
+      "bodySchema": "ServerForUpdate",
+      "requiredProperties": [
+        "identity.type",
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.tenantId",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.administratorLoginPassword",
+        "properties.authConfig",
+        "properties.authConfig.activeDirectoryAuth",
+        "properties.authConfig.passwordAuth",
+        "properties.authConfig.tenantId",
+        "properties.backup",
+        "properties.backup.backupRetentionDays",
+        "properties.backup.earliestRestoreDate",
+        "properties.backup.geoRedundantBackup",
+        "properties.createMode",
+        "properties.dataEncryption",
+        "properties.dataEncryption.primaryKeyURI",
+        "properties.dataEncryption.primaryUserAssignedIdentityId",
+        "properties.dataEncryption.type",
+        "properties.highAvailability",
+        "properties.highAvailability.mode",
+        "properties.highAvailability.standbyAvailabilityZone",
+        "properties.highAvailability.state",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.network",
+        "properties.network.delegatedSubnetResourceId",
+        "properties.network.privateDnsZoneArmResourceId",
+        "properties.network.publicNetworkAccess",
+        "properties.replicationRole",
+        "properties.storage",
+        "properties.storage.storageSizeGB",
+        "properties.version",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers",
+      "operationId": "Servers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DBforPostgreSQL/flexibleServers",
+      "operationId": "Servers_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

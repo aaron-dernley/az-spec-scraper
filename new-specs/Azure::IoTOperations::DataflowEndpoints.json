@@ -1,0 +1,256 @@
+{
+  "resource": "Azure::IoTOperations::DataflowEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowEndpoints",
+      "operationId": "DataflowEndpoint_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowEndpoints/{dataflowEndpointName}",
+      "operationId": "DataflowEndpoint_Get",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowEndpoint resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowEndpoints/{dataflowEndpointName}",
+      "operationId": "DataflowEndpoint_CreateOrUpdate",
+      "bodySchema": "DataflowEndpointResource",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.dataExplorerSettings.authentication",
+        "properties.dataExplorerSettings.authentication.method",
+        "properties.dataExplorerSettings.authentication.userAssignedManagedIdentitySettings.clientId",
+        "properties.dataExplorerSettings.authentication.userAssignedManagedIdentitySettings.tenantId",
+        "properties.dataExplorerSettings.database",
+        "properties.dataExplorerSettings.host",
+        "properties.dataLakeStorageSettings.authentication",
+        "properties.dataLakeStorageSettings.authentication.accessTokenSettings.secretRef",
+        "properties.dataLakeStorageSettings.authentication.method",
+        "properties.dataLakeStorageSettings.authentication.userAssignedManagedIdentitySettings.clientId",
+        "properties.dataLakeStorageSettings.authentication.userAssignedManagedIdentitySettings.tenantId",
+        "properties.dataLakeStorageSettings.host",
+        "properties.endpointType",
+        "properties.fabricOneLakeSettings.authentication",
+        "properties.fabricOneLakeSettings.authentication.method",
+        "properties.fabricOneLakeSettings.authentication.userAssignedManagedIdentitySettings.clientId",
+        "properties.fabricOneLakeSettings.authentication.userAssignedManagedIdentitySettings.tenantId",
+        "properties.fabricOneLakeSettings.host",
+        "properties.fabricOneLakeSettings.names",
+        "properties.fabricOneLakeSettings.names.lakehouseName",
+        "properties.fabricOneLakeSettings.names.workspaceName",
+        "properties.fabricOneLakeSettings.oneLakePathType",
+        "properties.kafkaSettings.authentication",
+        "properties.kafkaSettings.authentication.method",
+        "properties.kafkaSettings.authentication.saslSettings.saslType",
+        "properties.kafkaSettings.authentication.saslSettings.secretRef",
+        "properties.kafkaSettings.authentication.userAssignedManagedIdentitySettings.clientId",
+        "properties.kafkaSettings.authentication.userAssignedManagedIdentitySettings.tenantId",
+        "properties.kafkaSettings.authentication.x509CertificateSettings.secretRef",
+        "properties.kafkaSettings.host",
+        "properties.localStorageSettings.persistentVolumeClaimRef",
+        "properties.mqttSettings.authentication",
+        "properties.mqttSettings.authentication.method",
+        "properties.mqttSettings.authentication.serviceAccountTokenSettings.audience",
+        "properties.mqttSettings.authentication.userAssignedManagedIdentitySettings.clientId",
+        "properties.mqttSettings.authentication.userAssignedManagedIdentitySettings.tenantId",
+        "properties.mqttSettings.authentication.x509CertificateSettings.secretRef"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.dataExplorerSettings",
+        "properties.dataExplorerSettings.authentication.systemAssignedManagedIdentitySettings",
+        "properties.dataExplorerSettings.authentication.systemAssignedManagedIdentitySettings.audience",
+        "properties.dataExplorerSettings.authentication.userAssignedManagedIdentitySettings",
+        "properties.dataExplorerSettings.authentication.userAssignedManagedIdentitySettings.scope",
+        "properties.dataExplorerSettings.batching",
+        "properties.dataExplorerSettings.batching.latencySeconds",
+        "properties.dataExplorerSettings.batching.maxMessages",
+        "properties.dataLakeStorageSettings",
+        "properties.dataLakeStorageSettings.authentication.accessTokenSettings",
+        "properties.dataLakeStorageSettings.authentication.systemAssignedManagedIdentitySettings",
+        "properties.dataLakeStorageSettings.authentication.systemAssignedManagedIdentitySettings.audience",
+        "properties.dataLakeStorageSettings.authentication.userAssignedManagedIdentitySettings",
+        "properties.dataLakeStorageSettings.authentication.userAssignedManagedIdentitySettings.scope",
+        "properties.dataLakeStorageSettings.batching",
+        "properties.dataLakeStorageSettings.batching.latencySeconds",
+        "properties.dataLakeStorageSettings.batching.maxMessages",
+        "properties.fabricOneLakeSettings",
+        "properties.fabricOneLakeSettings.authentication.systemAssignedManagedIdentitySettings",
+        "properties.fabricOneLakeSettings.authentication.systemAssignedManagedIdentitySettings.audience",
+        "properties.fabricOneLakeSettings.authentication.userAssignedManagedIdentitySettings",
+        "properties.fabricOneLakeSettings.authentication.userAssignedManagedIdentitySettings.scope",
+        "properties.fabricOneLakeSettings.batching",
+        "properties.fabricOneLakeSettings.batching.latencySeconds",
+        "properties.fabricOneLakeSettings.batching.maxMessages",
+        "properties.kafkaSettings",
+        "properties.kafkaSettings.authentication.saslSettings",
+        "properties.kafkaSettings.authentication.systemAssignedManagedIdentitySettings",
+        "properties.kafkaSettings.authentication.systemAssignedManagedIdentitySettings.audience",
+        "properties.kafkaSettings.authentication.userAssignedManagedIdentitySettings",
+        "properties.kafkaSettings.authentication.userAssignedManagedIdentitySettings.scope",
+        "properties.kafkaSettings.authentication.x509CertificateSettings",
+        "properties.kafkaSettings.batching",
+        "properties.kafkaSettings.batching.latencyMs",
+        "properties.kafkaSettings.batching.maxBytes",
+        "properties.kafkaSettings.batching.maxMessages",
+        "properties.kafkaSettings.batching.mode",
+        "properties.kafkaSettings.cloudEventAttributes",
+        "properties.kafkaSettings.compression",
+        "properties.kafkaSettings.consumerGroupId",
+        "properties.kafkaSettings.copyMqttProperties",
+        "properties.kafkaSettings.kafkaAcks",
+        "properties.kafkaSettings.partitionStrategy",
+        "properties.kafkaSettings.tls",
+        "properties.kafkaSettings.tls.mode",
+        "properties.kafkaSettings.tls.trustedCaCertificateConfigMapRef",
+        "properties.localStorageSettings",
+        "properties.mqttSettings",
+        "properties.mqttSettings.authentication.serviceAccountTokenSettings",
+        "properties.mqttSettings.authentication.systemAssignedManagedIdentitySettings",
+        "properties.mqttSettings.authentication.systemAssignedManagedIdentitySettings.audience",
+        "properties.mqttSettings.authentication.userAssignedManagedIdentitySettings",
+        "properties.mqttSettings.authentication.userAssignedManagedIdentitySettings.scope",
+        "properties.mqttSettings.authentication.x509CertificateSettings",
+        "properties.mqttSettings.clientIdPrefix",
+        "properties.mqttSettings.cloudEventAttributes",
+        "properties.mqttSettings.host",
+        "properties.mqttSettings.keepAliveSeconds",
+        "properties.mqttSettings.maxInflightMessages",
+        "properties.mqttSettings.protocol",
+        "properties.mqttSettings.qos",
+        "properties.mqttSettings.retain",
+        "properties.mqttSettings.sessionExpirySeconds",
+        "properties.mqttSettings.tls",
+        "properties.mqttSettings.tls.mode",
+        "properties.mqttSettings.tls.trustedCaCertificateConfigMapRef",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowEndpoint resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTOperations/instances/{instanceName}/dataflowEndpoints/{dataflowEndpointName}",
+      "operationId": "DataflowEndpoint_Delete",
+      "pathParameters": [
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of instance."
+        },
+        {
+          "name": "dataflowEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Instance dataflowEndpoint resource"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

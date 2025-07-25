@@ -1,0 +1,302 @@
+{
+  "resource": "Azure::LabServices::Galleryimages",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages",
+      "operationId": "GalleryImages_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab Account."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=author)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages/{galleryImageName}",
+      "operationId": "GalleryImages_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab Account."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=author)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages/{galleryImageName}",
+      "operationId": "GalleryImages_CreateOrUpdate",
+      "bodySchema": "GalleryImage",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.author",
+        "properties.createdDate",
+        "properties.description",
+        "properties.icon",
+        "properties.imageReference",
+        "properties.imageReference.offer",
+        "properties.imageReference.osType",
+        "properties.imageReference.publisher",
+        "properties.imageReference.sku",
+        "properties.imageReference.version",
+        "properties.isEnabled",
+        "properties.isOverride",
+        "properties.isPlanAuthorized",
+        "properties.latestOperationResult",
+        "properties.latestOperationResult.errorCode",
+        "properties.latestOperationResult.errorMessage",
+        "properties.latestOperationResult.httpMethod",
+        "properties.latestOperationResult.operationUrl",
+        "properties.latestOperationResult.requestUri",
+        "properties.latestOperationResult.status",
+        "properties.planId",
+        "properties.provisioningState",
+        "properties.uniqueIdentifier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab Account."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages/{galleryImageName}",
+      "operationId": "GalleryImages_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab Account."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages/{galleryImageName}",
+      "operationId": "GalleryImages_Update",
+      "bodySchema": "GalleryImageFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.isEnabled",
+        "properties.isOverride",
+        "properties.isPlanAuthorized",
+        "properties.provisioningState",
+        "properties.uniqueIdentifier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab Account."
+        },
+        {
+          "name": "galleryImageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery Image."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

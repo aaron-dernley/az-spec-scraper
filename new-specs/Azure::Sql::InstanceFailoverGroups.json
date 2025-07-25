@@ -1,0 +1,159 @@
+{
+  "resource": "Azure::Sql::InstanceFailoverGroups",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/instanceFailoverGroups",
+      "operationId": "InstanceFailoverGroups_ListByLocation",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/instanceFailoverGroups/{failoverGroupName}",
+      "operationId": "InstanceFailoverGroups_Get",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/instanceFailoverGroups/{failoverGroupName}",
+      "operationId": "InstanceFailoverGroups_CreateOrUpdate",
+      "bodySchema": "InstanceFailoverGroup",
+      "requiredProperties": [
+        "properties.managedInstancePairs",
+        "properties.partnerRegions",
+        "properties.readWriteEndpoint",
+        "properties.readWriteEndpoint.failoverPolicy"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.readOnlyEndpoint",
+        "properties.readOnlyEndpoint.failoverPolicy",
+        "properties.readWriteEndpoint.failoverWithDataLossGracePeriodMinutes",
+        "properties.replicationRole",
+        "properties.replicationState",
+        "properties.secondaryType"
+      ],
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/locations/{locationName}/instanceFailoverGroups/{failoverGroupName}",
+      "operationId": "InstanceFailoverGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "locationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the region where the resource is located."
+        },
+        {
+          "name": "failoverGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the failover group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

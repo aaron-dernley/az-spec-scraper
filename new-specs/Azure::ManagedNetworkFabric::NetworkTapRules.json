@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkTapRules",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTapRules/{networkTapRuleName}",
+      "operationId": "NetworkTapRules_Create",
+      "bodySchema": "NetworkTapRule",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.configurationType",
+        "properties.dynamicMatchConfigurations",
+        "properties.lastSyncedTime",
+        "properties.matchConfigurations",
+        "properties.networkTapId",
+        "properties.pollingIntervalInSeconds",
+        "properties.provisioningState",
+        "properties.tapRulesUrl"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkTapRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap Rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTapRules/{networkTapRuleName}",
+      "operationId": "NetworkTapRules_Get",
+      "pathParameters": [
+        {
+          "name": "networkTapRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap Rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTapRules/{networkTapRuleName}",
+      "operationId": "NetworkTapRules_Update",
+      "bodySchema": "NetworkTapRulePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.configurationType",
+        "properties.dynamicMatchConfigurations",
+        "properties.matchConfigurations",
+        "properties.tapRulesUrl"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkTapRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap Rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTapRules/{networkTapRuleName}",
+      "operationId": "NetworkTapRules_Delete",
+      "pathParameters": [
+        {
+          "name": "networkTapRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Tap Rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkTapRules",
+      "operationId": "NetworkTapRules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkTapRules",
+      "operationId": "NetworkTapRules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "resource": "Azure::AwsConnector::RdsDBClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/rdsDBClusters",
+      "operationId": "RdsDbClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBClusters",
+      "operationId": "RdsDbClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBClusters/{name}",
+      "operationId": "RdsDbClusters_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBClusters/{name}",
+      "operationId": "RdsDbClusters_CreateOrReplace",
+      "bodySchema": "RdsDBCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.allocatedStorage",
+        "properties.awsProperties.associatedRoles",
+        "properties.awsProperties.autoMinorVersionUpgrade",
+        "properties.awsProperties.availabilityZones",
+        "properties.awsProperties.backtrackWindow",
+        "properties.awsProperties.backupRetentionPeriod",
+        "properties.awsProperties.copyTagsToSnapshot",
+        "properties.awsProperties.databaseName",
+        "properties.awsProperties.dbClusterArn",
+        "properties.awsProperties.dbClusterIdentifier",
+        "properties.awsProperties.dbClusterInstanceClass",
+        "properties.awsProperties.dbClusterParameterGroupName",
+        "properties.awsProperties.dbClusterResourceId",
+        "properties.awsProperties.dbInstanceParameterGroupName",
+        "properties.awsProperties.dbSubnetGroupName",
+        "properties.awsProperties.dbSystemId",
+        "properties.awsProperties.deletionProtection",
+        "properties.awsProperties.domain",
+        "properties.awsProperties.domainIAMRoleName",
+        "properties.awsProperties.enableCloudwatchLogsExports",
+        "properties.awsProperties.enableGlobalWriteForwarding",
+        "properties.awsProperties.enableHttpEndpoint",
+        "properties.awsProperties.enableIAMDatabaseAuthentication",
+        "properties.awsProperties.endpoint",
+        "properties.awsProperties.endpoint.address",
+        "properties.awsProperties.endpoint.port",
+        "properties.awsProperties.engine",
+        "properties.awsProperties.engineMode",
+        "properties.awsProperties.engineVersion",
+        "properties.awsProperties.globalClusterIdentifier",
+        "properties.awsProperties.iops",
+        "properties.awsProperties.kmsKeyId",
+        "properties.awsProperties.manageMasterUserPassword",
+        "properties.awsProperties.masterUserPassword",
+        "properties.awsProperties.masterUserSecret",
+        "properties.awsProperties.masterUserSecret.kmsKeyId",
+        "properties.awsProperties.masterUserSecret.secretArn",
+        "properties.awsProperties.masterUsername",
+        "properties.awsProperties.monitoringInterval",
+        "properties.awsProperties.monitoringRoleArn",
+        "properties.awsProperties.networkType",
+        "properties.awsProperties.performanceInsightsEnabled",
+        "properties.awsProperties.performanceInsightsKmsKeyId",
+        "properties.awsProperties.performanceInsightsRetentionPeriod",
+        "properties.awsProperties.port",
+        "properties.awsProperties.preferredBackupWindow",
+        "properties.awsProperties.preferredMaintenanceWindow",
+        "properties.awsProperties.publiclyAccessible",
+        "properties.awsProperties.readEndpoint",
+        "properties.awsProperties.readEndpoint.address",
+        "properties.awsProperties.replicationSourceIdentifier",
+        "properties.awsProperties.restoreToTime",
+        "properties.awsProperties.restoreType",
+        "properties.awsProperties.scalingConfiguration",
+        "properties.awsProperties.scalingConfiguration.autoPause",
+        "properties.awsProperties.scalingConfiguration.maxCapacity",
+        "properties.awsProperties.scalingConfiguration.minCapacity",
+        "properties.awsProperties.scalingConfiguration.secondsBeforeTimeout",
+        "properties.awsProperties.scalingConfiguration.secondsUntilAutoPause",
+        "properties.awsProperties.scalingConfiguration.timeoutAction",
+        "properties.awsProperties.serverlessV2ScalingConfiguration",
+        "properties.awsProperties.serverlessV2ScalingConfiguration.maxCapacity",
+        "properties.awsProperties.serverlessV2ScalingConfiguration.minCapacity",
+        "properties.awsProperties.snapshotIdentifier",
+        "properties.awsProperties.sourceDBClusterIdentifier",
+        "properties.awsProperties.sourceRegion",
+        "properties.awsProperties.storageEncrypted",
+        "properties.awsProperties.storageThroughput",
+        "properties.awsProperties.storageType",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.useLatestRestorableTime",
+        "properties.awsProperties.vpcSecurityGroupIds",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBClusters/{name}",
+      "operationId": "RdsDbClusters_Update",
+      "bodySchema": "RdsDBClusterTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/rdsDBClusters/{name}",
+      "operationId": "RdsDbClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RdsDBCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

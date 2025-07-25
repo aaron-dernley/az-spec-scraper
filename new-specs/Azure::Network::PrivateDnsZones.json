@@ -1,0 +1,482 @@
+{
+  "resource": "Azure::Network::PrivateDnsZones",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/privateDnsZones",
+      "operationId": "PrivateZones_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of Private DNS zones to return. If not specified, returns up to 100 zones."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones",
+      "operationId": "PrivateZones_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return. If not specified, returns up to 100 record sets."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}",
+      "operationId": "PrivateZones_Get",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}",
+      "operationId": "PrivateZones_CreateOrUpdate",
+      "bodySchema": "PrivateZone",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "location",
+        "properties",
+        "properties.internalId",
+        "properties.maxNumberOfRecordSets",
+        "properties.maxNumberOfVirtualNetworkLinks",
+        "properties.maxNumberOfVirtualNetworkLinksWithRegistration",
+        "properties.numberOfRecordSets",
+        "properties.numberOfVirtualNetworkLinks",
+        "properties.numberOfVirtualNetworkLinksWithRegistration",
+        "properties.provisioningState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}",
+      "operationId": "PrivateZones_Update",
+      "bodySchema": "PrivateZone",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "location",
+        "properties",
+        "properties.internalId",
+        "properties.maxNumberOfRecordSets",
+        "properties.maxNumberOfVirtualNetworkLinks",
+        "properties.maxNumberOfVirtualNetworkLinksWithRegistration",
+        "properties.numberOfRecordSets",
+        "properties.numberOfVirtualNetworkLinks",
+        "properties.numberOfVirtualNetworkLinksWithRegistration",
+        "properties.provisioningState",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}",
+      "operationId": "PrivateZones_Delete",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Private DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/{recordType}",
+      "operationId": "RecordSets_ListByType",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of record sets to return. If not specified, returns up to 100 record sets."
+        },
+        {
+          "name": "$recordsetnamesuffix",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The suffix label of the record set name to be used to filter the record set enumeration. If this parameter is specified, the returned enumeration will only contain records that end with \".<recordsetnamesuffix>\"."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Get",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_CreateOrUpdate",
+      "bodySchema": "RecordSet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.aRecords",
+        "properties.aaaaRecords",
+        "properties.cnameRecord",
+        "properties.cnameRecord.cname",
+        "properties.fqdn",
+        "properties.isAutoRegistered",
+        "properties.metadata",
+        "properties.mxRecords",
+        "properties.ptrRecords",
+        "properties.soaRecord",
+        "properties.soaRecord.email",
+        "properties.soaRecord.expireTime",
+        "properties.soaRecord.host",
+        "properties.soaRecord.minimumTtl",
+        "properties.soaRecord.refreshTime",
+        "properties.soaRecord.retryTime",
+        "properties.soaRecord.serialNumber",
+        "properties.srvRecords",
+        "properties.ttl",
+        "properties.txtRecords"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Update",
+      "bodySchema": "RecordSet",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.aRecords",
+        "properties.aaaaRecords",
+        "properties.cnameRecord",
+        "properties.cnameRecord.cname",
+        "properties.fqdn",
+        "properties.isAutoRegistered",
+        "properties.metadata",
+        "properties.mxRecords",
+        "properties.ptrRecords",
+        "properties.soaRecord",
+        "properties.soaRecord.email",
+        "properties.soaRecord.expireTime",
+        "properties.soaRecord.host",
+        "properties.soaRecord.minimumTtl",
+        "properties.soaRecord.refreshTime",
+        "properties.soaRecord.retryTime",
+        "properties.soaRecord.serialNumber",
+        "properties.srvRecords",
+        "properties.ttl",
+        "properties.txtRecords"
+      ],
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/{recordType}/{relativeRecordSetName}",
+      "operationId": "RecordSets_Delete",
+      "pathParameters": [
+        {
+          "name": "privateZoneName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS zone (without a terminating dot)."
+        },
+        {
+          "name": "recordType",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The type of DNS record in this record set."
+        },
+        {
+          "name": "relativeRecordSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the record set, relative to the name of the zone."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

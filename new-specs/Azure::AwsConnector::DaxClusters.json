@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::AwsConnector::DaxClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/daxClusters",
+      "operationId": "DaxClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/daxClusters",
+      "operationId": "DaxClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/daxClusters/{name}",
+      "operationId": "DaxClusters_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DaxCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/daxClusters/{name}",
+      "operationId": "DaxClusters_CreateOrReplace",
+      "bodySchema": "DaxCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.activeNodes",
+        "properties.awsProperties.clusterArn",
+        "properties.awsProperties.clusterDiscoveryEndpoint",
+        "properties.awsProperties.clusterDiscoveryEndpoint.address",
+        "properties.awsProperties.clusterDiscoveryEndpoint.port",
+        "properties.awsProperties.clusterDiscoveryEndpoint.url",
+        "properties.awsProperties.clusterEndpointEncryptionType",
+        "properties.awsProperties.clusterEndpointEncryptionType.value",
+        "properties.awsProperties.clusterName",
+        "properties.awsProperties.description",
+        "properties.awsProperties.iamRoleArn",
+        "properties.awsProperties.nodeIdsToRemove",
+        "properties.awsProperties.nodeType",
+        "properties.awsProperties.nodes",
+        "properties.awsProperties.notificationConfiguration",
+        "properties.awsProperties.notificationConfiguration.topicArn",
+        "properties.awsProperties.notificationConfiguration.topicStatus",
+        "properties.awsProperties.parameterGroup",
+        "properties.awsProperties.parameterGroup.nodeIdsToReboot",
+        "properties.awsProperties.parameterGroup.parameterApplyStatus",
+        "properties.awsProperties.parameterGroup.parameterGroupName",
+        "properties.awsProperties.preferredMaintenanceWindow",
+        "properties.awsProperties.securityGroups",
+        "properties.awsProperties.sseDescription",
+        "properties.awsProperties.sseDescription.status",
+        "properties.awsProperties.sseDescription.status.value",
+        "properties.awsProperties.status",
+        "properties.awsProperties.subnetGroup",
+        "properties.awsProperties.totalNodes",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DaxCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/daxClusters/{name}",
+      "operationId": "DaxClusters_Update",
+      "bodySchema": "DaxClusterTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DaxCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/daxClusters/{name}",
+      "operationId": "DaxClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of DaxCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

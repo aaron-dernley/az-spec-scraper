@@ -1,0 +1,213 @@
+{
+  "resource": "Azure::DocumentDB::DataCenters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters",
+      "operationId": "CassandraDataCenters_List",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}",
+      "operationId": "CassandraDataCenters_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "dataCenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data center name in a managed Cassandra cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}",
+      "operationId": "CassandraDataCenters_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "dataCenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data center name in a managed Cassandra cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}",
+      "operationId": "CassandraDataCenters_CreateUpdate",
+      "bodySchema": "DataCenterResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.availabilityZone",
+        "properties.backupStorageCustomerKeyUri",
+        "properties.base64EncodedCassandraYamlFragment",
+        "properties.dataCenterLocation",
+        "properties.delegatedSubnetId",
+        "properties.diskCapacity",
+        "properties.diskSku",
+        "properties.managedDiskCustomerKeyUri",
+        "properties.nodeCount",
+        "properties.provisioningState",
+        "properties.seedNodes",
+        "properties.sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "dataCenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data center name in a managed Cassandra cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/dataCenters/{dataCenterName}",
+      "operationId": "CassandraDataCenters_Update",
+      "bodySchema": "DataCenterResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.availabilityZone",
+        "properties.backupStorageCustomerKeyUri",
+        "properties.base64EncodedCassandraYamlFragment",
+        "properties.dataCenterLocation",
+        "properties.delegatedSubnetId",
+        "properties.diskCapacity",
+        "properties.diskSku",
+        "properties.managedDiskCustomerKeyUri",
+        "properties.nodeCount",
+        "properties.provisioningState",
+        "properties.seedNodes",
+        "properties.sku"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "dataCenterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Data center name in a managed Cassandra cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

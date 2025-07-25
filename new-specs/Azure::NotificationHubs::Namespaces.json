@@ -1,0 +1,350 @@
+{
+  "resource": "Azure::NotificationHubs::Namespaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}",
+      "operationId": "Namespaces_Get",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}",
+      "operationId": "Namespaces_CreateOrUpdate",
+      "bodySchema": "NamespaceResource",
+      "requiredProperties": [
+        "properties.networkAcls.publicNetworkRule.rights",
+        "properties.pnsCredentials.admCredential.properties",
+        "properties.pnsCredentials.admCredential.properties.authTokenUrl",
+        "properties.pnsCredentials.admCredential.properties.clientId",
+        "properties.pnsCredentials.admCredential.properties.clientSecret",
+        "properties.pnsCredentials.apnsCredential.properties",
+        "properties.pnsCredentials.apnsCredential.properties.endpoint",
+        "properties.pnsCredentials.baiduCredential.properties",
+        "properties.pnsCredentials.baiduCredential.properties.baiduApiKey",
+        "properties.pnsCredentials.baiduCredential.properties.baiduEndPoint",
+        "properties.pnsCredentials.baiduCredential.properties.baiduSecretKey",
+        "properties.pnsCredentials.browserCredential.properties",
+        "properties.pnsCredentials.browserCredential.properties.subject",
+        "properties.pnsCredentials.browserCredential.properties.vapidPrivateKey",
+        "properties.pnsCredentials.browserCredential.properties.vapidPublicKey",
+        "properties.pnsCredentials.gcmCredential.properties",
+        "properties.pnsCredentials.gcmCredential.properties.googleApiKey",
+        "properties.pnsCredentials.mpnsCredential.properties",
+        "properties.pnsCredentials.mpnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.mpnsCredential.properties.mpnsCertificate",
+        "properties.pnsCredentials.mpnsCredential.properties.thumbprint",
+        "properties.pnsCredentials.wnsCredential.properties",
+        "properties.pnsCredentials.xiaomiCredential.properties",
+        "sku",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.createdAt",
+        "properties.critical",
+        "properties.dataCenter",
+        "properties.enabled",
+        "properties.metricId",
+        "properties.name",
+        "properties.namespaceType",
+        "properties.networkAcls",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.publicNetworkRule",
+        "properties.pnsCredentials",
+        "properties.pnsCredentials.admCredential",
+        "properties.pnsCredentials.apnsCredential",
+        "properties.pnsCredentials.apnsCredential.properties.apnsCertificate",
+        "properties.pnsCredentials.apnsCredential.properties.appId",
+        "properties.pnsCredentials.apnsCredential.properties.appName",
+        "properties.pnsCredentials.apnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.apnsCredential.properties.keyId",
+        "properties.pnsCredentials.apnsCredential.properties.thumbprint",
+        "properties.pnsCredentials.apnsCredential.properties.token",
+        "properties.pnsCredentials.baiduCredential",
+        "properties.pnsCredentials.browserCredential",
+        "properties.pnsCredentials.gcmCredential",
+        "properties.pnsCredentials.gcmCredential.properties.gcmEndpoint",
+        "properties.pnsCredentials.mpnsCredential",
+        "properties.pnsCredentials.wnsCredential",
+        "properties.pnsCredentials.wnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.wnsCredential.properties.packageSid",
+        "properties.pnsCredentials.wnsCredential.properties.secretKey",
+        "properties.pnsCredentials.wnsCredential.properties.windowsLiveEndpoint",
+        "properties.pnsCredentials.wnsCredential.properties.wnsCertificate",
+        "properties.pnsCredentials.xiaomiCredential",
+        "properties.pnsCredentials.xiaomiCredential.properties.appSecret",
+        "properties.pnsCredentials.xiaomiCredential.properties.endpoint",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.region",
+        "properties.replicationRegion",
+        "properties.scaleUnit",
+        "properties.serviceBusEndpoint",
+        "properties.status",
+        "properties.subscriptionId",
+        "properties.updatedAt",
+        "properties.zoneRedundancy",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier"
+      ],
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}",
+      "operationId": "Namespaces_Update",
+      "bodySchema": "NamespacePatchParameters",
+      "requiredProperties": [
+        "properties.networkAcls.publicNetworkRule.rights",
+        "properties.pnsCredentials.admCredential.properties",
+        "properties.pnsCredentials.admCredential.properties.authTokenUrl",
+        "properties.pnsCredentials.admCredential.properties.clientId",
+        "properties.pnsCredentials.admCredential.properties.clientSecret",
+        "properties.pnsCredentials.apnsCredential.properties",
+        "properties.pnsCredentials.apnsCredential.properties.endpoint",
+        "properties.pnsCredentials.baiduCredential.properties",
+        "properties.pnsCredentials.baiduCredential.properties.baiduApiKey",
+        "properties.pnsCredentials.baiduCredential.properties.baiduEndPoint",
+        "properties.pnsCredentials.baiduCredential.properties.baiduSecretKey",
+        "properties.pnsCredentials.browserCredential.properties",
+        "properties.pnsCredentials.browserCredential.properties.subject",
+        "properties.pnsCredentials.browserCredential.properties.vapidPrivateKey",
+        "properties.pnsCredentials.browserCredential.properties.vapidPublicKey",
+        "properties.pnsCredentials.gcmCredential.properties",
+        "properties.pnsCredentials.gcmCredential.properties.googleApiKey",
+        "properties.pnsCredentials.mpnsCredential.properties",
+        "properties.pnsCredentials.mpnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.mpnsCredential.properties.mpnsCertificate",
+        "properties.pnsCredentials.mpnsCredential.properties.thumbprint",
+        "properties.pnsCredentials.wnsCredential.properties",
+        "properties.pnsCredentials.xiaomiCredential.properties",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.createdAt",
+        "properties.critical",
+        "properties.dataCenter",
+        "properties.enabled",
+        "properties.metricId",
+        "properties.name",
+        "properties.namespaceType",
+        "properties.networkAcls",
+        "properties.networkAcls.ipRules",
+        "properties.networkAcls.publicNetworkRule",
+        "properties.pnsCredentials",
+        "properties.pnsCredentials.admCredential",
+        "properties.pnsCredentials.apnsCredential",
+        "properties.pnsCredentials.apnsCredential.properties.apnsCertificate",
+        "properties.pnsCredentials.apnsCredential.properties.appId",
+        "properties.pnsCredentials.apnsCredential.properties.appName",
+        "properties.pnsCredentials.apnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.apnsCredential.properties.keyId",
+        "properties.pnsCredentials.apnsCredential.properties.thumbprint",
+        "properties.pnsCredentials.apnsCredential.properties.token",
+        "properties.pnsCredentials.baiduCredential",
+        "properties.pnsCredentials.browserCredential",
+        "properties.pnsCredentials.gcmCredential",
+        "properties.pnsCredentials.gcmCredential.properties.gcmEndpoint",
+        "properties.pnsCredentials.mpnsCredential",
+        "properties.pnsCredentials.wnsCredential",
+        "properties.pnsCredentials.wnsCredential.properties.certificateKey",
+        "properties.pnsCredentials.wnsCredential.properties.packageSid",
+        "properties.pnsCredentials.wnsCredential.properties.secretKey",
+        "properties.pnsCredentials.wnsCredential.properties.windowsLiveEndpoint",
+        "properties.pnsCredentials.wnsCredential.properties.wnsCertificate",
+        "properties.pnsCredentials.xiaomiCredential",
+        "properties.pnsCredentials.xiaomiCredential.properties.appSecret",
+        "properties.pnsCredentials.xiaomiCredential.properties.endpoint",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.region",
+        "properties.replicationRegion",
+        "properties.scaleUnit",
+        "properties.serviceBusEndpoint",
+        "properties.status",
+        "properties.subscriptionId",
+        "properties.updatedAt",
+        "properties.zoneRedundancy",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.size",
+        "sku.tier",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}",
+      "operationId": "Namespaces_Delete",
+      "pathParameters": [
+        {
+          "name": "namespaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Namespace name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NotificationHubs/namespaces",
+      "operationId": "Namespaces_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip token for subsequent requests."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of results to return."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces",
+      "operationId": "Namespaces_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skipToken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Skip token for subsequent requests."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of results to return."
+        }
+      ]
+    }
+  ]
+}

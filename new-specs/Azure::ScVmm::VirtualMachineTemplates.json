@@ -1,0 +1,199 @@
+{
+  "resource": "Azure::ScVmm::VirtualMachineTemplates",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ScVmm/virtualMachineTemplates",
+      "operationId": "VirtualMachineTemplates_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/virtualMachineTemplates",
+      "operationId": "VirtualMachineTemplates_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/virtualMachineTemplates/{virtualMachineTemplateName}",
+      "operationId": "VirtualMachineTemplates_Get",
+      "pathParameters": [
+        {
+          "name": "virtualMachineTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VirtualMachineTemplate."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/virtualMachineTemplates/{virtualMachineTemplateName}",
+      "operationId": "VirtualMachineTemplates_CreateOrUpdate",
+      "bodySchema": "VirtualMachineTemplate",
+      "requiredProperties": [
+        "extendedLocation"
+      ],
+      "optionalProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.computerName",
+        "properties.cpuCount",
+        "properties.disks",
+        "properties.dynamicMemoryEnabled",
+        "properties.dynamicMemoryMaxMB",
+        "properties.dynamicMemoryMinMB",
+        "properties.generation",
+        "properties.inventoryItemId",
+        "properties.isCustomizable",
+        "properties.isHighlyAvailable",
+        "properties.limitCpuForMigration",
+        "properties.memoryMB",
+        "properties.networkInterfaces",
+        "properties.osName",
+        "properties.osType",
+        "properties.provisioningState",
+        "properties.uuid",
+        "properties.vmmServerId"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VirtualMachineTemplate."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/virtualMachineTemplates/{virtualMachineTemplateName}",
+      "operationId": "VirtualMachineTemplates_Update",
+      "bodySchema": "VirtualMachineTemplateTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VirtualMachineTemplate."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/virtualMachineTemplates/{virtualMachineTemplateName}",
+      "operationId": "VirtualMachineTemplates_Delete",
+      "pathParameters": [
+        {
+          "name": "virtualMachineTemplateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the VirtualMachineTemplate."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Forces the resource to be deleted."
+        }
+      ]
+    }
+  ]
+}

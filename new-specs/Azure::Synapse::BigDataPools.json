@@ -1,0 +1,227 @@
+{
+  "resource": "Azure::Synapse::BigDataPools",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}",
+      "operationId": "BigDataPools_Get",
+      "pathParameters": [
+        {
+          "name": "bigDataPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Big Data pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}",
+      "operationId": "BigDataPools_Update",
+      "bodySchema": "BigDataPoolPatchInfo",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "bigDataPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Big Data pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}",
+      "operationId": "BigDataPools_CreateOrUpdate",
+      "bodySchema": "BigDataPoolResourceInfo",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoPause",
+        "properties.autoPause.delayInMinutes",
+        "properties.autoPause.enabled",
+        "properties.autoScale",
+        "properties.autoScale.enabled",
+        "properties.autoScale.maxNodeCount",
+        "properties.autoScale.minNodeCount",
+        "properties.cacheSize",
+        "properties.creationDate",
+        "properties.customLibraries",
+        "properties.defaultSparkLogFolder",
+        "properties.dynamicExecutorAllocation",
+        "properties.dynamicExecutorAllocation.enabled",
+        "properties.isComputeIsolationEnabled",
+        "properties.lastSucceededTimestamp",
+        "properties.libraryRequirements",
+        "properties.libraryRequirements.content",
+        "properties.libraryRequirements.filename",
+        "properties.libraryRequirements.time",
+        "properties.nodeCount",
+        "properties.nodeSize",
+        "properties.nodeSizeFamily",
+        "properties.provisioningState",
+        "properties.sessionLevelPackagesEnabled",
+        "properties.sparkConfigProperties",
+        "properties.sparkConfigProperties.content",
+        "properties.sparkConfigProperties.filename",
+        "properties.sparkConfigProperties.time",
+        "properties.sparkEventsFolder",
+        "properties.sparkVersion"
+      ],
+      "pathParameters": [
+        {
+          "name": "bigDataPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Big Data pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Whether to stop any running jobs in the Big Data pool"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}",
+      "operationId": "BigDataPools_Delete",
+      "pathParameters": [
+        {
+          "name": "bigDataPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Big Data pool name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools",
+      "operationId": "BigDataPools_ListByWorkspace",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

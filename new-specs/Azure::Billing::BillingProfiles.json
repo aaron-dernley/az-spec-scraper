@@ -1,0 +1,127 @@
+{
+  "resource": "Azure::Billing::BillingProfiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}",
+      "operationId": "BillingProfiles_Delete",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}",
+      "operationId": "BillingProfiles_Get",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}",
+      "operationId": "BillingProfiles_CreateOrUpdate",
+      "bodySchema": "BillingProfile",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.billTo",
+        "properties.billingRelationshipType",
+        "properties.currency",
+        "properties.currentPaymentTerm",
+        "properties.currentPaymentTerm.endDate",
+        "properties.currentPaymentTerm.isDefault",
+        "properties.currentPaymentTerm.startDate",
+        "properties.currentPaymentTerm.term",
+        "properties.displayName",
+        "properties.enabledAzurePlans",
+        "properties.hasReadAccess",
+        "properties.indirectRelationshipInfo",
+        "properties.invoiceDay",
+        "properties.invoiceEmailOptIn",
+        "properties.invoiceRecipients",
+        "properties.otherPaymentTerms",
+        "properties.poNumber",
+        "properties.provisioningState",
+        "properties.shipTo",
+        "properties.soldTo",
+        "properties.spendingLimit",
+        "properties.spendingLimitDetails",
+        "properties.status",
+        "properties.statusReasonCode",
+        "properties.systemId",
+        "properties.tags",
+        "properties.targetClouds"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles",
+      "operationId": "BillingProfiles_ListByBillingAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "includeDeleted",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Can be used to get deleted billing profiles."
+        }
+      ]
+    }
+  ]
+}

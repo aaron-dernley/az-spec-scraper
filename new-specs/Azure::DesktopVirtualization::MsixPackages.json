@@ -1,0 +1,204 @@
+{
+  "resource": "Azure::DesktopVirtualization::MsixPackages",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/msixPackages/{msixPackageFullName}",
+      "operationId": "MSIXPackages_Get",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "msixPackageFullName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The version specific package full name of the MSIX package within specified hostpool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/msixPackages/{msixPackageFullName}",
+      "operationId": "MSIXPackages_CreateOrUpdate",
+      "bodySchema": "MSIXPackage",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.displayName",
+        "properties.imagePath",
+        "properties.isActive",
+        "properties.isRegularRegistration",
+        "properties.lastUpdated",
+        "properties.packageApplications",
+        "properties.packageDependencies",
+        "properties.packageFamilyName",
+        "properties.packageName",
+        "properties.packageRelativePath",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "msixPackageFullName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The version specific package full name of the MSIX package within specified hostpool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/msixPackages/{msixPackageFullName}",
+      "operationId": "MSIXPackages_Delete",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "msixPackageFullName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The version specific package full name of the MSIX package within specified hostpool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/msixPackages/{msixPackageFullName}",
+      "operationId": "MSIXPackages_Update",
+      "bodySchema": "MSIXPackagePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.isActive",
+        "properties.isRegularRegistration"
+      ],
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "msixPackageFullName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The version specific package full name of the MSIX package within specified hostpool"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/msixPackages",
+      "operationId": "MSIXPackages_List",
+      "pathParameters": [
+        {
+          "name": "hostPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the host pool within the specified resource group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

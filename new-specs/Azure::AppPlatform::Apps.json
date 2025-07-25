@@ -1,0 +1,280 @@
+{
+  "resource": "Azure::AppPlatform::Apps",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}",
+      "operationId": "Apps_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        },
+        {
+          "name": "syncStatus",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Indicates whether sync status"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}",
+      "operationId": "Apps_CreateOrUpdate",
+      "bodySchema": "AppResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "location",
+        "name",
+        "properties",
+        "properties.activeDeploymentName",
+        "properties.createdTime",
+        "properties.fqdn",
+        "properties.httpsOnly",
+        "properties.persistentDisk",
+        "properties.persistentDisk.mountPath",
+        "properties.persistentDisk.sizeInGB",
+        "properties.persistentDisk.usedInGB",
+        "properties.provisioningState",
+        "properties.public",
+        "properties.temporaryDisk",
+        "properties.temporaryDisk.mountPath",
+        "properties.temporaryDisk.sizeInGB",
+        "properties.url",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}",
+      "operationId": "Apps_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps/{appName}",
+      "operationId": "Apps_Update",
+      "bodySchema": "AppResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "location",
+        "name",
+        "properties",
+        "properties.activeDeploymentName",
+        "properties.createdTime",
+        "properties.fqdn",
+        "properties.httpsOnly",
+        "properties.persistentDisk",
+        "properties.persistentDisk.mountPath",
+        "properties.persistentDisk.sizeInGB",
+        "properties.persistentDisk.usedInGB",
+        "properties.provisioningState",
+        "properties.public",
+        "properties.temporaryDisk",
+        "properties.temporaryDisk.mountPath",
+        "properties.temporaryDisk.sizeInGB",
+        "properties.url",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        },
+        {
+          "name": "appName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the App resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppPlatform/Spring/{serviceName}/apps",
+      "operationId": "Apps_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal."
+        },
+        {
+          "name": "serviceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Service resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client Api Version."
+        }
+      ]
+    }
+  ]
+}

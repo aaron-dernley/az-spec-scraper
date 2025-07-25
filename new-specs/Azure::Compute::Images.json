@@ -1,0 +1,212 @@
+{
+  "resource": "Azure::Compute::Images",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "operationId": "Images_CreateOrUpdate",
+      "bodySchema": "Image",
+      "requiredProperties": [
+        "properties.storageProfile.osDisk.osState",
+        "properties.storageProfile.osDisk.osType"
+      ],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.hyperVGeneration",
+        "properties.provisioningState",
+        "properties.sourceVirtualMachine",
+        "properties.storageProfile",
+        "properties.storageProfile.dataDisks",
+        "properties.storageProfile.osDisk",
+        "properties.storageProfile.osDisk.blobUri",
+        "properties.storageProfile.osDisk.caching",
+        "properties.storageProfile.osDisk.diskEncryptionSet",
+        "properties.storageProfile.osDisk.diskSizeGB",
+        "properties.storageProfile.osDisk.managedDisk",
+        "properties.storageProfile.osDisk.snapshot",
+        "properties.storageProfile.osDisk.storageAccountType",
+        "properties.storageProfile.zoneResilient"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the image."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "operationId": "Images_Update",
+      "bodySchema": "ImageUpdate",
+      "requiredProperties": [
+        "properties.storageProfile.osDisk.osState",
+        "properties.storageProfile.osDisk.osType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.hyperVGeneration",
+        "properties.provisioningState",
+        "properties.sourceVirtualMachine",
+        "properties.storageProfile",
+        "properties.storageProfile.dataDisks",
+        "properties.storageProfile.osDisk",
+        "properties.storageProfile.osDisk.blobUri",
+        "properties.storageProfile.osDisk.caching",
+        "properties.storageProfile.osDisk.diskEncryptionSet",
+        "properties.storageProfile.osDisk.diskSizeGB",
+        "properties.storageProfile.osDisk.managedDisk",
+        "properties.storageProfile.osDisk.snapshot",
+        "properties.storageProfile.osDisk.storageAccountType",
+        "properties.storageProfile.zoneResilient"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the image."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "operationId": "Images_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the image."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}",
+      "operationId": "Images_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the image."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images",
+      "operationId": "Images_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/images",
+      "operationId": "Images_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

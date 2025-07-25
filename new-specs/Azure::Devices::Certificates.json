@@ -1,0 +1,237 @@
+{
+  "resource": "Azure::Devices::Certificates",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{provisioningServiceName}/certificates/{certificateName}",
+      "operationId": "DpsCertificate_Get",
+      "pathParameters": [
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the certificate to retrieve."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group identifier."
+        },
+        {
+          "name": "provisioningServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the provisioning service the certificate is associated with."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{provisioningServiceName}/certificates/{certificateName}",
+      "operationId": "DpsCertificate_CreateOrUpdate",
+      "bodySchema": "CertificateBodyDescription",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "certificate",
+        "isVerified"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group identifier."
+        },
+        {
+          "name": "provisioningServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        },
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the certificate create or update."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{provisioningServiceName}/certificates/{certificateName}",
+      "operationId": "DpsCertificate_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Resource group identifier."
+        },
+        {
+          "name": "provisioningServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the provisioning service."
+        },
+        {
+          "name": "certificateName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "This is a mandatory field, and is the logical name of the certificate that the provisioning service will access by."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "certificate.name",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "This is optional, and it is the Common Name of the certificate."
+        },
+        {
+          "name": "certificate.rawBytes",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Raw data within the certificate."
+        },
+        {
+          "name": "certificate.isVerified",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Indicates if certificate has been verified by owner of the private key."
+        },
+        {
+          "name": "certificate.purpose",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "A description that mentions the purpose of the certificate."
+        },
+        {
+          "name": "certificate.created",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Time the certificate is created."
+        },
+        {
+          "name": "certificate.lastUpdated",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Time the certificate is last updated."
+        },
+        {
+          "name": "certificate.hasPrivateKey",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Indicates if the certificate contains a private key."
+        },
+        {
+          "name": "certificate.nonce",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Random number generated to indicate Proof of Possession."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/provisioningServices/{provisioningServiceName}/certificates",
+      "operationId": "DpsCertificate_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of resource group."
+        },
+        {
+          "name": "provisioningServiceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of provisioning service to retrieve certificates for."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the API."
+        }
+      ]
+    }
+  ]
+}

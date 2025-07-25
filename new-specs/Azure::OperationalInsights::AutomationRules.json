@@ -1,0 +1,162 @@
+{
+  "resource": "Azure::OperationalInsights::AutomationRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/automationRules/{automationRuleId}",
+      "operationId": "AutomationRules_Get",
+      "pathParameters": [
+        {
+          "name": "automationRuleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Automation rule ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/automationRules/{automationRuleId}",
+      "operationId": "AutomationRules_CreateOrUpdate",
+      "bodySchema": "AutomationRule",
+      "requiredProperties": [
+        "properties",
+        "properties.actions",
+        "properties.displayName",
+        "properties.order",
+        "properties.triggeringLogic",
+        "properties.triggeringLogic.isEnabled",
+        "properties.triggeringLogic.triggersOn",
+        "properties.triggeringLogic.triggersWhen"
+      ],
+      "optionalProperties": [
+        "properties.createdBy",
+        "properties.createdTimeUtc",
+        "properties.lastModifiedBy",
+        "properties.lastModifiedTimeUtc",
+        "properties.triggeringLogic.conditions",
+        "properties.triggeringLogic.expirationTimeUtc"
+      ],
+      "pathParameters": [
+        {
+          "name": "automationRuleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Automation rule ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/automationRules/{automationRuleId}",
+      "operationId": "AutomationRules_Delete",
+      "pathParameters": [
+        {
+          "name": "automationRuleId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Automation rule ID"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/automationRules",
+      "operationId": "AutomationRules_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

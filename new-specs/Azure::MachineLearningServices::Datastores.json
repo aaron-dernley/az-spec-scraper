@@ -1,0 +1,207 @@
+{
+  "resource": "Azure::MachineLearningServices::Datastores",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/datastores",
+      "operationId": "Datastores_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "count",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "Maximum number of results to return."
+        },
+        {
+          "name": "isDefault",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Filter down to the workspace default datastore."
+        },
+        {
+          "name": "names",
+          "required": false,
+          "type": "array",
+          "in": "query",
+          "description": "Names of datastores to return."
+        },
+        {
+          "name": "searchText",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Text to search for in the datastore names."
+        },
+        {
+          "name": "orderBy",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Order by property (createdtime | modifiedtime | name)."
+        },
+        {
+          "name": "orderByAsc",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Order by property in ascending order."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/datastores/{name}",
+      "operationId": "Datastores_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Datastore name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/datastores/{name}",
+      "operationId": "Datastores_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Datastore name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/datastores/{name}",
+      "operationId": "Datastores_CreateOrUpdate",
+      "bodySchema": "DatastoreResource",
+      "requiredProperties": [
+        "properties",
+        "properties.credentials",
+        "properties.credentials.credentialsType",
+        "properties.datastoreType"
+      ],
+      "optionalProperties": [
+        "properties.description",
+        "properties.isDefault",
+        "properties.properties",
+        "properties.tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Datastore name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "skipValidation",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag to skip validation."
+        }
+      ]
+    }
+  ]
+}

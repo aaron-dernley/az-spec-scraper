@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::DeviceRegistry::Assets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DeviceRegistry/assets",
+      "operationId": "Assets_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assets",
+      "operationId": "Assets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assets/{assetName}",
+      "operationId": "Assets_Get",
+      "pathParameters": [
+        {
+          "name": "assetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assets/{assetName}",
+      "operationId": "Assets_CreateOrReplace",
+      "bodySchema": "Asset",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.assetEndpointProfileRef",
+        "properties.defaultTopic.path"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.attributes",
+        "properties.datasets",
+        "properties.defaultDatasetsConfiguration",
+        "properties.defaultEventsConfiguration",
+        "properties.defaultTopic",
+        "properties.defaultTopic.retain",
+        "properties.description",
+        "properties.discoveredAssetRefs",
+        "properties.displayName",
+        "properties.documentationUri",
+        "properties.enabled",
+        "properties.events",
+        "properties.externalAssetId",
+        "properties.hardwareRevision",
+        "properties.manufacturer",
+        "properties.manufacturerUri",
+        "properties.model",
+        "properties.productCode",
+        "properties.provisioningState",
+        "properties.serialNumber",
+        "properties.softwareRevision",
+        "properties.status",
+        "properties.status.datasets",
+        "properties.status.errors",
+        "properties.status.events",
+        "properties.status.version",
+        "properties.uuid",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "assetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assets/{assetName}",
+      "operationId": "Assets_Update",
+      "bodySchema": "AssetUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.attributes",
+        "properties.datasets",
+        "properties.defaultDatasetsConfiguration",
+        "properties.defaultEventsConfiguration",
+        "properties.defaultTopic",
+        "properties.defaultTopic.path",
+        "properties.defaultTopic.retain",
+        "properties.description",
+        "properties.displayName",
+        "properties.documentationUri",
+        "properties.enabled",
+        "properties.events",
+        "properties.hardwareRevision",
+        "properties.manufacturer",
+        "properties.manufacturerUri",
+        "properties.model",
+        "properties.productCode",
+        "properties.serialNumber",
+        "properties.softwareRevision",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "assetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeviceRegistry/assets/{assetName}",
+      "operationId": "Assets_Delete",
+      "pathParameters": [
+        {
+          "name": "assetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Asset name parameter."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "resource": "Azure::ScVmm::AvailabilitySets",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ScVmm/availabilitySets",
+      "operationId": "AvailabilitySets_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/availabilitySets",
+      "operationId": "AvailabilitySets_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/availabilitySets/{availabilitySetResourceName}",
+      "operationId": "AvailabilitySets_Get",
+      "pathParameters": [
+        {
+          "name": "availabilitySetResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the AvailabilitySet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/availabilitySets/{availabilitySetResourceName}",
+      "operationId": "AvailabilitySets_CreateOrUpdate",
+      "bodySchema": "AvailabilitySet",
+      "requiredProperties": [
+        "extendedLocation"
+      ],
+      "optionalProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.availabilitySetName",
+        "properties.provisioningState",
+        "properties.vmmServerId"
+      ],
+      "pathParameters": [
+        {
+          "name": "availabilitySetResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the AvailabilitySet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/availabilitySets/{availabilitySetResourceName}",
+      "operationId": "AvailabilitySets_Update",
+      "bodySchema": "AvailabilitySetTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "availabilitySetResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the AvailabilitySet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ScVmm/availabilitySets/{availabilitySetResourceName}",
+      "operationId": "AvailabilitySets_Delete",
+      "pathParameters": [
+        {
+          "name": "availabilitySetResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the AvailabilitySet."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "force",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Forces the resource to be deleted."
+        }
+      ]
+    }
+  ]
+}

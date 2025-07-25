@@ -1,0 +1,229 @@
+{
+  "resource": "Azure::AwsConnector::LambdaFunctions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/lambdaFunctions",
+      "operationId": "LambdaFunctions_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lambdaFunctions",
+      "operationId": "LambdaFunctions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lambdaFunctions/{name}",
+      "operationId": "LambdaFunctions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LambdaFunction"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lambdaFunctions/{name}",
+      "operationId": "LambdaFunctions_CreateOrReplace",
+      "bodySchema": "LambdaFunction",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.architectures",
+        "properties.awsProperties.arn",
+        "properties.awsProperties.code",
+        "properties.awsProperties.code.imageUri",
+        "properties.awsProperties.code.s3Bucket",
+        "properties.awsProperties.code.s3Key",
+        "properties.awsProperties.code.s3ObjectVersion",
+        "properties.awsProperties.code.zipFile",
+        "properties.awsProperties.codeSigningConfigArn",
+        "properties.awsProperties.deadLetterConfig",
+        "properties.awsProperties.deadLetterConfig.targetArn",
+        "properties.awsProperties.description",
+        "properties.awsProperties.environment",
+        "properties.awsProperties.environment.variables",
+        "properties.awsProperties.ephemeralStorage",
+        "properties.awsProperties.ephemeralStorage.size",
+        "properties.awsProperties.fileSystemConfigs",
+        "properties.awsProperties.functionName",
+        "properties.awsProperties.handler",
+        "properties.awsProperties.imageConfig",
+        "properties.awsProperties.imageConfig.command",
+        "properties.awsProperties.imageConfig.entryPoint",
+        "properties.awsProperties.imageConfig.workingDirectory",
+        "properties.awsProperties.kmsKeyArn",
+        "properties.awsProperties.layers",
+        "properties.awsProperties.loggingConfig",
+        "properties.awsProperties.loggingConfig.applicationLogLevel",
+        "properties.awsProperties.loggingConfig.logFormat",
+        "properties.awsProperties.loggingConfig.logGroup",
+        "properties.awsProperties.loggingConfig.systemLogLevel",
+        "properties.awsProperties.memorySize",
+        "properties.awsProperties.packageType",
+        "properties.awsProperties.reservedConcurrentExecutions",
+        "properties.awsProperties.role",
+        "properties.awsProperties.runtime",
+        "properties.awsProperties.runtimeManagementConfig",
+        "properties.awsProperties.runtimeManagementConfig.runtimeVersionArn",
+        "properties.awsProperties.runtimeManagementConfig.updateRuntimeOn",
+        "properties.awsProperties.snapStart",
+        "properties.awsProperties.snapStart.applyOn",
+        "properties.awsProperties.snapStartResponse",
+        "properties.awsProperties.snapStartResponse.applyOn",
+        "properties.awsProperties.snapStartResponse.optimizationStatus",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.timeout",
+        "properties.awsProperties.tracingConfig",
+        "properties.awsProperties.tracingConfig.mode",
+        "properties.awsProperties.vpcConfig",
+        "properties.awsProperties.vpcConfig.ipv6AllowedForDualStack",
+        "properties.awsProperties.vpcConfig.securityGroupIds",
+        "properties.awsProperties.vpcConfig.subnetIds",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LambdaFunction"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lambdaFunctions/{name}",
+      "operationId": "LambdaFunctions_Update",
+      "bodySchema": "LambdaFunctionTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LambdaFunction"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/lambdaFunctions/{name}",
+      "operationId": "LambdaFunctions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of LambdaFunction"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

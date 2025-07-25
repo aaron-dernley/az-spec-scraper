@@ -1,0 +1,203 @@
+{
+  "resource": "Azure::Compute::InVMAccessControlProfiles",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles",
+      "operationId": "GalleryInVMAccessControlProfiles_ListByGallery",
+      "pathParameters": [
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles/{inVMAccessControlProfileName}",
+      "operationId": "GalleryInVMAccessControlProfiles_Get",
+      "pathParameters": [
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery."
+        },
+        {
+          "name": "inVMAccessControlProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery inVMAccessControlProfile to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles/{inVMAccessControlProfileName}",
+      "operationId": "GalleryInVMAccessControlProfiles_CreateOrUpdate",
+      "bodySchema": "GalleryInVMAccessControlProfile",
+      "requiredProperties": [
+        "properties.applicableHostEndpoint",
+        "properties.osType"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery."
+        },
+        {
+          "name": "inVMAccessControlProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery inVMAccessControlProfile to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles/{inVMAccessControlProfileName}",
+      "operationId": "GalleryInVMAccessControlProfiles_Update",
+      "bodySchema": "GalleryInVMAccessControlProfileUpdate",
+      "requiredProperties": [
+        "properties.applicableHostEndpoint",
+        "properties.osType"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.provisioningState",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery."
+        },
+        {
+          "name": "inVMAccessControlProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery inVMAccessControlProfile to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/inVMAccessControlProfiles/{inVMAccessControlProfileName}",
+      "operationId": "GalleryInVMAccessControlProfiles_Delete",
+      "pathParameters": [
+        {
+          "name": "galleryName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Shared Image Gallery."
+        },
+        {
+          "name": "inVMAccessControlProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the gallery inVMAccessControlProfile to be retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

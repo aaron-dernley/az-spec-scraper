@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::App::SessionPools",
+  "version": "2025-01-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.App/sessionPools",
+      "operationId": "ContainerAppsSessionPools_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/sessionPools",
+      "operationId": "ContainerAppsSessionPools_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/sessionPools/{sessionPoolName}",
+      "operationId": "ContainerAppsSessionPools_Get",
+      "pathParameters": [
+        {
+          "name": "sessionPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the session pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/sessionPools/{sessionPoolName}",
+      "operationId": "ContainerAppsSessionPools_CreateOrUpdate",
+      "bodySchema": "SessionPool",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.containerType",
+        "properties.customContainerTemplate",
+        "properties.customContainerTemplate.containers",
+        "properties.customContainerTemplate.ingress",
+        "properties.customContainerTemplate.ingress.targetPort",
+        "properties.customContainerTemplate.registryCredentials",
+        "properties.customContainerTemplate.registryCredentials.identity",
+        "properties.customContainerTemplate.registryCredentials.passwordSecretRef",
+        "properties.customContainerTemplate.registryCredentials.server",
+        "properties.customContainerTemplate.registryCredentials.username",
+        "properties.dynamicPoolConfiguration",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.cooldownPeriodInSeconds",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.lifecycleType",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.maxAlivePeriodInSeconds",
+        "properties.environmentId",
+        "properties.managedIdentitySettings",
+        "properties.nodeCount",
+        "properties.poolManagementEndpoint",
+        "properties.poolManagementType",
+        "properties.provisioningState",
+        "properties.scaleConfiguration",
+        "properties.scaleConfiguration.maxConcurrentSessions",
+        "properties.scaleConfiguration.readySessionInstances",
+        "properties.secrets",
+        "properties.sessionNetworkConfiguration",
+        "properties.sessionNetworkConfiguration.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "sessionPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the session pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/sessionPools/{sessionPoolName}",
+      "operationId": "ContainerAppsSessionPools_Update",
+      "bodySchema": "SessionPoolUpdatableProperties",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.customContainerTemplate",
+        "properties.customContainerTemplate.containers",
+        "properties.customContainerTemplate.ingress",
+        "properties.customContainerTemplate.ingress.targetPort",
+        "properties.customContainerTemplate.registryCredentials",
+        "properties.customContainerTemplate.registryCredentials.identity",
+        "properties.customContainerTemplate.registryCredentials.passwordSecretRef",
+        "properties.customContainerTemplate.registryCredentials.server",
+        "properties.customContainerTemplate.registryCredentials.username",
+        "properties.dynamicPoolConfiguration",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.cooldownPeriodInSeconds",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.lifecycleType",
+        "properties.dynamicPoolConfiguration.lifecycleConfiguration.maxAlivePeriodInSeconds",
+        "properties.scaleConfiguration",
+        "properties.scaleConfiguration.maxConcurrentSessions",
+        "properties.scaleConfiguration.readySessionInstances",
+        "properties.secrets",
+        "properties.sessionNetworkConfiguration",
+        "properties.sessionNetworkConfiguration.status",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "sessionPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the session pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/sessionPools/{sessionPoolName}",
+      "operationId": "ContainerAppsSessionPools_Delete",
+      "pathParameters": [
+        {
+          "name": "sessionPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the session pool."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

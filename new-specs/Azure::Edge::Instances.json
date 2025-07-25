@@ -1,0 +1,254 @@
+{
+  "resource": "Azure::Edge::Instances",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/instances",
+      "operationId": "Instances_ListBySolution",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/instances/{instanceName}",
+      "operationId": "Instances_Get",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the instance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/instances/{instanceName}",
+      "operationId": "Instances_CreateOrUpdate",
+      "bodySchema": "Instance",
+      "requiredProperties": [
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties.reconciliationPolicy.interval",
+        "properties.reconciliationPolicy.state",
+        "properties.solutionVersionId",
+        "properties.targetId"
+      ],
+      "optionalProperties": [
+        "eTag",
+        "extendedLocation",
+        "properties",
+        "properties.activeState",
+        "properties.deploymentTimestampEpoch",
+        "properties.provisioningState",
+        "properties.reconciliationPolicy",
+        "properties.solutionScope",
+        "properties.status",
+        "properties.status.deployed",
+        "properties.status.expectedRunningJobId",
+        "properties.status.generation",
+        "properties.status.lastModified",
+        "properties.status.runningJobId",
+        "properties.status.status",
+        "properties.status.statusDetails",
+        "properties.status.targetStatuses"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the instance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/instances/{instanceName}",
+      "operationId": "Instances_Update",
+      "bodySchema": "InstanceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.activeState",
+        "properties.reconciliationPolicy",
+        "properties.reconciliationPolicy.interval",
+        "properties.reconciliationPolicy.state",
+        "properties.solutionScope",
+        "properties.solutionVersionId",
+        "properties.targetId"
+      ],
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the instance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Edge/targets/{targetName}/solutions/{solutionName}/instances/{instanceName}",
+      "operationId": "Instances_Delete",
+      "pathParameters": [
+        {
+          "name": "targetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the target"
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the solution"
+        },
+        {
+          "name": "instanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the instance"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "resource": "Azure::Sql::Steps",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/steps",
+      "operationId": "JobSteps_ListByJob",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job to get."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/steps/{stepName}",
+      "operationId": "JobSteps_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job."
+        },
+        {
+          "name": "stepName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job step."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/steps/{stepName}",
+      "operationId": "JobSteps_CreateOrUpdate",
+      "bodySchema": "JobStep",
+      "requiredProperties": [
+        "properties.action",
+        "properties.action.value",
+        "properties.output.databaseName",
+        "properties.output.serverName",
+        "properties.output.tableName",
+        "properties.targetGroup"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.action.source",
+        "properties.action.type",
+        "properties.credential",
+        "properties.executionOptions",
+        "properties.executionOptions.initialRetryIntervalSeconds",
+        "properties.executionOptions.maximumRetryIntervalSeconds",
+        "properties.executionOptions.retryAttempts",
+        "properties.executionOptions.retryIntervalBackoffMultiplier",
+        "properties.executionOptions.timeoutSeconds",
+        "properties.output",
+        "properties.output.credential",
+        "properties.output.resourceGroupName",
+        "properties.output.schemaName",
+        "properties.output.subscriptionId",
+        "properties.output.type",
+        "properties.stepId"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job."
+        },
+        {
+          "name": "stepName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job step."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/steps/{stepName}",
+      "operationId": "JobSteps_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job."
+        },
+        {
+          "name": "stepName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job step to delete."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/versions/{jobVersion}/steps",
+      "operationId": "JobSteps_ListByVersion",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job to get."
+        },
+        {
+          "name": "jobVersion",
+          "required": true,
+          "type": "integer",
+          "in": "path",
+          "description": "The version of the job to get."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/versions/{jobVersion}/steps/{stepName}",
+      "operationId": "JobSteps_GetByVersion",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "jobAgentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job agent."
+        },
+        {
+          "name": "jobName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job."
+        },
+        {
+          "name": "jobVersion",
+          "required": true,
+          "type": "integer",
+          "in": "path",
+          "description": "The version of the job to get."
+        },
+        {
+          "name": "stepName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the job step."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

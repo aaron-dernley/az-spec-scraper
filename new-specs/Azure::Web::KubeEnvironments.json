@@ -1,0 +1,273 @@
+{
+  "resource": "Azure::Web::KubeEnvironments",
+  "version": "2022-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/kubeEnvironments",
+      "operationId": "KubeEnvironments_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/kubeEnvironments",
+      "operationId": "KubeEnvironments_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/kubeEnvironments/{name}",
+      "operationId": "KubeEnvironments_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Kubernetes Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/kubeEnvironments/{name}",
+      "operationId": "KubeEnvironments_CreateOrUpdate",
+      "bodySchema": "KubeEnvironment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "extendedLocation",
+        "properties",
+        "properties.aksResourceID",
+        "properties.appLogsConfiguration",
+        "properties.appLogsConfiguration.destination",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.sharedKey",
+        "properties.arcConfiguration",
+        "properties.arcConfiguration.artifactStorageAccessMode",
+        "properties.arcConfiguration.artifactStorageClassName",
+        "properties.arcConfiguration.artifactStorageMountPath",
+        "properties.arcConfiguration.artifactStorageNodeName",
+        "properties.arcConfiguration.artifactsStorageType",
+        "properties.arcConfiguration.frontEndServiceConfiguration",
+        "properties.arcConfiguration.frontEndServiceConfiguration.kind",
+        "properties.arcConfiguration.kubeConfig",
+        "properties.containerAppsConfiguration",
+        "properties.containerAppsConfiguration.appSubnetResourceId",
+        "properties.containerAppsConfiguration.controlPlaneSubnetResourceId",
+        "properties.containerAppsConfiguration.daprAIInstrumentationKey",
+        "properties.containerAppsConfiguration.dockerBridgeCidr",
+        "properties.containerAppsConfiguration.platformReservedCidr",
+        "properties.containerAppsConfiguration.platformReservedDnsIP",
+        "properties.defaultDomain",
+        "properties.deploymentErrors",
+        "properties.environmentType",
+        "properties.internalLoadBalancerEnabled",
+        "properties.provisioningState",
+        "properties.staticIp"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Kubernetes Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/kubeEnvironments/{name}",
+      "operationId": "KubeEnvironments_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Kubernetes Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/kubeEnvironments/{name}",
+      "operationId": "KubeEnvironments_Update",
+      "bodySchema": "KubeEnvironmentPatchResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.aksResourceID",
+        "properties.appLogsConfiguration",
+        "properties.appLogsConfiguration.destination",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId",
+        "properties.appLogsConfiguration.logAnalyticsConfiguration.sharedKey",
+        "properties.arcConfiguration",
+        "properties.arcConfiguration.artifactStorageAccessMode",
+        "properties.arcConfiguration.artifactStorageClassName",
+        "properties.arcConfiguration.artifactStorageMountPath",
+        "properties.arcConfiguration.artifactStorageNodeName",
+        "properties.arcConfiguration.artifactsStorageType",
+        "properties.arcConfiguration.frontEndServiceConfiguration",
+        "properties.arcConfiguration.frontEndServiceConfiguration.kind",
+        "properties.arcConfiguration.kubeConfig",
+        "properties.containerAppsConfiguration",
+        "properties.containerAppsConfiguration.appSubnetResourceId",
+        "properties.containerAppsConfiguration.controlPlaneSubnetResourceId",
+        "properties.containerAppsConfiguration.daprAIInstrumentationKey",
+        "properties.containerAppsConfiguration.dockerBridgeCidr",
+        "properties.containerAppsConfiguration.platformReservedCidr",
+        "properties.containerAppsConfiguration.platformReservedDnsIP",
+        "properties.defaultDomain",
+        "properties.deploymentErrors",
+        "properties.internalLoadBalancerEnabled",
+        "properties.provisioningState",
+        "properties.staticIp"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group to which the resource belongs."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Kubernetes Environment."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Your Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "API Version"
+        }
+      ]
+    }
+  ]
+}

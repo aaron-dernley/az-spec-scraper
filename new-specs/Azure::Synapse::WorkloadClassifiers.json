@@ -1,0 +1,211 @@
+{
+  "resource": "Azure::Synapse::WorkloadClassifiers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}/workloadClassifiers/{workloadClassifierName}",
+      "operationId": "SqlPoolWorkloadClassifier_Get",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "workloadClassifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload classifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}/workloadClassifiers/{workloadClassifierName}",
+      "operationId": "SqlPoolWorkloadClassifier_CreateOrUpdate",
+      "bodySchema": "WorkloadClassifier",
+      "requiredProperties": [
+        "properties.memberName"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.context",
+        "properties.endTime",
+        "properties.importance",
+        "properties.label",
+        "properties.startTime"
+      ],
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "workloadClassifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload classifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}/workloadClassifiers/{workloadClassifierName}",
+      "operationId": "SqlPoolWorkloadClassifier_Delete",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "workloadClassifierName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload classifier."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/sqlPools/{sqlPoolName}/workloadGroups/{workloadGroupName}/workloadClassifiers",
+      "operationId": "SqlPoolWorkloadClassifier_List",
+      "pathParameters": [
+        {
+          "name": "sqlPoolName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "SQL pool name"
+        },
+        {
+          "name": "workloadGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the workload group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

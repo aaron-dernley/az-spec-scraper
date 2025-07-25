@@ -1,0 +1,242 @@
+{
+  "resource": "Azure::StorageMover::JobDefinitions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions",
+      "operationId": "JobDefinitions_List",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
+      "operationId": "JobDefinitions_Get",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "jobDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Job Definition resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
+      "operationId": "JobDefinitions_CreateOrUpdate",
+      "bodySchema": "JobDefinition",
+      "requiredProperties": [
+        "properties",
+        "properties.copyMode",
+        "properties.sourceName",
+        "properties.targetName"
+      ],
+      "optionalProperties": [
+        "properties.agentName",
+        "properties.agentResourceId",
+        "properties.description",
+        "properties.latestJobRunName",
+        "properties.latestJobRunResourceId",
+        "properties.latestJobRunStatus",
+        "properties.provisioningState",
+        "properties.sourceResourceId",
+        "properties.sourceSubpath",
+        "properties.targetResourceId",
+        "properties.targetSubpath"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "jobDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Job Definition resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
+      "operationId": "JobDefinitions_Update",
+      "bodySchema": "JobDefinitionUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.agentName",
+        "properties.copyMode",
+        "properties.description"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "jobDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Job Definition resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
+      "operationId": "JobDefinitions_Delete",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "projectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Project resource."
+        },
+        {
+          "name": "jobDefinitionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Job Definition resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

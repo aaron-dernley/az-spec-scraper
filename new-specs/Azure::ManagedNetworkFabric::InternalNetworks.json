@@ -1,0 +1,254 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::InternalNetworks",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}/internalNetworks/{internalNetworkName}",
+      "operationId": "InternalNetworks_Create",
+      "bodySchema": "InternalNetwork",
+      "requiredProperties": [
+        "properties",
+        "properties.vlanId"
+      ],
+      "optionalProperties": [
+        "properties.administrativeState",
+        "properties.bgpConfiguration",
+        "properties.bgpConfiguration.allowAS",
+        "properties.bgpConfiguration.allowASOverride",
+        "properties.bgpConfiguration.bfdConfiguration",
+        "properties.bgpConfiguration.defaultRouteOriginate",
+        "properties.bgpConfiguration.fabricASN",
+        "properties.bgpConfiguration.ipv4ListenRangePrefixes",
+        "properties.bgpConfiguration.ipv4NeighborAddress",
+        "properties.bgpConfiguration.ipv6ListenRangePrefixes",
+        "properties.bgpConfiguration.ipv6NeighborAddress",
+        "properties.bgpConfiguration.peerASN",
+        "properties.configurationState",
+        "properties.connectedIPv4Subnets",
+        "properties.connectedIPv6Subnets",
+        "properties.egressAclId",
+        "properties.exportRoutePolicy",
+        "properties.exportRoutePolicy.exportIpv4RoutePolicyId",
+        "properties.exportRoutePolicy.exportIpv6RoutePolicyId",
+        "properties.exportRoutePolicyId",
+        "properties.extension",
+        "properties.importRoutePolicy",
+        "properties.importRoutePolicy.importIpv4RoutePolicyId",
+        "properties.importRoutePolicy.importIpv6RoutePolicyId",
+        "properties.importRoutePolicyId",
+        "properties.ingressAclId",
+        "properties.isMonitoringEnabled",
+        "properties.mtu",
+        "properties.provisioningState",
+        "properties.staticRouteConfiguration",
+        "properties.staticRouteConfiguration.bfdConfiguration",
+        "properties.staticRouteConfiguration.extension",
+        "properties.staticRouteConfiguration.ipv4Routes",
+        "properties.staticRouteConfiguration.ipv6Routes"
+      ],
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "internalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internal Network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}/internalNetworks/{internalNetworkName}",
+      "operationId": "InternalNetworks_Get",
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "internalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internal Network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}/internalNetworks/{internalNetworkName}",
+      "operationId": "InternalNetworks_Update",
+      "bodySchema": "InternalNetworkPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.bgpConfiguration",
+        "properties.bgpConfiguration.allowAS",
+        "properties.bgpConfiguration.allowASOverride",
+        "properties.bgpConfiguration.bfdConfiguration",
+        "properties.bgpConfiguration.defaultRouteOriginate",
+        "properties.bgpConfiguration.fabricASN",
+        "properties.bgpConfiguration.ipv4ListenRangePrefixes",
+        "properties.bgpConfiguration.ipv4NeighborAddress",
+        "properties.bgpConfiguration.ipv6ListenRangePrefixes",
+        "properties.bgpConfiguration.ipv6NeighborAddress",
+        "properties.bgpConfiguration.peerASN",
+        "properties.connectedIPv4Subnets",
+        "properties.connectedIPv6Subnets",
+        "properties.egressAclId",
+        "properties.exportRoutePolicy",
+        "properties.exportRoutePolicy.exportIpv4RoutePolicyId",
+        "properties.exportRoutePolicy.exportIpv6RoutePolicyId",
+        "properties.exportRoutePolicyId",
+        "properties.importRoutePolicy",
+        "properties.importRoutePolicy.importIpv4RoutePolicyId",
+        "properties.importRoutePolicy.importIpv6RoutePolicyId",
+        "properties.importRoutePolicyId",
+        "properties.ingressAclId",
+        "properties.isMonitoringEnabled",
+        "properties.mtu",
+        "properties.staticRouteConfiguration",
+        "properties.staticRouteConfiguration.bfdConfiguration",
+        "properties.staticRouteConfiguration.ipv4Routes",
+        "properties.staticRouteConfiguration.ipv6Routes"
+      ],
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "internalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internal Network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}/internalNetworks/{internalNetworkName}",
+      "operationId": "InternalNetworks_Delete",
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "internalNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Internal Network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/l3IsolationDomains/{l3IsolationDomainName}/internalNetworks",
+      "operationId": "InternalNetworks_ListByL3IsolationDomain",
+      "pathParameters": [
+        {
+          "name": "l3IsolationDomainName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the L3 Isolation Domain."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

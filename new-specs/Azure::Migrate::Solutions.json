@@ -1,0 +1,219 @@
+{
+  "resource": "Azure::Migrate::Solutions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}/solutions/{solutionName}",
+      "operationId": "SolutionsController_GetSolution",
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of a migration solution within a migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}/solutions/{solutionName}",
+      "operationId": "SolutionsController_Create",
+      "bodySchema": "Solution",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.cleanupState",
+        "properties.details",
+        "properties.details.assessmentCount",
+        "properties.details.extendedDetails",
+        "properties.details.groupCount",
+        "properties.goal",
+        "properties.purpose",
+        "properties.status",
+        "properties.summary",
+        "properties.summary.instanceType",
+        "properties.tool",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of a migration solution within a migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}/solutions/{solutionName}",
+      "operationId": "SolutionsController_Update",
+      "bodySchema": "Solution",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.cleanupState",
+        "properties.details",
+        "properties.details.assessmentCount",
+        "properties.details.extendedDetails",
+        "properties.details.groupCount",
+        "properties.goal",
+        "properties.purpose",
+        "properties.status",
+        "properties.summary",
+        "properties.summary.instanceType",
+        "properties.tool",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of a migration solution within a migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}/solutions/{solutionName}",
+      "operationId": "SolutionsController_DeleteSolution",
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Unique name of a migration solution within a migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/migrateProjects/{migrateProjectName}/solutions",
+      "operationId": "SolutionsController_ListSolutions",
+      "pathParameters": [
+        {
+          "name": "migrateProjectName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Migrate project."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

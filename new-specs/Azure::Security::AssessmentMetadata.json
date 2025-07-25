@@ -1,0 +1,136 @@
+{
+  "resource": "Azure::Security::AssessmentMetadata",
+  "version": "2021-06-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Security/assessmentMetadata",
+      "operationId": "AssessmentsMetadata_List",
+      "pathParameters": [],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Security/assessmentMetadata/{assessmentMetadataName}",
+      "operationId": "AssessmentsMetadata_Get",
+      "pathParameters": [
+        {
+          "name": "assessmentMetadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/assessmentMetadata",
+      "operationId": "AssessmentsMetadata_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/assessmentMetadata/{assessmentMetadataName}",
+      "operationId": "AssessmentsMetadata_GetInSubscription",
+      "pathParameters": [
+        {
+          "name": "assessmentMetadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/assessmentMetadata/{assessmentMetadataName}",
+      "operationId": "AssessmentsMetadata_CreateInSubscription",
+      "bodySchema": "SecurityAssessmentMetadataResponse",
+      "requiredProperties": [
+        "properties.assessmentType",
+        "properties.displayName",
+        "properties.partnerData.partnerName",
+        "properties.partnerData.secret",
+        "properties.publishDates.public",
+        "properties.severity"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.categories",
+        "properties.description",
+        "properties.implementationEffort",
+        "properties.partnerData",
+        "properties.partnerData.productName",
+        "properties.plannedDeprecationDate",
+        "properties.policyDefinitionId",
+        "properties.preview",
+        "properties.publishDates",
+        "properties.publishDates.GA",
+        "properties.remediationDescription",
+        "properties.tactics",
+        "properties.techniques",
+        "properties.threats",
+        "properties.userImpact"
+      ],
+      "pathParameters": [
+        {
+          "name": "assessmentMetadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/assessmentMetadata/{assessmentMetadataName}",
+      "operationId": "AssessmentsMetadata_DeleteInSubscription",
+      "pathParameters": [
+        {
+          "name": "assessmentMetadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Assessment Key - Unique key for the assessment type"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

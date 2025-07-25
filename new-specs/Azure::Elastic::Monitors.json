@@ -1,0 +1,258 @@
+{
+  "resource": "Azure::Elastic::Monitors",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Elastic/monitors",
+      "operationId": "Monitors_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors",
+      "operationId": "Monitors_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}",
+      "operationId": "Monitors_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}",
+      "operationId": "Monitors_Create",
+      "bodySchema": "ElasticMonitorResource",
+      "requiredProperties": [
+        "location",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "name",
+        "properties",
+        "properties.elasticProperties",
+        "properties.elasticProperties.elasticCloudDeployment",
+        "properties.elasticProperties.elasticCloudDeployment.azureSubscriptionId",
+        "properties.elasticProperties.elasticCloudDeployment.deploymentId",
+        "properties.elasticProperties.elasticCloudDeployment.elasticsearchRegion",
+        "properties.elasticProperties.elasticCloudDeployment.elasticsearchServiceUrl",
+        "properties.elasticProperties.elasticCloudDeployment.kibanaServiceUrl",
+        "properties.elasticProperties.elasticCloudDeployment.kibanaSsoUrl",
+        "properties.elasticProperties.elasticCloudDeployment.name",
+        "properties.elasticProperties.elasticCloudUser",
+        "properties.elasticProperties.elasticCloudUser.elasticCloudSsoDefaultUrl",
+        "properties.elasticProperties.elasticCloudUser.emailAddress",
+        "properties.elasticProperties.elasticCloudUser.id",
+        "properties.liftrResourceCategory",
+        "properties.liftrResourcePreference",
+        "properties.monitoringStatus",
+        "properties.provisioningState",
+        "properties.userInfo",
+        "properties.userInfo.companyInfo",
+        "properties.userInfo.companyInfo.business",
+        "properties.userInfo.companyInfo.country",
+        "properties.userInfo.companyInfo.domain",
+        "properties.userInfo.companyInfo.employeesNumber",
+        "properties.userInfo.companyInfo.state",
+        "properties.userInfo.companyName",
+        "properties.userInfo.emailAddress",
+        "properties.userInfo.firstName",
+        "properties.userInfo.lastName",
+        "sku",
+        "systemData",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}",
+      "operationId": "Monitors_Update",
+      "bodySchema": "ElasticMonitorResourceUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}",
+      "operationId": "Monitors_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    }
+  ]
+}

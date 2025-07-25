@@ -1,0 +1,179 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::RoutePolicies",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/routePolicies/{routePolicyName}",
+      "operationId": "RoutePolicies_Create",
+      "bodySchema": "RoutePolicy",
+      "requiredProperties": [
+        "properties",
+        "properties.networkFabricId"
+      ],
+      "optionalProperties": [
+        "properties.addressFamilyType",
+        "properties.administrativeState",
+        "properties.configurationState",
+        "properties.defaultAction",
+        "properties.provisioningState",
+        "properties.statements"
+      ],
+      "pathParameters": [
+        {
+          "name": "routePolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Route Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/routePolicies/{routePolicyName}",
+      "operationId": "RoutePolicies_Get",
+      "pathParameters": [
+        {
+          "name": "routePolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Route Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/routePolicies/{routePolicyName}",
+      "operationId": "RoutePolicies_Update",
+      "bodySchema": "RoutePolicyPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.defaultAction",
+        "properties.statements"
+      ],
+      "pathParameters": [
+        {
+          "name": "routePolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Route Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/routePolicies/{routePolicyName}",
+      "operationId": "RoutePolicies_Delete",
+      "pathParameters": [
+        {
+          "name": "routePolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Route Policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/routePolicies",
+      "operationId": "RoutePolicies_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/routePolicies",
+      "operationId": "RoutePolicies_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

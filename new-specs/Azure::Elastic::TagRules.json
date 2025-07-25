@@ -1,0 +1,190 @@
+{
+  "resource": "Azure::Elastic::TagRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}/tagRules",
+      "operationId": "TagRules_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}/tagRules/{ruleSetName}",
+      "operationId": "TagRules_CreateOrUpdate",
+      "bodySchema": "MonitoringTagRules",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.logRules",
+        "properties.logRules.filteringTags",
+        "properties.logRules.sendAadLogs",
+        "properties.logRules.sendActivityLogs",
+        "properties.logRules.sendSubscriptionLogs",
+        "properties.provisioningState",
+        "systemData",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "ruleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Tag Rule Set resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}/tagRules/{ruleSetName}",
+      "operationId": "TagRules_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "ruleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Tag Rule Set resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Elastic/monitors/{monitorName}/tagRules/{ruleSetName}",
+      "operationId": "TagRules_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group to which the Elastic resource belongs."
+        },
+        {
+          "name": "monitorName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Monitor resource name"
+        },
+        {
+          "name": "ruleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Tag Rule Set resource name"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to be used with the HTTP request."
+        }
+      ]
+    }
+  ]
+}

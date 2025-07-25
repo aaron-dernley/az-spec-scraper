@@ -1,0 +1,103 @@
+{
+  "resource": "Azure::Security::SecurityStandards",
+  "version": "2024-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/securityStandards",
+      "operationId": "SecurityStandards_List",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the security standard. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/{scope}/providers/Microsoft.Security/securityStandards/{standardId}",
+      "operationId": "SecurityStandards_Get",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the security standard. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "standardId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Security Standard key - unique key for the standard type"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/{scope}/providers/Microsoft.Security/securityStandards/{standardId}",
+      "operationId": "SecurityStandards_CreateOrUpdate",
+      "bodySchema": "SecurityStandard",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.assessments",
+        "properties.cloudProviders",
+        "properties.description",
+        "properties.displayName",
+        "properties.metadata",
+        "properties.metadata.createdBy",
+        "properties.metadata.createdOn",
+        "properties.metadata.lastUpdatedBy",
+        "properties.metadata.lastUpdatedOn",
+        "properties.policySetDefinitionId",
+        "properties.standardType"
+      ],
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the security standard. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "standardId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Security Standard key - unique key for the standard type"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/{scope}/providers/Microsoft.Security/securityStandards/{standardId}",
+      "operationId": "SecurityStandards_Delete",
+      "pathParameters": [
+        {
+          "name": "scope",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scope of the security standard. Valid scopes are: management group (format: 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: 'subscriptions/{subscriptionId}'), or security connector (format: 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'"
+        },
+        {
+          "name": "standardId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Security Standard key - unique key for the standard type"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

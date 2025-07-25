@@ -1,0 +1,248 @@
+{
+  "resource": "Azure::AwsConnector::CloudFrontDistributions",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/cloudFrontDistributions",
+      "operationId": "CloudFrontDistributions_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/cloudFrontDistributions",
+      "operationId": "CloudFrontDistributions_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/cloudFrontDistributions/{name}",
+      "operationId": "CloudFrontDistributions_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CloudFrontDistribution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/cloudFrontDistributions/{name}",
+      "operationId": "CloudFrontDistributions_CreateOrReplace",
+      "bodySchema": "CloudFrontDistribution",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.distributionConfig",
+        "properties.awsProperties.distributionConfig.aliases",
+        "properties.awsProperties.distributionConfig.cacheBehaviors",
+        "properties.awsProperties.distributionConfig.cnamEs",
+        "properties.awsProperties.distributionConfig.comment",
+        "properties.awsProperties.distributionConfig.continuousDeploymentPolicyId",
+        "properties.awsProperties.distributionConfig.customErrorResponses",
+        "properties.awsProperties.distributionConfig.customOrigin",
+        "properties.awsProperties.distributionConfig.customOrigin.dnsName",
+        "properties.awsProperties.distributionConfig.customOrigin.httpPort",
+        "properties.awsProperties.distributionConfig.customOrigin.httpsPort",
+        "properties.awsProperties.distributionConfig.customOrigin.originProtocolPolicy",
+        "properties.awsProperties.distributionConfig.customOrigin.originSSLProtocols",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.allowedMethods",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.cachePolicyId",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.cachedMethods",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.compress",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.defaultTTL",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.fieldLevelEncryptionId",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.cookies",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.cookies.forward",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.cookies.whitelistedNames",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.headers",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.queryString",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.forwardedValues.queryStringCacheKeys",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.functionAssociations",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.lambdaFunctionAssociations",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.maxTTL",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.minTTL",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.originRequestPolicyId",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.realtimeLogConfigArn",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.responseHeadersPolicyId",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.smoothStreaming",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.targetOriginId",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.trustedKeyGroups",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.trustedSigners",
+        "properties.awsProperties.distributionConfig.defaultCacheBehavior.viewerProtocolPolicy",
+        "properties.awsProperties.distributionConfig.defaultRootObject",
+        "properties.awsProperties.distributionConfig.enabled",
+        "properties.awsProperties.distributionConfig.httpVersion",
+        "properties.awsProperties.distributionConfig.ipV6Enabled",
+        "properties.awsProperties.distributionConfig.logging",
+        "properties.awsProperties.distributionConfig.logging.bucket",
+        "properties.awsProperties.distributionConfig.logging.includeCookies",
+        "properties.awsProperties.distributionConfig.logging.prefix",
+        "properties.awsProperties.distributionConfig.originGroups",
+        "properties.awsProperties.distributionConfig.originGroups.items",
+        "properties.awsProperties.distributionConfig.originGroups.quantity",
+        "properties.awsProperties.distributionConfig.origins",
+        "properties.awsProperties.distributionConfig.priceClass",
+        "properties.awsProperties.distributionConfig.restrictions",
+        "properties.awsProperties.distributionConfig.restrictions.geoRestriction",
+        "properties.awsProperties.distributionConfig.restrictions.geoRestriction.locations",
+        "properties.awsProperties.distributionConfig.restrictions.geoRestriction.restrictionType",
+        "properties.awsProperties.distributionConfig.s3Origin",
+        "properties.awsProperties.distributionConfig.s3Origin.dnsName",
+        "properties.awsProperties.distributionConfig.s3Origin.originAccessIdentity",
+        "properties.awsProperties.distributionConfig.staging",
+        "properties.awsProperties.distributionConfig.viewerCertificate",
+        "properties.awsProperties.distributionConfig.viewerCertificate.acmCertificateArn",
+        "properties.awsProperties.distributionConfig.viewerCertificate.cloudFrontDefaultCertificate",
+        "properties.awsProperties.distributionConfig.viewerCertificate.iamCertificateId",
+        "properties.awsProperties.distributionConfig.viewerCertificate.minimumProtocolVersion",
+        "properties.awsProperties.distributionConfig.viewerCertificate.sslSupportMethod",
+        "properties.awsProperties.distributionConfig.webACLId",
+        "properties.awsProperties.domainName",
+        "properties.awsProperties.id",
+        "properties.awsProperties.tags",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CloudFrontDistribution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/cloudFrontDistributions/{name}",
+      "operationId": "CloudFrontDistributions_Update",
+      "bodySchema": "CloudFrontDistributionTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CloudFrontDistribution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/cloudFrontDistributions/{name}",
+      "operationId": "CloudFrontDistributions_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of CloudFrontDistribution"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

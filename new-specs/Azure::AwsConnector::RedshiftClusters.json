@@ -1,0 +1,237 @@
+{
+  "resource": "Azure::AwsConnector::RedshiftClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AwsConnector/redshiftClusters",
+      "operationId": "RedshiftClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/redshiftClusters",
+      "operationId": "RedshiftClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/redshiftClusters/{name}",
+      "operationId": "RedshiftClusters_Get",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RedshiftCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/redshiftClusters/{name}",
+      "operationId": "RedshiftClusters_CreateOrReplace",
+      "bodySchema": "RedshiftCluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.arn",
+        "properties.awsAccountId",
+        "properties.awsProperties",
+        "properties.awsProperties.allowVersionUpgrade",
+        "properties.awsProperties.aquaConfigurationStatus",
+        "properties.awsProperties.automatedSnapshotRetentionPeriod",
+        "properties.awsProperties.availabilityZone",
+        "properties.awsProperties.availabilityZoneRelocation",
+        "properties.awsProperties.availabilityZoneRelocationStatus",
+        "properties.awsProperties.classic",
+        "properties.awsProperties.clusterIdentifier",
+        "properties.awsProperties.clusterNamespaceArn",
+        "properties.awsProperties.clusterParameterGroupName",
+        "properties.awsProperties.clusterSecurityGroups",
+        "properties.awsProperties.clusterSubnetGroupName",
+        "properties.awsProperties.clusterType",
+        "properties.awsProperties.clusterVersion",
+        "properties.awsProperties.dbName",
+        "properties.awsProperties.deferMaintenance",
+        "properties.awsProperties.deferMaintenanceDuration",
+        "properties.awsProperties.deferMaintenanceEndTime",
+        "properties.awsProperties.deferMaintenanceIdentifier",
+        "properties.awsProperties.deferMaintenanceStartTime",
+        "properties.awsProperties.destinationRegion",
+        "properties.awsProperties.elasticIp",
+        "properties.awsProperties.encrypted",
+        "properties.awsProperties.endpoint",
+        "properties.awsProperties.endpoint.address",
+        "properties.awsProperties.endpoint.port",
+        "properties.awsProperties.enhancedVpcRouting",
+        "properties.awsProperties.hsmClientCertificateIdentifier",
+        "properties.awsProperties.hsmConfigurationIdentifier",
+        "properties.awsProperties.iamRoles",
+        "properties.awsProperties.kmsKeyId",
+        "properties.awsProperties.loggingProperties",
+        "properties.awsProperties.loggingProperties.bucketName",
+        "properties.awsProperties.loggingProperties.s3KeyPrefix",
+        "properties.awsProperties.maintenanceTrackName",
+        "properties.awsProperties.manageMasterPassword",
+        "properties.awsProperties.manualSnapshotRetentionPeriod",
+        "properties.awsProperties.masterPasswordSecretArn",
+        "properties.awsProperties.masterPasswordSecretKmsKeyId",
+        "properties.awsProperties.masterUserPassword",
+        "properties.awsProperties.masterUsername",
+        "properties.awsProperties.multiAZ",
+        "properties.awsProperties.namespaceResourcePolicy",
+        "properties.awsProperties.nodeType",
+        "properties.awsProperties.numberOfNodes",
+        "properties.awsProperties.ownerAccount",
+        "properties.awsProperties.port",
+        "properties.awsProperties.preferredMaintenanceWindow",
+        "properties.awsProperties.publiclyAccessible",
+        "properties.awsProperties.resourceAction",
+        "properties.awsProperties.revisionTarget",
+        "properties.awsProperties.rotateEncryptionKey",
+        "properties.awsProperties.snapshotClusterIdentifier",
+        "properties.awsProperties.snapshotCopyGrantName",
+        "properties.awsProperties.snapshotCopyManual",
+        "properties.awsProperties.snapshotCopyRetentionPeriod",
+        "properties.awsProperties.snapshotIdentifier",
+        "properties.awsProperties.tags",
+        "properties.awsProperties.vpcSecurityGroupIds",
+        "properties.awsRegion",
+        "properties.awsSourceSchema",
+        "properties.awsTags",
+        "properties.provisioningState",
+        "properties.publicCloudConnectorsResourceId",
+        "properties.publicCloudResourceName"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RedshiftCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/redshiftClusters/{name}",
+      "operationId": "RedshiftClusters_Update",
+      "bodySchema": "RedshiftClusterTagsUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RedshiftCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AwsConnector/redshiftClusters/{name}",
+      "operationId": "RedshiftClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of RedshiftCluster"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

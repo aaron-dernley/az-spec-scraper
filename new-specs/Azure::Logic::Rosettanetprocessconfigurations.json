@@ -1,0 +1,243 @@
+{
+  "resource": "Azure::Logic::Rosettanetprocessconfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/rosettanetprocessconfigurations",
+      "operationId": "RosettaNetProcessConfigurations_ListByIntegrationAccounts",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of items to be included in the result."
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/rosettanetprocessconfigurations/{rosettaNetProcessConfigurationName}",
+      "operationId": "RosettaNetProcessConfigurations_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "rosettaNetProcessConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account RosettaNetProcessConfiguration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/rosettanetprocessconfigurations/{rosettaNetProcessConfigurationName}",
+      "operationId": "RosettaNetProcessConfigurations_CreateOrUpdate",
+      "bodySchema": "IntegrationAccountRosettaNetProcessConfiguration",
+      "requiredProperties": [
+        "properties",
+        "properties.activitySettings",
+        "properties.activitySettings.acknowledgmentOfReceiptSettings",
+        "properties.activitySettings.acknowledgmentOfReceiptSettings.isNonRepudiationRequired",
+        "properties.activitySettings.acknowledgmentOfReceiptSettings.timeToAcknowledgeInSeconds",
+        "properties.activitySettings.activityBehavior",
+        "properties.activitySettings.activityBehavior.actionType",
+        "properties.activitySettings.activityBehavior.isAuthorizationRequired",
+        "properties.activitySettings.activityBehavior.isSecuredTransportRequired",
+        "properties.activitySettings.activityBehavior.nonRepudiationOfOriginAndContent",
+        "properties.activitySettings.activityBehavior.persistentConfidentialityScope",
+        "properties.activitySettings.activityBehavior.responseType",
+        "properties.activitySettings.activityBehavior.retryCount",
+        "properties.activitySettings.activityBehavior.timeToPerformInSeconds",
+        "properties.activitySettings.activityType",
+        "properties.initiatorRoleSettings",
+        "properties.initiatorRoleSettings.action",
+        "properties.initiatorRoleSettings.businessDocument",
+        "properties.initiatorRoleSettings.businessDocument.name",
+        "properties.initiatorRoleSettings.businessDocument.version",
+        "properties.initiatorRoleSettings.role",
+        "properties.initiatorRoleSettings.roleType",
+        "properties.initiatorRoleSettings.service",
+        "properties.initiatorRoleSettings.serviceClassification",
+        "properties.processCode",
+        "properties.processName",
+        "properties.processVersion",
+        "properties.responderRoleSettings",
+        "properties.responderRoleSettings.action",
+        "properties.responderRoleSettings.businessDocument",
+        "properties.responderRoleSettings.businessDocument.name",
+        "properties.responderRoleSettings.businessDocument.version",
+        "properties.responderRoleSettings.role",
+        "properties.responderRoleSettings.roleType",
+        "properties.responderRoleSettings.service",
+        "properties.responderRoleSettings.serviceClassification"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.changedTime",
+        "properties.createdTime",
+        "properties.description",
+        "properties.initiatorRoleSettings.businessDocument.description",
+        "properties.initiatorRoleSettings.description",
+        "properties.metadata",
+        "properties.responderRoleSettings.businessDocument.description",
+        "properties.responderRoleSettings.description",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "rosettaNetProcessConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account RosettaNet ProcessConfiguration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/integrationAccounts/{integrationAccountName}/rosettanetprocessconfigurations/{rosettaNetProcessConfigurationName}",
+      "operationId": "RosettaNetProcessConfigurations_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription id."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name."
+        },
+        {
+          "name": "integrationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account name."
+        },
+        {
+          "name": "rosettaNetProcessConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The integration account RosettaNetProcessConfiguration name."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version."
+        }
+      ]
+    }
+  ]
+}

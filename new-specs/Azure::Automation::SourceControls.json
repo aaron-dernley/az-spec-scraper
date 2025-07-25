@@ -1,0 +1,218 @@
+{
+  "resource": "Azure::Automation::SourceControls",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "operationId": "SourceControl_CreateOrUpdate",
+      "bodySchema": "SourceControlCreateOrUpdateParameters",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.autoSync",
+        "properties.branch",
+        "properties.description",
+        "properties.folderPath",
+        "properties.publishRunbook",
+        "properties.repoUrl",
+        "properties.securityToken",
+        "properties.securityToken.accessToken",
+        "properties.securityToken.refreshToken",
+        "properties.securityToken.tokenType",
+        "properties.sourceType"
+      ],
+      "pathParameters": [
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source control name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "operationId": "SourceControl_Update",
+      "bodySchema": "SourceControlUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.autoSync",
+        "properties.branch",
+        "properties.description",
+        "properties.folderPath",
+        "properties.publishRunbook",
+        "properties.securityToken",
+        "properties.securityToken.accessToken",
+        "properties.securityToken.refreshToken",
+        "properties.securityToken.tokenType"
+      ],
+      "pathParameters": [
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The source control name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "operationId": "SourceControl_Delete",
+      "pathParameters": [
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of source control."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "operationId": "SourceControl_Get",
+      "pathParameters": [
+        {
+          "name": "sourceControlName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of source control."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls",
+      "operationId": "SourceControl_ListByAutomationAccount",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "automationAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

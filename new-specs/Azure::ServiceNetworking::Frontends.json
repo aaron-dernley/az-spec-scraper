@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::ServiceNetworking::Frontends",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/frontends",
+      "operationId": "FrontendsInterface_ListByTrafficController",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/frontends/{frontendName}",
+      "operationId": "FrontendsInterface_Get",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "frontendName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Frontends"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/frontends/{frontendName}",
+      "operationId": "FrontendsInterface_CreateOrUpdate",
+      "bodySchema": "Frontend",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.fqdn",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "frontendName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Frontends"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/frontends/{frontendName}",
+      "operationId": "FrontendsInterface_Update",
+      "bodySchema": "FrontendUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "frontendName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Frontends"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/frontends/{frontendName}",
+      "operationId": "FrontendsInterface_Delete",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "frontendName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Frontends"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

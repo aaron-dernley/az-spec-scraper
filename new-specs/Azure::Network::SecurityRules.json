@@ -1,0 +1,167 @@
+{
+  "resource": "Azure::Network::SecurityRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "operationId": "SecurityRules_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network security group."
+        },
+        {
+          "name": "securityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "operationId": "SecurityRules_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network security group."
+        },
+        {
+          "name": "securityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}",
+      "operationId": "SecurityRules_CreateOrUpdate",
+      "bodySchema": "SecurityRule",
+      "requiredProperties": [
+        "properties.access",
+        "properties.direction",
+        "properties.protocol"
+      ],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.description",
+        "properties.destinationAddressPrefix",
+        "properties.destinationAddressPrefixes",
+        "properties.destinationApplicationSecurityGroups",
+        "properties.destinationPortRange",
+        "properties.destinationPortRanges",
+        "properties.priority",
+        "properties.provisioningState",
+        "properties.sourceAddressPrefix",
+        "properties.sourceAddressPrefixes",
+        "properties.sourceApplicationSecurityGroups",
+        "properties.sourcePortRange",
+        "properties.sourcePortRanges"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network security group."
+        },
+        {
+          "name": "securityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules",
+      "operationId": "SecurityRules_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkSecurityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network security group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

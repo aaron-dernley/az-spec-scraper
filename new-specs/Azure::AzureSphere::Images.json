@@ -1,0 +1,186 @@
+{
+  "resource": "Azure::AzureSphere::Images",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/images",
+      "operationId": "Images_ListByCatalog",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Filter the result list using the given expression"
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of result items to return."
+        },
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The number of result items to skip."
+        },
+        {
+          "name": "$maxpagesize",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of result items per page."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/images/{imageName}",
+      "operationId": "Images_Get",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Image name. Use an image GUID for GA versions of the API."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/images/{imageName}",
+      "operationId": "Images_CreateOrUpdate",
+      "bodySchema": "Image",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.componentId",
+        "properties.description",
+        "properties.image",
+        "properties.imageId",
+        "properties.imageName",
+        "properties.imageType",
+        "properties.provisioningState",
+        "properties.regionalDataBoundary",
+        "properties.uri"
+      ],
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Image name. Use an image GUID for GA versions of the API."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureSphere/catalogs/{catalogName}/images/{imageName}",
+      "operationId": "Images_Delete",
+      "pathParameters": [
+        {
+          "name": "catalogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of catalog"
+        },
+        {
+          "name": "imageName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Image name. Use an image GUID for GA versions of the API."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

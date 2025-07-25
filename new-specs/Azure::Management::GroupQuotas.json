@@ -1,0 +1,123 @@
+{
+  "resource": "Azure::Management::GroupQuotas",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}",
+      "operationId": "GroupQuotas_CreateOrUpdate",
+      "bodySchema": "GroupQuotasEntity",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}",
+      "operationId": "GroupQuotas_Update",
+      "bodySchema": "GroupQuotasEntityPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.displayName",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}",
+      "operationId": "GroupQuotas_Get",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas/{groupQuotaName}",
+      "operationId": "GroupQuotas_Delete",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        },
+        {
+          "name": "groupQuotaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Quota/groupQuotas",
+      "operationId": "GroupQuotas_List",
+      "pathParameters": [
+        {
+          "name": "managementGroupId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Management Group Id."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

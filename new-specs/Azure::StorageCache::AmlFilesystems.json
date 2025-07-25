@@ -1,0 +1,224 @@
+{
+  "resource": "Azure::StorageCache::AmlFilesystems",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.StorageCache/amlFilesystems",
+      "operationId": "amlFilesystems_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems",
+      "operationId": "amlFilesystems_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}",
+      "operationId": "amlFilesystems_Delete",
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}",
+      "operationId": "amlFilesystems_Get",
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}",
+      "operationId": "amlFilesystems_CreateOrUpdate",
+      "bodySchema": "AmlFilesystem",
+      "requiredProperties": [
+        "properties.filesystemSubnet",
+        "properties.hsm.settings.container",
+        "properties.hsm.settings.loggingContainer",
+        "properties.maintenanceWindow",
+        "properties.storageCapacityTiB"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.clientInfo",
+        "properties.clientInfo.containerStorageInterface",
+        "properties.clientInfo.containerStorageInterface.persistentVolume",
+        "properties.clientInfo.containerStorageInterface.persistentVolumeClaim",
+        "properties.clientInfo.containerStorageInterface.storageClass",
+        "properties.clientInfo.lustreVersion",
+        "properties.clientInfo.mgsAddress",
+        "properties.clientInfo.mountCommand",
+        "properties.encryptionSettings",
+        "properties.encryptionSettings.keyEncryptionKey",
+        "properties.health",
+        "properties.health.state",
+        "properties.health.statusCode",
+        "properties.health.statusDescription",
+        "properties.hsm",
+        "properties.hsm.archiveStatus",
+        "properties.hsm.settings",
+        "properties.hsm.settings.importPrefix",
+        "properties.hsm.settings.importPrefixesInitial",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.timeOfDayUTC",
+        "properties.provisioningState",
+        "properties.rootSquashSettings",
+        "properties.rootSquashSettings.mode",
+        "properties.rootSquashSettings.noSquashNidLists",
+        "properties.rootSquashSettings.squashGID",
+        "properties.rootSquashSettings.squashUID",
+        "properties.rootSquashSettings.status",
+        "properties.throughputProvisionedMBps",
+        "sku",
+        "sku.name",
+        "zones"
+      ],
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageCache/amlFilesystems/{amlFilesystemName}",
+      "operationId": "amlFilesystems_Update",
+      "bodySchema": "AmlFilesystemUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.encryptionSettings",
+        "properties.encryptionSettings.keyEncryptionKey",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.timeOfDayUTC",
+        "properties.rootSquashSettings",
+        "properties.rootSquashSettings.mode",
+        "properties.rootSquashSettings.noSquashNidLists",
+        "properties.rootSquashSettings.squashGID",
+        "properties.rootSquashSettings.squashUID",
+        "properties.rootSquashSettings.status",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "amlFilesystemName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name for the AML file system. Allows alphanumerics, underscores, and hyphens. Start and end with alphanumeric."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

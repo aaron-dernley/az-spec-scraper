@@ -1,0 +1,253 @@
+{
+  "resource": "Azure::OperationalInsights::Metadata",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/metadata",
+      "operationId": "Metadata_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/metadata/{metadataName}",
+      "operationId": "Metadata_Get",
+      "pathParameters": [
+        {
+          "name": "metadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Metadata name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/metadata/{metadataName}",
+      "operationId": "Metadata_Delete",
+      "pathParameters": [
+        {
+          "name": "metadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Metadata name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/metadata/{metadataName}",
+      "operationId": "Metadata_Create",
+      "bodySchema": "MetadataModel",
+      "requiredProperties": [
+        "properties.kind",
+        "properties.parentId",
+        "properties.source.kind",
+        "properties.support.tier"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.author",
+        "properties.author.email",
+        "properties.author.link",
+        "properties.author.name",
+        "properties.categories",
+        "properties.categories.domains",
+        "properties.categories.verticals",
+        "properties.contentId",
+        "properties.contentSchemaVersion",
+        "properties.customVersion",
+        "properties.dependencies",
+        "properties.firstPublishDate",
+        "properties.icon",
+        "properties.lastPublishDate",
+        "properties.previewImages",
+        "properties.previewImagesDark",
+        "properties.providers",
+        "properties.source",
+        "properties.source.name",
+        "properties.source.sourceId",
+        "properties.support",
+        "properties.support.email",
+        "properties.support.link",
+        "properties.support.name",
+        "properties.threatAnalysisTactics",
+        "properties.threatAnalysisTechniques",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "metadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Metadata name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/metadata/{metadataName}",
+      "operationId": "Metadata_Update",
+      "bodySchema": "metadataPatch",
+      "requiredProperties": [
+        "properties.source.kind",
+        "properties.support.tier"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.author",
+        "properties.author.email",
+        "properties.author.link",
+        "properties.author.name",
+        "properties.categories",
+        "properties.categories.domains",
+        "properties.categories.verticals",
+        "properties.contentId",
+        "properties.contentSchemaVersion",
+        "properties.customVersion",
+        "properties.dependencies",
+        "properties.firstPublishDate",
+        "properties.icon",
+        "properties.kind",
+        "properties.lastPublishDate",
+        "properties.parentId",
+        "properties.previewImages",
+        "properties.previewImagesDark",
+        "properties.providers",
+        "properties.source",
+        "properties.source.name",
+        "properties.source.sourceId",
+        "properties.support",
+        "properties.support.email",
+        "properties.support.link",
+        "properties.support.name",
+        "properties.threatAnalysisTactics",
+        "properties.threatAnalysisTechniques",
+        "properties.version"
+      ],
+      "pathParameters": [
+        {
+          "name": "metadataName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The Metadata name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

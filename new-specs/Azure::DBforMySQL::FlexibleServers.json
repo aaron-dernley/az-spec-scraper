@@ -1,0 +1,254 @@
+{
+  "resource": "Azure::DBforMySQL::FlexibleServers",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Create",
+      "bodySchema": "Server",
+      "requiredProperties": [
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.administratorLogin",
+        "properties.administratorLoginPassword",
+        "properties.availabilityZone",
+        "properties.backup",
+        "properties.backup.backupRetentionDays",
+        "properties.backup.earliestRestoreDate",
+        "properties.backup.geoRedundantBackup",
+        "properties.createMode",
+        "properties.dataEncryption",
+        "properties.dataEncryption.geoBackupKeyURI",
+        "properties.dataEncryption.geoBackupUserAssignedIdentityId",
+        "properties.dataEncryption.primaryKeyURI",
+        "properties.dataEncryption.primaryUserAssignedIdentityId",
+        "properties.dataEncryption.type",
+        "properties.fullyQualifiedDomainName",
+        "properties.highAvailability",
+        "properties.highAvailability.mode",
+        "properties.highAvailability.standbyAvailabilityZone",
+        "properties.highAvailability.state",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.network",
+        "properties.network.delegatedSubnetResourceId",
+        "properties.network.privateDnsZoneResourceId",
+        "properties.network.publicNetworkAccess",
+        "properties.replicaCapacity",
+        "properties.replicationRole",
+        "properties.restorePointInTime",
+        "properties.sourceServerResourceId",
+        "properties.state",
+        "properties.storage",
+        "properties.storage.autoGrow",
+        "properties.storage.iops",
+        "properties.storage.storageSizeGB",
+        "properties.storage.storageSku",
+        "properties.version",
+        "sku",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Update",
+      "bodySchema": "ServerForUpdate",
+      "requiredProperties": [
+        "sku.name",
+        "sku.tier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "properties",
+        "properties.administratorLoginPassword",
+        "properties.backup",
+        "properties.backup.backupRetentionDays",
+        "properties.backup.earliestRestoreDate",
+        "properties.backup.geoRedundantBackup",
+        "properties.dataEncryption",
+        "properties.dataEncryption.geoBackupKeyURI",
+        "properties.dataEncryption.geoBackupUserAssignedIdentityId",
+        "properties.dataEncryption.primaryKeyURI",
+        "properties.dataEncryption.primaryUserAssignedIdentityId",
+        "properties.dataEncryption.type",
+        "properties.highAvailability",
+        "properties.highAvailability.mode",
+        "properties.highAvailability.standbyAvailabilityZone",
+        "properties.highAvailability.state",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.replicationRole",
+        "properties.storage",
+        "properties.storage.autoGrow",
+        "properties.storage.iops",
+        "properties.storage.storageSizeGB",
+        "properties.storage.storageSku",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Delete",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}",
+      "operationId": "Servers_Get",
+      "pathParameters": [
+        {
+          "name": "serverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the server."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers",
+      "operationId": "Servers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DBforMySQL/flexibleServers",
+      "operationId": "Servers_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

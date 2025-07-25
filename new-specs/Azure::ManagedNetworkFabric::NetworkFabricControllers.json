@@ -1,0 +1,191 @@
+{
+  "resource": "Azure::ManagedNetworkFabric::NetworkFabricControllers",
+  "version": "2023-06-15",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/{networkFabricControllerName}",
+      "operationId": "NetworkFabricControllers_Create",
+      "bodySchema": "NetworkFabricController",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.infrastructureExpressRouteConnections",
+        "properties.infrastructureServices",
+        "properties.infrastructureServices.ipv4AddressSpaces",
+        "properties.infrastructureServices.ipv6AddressSpaces",
+        "properties.ipv4AddressSpace",
+        "properties.ipv6AddressSpace",
+        "properties.isWorkloadManagementNetworkEnabled",
+        "properties.managedResourceGroupConfiguration",
+        "properties.managedResourceGroupConfiguration.location",
+        "properties.managedResourceGroupConfiguration.name",
+        "properties.networkFabricIds",
+        "properties.nfcSku",
+        "properties.provisioningState",
+        "properties.tenantInternetGatewayIds",
+        "properties.workloadExpressRouteConnections",
+        "properties.workloadManagementNetwork",
+        "properties.workloadServices",
+        "properties.workloadServices.ipv4AddressSpaces",
+        "properties.workloadServices.ipv6AddressSpaces"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric Controller."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/{networkFabricControllerName}",
+      "operationId": "NetworkFabricControllers_Get",
+      "pathParameters": [
+        {
+          "name": "networkFabricControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric Controller."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/{networkFabricControllerName}",
+      "operationId": "NetworkFabricControllers_Update",
+      "bodySchema": "NetworkFabricControllerPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.infrastructureExpressRouteConnections",
+        "properties.workloadExpressRouteConnections"
+      ],
+      "pathParameters": [
+        {
+          "name": "networkFabricControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric Controller."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/{networkFabricControllerName}",
+      "operationId": "NetworkFabricControllers_Delete",
+      "pathParameters": [
+        {
+          "name": "networkFabricControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Network Fabric Controller."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers",
+      "operationId": "NetworkFabricControllers_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers",
+      "operationId": "NetworkFabricControllers_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

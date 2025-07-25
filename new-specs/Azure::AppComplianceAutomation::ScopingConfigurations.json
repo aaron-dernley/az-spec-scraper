@@ -1,0 +1,95 @@
+{
+  "resource": "Azure::AppComplianceAutomation::ScopingConfigurations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/scopingConfigurations",
+      "operationId": "ScopingConfiguration_List",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/scopingConfigurations/{scopingConfigurationName}",
+      "operationId": "ScopingConfiguration_Get",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "scopingConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scoping configuration of the specific report."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/scopingConfigurations/{scopingConfigurationName}",
+      "operationId": "ScopingConfiguration_CreateOrUpdate",
+      "bodySchema": "ScopingConfigurationResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "properties.answers",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "scopingConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scoping configuration of the specific report."
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.AppComplianceAutomation/reports/{reportName}/scopingConfigurations/{scopingConfigurationName}",
+      "operationId": "ScopingConfiguration_Delete",
+      "pathParameters": [
+        {
+          "name": "reportName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Report Name."
+        },
+        {
+          "name": "scopingConfigurationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The scoping configuration of the specific report."
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

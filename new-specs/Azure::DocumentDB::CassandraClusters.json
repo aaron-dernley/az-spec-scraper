@@ -1,0 +1,223 @@
+{
+  "resource": "Azure::DocumentDB::CassandraClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/cassandraClusters",
+      "operationId": "CassandraClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters",
+      "operationId": "CassandraClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "operationId": "CassandraClusters_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "operationId": "CassandraClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "operationId": "CassandraClusters_CreateUpdate",
+      "bodySchema": "ClusterResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "location",
+        "name",
+        "properties",
+        "properties.authenticationMethod",
+        "properties.cassandraAuditLoggingEnabled",
+        "properties.cassandraVersion",
+        "properties.clientCertificates",
+        "properties.clusterNameOverride",
+        "properties.deallocated",
+        "properties.delegatedManagementSubnetId",
+        "properties.externalGossipCertificates",
+        "properties.externalSeedNodes",
+        "properties.gossipCertificates",
+        "properties.hoursBetweenBackups",
+        "properties.initialCassandraAdminPassword",
+        "properties.prometheusEndpoint",
+        "properties.prometheusEndpoint.ipAddress",
+        "properties.provisioningState",
+        "properties.repairEnabled",
+        "properties.restoreFromBackupId",
+        "properties.seedNodes",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "operationId": "CassandraClusters_Update",
+      "bodySchema": "ClusterResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "location",
+        "name",
+        "properties",
+        "properties.authenticationMethod",
+        "properties.cassandraAuditLoggingEnabled",
+        "properties.cassandraVersion",
+        "properties.clientCertificates",
+        "properties.clusterNameOverride",
+        "properties.deallocated",
+        "properties.delegatedManagementSubnetId",
+        "properties.externalGossipCertificates",
+        "properties.externalSeedNodes",
+        "properties.gossipCertificates",
+        "properties.hoursBetweenBackups",
+        "properties.initialCassandraAdminPassword",
+        "properties.prometheusEndpoint",
+        "properties.prometheusEndpoint.ipAddress",
+        "properties.provisioningState",
+        "properties.repairEnabled",
+        "properties.restoreFromBackupId",
+        "properties.seedNodes",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Managed Cassandra cluster name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

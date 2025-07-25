@@ -1,0 +1,197 @@
+{
+  "resource": "Azure::Orbital::L2Connections",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/l2Connections/{l2ConnectionName}",
+      "operationId": "L2Connections_Get",
+      "pathParameters": [
+        {
+          "name": "l2ConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "L2 Connection name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/l2Connections/{l2ConnectionName}",
+      "operationId": "L2Connections_CreateOrUpdate",
+      "bodySchema": "L2Connection",
+      "requiredProperties": [
+        "properties",
+        "properties.edgeSite",
+        "properties.edgeSite.id",
+        "properties.edgeSitePartnerRouter",
+        "properties.edgeSitePartnerRouter.name",
+        "properties.groundStation",
+        "properties.groundStation.id",
+        "properties.groundStationPartnerRouter",
+        "properties.groundStationPartnerRouter.name",
+        "properties.vlanId"
+      ],
+      "optionalProperties": [
+        "properties.circuitId",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "l2ConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "L2 Connection name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/l2Connections/{l2ConnectionName}",
+      "operationId": "L2Connections_Delete",
+      "pathParameters": [
+        {
+          "name": "l2ConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "L2 Connection name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/l2Connections/{l2ConnectionName}",
+      "operationId": "L2Connections_UpdateTags",
+      "bodySchema": "TagsObject",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "l2ConnectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "L2 Connection name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/l2Connections",
+      "operationId": "L2Connections_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "An opaque string that the resource provider uses to skip over previously-returned results. This is used when a previous list operation call returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Orbital/l2Connections",
+      "operationId": "L2Connections_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "An opaque string that the resource provider uses to skip over previously-returned results. This is used when a previous list operation call returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
+        }
+      ]
+    }
+  ]
+}

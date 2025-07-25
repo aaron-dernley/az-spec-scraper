@@ -1,0 +1,172 @@
+{
+  "resource": "Azure::Cdn::CdnWebApplicationFirewallPolicies",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies",
+      "operationId": "Policies_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Get",
+      "pathParameters": [
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the CdnWebApplicationFirewallPolicy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_CreateOrUpdate",
+      "bodySchema": "CdnWebApplicationFirewallPolicy",
+      "requiredProperties": [
+        "sku"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.customRules",
+        "properties.customRules.rules",
+        "properties.endpointLinks",
+        "properties.managedRules",
+        "properties.managedRules.managedRuleSets",
+        "properties.policySettings",
+        "properties.policySettings.defaultCustomBlockResponseBody",
+        "properties.policySettings.defaultCustomBlockResponseStatusCode",
+        "properties.policySettings.defaultRedirectUrl",
+        "properties.policySettings.enabledState",
+        "properties.policySettings.mode",
+        "properties.provisioningState",
+        "properties.rateLimitRules",
+        "properties.rateLimitRules.rules",
+        "properties.resourceState"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the CdnWebApplicationFirewallPolicy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Update",
+      "bodySchema": "CdnWebApplicationFirewallPolicyPatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the CdnWebApplicationFirewallPolicy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/{policyName}",
+      "operationId": "Policies_Delete",
+      "pathParameters": [
+        {
+          "name": "policyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the CdnWebApplicationFirewallPolicy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

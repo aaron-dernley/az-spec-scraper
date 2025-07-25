@@ -1,0 +1,140 @@
+{
+  "resource": "Azure::Management::Sites",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/serviceGroups/{servicegroupName}/providers/Microsoft.Edge/sites",
+      "operationId": "SitesByServiceGroup_ListByServiceGroup",
+      "pathParameters": [
+        {
+          "name": "servicegroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service group"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Management/serviceGroups/{servicegroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesByServiceGroup_Get",
+      "pathParameters": [
+        {
+          "name": "servicegroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service group"
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Management/serviceGroups/{servicegroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesByServiceGroup_CreateOrUpdate",
+      "bodySchema": "Site",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.provisioningState",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "servicegroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service group"
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/providers/Microsoft.Management/serviceGroups/{servicegroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesByServiceGroup_Update",
+      "bodySchema": "SiteUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.displayName",
+        "properties.labels",
+        "properties.siteAddress",
+        "properties.siteAddress.city",
+        "properties.siteAddress.country",
+        "properties.siteAddress.postalCode",
+        "properties.siteAddress.stateOrProvince",
+        "properties.siteAddress.streetAddress1",
+        "properties.siteAddress.streetAddress2"
+      ],
+      "pathParameters": [
+        {
+          "name": "servicegroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service group"
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Management/serviceGroups/{servicegroupName}/providers/Microsoft.Edge/sites/{siteName}",
+      "operationId": "SitesByServiceGroup_Delete",
+      "pathParameters": [
+        {
+          "name": "servicegroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the service group"
+        },
+        {
+          "name": "siteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the site"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

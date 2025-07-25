@@ -1,0 +1,969 @@
+{
+  "resource": "Azure::DevTestLab::Schedules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DevTestLab/schedules",
+      "operationId": "GlobalSchedules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules",
+      "operationId": "Schedules_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules/{name}",
+      "operationId": "Schedules_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules/{name}",
+      "operationId": "Schedules_CreateOrUpdate",
+      "bodySchema": "Schedule",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.createdDate",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules/{name}",
+      "operationId": "Schedules_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/schedules/{name}",
+      "operationId": "Schedules_Update",
+      "bodySchema": "ScheduleFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules",
+      "operationId": "VirtualMachineSchedules_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules/{name}",
+      "operationId": "VirtualMachineSchedules_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules/{name}",
+      "operationId": "VirtualMachineSchedules_CreateOrUpdate",
+      "bodySchema": "Schedule",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.createdDate",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules/{name}",
+      "operationId": "VirtualMachineSchedules_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/virtualmachines/{virtualMachineName}/schedules/{name}",
+      "operationId": "VirtualMachineSchedules_Update",
+      "bodySchema": "ScheduleFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "labName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the lab."
+        },
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules",
+      "operationId": "GlobalSchedules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The filter to apply to the operation."
+        },
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of resources to return from the operation."
+        },
+        {
+          "name": "$orderby",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The ordering expression for the results, using OData notation."
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules/{name}",
+      "operationId": "GlobalSchedules_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Specify the $expand query. Example: 'properties($select=status)'"
+        },
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules/{name}",
+      "operationId": "GlobalSchedules_CreateOrUpdate",
+      "bodySchema": "Schedule",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties.createdDate",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules/{name}",
+      "operationId": "GlobalSchedules_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/schedules/{name}",
+      "operationId": "GlobalSchedules_Update",
+      "bodySchema": "ScheduleFragment",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "id",
+        "location",
+        "name",
+        "properties",
+        "properties.dailyRecurrence",
+        "properties.dailyRecurrence.time",
+        "properties.hourlyRecurrence",
+        "properties.hourlyRecurrence.minute",
+        "properties.notificationSettings",
+        "properties.notificationSettings.status",
+        "properties.notificationSettings.timeInMinutes",
+        "properties.notificationSettings.webhookUrl",
+        "properties.provisioningState",
+        "properties.status",
+        "properties.targetResourceId",
+        "properties.taskType",
+        "properties.timeZoneId",
+        "properties.uniqueIdentifier",
+        "properties.weeklyRecurrence",
+        "properties.weeklyRecurrence.time",
+        "properties.weeklyRecurrence.weekdays",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The subscription ID."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the schedule."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Client API version."
+        }
+      ]
+    }
+  ]
+}

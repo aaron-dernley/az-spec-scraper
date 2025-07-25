@@ -1,0 +1,196 @@
+{
+  "resource": "Azure::Network::NetworkInterfaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Expands referenced resources."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_CreateOrUpdate",
+      "bodySchema": "NetworkInterface",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "extendedLocation",
+        "properties",
+        "properties.dnsSettings",
+        "properties.dnsSettings.appliedDnsServers",
+        "properties.dnsSettings.dnsServers",
+        "properties.dnsSettings.internalDnsNameLabel",
+        "properties.dnsSettings.internalDomainNameSuffix",
+        "properties.dnsSettings.internalFqdn",
+        "properties.dscpConfiguration",
+        "properties.enableAcceleratedNetworking",
+        "properties.enableIPForwarding",
+        "properties.hostedWorkloads",
+        "properties.ipConfigurations",
+        "properties.macAddress",
+        "properties.networkSecurityGroup",
+        "properties.nicType",
+        "properties.primary",
+        "properties.privateEndpoint",
+        "properties.privateLinkService",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "properties.tapConfigurations",
+        "properties.virtualMachine"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}",
+      "operationId": "NetworkInterfaces_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkInterfaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network interface."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/networkInterfaces",
+      "operationId": "NetworkInterfaces_ListAll",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces",
+      "operationId": "NetworkInterfaces_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "resource": "Azure::Network::DnsSecurityRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverPolicies/{dnsResolverPolicyName}/dnsSecurityRules/{dnsSecurityRuleName}",
+      "operationId": "DnsSecurityRules_CreateOrUpdate",
+      "bodySchema": "DnsSecurityRule",
+      "requiredProperties": [
+        "properties",
+        "properties.action",
+        "properties.dnsResolverDomainLists",
+        "properties.priority"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.action.actionType",
+        "properties.dnsSecurityRuleState",
+        "properties.provisioningState",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver policy."
+        },
+        {
+          "name": "dnsSecurityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverPolicies/{dnsResolverPolicyName}/dnsSecurityRules/{dnsSecurityRuleName}",
+      "operationId": "DnsSecurityRules_Update",
+      "bodySchema": "DnsSecurityRulePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.action",
+        "properties.action.actionType",
+        "properties.dnsResolverDomainLists",
+        "properties.dnsSecurityRuleState",
+        "properties.priority",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver policy."
+        },
+        {
+          "name": "dnsSecurityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverPolicies/{dnsResolverPolicyName}/dnsSecurityRules/{dnsSecurityRuleName}",
+      "operationId": "DnsSecurityRules_Delete",
+      "pathParameters": [
+        {
+          "name": "dnsResolverPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver policy."
+        },
+        {
+          "name": "dnsSecurityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverPolicies/{dnsResolverPolicyName}/dnsSecurityRules/{dnsSecurityRuleName}",
+      "operationId": "DnsSecurityRules_Get",
+      "pathParameters": [
+        {
+          "name": "dnsResolverPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver policy."
+        },
+        {
+          "name": "dnsSecurityRuleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS security rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolverPolicies/{dnsResolverPolicyName}/dnsSecurityRules",
+      "operationId": "DnsSecurityRules_List",
+      "pathParameters": [
+        {
+          "name": "dnsResolverPolicyName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver policy."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    }
+  ]
+}

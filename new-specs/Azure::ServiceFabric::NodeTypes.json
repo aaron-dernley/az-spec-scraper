@@ -1,0 +1,265 @@
+{
+  "resource": "Azure::ServiceFabric::NodeTypes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}/nodeTypes",
+      "operationId": "NodeTypes_ListByManagedClusters",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}/nodeTypes/{nodeTypeName}",
+      "operationId": "NodeTypes_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "nodeTypeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the node type."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}/nodeTypes/{nodeTypeName}",
+      "operationId": "NodeTypes_CreateOrUpdate",
+      "bodySchema": "NodeType",
+      "requiredProperties": [
+        "properties.applicationPorts.endPort",
+        "properties.applicationPorts.startPort",
+        "properties.dataDiskSizeGB",
+        "properties.ephemeralPorts.endPort",
+        "properties.ephemeralPorts.startPort",
+        "properties.isPrimary",
+        "properties.vmInstanceCount"
+      ],
+      "optionalProperties": [
+        "id",
+        "name",
+        "properties",
+        "properties.applicationPorts",
+        "properties.capacities",
+        "properties.dataDiskType",
+        "properties.ephemeralPorts",
+        "properties.isStateless",
+        "properties.multiplePlacementGroups",
+        "properties.placementProperties",
+        "properties.provisioningState",
+        "properties.vmExtensions",
+        "properties.vmImageOffer",
+        "properties.vmImagePublisher",
+        "properties.vmImageSku",
+        "properties.vmImageVersion",
+        "properties.vmManagedIdentity",
+        "properties.vmManagedIdentity.userAssignedIdentities",
+        "properties.vmSecrets",
+        "properties.vmSize",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "nodeTypeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the node type."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}/nodeTypes/{nodeTypeName}",
+      "operationId": "NodeTypes_Update",
+      "bodySchema": "NodeTypeUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "nodeTypeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the node type."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}/nodeTypes/{nodeTypeName}",
+      "operationId": "NodeTypes_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "nodeTypeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the node type."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    }
+  ]
+}

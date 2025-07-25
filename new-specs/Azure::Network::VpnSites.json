@@ -1,0 +1,183 @@
+{
+  "resource": "Azure::Network::VpnSites",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnSites/{vpnSiteName}",
+      "operationId": "VpnSites_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnSite."
+        },
+        {
+          "name": "vpnSiteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnSite being retrieved."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnSites/{vpnSiteName}",
+      "operationId": "VpnSites_CreateOrUpdate",
+      "bodySchema": "VpnSite",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.addressSpace",
+        "properties.bgpProperties",
+        "properties.deviceProperties",
+        "properties.deviceProperties.deviceModel",
+        "properties.deviceProperties.deviceVendor",
+        "properties.deviceProperties.linkSpeedInMbps",
+        "properties.ipAddress",
+        "properties.isSecuritySite",
+        "properties.o365Policy",
+        "properties.o365Policy.breakOutCategories",
+        "properties.o365Policy.breakOutCategories.allow",
+        "properties.o365Policy.breakOutCategories.default",
+        "properties.o365Policy.breakOutCategories.optimize",
+        "properties.provisioningState",
+        "properties.siteKey",
+        "properties.virtualWan",
+        "properties.vpnSiteLinks"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnSite."
+        },
+        {
+          "name": "vpnSiteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnSite being created or updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnSites/{vpnSiteName}",
+      "operationId": "VpnSites_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnSite."
+        },
+        {
+          "name": "vpnSiteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnSite being updated."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnSites/{vpnSiteName}",
+      "operationId": "VpnSites_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnSite."
+        },
+        {
+          "name": "vpnSiteName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VpnSite being deleted."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/vpnSites",
+      "operationId": "VpnSites_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The resource group name of the VpnSite."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Network/vpnSites",
+      "operationId": "VpnSites_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

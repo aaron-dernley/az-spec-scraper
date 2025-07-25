@@ -1,0 +1,186 @@
+{
+  "resource": "Azure::LoadTestService::LoadTests",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.LoadTestService/loadTests",
+      "operationId": "LoadTests_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LoadTestService/loadTests",
+      "operationId": "LoadTests_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LoadTestService/loadTests/{loadTestName}",
+      "operationId": "LoadTests_Get",
+      "pathParameters": [
+        {
+          "name": "loadTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Load Test name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LoadTestService/loadTests/{loadTestName}",
+      "operationId": "LoadTests_CreateOrUpdate",
+      "bodySchema": "LoadTestResource",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.dataPlaneURI",
+        "properties.description",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.resourceId",
+        "properties.encryption.identity.type",
+        "properties.encryption.keyUrl",
+        "properties.provisioningState"
+      ],
+      "pathParameters": [
+        {
+          "name": "loadTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Load Test name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LoadTestService/loadTests/{loadTestName}",
+      "operationId": "LoadTests_Update",
+      "bodySchema": "LoadTestResourceUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.description",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.resourceId",
+        "properties.encryption.identity.type",
+        "properties.encryption.keyUrl",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "loadTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Load Test name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LoadTestService/loadTests/{loadTestName}",
+      "operationId": "LoadTests_Delete",
+      "pathParameters": [
+        {
+          "name": "loadTestName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Load Test name"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

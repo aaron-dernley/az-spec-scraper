@@ -1,0 +1,199 @@
+{
+  "resource": "Azure::DesktopVirtualization::ApplicationGroups",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}",
+      "operationId": "ApplicationGroups_Get",
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}",
+      "operationId": "ApplicationGroups_CreateOrUpdate",
+      "bodySchema": "ApplicationGroup",
+      "requiredProperties": [
+        "properties",
+        "properties.applicationGroupType",
+        "properties.hostPoolArmPath"
+      ],
+      "optionalProperties": [
+        "properties.cloudPcResource",
+        "properties.description",
+        "properties.friendlyName",
+        "properties.migrationRequest",
+        "properties.migrationRequest.migrationPath",
+        "properties.migrationRequest.operation",
+        "properties.objectId",
+        "properties.workspaceArmPath"
+      ],
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}",
+      "operationId": "ApplicationGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups/{applicationGroupName}",
+      "operationId": "ApplicationGroups_Update",
+      "bodySchema": "ApplicationGroupPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.friendlyName",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "applicationGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the application group"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/applicationGroups",
+      "operationId": "ApplicationGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression. Valid properties for filtering are applicationGroupType."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DesktopVirtualization/applicationGroups",
+      "operationId": "ApplicationGroups_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "OData filter expression. Valid properties for filtering are applicationGroupType."
+        }
+      ]
+    }
+  ]
+}

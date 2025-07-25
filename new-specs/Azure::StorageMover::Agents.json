@@ -1,0 +1,210 @@
+{
+  "resource": "Azure::StorageMover::Agents",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/agents",
+      "operationId": "Agents_List",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/agents/{agentName}",
+      "operationId": "Agents_Get",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "agentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Agent resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/agents/{agentName}",
+      "operationId": "Agents_CreateOrUpdate",
+      "bodySchema": "Agent",
+      "requiredProperties": [
+        "properties",
+        "properties.arcResourceId",
+        "properties.arcVmUuid"
+      ],
+      "optionalProperties": [
+        "properties.agentStatus",
+        "properties.agentVersion",
+        "properties.description",
+        "properties.errorDetails",
+        "properties.errorDetails.code",
+        "properties.errorDetails.message",
+        "properties.lastStatusUpdate",
+        "properties.localIPAddress",
+        "properties.memoryInMB",
+        "properties.numberOfCores",
+        "properties.provisioningState",
+        "properties.timeZone",
+        "properties.uploadLimitSchedule",
+        "properties.uploadLimitSchedule.weeklyRecurrences",
+        "properties.uptimeInSeconds"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "agentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Agent resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/agents/{agentName}",
+      "operationId": "Agents_Update",
+      "bodySchema": "AgentUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.description",
+        "properties.uploadLimitSchedule",
+        "properties.uploadLimitSchedule.weeklyRecurrences"
+      ],
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "agentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Agent resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/agents/{agentName}",
+      "operationId": "Agents_Delete",
+      "pathParameters": [
+        {
+          "name": "storageMoverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Storage Mover resource."
+        },
+        {
+          "name": "agentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Agent resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

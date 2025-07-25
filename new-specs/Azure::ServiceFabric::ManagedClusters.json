@@ -1,0 +1,261 @@
+{
+  "resource": "Azure::ServiceFabric::ManagedClusters",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters",
+      "operationId": "ManagedClusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ServiceFabric/managedClusters",
+      "operationId": "ManagedClusters_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}",
+      "operationId": "ManagedClusters_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}",
+      "operationId": "ManagedClusters_CreateOrUpdate",
+      "bodySchema": "ManagedCluster",
+      "requiredProperties": [
+        "location",
+        "properties.adminUserName",
+        "properties.applicationTypeVersionsCleanupPolicy.maxUnusedVersionsToKeep",
+        "properties.dnsName",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "etag",
+        "id",
+        "name",
+        "properties",
+        "properties.addonFeatures",
+        "properties.adminPassword",
+        "properties.allowRdpAccess",
+        "properties.applicationTypeVersionsCleanupPolicy",
+        "properties.azureActiveDirectory",
+        "properties.azureActiveDirectory.clientApplication",
+        "properties.azureActiveDirectory.clusterApplication",
+        "properties.azureActiveDirectory.tenantId",
+        "properties.clientConnectionPort",
+        "properties.clients",
+        "properties.clusterCertificateThumbprints",
+        "properties.clusterCodeVersion",
+        "properties.clusterId",
+        "properties.clusterState",
+        "properties.clusterUpgradeCadence",
+        "properties.clusterUpgradeMode",
+        "properties.enableAutoOSUpgrade",
+        "properties.fabricSettings",
+        "properties.fqdn",
+        "properties.httpGatewayConnectionPort",
+        "properties.ipv4Address",
+        "properties.loadBalancingRules",
+        "properties.networkSecurityRules",
+        "properties.provisioningState",
+        "properties.zonalResiliency",
+        "sku",
+        "systemData",
+        "systemData.createdAt",
+        "systemData.createdBy",
+        "systemData.createdByType",
+        "systemData.lastModifiedAt",
+        "systemData.lastModifiedBy",
+        "systemData.lastModifiedByType",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}",
+      "operationId": "ManagedClusters_Update",
+      "bodySchema": "ManagedClusterUpdateParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceFabric/managedClusters/{clusterName}",
+      "operationId": "ManagedClusters_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The customer subscription identifier."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2021-05-01\" for this specification."
+        }
+      ]
+    }
+  ]
+}

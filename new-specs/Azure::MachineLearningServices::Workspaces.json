@@ -1,0 +1,303 @@
+{
+  "resource": "Azure::MachineLearningServices::Workspaces",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Get",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}",
+      "operationId": "Workspaces_CreateOrUpdate",
+      "bodySchema": "Workspace",
+      "requiredProperties": [
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.keyIdentifier",
+        "properties.encryption.keyVaultProperties.keyVaultArmId",
+        "properties.encryption.status"
+      ],
+      "optionalProperties": [
+        "identity",
+        "kind",
+        "location",
+        "properties",
+        "properties.allowPublicAccessWhenBehindVnet",
+        "properties.applicationInsights",
+        "properties.associatedWorkspaces",
+        "properties.containerRegistry",
+        "properties.description",
+        "properties.discoveryUrl",
+        "properties.enableDataIsolation",
+        "properties.enableServiceSideCMKEncryption",
+        "properties.encryption",
+        "properties.encryption.identity",
+        "properties.encryption.identity.userAssignedIdentity",
+        "properties.encryption.keyVaultProperties.identityClientId",
+        "properties.featureStoreSettings",
+        "properties.featureStoreSettings.computeRuntime",
+        "properties.featureStoreSettings.computeRuntime.sparkRuntimeVersion",
+        "properties.featureStoreSettings.offlineStoreConnectionName",
+        "properties.featureStoreSettings.onlineStoreConnectionName",
+        "properties.friendlyName",
+        "properties.hbiWorkspace",
+        "properties.hubResourceId",
+        "properties.imageBuildCompute",
+        "properties.keyVault",
+        "properties.managedNetwork",
+        "properties.managedNetwork.firewallPublicIpAddress",
+        "properties.managedNetwork.firewallSku",
+        "properties.managedNetwork.isolationMode",
+        "properties.managedNetwork.managedNetworkKind",
+        "properties.managedNetwork.networkId",
+        "properties.managedNetwork.outboundRules",
+        "properties.managedNetwork.status",
+        "properties.managedNetwork.status.sparkReady",
+        "properties.managedNetwork.status.status",
+        "properties.mlFlowTrackingUri",
+        "properties.notebookInfo",
+        "properties.notebookInfo.fqdn",
+        "properties.notebookInfo.notebookPreparationError",
+        "properties.notebookInfo.notebookPreparationError.errorMessage",
+        "properties.notebookInfo.notebookPreparationError.statusCode",
+        "properties.notebookInfo.resourceId",
+        "properties.primaryUserAssignedIdentity",
+        "properties.privateEndpointConnections",
+        "properties.privateLinkCount",
+        "properties.provisionNetworkNow",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.serverlessComputeSettings",
+        "properties.serverlessComputeSettings.serverlessComputeCustomSubnet",
+        "properties.serverlessComputeSettings.serverlessComputeNoPublicIP",
+        "properties.serviceManagedResourcesSettings",
+        "properties.serviceManagedResourcesSettings.cosmosDb",
+        "properties.serviceManagedResourcesSettings.cosmosDb.collectionsThroughput",
+        "properties.serviceProvisionedResourceGroup",
+        "properties.sharedPrivateLinkResources",
+        "properties.storageAccount",
+        "properties.storageHnsEnabled",
+        "properties.systemDatastoresAuthMode",
+        "properties.tenantId",
+        "properties.v1LegacyMode",
+        "properties.workspaceHubConfig",
+        "properties.workspaceHubConfig.additionalWorkspaceStorageAccounts",
+        "properties.workspaceHubConfig.defaultWorkspaceResourceGroup",
+        "properties.workspaceId",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Delete",
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "forceToPurge",
+          "required": false,
+          "type": "boolean",
+          "in": "query",
+          "description": "Flag to indicate delete is a purge request."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}",
+      "operationId": "Workspaces_Update",
+      "bodySchema": "WorkspaceUpdateParameters",
+      "requiredProperties": [
+        "properties.encryption.keyVaultProperties",
+        "properties.encryption.keyVaultProperties.keyIdentifier"
+      ],
+      "optionalProperties": [
+        "identity",
+        "properties",
+        "properties.applicationInsights",
+        "properties.containerRegistry",
+        "properties.description",
+        "properties.enableDataIsolation",
+        "properties.encryption",
+        "properties.featureStoreSettings",
+        "properties.featureStoreSettings.computeRuntime",
+        "properties.featureStoreSettings.computeRuntime.sparkRuntimeVersion",
+        "properties.featureStoreSettings.offlineStoreConnectionName",
+        "properties.featureStoreSettings.onlineStoreConnectionName",
+        "properties.friendlyName",
+        "properties.imageBuildCompute",
+        "properties.managedNetwork",
+        "properties.managedNetwork.firewallPublicIpAddress",
+        "properties.managedNetwork.firewallSku",
+        "properties.managedNetwork.isolationMode",
+        "properties.managedNetwork.managedNetworkKind",
+        "properties.managedNetwork.networkId",
+        "properties.managedNetwork.outboundRules",
+        "properties.managedNetwork.status",
+        "properties.managedNetwork.status.sparkReady",
+        "properties.managedNetwork.status.status",
+        "properties.primaryUserAssignedIdentity",
+        "properties.publicNetworkAccess",
+        "properties.serverlessComputeSettings",
+        "properties.serverlessComputeSettings.serverlessComputeCustomSubnet",
+        "properties.serverlessComputeSettings.serverlessComputeNoPublicIP",
+        "properties.serviceManagedResourcesSettings",
+        "properties.serviceManagedResourcesSettings.cosmosDb",
+        "properties.serviceManagedResourcesSettings.cosmosDb.collectionsThroughput",
+        "properties.systemDatastoresAuthMode",
+        "properties.v1LegacyMode",
+        "sku",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces",
+      "operationId": "Workspaces_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Continuation token for pagination."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.MachineLearningServices/workspaces",
+      "operationId": "Workspaces_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$skip",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Continuation token for pagination."
+        }
+      ]
+    }
+  ]
+}

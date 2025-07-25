@@ -1,0 +1,211 @@
+{
+  "resource": "Azure::Sql::DistributedAvailabilityGroups",
+  "version": "2023-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/distributedAvailabilityGroups",
+      "operationId": "DistributedAvailabilityGroups_ListByInstance",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/distributedAvailabilityGroups/{distributedAvailabilityGroupName}",
+      "operationId": "DistributedAvailabilityGroups_Get",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "distributedAvailabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The distributed availability group name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/distributedAvailabilityGroups/{distributedAvailabilityGroupName}",
+      "operationId": "DistributedAvailabilityGroups_CreateOrUpdate",
+      "bodySchema": "DistributedAvailabilityGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.databases",
+        "properties.distributedAvailabilityGroupId",
+        "properties.distributedAvailabilityGroupName",
+        "properties.failoverMode",
+        "properties.instanceAvailabilityGroupName",
+        "properties.instanceLinkRole",
+        "properties.partnerAvailabilityGroupName",
+        "properties.partnerEndpoint",
+        "properties.partnerLinkRole",
+        "properties.replicationMode",
+        "properties.seedingMode"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "distributedAvailabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The distributed availability group name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/distributedAvailabilityGroups/{distributedAvailabilityGroupName}",
+      "operationId": "DistributedAvailabilityGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "distributedAvailabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The distributed availability group name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/distributedAvailabilityGroups/{distributedAvailabilityGroupName}",
+      "operationId": "DistributedAvailabilityGroups_Update",
+      "bodySchema": "DistributedAvailabilityGroup",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.databases",
+        "properties.distributedAvailabilityGroupId",
+        "properties.distributedAvailabilityGroupName",
+        "properties.failoverMode",
+        "properties.instanceAvailabilityGroupName",
+        "properties.instanceLinkRole",
+        "properties.partnerAvailabilityGroupName",
+        "properties.partnerEndpoint",
+        "properties.partnerLinkRole",
+        "properties.replicationMode",
+        "properties.seedingMode"
+      ],
+      "pathParameters": [
+        {
+          "name": "managedInstanceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed instance."
+        },
+        {
+          "name": "distributedAvailabilityGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The distributed availability group name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

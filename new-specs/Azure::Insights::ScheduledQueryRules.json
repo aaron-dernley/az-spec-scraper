@@ -1,0 +1,216 @@
+{
+  "resource": "Azure::Insights::ScheduledQueryRules",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/scheduledQueryRules",
+      "operationId": "ScheduledQueryRules_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules",
+      "operationId": "ScheduledQueryRules_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}",
+      "operationId": "ScheduledQueryRules_Get",
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}",
+      "operationId": "ScheduledQueryRules_CreateOrUpdate",
+      "bodySchema": "ScheduledQueryRuleResource",
+      "requiredProperties": [
+        "properties"
+      ],
+      "optionalProperties": [
+        "etag",
+        "kind",
+        "properties.actions",
+        "properties.actions.actionGroups",
+        "properties.actions.customProperties",
+        "properties.autoMitigate",
+        "properties.checkWorkspaceAlertsStorageConfigured",
+        "properties.createdWithApiVersion",
+        "properties.criteria",
+        "properties.criteria.allOf",
+        "properties.description",
+        "properties.displayName",
+        "properties.enabled",
+        "properties.evaluationFrequency",
+        "properties.isLegacyLogAnalyticsRule",
+        "properties.isWorkspaceAlertsStorageConfigured",
+        "properties.muteActionsDuration",
+        "properties.overrideQueryTimeRange",
+        "properties.scopes",
+        "properties.severity",
+        "properties.skipQueryValidation",
+        "properties.targetResourceTypes",
+        "properties.windowSize",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}",
+      "operationId": "ScheduledQueryRules_Update",
+      "bodySchema": "ScheduledQueryRuleResourcePatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.actions",
+        "properties.actions.actionGroups",
+        "properties.actions.customProperties",
+        "properties.autoMitigate",
+        "properties.checkWorkspaceAlertsStorageConfigured",
+        "properties.createdWithApiVersion",
+        "properties.criteria",
+        "properties.criteria.allOf",
+        "properties.description",
+        "properties.displayName",
+        "properties.enabled",
+        "properties.evaluationFrequency",
+        "properties.isLegacyLogAnalyticsRule",
+        "properties.isWorkspaceAlertsStorageConfigured",
+        "properties.muteActionsDuration",
+        "properties.overrideQueryTimeRange",
+        "properties.scopes",
+        "properties.severity",
+        "properties.skipQueryValidation",
+        "properties.targetResourceTypes",
+        "properties.windowSize",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}",
+      "operationId": "ScheduledQueryRules_Delete",
+      "pathParameters": [
+        {
+          "name": "ruleName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

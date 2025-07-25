@@ -1,0 +1,287 @@
+{
+  "resource": "Azure::SignalRService::SharedPrivateLinkResources",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/replicas/{replicaName}/sharedPrivateLinkResources",
+      "operationId": "SignalRReplicaSharedPrivateLinkResources_List",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "replicaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the replica."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/replicas/{replicaName}/sharedPrivateLinkResources/{sharedPrivateLinkResourceName}",
+      "operationId": "SignalRReplicaSharedPrivateLinkResources_Get",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "replicaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the replica."
+        },
+        {
+          "name": "sharedPrivateLinkResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the shared private link resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/replicas/{replicaName}/sharedPrivateLinkResources/{sharedPrivateLinkResourceName}",
+      "operationId": "SignalRReplicaSharedPrivateLinkResources_CreateOrUpdate",
+      "bodySchema": "SharedPrivateLinkResource",
+      "requiredProperties": [
+        "properties.groupId",
+        "properties.privateLinkResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.requestMessage",
+        "properties.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "replicaName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the replica."
+        },
+        {
+          "name": "sharedPrivateLinkResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the shared private link resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/sharedPrivateLinkResources",
+      "operationId": "SignalRSharedPrivateLinkResources_List",
+      "pathParameters": [
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/sharedPrivateLinkResources/{sharedPrivateLinkResourceName}",
+      "operationId": "SignalRSharedPrivateLinkResources_Get",
+      "pathParameters": [
+        {
+          "name": "sharedPrivateLinkResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the shared private link resource."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/sharedPrivateLinkResources/{sharedPrivateLinkResourceName}",
+      "operationId": "SignalRSharedPrivateLinkResources_CreateOrUpdate",
+      "bodySchema": "SharedPrivateLinkResource",
+      "requiredProperties": [
+        "properties.groupId",
+        "properties.privateLinkResourceId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.requestMessage",
+        "properties.status"
+      ],
+      "pathParameters": [
+        {
+          "name": "sharedPrivateLinkResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the shared private link resource."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/sharedPrivateLinkResources/{sharedPrivateLinkResourceName}",
+      "operationId": "SignalRSharedPrivateLinkResources_Delete",
+      "pathParameters": [
+        {
+          "name": "sharedPrivateLinkResourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the shared private link resource."
+        },
+        {
+          "name": "resourceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

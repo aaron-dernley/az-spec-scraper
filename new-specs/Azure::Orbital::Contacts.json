@@ -1,0 +1,209 @@
+{
+  "resource": "Azure::Orbital::Contacts",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/spacecrafts/{spacecraftName}/contacts",
+      "operationId": "Contacts_List",
+      "pathParameters": [
+        {
+          "name": "spacecraftName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Spacecraft ID."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        },
+        {
+          "name": "$skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "An opaque string that the resource provider uses to skip over previously-returned results. This is used when a previous list operation call returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/spacecrafts/{spacecraftName}/contacts/{contactName}",
+      "operationId": "Contacts_Get",
+      "pathParameters": [
+        {
+          "name": "spacecraftName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Spacecraft ID."
+        },
+        {
+          "name": "contactName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Contact name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/spacecrafts/{spacecraftName}/contacts/{contactName}",
+      "operationId": "Contacts_Create",
+      "bodySchema": "Contact",
+      "requiredProperties": [
+        "properties.contactProfile",
+        "properties.groundStationName",
+        "properties.reservationEndTime",
+        "properties.reservationStartTime"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.antennaConfiguration",
+        "properties.antennaConfiguration.destinationIp",
+        "properties.antennaConfiguration.sourceIps",
+        "properties.contactProfile.id",
+        "properties.endAzimuthDegrees",
+        "properties.endElevationDegrees",
+        "properties.errorMessage",
+        "properties.maximumElevationDegrees",
+        "properties.provisioningState",
+        "properties.rxEndTime",
+        "properties.rxStartTime",
+        "properties.startAzimuthDegrees",
+        "properties.startElevationDegrees",
+        "properties.status",
+        "properties.txEndTime",
+        "properties.txStartTime"
+      ],
+      "pathParameters": [
+        {
+          "name": "spacecraftName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Spacecraft ID."
+        },
+        {
+          "name": "contactName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Contact name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Orbital/spacecrafts/{spacecraftName}/contacts/{contactName}",
+      "operationId": "Contacts_Delete",
+      "pathParameters": [
+        {
+          "name": "spacecraftName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Spacecraft ID."
+        },
+        {
+          "name": "contactName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Contact name."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of the API to be used with the client request."
+        }
+      ]
+    }
+  ]
+}

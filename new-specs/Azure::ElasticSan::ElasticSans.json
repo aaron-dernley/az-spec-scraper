@@ -1,0 +1,188 @@
+{
+  "resource": "Azure::ElasticSan::ElasticSans",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.ElasticSan/elasticSans",
+      "operationId": "ElasticSans_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans",
+      "operationId": "ElasticSans_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}",
+      "operationId": "ElasticSans_Create",
+      "bodySchema": "ElasticSan",
+      "requiredProperties": [
+        "properties",
+        "properties.baseSizeTiB",
+        "properties.extendedCapacitySizeTiB",
+        "properties.sku",
+        "properties.sku.name"
+      ],
+      "optionalProperties": [
+        "properties.availabilityZones",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.publicNetworkAccess",
+        "properties.sku.tier",
+        "properties.totalIops",
+        "properties.totalMBps",
+        "properties.totalSizeTiB",
+        "properties.totalVolumeSizeGiB",
+        "properties.volumeGroupCount"
+      ],
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}",
+      "operationId": "ElasticSans_Update",
+      "bodySchema": "ElasticSanUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.baseSizeTiB",
+        "properties.extendedCapacitySizeTiB",
+        "properties.publicNetworkAccess",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}",
+      "operationId": "ElasticSans_Delete",
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}",
+      "operationId": "ElasticSans_Get",
+      "pathParameters": [
+        {
+          "name": "elasticSanName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the ElasticSan."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

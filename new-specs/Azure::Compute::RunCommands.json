@@ -1,0 +1,578 @@
+{
+  "resource": "Azure::Compute::RunCommands",
+  "version": "2019-12-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/runCommands",
+      "operationId": "VirtualMachineRunCommands_List",
+      "pathParameters": [
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The location upon which run commands is queried."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/runCommands/{commandId}",
+      "operationId": "VirtualMachineRunCommands_Get",
+      "pathParameters": [
+        {
+          "name": "location",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The location upon which run commands is queried."
+        },
+        {
+          "name": "commandId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The command id."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineRunCommands_CreateOrUpdate",
+      "bodySchema": "VirtualMachineRunCommand",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.asyncExecution",
+        "properties.errorBlobUri",
+        "properties.instanceView",
+        "properties.instanceView.endTime",
+        "properties.instanceView.error",
+        "properties.instanceView.executionMessage",
+        "properties.instanceView.executionState",
+        "properties.instanceView.exitCode",
+        "properties.instanceView.output",
+        "properties.instanceView.startTime",
+        "properties.instanceView.statuses",
+        "properties.outputBlobUri",
+        "properties.parameters",
+        "properties.protectedParameters",
+        "properties.provisioningState",
+        "properties.runAsPassword",
+        "properties.runAsUser",
+        "properties.source",
+        "properties.source.commandId",
+        "properties.source.script",
+        "properties.source.scriptUri",
+        "properties.timeoutInSeconds"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the run command should be created or updated."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineRunCommands_Update",
+      "bodySchema": "VirtualMachineRunCommandUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.asyncExecution",
+        "properties.errorBlobUri",
+        "properties.instanceView",
+        "properties.instanceView.endTime",
+        "properties.instanceView.error",
+        "properties.instanceView.executionMessage",
+        "properties.instanceView.executionState",
+        "properties.instanceView.exitCode",
+        "properties.instanceView.output",
+        "properties.instanceView.startTime",
+        "properties.instanceView.statuses",
+        "properties.outputBlobUri",
+        "properties.parameters",
+        "properties.protectedParameters",
+        "properties.provisioningState",
+        "properties.runAsPassword",
+        "properties.runAsUser",
+        "properties.source",
+        "properties.source.commandId",
+        "properties.source.script",
+        "properties.source.scriptUri",
+        "properties.timeoutInSeconds"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the run command should be updated."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineRunCommands_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine where the run command should be deleted."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineRunCommands_GetByVirtualMachine",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine containing the run command."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands",
+      "operationId": "VirtualMachineRunCommands_ListByVirtualMachine",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine containing the run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineScaleSetVMRunCommands_CreateOrUpdate",
+      "bodySchema": "VirtualMachineRunCommand",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.asyncExecution",
+        "properties.errorBlobUri",
+        "properties.instanceView",
+        "properties.instanceView.endTime",
+        "properties.instanceView.error",
+        "properties.instanceView.executionMessage",
+        "properties.instanceView.executionState",
+        "properties.instanceView.exitCode",
+        "properties.instanceView.output",
+        "properties.instanceView.startTime",
+        "properties.instanceView.statuses",
+        "properties.outputBlobUri",
+        "properties.parameters",
+        "properties.protectedParameters",
+        "properties.provisioningState",
+        "properties.runAsPassword",
+        "properties.runAsUser",
+        "properties.source",
+        "properties.source.commandId",
+        "properties.source.script",
+        "properties.source.scriptUri",
+        "properties.timeoutInSeconds"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "instanceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance ID of the virtual machine."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineScaleSetVMRunCommands_Update",
+      "bodySchema": "VirtualMachineRunCommandUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.asyncExecution",
+        "properties.errorBlobUri",
+        "properties.instanceView",
+        "properties.instanceView.endTime",
+        "properties.instanceView.error",
+        "properties.instanceView.executionMessage",
+        "properties.instanceView.executionState",
+        "properties.instanceView.exitCode",
+        "properties.instanceView.output",
+        "properties.instanceView.startTime",
+        "properties.instanceView.statuses",
+        "properties.outputBlobUri",
+        "properties.parameters",
+        "properties.protectedParameters",
+        "properties.provisioningState",
+        "properties.runAsPassword",
+        "properties.runAsUser",
+        "properties.source",
+        "properties.source.commandId",
+        "properties.source.script",
+        "properties.source.scriptUri",
+        "properties.timeoutInSeconds"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "instanceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance ID of the virtual machine."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineScaleSetVMRunCommands_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "instanceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance ID of the virtual machine."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+      "operationId": "VirtualMachineScaleSetVMRunCommands_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "instanceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance ID of the virtual machine."
+        },
+        {
+          "name": "runCommandName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine run command."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands",
+      "operationId": "VirtualMachineScaleSetVMRunCommands_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "vmScaleSetName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the VM scale set."
+        },
+        {
+          "name": "instanceId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The instance ID of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$expand",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "The expand expression to apply on the operation."
+        }
+      ]
+    }
+  ]
+}

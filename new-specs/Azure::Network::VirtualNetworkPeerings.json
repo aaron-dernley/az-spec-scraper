@@ -1,0 +1,165 @@
+{
+  "resource": "Azure::Network::VirtualNetworkPeerings",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "operationId": "VirtualNetworkPeerings_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "virtualNetworkPeeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network peering."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "operationId": "VirtualNetworkPeerings_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "virtualNetworkPeeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network peering."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}",
+      "operationId": "VirtualNetworkPeerings_CreateOrUpdate",
+      "bodySchema": "VirtualNetworkPeering",
+      "requiredProperties": [
+        "properties.remoteBgpCommunities.virtualNetworkCommunity"
+      ],
+      "optionalProperties": [
+        "etag",
+        "name",
+        "properties",
+        "properties.allowForwardedTraffic",
+        "properties.allowGatewayTransit",
+        "properties.allowVirtualNetworkAccess",
+        "properties.peeringState",
+        "properties.provisioningState",
+        "properties.remoteAddressSpace",
+        "properties.remoteAddressSpace.addressPrefixes",
+        "properties.remoteBgpCommunities",
+        "properties.remoteBgpCommunities.regionalCommunity",
+        "properties.remoteVirtualNetwork",
+        "properties.resourceGuid",
+        "properties.useRemoteGateways",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "virtualNetworkPeeringName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the peering."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings",
+      "operationId": "VirtualNetworkPeerings_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "virtualNetworkName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual network."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

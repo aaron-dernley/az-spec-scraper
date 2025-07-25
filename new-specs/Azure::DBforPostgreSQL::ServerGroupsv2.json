@@ -1,0 +1,220 @@
+{
+  "resource": "Azure::DBforPostgreSQL::ServerGroupsv2",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2",
+      "operationId": "Clusters_List",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2",
+      "operationId": "Clusters_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}",
+      "operationId": "Clusters_Create",
+      "bodySchema": "Cluster",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.administratorLogin",
+        "properties.administratorLoginPassword",
+        "properties.citusVersion",
+        "properties.coordinatorEnablePublicIpAccess",
+        "properties.coordinatorServerEdition",
+        "properties.coordinatorStorageQuotaInMb",
+        "properties.coordinatorVCores",
+        "properties.earliestRestoreTime",
+        "properties.enableHa",
+        "properties.enableShardsOnCoordinator",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.nodeCount",
+        "properties.nodeEnablePublicIpAccess",
+        "properties.nodeServerEdition",
+        "properties.nodeStorageQuotaInMb",
+        "properties.nodeVCores",
+        "properties.pointInTimeUTC",
+        "properties.postgresqlVersion",
+        "properties.preferredPrimaryZone",
+        "properties.privateEndpointConnections",
+        "properties.provisioningState",
+        "properties.readReplicas",
+        "properties.serverNames",
+        "properties.sourceLocation",
+        "properties.sourceResourceId",
+        "properties.state"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}",
+      "operationId": "Clusters_Get",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}",
+      "operationId": "Clusters_Delete",
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/serverGroupsv2/{clusterName}",
+      "operationId": "Clusters_Update",
+      "bodySchema": "ClusterForUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.administratorLoginPassword",
+        "properties.citusVersion",
+        "properties.coordinatorEnablePublicIpAccess",
+        "properties.coordinatorServerEdition",
+        "properties.coordinatorStorageQuotaInMb",
+        "properties.coordinatorVCores",
+        "properties.enableHa",
+        "properties.enableShardsOnCoordinator",
+        "properties.maintenanceWindow",
+        "properties.maintenanceWindow.customWindow",
+        "properties.maintenanceWindow.dayOfWeek",
+        "properties.maintenanceWindow.startHour",
+        "properties.maintenanceWindow.startMinute",
+        "properties.nodeCount",
+        "properties.nodeEnablePublicIpAccess",
+        "properties.nodeServerEdition",
+        "properties.nodeStorageQuotaInMb",
+        "properties.nodeVCores",
+        "properties.postgresqlVersion",
+        "properties.preferredPrimaryZone",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "clusterName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the cluster."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

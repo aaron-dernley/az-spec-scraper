@@ -1,0 +1,695 @@
+{
+  "resource": "Azure::Billing::BillingRoleAssignments",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByBillingProfile",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByBillingProfile",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByBillingProfile",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/customers/{customerName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByCustomer",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "customerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/customers/{customerName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByCustomer",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "customerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/customers/{customerName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByCustomer",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "customerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByInvoiceSection",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByInvoiceSection",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByInvoiceSection",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingProfileName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "invoiceSectionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByBillingAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByBillingAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_CreateOrUpdateByBillingAccount",
+      "bodySchema": "BillingRoleAssignment",
+      "requiredProperties": [
+        "properties.roleDefinitionId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.billingAccountDisplayName",
+        "properties.billingAccountId",
+        "properties.billingProfileDisplayName",
+        "properties.billingProfileId",
+        "properties.billingRequestId",
+        "properties.createdByPrincipalId",
+        "properties.createdByPrincipalPuid",
+        "properties.createdByPrincipalTenantId",
+        "properties.createdByUserEmailAddress",
+        "properties.createdOn",
+        "properties.customerDisplayName",
+        "properties.customerId",
+        "properties.invoiceSectionDisplayName",
+        "properties.invoiceSectionId",
+        "properties.modifiedByPrincipalId",
+        "properties.modifiedByPrincipalPuid",
+        "properties.modifiedByPrincipalTenantId",
+        "properties.modifiedByUserEmailAddress",
+        "properties.modifiedOn",
+        "properties.principalDisplayName",
+        "properties.principalId",
+        "properties.principalPuid",
+        "properties.principalTenantId",
+        "properties.principalTenantName",
+        "properties.principalType",
+        "properties.provisioningState",
+        "properties.scope",
+        "properties.userAuthenticationType",
+        "properties.userEmailAddress"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByBillingAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByDepartment",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "departmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByDepartment",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "departmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_CreateOrUpdateByDepartment",
+      "bodySchema": "BillingRoleAssignment",
+      "requiredProperties": [
+        "properties.roleDefinitionId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.billingAccountDisplayName",
+        "properties.billingAccountId",
+        "properties.billingProfileDisplayName",
+        "properties.billingProfileId",
+        "properties.billingRequestId",
+        "properties.createdByPrincipalId",
+        "properties.createdByPrincipalPuid",
+        "properties.createdByPrincipalTenantId",
+        "properties.createdByUserEmailAddress",
+        "properties.createdOn",
+        "properties.customerDisplayName",
+        "properties.customerId",
+        "properties.invoiceSectionDisplayName",
+        "properties.invoiceSectionId",
+        "properties.modifiedByPrincipalId",
+        "properties.modifiedByPrincipalPuid",
+        "properties.modifiedByPrincipalTenantId",
+        "properties.modifiedByUserEmailAddress",
+        "properties.modifiedOn",
+        "properties.principalDisplayName",
+        "properties.principalId",
+        "properties.principalPuid",
+        "properties.principalTenantId",
+        "properties.principalTenantName",
+        "properties.principalType",
+        "properties.provisioningState",
+        "properties.scope",
+        "properties.userAuthenticationType",
+        "properties.userEmailAddress"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "departmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/departments/{departmentName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByDepartment",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "departmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_DeleteByEnrollmentAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "enrollmentAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_GetByEnrollmentAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "enrollmentAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}/billingRoleAssignments/{billingRoleAssignmentName}",
+      "operationId": "BillingRoleAssignments_CreateOrUpdateByEnrollmentAccount",
+      "bodySchema": "BillingRoleAssignment",
+      "requiredProperties": [
+        "properties.roleDefinitionId"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.billingAccountDisplayName",
+        "properties.billingAccountId",
+        "properties.billingProfileDisplayName",
+        "properties.billingProfileId",
+        "properties.billingRequestId",
+        "properties.createdByPrincipalId",
+        "properties.createdByPrincipalPuid",
+        "properties.createdByPrincipalTenantId",
+        "properties.createdByUserEmailAddress",
+        "properties.createdOn",
+        "properties.customerDisplayName",
+        "properties.customerId",
+        "properties.invoiceSectionDisplayName",
+        "properties.invoiceSectionId",
+        "properties.modifiedByPrincipalId",
+        "properties.modifiedByPrincipalPuid",
+        "properties.modifiedByPrincipalTenantId",
+        "properties.modifiedByUserEmailAddress",
+        "properties.modifiedOn",
+        "properties.principalDisplayName",
+        "properties.principalId",
+        "properties.principalPuid",
+        "properties.principalTenantId",
+        "properties.principalTenantName",
+        "properties.principalType",
+        "properties.provisioningState",
+        "properties.scope",
+        "properties.userAuthenticationType",
+        "properties.userEmailAddress"
+      ],
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "enrollmentAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "billingRoleAssignmentName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}/billingRoleAssignments",
+      "operationId": "BillingRoleAssignments_ListByEnrollmentAccount",
+      "pathParameters": [
+        {
+          "name": "billingAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "enrollmentAccountName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

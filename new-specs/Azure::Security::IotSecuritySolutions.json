@@ -1,0 +1,208 @@
+{
+  "resource": "Azure::Security::IotSecuritySolutions",
+  "version": "2019-08-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/iotSecuritySolutions",
+      "operationId": "IotSecuritySolution_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Filter the IoT Security solution with OData syntax. Supports filtering by iotHubs."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions",
+      "operationId": "IotSecuritySolution_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$filter",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Filter the IoT Security solution with OData syntax. Supports filtering by iotHubs."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions/{solutionName}",
+      "operationId": "IotSecuritySolution_Get",
+      "pathParameters": [
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT Security solution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions/{solutionName}",
+      "operationId": "IotSecuritySolution_CreateOrUpdate",
+      "bodySchema": "IoTSecuritySolutionModel",
+      "requiredProperties": [
+        "properties.displayName",
+        "properties.iotHubs",
+        "properties.userDefinedResources.query",
+        "properties.userDefinedResources.querySubscriptions"
+      ],
+      "optionalProperties": [
+        "location",
+        "properties",
+        "properties.additionalWorkspaces",
+        "properties.autoDiscoveredResources",
+        "properties.disabledDataSources",
+        "properties.export",
+        "properties.recommendationsConfiguration",
+        "properties.status",
+        "properties.unmaskedIpLoggingStatus",
+        "properties.userDefinedResources",
+        "properties.workspace",
+        "systemData",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT Security solution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions/{solutionName}",
+      "operationId": "IotSecuritySolution_Update",
+      "bodySchema": "UpdateIotSecuritySolutionData",
+      "requiredProperties": [
+        "properties.userDefinedResources.query",
+        "properties.userDefinedResources.querySubscriptions"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.recommendationsConfiguration",
+        "properties.userDefinedResources",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT Security solution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/iotSecuritySolutions/{solutionName}",
+      "operationId": "IotSecuritySolution_Delete",
+      "pathParameters": [
+        {
+          "name": "solutionName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the IoT Security solution."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

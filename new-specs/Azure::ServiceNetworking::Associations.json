@@ -1,0 +1,198 @@
+{
+  "resource": "Azure::ServiceNetworking::Associations",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/associations",
+      "operationId": "AssociationsInterface_ListByTrafficController",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/associations/{associationName}",
+      "operationId": "AssociationsInterface_Get",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Association"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/associations/{associationName}",
+      "operationId": "AssociationsInterface_CreateOrUpdate",
+      "bodySchema": "Association",
+      "requiredProperties": [
+        "properties.associationType",
+        "properties.subnet.id"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.provisioningState",
+        "properties.subnet"
+      ],
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Association"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/associations/{associationName}",
+      "operationId": "AssociationsInterface_Update",
+      "bodySchema": "AssociationUpdate",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.associationType",
+        "properties.subnet",
+        "properties.subnet.id",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Association"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceNetworking/trafficControllers/{trafficControllerName}/associations/{associationName}",
+      "operationId": "AssociationsInterface_Delete",
+      "pathParameters": [
+        {
+          "name": "trafficControllerName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "traffic controller name for path"
+        },
+        {
+          "name": "associationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Association"
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "resource": "Azure::Network::FlowLogs",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/flowLogs/{flowLogName}",
+      "operationId": "FlowLogs_CreateOrUpdate",
+      "bodySchema": "FlowLog",
+      "requiredProperties": [
+        "properties.storageId",
+        "properties.targetResourceId"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties",
+        "properties.enabled",
+        "properties.flowAnalyticsConfiguration",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.enabled",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.trafficAnalyticsInterval",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.workspaceId",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.workspaceRegion",
+        "properties.flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.workspaceResourceId",
+        "properties.format",
+        "properties.format.type",
+        "properties.format.version",
+        "properties.provisioningState",
+        "properties.retentionPolicy",
+        "properties.retentionPolicy.days",
+        "properties.retentionPolicy.enabled",
+        "properties.targetResourceGuid"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network watcher."
+        },
+        {
+          "name": "flowLogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the flow log."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/flowLogs/{flowLogName}",
+      "operationId": "FlowLogs_UpdateTags",
+      "bodySchema": "TagsObject",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network watcher."
+        },
+        {
+          "name": "flowLogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the flow log."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/flowLogs/{flowLogName}",
+      "operationId": "FlowLogs_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network watcher."
+        },
+        {
+          "name": "flowLogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the flow log resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/flowLogs/{flowLogName}",
+      "operationId": "FlowLogs_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the network watcher."
+        },
+        {
+          "name": "flowLogName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the flow log resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkWatchers/{networkWatcherName}/flowLogs",
+      "operationId": "FlowLogs_List",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group containing Network Watcher."
+        },
+        {
+          "name": "networkWatcherName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the Network Watcher resource."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

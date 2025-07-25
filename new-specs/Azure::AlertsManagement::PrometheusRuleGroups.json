@@ -1,0 +1,178 @@
+{
+  "resource": "Azure::AlertsManagement::PrometheusRuleGroups",
+  "version": "2023-03-01",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.AlertsManagement/prometheusRuleGroups",
+      "operationId": "PrometheusRuleGroups_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups",
+      "operationId": "PrometheusRuleGroups_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups/{ruleGroupName}",
+      "operationId": "PrometheusRuleGroups_Get",
+      "pathParameters": [
+        {
+          "name": "ruleGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups/{ruleGroupName}",
+      "operationId": "PrometheusRuleGroups_CreateOrUpdate",
+      "bodySchema": "PrometheusRuleGroupResource",
+      "requiredProperties": [
+        "properties",
+        "properties.rules",
+        "properties.scopes"
+      ],
+      "optionalProperties": [
+        "properties.clusterName",
+        "properties.description",
+        "properties.enabled",
+        "properties.interval"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups/{ruleGroupName}",
+      "operationId": "PrometheusRuleGroups_Update",
+      "bodySchema": "PrometheusRuleGroupResourcePatchParameters",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "properties",
+        "properties.enabled",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "ruleGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups/{ruleGroupName}",
+      "operationId": "PrometheusRuleGroups_Delete",
+      "pathParameters": [
+        {
+          "name": "ruleGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the rule group."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "resource": "Azure::Solutions::Applications",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}",
+      "operationId": "Applications_Get",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}",
+      "operationId": "Applications_Delete",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}",
+      "operationId": "Applications_CreateOrUpdate",
+      "bodySchema": "Application",
+      "requiredProperties": [
+        "kind",
+        "plan.name",
+        "plan.product",
+        "plan.publisher",
+        "plan.version",
+        "properties",
+        "properties.customerSupport.email",
+        "properties.customerSupport.phone",
+        "properties.jitAccessPolicy.jitAccessEnabled",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "location",
+        "managedBy",
+        "name",
+        "plan",
+        "plan.promotionCode",
+        "properties.applicationDefinitionId",
+        "properties.artifacts",
+        "properties.authorizations",
+        "properties.billingDetails",
+        "properties.billingDetails.resourceUsageId",
+        "properties.createdBy",
+        "properties.createdBy.applicationId",
+        "properties.createdBy.oid",
+        "properties.createdBy.puid",
+        "properties.customerSupport",
+        "properties.customerSupport.contactName",
+        "properties.jitAccessPolicy",
+        "properties.jitAccessPolicy.jitApprovalMode",
+        "properties.jitAccessPolicy.jitApprovers",
+        "properties.jitAccessPolicy.maximumJitAccessDuration",
+        "properties.managedResourceGroupId",
+        "properties.managementMode",
+        "properties.outputs",
+        "properties.parameters",
+        "properties.provisioningState",
+        "properties.publisherTenantId",
+        "properties.supportUrls",
+        "properties.supportUrls.governmentCloud",
+        "properties.supportUrls.publicAzure",
+        "properties.updatedBy",
+        "properties.updatedBy.applicationId",
+        "properties.updatedBy.oid",
+        "properties.updatedBy.puid",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.model",
+        "sku.size",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications/{applicationName}",
+      "operationId": "Applications_Update",
+      "bodySchema": "ApplicationPatchable",
+      "requiredProperties": [
+        "properties.customerSupport.email",
+        "properties.customerSupport.phone",
+        "properties.jitAccessPolicy.jitAccessEnabled",
+        "sku.name"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "identity.userAssignedIdentities",
+        "kind",
+        "location",
+        "managedBy",
+        "name",
+        "plan",
+        "plan.name",
+        "plan.product",
+        "plan.promotionCode",
+        "plan.publisher",
+        "plan.version",
+        "properties",
+        "properties.applicationDefinitionId",
+        "properties.artifacts",
+        "properties.authorizations",
+        "properties.billingDetails",
+        "properties.billingDetails.resourceUsageId",
+        "properties.createdBy",
+        "properties.createdBy.applicationId",
+        "properties.createdBy.oid",
+        "properties.createdBy.puid",
+        "properties.customerSupport",
+        "properties.customerSupport.contactName",
+        "properties.jitAccessPolicy",
+        "properties.jitAccessPolicy.jitApprovalMode",
+        "properties.jitAccessPolicy.jitApprovers",
+        "properties.jitAccessPolicy.maximumJitAccessDuration",
+        "properties.managedResourceGroupId",
+        "properties.managementMode",
+        "properties.outputs",
+        "properties.parameters",
+        "properties.provisioningState",
+        "properties.publisherTenantId",
+        "properties.supportUrls",
+        "properties.supportUrls.governmentCloud",
+        "properties.supportUrls.publicAzure",
+        "properties.updatedBy",
+        "properties.updatedBy.applicationId",
+        "properties.updatedBy.oid",
+        "properties.updatedBy.puid",
+        "sku",
+        "sku.capacity",
+        "sku.family",
+        "sku.model",
+        "sku.size",
+        "sku.tier",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "applicationName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the managed application."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/applications",
+      "operationId": "Applications_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.Solutions/applications",
+      "operationId": "Applications_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The ID of the target subscription."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "The API version to use for this operation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "resource": "Azure::NetworkCloud::VirtualMachines",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/providers/Microsoft.NetworkCloud/virtualMachines",
+      "operationId": "VirtualMachines_ListBySubscription",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines",
+      "operationId": "VirtualMachines_ListByResourceGroup",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}",
+      "operationId": "VirtualMachines_Get",
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}",
+      "operationId": "VirtualMachines_CreateOrUpdate",
+      "bodySchema": "VirtualMachine",
+      "requiredProperties": [
+        "extendedLocation",
+        "extendedLocation.name",
+        "extendedLocation.type",
+        "properties",
+        "properties.adminUsername",
+        "properties.cloudServicesNetworkAttachment",
+        "properties.cloudServicesNetworkAttachment.attachedNetworkId",
+        "properties.cloudServicesNetworkAttachment.ipAllocationMethod",
+        "properties.cpuCores",
+        "properties.memorySizeGB",
+        "properties.storageProfile",
+        "properties.storageProfile.osDisk",
+        "properties.storageProfile.osDisk.diskSizeGB",
+        "properties.vmImage",
+        "properties.vmImageRepositoryCredentials.password",
+        "properties.vmImageRepositoryCredentials.registryUrl",
+        "properties.vmImageRepositoryCredentials.username"
+      ],
+      "optionalProperties": [
+        "properties.availabilityZone",
+        "properties.bareMetalMachineId",
+        "properties.bootMethod",
+        "properties.cloudServicesNetworkAttachment.defaultGateway",
+        "properties.cloudServicesNetworkAttachment.ipv4Address",
+        "properties.cloudServicesNetworkAttachment.ipv6Address",
+        "properties.cloudServicesNetworkAttachment.macAddress",
+        "properties.cloudServicesNetworkAttachment.networkAttachmentName",
+        "properties.clusterId",
+        "properties.detailedStatus",
+        "properties.detailedStatusMessage",
+        "properties.isolateEmulatorThread",
+        "properties.networkAttachments",
+        "properties.networkData",
+        "properties.placementHints",
+        "properties.powerState",
+        "properties.provisioningState",
+        "properties.sshPublicKeys",
+        "properties.storageProfile.osDisk.createOption",
+        "properties.storageProfile.osDisk.deleteOption",
+        "properties.storageProfile.volumeAttachments",
+        "properties.userData",
+        "properties.virtioInterface",
+        "properties.vmDeviceModel",
+        "properties.vmImageRepositoryCredentials",
+        "properties.volumes"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}",
+      "operationId": "VirtualMachines_Delete",
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NetworkCloud/virtualMachines/{virtualMachineName}",
+      "operationId": "VirtualMachines_Update",
+      "bodySchema": "VirtualMachinePatchParameters",
+      "requiredProperties": [
+        "properties.vmImageRepositoryCredentials.password",
+        "properties.vmImageRepositoryCredentials.registryUrl",
+        "properties.vmImageRepositoryCredentials.username"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.vmImageRepositoryCredentials",
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "virtualMachineName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the virtual machine."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    }
+  ]
+}

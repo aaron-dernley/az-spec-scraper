@@ -1,0 +1,267 @@
+{
+  "resource": "Azure::MachineLearningServices::Computes",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes",
+      "operationId": "MachineLearningCompute_ListByWorkspace",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group in which workspace is located."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of Azure Machine Learning resource provider API."
+        },
+        {
+          "name": "$skiptoken",
+          "required": false,
+          "type": "string",
+          "in": "query",
+          "description": "Continuation token for pagination."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+      "operationId": "MachineLearningCompute_Get",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group in which workspace is located."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "computeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Machine Learning compute."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of Azure Machine Learning resource provider API."
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+      "operationId": "MachineLearningCompute_CreateOrUpdate",
+      "bodySchema": "ComputeResource",
+      "requiredProperties": [
+        "properties.computeType"
+      ],
+      "optionalProperties": [
+        "id",
+        "identity",
+        "identity.principalId",
+        "identity.tenantId",
+        "identity.type",
+        "location",
+        "name",
+        "properties",
+        "properties.computeLocation",
+        "properties.createdOn",
+        "properties.description",
+        "properties.isAttachedCompute",
+        "properties.modifiedOn",
+        "properties.provisioningErrors",
+        "properties.provisioningState",
+        "properties.resourceId",
+        "tags",
+        "type"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group in which workspace is located."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "computeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Machine Learning compute."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of Azure Machine Learning resource provider API."
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+      "operationId": "MachineLearningCompute_Update",
+      "bodySchema": "ClusterUpdateParameters",
+      "requiredProperties": [
+        "properties.scaleSettings.maxNodeCount"
+      ],
+      "optionalProperties": [
+        "properties",
+        "properties.scaleSettings",
+        "properties.scaleSettings.minNodeCount",
+        "properties.scaleSettings.nodeIdleTimeBeforeScaleDown"
+      ],
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group in which workspace is located."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "computeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Machine Learning compute."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of Azure Machine Learning resource provider API."
+        }
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/computes/{computeName}",
+      "operationId": "MachineLearningCompute_Delete",
+      "pathParameters": [
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Azure subscription identifier."
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the resource group in which workspace is located."
+        },
+        {
+          "name": "workspaceName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of Azure Machine Learning workspace."
+        },
+        {
+          "name": "computeName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "Name of the Azure Machine Learning compute."
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "api-version",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Version of Azure Machine Learning resource provider API."
+        },
+        {
+          "name": "underlyingResourceAction",
+          "required": true,
+          "type": "string",
+          "in": "query",
+          "description": "Delete the underlying compute if 'Delete', or detach the underlying compute from workspace if 'Detach'."
+        }
+      ]
+    }
+  ]
+}

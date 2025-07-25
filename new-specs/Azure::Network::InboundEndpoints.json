@@ -1,0 +1,203 @@
+{
+  "resource": "Azure::Network::InboundEndpoints",
+  "version": "unknown",
+  "operations": [
+    {
+      "method": "PUT",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/inboundEndpoints/{inboundEndpointName}",
+      "operationId": "InboundEndpoints_CreateOrUpdate",
+      "bodySchema": "InboundEndpoint",
+      "requiredProperties": [
+        "properties",
+        "properties.ipConfigurations"
+      ],
+      "optionalProperties": [
+        "etag",
+        "properties.provisioningState",
+        "properties.resourceGuid",
+        "systemData"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "inboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the inbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "PATCH",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/inboundEndpoints/{inboundEndpointName}",
+      "operationId": "InboundEndpoints_Update",
+      "bodySchema": "InboundEndpointPatch",
+      "requiredProperties": [],
+      "optionalProperties": [
+        "tags"
+      ],
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "inboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the inbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "DELETE",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/inboundEndpoints/{inboundEndpointName}",
+      "operationId": "InboundEndpoints_Delete",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "inboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the inbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/inboundEndpoints/{inboundEndpointName}",
+      "operationId": "InboundEndpoints_Get",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "inboundEndpointName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the inbound endpoint for the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}/inboundEndpoints",
+      "operationId": "InboundEndpoints_List",
+      "pathParameters": [
+        {
+          "name": "dnsResolverName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "The name of the DNS resolver."
+        },
+        {
+          "name": "subscriptionId",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        },
+        {
+          "name": "resourceGroupName",
+          "required": true,
+          "type": "string",
+          "in": "path",
+          "description": "(from URI template)"
+        }
+      ],
+      "queryParameters": [
+        {
+          "name": "$top",
+          "required": false,
+          "type": "integer",
+          "in": "query",
+          "description": "The maximum number of results to return. If not specified, returns up to 100 results."
+        }
+      ]
+    }
+  ]
+}
