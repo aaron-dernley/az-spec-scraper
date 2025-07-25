@@ -5,9 +5,9 @@ This script automates the extraction of Azure resource and subresource definitio
 ## It:
 
 - **Clones** the Azure REST API specs repo
-- **Extracts all resource types/subresources** with all relevant operations
-  (requires minimum of GET, PUT, and DELETE)
-- **Outputs** clean JSON files per resource (e.g., `Azure::Network::VirtualNetworks.json`)
+- **Extracts all latest stable versions of resource types/subresources** with all relevant operations
+  (requiring a min of GET, PUT, and DELETE)
+- **Outputs** JSON files per resource (e.g., `Azure::Network::VirtualNetworks.json`)
 - Includes **all required/optional body properties, URI path parameters, and query parameters** for each operation
 - **Cleans up** all temporary/cloned files when done
 
