@@ -1,6 +1,6 @@
 {
   "resource": "Azure::CustomerInsights::Links",
-  "version": "unknown",
+  "version": "2017-01-01",
   "operations": [
     {
       "method": "PUT",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Migrate::PrivateEndpointConnectionProxies",
-  "version": "unknown",
+  "version": "2023-01-01",
   "operations": [
     {
       "method": "GET",

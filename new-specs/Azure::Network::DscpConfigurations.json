@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::DscpConfigurations",
-  "version": "unknown",
+  "version": "2020-07-01",
   "operations": [
     {
       "method": "PUT",

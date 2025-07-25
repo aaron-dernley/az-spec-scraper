@@ -1,6 +1,6 @@
 {
   "resource": "Azure::EventHub::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2021-11-01",
   "operations": [
     {
       "method": "GET",

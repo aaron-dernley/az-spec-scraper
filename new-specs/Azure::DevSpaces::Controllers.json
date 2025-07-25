@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DevSpaces::Controllers",
-  "version": "unknown",
+  "version": "2019-04-01",
   "operations": [
     {
       "method": "GET",

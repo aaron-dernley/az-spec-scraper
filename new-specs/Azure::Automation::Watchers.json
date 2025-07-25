@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::Watchers",
-  "version": "unknown",
+  "version": "2019-06-01",
   "operations": [
     {
       "method": "PUT",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Insights::Logprofiles",
-  "version": "unknown",
+  "version": "2016-03-01",
   "operations": [
     {
       "method": "DELETE",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforPostgreSQL::Roles",
-  "version": "unknown",
+  "version": "2022-11-08",
   "operations": [
     {
       "method": "GET",

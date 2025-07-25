@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Communication::CommunicationServices",
-  "version": "2023-03-31",
+  "version": "2020-08-20",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Aad::OuContainer",
-  "version": "unknown",
+  "version": "2022-12-01",
   "operations": [
     {
       "method": "GET",

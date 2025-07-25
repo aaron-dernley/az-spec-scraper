@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::Disks",
-  "version": "2021-09-01",
+  "version": "2023-01-02",
   "operations": [
     {
       "method": "PUT",

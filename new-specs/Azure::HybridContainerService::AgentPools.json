@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HybridContainerService::AgentPools",
-  "version": "unknown",
+  "version": "2024-01-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ResourceGraph::Queries",
-  "version": "unknown",
+  "version": "2021-03-01",
   "operations": [
     {
       "method": "GET",

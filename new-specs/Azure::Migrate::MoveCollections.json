@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Migrate::MoveCollections",
-  "version": "unknown",
+  "version": "2023-08-01",
   "operations": [
     {
       "method": "PUT",

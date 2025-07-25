@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureStackHCI::Clusters",
-  "version": "unknown",
+  "version": "2020-10-01",
   "operations": [
     {
       "method": "GET",

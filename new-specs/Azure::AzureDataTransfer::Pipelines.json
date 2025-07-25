@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureDataTransfer::Pipelines",
-  "version": "unknown",
+  "version": "2025-05-21",
   "operations": [
     {
       "method": "GET",

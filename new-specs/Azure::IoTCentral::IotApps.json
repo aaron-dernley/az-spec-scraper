@@ -1,6 +1,6 @@
 {
   "resource": "Azure::IoTCentral::IotApps",
-  "version": "unknown",
+  "version": "2018-09-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::CustomerInsights::Hubs",
-  "version": "unknown",
+  "version": "2017-01-01",
   "operations": [
     {
       "method": "PUT",

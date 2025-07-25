@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::Hosts",
-  "version": "unknown",
+  "version": "2019-12-01",
   "operations": [
     {
       "method": "PUT",

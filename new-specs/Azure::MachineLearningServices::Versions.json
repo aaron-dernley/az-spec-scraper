@@ -1,6 +1,6 @@
 {
   "resource": "Azure::MachineLearningServices::Versions",
-  "version": "unknown",
+  "version": "2025-06-01",
   "operations": [
     {
       "method": "GET",

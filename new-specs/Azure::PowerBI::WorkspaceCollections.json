@@ -1,6 +1,6 @@
 {
   "resource": "Azure::PowerBI::WorkspaceCollections",
-  "version": "unknown",
+  "version": "2016-01-29",
   "operations": [
     {
       "method": "GET",

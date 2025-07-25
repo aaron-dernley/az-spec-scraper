@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Billing::InvoiceSections",
-  "version": "unknown",
+  "version": "2024-04-01",
   "operations": [
     {
       "method": "DELETE",

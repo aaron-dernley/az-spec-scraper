@@ -1,6 +1,6 @@
 {
   "resource": "Azure::NotificationHubs::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2023-09-01",
   "operations": [
     {
       "method": "PUT",

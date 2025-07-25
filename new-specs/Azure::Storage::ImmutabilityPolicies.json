@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Storage::ImmutabilityPolicies",
-  "version": "unknown",
+  "version": "2021-09-01",
   "operations": [
     {
       "method": "PUT",

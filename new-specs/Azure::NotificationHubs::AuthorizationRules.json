@@ -1,6 +1,6 @@
 {
   "resource": "Azure::NotificationHubs::AuthorizationRules",
-  "version": "unknown",
+  "version": "2023-09-01",
   "operations": [
     {
       "method": "PUT",

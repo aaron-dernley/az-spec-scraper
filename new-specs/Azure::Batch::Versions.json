@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Batch::Versions",
-  "version": "unknown",
+  "version": "2017-05-01",
   "operations": [
     {
       "method": "PUT",

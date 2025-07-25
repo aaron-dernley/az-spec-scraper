@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::InterfaceEndpoints",
-  "version": "unknown",
+  "version": "2018-08-01",
   "operations": [
     {
       "method": "DELETE",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::Properties",
-  "version": "unknown",
+  "version": "2016-10-10",
   "operations": [
     {
       "method": "GET",

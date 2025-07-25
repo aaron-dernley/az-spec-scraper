@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Sql::CommunicationLinks",
-  "version": "unknown",
+  "version": "2014-04-01",
   "operations": [
     {
       "method": "DELETE",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Advisor::Suppressions",
-  "version": "unknown",
+  "version": "2022-09-01",
   "operations": [
     {
       "method": "GET",

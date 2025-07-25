@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::InVMAccessControlProfiles",
-  "version": "unknown",
+  "version": "2024-03-03",
   "operations": [
     {
       "method": "GET",

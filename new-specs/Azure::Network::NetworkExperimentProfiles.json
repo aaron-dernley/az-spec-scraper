@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::NetworkExperimentProfiles",
-  "version": "unknown",
+  "version": "2019-11-01",
   "operations": [
     {
       "method": "GET",

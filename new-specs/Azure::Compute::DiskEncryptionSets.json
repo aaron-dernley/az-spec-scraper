@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::DiskEncryptionSets",
-  "version": "unknown",
+  "version": "2025-01-02",
   "operations": [
     {
       "method": "GET",

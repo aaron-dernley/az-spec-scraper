@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DevOpsInfrastructure::Pools",
-  "version": "unknown",
+  "version": "2024-10-19",
   "operations": [
     {
       "method": "GET",

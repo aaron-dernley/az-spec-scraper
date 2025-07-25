@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AwsConnector::SsmParameters",
-  "version": "unknown",
+  "version": "2024-12-01",
   "operations": [
     {
       "method": "GET",

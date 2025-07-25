@@ -1,6 +1,6 @@
 {
   "resource": "Azure::LabServices::Labs",
-  "version": "2023-06-07",
+  "version": "2018-10-15",
   "operations": [
     {
       "method": "GET",

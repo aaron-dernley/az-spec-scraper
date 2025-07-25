@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Scheduler::JobCollections",
-  "version": "unknown",
+  "version": "2016-01-01",
   "operations": [
     {
       "method": "GET",

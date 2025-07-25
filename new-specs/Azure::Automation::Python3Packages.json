@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::Python3Packages",
-  "version": "unknown",
+  "version": "2022-08-08",
   "operations": [
     {
       "method": "DELETE",

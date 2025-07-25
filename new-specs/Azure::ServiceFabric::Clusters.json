@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceFabric::Clusters",
-  "version": "unknown",
+  "version": "2016-09-01",
   "operations": [
     {
       "method": "PATCH",

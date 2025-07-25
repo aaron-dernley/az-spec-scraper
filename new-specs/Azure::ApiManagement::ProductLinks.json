@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::ProductLinks",
-  "version": "unknown",
+  "version": "2024-05-01",
   "operations": [
     {
       "method": "GET",

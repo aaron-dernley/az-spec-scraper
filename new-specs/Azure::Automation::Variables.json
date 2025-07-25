@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::Variables",
-  "version": "unknown",
+  "version": "2019-06-01",
   "operations": [
     {
       "method": "PUT",

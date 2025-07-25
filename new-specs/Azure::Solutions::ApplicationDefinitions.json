@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Solutions::ApplicationDefinitions",
-  "version": "unknown",
+  "version": "2019-07-01",
   "operations": [
     {
       "method": "GET",

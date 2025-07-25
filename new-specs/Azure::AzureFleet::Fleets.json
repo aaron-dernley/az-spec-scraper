@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureFleet::Fleets",
-  "version": "unknown",
+  "version": "2024-11-01",
   "operations": [
     {
       "method": "GET",

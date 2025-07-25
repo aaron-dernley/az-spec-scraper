@@ -1,6 +1,6 @@
 {
   "resource": "Azure::BotService::Connections",
-  "version": "unknown",
+  "version": "2022-09-15",
   "operations": [
     {
       "method": "PUT",

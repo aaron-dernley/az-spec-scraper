@@ -1,6 +1,6 @@
 {
   "resource": "Azure::LoadTestService::LoadTests",
-  "version": "unknown",
+  "version": "2022-12-01",
   "operations": [
     {
       "method": "GET",

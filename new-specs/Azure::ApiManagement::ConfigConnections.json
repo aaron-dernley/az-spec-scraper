@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::ConfigConnections",
-  "version": "unknown",
+  "version": "2024-05-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Insights::Autoscalesettings",
-  "version": "unknown",
+  "version": "2015-04-01",
   "operations": [
     {
       "method": "GET",

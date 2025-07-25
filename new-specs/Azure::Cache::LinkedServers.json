@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Cache::LinkedServers",
-  "version": "unknown",
+  "version": "2017-10-01",
   "operations": [
     {
       "method": "PUT",

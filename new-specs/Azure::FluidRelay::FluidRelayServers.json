@@ -1,6 +1,6 @@
 {
   "resource": "Azure::FluidRelay::FluidRelayServers",
-  "version": "unknown",
+  "version": "2022-04-21",
   "operations": [
     {
       "method": "GET",

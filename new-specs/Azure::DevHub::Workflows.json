@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DevHub::Workflows",
-  "version": "unknown",
+  "version": "2023-08-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DataLakeAnalytics::Accounts",
-  "version": "unknown",
+  "version": "2016-11-01",
   "operations": [
     {
       "method": "GET",

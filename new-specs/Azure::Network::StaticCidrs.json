@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::StaticCidrs",
-  "version": "unknown",
+  "version": "2024-07-01",
   "operations": [
     {
       "method": "GET",

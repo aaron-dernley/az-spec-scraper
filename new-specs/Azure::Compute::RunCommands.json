@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::RunCommands",
-  "version": "2019-12-01",
+  "version": "2022-03-01",
   "operations": [
     {
       "method": "GET",

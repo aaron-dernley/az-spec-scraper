@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Devices::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2020-03-01",
   "operations": [
     {
       "method": "GET",

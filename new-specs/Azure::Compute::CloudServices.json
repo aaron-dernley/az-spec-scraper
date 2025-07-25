@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::CloudServices",
-  "version": "unknown",
+  "version": "2021-03-01",
   "operations": [
     {
       "method": "PUT",

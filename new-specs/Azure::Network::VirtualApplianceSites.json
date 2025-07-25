@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::VirtualApplianceSites",
-  "version": "unknown",
+  "version": "2020-07-01",
   "operations": [
     {
       "method": "DELETE",

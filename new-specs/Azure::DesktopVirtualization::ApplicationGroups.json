@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DesktopVirtualization::ApplicationGroups",
-  "version": "unknown",
+  "version": "2021-07-12",
   "operations": [
     {
       "method": "GET",

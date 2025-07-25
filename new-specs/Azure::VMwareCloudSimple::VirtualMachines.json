@@ -1,6 +1,6 @@
 {
   "resource": "Azure::VMwareCloudSimple::VirtualMachines",
-  "version": "unknown",
+  "version": "2019-04-01",
   "operations": [
     {
       "method": "GET",

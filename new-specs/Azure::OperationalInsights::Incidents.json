@@ -1,6 +1,6 @@
 {
   "resource": "Azure::OperationalInsights::Incidents",
-  "version": "unknown",
+  "version": "2020-01-01",
   "operations": [
     {
       "method": "GET",

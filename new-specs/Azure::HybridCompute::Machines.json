@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HybridCompute::Machines",
-  "version": "unknown",
+  "version": "2022-11-10",
   "operations": [
     {
       "method": "PUT",

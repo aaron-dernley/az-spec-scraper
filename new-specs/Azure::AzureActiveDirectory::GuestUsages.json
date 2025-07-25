@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureActiveDirectory::GuestUsages",
-  "version": "unknown",
+  "version": "2021-04-01",
   "operations": [
     {
       "method": "PUT",

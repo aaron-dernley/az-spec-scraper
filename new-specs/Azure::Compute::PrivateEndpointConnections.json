@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2023-01-02",
   "operations": [
     {
       "method": "PUT",

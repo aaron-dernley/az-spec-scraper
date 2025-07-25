@@ -1,6 +1,6 @@
 {
   "resource": "Azure::SecurityAndCompliance::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2021-03-08",
   "operations": [
     {
       "method": "GET",

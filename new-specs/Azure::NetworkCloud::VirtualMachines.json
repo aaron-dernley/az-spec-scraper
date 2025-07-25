@@ -1,6 +1,6 @@
 {
   "resource": "Azure::NetworkCloud::VirtualMachines",
-  "version": "unknown",
+  "version": "2024-07-01",
   "operations": [
     {
       "method": "GET",

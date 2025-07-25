@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceFabric::Services",
-  "version": "unknown",
+  "version": "2020-03-01",
   "operations": [
     {
       "method": "GET",

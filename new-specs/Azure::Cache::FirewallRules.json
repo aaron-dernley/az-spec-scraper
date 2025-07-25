@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Cache::FirewallRules",
-  "version": "unknown",
+  "version": "2017-10-01",
   "operations": [
     {
       "method": "GET",

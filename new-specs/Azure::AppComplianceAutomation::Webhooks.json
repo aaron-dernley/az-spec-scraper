@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AppComplianceAutomation::Webhooks",
-  "version": "unknown",
+  "version": "2024-06-27",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HDInsight::Clustermonitoring",
-  "version": "unknown",
+  "version": "2018-06-01-preview",
   "operations": [
     {
       "method": "PUT",

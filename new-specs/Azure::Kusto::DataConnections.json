@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Kusto::DataConnections",
-  "version": "unknown",
+  "version": "2022-07-07",
   "operations": [
     {
       "method": "GET",

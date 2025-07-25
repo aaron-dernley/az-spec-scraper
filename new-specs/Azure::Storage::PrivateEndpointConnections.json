@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Storage::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2021-09-01",
   "operations": [
     {
       "method": "GET",

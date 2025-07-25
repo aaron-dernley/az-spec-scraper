@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforPostgreSQL::Virtualendpoints",
-  "version": "unknown",
+  "version": "2024-08-01",
   "operations": [
     {
       "method": "PUT",

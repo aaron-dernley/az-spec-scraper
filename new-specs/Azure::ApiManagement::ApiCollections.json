@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::ApiCollections",
-  "version": "unknown",
+  "version": "2023-11-15",
   "operations": [
     {
       "method": "GET",

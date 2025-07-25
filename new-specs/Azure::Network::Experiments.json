@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::Experiments",
-  "version": "unknown",
+  "version": "2019-11-01",
   "operations": [
     {
       "method": "GET",

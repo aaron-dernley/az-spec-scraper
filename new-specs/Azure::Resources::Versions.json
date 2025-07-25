@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Resources::Versions",
-  "version": "unknown",
+  "version": "2022-02-01",
   "operations": [
     {
       "method": "PUT",

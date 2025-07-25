@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Peering::RegisteredPrefixes",
-  "version": "unknown",
+  "version": "2022-06-01",
   "operations": [
     {
       "method": "GET",

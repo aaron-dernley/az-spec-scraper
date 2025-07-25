@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ContainerService::ContainerServices",
-  "version": "unknown",
+  "version": "2017-01-31",
   "operations": [
     {
       "method": "GET",

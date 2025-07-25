@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AwsConnector::IamPolicyVersions",
-  "version": "unknown",
+  "version": "2024-12-01",
   "operations": [
     {
       "method": "GET",

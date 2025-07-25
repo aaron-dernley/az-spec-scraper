@@ -1,6 +1,6 @@
 {
   "resource": "Azure::SignalRService::Replicas",
-  "version": "unknown",
+  "version": "2024-03-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceBus::DisasterRecoveryConfigs",
-  "version": "unknown",
+  "version": "2017-04-01",
   "operations": [
     {
       "method": "GET",

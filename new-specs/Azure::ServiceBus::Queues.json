@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceBus::Queues",
-  "version": "unknown",
+  "version": "2015-08-01",
   "operations": [
     {
       "method": "GET",

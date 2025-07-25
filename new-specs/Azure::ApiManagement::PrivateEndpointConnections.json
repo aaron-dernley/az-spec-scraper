@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2021-08-01",
   "operations": [
     {
       "method": "GET",

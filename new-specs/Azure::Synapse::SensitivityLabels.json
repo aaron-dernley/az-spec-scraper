@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Synapse::SensitivityLabels",
-  "version": "unknown",
+  "version": "2020-12-01",
   "operations": [
     {
       "method": "PUT",

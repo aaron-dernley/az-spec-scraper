@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureArcData::AvailabilityGroups",
-  "version": "unknown",
+  "version": "2024-01-01",
   "operations": [
     {
       "method": "PUT",

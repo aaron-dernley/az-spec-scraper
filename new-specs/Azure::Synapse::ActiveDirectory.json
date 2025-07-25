@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Synapse::ActiveDirectory",
-  "version": "unknown",
+  "version": "2020-12-01",
   "operations": [
     {
       "method": "GET",

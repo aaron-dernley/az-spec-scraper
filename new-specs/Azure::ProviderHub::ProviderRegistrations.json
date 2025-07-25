@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ProviderHub::ProviderRegistrations",
-  "version": "unknown",
+  "version": "2020-11-20",
   "operations": [
     {
       "method": "GET",

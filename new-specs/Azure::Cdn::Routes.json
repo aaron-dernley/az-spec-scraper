@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Cdn::Routes",
-  "version": "unknown",
+  "version": "2024-02-01",
   "operations": [
     {
       "method": "GET",

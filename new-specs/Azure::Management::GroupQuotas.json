@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Management::GroupQuotas",
-  "version": "unknown",
+  "version": "2025-07-15",
   "operations": [
     {
       "method": "PUT",

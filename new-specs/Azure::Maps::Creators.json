@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Maps::Creators",
-  "version": "unknown",
+  "version": "2021-02-01",
   "operations": [
     {
       "method": "GET",

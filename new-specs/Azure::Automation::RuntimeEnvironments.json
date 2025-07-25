@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::RuntimeEnvironments",
-  "version": "unknown",
+  "version": "2024-10-23",
   "operations": [
     {
       "method": "PATCH",

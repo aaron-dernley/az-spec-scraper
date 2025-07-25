@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Migrate::MoveResources",
-  "version": "unknown",
+  "version": "2023-08-01",
   "operations": [
     {
       "method": "GET",

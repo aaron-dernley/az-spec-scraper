@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Portal::Consoles",
-  "version": "unknown",
+  "version": "2018-10-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Web::Certificates",
-  "version": "2022-03-01",
+  "version": "2024-11-01",
   "operations": [
     {
       "method": "GET",

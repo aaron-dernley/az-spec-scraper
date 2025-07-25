@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Authorization::PolicyAssignments",
-  "version": "2019-06-01",
+  "version": "2015-11-01",
   "operations": [
     {
       "method": "GET",

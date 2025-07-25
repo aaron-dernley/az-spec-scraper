@@ -1,6 +1,6 @@
 {
   "resource": "Azure::PowerBI::PrivateLinkServicesForPowerBI",
-  "version": "unknown",
+  "version": "2020-06-01",
   "operations": [
     {
       "method": "GET",

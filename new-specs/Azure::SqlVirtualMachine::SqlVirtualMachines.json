@@ -1,6 +1,6 @@
 {
   "resource": "Azure::SqlVirtualMachine::SqlVirtualMachines",
-  "version": "unknown",
+  "version": "2022-02-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Compute::GuestConfigurationAssignments",
-  "version": "unknown",
+  "version": "2018-11-20",
   "operations": [
     {
       "method": "PUT",

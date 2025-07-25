@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforPostgreSQL::PrivateEndpointConnections",
-  "version": "2024-08-01",
+  "version": "2022-11-08",
   "operations": [
     {
       "method": "GET",

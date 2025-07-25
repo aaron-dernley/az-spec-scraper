@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AppConfiguration::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2024-06-01",
   "operations": [
     {
       "method": "GET",

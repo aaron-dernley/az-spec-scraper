@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DesktopVirtualization::Applications",
-  "version": "unknown",
+  "version": "2021-07-12",
   "operations": [
     {
       "method": "GET",

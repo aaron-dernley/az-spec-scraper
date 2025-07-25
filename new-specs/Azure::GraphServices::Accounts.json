@@ -1,6 +1,6 @@
 {
   "resource": "Azure::GraphServices::Accounts",
-  "version": "unknown",
+  "version": "2023-04-13",
   "operations": [
     {
       "method": "GET",

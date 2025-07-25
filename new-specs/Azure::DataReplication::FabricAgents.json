@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DataReplication::FabricAgents",
-  "version": "unknown",
+  "version": "2024-09-01",
   "operations": [
     {
       "method": "GET",

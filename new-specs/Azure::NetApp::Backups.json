@@ -1,6 +1,6 @@
 {
   "resource": "Azure::NetApp::Backups",
-  "version": "unknown",
+  "version": "2020-07-01",
   "operations": [
     {
       "method": "GET",

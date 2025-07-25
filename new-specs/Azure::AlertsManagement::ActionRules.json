@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AlertsManagement::ActionRules",
-  "version": "unknown",
+  "version": "2021-08-08",
   "operations": [
     {
       "method": "GET",

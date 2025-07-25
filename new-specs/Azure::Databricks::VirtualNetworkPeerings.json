@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Databricks::VirtualNetworkPeerings",
-  "version": "unknown",
+  "version": "2023-02-01",
   "operations": [
     {
       "method": "GET",

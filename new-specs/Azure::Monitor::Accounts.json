@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Monitor::Accounts",
-  "version": "unknown",
+  "version": "2023-04-03",
   "operations": [
     {
       "method": "GET",

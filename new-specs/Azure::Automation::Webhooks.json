@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::Webhooks",
-  "version": "unknown",
+  "version": "2015-10-31",
   "operations": [
     {
       "method": "DELETE",

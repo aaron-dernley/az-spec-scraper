@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceNetworking::TrafficControllers",
-  "version": "unknown",
+  "version": "2023-11-01",
   "operations": [
     {
       "method": "GET",

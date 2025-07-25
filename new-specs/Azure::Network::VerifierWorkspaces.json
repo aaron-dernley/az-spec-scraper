@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::VerifierWorkspaces",
-  "version": "unknown",
+  "version": "2024-07-01",
   "operations": [
     {
       "method": "GET",

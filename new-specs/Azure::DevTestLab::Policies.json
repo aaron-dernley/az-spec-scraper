@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DevTestLab::Policies",
-  "version": "unknown",
+  "version": "2016-05-15",
   "operations": [
     {
       "method": "GET",

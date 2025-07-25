@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforMariaDB::VirtualNetworkRules",
-  "version": "unknown",
+  "version": "2018-06-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Authorization::RoleDefinitions",
-  "version": "unknown",
+  "version": "2015-07-01",
   "operations": [
     {
       "method": "DELETE",

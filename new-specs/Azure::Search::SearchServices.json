@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Search::SearchServices",
-  "version": "unknown",
+  "version": "2015-02-28",
   "operations": [
     {
       "method": "PUT",

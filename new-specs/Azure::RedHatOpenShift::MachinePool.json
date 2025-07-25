@@ -1,6 +1,6 @@
 {
   "resource": "Azure::RedHatOpenShift::MachinePool",
-  "version": "unknown",
+  "version": "2023-09-04",
   "operations": [
     {
       "method": "GET",

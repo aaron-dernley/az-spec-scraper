@@ -1,6 +1,6 @@
 {
   "resource": "Azure::StorageSync::SyncGroups",
-  "version": "unknown",
+  "version": "2018-04-02",
   "operations": [
     {
       "method": "GET",

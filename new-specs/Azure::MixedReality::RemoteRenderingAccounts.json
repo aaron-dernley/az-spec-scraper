@@ -1,6 +1,6 @@
 {
   "resource": "Azure::MixedReality::RemoteRenderingAccounts",
-  "version": "unknown",
+  "version": "2021-01-01",
   "operations": [
     {
       "method": "GET",

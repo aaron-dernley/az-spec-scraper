@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Relay::WcfRelays",
-  "version": "2021-11-01",
+  "version": "2017-04-01",
   "operations": [
     {
       "method": "GET",

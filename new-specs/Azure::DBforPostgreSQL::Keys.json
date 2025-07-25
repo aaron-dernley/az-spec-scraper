@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforPostgreSQL::Keys",
-  "version": "unknown",
+  "version": "2020-01-01",
   "operations": [
     {
       "method": "GET",

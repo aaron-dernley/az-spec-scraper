@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HardwareSecurityModules::DedicatedHSMs",
-  "version": "unknown",
+  "version": "2021-11-30",
   "operations": [
     {
       "method": "PUT",

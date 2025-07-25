@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HybridNetwork::ArtifactManifests",
-  "version": "unknown",
+  "version": "2023-09-01",
   "operations": [
     {
       "method": "GET",

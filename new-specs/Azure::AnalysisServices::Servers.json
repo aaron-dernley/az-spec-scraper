@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AnalysisServices::Servers",
-  "version": "unknown",
+  "version": "2016-05-16",
   "operations": [
     {
       "method": "GET",

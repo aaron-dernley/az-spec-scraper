@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Workloads::SapVirtualInstances",
-  "version": "unknown",
+  "version": "2023-04-01",
   "operations": [
     {
       "method": "PUT",

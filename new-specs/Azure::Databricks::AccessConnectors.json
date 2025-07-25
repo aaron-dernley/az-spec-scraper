@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Databricks::AccessConnectors",
-  "version": "unknown",
+  "version": "2023-05-01",
   "operations": [
     {
       "method": "GET",

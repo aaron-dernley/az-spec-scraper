@@ -1,6 +1,6 @@
 {
   "resource": "Azure::KubernetesRuntime::LoadBalancers",
-  "version": "unknown",
+  "version": "2024-03-01",
   "operations": [
     {
       "method": "GET",

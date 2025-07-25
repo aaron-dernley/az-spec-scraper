@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Cdn::CustomDomains",
-  "version": "unknown",
+  "version": "2020-03-31",
   "operations": [
     {
       "method": "GET",

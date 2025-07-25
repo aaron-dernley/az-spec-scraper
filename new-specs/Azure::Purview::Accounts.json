@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Purview::Accounts",
-  "version": "unknown",
+  "version": "2021-07-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ExtendedLocation::CustomLocations",
-  "version": "unknown",
+  "version": "2021-08-15",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::LabServices::Environments",
-  "version": "unknown",
+  "version": "2018-10-15",
   "operations": [
     {
       "method": "GET",

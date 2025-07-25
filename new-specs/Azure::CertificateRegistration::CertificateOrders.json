@@ -1,6 +1,6 @@
 {
   "resource": "Azure::CertificateRegistration::CertificateOrders",
-  "version": "unknown",
+  "version": "2022-03-01",
   "operations": [
     {
       "method": "GET",

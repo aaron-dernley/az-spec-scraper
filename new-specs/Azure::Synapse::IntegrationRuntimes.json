@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Synapse::IntegrationRuntimes",
-  "version": "unknown",
+  "version": "2020-12-01",
   "operations": [
     {
       "method": "PATCH",

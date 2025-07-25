@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::Templates",
-  "version": "unknown",
+  "version": "2018-01-01",
   "operations": [
     {
       "method": "GET",

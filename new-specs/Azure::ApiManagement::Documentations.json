@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::Documentations",
-  "version": "unknown",
+  "version": "2022-08-01",
   "operations": [
     {
       "method": "GET",

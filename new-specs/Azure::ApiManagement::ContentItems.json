@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::ContentItems",
-  "version": "unknown",
+  "version": "2019-12-01",
   "operations": [
     {
       "method": "GET",

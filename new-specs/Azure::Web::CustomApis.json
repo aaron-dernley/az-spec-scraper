@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Web::CustomApis",
-  "version": "unknown",
+  "version": "2016-06-01",
   "operations": [
     {
       "method": "GET",

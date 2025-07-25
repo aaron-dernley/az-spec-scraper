@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HybridNetwork::VendorSkus",
-  "version": "unknown",
+  "version": "2021-05-01",
   "operations": [
     {
       "method": "DELETE",

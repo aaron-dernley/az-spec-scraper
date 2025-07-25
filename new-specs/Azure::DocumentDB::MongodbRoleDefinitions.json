@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DocumentDB::MongodbRoleDefinitions",
-  "version": "unknown",
+  "version": "2022-08-15",
   "operations": [
     {
       "method": "GET",

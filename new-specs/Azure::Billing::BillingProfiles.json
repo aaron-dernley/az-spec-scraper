@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Billing::BillingProfiles",
-  "version": "unknown",
+  "version": "2024-04-01",
   "operations": [
     {
       "method": "DELETE",

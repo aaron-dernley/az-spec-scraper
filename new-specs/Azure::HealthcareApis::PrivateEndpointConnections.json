@@ -1,6 +1,6 @@
 {
   "resource": "Azure::HealthcareApis::PrivateEndpointConnections",
-  "version": "unknown",
+  "version": "2020-03-30",
   "operations": [
     {
       "method": "GET",

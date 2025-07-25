@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AVS::PortMirroringProfiles",
-  "version": "unknown",
+  "version": "2023-09-01",
   "operations": [
     {
       "method": "GET",

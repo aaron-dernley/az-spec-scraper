@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ManagedNetworkFabric::InternalNetworks",
-  "version": "unknown",
+  "version": "2023-06-15",
   "operations": [
     {
       "method": "PUT",

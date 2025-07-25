@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automation::ConnectionTypes",
-  "version": "unknown",
+  "version": "2019-06-01",
   "operations": [
     {
       "method": "DELETE",

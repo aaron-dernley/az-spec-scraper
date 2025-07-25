@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ImportExport::Jobs",
-  "version": "unknown",
+  "version": "2016-11-01",
   "operations": [
     {
       "method": "GET",

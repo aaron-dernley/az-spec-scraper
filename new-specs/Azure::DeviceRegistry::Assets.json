@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DeviceRegistry::Assets",
-  "version": "unknown",
+  "version": "2024-11-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::KeyVault::Vaults",
-  "version": "unknown",
+  "version": "2022-07-01",
   "operations": [
     {
       "method": "PUT",

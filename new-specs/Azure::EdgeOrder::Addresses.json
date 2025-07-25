@@ -1,6 +1,6 @@
 {
   "resource": "Azure::EdgeOrder::Addresses",
-  "version": "unknown",
+  "version": "2024-02-01",
   "operations": [
     {
       "method": "GET",

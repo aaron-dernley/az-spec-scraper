@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Logic::Partners",
-  "version": "unknown",
+  "version": "2016-06-01",
   "operations": [
     {
       "method": "GET",

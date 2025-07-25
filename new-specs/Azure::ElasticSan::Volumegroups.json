@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ElasticSan::Volumegroups",
-  "version": "unknown",
+  "version": "2023-01-01",
   "operations": [
     {
       "method": "PUT",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ConfidentialLedger::Ledgers",
-  "version": "unknown",
+  "version": "2022-05-13",
   "operations": [
     {
       "method": "GET",

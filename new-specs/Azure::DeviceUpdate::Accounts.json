@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DeviceUpdate::Accounts",
-  "version": "unknown",
+  "version": "2023-07-01",
   "operations": [
     {
       "method": "GET",

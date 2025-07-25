@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Workloads::CentralInstances",
-  "version": "unknown",
+  "version": "2023-04-01",
   "operations": [
     {
       "method": "GET",

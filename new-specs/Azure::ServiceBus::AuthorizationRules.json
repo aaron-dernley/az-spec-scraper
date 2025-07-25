@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceBus::AuthorizationRules",
-  "version": "2017-04-01",
+  "version": "2015-08-01",
   "operations": [
     {
       "method": "GET",

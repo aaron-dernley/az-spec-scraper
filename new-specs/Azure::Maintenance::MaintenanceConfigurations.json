@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Maintenance::MaintenanceConfigurations",
-  "version": "unknown",
+  "version": "2021-05-01",
   "operations": [
     {
       "method": "GET",

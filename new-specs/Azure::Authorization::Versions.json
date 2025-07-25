@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Authorization::Versions",
-  "version": "unknown",
+  "version": "2025-03-01",
   "operations": [
     {
       "method": "PUT",

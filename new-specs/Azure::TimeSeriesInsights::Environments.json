@@ -1,6 +1,6 @@
 {
   "resource": "Azure::TimeSeriesInsights::Environments",
-  "version": "unknown",
+  "version": "2017-11-15",
   "operations": [
     {
       "method": "PUT",

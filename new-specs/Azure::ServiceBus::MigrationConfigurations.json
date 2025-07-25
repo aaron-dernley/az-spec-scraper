@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ServiceBus::MigrationConfigurations",
-  "version": "unknown",
+  "version": "2017-04-01",
   "operations": [
     {
       "method": "GET",

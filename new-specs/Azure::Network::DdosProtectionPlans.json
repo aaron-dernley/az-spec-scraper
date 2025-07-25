@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::DdosProtectionPlans",
-  "version": "unknown",
+  "version": "2020-07-01",
   "operations": [
     {
       "method": "DELETE",

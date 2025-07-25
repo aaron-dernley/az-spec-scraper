@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Network::OutboundEndpoints",
-  "version": "unknown",
+  "version": "2022-07-01",
   "operations": [
     {
       "method": "PUT",

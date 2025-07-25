@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Automanage::Versions",
-  "version": "unknown",
+  "version": "2022-05-04",
   "operations": [
     {
       "method": "GET",

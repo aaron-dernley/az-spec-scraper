@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DataCatalog::Catalogs",
-  "version": "unknown",
+  "version": "2016-03-30",
   "operations": [
     {
       "method": "GET",

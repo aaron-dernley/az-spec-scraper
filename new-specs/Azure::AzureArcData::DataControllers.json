@@ -1,6 +1,6 @@
 {
   "resource": "Azure::AzureArcData::DataControllers",
-  "version": "2021-11-01",
+  "version": "2021-08-01",
   "operations": [
     {
       "method": "GET",

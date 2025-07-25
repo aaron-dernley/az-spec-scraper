@@ -1,6 +1,6 @@
 {
   "resource": "Azure::IoTOperations::Instances",
-  "version": "unknown",
+  "version": "2025-04-01",
   "operations": [
     {
       "method": "GET",

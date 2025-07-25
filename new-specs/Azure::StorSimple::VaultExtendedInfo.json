@@ -1,6 +1,6 @@
 {
   "resource": "Azure::StorSimple::VaultExtendedInfo",
-  "version": "unknown",
+  "version": "2017-06-01",
   "operations": [
     {
       "method": "GET",

@@ -1,6 +1,6 @@
 {
   "resource": "Azure::ApiManagement::IdentityProviders",
-  "version": "unknown",
+  "version": "2019-12-01",
   "operations": [
     {
       "method": "GET",

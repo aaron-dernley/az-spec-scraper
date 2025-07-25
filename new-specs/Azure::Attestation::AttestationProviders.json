@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Attestation::AttestationProviders",
-  "version": "unknown",
+  "version": "2021-06-01",
   "operations": [
     {
       "method": "GET",

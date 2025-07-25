@@ -1,6 +1,6 @@
 {
   "resource": "Azure::RecommendationsService::Modeling",
-  "version": "unknown",
+  "version": "2022-02-01",
   "operations": [
     {
       "method": "GET",

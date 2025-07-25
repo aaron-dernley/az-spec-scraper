@@ -1,6 +1,6 @@
 {
   "resource": "Azure::DBforMySQL::Administrators",
-  "version": "unknown",
+  "version": "2023-12-30",
   "operations": [
     {
       "method": "PUT",

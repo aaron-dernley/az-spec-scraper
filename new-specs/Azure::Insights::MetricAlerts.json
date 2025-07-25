@@ -1,6 +1,6 @@
 {
   "resource": "Azure::Insights::MetricAlerts",
-  "version": "unknown",
+  "version": "2018-03-01",
   "operations": [
     {
       "method": "GET",

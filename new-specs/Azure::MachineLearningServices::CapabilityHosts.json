@@ -1,6 +1,6 @@
 {
   "resource": "Azure::MachineLearningServices::CapabilityHosts",
-  "version": "unknown",
+  "version": "2025-06-01",
   "operations": [
     {
       "method": "DELETE",
