@@ -1,16 +1,31 @@
-This tool automates the extraction of all Azure ARM resource types (including subresources) and their key API operations (PUT, GET, DELETE, PATCH, POST) and parameters from the Azure REST API OpenAPI specs
+This script automates the extraction of Azure resource and subresource definitions, with all relevant operations and parameters, from the official Azure REST API OpenAPI specs.
 
-It:
-	•	Clones the Azure rest API spec repo
-	•	Extracts all resource types/subresources with all relevant operations (Minimum of GET/PUT/DELETE)
-	•	Outputs JSON files per resource (e.g. Azure::Network::VirtualNetworks.json)
-	•	Includes all required/optional body properties, URI path parameters, and query parameters for each operation
-	•	Cleans up cloned files once complete
+---
 
+## It:
 
-Prerequisites:
-	•	Deno installed
+- **Clones** the Azure REST API specs repo
+- **Extracts all resource types/subresources** with all relevant operations
+  (requires minimum of GET, PUT, and DELETE)
+- **Outputs** clean JSON files per resource (e.g., `Azure::Network::VirtualNetworks.json`)
+- Includes **all required/optional body properties, URI path parameters, and query parameters** for each operation
+- **Cleans up** all temporary/cloned files when done
 
-Usage:
-	•	deno run task run-all (runs for all open api specs)
-	•	deno run task run-one (runs for a single open api spec - path to file must be specified in const url at the top of the file)
+---
+
+## Prerequisites
+
+- [Deno](https://deno.com/manual/getting_started/installation) installed
+
+---
+
+## Usage
+
+- **Run for all Azure OpenAPI specs:**
+  ```bash
+  deno task run-all
+  ```
+- **Run for one Azure OpenAPI spec (update the url in script manually):**
+  ```bash
+  deno task run-one
+  ```
